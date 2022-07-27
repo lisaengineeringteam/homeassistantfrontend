@@ -26,7 +26,7 @@ import { subscribeEntityRegistry } from "../../../../data/entity_registry";
 import { domainToName } from "../../../../data/integration";
 import { SubscribeMixin } from "../../../../mixins/subscribe-mixin";
 import { haStyleDialog } from "../../../../resources/styles";
-import { HomeAssistant } from "../../../../types";
+import { ThirdEye } from "../../../../types";
 import { Placeholder, PlaceholderContainer } from "./dialog-thingtalk";
 
 declare global {
@@ -62,7 +62,7 @@ interface DeviceEntitiesLookup {
 
 @customElement("ha-thingtalk-placeholders")
 export class ThingTalkPlaceholders extends SubscribeMixin(LitElement) {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public opened!: boolean;
 

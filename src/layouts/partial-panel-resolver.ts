@@ -10,7 +10,7 @@ import { deepActiveElement } from "../common/dom/deep-active-element";
 import { deepEqual } from "../common/util/deep-equal";
 import { getDefaultPanel } from "../data/panel";
 import { CustomPanelInfo } from "../data/panel_custom";
-import { HomeAssistant, Panels } from "../types";
+import { ThirdEye, Panels } from "../types";
 import { removeLaunchScreen } from "../util/launch-screen";
 import {
   HassRouterPage,
@@ -42,7 +42,7 @@ const COMPONENTS = {
 
 @customElement("partial-panel-resolver")
 class PartialPanelResolver extends HassRouterPage {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ type: Boolean }) public narrow = false;
 
@@ -199,7 +199,7 @@ class PartialPanelResolver extends HassRouterPage {
     }
   }
 
-  private async _updateRoutes(oldPanels?: HomeAssistant["panels"]) {
+  private async _updateRoutes(oldPanels?: ThirdEye["panels"]) {
     this.routerOptions = this.getRoutes(this.hass.panels);
 
     if (

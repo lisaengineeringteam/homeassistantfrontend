@@ -1,12 +1,12 @@
 import { css, html, LitElement, TemplateResult } from "lit";
 import { customElement, property } from "lit/decorators";
 import "../../../layouts/hass-subpage";
-import type { HomeAssistant, Route } from "../../../types";
+import type { ThirdEye, Route } from "../../../types";
 import "./ha-config-analytics";
 
 @customElement("ha-config-section-analytics")
 class HaConfigSectionAnalytics extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ attribute: false }) public route!: Route;
 

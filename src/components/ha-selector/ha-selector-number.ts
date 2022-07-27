@@ -3,14 +3,14 @@ import { customElement, property } from "lit/decorators";
 import { classMap } from "lit/directives/class-map";
 import { fireEvent } from "../../common/dom/fire_event";
 import { NumberSelector } from "../../data/selector";
-import { HomeAssistant } from "../../types";
+import { ThirdEye } from "../../types";
 import "../ha-slider";
 import "../ha-textfield";
 import "../ha-input-helper-text";
 
 @customElement("ha-selector-number")
 export class HaNumberSelector extends LitElement {
-  @property() public hass!: HomeAssistant;
+  @property() public hass!: ThirdEye;
 
   @property() public selector!: NumberSelector;
 

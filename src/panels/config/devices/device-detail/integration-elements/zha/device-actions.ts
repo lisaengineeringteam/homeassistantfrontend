@@ -2,7 +2,7 @@ import { navigate } from "../../../../../../common/navigate";
 import type { DeviceRegistryEntry } from "../../../../../../data/device_registry";
 import { fetchZHADevice } from "../../../../../../data/zha";
 import { showConfirmationDialog } from "../../../../../../dialogs/generic/show-dialog-box";
-import type { HomeAssistant } from "../../../../../../types";
+import type { ThirdEye } from "../../../../../../types";
 import { showZHAClusterDialog } from "../../../../integrations/integration-panels/zha/show-dialog-zha-cluster";
 import { showZHADeviceChildrenDialog } from "../../../../integrations/integration-panels/zha/show-dialog-zha-device-children";
 import { showZHADeviceZigbeeInfoDialog } from "../../../../integrations/integration-panels/zha/show-dialog-zha-device-zigbee-info";
@@ -11,7 +11,7 @@ import type { DeviceAction } from "../../../ha-config-device-page";
 
 export const getZHADeviceActions = async (
   el: HTMLElement,
-  hass: HomeAssistant,
+  hass: ThirdEye,
   device: DeviceRegistryEntry
 ): Promise<DeviceAction[]> => {
   const zigbeeConnection = device.connections.find(

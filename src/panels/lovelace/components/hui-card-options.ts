@@ -16,7 +16,7 @@ import "../../../components/ha-button-menu";
 import "../../../components/ha-icon-button";
 import { saveConfig } from "../../../data/lovelace";
 import { showAlertDialog } from "../../../dialogs/generic/show-dialog-box";
-import { HomeAssistant } from "../../../types";
+import { ThirdEye } from "../../../types";
 import { showSaveSuccessToast } from "../../../util/toast-saved-success";
 import { computeCardSize } from "../common/compute-card-size";
 import { showEditCardDialog } from "../editor/card-editor/show-edit-card-dialog";
@@ -26,7 +26,7 @@ import { Lovelace, LovelaceCard } from "../types";
 
 @customElement("hui-card-options")
 export class HuiCardOptions extends LitElement {
-  @property({ attribute: false }) public hass?: HomeAssistant;
+  @property({ attribute: false }) public hass?: ThirdEye;
 
   @property({ attribute: false }) public lovelace?: Lovelace;
 

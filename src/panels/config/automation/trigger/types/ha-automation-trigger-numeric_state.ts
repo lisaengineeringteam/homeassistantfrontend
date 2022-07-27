@@ -7,11 +7,11 @@ import { createDurationData } from "../../../../../common/datetime/create_durati
 import { fireEvent } from "../../../../../common/dom/fire_event";
 import { hasTemplate } from "../../../../../common/string/has-template";
 import type { NumericStateTrigger } from "../../../../../data/automation";
-import type { HomeAssistant } from "../../../../../types";
+import type { ThirdEye } from "../../../../../types";
 
 @customElement("ha-automation-trigger-numeric_state")
 export class HaNumericStateTrigger extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public trigger!: NumericStateTrigger;
 

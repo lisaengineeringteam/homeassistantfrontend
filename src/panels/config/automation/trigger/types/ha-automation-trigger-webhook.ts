@@ -13,14 +13,14 @@ import {
   WebhookTrigger,
   AutomationConfig,
 } from "../../../../../data/automation";
-import { HomeAssistant } from "../../../../../types";
+import { ThirdEye } from "../../../../../types";
 import { handleChangeEvent } from "../ha-automation-trigger-row";
 
 const DEFAULT_WEBHOOK_ID = "";
 
 @customElement("ha-automation-trigger-webhook")
 export class HaWebhookTrigger extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public trigger!: WebhookTrigger;
 

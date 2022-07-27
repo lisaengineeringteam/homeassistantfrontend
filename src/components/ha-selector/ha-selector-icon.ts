@@ -2,12 +2,12 @@ import { html, LitElement } from "lit";
 import { customElement, property } from "lit/decorators";
 import { fireEvent } from "../../common/dom/fire_event";
 import { IconSelector } from "../../data/selector";
-import { HomeAssistant } from "../../types";
+import { ThirdEye } from "../../types";
 import "../ha-icon-picker";
 
 @customElement("ha-selector-icon")
 export class HaIconSelector extends LitElement {
-  @property() public hass!: HomeAssistant;
+  @property() public hass!: ThirdEye;
 
   @property() public selector!: IconSelector;
 

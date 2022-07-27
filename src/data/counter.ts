@@ -1,4 +1,4 @@
-import { HomeAssistant } from "../types";
+import { ThirdEye } from "../types";
 
 export interface Counter {
   id: string;
@@ -21,11 +21,11 @@ export interface CounterMutableParams {
   step: number;
 }
 
-export const fetchCounter = (hass: HomeAssistant) =>
+export const fetchCounter = (hass: ThirdEye) =>
   hass.callWS<Counter[]>({ type: "counter/list" });
 
 export const createCounter = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   values: CounterMutableParams
 ) =>
   hass.callWS<Counter>({
@@ -34,7 +34,7 @@ export const createCounter = (
   });
 
 export const updateCounter = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   id: string,
   updates: Partial<CounterMutableParams>
 ) =>
@@ -44,7 +44,7 @@ export const updateCounter = (
     ...updates,
   });
 
-export const deleteCounter = (hass: HomeAssistant, id: string) =>
+export const deleteCounter = (hass: ThirdEye, id: string) =>
   hass.callWS({
     type: "counter/delete",
     counter_id: id,

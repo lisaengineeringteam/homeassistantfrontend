@@ -27,12 +27,12 @@ import {
   StatisticsMetaData,
   StatisticType,
 } from "../../data/history";
-import type { HomeAssistant } from "../../types";
+import type { ThirdEye } from "../../types";
 import "./ha-chart-base";
 
 @customElement("statistics-chart")
 class StatisticsChart extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ attribute: false }) public statisticsData!: Statistics;
 

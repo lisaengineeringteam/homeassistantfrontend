@@ -8,12 +8,12 @@ import { getConfigEntries } from "../../../../../data/config_entries";
 import { showOptionsFlowDialog } from "../../../../../dialogs/config-flow/show-dialog-options-flow";
 import "../../../../../layouts/hass-subpage";
 import { haStyle } from "../../../../../resources/styles";
-import { HomeAssistant } from "../../../../../types";
+import { ThirdEye } from "../../../../../types";
 import "./mqtt-subscribe-card";
 
 @customElement("mqtt-config-panel")
 class HaPanelDevMqtt extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ type: Boolean }) public narrow!: boolean;
 

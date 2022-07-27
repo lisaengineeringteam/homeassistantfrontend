@@ -2,12 +2,12 @@ import { css, html, LitElement } from "lit";
 import { customElement, property } from "lit/decorators";
 import { fireEvent } from "../../common/dom/fire_event";
 import type { ColorTempSelector } from "../../data/selector";
-import type { HomeAssistant } from "../../types";
+import type { ThirdEye } from "../../types";
 import "../ha-labeled-slider";
 
 @customElement("ha-selector-color_temp")
 export class HaColorTempSelector extends LitElement {
-  @property() public hass!: HomeAssistant;
+  @property() public hass!: ThirdEye;
 
   @property() public selector!: ColorTempSelector;
 

@@ -2,7 +2,7 @@ import { html, LitElement } from "lit";
 import { customElement, property } from "lit/decorators";
 import type { HaFormSchema } from "../../../../../components/ha-form/types";
 import type { WaitAction } from "../../../../../data/script";
-import type { HomeAssistant } from "../../../../../types";
+import type { ThirdEye } from "../../../../../types";
 import type { ActionElement } from "../ha-automation-action-row";
 import "../../../../../components/ha-form/ha-form";
 
@@ -28,7 +28,7 @@ const SCHEMA: HaFormSchema[] = [
 
 @customElement("ha-automation-action-wait_template")
 export class HaWaitAction extends LitElement implements ActionElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ attribute: false }) public action!: WaitAction;
 

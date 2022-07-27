@@ -25,11 +25,11 @@ import {
   WeatherEntity,
   weatherIcons,
 } from "../../../data/weather";
-import { HomeAssistant } from "../../../types";
+import { ThirdEye } from "../../../types";
 
 @customElement("more-info-weather")
 class MoreInfoWeather extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public stateObj?: WeatherEntity;
 
@@ -38,7 +38,7 @@ class MoreInfoWeather extends LitElement {
       return true;
     }
 
-    const oldHass = changedProps.get("hass") as HomeAssistant | undefined;
+    const oldHass = changedProps.get("hass") as ThirdEye | undefined;
     if (
       !oldHass ||
       oldHass.locale !== this.hass.locale ||

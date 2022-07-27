@@ -6,7 +6,7 @@ import "../../../../components/ha-dialog";
 import { DeviceConsumptionEnergyPreference } from "../../../../data/energy";
 import { HassDialog } from "../../../../dialogs/make-dialog-manager";
 import { haStyleDialog } from "../../../../resources/styles";
-import { HomeAssistant } from "../../../../types";
+import { ThirdEye } from "../../../../types";
 import { EnergySettingsDeviceDialogParams } from "./show-dialogs-energy";
 import "@material/mwc-button/mwc-button";
 import "../../../../components/entity/ha-statistic-picker";
@@ -22,7 +22,7 @@ export class DialogEnergyDeviceSettings
   extends LitElement
   implements HassDialog<EnergySettingsDeviceDialogParams>
 {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @state() private _params?: EnergySettingsDeviceDialogParams;
 

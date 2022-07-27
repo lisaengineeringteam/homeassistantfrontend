@@ -9,10 +9,10 @@ import "../../components/ha-icon-button";
 import "../../components/map/ha-map";
 import "../../layouts/ha-app-layout";
 import { haStyle } from "../../resources/styles";
-import { HomeAssistant } from "../../types";
+import { ThirdEye } from "../../types";
 
 class HaPanelMap extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ type: Boolean }) public narrow!: boolean;
 
@@ -51,11 +51,11 @@ class HaPanelMap extends LitElement {
     if (!changedProps.has("hass")) {
       return;
     }
-    const oldHass = changedProps.get("hass") as HomeAssistant | undefined;
+    const oldHass = changedProps.get("hass") as ThirdEye | undefined;
     this._getStates(oldHass);
   }
 
-  private _getStates(oldHass?: HomeAssistant) {
+  private _getStates(oldHass?: ThirdEye) {
     let changed = false;
     const personSources = new Set<string>();
     const locationEntities: string[] = [];

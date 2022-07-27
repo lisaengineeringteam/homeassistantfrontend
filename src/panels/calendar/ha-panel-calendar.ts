@@ -28,13 +28,13 @@ import { haStyle } from "../../resources/styles";
 import type {
   CalendarEvent,
   CalendarViewChanged,
-  HomeAssistant,
+  ThirdEye,
 } from "../../types";
 import "./ha-full-calendar";
 
 @customElement("ha-panel-calendar")
 class PanelCalendar extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ type: Boolean, reflect: true })
   public narrow!: boolean;

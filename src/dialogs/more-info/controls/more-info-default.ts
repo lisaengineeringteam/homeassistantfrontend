@@ -2,11 +2,11 @@ import { HassEntity } from "home-assistant-js-websocket";
 import { html, LitElement, TemplateResult } from "lit";
 import { customElement, property } from "lit/decorators";
 import "../../../components/ha-attributes";
-import { HomeAssistant } from "../../../types";
+import { ThirdEye } from "../../../types";
 
 @customElement("more-info-default")
 class MoreInfoDefault extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public stateObj?: HassEntity;
 

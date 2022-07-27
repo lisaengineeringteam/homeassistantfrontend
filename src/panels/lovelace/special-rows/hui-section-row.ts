@@ -1,11 +1,11 @@
 import { css, CSSResultGroup, html, LitElement, TemplateResult } from "lit";
 import { customElement, state } from "lit/decorators";
-import { HomeAssistant } from "../../../types";
+import { ThirdEye } from "../../../types";
 import { LovelaceRow, SectionConfig } from "../entity-rows/types";
 
 @customElement("hui-section-row")
 class HuiSectionRow extends LitElement implements LovelaceRow {
-  public hass?: HomeAssistant;
+  public hass?: ThirdEye;
 
   @state() private _config?: SectionConfig;
 

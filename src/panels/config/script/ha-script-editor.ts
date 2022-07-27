@@ -52,7 +52,7 @@ import { showConfirmationDialog } from "../../../dialogs/generic/show-dialog-box
 import "../../../layouts/ha-app-layout";
 import { KeyboardShortcutMixin } from "../../../mixins/keyboard-shortcut-mixin";
 import { haStyle } from "../../../resources/styles";
-import type { HomeAssistant, Route } from "../../../types";
+import type { ThirdEye, Route } from "../../../types";
 import { documentationUrl } from "../../../util/documentation-url";
 import { showToast } from "../../../util/toast";
 import { HaDeviceAction } from "../automation/action/types/ha-automation-action-device_id";
@@ -61,7 +61,7 @@ import { configSections } from "../ha-panel-config";
 import "./blueprint-script-editor";
 
 export class HaScriptEditor extends KeyboardShortcutMixin(LitElement) {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public scriptEntityId: string | null = null;
 

@@ -3,7 +3,7 @@ import { customElement, property } from "lit/decorators";
 import { fireEvent } from "../../../../../common/dom/fire_event";
 import type { HaFormSchema } from "../../../../../components/ha-form/types";
 import type { TimePatternTrigger } from "../../../../../data/automation";
-import type { HomeAssistant } from "../../../../../types";
+import type { ThirdEye } from "../../../../../types";
 import type { TriggerElement } from "../ha-automation-trigger-row";
 
 const SCHEMA: HaFormSchema[] = [
@@ -14,7 +14,7 @@ const SCHEMA: HaFormSchema[] = [
 
 @customElement("ha-automation-trigger-time_pattern")
 export class HaTimePatternTrigger extends LitElement implements TriggerElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public trigger!: TimePatternTrigger;
 

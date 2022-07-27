@@ -14,7 +14,7 @@ import "../../../../components/ha-header-bar";
 import type { LovelaceViewConfig } from "../../../../data/lovelace";
 import type { HassDialog } from "../../../../dialogs/make-dialog-manager";
 import { haStyleDialog } from "../../../../resources/styles";
-import type { HomeAssistant } from "../../../../types";
+import type { ThirdEye } from "../../../../types";
 import "./hui-card-picker";
 import "./hui-entity-picker-table";
 import { CreateCardDialogParams } from "./show-create-card-dialog";
@@ -36,7 +36,7 @@ export class HuiCreateDialogCard
   extends LitElement
   implements HassDialog<CreateCardDialogParams>
 {
-  @property({ attribute: false }) protected hass!: HomeAssistant;
+  @property({ attribute: false }) protected hass!: ThirdEye;
 
   @state() private _params?: CreateCardDialogParams;
 

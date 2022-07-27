@@ -1,12 +1,12 @@
-import { HomeAssistant } from "../types";
+import { ThirdEye } from "../types";
 import { handleFetchPromise } from "../util/hass-call-api";
 
 export interface InstallationType {
   installation_type:
-    | "Home Assistant Operating System"
-    | "Home Assistant Container"
-    | "Home Assistant Supervised"
-    | "Home Assistant Core"
+    | "Third Eye Operating System"
+    | "Third Eye Container"
+    | "Third Eye Supervised"
+    | "Third Eye Core"
     | "Unknown";
 }
 
@@ -56,17 +56,17 @@ export const onboardUserStep = (params: {
     })
   );
 
-export const onboardCoreConfigStep = (hass: HomeAssistant) =>
+export const onboardCoreConfigStep = (hass: ThirdEye) =>
   hass.callApi<OnboardingCoreConfigStepResponse>(
     "POST",
     "onboarding/core_config"
   );
 
-export const onboardAnalyticsStep = (hass: HomeAssistant) =>
+export const onboardAnalyticsStep = (hass: ThirdEye) =>
   hass.callApi<OnboardingAnalyticsStepResponse>("POST", "onboarding/analytics");
 
 export const onboardIntegrationStep = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   params: { client_id: string; redirect_uri: string }
 ) =>
   hass.callApi<OnboardingIntegrationStepResponse>(

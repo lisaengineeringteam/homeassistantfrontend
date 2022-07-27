@@ -3,7 +3,7 @@ import { Store } from "home-assistant-js-websocket/dist/store";
 import { computeStateName } from "../common/entity/compute_state_name";
 import { caseInsensitiveStringCompare } from "../common/string/compare";
 import { debounce } from "../common/util/debounce";
-import { HomeAssistant } from "../types";
+import { ThirdEye } from "../types";
 
 export interface EntityRegistryEntry {
   entity_id: string;
@@ -58,7 +58,7 @@ export interface EntityRegistryEntryUpdateParams {
 }
 
 export const findBatteryEntity = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   entities: EntityRegistryEntry[]
 ): EntityRegistryEntry | undefined =>
   entities.find(
@@ -68,7 +68,7 @@ export const findBatteryEntity = (
   );
 
 export const findBatteryChargingEntity = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   entities: EntityRegistryEntry[]
 ): EntityRegistryEntry | undefined =>
   entities.find(
@@ -79,7 +79,7 @@ export const findBatteryChargingEntity = (
   );
 
 export const computeEntityRegistryName = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   entry: EntityRegistryEntry
 ): string | null => {
   if (entry.name) {
@@ -90,7 +90,7 @@ export const computeEntityRegistryName = (
 };
 
 export const getExtendedEntityRegistryEntry = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   entityId: string
 ): Promise<ExtEntityRegistryEntry> =>
   hass.callWS({
@@ -99,7 +99,7 @@ export const getExtendedEntityRegistryEntry = (
   });
 
 export const updateEntityRegistryEntry = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   entityId: string,
   updates: Partial<EntityRegistryEntryUpdateParams>
 ): Promise<UpdateEntityRegistryEntryResult> =>
@@ -110,7 +110,7 @@ export const updateEntityRegistryEntry = (
   });
 
 export const removeEntityRegistryEntry = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   entityId: string
 ): Promise<void> =>
   hass.callWS({

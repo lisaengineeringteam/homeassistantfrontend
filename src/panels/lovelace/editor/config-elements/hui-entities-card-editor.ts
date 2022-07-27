@@ -29,7 +29,7 @@ import "../../../../components/ha-formfield";
 import "../../../../components/ha-textfield";
 import "../../../../components/ha-icon";
 import "../../../../components/ha-switch";
-import type { HomeAssistant } from "../../../../types";
+import type { ThirdEye } from "../../../../types";
 import type { EntitiesCardConfig } from "../../cards/types";
 import "../../../../components/ha-theme-picker";
 import { TIMESTAMP_RENDERING_FORMATS } from "../../components/types";
@@ -202,7 +202,7 @@ export class HuiEntitiesCardEditor
   extends LitElement
   implements LovelaceCardEditor
 {
-  @property({ attribute: false }) public hass?: HomeAssistant;
+  @property({ attribute: false }) public hass?: ThirdEye;
 
   @state() private _config?: EntitiesCardConfig;
 

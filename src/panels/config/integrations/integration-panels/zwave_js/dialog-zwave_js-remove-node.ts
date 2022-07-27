@@ -6,7 +6,7 @@ import { fireEvent } from "../../../../../common/dom/fire_event";
 import "../../../../../components/ha-circular-progress";
 import { createCloseHeading } from "../../../../../components/ha-dialog";
 import { haStyleDialog } from "../../../../../resources/styles";
-import { HomeAssistant } from "../../../../../types";
+import { ThirdEye } from "../../../../../types";
 import { ZWaveJSRemoveNodeDialogParams } from "./show-dialog-zwave_js-remove-node";
 
 export interface ZWaveJSRemovedNode {
@@ -17,7 +17,7 @@ export interface ZWaveJSRemovedNode {
 
 @customElement("dialog-zwave_js-remove-node")
 class DialogZWaveJSRemoveNode extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @state() private entry_id?: string;
 

@@ -15,13 +15,13 @@ import {
   isCustomIntegrationError,
   LoggedError,
 } from "../../../data/system_log";
-import { HomeAssistant } from "../../../types";
+import { ThirdEye } from "../../../types";
 import { showSystemLogDetailDialog } from "./show-dialog-system-log-detail";
 import { formatSystemLogTime } from "./util";
 
 @customElement("system-log-card")
 export class SystemLogCard extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public filter = "";
 

@@ -23,7 +23,7 @@ import {
 import { showConfirmationDialog } from "../../../../dialogs/generic/show-dialog-box";
 import "../../../../layouts/hass-subpage";
 import { SubscribeMixin } from "../../../../mixins/subscribe-mixin";
-import { HomeAssistant } from "../../../../types";
+import { ThirdEye } from "../../../../types";
 import "../../ha-config-section";
 import "./cloud-alexa-pref";
 import "./cloud-google-pref";
@@ -33,7 +33,7 @@ import "./cloud-webhooks";
 
 @customElement("cloud-account")
 export class CloudAccount extends SubscribeMixin(LitElement) {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ type: Boolean }) public isWide = false;
 
@@ -50,7 +50,7 @@ export class CloudAccount extends SubscribeMixin(LitElement) {
       <hass-subpage
         .hass=${this.hass}
         .narrow=${this.narrow}
-        header="Home Assistant Cloud"
+        header="Third Eye Cloud"
       >
         <ha-button-menu
           slot="toolbar-icon"
@@ -71,7 +71,7 @@ export class CloudAccount extends SubscribeMixin(LitElement) {
 
         <div class="content">
           <ha-config-section .isWide=${this.isWide}>
-            <span slot="header">Home Assistant Cloud</span>
+            <span slot="header">Third Eye Cloud</span>
             <div slot="introduction">
               <p>
                 ${this.hass.localize(
@@ -230,7 +230,7 @@ export class CloudAccount extends SubscribeMixin(LitElement) {
 
   protected updated(changedProps: PropertyValues) {
     if (changedProps.has("hass")) {
-      const oldHass = changedProps.get("hass") as HomeAssistant | undefined;
+      const oldHass = changedProps.get("hass") as ThirdEye | undefined;
       if (!oldHass || oldHass.locale !== this.hass.locale) {
         this._rtlDirection = computeRTLDirection(this.hass);
       }

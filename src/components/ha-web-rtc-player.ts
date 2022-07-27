@@ -8,7 +8,7 @@ import {
 } from "lit";
 import { customElement, property, state, query } from "lit/decorators";
 import { handleWebRtcOffer, WebRtcAnswer } from "../data/camera";
-import type { HomeAssistant } from "../types";
+import type { ThirdEye } from "../types";
 import "./ha-alert";
 
 /**
@@ -18,7 +18,7 @@ import "./ha-alert";
  */
 @customElement("ha-web-rtc-player")
 class HaWebRtcPlayer extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public entityid!: string;
 

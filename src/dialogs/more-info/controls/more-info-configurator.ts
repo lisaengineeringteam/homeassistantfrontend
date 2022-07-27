@@ -6,11 +6,11 @@ import "../../../components/ha-alert";
 import "../../../components/ha-circular-progress";
 import "../../../components/ha-markdown";
 import "../../../components/ha-textfield";
-import type { HomeAssistant } from "../../../types";
+import type { ThirdEye } from "../../../types";
 
 @customElement("more-info-configurator")
 export class MoreInfoConfigurator extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ attribute: false }) public stateObj?: HassEntity;
 

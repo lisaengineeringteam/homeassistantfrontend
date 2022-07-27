@@ -5,7 +5,7 @@ import "../../../../../components/ha-textfield";
 import "../../../../../components/ha-yaml-editor";
 import "../../../../../components/user/ha-users-picker";
 import { EventTrigger } from "../../../../../data/automation";
-import { HomeAssistant } from "../../../../../types";
+import { ThirdEye } from "../../../../../types";
 import {
   handleChangeEvent,
   TriggerElement,
@@ -13,7 +13,7 @@ import {
 
 @customElement("ha-automation-trigger-event")
 export class HaEventTrigger extends LitElement implements TriggerElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public trigger!: EventTrigger;
 

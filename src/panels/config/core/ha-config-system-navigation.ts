@@ -22,13 +22,13 @@ import {
 } from "../../../dialogs/generic/show-dialog-box";
 import "../../../layouts/hass-subpage";
 import { haStyle } from "../../../resources/styles";
-import type { HomeAssistant } from "../../../types";
+import type { ThirdEye } from "../../../types";
 import "../ha-config-section";
 import { configSections } from "../ha-panel-config";
 
 @customElement("ha-config-system-navigation")
 class HaConfigSystemNavigation extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ type: Boolean, reflect: true })
   public narrow!: boolean;
@@ -122,7 +122,7 @@ class HaConfigSystemNavigation extends LitElement {
         <mwc-button
           slot="toolbar-icon"
           .label=${this.hass.localize(
-            "ui.panel.config.system_dashboard.restart_homeassistant_short"
+            "ui.panel.config.system_dashboard.restart_thirdeye_short"
           )}
           @click=${this._restart}
         ></mwc-button>
@@ -165,10 +165,10 @@ class HaConfigSystemNavigation extends LitElement {
         "ui.panel.config.system_dashboard.confirm_restart_text"
       ),
       confirmText: this.hass.localize(
-        "ui.panel.config.system_dashboard.restart_homeassistant_short"
+        "ui.panel.config.system_dashboard.restart_thirdeye_short"
       ),
       confirm: () => {
-        this.hass.callService("homeassistant", "restart").catch((reason) => {
+        this.hass.callService("thirdeye", "restart").catch((reason) => {
           showAlertDialog(this, {
             title: this.hass.localize(
               "ui.panel.config.system_dashboard.restart_error"

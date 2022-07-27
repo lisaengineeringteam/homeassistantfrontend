@@ -8,11 +8,11 @@ import {
   setInputDateTimeValue,
   stateToIsoDateString,
 } from "../../../data/input_datetime";
-import type { HomeAssistant } from "../../../types";
+import type { ThirdEye } from "../../../types";
 
 @customElement("more-info-input_datetime")
 class MoreInfoInputDatetime extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ attribute: false }) public stateObj?: HassEntity;
 

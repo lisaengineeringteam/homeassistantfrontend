@@ -16,7 +16,7 @@ import {
   RenderTemplateResult,
   subscribeRenderTemplate,
 } from "../../../data/ws-templates";
-import type { HomeAssistant } from "../../../types";
+import type { ThirdEye } from "../../../types";
 import type { LovelaceCard, LovelaceCardEditor } from "../types";
 import type { MarkdownCardConfig } from "./types";
 
@@ -35,7 +35,7 @@ export class HuiMarkdownCard extends LitElement implements LovelaceCard {
     };
   }
 
-  @property({ attribute: false }) public hass?: HomeAssistant;
+  @property({ attribute: false }) public hass?: ThirdEye;
 
   @state() private _config?: MarkdownCardConfig;
 
@@ -98,7 +98,7 @@ export class HuiMarkdownCard extends LitElement implements LovelaceCard {
 
     this._tryConnect();
 
-    const oldHass = changedProps.get("hass") as HomeAssistant | undefined;
+    const oldHass = changedProps.get("hass") as ThirdEye | undefined;
     const oldConfig = changedProps.get("_config") as
       | MarkdownCardConfig
       | undefined;

@@ -4,7 +4,7 @@ import { css, CSSResultGroup, html, LitElement, TemplateResult } from "lit";
 import { customElement, property, state, query } from "lit/decorators";
 import { fireEvent, HASSDomEvent } from "../../../common/dom/fire_event";
 import "../../../components/ha-icon-button";
-import type { HomeAssistant } from "../../../types";
+import type { ThirdEye } from "../../../types";
 import type { LovelaceRowConfig } from "../entity-rows/types";
 import type { LovelaceHeaderFooterConfig } from "../header-footer/types";
 import "./entity-row-editor/hui-row-element-editor";
@@ -20,7 +20,7 @@ declare global {
 
 @customElement("hui-sub-element-editor")
 export class HuiSubElementEditor extends LitElement {
-  public hass!: HomeAssistant;
+  public hass!: ThirdEye;
 
   @property({ attribute: false }) public config!: SubElementEditorConfig;
 

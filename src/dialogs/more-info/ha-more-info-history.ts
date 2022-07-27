@@ -7,7 +7,7 @@ import { throttle } from "../../common/util/throttle";
 import "../../components/chart/state-history-charts";
 import { getRecentWithCache } from "../../data/cached-history";
 import { HistoryResult } from "../../data/history";
-import { HomeAssistant } from "../../types";
+import { ThirdEye } from "../../types";
 
 declare global {
   interface HASSDomEvents {
@@ -17,7 +17,7 @@ declare global {
 
 @customElement("ha-more-info-history")
 export class MoreInfoHistory extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public entityId!: string;
 
@@ -76,7 +76,7 @@ export class MoreInfoHistory extends LitElement {
       return;
     }
 
-    const oldHass = changedProps.get("hass") as HomeAssistant | undefined;
+    const oldHass = changedProps.get("hass") as ThirdEye | undefined;
 
     if (
       oldHass &&

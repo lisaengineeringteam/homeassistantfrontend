@@ -28,14 +28,14 @@ import {
   showAlertDialog,
   showConfirmationDialog,
 } from "../../../dialogs/generic/show-dialog-box";
-import type { HomeAssistant } from "../../../types";
+import type { ThirdEye } from "../../../types";
 import "../../../components/ha-card";
 
 const IP_VERSIONS = ["ipv4", "ipv6"];
 
 @customElement("supervisor-network")
 export class HassioNetwork extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @state() private _accessPoints?: AccessPoints;
 

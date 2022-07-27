@@ -13,12 +13,12 @@ import {
 } from "../../data/entity_registry";
 import { TargetSelector } from "../../data/selector";
 import { SubscribeMixin } from "../../mixins/subscribe-mixin";
-import { HomeAssistant } from "../../types";
+import { ThirdEye } from "../../types";
 import "../ha-target-picker";
 
 @customElement("ha-selector-target")
 export class HaTargetSelector extends SubscribeMixin(LitElement) {
-  @property() public hass!: HomeAssistant;
+  @property() public hass!: ThirdEye;
 
   @property() public selector!: TargetSelector;
 

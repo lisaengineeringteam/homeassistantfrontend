@@ -35,7 +35,7 @@ import {
 } from "../../data/media_source";
 import "../../layouts/ha-app-layout";
 import { haStyle } from "../../resources/styles";
-import type { HomeAssistant, Route } from "../../types";
+import type { ThirdEye, Route } from "../../types";
 import "./ha-bar-media-player";
 import type { BarMediaPlayer } from "./ha-bar-media-player";
 import { showWebBrowserPlayMediaDialog } from "./show-media-player-dialog";
@@ -57,7 +57,7 @@ const createMediaPanelUrl = (entityId: string, items: MediaPlayerItemId[]) => {
 
 @customElement("ha-panel-media-browser")
 class PanelMediaBrowser extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ type: Boolean, reflect: true })
   public narrow!: boolean;

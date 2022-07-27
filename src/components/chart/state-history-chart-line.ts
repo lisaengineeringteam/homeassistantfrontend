@@ -7,7 +7,7 @@ import {
   numberFormatToLocale,
 } from "../../common/number/format_number";
 import { LineChartEntity, LineChartState } from "../../data/history";
-import { HomeAssistant } from "../../types";
+import { ThirdEye } from "../../types";
 import { MIN_TIME_BETWEEN_UPDATES } from "./ha-chart-base";
 
 const safeParseFloat = (value) => {
@@ -16,7 +16,7 @@ const safeParseFloat = (value) => {
 };
 
 class StateHistoryChartLine extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ attribute: false }) public data: LineChartEntity[] = [];
 

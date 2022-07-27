@@ -1,4 +1,4 @@
-import { HomeAssistant } from "../types";
+import { ThirdEye } from "../types";
 
 export interface InputText {
   id: string;
@@ -21,17 +21,17 @@ export interface InputTextMutableParams {
   mode: "text" | "password";
 }
 
-export const setValue = (hass: HomeAssistant, entity: string, value: string) =>
+export const setValue = (hass: ThirdEye, entity: string, value: string) =>
   hass.callService(entity.split(".", 1)[0], "set_value", {
     value,
     entity_id: entity,
   });
 
-export const fetchInputText = (hass: HomeAssistant) =>
+export const fetchInputText = (hass: ThirdEye) =>
   hass.callWS<InputText[]>({ type: "input_text/list" });
 
 export const createInputText = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   values: InputTextMutableParams
 ) =>
   hass.callWS<InputText>({
@@ -40,7 +40,7 @@ export const createInputText = (
   });
 
 export const updateInputText = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   id: string,
   updates: Partial<InputTextMutableParams>
 ) =>
@@ -50,7 +50,7 @@ export const updateInputText = (
     ...updates,
   });
 
-export const deleteInputText = (hass: HomeAssistant, id: string) =>
+export const deleteInputText = (hass: ThirdEye, id: string) =>
   hass.callWS({
     type: "input_text/delete",
     input_text_id: id,

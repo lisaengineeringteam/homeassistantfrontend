@@ -33,11 +33,11 @@ import {
   SUPPORT_VOLUME_MUTE,
   SUPPORT_VOLUME_SET,
 } from "../../../data/media-player";
-import { HomeAssistant } from "../../../types";
+import { ThirdEye } from "../../../types";
 
 @customElement("more-info-media_player")
 class MoreInfoMediaPlayer extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ attribute: false }) public stateObj?: MediaPlayerEntity;
 

@@ -7,13 +7,13 @@ import "../../../../../components/ha-icon-button";
 import { Condition } from "../../../../../data/automation";
 import { Action, ChooseAction } from "../../../../../data/script";
 import { haStyle } from "../../../../../resources/styles";
-import { HomeAssistant } from "../../../../../types";
+import { ThirdEye } from "../../../../../types";
 import { ActionElement } from "../ha-automation-action-row";
 import "../../../../../components/ha-form/ha-form";
 
 @customElement("ha-automation-action-choose")
 export class HaChooseAction extends LitElement implements ActionElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public action!: ChooseAction;
 

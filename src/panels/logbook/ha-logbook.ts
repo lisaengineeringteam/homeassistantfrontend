@@ -13,7 +13,7 @@ import {
 } from "../../data/logbook";
 import { loadTraceContexts, TraceContexts } from "../../data/trace";
 import { fetchUsers } from "../../data/user";
-import { HomeAssistant } from "../../types";
+import { ThirdEye } from "../../types";
 import "./ha-logbook-renderer";
 
 interface LogbookTimePeriod {
@@ -40,7 +40,7 @@ const idsChanged = (oldIds?: string[], newIds?: string[]) => {
 
 @customElement("ha-logbook")
 export class HaLogbook extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public time!:
     | { range: [Date, Date] }
@@ -164,7 +164,7 @@ export class HaLogbook extends LitElement {
       return true;
     }
     // We only respond to hass changes if the translations changed
-    const oldHass = changedProps.get("hass") as HomeAssistant | undefined;
+    const oldHass = changedProps.get("hass") as ThirdEye | undefined;
     return !oldHass || oldHass.localize !== this.hass.localize;
   }
 

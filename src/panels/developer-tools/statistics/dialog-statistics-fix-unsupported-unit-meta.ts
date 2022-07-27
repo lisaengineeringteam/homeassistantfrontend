@@ -4,7 +4,7 @@ import { customElement, property, state } from "lit/decorators";
 import "../../../components/ha-dialog";
 import { fireEvent } from "../../../common/dom/fire_event";
 import { haStyle, haStyleDialog } from "../../../resources/styles";
-import { HomeAssistant } from "../../../types";
+import { ThirdEye } from "../../../types";
 import { updateStatisticsMetadata } from "../../../data/history";
 import "../../../components/ha-formfield";
 import "../../../components/ha-radio";
@@ -12,7 +12,7 @@ import type { DialogStatisticsUnsupportedUnitMetaParams } from "./show-dialog-st
 
 @customElement("dialog-statistics-fix-unsupported-unit-meta")
 export class DialogStatisticsFixUnsupportedUnitMetadata extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @state() private _params?: DialogStatisticsUnsupportedUnitMetaParams;
 

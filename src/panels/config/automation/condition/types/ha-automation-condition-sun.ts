@@ -3,7 +3,7 @@ import { customElement, property } from "lit/decorators";
 import memoizeOne from "memoize-one";
 import { fireEvent } from "../../../../../common/dom/fire_event";
 import type { SunCondition } from "../../../../../data/automation";
-import type { HomeAssistant } from "../../../../../types";
+import type { ThirdEye } from "../../../../../types";
 import type { ConditionElement } from "../ha-automation-condition-row";
 import type { LocalizeFunc } from "../../../../../common/translations/localize";
 import type { HaFormSchema } from "../../../../../components/ha-form/types";
@@ -11,7 +11,7 @@ import "../../../../../components/ha-form/ha-form";
 
 @customElement("ha-automation-condition-sun")
 export class HaSunCondition extends LitElement implements ConditionElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ attribute: false }) public condition!: SunCondition;
 

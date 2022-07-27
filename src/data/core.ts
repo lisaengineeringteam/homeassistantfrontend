@@ -1,5 +1,5 @@
 import { HassConfig } from "home-assistant-js-websocket";
-import { HomeAssistant } from "../types";
+import { ThirdEye } from "../types";
 
 export interface ConfigUpdateValues {
   location_name: string;
@@ -19,7 +19,7 @@ export interface CheckConfigResult {
 }
 
 export const saveCoreConfig = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   values: Partial<ConfigUpdateValues>
 ) =>
   hass.callWS<HassConfig>({
@@ -27,10 +27,10 @@ export const saveCoreConfig = (
     ...values,
   });
 
-export const detectCoreConfig = (hass: HomeAssistant) =>
+export const detectCoreConfig = (hass: ThirdEye) =>
   hass.callWS<Partial<ConfigUpdateValues>>({
     type: "config/core/detect",
   });
 
-export const checkCoreConfig = (hass: HomeAssistant) =>
+export const checkCoreConfig = (hass: ThirdEye) =>
   hass.callApi<CheckConfigResult>("POST", "config/core/check_config");

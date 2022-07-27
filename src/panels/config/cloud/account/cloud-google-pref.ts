@@ -10,11 +10,11 @@ import type { HaTextField } from "../../../../components/ha-textfield";
 import { CloudStatusLoggedIn, updateCloudPref } from "../../../../data/cloud";
 import { syncCloudGoogleEntities } from "../../../../data/google_assistant";
 import { showAlertDialog } from "../../../../dialogs/generic/show-dialog-box";
-import type { HomeAssistant } from "../../../../types";
+import type { ThirdEye } from "../../../../types";
 import { showSaveSuccessToast } from "../../../../util/toast-saved-success";
 
 export class CloudGooglePref extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ attribute: false }) public cloudStatus?: CloudStatusLoggedIn;
 

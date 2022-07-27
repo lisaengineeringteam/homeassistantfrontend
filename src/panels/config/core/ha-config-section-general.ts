@@ -22,11 +22,11 @@ import { ConfigUpdateValues, saveCoreConfig } from "../../../data/core";
 import { SYMBOL_TO_ISO } from "../../../data/currency";
 import "../../../layouts/hass-subpage";
 import { haStyle } from "../../../resources/styles";
-import type { HomeAssistant } from "../../../types";
+import type { ThirdEye } from "../../../types";
 
 @customElement("ha-config-section-general")
 class HaConfigSectionGeneral extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ type: Boolean }) public narrow!: boolean;
 

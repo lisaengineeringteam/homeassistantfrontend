@@ -49,14 +49,14 @@ import "../../../../layouts/hass-loading-screen";
 import "../../../../layouts/hass-subpage";
 import { SubscribeMixin } from "../../../../mixins/subscribe-mixin";
 import { haStyle } from "../../../../resources/styles";
-import type { HomeAssistant } from "../../../../types";
+import type { ThirdEye } from "../../../../types";
 import { showToast } from "../../../../util/toast";
 
 const DEFAULT_CONFIG_EXPOSE = true;
 
 @customElement("cloud-google-assistant")
 class CloudGoogleAssistant extends SubscribeMixin(LitElement) {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public cloudStatus!: CloudStatusLoggedIn;
 

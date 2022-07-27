@@ -8,7 +8,7 @@ import { computeDomain } from "../../common/entity/compute_domain";
 import { numberFormatToLocale } from "../../common/number/format_number";
 import { computeRTL } from "../../common/util/compute_rtl";
 import { TimelineEntity } from "../../data/history";
-import { HomeAssistant } from "../../types";
+import { ThirdEye } from "../../types";
 import { MIN_TIME_BETWEEN_UPDATES } from "./ha-chart-base";
 import type { TimeLineData } from "./timeline-chart/const";
 
@@ -79,7 +79,7 @@ const getColor = (
 
 @customElement("state-history-chart-timeline")
 export class StateHistoryChartTimeline extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ attribute: false }) public data: TimelineEntity[] = [];
 

@@ -7,13 +7,13 @@ import "../../../../components/ha-textfield";
 import type { HaRadio } from "../../../../components/ha-radio";
 import { InputText } from "../../../../data/input_text";
 import { haStyle } from "../../../../resources/styles";
-import { HomeAssistant } from "../../../../types";
+import { ThirdEye } from "../../../../types";
 import "../../../../components/ha-formfield";
 import "../../../../components/ha-radio";
 
 @customElement("ha-input_text-form")
 class HaInputTextForm extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public new?: boolean;
 

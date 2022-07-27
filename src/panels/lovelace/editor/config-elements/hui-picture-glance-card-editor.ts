@@ -5,7 +5,7 @@ import { fireEvent } from "../../../../common/dom/fire_event";
 import "../../../../components/ha-form/ha-form";
 import type { HaFormSchema } from "../../../../components/ha-form/types";
 import type { ActionConfig } from "../../../../data/lovelace";
-import type { HomeAssistant } from "../../../../types";
+import type { ThirdEye } from "../../../../types";
 import type { PictureGlanceCardConfig } from "../../cards/types";
 import "../../components/hui-action-editor";
 import "../../components/hui-entity-editor";
@@ -60,7 +60,7 @@ export class HuiPictureGlanceCardEditor
   extends LitElement
   implements LovelaceCardEditor
 {
-  @property({ attribute: false }) public hass?: HomeAssistant;
+  @property({ attribute: false }) public hass?: ThirdEye;
 
   @state() private _config?: PictureGlanceCardConfig;
 

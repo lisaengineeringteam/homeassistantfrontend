@@ -8,7 +8,7 @@ import { computeStateName } from "../../common/entity/compute_state_name";
 import { stringCompare } from "../../common/string/compare";
 import { getStatisticIds, StatisticsMetaData } from "../../data/history";
 import { PolymerChangedEvent } from "../../polymer-types";
-import { HomeAssistant } from "../../types";
+import { ThirdEye } from "../../types";
 import { documentationUrl } from "../../util/documentation-url";
 import "../ha-combo-box";
 import type { HaComboBox } from "../ha-combo-box";
@@ -17,7 +17,7 @@ import "./state-badge";
 
 @customElement("ha-statistic-picker")
 export class HaStatisticPicker extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public label?: string;
 

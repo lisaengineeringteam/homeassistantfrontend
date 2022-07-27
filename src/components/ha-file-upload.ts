@@ -4,7 +4,7 @@ import { css, html, LitElement, PropertyValues, TemplateResult } from "lit";
 import { customElement, property, query, state } from "lit/decorators";
 import { classMap } from "lit/directives/class-map";
 import { fireEvent } from "../common/dom/fire_event";
-import { HomeAssistant } from "../types";
+import { ThirdEye } from "../types";
 import "./ha-circular-progress";
 import "./ha-icon-button";
 
@@ -16,7 +16,7 @@ declare global {
 
 @customElement("ha-file-upload")
 export class HaFileUpload extends LitElement {
-  @property({ attribute: false }) public hass?: HomeAssistant;
+  @property({ attribute: false }) public hass?: ThirdEye;
 
   @property() public accept!: string;
 

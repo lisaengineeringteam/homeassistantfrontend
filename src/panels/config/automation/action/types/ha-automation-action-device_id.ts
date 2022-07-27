@@ -11,11 +11,11 @@ import {
   DeviceCapabilities,
   fetchDeviceActionCapabilities,
 } from "../../../../../data/device_automation";
-import { HomeAssistant } from "../../../../../types";
+import { ThirdEye } from "../../../../../types";
 
 @customElement("ha-automation-action-device_id")
 export class HaDeviceAction extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ type: Object }) public action!: DeviceAction;
 

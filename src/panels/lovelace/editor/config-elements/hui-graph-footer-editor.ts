@@ -6,7 +6,7 @@ import "../../../../components/entity/ha-entity-picker";
 import "../../../../components/ha-formfield";
 import "../../../../components/ha-switch";
 import "../../../../components/ha-textfield";
-import type { HomeAssistant } from "../../../../types";
+import type { ThirdEye } from "../../../../types";
 import { graphHeaderFooterConfigStruct } from "../../header-footer/structs";
 import { GraphHeaderFooterConfig } from "../../header-footer/types";
 import type { LovelaceCardEditor } from "../../types";
@@ -20,7 +20,7 @@ export class HuiGraphFooterEditor
   extends LitElement
   implements LovelaceCardEditor
 {
-  @property({ attribute: false }) public hass?: HomeAssistant;
+  @property({ attribute: false }) public hass?: ThirdEye;
 
   @state() private _config?: GraphHeaderFooterConfig;
 

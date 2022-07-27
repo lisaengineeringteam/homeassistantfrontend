@@ -3,7 +3,7 @@ import { Store } from "home-assistant-js-websocket/dist/store";
 import { computeStateName } from "../common/entity/compute_state_name";
 import { caseInsensitiveStringCompare } from "../common/string/compare";
 import { debounce } from "../common/util/debounce";
-import { HomeAssistant } from "../types";
+import { ThirdEye } from "../types";
 import { EntityRegistryEntry } from "./entity_registry";
 
 export interface DeviceRegistryEntry {
@@ -35,7 +35,7 @@ export interface DeviceRegistryEntryMutableParams {
 }
 
 export const fallbackDeviceName = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   entities: EntityRegistryEntry[] | string[]
 ) => {
   for (const entity of entities || []) {
@@ -50,7 +50,7 @@ export const fallbackDeviceName = (
 
 export const computeDeviceName = (
   device: DeviceRegistryEntry,
-  hass: HomeAssistant,
+  hass: ThirdEye,
   entities?: EntityRegistryEntry[] | string[]
 ) =>
   device.name_by_user ||
@@ -68,7 +68,7 @@ export const devicesInArea = (devices: DeviceRegistryEntry[], areaId: string) =>
   devices.filter((device) => device.area_id === areaId);
 
 export const updateDeviceRegistryEntry = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   deviceId: string,
   updates: Partial<DeviceRegistryEntryMutableParams>
 ) =>
@@ -79,7 +79,7 @@ export const updateDeviceRegistryEntry = (
   });
 
 export const removeConfigEntryFromDevice = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   deviceId: string,
   configEntryId: string
 ) =>

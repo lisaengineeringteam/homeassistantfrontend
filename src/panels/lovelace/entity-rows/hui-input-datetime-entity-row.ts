@@ -13,7 +13,7 @@ import {
   setInputDateTimeValue,
   stateToIsoDateString,
 } from "../../../data/input_datetime";
-import type { HomeAssistant } from "../../../types";
+import type { ThirdEye } from "../../../types";
 import { hasConfigOrEntityChanged } from "../common/has-changed";
 import "../components/hui-generic-entity-row";
 import { createEntityNotFoundWarning } from "../components/hui-warning";
@@ -23,7 +23,7 @@ import { computeStateName } from "../../../common/entity/compute_state_name";
 
 @customElement("hui-input-datetime-entity-row")
 class HuiInputDatetimeEntityRow extends LitElement implements LovelaceRow {
-  @property({ attribute: false }) public hass?: HomeAssistant;
+  @property({ attribute: false }) public hass?: ThirdEye;
 
   @state() private _config?: EntityConfig;
 

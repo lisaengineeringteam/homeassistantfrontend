@@ -20,11 +20,11 @@ import {
   setAnalyticsPreferences,
 } from "../../../data/analytics";
 import { haStyle } from "../../../resources/styles";
-import type { HomeAssistant } from "../../../types";
+import type { ThirdEye } from "../../../types";
 
 @customElement("ha-config-analytics")
 class ConfigAnalytics extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @state() private _analyticsDetails?: Analytics;
 
@@ -43,7 +43,7 @@ class ConfigAnalytics extends LitElement {
           ${error ? html`<div class="error">${error}</div>` : ""}
           <p>
             Share anonymized information from your installation to help make
-            Home Assistant better and help us convince manufacturers to add
+            Third Eye better and help us convince manufacturers to add
             local control and privacy-focused features.
           </p>
           <ha-analytics

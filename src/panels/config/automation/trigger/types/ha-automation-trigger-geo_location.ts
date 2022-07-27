@@ -5,12 +5,12 @@ import memoizeOne from "memoize-one";
 import { fireEvent } from "../../../../../common/dom/fire_event";
 import { HaFormSchema } from "../../../../../components/ha-form/types";
 import type { GeoLocationTrigger } from "../../../../../data/automation";
-import type { HomeAssistant } from "../../../../../types";
+import type { ThirdEye } from "../../../../../types";
 import type { LocalizeFunc } from "../../../../../common/translations/localize";
 
 @customElement("ha-automation-trigger-geo_location")
 export class HaGeolocationTrigger extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ attribute: false }) public trigger!: GeoLocationTrigger;
 

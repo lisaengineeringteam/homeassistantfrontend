@@ -4,7 +4,7 @@ import { customElement, property, query, state } from "lit/decorators";
 import { fireEvent } from "../common/dom/fire_event";
 import { customIcons } from "../data/custom_icons";
 import { PolymerChangedEvent } from "../polymer-types";
-import { HomeAssistant } from "../types";
+import { ThirdEye } from "../types";
 import "./ha-combo-box";
 import type { HaComboBox } from "./ha-combo-box";
 import "./ha-icon";
@@ -25,7 +25,7 @@ const rowRenderer: ComboBoxLitRenderer<IconItem> = (item) => html`<mwc-list-item
 
 @customElement("ha-icon-picker")
 export class HaIconPicker extends LitElement {
-  @property() public hass?: HomeAssistant;
+  @property() public hass?: ThirdEye;
 
   @property() public value?: string;
 

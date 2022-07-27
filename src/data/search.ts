@@ -1,4 +1,4 @@
-import { HomeAssistant } from "../types";
+import { ThirdEye } from "../types";
 
 export interface RelatedResult {
   area?: string[];
@@ -22,7 +22,7 @@ export type ItemType =
   | "script";
 
 export const findRelated = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   itemType: ItemType,
   itemId: string
 ): Promise<RelatedResult> =>

@@ -12,7 +12,7 @@ import {
   UrlActionConfig,
 } from "../../../data/lovelace";
 import { ServiceAction } from "../../../data/script";
-import { HomeAssistant } from "../../../types";
+import { ThirdEye } from "../../../types";
 import { EditorTarget } from "../editor/types";
 
 @customElement("hui-action-editor")
@@ -25,7 +25,7 @@ export class HuiActionEditor extends LitElement {
 
   @property() public tooltipText?: string;
 
-  @property() protected hass?: HomeAssistant;
+  @property() protected hass?: ThirdEye;
 
   get _navigation_path(): string {
     const config = this.config as NavigateActionConfig | undefined;

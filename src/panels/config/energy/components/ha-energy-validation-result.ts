@@ -3,12 +3,12 @@ import { customElement, property } from "lit/decorators";
 import { groupBy } from "../../../../common/util/group-by";
 import "../../../../components/ha-alert";
 import { EnergyValidationIssue } from "../../../../data/energy";
-import { HomeAssistant } from "../../../../types";
+import { ThirdEye } from "../../../../types";
 
 @customElement("ha-energy-validation-result")
 class EnergyValidationMessage extends LitElement {
   @property({ attribute: false })
-  public hass!: HomeAssistant;
+  public hass!: ThirdEye;
 
   @property()
   public issues!: EnergyValidationIssue[];

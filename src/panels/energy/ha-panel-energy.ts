@@ -13,7 +13,7 @@ import "../../components/ha-menu-button";
 import { LovelaceConfig } from "../../data/lovelace";
 import "../../layouts/ha-app-layout";
 import { haStyle } from "../../resources/styles";
-import { HomeAssistant } from "../../types";
+import { ThirdEye } from "../../types";
 import "../lovelace/components/hui-energy-period-selector";
 import { Lovelace } from "../lovelace/types";
 import "../lovelace/views/hui-view";
@@ -30,7 +30,7 @@ const LOVELACE_CONFIG: LovelaceConfig = {
 
 @customElement("ha-panel-energy")
 class PanelEnergy extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ type: Boolean, reflect: true }) public narrow!: boolean;
 

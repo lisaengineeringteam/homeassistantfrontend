@@ -4,13 +4,13 @@ import { customElement, property, state } from "lit/decorators";
 import { fireEvent } from "../../../../common/dom/fire_event";
 import type { LovelaceCardConfig } from "../../../../data/lovelace";
 import { haStyleDialog } from "../../../../resources/styles";
-import type { HomeAssistant } from "../../../../types";
+import type { ThirdEye } from "../../../../types";
 import "./hui-card-preview";
 import type { DeleteCardDialogParams } from "./show-delete-card-dialog";
 
 @customElement("hui-dialog-delete-card")
 export class HuiDialogDeleteCard extends LitElement {
-  @property() protected hass!: HomeAssistant;
+  @property() protected hass!: ThirdEye;
 
   @state() private _params?: DeleteCardDialogParams;
 

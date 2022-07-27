@@ -1,6 +1,6 @@
 import { PropertyValues, ReactiveElement } from "lit";
 import { customElement, property } from "lit/decorators";
-import { HomeAssistant } from "../../../types";
+import { ThirdEye } from "../../../types";
 import { ConditionalCardConfig } from "../cards/types";
 import {
   checkConditionsMet,
@@ -11,7 +11,7 @@ import { LovelaceCard } from "../types";
 
 @customElement("hui-conditional-base")
 export class HuiConditionalBase extends ReactiveElement {
-  @property({ attribute: false }) public hass?: HomeAssistant;
+  @property({ attribute: false }) public hass?: ThirdEye;
 
   @property() public editMode?: boolean;
 

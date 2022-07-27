@@ -20,7 +20,7 @@ import type {
   LovelaceCardConfig,
   LovelaceConfig,
 } from "../../../data/lovelace";
-import type { HomeAssistant } from "../../../types";
+import type { ThirdEye } from "../../../types";
 import type { LovelaceRowConfig } from "../entity-rows/types";
 import { LovelaceHeaderFooterConfig } from "../header-footer/types";
 import type { LovelaceGenericElementEditor } from "../types";
@@ -49,7 +49,7 @@ export interface UIConfigChangedEvent extends Event {
 }
 
 export abstract class HuiElementEditor<T> extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ attribute: false }) public lovelace?: LovelaceConfig;
 

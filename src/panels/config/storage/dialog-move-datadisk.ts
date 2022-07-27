@@ -21,7 +21,7 @@ import {
 } from "../../../data/hassio/host";
 import { showAlertDialog } from "../../../dialogs/generic/show-dialog-box";
 import { haStyle, haStyleDialog } from "../../../resources/styles";
-import { HomeAssistant } from "../../../types";
+import { ThirdEye } from "../../../types";
 import { MoveDatadiskDialogParams } from "./show-dialog-move-datadisk";
 
 const calculateMoveTime = memoizeOne((hostInfo: HassioHostInfo): number => {
@@ -33,7 +33,7 @@ const calculateMoveTime = memoizeOne((hostInfo: HassioHostInfo): number => {
 
 @customElement("dialog-move-datadisk")
 class MoveDatadiskDialog extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @state() private _hostInfo?: HassioHostInfo;
 

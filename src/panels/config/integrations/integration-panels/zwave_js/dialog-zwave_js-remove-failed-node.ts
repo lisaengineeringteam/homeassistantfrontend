@@ -11,12 +11,12 @@ import {
   ZWaveJSRemovedNode,
 } from "../../../../../data/zwave_js";
 import { haStyleDialog } from "../../../../../resources/styles";
-import { HomeAssistant } from "../../../../../types";
+import { ThirdEye } from "../../../../../types";
 import { ZWaveJSRemoveFailedNodeDialogParams } from "./show-dialog-zwave_js-remove-failed-node";
 
 @customElement("dialog-zwave_js-remove-failed-node")
 class DialogZWaveJSRemoveFailedNode extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @state() private device_id?: string;
 

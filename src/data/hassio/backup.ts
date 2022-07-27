@@ -1,17 +1,17 @@
 import { atLeastVersion } from "../../common/config/version";
-import { HomeAssistant } from "../../types";
+import { ThirdEye } from "../../types";
 import { hassioApiResultExtractor, HassioResponse } from "./common";
 
 export const friendlyFolderName = {
   ssl: "SSL",
-  homeassistant: "Configuration",
+  thirdeye: "Configuration",
   "addons/local": "Local add-ons",
   media: "Media",
   share: "Share",
 };
 
 interface BackupContent {
-  homeassistant: boolean;
+  thirdeye: boolean;
   folders: string[];
   addons: string[];
 }
@@ -28,7 +28,7 @@ export interface HassioBackup {
 
 export interface HassioBackupDetail extends HassioBackup {
   size: number;
-  homeassistant: string;
+  thirdeye: string;
   addons: Array<{
     slug: "ADDON_SLUG";
     name: "NAME";
@@ -48,11 +48,11 @@ export interface HassioPartialBackupCreateParams
   extends HassioFullBackupCreateParams {
   folders?: string[];
   addons?: string[];
-  homeassistant?: boolean;
+  thirdeye?: boolean;
 }
 
 export const fetchHassioBackups = async (
-  hass: HomeAssistant
+  hass: ThirdEye
 ): Promise<HassioBackup[]> => {
   if (atLeastVersion(hass.config.version, 2021, 2, 4)) {
     const data: {
@@ -80,7 +80,7 @@ export const fetchHassioBackups = async (
 };
 
 export const fetchHassioBackupInfo = async (
-  hass: HomeAssistant | undefined,
+  hass: ThirdEye | undefined,
   backup: string
 ): Promise<HassioBackupDetail> => {
   if (hass) {
@@ -110,7 +110,7 @@ export const fetchHassioBackupInfo = async (
   return data;
 };
 
-export const reloadHassioBackups = async (hass: HomeAssistant) => {
+export const reloadHassioBackups = async (hass: ThirdEye) => {
   if (atLeastVersion(hass.config.version, 2021, 2, 4)) {
     await hass.callWS({
       type: "supervisor/api",
@@ -131,7 +131,7 @@ export const reloadHassioBackups = async (hass: HomeAssistant) => {
 };
 
 export const createHassioFullBackup = async (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   data: HassioFullBackupCreateParams
 ) => {
   if (atLeastVersion(hass.config.version, 2021, 2, 4)) {
@@ -155,7 +155,7 @@ export const createHassioFullBackup = async (
   );
 };
 
-export const removeBackup = async (hass: HomeAssistant, slug: string) => {
+export const removeBackup = async (hass: ThirdEye, slug: string) => {
   if (atLeastVersion(hass.config.version, 2021, 2, 4)) {
     await hass.callWS({
       type: "supervisor/api",
@@ -177,7 +177,7 @@ export const removeBackup = async (hass: HomeAssistant, slug: string) => {
 };
 
 export const createHassioPartialBackup = async (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   data: HassioPartialBackupCreateParams
 ) => {
   if (atLeastVersion(hass.config.version, 2021, 2, 4)) {
@@ -203,7 +203,7 @@ export const createHassioPartialBackup = async (
 };
 
 export const uploadBackup = async (
-  hass: HomeAssistant | undefined,
+  hass: ThirdEye | undefined,
   file: File
 ): Promise<HassioResponse<HassioBackup>> => {
   const fd = new FormData();

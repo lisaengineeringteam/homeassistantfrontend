@@ -16,7 +16,7 @@ import "../../../../../components/ha-icon-next";
 import "../../../../../layouts/hass-tabs-subpage";
 import type { PageNavigation } from "../../../../../layouts/hass-tabs-subpage";
 import { haStyle } from "../../../../../resources/styles";
-import type { HomeAssistant, Route } from "../../../../../types";
+import type { ThirdEye, Route } from "../../../../../types";
 import "../../../ha-config-section";
 import "../../../../../components/ha-form/ha-form";
 import {
@@ -45,7 +45,7 @@ export const zhaTabs: PageNavigation[] = [
 
 @customElement("zha-config-dashboard")
 class ZHAConfigDashboard extends LitElement {
-  @property({ type: Object }) public hass!: HomeAssistant;
+  @property({ type: Object }) public hass!: ThirdEye;
 
   @property({ type: Object }) public route!: Route;
 

@@ -1,4 +1,4 @@
-import { HomeAssistant } from "../types";
+import { ThirdEye } from "../types";
 
 export interface AnalyticsPreferences {
   base?: boolean;
@@ -11,13 +11,13 @@ export interface Analytics {
   preferences: AnalyticsPreferences;
 }
 
-export const getAnalyticsDetails = (hass: HomeAssistant) =>
+export const getAnalyticsDetails = (hass: ThirdEye) =>
   hass.callWS<Analytics>({
     type: "analytics",
   });
 
 export const setAnalyticsPreferences = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   preferences: AnalyticsPreferences
 ) =>
   hass.callWS<AnalyticsPreferences>({

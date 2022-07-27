@@ -6,13 +6,13 @@ import memoizeOne from "memoize-one";
 import { fireEvent } from "../../common/dom/fire_event";
 import { fetchUsers, User } from "../../data/user";
 import type { PolymerChangedEvent } from "../../polymer-types";
-import type { HomeAssistant } from "../../types";
+import type { ThirdEye } from "../../types";
 import "../ha-icon-button";
 import "./ha-user-picker";
 
 @customElement("ha-users-picker")
 class HaUsersPickerLight extends LitElement {
-  @property({ attribute: false }) public hass?: HomeAssistant;
+  @property({ attribute: false }) public hass?: ThirdEye;
 
   @property() public value?: string[];
 

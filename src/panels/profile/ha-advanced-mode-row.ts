@@ -7,11 +7,11 @@ import {
   CoreFrontendUserData,
   getOptimisticFrontendUserDataCollection,
 } from "../../data/frontend";
-import { HomeAssistant } from "../../types";
+import { ThirdEye } from "../../types";
 
 @customElement("ha-advanced-mode-row")
 class AdvancedModeRow extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public narrow!: boolean;
 

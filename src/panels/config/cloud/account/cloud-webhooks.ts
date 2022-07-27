@@ -13,12 +13,12 @@ import {
 } from "../../../../data/cloud";
 import { fetchWebhooks, Webhook, WebhookError } from "../../../../data/webhook";
 import { haStyle } from "../../../../resources/styles";
-import { HomeAssistant } from "../../../../types";
+import { ThirdEye } from "../../../../types";
 import { showManageCloudhookDialog } from "../dialog-manage-cloudhook/show-dialog-manage-cloudhook";
 
 @customElement("cloud-webhooks")
 export class CloudWebhooks extends LitElement {
-  @property({ attribute: false }) public hass?: HomeAssistant;
+  @property({ attribute: false }) public hass?: ThirdEye;
 
   @property({ attribute: false }) public cloudStatus?: CloudStatusLoggedIn;
 

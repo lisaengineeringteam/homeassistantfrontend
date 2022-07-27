@@ -4,7 +4,7 @@ import { assert, assign, object, optional, string } from "superstruct";
 import { fireEvent } from "../../../../common/dom/fire_event";
 import "../../../../components/entity/ha-entity-picker";
 import "../../../../components/ha-theme-picker";
-import { HomeAssistant } from "../../../../types";
+import { ThirdEye } from "../../../../types";
 import { MediaControlCardConfig } from "../../cards/types";
 import { LovelaceCardEditor } from "../../types";
 import { baseLovelaceCardConfig } from "../structs/base-card-struct";
@@ -25,7 +25,7 @@ export class HuiMediaControlCardEditor
   extends LitElement
   implements LovelaceCardEditor
 {
-  @property({ attribute: false }) public hass?: HomeAssistant;
+  @property({ attribute: false }) public hass?: ThirdEye;
 
   @state() private _config?: MediaControlCardConfig;
 

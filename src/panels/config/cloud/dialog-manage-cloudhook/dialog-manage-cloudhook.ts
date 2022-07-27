@@ -7,14 +7,14 @@ import type { HaTextField } from "../../../../components/ha-textfield";
 import "../../../../components/ha-textfield";
 import { showConfirmationDialog } from "../../../../dialogs/generic/show-dialog-box";
 import { haStyle, haStyleDialog } from "../../../../resources/styles";
-import { HomeAssistant } from "../../../../types";
+import { ThirdEye } from "../../../../types";
 import { documentationUrl } from "../../../../util/documentation-url";
 import { WebhookDialogParams } from "./show-dialog-manage-cloudhook";
 
 const inputLabel = "Public URL – Click to copy to clipboard";
 
 export class DialogManageCloudhook extends LitElement {
-  protected hass?: HomeAssistant;
+  protected hass?: ThirdEye;
 
   @state() private _params?: WebhookDialogParams;
 

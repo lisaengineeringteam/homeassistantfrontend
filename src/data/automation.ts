@@ -3,7 +3,7 @@ import {
   HassEntityBase,
 } from "home-assistant-js-websocket";
 import { navigate } from "../common/navigate";
-import { Context, HomeAssistant } from "../types";
+import { Context, ThirdEye } from "../types";
 import { BlueprintInput } from "./blueprint";
 import { DeviceCondition, DeviceTrigger } from "./device_automation";
 import { Action, MODES } from "./script";
@@ -91,7 +91,7 @@ export interface GeoLocationTrigger extends BaseTrigger {
 }
 
 export interface HassTrigger extends BaseTrigger {
-  platform: "homeassistant";
+  platform: "thirdeye";
   event: "start" | "shutdown";
 }
 
@@ -295,7 +295,7 @@ export const expandConditionWithShorthand = (
 };
 
 export const triggerAutomationActions = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   entityId: string
 ) => {
   hass.callService("automation", "trigger", {
@@ -304,12 +304,12 @@ export const triggerAutomationActions = (
   });
 };
 
-export const deleteAutomation = (hass: HomeAssistant, id: string) =>
+export const deleteAutomation = (hass: ThirdEye, id: string) =>
   hass.callApi("DELETE", `config/automation/config/${id}`);
 
 let inititialAutomationEditorData: Partial<AutomationConfig> | undefined;
 
-export const getAutomationConfig = (hass: HomeAssistant, id: string) =>
+export const getAutomationConfig = (hass: ThirdEye, id: string) =>
   hass.callApi<AutomationConfig>("GET", `config/automation/config/${id}`);
 
 export const showAutomationEditor = (data?: Partial<AutomationConfig>) => {
@@ -324,7 +324,7 @@ export const getAutomationEditorInitData = () => {
 };
 
 export const subscribeTrigger = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   onChange: (result: {
     variables: {
       trigger: Record<string, unknown>;
@@ -341,7 +341,7 @@ export const subscribeTrigger = (
   });
 
 export const testCondition = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   condition: Condition | Condition[],
   variables?: Record<string, unknown>
 ) =>

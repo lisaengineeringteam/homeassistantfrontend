@@ -1,6 +1,6 @@
-import type { HomeAssistant } from "../../types";
+import type { ThirdEye } from "../../types";
 
-export const canToggleDomain = (hass: HomeAssistant, domain: string) => {
+export const canToggleDomain = (hass: ThirdEye, domain: string) => {
   const services = hass.services[domain];
   if (!services) {
     return false;

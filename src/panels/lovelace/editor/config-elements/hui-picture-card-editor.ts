@@ -3,7 +3,7 @@ import { customElement, property, state } from "lit/decorators";
 import { assert, assign, object, optional, string } from "superstruct";
 import { fireEvent } from "../../../../common/dom/fire_event";
 import { ActionConfig } from "../../../../data/lovelace";
-import { HomeAssistant } from "../../../../types";
+import { ThirdEye } from "../../../../types";
 import { PictureCardConfig } from "../../cards/types";
 import "../../components/hui-action-editor";
 import "../../../../components/ha-theme-picker";
@@ -28,7 +28,7 @@ export class HuiPictureCardEditor
   extends LitElement
   implements LovelaceCardEditor
 {
-  @property({ attribute: false }) public hass?: HomeAssistant;
+  @property({ attribute: false }) public hass?: ThirdEye;
 
   @state() private _config?: PictureCardConfig;
 

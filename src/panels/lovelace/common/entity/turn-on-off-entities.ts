@@ -1,9 +1,9 @@
 import { STATES_OFF } from "../../../../common/const";
 import { computeDomain } from "../../../../common/entity/compute_domain";
-import { HomeAssistant } from "../../../../types";
+import { ThirdEye } from "../../../../types";
 
 export const turnOnOffEntities = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   entityIds: string[],
   turnOn = true
 ): void => {
@@ -13,7 +13,7 @@ export const turnOnOffEntities = (
       const stateDomain = computeDomain(entityId);
       const serviceDomain = ["cover", "lock"].includes(stateDomain)
         ? stateDomain
-        : "homeassistant";
+        : "thirdeye";
 
       if (!(serviceDomain in domainsToCall)) {
         domainsToCall[serviceDomain] = [];

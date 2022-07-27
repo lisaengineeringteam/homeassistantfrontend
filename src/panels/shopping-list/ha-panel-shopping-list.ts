@@ -17,14 +17,14 @@ import "../../components/ha-menu-button";
 import { showVoiceCommandDialog } from "../../dialogs/voice-command-dialog/show-ha-voice-command-dialog";
 import "../../layouts/ha-app-layout";
 import { haStyle } from "../../resources/styles";
-import { HomeAssistant } from "../../types";
+import { ThirdEye } from "../../types";
 import { HuiErrorCard } from "../lovelace/cards/hui-error-card";
 import { createCardElement } from "../lovelace/create-element/create-card-element";
 import { LovelaceCard } from "../lovelace/types";
 
 @customElement("ha-panel-shopping-list")
 class PanelShoppingList extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ type: Boolean, reflect: true }) public narrow!: boolean;
 

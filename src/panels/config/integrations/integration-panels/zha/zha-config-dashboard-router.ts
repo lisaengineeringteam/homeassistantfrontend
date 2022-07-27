@@ -4,11 +4,11 @@ import {
   HassRouterPage,
   RouterOptions,
 } from "../../../../../layouts/hass-router-page";
-import { HomeAssistant } from "../../../../../types";
+import { ThirdEye } from "../../../../../types";
 
 @customElement("zha-config-dashboard-router")
 class ZHAConfigDashboardRouter extends HassRouterPage {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public isWide!: boolean;
 

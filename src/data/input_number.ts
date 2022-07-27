@@ -1,4 +1,4 @@
-import { HomeAssistant } from "../types";
+import { ThirdEye } from "../types";
 
 export interface InputNumber {
   id: string;
@@ -23,11 +23,11 @@ export interface InputNumberMutableParams {
   unit_of_measurement?: string;
 }
 
-export const fetchInputNumber = (hass: HomeAssistant) =>
+export const fetchInputNumber = (hass: ThirdEye) =>
   hass.callWS<InputNumber[]>({ type: "input_number/list" });
 
 export const createInputNumber = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   values: InputNumberMutableParams
 ) =>
   hass.callWS<InputNumber>({
@@ -36,7 +36,7 @@ export const createInputNumber = (
   });
 
 export const updateInputNumber = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   id: string,
   updates: Partial<InputNumberMutableParams>
 ) =>
@@ -46,7 +46,7 @@ export const updateInputNumber = (
     ...updates,
   });
 
-export const deleteInputNumber = (hass: HomeAssistant, id: string) =>
+export const deleteInputNumber = (hass: ThirdEye, id: string) =>
   hass.callWS({
     type: "input_number/delete",
     input_number_id: id,

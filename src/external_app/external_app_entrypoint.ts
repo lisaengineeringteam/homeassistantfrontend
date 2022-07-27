@@ -6,10 +6,10 @@ This is the entry point for providing external app stuff from app entrypoint.
 */
 
 import { fireEvent } from "../common/dom/fire_event";
-import { HomeAssistantMain } from "../layouts/home-assistant-main";
+import { ThirdEyeMain } from "../layouts/home-assistant-main";
 import type { EMExternalMessageCommands } from "./external_messaging";
 
-export const attachExternalToApp = (hassMainEl: HomeAssistantMain) => {
+export const attachExternalToApp = (hassMainEl: ThirdEyeMain) => {
   window.addEventListener("haptic", (ev) =>
     hassMainEl.hass.auth.external!.fireMessage({
       type: "haptic",
@@ -23,7 +23,7 @@ export const attachExternalToApp = (hassMainEl: HomeAssistantMain) => {
 };
 
 const handleExternalMessage = (
-  hassMainEl: HomeAssistantMain,
+  hassMainEl: ThirdEyeMain,
   msg: EMExternalMessageCommands
 ): boolean => {
   const bus = hassMainEl.hass.auth.external!;

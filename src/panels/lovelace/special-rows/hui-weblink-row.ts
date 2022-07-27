@@ -2,12 +2,12 @@ import { css, CSSResultGroup, html, LitElement, TemplateResult } from "lit";
 import { customElement, state } from "lit/decorators";
 import { ifDefined } from "lit/directives/if-defined";
 import "../../../components/ha-icon";
-import { HomeAssistant } from "../../../types";
+import { ThirdEye } from "../../../types";
 import { LovelaceRow, WeblinkConfig } from "../entity-rows/types";
 
 @customElement("hui-weblink-row")
 class HuiWeblinkRow extends LitElement implements LovelaceRow {
-  public hass?: HomeAssistant;
+  public hass?: ThirdEye;
 
   @state() private _config?: WeblinkConfig;
 

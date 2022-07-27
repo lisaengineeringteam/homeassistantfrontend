@@ -14,7 +14,7 @@ import parseAspectRatio from "../../../common/util/parse-aspect-ratio";
 import "../../../components/ha-camera-stream";
 import { CameraEntity, fetchThumbnailUrlWithCache } from "../../../data/camera";
 import { UNAVAILABLE } from "../../../data/entity";
-import { HomeAssistant } from "../../../types";
+import { ThirdEye } from "../../../types";
 import "../../../components/ha-circular-progress";
 
 const UPDATE_INTERVAL = 10000;
@@ -35,7 +35,7 @@ export interface StateSpecificConfig {
 
 @customElement("hui-image")
 export class HuiImage extends LitElement {
-  @property({ attribute: false }) public hass?: HomeAssistant;
+  @property({ attribute: false }) public hass?: ThirdEye;
 
   @property() public entity?: string;
 
@@ -99,7 +99,7 @@ export class HuiImage extends LitElement {
 
   public willUpdate(changedProps: PropertyValues): void {
     if (changedProps.has("hass")) {
-      const oldHass = changedProps.get("hass") as HomeAssistant | undefined;
+      const oldHass = changedProps.get("hass") as ThirdEye | undefined;
 
       if (this._shouldStartCameraUpdates(oldHass)) {
         this._startIntersectionObserverOrUpdates();
@@ -260,7 +260,7 @@ export class HuiImage extends LitElement {
     `;
   }
 
-  protected _shouldStartCameraUpdates(oldHass?: HomeAssistant): boolean {
+  protected _shouldStartCameraUpdates(oldHass?: ThirdEye): boolean {
     return !!(
       (!oldHass || oldHass.connected !== this.hass!.connected) &&
       this.hass!.connected &&

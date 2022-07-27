@@ -17,7 +17,7 @@ import type {
   CalendarEvent,
   CalendarViewChanged,
   FullCalendarView,
-  HomeAssistant,
+  ThirdEye,
 } from "../../../types";
 import "../../calendar/ha-full-calendar";
 import type { HAFullCalendar } from "../../calendar/ha-full-calendar";
@@ -35,7 +35,7 @@ export class HuiCalendarCard extends LitElement implements LovelaceCard {
   }
 
   public static getStubConfig(
-    hass: HomeAssistant,
+    hass: ThirdEye,
     entities: string[],
     entitiesFill: string[]
   ) {
@@ -54,7 +54,7 @@ export class HuiCalendarCard extends LitElement implements LovelaceCard {
     };
   }
 
-  @property({ attribute: false }) public hass?: HomeAssistant;
+  @property({ attribute: false }) public hass?: ThirdEye;
 
   @property({ attribute: false }) public _events: CalendarEvent[] = [];
 
@@ -140,7 +140,7 @@ export class HuiCalendarCard extends LitElement implements LovelaceCard {
       return;
     }
 
-    const oldHass = changedProps.get("hass") as HomeAssistant | undefined;
+    const oldHass = changedProps.get("hass") as ThirdEye | undefined;
     const oldConfig = changedProps.get("_config") as
       | CalendarCardConfig
       | undefined;

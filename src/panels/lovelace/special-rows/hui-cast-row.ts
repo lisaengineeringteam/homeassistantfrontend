@@ -15,12 +15,12 @@ import {
   ensureConnectedCastSession,
 } from "../../../cast/receiver_messages";
 import "../../../components/ha-icon";
-import { HomeAssistant } from "../../../types";
+import { ThirdEye } from "../../../types";
 import { CastConfig, LovelaceRow } from "../entity-rows/types";
 
 @customElement("hui-cast-row")
 class HuiCastRow extends LitElement implements LovelaceRow {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @state() private _config?: CastConfig;
 
@@ -35,7 +35,7 @@ class HuiCastRow extends LitElement implements LovelaceRow {
 
     this._config = {
       icon: "hass:television",
-      name: "Home Assistant Cast",
+      name: "Third Eye",
       ...config,
     };
   }

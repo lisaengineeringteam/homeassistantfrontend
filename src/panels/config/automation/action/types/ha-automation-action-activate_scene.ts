@@ -4,14 +4,14 @@ import { fireEvent } from "../../../../../common/dom/fire_event";
 import "../../../../../components/entity/ha-entity-picker";
 import { SceneAction } from "../../../../../data/script";
 import { PolymerChangedEvent } from "../../../../../polymer-types";
-import { HomeAssistant } from "../../../../../types";
+import { ThirdEye } from "../../../../../types";
 import { ActionElement } from "../ha-automation-action-row";
 
 const includeDomains = ["scene"];
 
 @customElement("ha-automation-action-activate_scene")
 export class HaSceneAction extends LitElement implements ActionElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public action!: SceneAction;
 

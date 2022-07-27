@@ -15,12 +15,12 @@ import {
 } from "../../data/trace";
 import "../../panels/logbook/ha-logbook-renderer";
 import { traceTabStyles } from "./trace-tab-styles";
-import { HomeAssistant } from "../../types";
+import { ThirdEye } from "../../types";
 import type { NodeInfo } from "./hat-script-graph";
 
 @customElement("ha-trace-path-details")
 export class HaTracePathDetails extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ type: Boolean, reflect: true }) public narrow!: boolean;
 

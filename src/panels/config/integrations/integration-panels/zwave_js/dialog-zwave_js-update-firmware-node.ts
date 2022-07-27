@@ -30,7 +30,7 @@ import {
   ZWaveJSNodeStatus,
 } from "../../../../../data/zwave_js";
 import { haStyleDialog } from "../../../../../resources/styles";
-import { HomeAssistant } from "../../../../../types";
+import { ThirdEye } from "../../../../../types";
 import { ZWaveJSUpdateFirmwareNodeDialogParams } from "./show-dialog-zwave_js-update-firmware-node";
 import {
   showAlertDialog,
@@ -40,7 +40,7 @@ import { HaFormIntegerSchema } from "../../../../../components/ha-form/types";
 
 @customElement("dialog-zwave_js-update-firmware-node")
 class DialogZWaveJSUpdateFirmwareNode extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @state() private device?: DeviceRegistryEntry;
 

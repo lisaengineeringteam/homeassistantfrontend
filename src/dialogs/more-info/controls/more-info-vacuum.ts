@@ -30,7 +30,7 @@ import {
   VACUUM_SUPPORT_STATUS,
   VACUUM_SUPPORT_STOP,
 } from "../../../data/vacuum";
-import { HomeAssistant } from "../../../types";
+import { ThirdEye } from "../../../types";
 
 interface VacuumCommand {
   translationKey: string;
@@ -94,7 +94,7 @@ const VACUUM_COMMANDS: VacuumCommand[] = [
 
 @customElement("more-info-vacuum")
 class MoreInfoVacuum extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public stateObj?: VacuumEntity;
 

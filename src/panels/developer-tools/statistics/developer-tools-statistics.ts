@@ -22,7 +22,7 @@ import {
 } from "../../../dialogs/generic/show-dialog-box";
 import { SubscribeMixin } from "../../../mixins/subscribe-mixin";
 import { haStyle } from "../../../resources/styles";
-import { HomeAssistant } from "../../../types";
+import { ThirdEye } from "../../../types";
 import { showStatisticsAdjustSumDialog } from "./show-dialog-statistics-adjust-sum";
 import { showFixStatisticsUnitsChangedDialog } from "./show-dialog-statistics-fix-units-changed";
 import { showFixStatisticsUnsupportedUnitMetadataDialog } from "./show-dialog-statistics-fix-unsupported-unit-meta";
@@ -38,7 +38,7 @@ const FIX_ISSUES_ORDER = {
 };
 @customElement("developer-tools-statistics")
 class HaPanelDevStatistics extends SubscribeMixin(LitElement) {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ type: Boolean }) public narrow!: boolean;
 

@@ -57,7 +57,7 @@ import {
 import "../../../layouts/hass-error-screen";
 import "../../../layouts/hass-tabs-subpage";
 import { haStyle } from "../../../resources/styles";
-import type { HomeAssistant, Route } from "../../../types";
+import type { ThirdEye, Route } from "../../../types";
 import { brandsUrl } from "../../../util/brands-url";
 import { fileDownload } from "../../../util/file_download";
 import "../../logbook/ha-logbook";
@@ -90,7 +90,7 @@ export interface DeviceAlert {
 
 @customElement("ha-config-device-page")
 export class HaConfigDevicePage extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public devices!: DeviceRegistryEntry[];
 
@@ -939,11 +939,11 @@ export class HaConfigDevicePage extends LitElement {
 
     const deviceActions: DeviceAction[] = [];
 
-    const configurationUrlIsHomeAssistant =
-      device.configuration_url?.startsWith("homeassistant://") || false;
+    const configurationUrlIsThirdEye =
+      device.configuration_url?.startsWith("thirdeye://") || false;
 
-    const configurationUrl = configurationUrlIsHomeAssistant
-      ? device.configuration_url!.replace("homeassistant://", "/")
+    const configurationUrl = configurationUrlIsThirdEye
+      ? device.configuration_url!.replace("thirdeye://", "/")
       : device.configuration_url;
 
     if (configurationUrl) {

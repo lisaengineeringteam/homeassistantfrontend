@@ -14,7 +14,7 @@ import {
   TranslationCategory,
 } from "../data/translation";
 import { translationMetadata } from "../resources/translations-metadata";
-import { Constructor, HomeAssistant } from "../types";
+import { Constructor, ThirdEye } from "../types";
 import { storeState } from "../util/ha-pref-storage";
 import {
   getLocalLanguage,
@@ -84,7 +84,7 @@ export default <T extends Constructor<HassBaseEl>>(superClass: T) =>
       if (!changedProps.has("hass")) {
         return;
       }
-      const oldHass = changedProps.get("hass") as HomeAssistant | undefined;
+      const oldHass = changedProps.get("hass") as ThirdEye | undefined;
       if (
         this.hass?.panels &&
         (!oldHass || oldHass.panels !== this.hass.panels)
@@ -181,7 +181,7 @@ export default <T extends Constructor<HassBaseEl>>(superClass: T) =>
       this._refetchCachedHassTranslations(true, true);
     }
 
-    private _applyTranslations(hass: HomeAssistant) {
+    private _applyTranslations(hass: ThirdEye) {
       document.querySelector("html")!.setAttribute("lang", hass.language);
       this._applyDirection(hass);
       this._loadCoreTranslations(hass.language);
@@ -189,7 +189,7 @@ export default <T extends Constructor<HassBaseEl>>(superClass: T) =>
       this._loadFragmentTranslations(hass.language, hass.panelUrl);
     }
 
-    private _applyDirection(hass: HomeAssistant) {
+    private _applyDirection(hass: ThirdEye) {
       const direction = computeRTLDirection(hass);
       document.dir = direction;
       setDirectionStyles(direction, this);

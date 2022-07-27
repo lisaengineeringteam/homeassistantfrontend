@@ -9,7 +9,7 @@ import { computeStateDisplay } from "../common/entity/compute_state_display";
 import { computeStateDomain } from "../common/entity/compute_state_domain";
 import { LocalizeFunc } from "../common/translations/localize";
 import { HaEntityPickerEntityFilterFunc } from "../components/entity/ha-entity-picker";
-import { HomeAssistant } from "../types";
+import { ThirdEye } from "../types";
 import { UNAVAILABLE_STATES } from "./entity";
 
 const LOGBOOK_LOCALIZE_PATH = "ui.components.logbook.messages";
@@ -48,7 +48,7 @@ export interface LogbookEntry {
 
 //
 // Localization mapping for all the triggers in core
-// in homeassistant.components.homeassistant.triggers
+// in thirdeye.components.thirdeye.triggers
 //
 const triggerPhrases = {
   "numeric state of": "triggered_by_numeric_state_of", // number state trigger
@@ -56,8 +56,8 @@ const triggerPhrases = {
   event: "triggered_by_event", // event trigger
   time: "triggered_by_time", // time trigger
   "time pattern": "triggered_by_time_pattern", // time trigger
-  "Home Assistant stopping": "triggered_by_homeassistant_stopping", // stop event
-  "Home Assistant starting": "triggered_by_homeassistant_starting", // start event
+  "Third Eye stopping": "triggered_by_thirdeye_stopping", // stop event
+  "Third Eye starting": "triggered_by_thirdeye_starting", // start event
 };
 
 const DATA_CACHE: {
@@ -65,7 +65,7 @@ const DATA_CACHE: {
 } = {};
 
 export const getLogbookDataForContext = async (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   startDate: string,
   contextId?: string
 ): Promise<LogbookEntry[]> => {
@@ -80,7 +80,7 @@ export const getLogbookDataForContext = async (
 };
 
 export const getLogbookData = async (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   startDate: string,
   endDate: string,
   entityIds?: string[],
@@ -100,7 +100,7 @@ export const getLogbookData = async (
 };
 
 const getLogbookDataCache = async (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   startDate: string,
   endDate: string,
   entityId?: string[]
@@ -135,7 +135,7 @@ const getLogbookDataCache = async (
 };
 
 const getLogbookDataFromServer = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   startDate: string,
   endDate?: string,
   entityIds?: string[],
@@ -171,7 +171,7 @@ const getLogbookDataFromServer = (
 };
 
 export const subscribeLogbook = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   callbackFunction: (message: LogbookStreamMessage) => void,
   startDate: string,
   endDate: string,
@@ -250,7 +250,7 @@ export const localizeTriggerSource = (
 };
 
 export const localizeStateMessage = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   localize: LocalizeFunc,
   state: string,
   stateObj: HassEntity,

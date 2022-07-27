@@ -1,7 +1,7 @@
 import { getColorByIndex } from "../common/color/colors";
 import { computeDomain } from "../common/entity/compute_domain";
 import { computeStateName } from "../common/entity/compute_state_name";
-import type { CalendarEvent, HomeAssistant } from "../types";
+import type { CalendarEvent, ThirdEye } from "../types";
 
 export interface Calendar {
   entity_id: string;
@@ -10,7 +10,7 @@ export interface Calendar {
 }
 
 export const fetchCalendarEvents = async (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   start: Date,
   end: Date,
   calendars: Calendar[]
@@ -74,7 +74,7 @@ const getCalendarDate = (dateObj: any): string | undefined => {
   return undefined;
 };
 
-export const getCalendars = (hass: HomeAssistant): Calendar[] =>
+export const getCalendars = (hass: ThirdEye): Calendar[] =>
   Object.keys(hass.states)
     .filter((eid) => computeDomain(eid) === "calendar")
     .sort()

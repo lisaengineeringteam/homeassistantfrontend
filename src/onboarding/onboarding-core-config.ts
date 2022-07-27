@@ -21,7 +21,7 @@ import {
 import { SYMBOL_TO_ISO } from "../data/currency";
 import { onboardCoreConfigStep } from "../data/onboarding";
 import type { PolymerChangedEvent } from "../polymer-types";
-import type { HomeAssistant } from "../types";
+import type { ThirdEye } from "../types";
 import "../components/ha-radio";
 import "../components/ha-formfield";
 import type { HaRadio } from "../components/ha-radio";
@@ -32,7 +32,7 @@ const locationMarkerId = "location";
 
 @customElement("onboarding-core-config")
 class OnboardingCoreConfig extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public onboardingLocalize!: LocalizeFunc;
 

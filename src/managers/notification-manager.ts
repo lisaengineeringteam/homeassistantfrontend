@@ -4,7 +4,7 @@ import { property, state, query } from "lit/decorators";
 import { computeRTL } from "../common/util/compute_rtl";
 import "../components/ha-toast";
 import type { HaToast } from "../components/ha-toast";
-import type { HomeAssistant } from "../types";
+import type { ThirdEye } from "../types";
 
 export interface ShowToastParams {
   message: string;
@@ -19,7 +19,7 @@ export interface ToastActionParams {
 }
 
 class NotificationManager extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @state() private _action?: ToastActionParams;
 

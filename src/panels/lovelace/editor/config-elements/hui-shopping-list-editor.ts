@@ -4,7 +4,7 @@ import { customElement, property, state } from "lit/decorators";
 import { assert, assign, object, optional, string } from "superstruct";
 import { isComponentLoaded } from "../../../../common/config/is_component_loaded";
 import { fireEvent } from "../../../../common/dom/fire_event";
-import { HomeAssistant } from "../../../../types";
+import { ThirdEye } from "../../../../types";
 import { ShoppingListCardConfig } from "../../cards/types";
 import "../../../../components/ha-theme-picker";
 import { LovelaceCardEditor } from "../../types";
@@ -24,7 +24,7 @@ export class HuiShoppingListEditor
   extends LitElement
   implements LovelaceCardEditor
 {
-  @property({ attribute: false }) public hass?: HomeAssistant;
+  @property({ attribute: false }) public hass?: ThirdEye;
 
   @state() private _config?: ShoppingListCardConfig;
 

@@ -1,5 +1,5 @@
 import { ActionConfig } from "../../../data/lovelace";
-import { HomeAssistant } from "../../../types";
+import { ThirdEye } from "../../../types";
 import { Condition } from "../common/validate-condition";
 import { TimestampRenderingFormat } from "../components/types";
 
@@ -78,7 +78,7 @@ export type LovelaceRowConfig =
   | TextConfig;
 
 export interface LovelaceRow extends HTMLElement {
-  hass?: HomeAssistant;
+  hass?: ThirdEye;
   editMode?: boolean;
   setConfig(config: LovelaceRowConfig);
 }

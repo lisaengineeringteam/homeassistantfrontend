@@ -20,13 +20,13 @@ import {
 } from "../../common/number/format_number";
 import { UNAVAILABLE, UNKNOWN } from "../../data/entity";
 import { timerTimeRemaining } from "../../data/timer";
-import { HomeAssistant } from "../../types";
+import { ThirdEye } from "../../types";
 import "../ha-label-badge";
 import "../ha-state-icon";
 
 @customElement("ha-state-label-badge")
 export class HaStateLabelBadge extends LitElement {
-  @property({ attribute: false }) public hass?: HomeAssistant;
+  @property({ attribute: false }) public hass?: ThirdEye;
 
   @property({ attribute: false }) public state?: HassEntity;
 

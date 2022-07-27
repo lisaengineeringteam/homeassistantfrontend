@@ -4,13 +4,13 @@ import { customElement, property } from "lit/decorators";
 import { fireEvent } from "../../../../common/dom/fire_event";
 import "../../../../components/ha-icon-button";
 import type { LovelaceConfig } from "../../../../data/lovelace";
-import type { HomeAssistant } from "../../../../types";
+import type { ThirdEye } from "../../../../types";
 import type { LovelaceHeaderFooterConfig } from "../../header-footer/types";
 import { showCreateHeaderFooterDialog } from "./show-create-headerfooter-dialog";
 
 @customElement("hui-header-footer-editor")
 export class HuiHeaderFooterEditor extends LitElement {
-  public hass!: HomeAssistant;
+  public hass!: ThirdEye;
 
   public lovelaceConfig!: LovelaceConfig;
 

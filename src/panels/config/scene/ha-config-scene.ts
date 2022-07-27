@@ -9,7 +9,7 @@ import {
   HassRouterPage,
   RouterOptions,
 } from "../../../layouts/hass-router-page";
-import { HomeAssistant } from "../../../types";
+import { ThirdEye } from "../../../types";
 import "./ha-scene-dashboard";
 import "./ha-scene-editor";
 
@@ -22,7 +22,7 @@ const equal = (a: SceneEntity[], b: SceneEntity[]): boolean => {
 
 @customElement("ha-config-scene")
 class HaConfigScene extends HassRouterPage {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public narrow!: boolean;
 

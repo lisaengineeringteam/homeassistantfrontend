@@ -27,12 +27,12 @@ import {
   showConfirmationDialog,
 } from "../../../../dialogs/generic/show-dialog-box";
 import { haStyle } from "../../../../resources/styles";
-import type { HomeAssistant } from "../../../../types";
+import type { ThirdEye } from "../../../../types";
 import "./types/ha-automation-trigger-calendar";
 import "./types/ha-automation-trigger-device";
 import "./types/ha-automation-trigger-event";
 import "./types/ha-automation-trigger-geo_location";
-import "./types/ha-automation-trigger-homeassistant";
+import "./types/ha-automation-trigger-thirdeye";
 import "./types/ha-automation-trigger-mqtt";
 import "./types/ha-automation-trigger-numeric_state";
 import "./types/ha-automation-trigger-state";
@@ -50,7 +50,7 @@ const OPTIONS = [
   "event",
   "state",
   "geo_location",
-  "homeassistant",
+  "thirdeye",
   "mqtt",
   "numeric_state",
   "sun",
@@ -90,7 +90,7 @@ export const handleChangeEvent = (element: TriggerElement, ev: CustomEvent) => {
 
 @customElement("ha-automation-trigger-row")
 export default class HaAutomationTriggerRow extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public trigger!: Trigger;
 

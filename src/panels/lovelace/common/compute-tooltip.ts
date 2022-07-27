@@ -1,6 +1,6 @@
 import { computeStateName } from "../../../common/entity/compute_state_name";
 import { ActionConfig } from "../../../data/lovelace";
-import { HomeAssistant } from "../../../types";
+import { ThirdEye } from "../../../types";
 
 interface Config {
   entity?: string;
@@ -11,7 +11,7 @@ interface Config {
 }
 
 function computeActionTooltip(
-  hass: HomeAssistant,
+  hass: ThirdEye,
   state: string,
   config: ActionConfig,
   isHold: boolean
@@ -66,7 +66,7 @@ function computeActionTooltip(
   return tooltip;
 }
 
-export const computeTooltip = (hass: HomeAssistant, config: Config): string => {
+export const computeTooltip = (hass: ThirdEye, config: Config): string => {
   if (config.title === null) {
     return "";
   }

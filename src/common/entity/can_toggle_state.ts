@@ -1,10 +1,10 @@
 import type { HassEntity } from "home-assistant-js-websocket";
-import type { HomeAssistant } from "../../types";
+import type { ThirdEye } from "../../types";
 import { canToggleDomain } from "./can_toggle_domain";
 import { computeStateDomain } from "./compute_state_domain";
 import { supportsFeature } from "./supports-feature";
 
-export const canToggleState = (hass: HomeAssistant, stateObj: HassEntity) => {
+export const canToggleState = (hass: ThirdEye, stateObj: HassEntity) => {
   const domain = computeStateDomain(stateObj);
 
   if (domain === "group") {

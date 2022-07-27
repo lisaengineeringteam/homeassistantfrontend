@@ -32,7 +32,7 @@ import {
 import "../../../layouts/hass-loading-screen";
 import "../../../layouts/hass-tabs-subpage-data-table";
 import { SubscribeMixin } from "../../../mixins/subscribe-mixin";
-import { HomeAssistant, Route } from "../../../types";
+import { ThirdEye, Route } from "../../../types";
 import { showEntityEditorDialog } from "../entities/show-dialog-entity-editor";
 import { configSections } from "../ha-panel-config";
 import "../integrations/ha-integration-overflow-menu";
@@ -62,7 +62,7 @@ const getConfigEntry = (
 
 @customElement("ha-config-helpers")
 export class HaConfigHelpers extends SubscribeMixin(LitElement) {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public isWide!: boolean;
 
@@ -308,7 +308,7 @@ export class HaConfigHelpers extends SubscribeMixin(LitElement) {
       changedProps.has("_configEntries");
 
     if (!changed && changedProps.has("hass")) {
-      const oldHass = changedProps.get("hass") as HomeAssistant | undefined;
+      const oldHass = changedProps.get("hass") as ThirdEye | undefined;
       changed = !oldHass || oldHass.states !== this.hass.states;
     }
     if (!changed) {

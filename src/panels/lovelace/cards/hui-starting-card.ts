@@ -13,12 +13,12 @@ import { fireEvent } from "../../../common/dom/fire_event";
 import "../../../components/ha-card";
 import "../../../components/ha-circular-progress";
 import { LovelaceCardConfig } from "../../../data/lovelace";
-import { HomeAssistant } from "../../../types";
+import { ThirdEye } from "../../../types";
 import { LovelaceCard } from "../types";
 
 @customElement("hui-starting-card")
 export class HuiStartingCard extends LitElement implements LovelaceCard {
-  @property({ attribute: false }) public hass?: HomeAssistant;
+  @property({ attribute: false }) public hass?: ThirdEye;
 
   public getCardSize(): number {
     return 2;

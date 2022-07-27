@@ -1,4 +1,4 @@
-import { HomeAssistant } from "../types";
+import { ThirdEye } from "../types";
 
 export interface Webhook {
   webhook_id: string;
@@ -11,7 +11,7 @@ export interface WebhookError {
   message: string;
 }
 
-export const fetchWebhooks = (hass: HomeAssistant): Promise<Webhook[]> =>
+export const fetchWebhooks = (hass: ThirdEye): Promise<Webhook[]> =>
   hass.callWS({
     type: "webhook/list",
   });

@@ -16,7 +16,7 @@ import {
 } from "../data/integration";
 import { Selector } from "../data/selector";
 import { PolymerChangedEvent } from "../polymer-types";
-import { HomeAssistant } from "../types";
+import { ThirdEye } from "../types";
 import { documentationUrl } from "../util/documentation-url";
 import "./ha-checkbox";
 import "./ha-icon-button";
@@ -47,7 +47,7 @@ interface ExtHassService extends Omit<HassService, "fields"> {
 
 @customElement("ha-service-control")
 export class HaServiceControl extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ attribute: false }) public value?: {
     service: string;

@@ -20,7 +20,7 @@ import "./ha-form-positive_time_period_dict";
 import "./ha-form-select";
 import "./ha-form-string";
 import { HaFormElement, HaFormDataContainer, HaFormSchema } from "./types";
-import { HomeAssistant } from "../../types";
+import { ThirdEye } from "../../types";
 
 const getValue = (obj, item) =>
   obj ? (!item.name ? obj : obj[item.name]) : null;
@@ -31,7 +31,7 @@ let selectorImported = false;
 
 @customElement("ha-form")
 export class HaForm extends LitElement implements HaFormElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ attribute: false }) public data!: HaFormDataContainer;
 

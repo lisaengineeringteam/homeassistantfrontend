@@ -1,5 +1,5 @@
 import { atLeastVersion } from "../../common/config/version";
-import { HomeAssistant } from "../../types";
+import { ThirdEye } from "../../types";
 import { hassioApiResultExtractor, HassioResponse } from "./common";
 
 export interface HassioHardwareAudioDevice {
@@ -28,7 +28,7 @@ export interface HassioHardwareInfo {
 }
 
 export const fetchHassioHardwareAudio = async (
-  hass: HomeAssistant
+  hass: ThirdEye
 ): Promise<HassioHardwareAudioList> => {
   if (atLeastVersion(hass.config.version, 2021, 2, 4)) {
     return hass.callWS({
@@ -47,7 +47,7 @@ export const fetchHassioHardwareAudio = async (
 };
 
 export const fetchHassioHardwareInfo = async (
-  hass: HomeAssistant
+  hass: ThirdEye
 ): Promise<HassioHardwareInfo> => {
   if (atLeastVersion(hass.config.version, 2021, 2, 4)) {
     return hass.callWS({

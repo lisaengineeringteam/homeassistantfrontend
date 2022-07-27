@@ -1,5 +1,5 @@
 import { atLeastVersion } from "../../common/config/version";
-import { HomeAssistant } from "../../types";
+import { ThirdEye } from "../../types";
 import { hassioApiResultExtractor, HassioResponse } from "./common";
 
 export type HassioHostInfo = {
@@ -33,7 +33,7 @@ export interface DatadiskList {
 }
 
 export const fetchHassioHostInfo = async (
-  hass: HomeAssistant
+  hass: ThirdEye
 ): Promise<HassioHostInfo> => {
   if (atLeastVersion(hass.config.version, 2021, 2, 4)) {
     return hass.callWS({
@@ -51,7 +51,7 @@ export const fetchHassioHostInfo = async (
 };
 
 export const fetchHassioHassOsInfo = async (
-  hass: HomeAssistant
+  hass: ThirdEye
 ): Promise<HassioHassOSInfo> => {
   if (atLeastVersion(hass.config.version, 2021, 2, 4)) {
     return hass.callWS({
@@ -69,7 +69,7 @@ export const fetchHassioHassOsInfo = async (
   );
 };
 
-export const rebootHost = async (hass: HomeAssistant) => {
+export const rebootHost = async (hass: ThirdEye) => {
   if (atLeastVersion(hass.config.version, 2021, 2, 4)) {
     return hass.callWS({
       type: "supervisor/api",
@@ -82,7 +82,7 @@ export const rebootHost = async (hass: HomeAssistant) => {
   return hass.callApi<HassioResponse<void>>("POST", "hassio/host/reboot");
 };
 
-export const shutdownHost = async (hass: HomeAssistant) => {
+export const shutdownHost = async (hass: ThirdEye) => {
   if (atLeastVersion(hass.config.version, 2021, 2, 4)) {
     return hass.callWS({
       type: "supervisor/api",
@@ -95,7 +95,7 @@ export const shutdownHost = async (hass: HomeAssistant) => {
   return hass.callApi<HassioResponse<void>>("POST", "hassio/host/shutdown");
 };
 
-export const updateOS = async (hass: HomeAssistant) => {
+export const updateOS = async (hass: ThirdEye) => {
   if (atLeastVersion(hass.config.version, 2021, 2, 4)) {
     return hass.callWS({
       type: "supervisor/api",
@@ -108,7 +108,7 @@ export const updateOS = async (hass: HomeAssistant) => {
   return hass.callApi<HassioResponse<void>>("POST", "hassio/os/update");
 };
 
-export const configSyncOS = async (hass: HomeAssistant) => {
+export const configSyncOS = async (hass: ThirdEye) => {
   if (atLeastVersion(hass.config.version, 2021, 2, 4)) {
     return hass.callWS({
       type: "supervisor/api",
@@ -121,7 +121,7 @@ export const configSyncOS = async (hass: HomeAssistant) => {
   return hass.callApi<HassioResponse<void>>("POST", "hassio/os/config/sync");
 };
 
-export const changeHostOptions = async (hass: HomeAssistant, options: any) => {
+export const changeHostOptions = async (hass: ThirdEye, options: any) => {
   if (atLeastVersion(hass.config.version, 2021, 2, 4)) {
     return hass.callWS({
       type: "supervisor/api",
@@ -138,7 +138,7 @@ export const changeHostOptions = async (hass: HomeAssistant, options: any) => {
   );
 };
 
-export const moveDatadisk = async (hass: HomeAssistant, device: string) => {
+export const moveDatadisk = async (hass: ThirdEye, device: string) => {
   if (atLeastVersion(hass.config.version, 2021, 2, 4)) {
     return hass.callWS({
       type: "supervisor/api",
@@ -153,7 +153,7 @@ export const moveDatadisk = async (hass: HomeAssistant, device: string) => {
 };
 
 export const listDatadisks = async (
-  hass: HomeAssistant
+  hass: ThirdEye
 ): Promise<DatadiskList> => {
   if (atLeastVersion(hass.config.version, 2021, 2, 4)) {
     return hass.callWS<DatadiskList>({

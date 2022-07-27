@@ -4,7 +4,7 @@ import { customElement, property, state } from "lit/decorators";
 import { fireEvent } from "../../common/dom/fire_event";
 import { createCloseHeading } from "../../components/ha-dialog";
 import { haStyleDialog } from "../../resources/styles";
-import type { HomeAssistant } from "../../types";
+import type { ThirdEye } from "../../types";
 import { LongLivedAccessTokenDialogParams } from "./show-long-lived-access-token-dialog";
 import "../../components/ha-textfield";
 
@@ -12,7 +12,7 @@ const QR_LOGO_URL = "/static/icons/favicon-192x192.png";
 
 @customElement("ha-long-lived-access-token-dialog")
 export class HaLongLivedAccessTokenDialog extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @state() private _params?: LongLivedAccessTokenDialogParams;
 

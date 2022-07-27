@@ -13,7 +13,7 @@ import {
   sortDeviceAutomations,
 } from "../../../../data/device_automation";
 import { haStyleDialog } from "../../../../resources/styles";
-import { HomeAssistant } from "../../../../types";
+import { ThirdEye } from "../../../../types";
 import "./ha-device-actions-card";
 import "./ha-device-conditions-card";
 import "./ha-device-triggers-card";
@@ -21,7 +21,7 @@ import { DeviceAutomationDialogParams } from "./show-dialog-device-automation";
 
 @customElement("dialog-device-automation")
 export class DialogDeviceAutomation extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @state() private _triggers: DeviceTrigger[] = [];
 

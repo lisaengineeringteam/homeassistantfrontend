@@ -1,7 +1,7 @@
 import { HassEntity } from "home-assistant-js-websocket/dist/types";
 import { customElement } from "lit/decorators";
 import { computeDomain } from "../../../common/entity/compute_domain";
-import { HomeAssistant } from "../../../types";
+import { ThirdEye } from "../../../types";
 import { findEntities } from "../common/find-entities";
 import { GraphHeaderFooterConfig } from "../header-footer/types";
 import { LovelaceCardEditor } from "../types";
@@ -18,7 +18,7 @@ class HuiSensorCard extends HuiEntityCard {
   }
 
   public static getStubConfig(
-    hass: HomeAssistant,
+    hass: ThirdEye,
     entities: string[],
     entitiesFallback: string[]
   ): SensorCardConfig {

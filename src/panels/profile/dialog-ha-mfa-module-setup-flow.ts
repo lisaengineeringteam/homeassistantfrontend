@@ -10,13 +10,13 @@ import {
   DataEntryFlowStepForm,
 } from "../../data/data_entry_flow";
 import { haStyleDialog } from "../../resources/styles";
-import { HomeAssistant } from "../../types";
+import { ThirdEye } from "../../types";
 
 let instance = 0;
 
 @customElement("ha-mfa-module-setup-flow")
 class HaMfaModuleSetupFlow extends LitElement {
-  @property() public hass!: HomeAssistant;
+  @property() public hass!: ThirdEye;
 
   @state() private _dialogClosedCallback?: (params: {
     flowFinished: boolean;

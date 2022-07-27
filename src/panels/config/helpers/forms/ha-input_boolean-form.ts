@@ -5,11 +5,11 @@ import "../../../../components/ha-icon-picker";
 import "../../../../components/ha-textfield";
 import { InputBoolean } from "../../../../data/input_boolean";
 import { haStyle } from "../../../../resources/styles";
-import { HomeAssistant } from "../../../../types";
+import { ThirdEye } from "../../../../types";
 
 @customElement("ha-input_boolean-form")
 class HaInputBooleanForm extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public new?: boolean;
 

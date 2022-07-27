@@ -6,7 +6,7 @@ import {
 import durationToSeconds from "../common/datetime/duration_to_seconds";
 import secondsToDuration from "../common/datetime/seconds_to_duration";
 import { computeStateDisplay } from "../common/entity/compute_state_display";
-import { HomeAssistant } from "../types";
+import { ThirdEye } from "../types";
 
 export type TimerEntity = HassEntityBase & {
   attributes: HassEntityAttributeBase & {
@@ -37,17 +37,17 @@ export interface TimerMutableParams {
   restore: boolean;
 }
 
-export const fetchTimer = (hass: HomeAssistant) =>
+export const fetchTimer = (hass: ThirdEye) =>
   hass.callWS<Timer[]>({ type: "timer/list" });
 
-export const createTimer = (hass: HomeAssistant, values: TimerMutableParams) =>
+export const createTimer = (hass: ThirdEye, values: TimerMutableParams) =>
   hass.callWS<Timer>({
     type: "timer/create",
     ...values,
   });
 
 export const updateTimer = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   id: string,
   updates: Partial<TimerMutableParams>
 ) =>
@@ -57,7 +57,7 @@ export const updateTimer = (
     ...updates,
   });
 
-export const deleteTimer = (hass: HomeAssistant, id: string) =>
+export const deleteTimer = (hass: ThirdEye, id: string) =>
   hass.callWS({
     type: "timer/delete",
     timer_id: id,
@@ -81,7 +81,7 @@ export const timerTimeRemaining = (
 };
 
 export const computeDisplayTimer = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   stateObj: HassEntity,
   timeRemaining?: number
 ): string | null => {

@@ -7,7 +7,7 @@ import "../../components/ha-formfield";
 import "../../components/ha-switch";
 import { domainToName } from "../../data/integration";
 import { haStyleDialog } from "../../resources/styles";
-import { HomeAssistant } from "../../types";
+import { ThirdEye } from "../../types";
 import { HassDialog } from "../make-dialog-manager";
 import { HaDomainTogglerDialogParams } from "./show-dialog-domain-toggler";
 
@@ -16,7 +16,7 @@ class DomainTogglerDialog
   extends LitElement
   implements HassDialog<HaDomainTogglerDialogParams>
 {
-  public hass!: HomeAssistant;
+  public hass!: ThirdEye;
 
   @state() private _params?: HaDomainTogglerDialogParams;
 

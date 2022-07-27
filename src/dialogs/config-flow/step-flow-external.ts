@@ -2,7 +2,7 @@ import "@material/mwc-button";
 import { css, CSSResultGroup, html, LitElement, TemplateResult } from "lit";
 import { customElement, property } from "lit/decorators";
 import { DataEntryFlowStepExternal } from "../../data/data_entry_flow";
-import { HomeAssistant } from "../../types";
+import { ThirdEye } from "../../types";
 import { FlowConfig } from "./show-dialog-data-entry-flow";
 import { configFlowContentStyles } from "./styles";
 
@@ -10,7 +10,7 @@ import { configFlowContentStyles } from "./styles";
 class StepFlowExternal extends LitElement {
   @property({ attribute: false }) public flowConfig!: FlowConfig;
 
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ attribute: false }) public step!: DataEntryFlowStepExternal;
 

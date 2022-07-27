@@ -11,7 +11,7 @@ import {
 } from "../../../../data/energy";
 import { HassDialog } from "../../../../dialogs/make-dialog-manager";
 import { haStyleDialog } from "../../../../resources/styles";
-import { HomeAssistant } from "../../../../types";
+import { ThirdEye } from "../../../../types";
 import { EnergySettingsGridFlowDialogParams } from "./show-dialogs-energy";
 import "@material/mwc-button/mwc-button";
 import "../../../../components/entity/ha-statistic-picker";
@@ -28,7 +28,7 @@ export class DialogEnergyGridFlowSettings
   extends LitElement
   implements HassDialog<EnergySettingsGridFlowDialogParams>
 {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @state() private _params?: EnergySettingsGridFlowDialogParams;
 

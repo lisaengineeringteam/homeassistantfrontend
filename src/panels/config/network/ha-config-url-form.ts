@@ -19,11 +19,11 @@ import type { HaTextField } from "../../../components/ha-textfield";
 import { CloudStatus, fetchCloudStatus } from "../../../data/cloud";
 import { saveCoreConfig } from "../../../data/core";
 import type { PolymerChangedEvent } from "../../../polymer-types";
-import type { HomeAssistant } from "../../../types";
+import type { ThirdEye } from "../../../types";
 
 @customElement("ha-config-url-form")
 class ConfigUrlForm extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @state() private _error?: string;
 

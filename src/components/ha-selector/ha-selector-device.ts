@@ -14,13 +14,13 @@ import {
 } from "../../data/entity_sources";
 import type { DeviceSelector } from "../../data/selector";
 import { SubscribeMixin } from "../../mixins/subscribe-mixin";
-import type { HomeAssistant } from "../../types";
+import type { ThirdEye } from "../../types";
 import "../device/ha-device-picker";
 import "../device/ha-devices-picker";
 
 @customElement("ha-selector-device")
 export class HaDeviceSelector extends SubscribeMixin(LitElement) {
-  @property() public hass!: HomeAssistant;
+  @property() public hass!: ThirdEye;
 
   @property() public selector!: DeviceSelector;
 

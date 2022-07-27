@@ -13,13 +13,13 @@ import {
 } from "../../data/entity_sources";
 import { AreaSelector } from "../../data/selector";
 import { SubscribeMixin } from "../../mixins/subscribe-mixin";
-import { HomeAssistant } from "../../types";
+import { ThirdEye } from "../../types";
 import "../ha-area-picker";
 import "../ha-areas-picker";
 
 @customElement("ha-selector-area")
 export class HaAreaSelector extends SubscribeMixin(LitElement) {
-  @property() public hass!: HomeAssistant;
+  @property() public hass!: ThirdEye;
 
   @property() public selector!: AreaSelector;
 

@@ -1,5 +1,5 @@
 import { HassEntity } from "home-assistant-js-websocket";
-import { HomeAssistant } from "../types";
+import { ThirdEye } from "../types";
 
 export interface InputDateTime {
   id: string;
@@ -32,7 +32,7 @@ export const stateToIsoDateString = (entityState: HassEntity) =>
   )}`;
 
 export const setInputDateTimeValue = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   entityId: string,
   time: string | undefined = undefined,
   date: string | undefined = undefined
@@ -41,11 +41,11 @@ export const setInputDateTimeValue = (
   hass.callService(entityId.split(".", 1)[0], "set_datetime", param);
 };
 
-export const fetchInputDateTime = (hass: HomeAssistant) =>
+export const fetchInputDateTime = (hass: ThirdEye) =>
   hass.callWS<InputDateTime[]>({ type: "input_datetime/list" });
 
 export const createInputDateTime = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   values: InputDateTimeMutableParams
 ) =>
   hass.callWS<InputDateTime>({
@@ -54,7 +54,7 @@ export const createInputDateTime = (
   });
 
 export const updateInputDateTime = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   id: string,
   updates: Partial<InputDateTimeMutableParams>
 ) =>
@@ -64,7 +64,7 @@ export const updateInputDateTime = (
     ...updates,
   });
 
-export const deleteInputDateTime = (hass: HomeAssistant, id: string) =>
+export const deleteInputDateTime = (hass: ThirdEye, id: string) =>
   hass.callWS({
     type: "input_datetime/delete",
     input_datetime_id: id,

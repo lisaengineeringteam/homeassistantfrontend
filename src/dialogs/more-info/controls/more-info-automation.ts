@@ -5,11 +5,11 @@ import { customElement, property } from "lit/decorators";
 import "../../../components/ha-relative-time";
 import { triggerAutomationActions } from "../../../data/automation";
 import { UNAVAILABLE_STATES } from "../../../data/entity";
-import { HomeAssistant } from "../../../types";
+import { ThirdEye } from "../../../types";
 
 @customElement("more-info-automation")
 class MoreInfoAutomation extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ attribute: false }) public stateObj?: HassEntity;
 

@@ -43,7 +43,7 @@ import {
   SUPPORT_VOLUME_MUTE,
   SUPPORT_VOLUME_SET,
 } from "../../../data/media-player";
-import type { HomeAssistant } from "../../../types";
+import type { ThirdEye } from "../../../types";
 import { hasConfigOrEntityChanged } from "../common/has-changed";
 import { installResizeObserver } from "../common/install-resize-observer";
 import "../components/hui-generic-entity-row";
@@ -52,7 +52,7 @@ import type { EntityConfig, LovelaceRow } from "./types";
 
 @customElement("hui-media-player-entity-row")
 class HuiMediaPlayerEntityRow extends LitElement implements LovelaceRow {
-  @property({ attribute: false }) public hass?: HomeAssistant;
+  @property({ attribute: false }) public hass?: ThirdEye;
 
   @state() private _config?: EntityConfig;
 

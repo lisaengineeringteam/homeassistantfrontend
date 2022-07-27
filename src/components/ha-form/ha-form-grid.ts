@@ -14,11 +14,11 @@ import type {
   HaFormElement,
   HaFormSchema,
 } from "./types";
-import type { HomeAssistant } from "../../types";
+import type { ThirdEye } from "../../types";
 
 @customElement("ha-form-grid")
 export class HaFormGrid extends LitElement implements HaFormElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ attribute: false }) public data!: HaFormDataContainer;
 

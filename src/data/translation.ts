@@ -1,4 +1,4 @@
-import { HomeAssistant } from "../types";
+import { ThirdEye } from "../types";
 import { fetchFrontendUserData, saveFrontendUserData } from "./frontend";
 
 export enum NumberFormat {
@@ -41,16 +41,16 @@ export type TranslationCategory =
   | "device_class"
   | "application_credentials";
 
-export const fetchTranslationPreferences = (hass: HomeAssistant) =>
+export const fetchTranslationPreferences = (hass: ThirdEye) =>
   fetchFrontendUserData(hass.connection, "language");
 
 export const saveTranslationPreferences = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   data: FrontendLocaleData
 ) => saveFrontendUserData(hass.connection, "language", data);
 
 export const getHassTranslations = async (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   language: string,
   category: TranslationCategory,
   integration?: string | string[],
@@ -67,7 +67,7 @@ export const getHassTranslations = async (
 };
 
 export const getHassTranslationsPre109 = async (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   language: string
 ): Promise<Record<string, unknown>> => {
   const result = await hass.callWS<{ resources: Record<string, unknown> }>({

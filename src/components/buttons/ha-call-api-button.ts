@@ -1,11 +1,11 @@
 import { css, CSSResultGroup, html, LitElement } from "lit";
 import { property, query } from "lit/decorators";
 import { fireEvent } from "../../common/dom/fire_event";
-import { HomeAssistant } from "../../types";
+import { ThirdEye } from "../../types";
 import "./ha-progress-button";
 
 class HaCallApiButton extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public method: "POST" | "GET" | "PUT" | "DELETE" = "POST";
 

@@ -1,9 +1,9 @@
 import { atLeastVersion } from "../../common/config/version";
-import { HomeAssistant, PanelInfo } from "../../types";
+import { ThirdEye, PanelInfo } from "../../types";
 import { SupervisorArch } from "../supervisor/supervisor";
 import { hassioApiResultExtractor, HassioResponse } from "./common";
 
-export type HassioHomeAssistantInfo = {
+export type HassioThirdEyeInfo = {
   arch: SupervisorArch;
   audio_input: string | null;
   audio_output: string | null;
@@ -45,7 +45,7 @@ export type HassioInfo = {
   docker: string;
   features: string[];
   hassos: null;
-  homeassistant: string;
+  thirdeye: string;
   hostname: string;
   logging: string;
   machine: string;
@@ -82,7 +82,7 @@ export interface SupervisorOptions {
   addons_repositories?: string[];
 }
 
-export const reloadSupervisor = async (hass: HomeAssistant) => {
+export const reloadSupervisor = async (hass: ThirdEye) => {
   if (atLeastVersion(hass.config.version, 2021, 2, 4)) {
     await hass.callWS({
       type: "supervisor/api",
@@ -95,7 +95,7 @@ export const reloadSupervisor = async (hass: HomeAssistant) => {
   await hass.callApi<HassioResponse<void>>("POST", `hassio/supervisor/reload`);
 };
 
-export const restartSupervisor = async (hass: HomeAssistant) => {
+export const restartSupervisor = async (hass: ThirdEye) => {
   if (atLeastVersion(hass.config.version, 2021, 2, 4)) {
     await hass.callWS({
       type: "supervisor/api",
@@ -109,7 +109,7 @@ export const restartSupervisor = async (hass: HomeAssistant) => {
   await hass.callApi<HassioResponse<void>>("POST", `hassio/supervisor/restart`);
 };
 
-export const updateSupervisor = async (hass: HomeAssistant) => {
+export const updateSupervisor = async (hass: ThirdEye) => {
   if (atLeastVersion(hass.config.version, 2021, 2, 4)) {
     await hass.callWS({
       type: "supervisor/api",
@@ -123,9 +123,9 @@ export const updateSupervisor = async (hass: HomeAssistant) => {
   await hass.callApi<HassioResponse<void>>("POST", `hassio/supervisor/update`);
 };
 
-export const fetchHassioHomeAssistantInfo = async (
-  hass: HomeAssistant
-): Promise<HassioHomeAssistantInfo> => {
+export const fetchHassioThirdEyeInfo = async (
+  hass: ThirdEye
+): Promise<HassioThirdEyeInfo> => {
   if (atLeastVersion(hass.config.version, 2021, 2, 4)) {
     return hass.callWS({
       type: "supervisor/api",
@@ -135,7 +135,7 @@ export const fetchHassioHomeAssistantInfo = async (
   }
 
   return hassioApiResultExtractor(
-    await hass.callApi<HassioResponse<HassioHomeAssistantInfo>>(
+    await hass.callApi<HassioResponse<HassioThirdEyeInfo>>(
       "GET",
       "hassio/core/info"
     )
@@ -143,7 +143,7 @@ export const fetchHassioHomeAssistantInfo = async (
 };
 
 export const fetchHassioSupervisorInfo = async (
-  hass: HomeAssistant
+  hass: ThirdEye
 ): Promise<HassioSupervisorInfo> => {
   if (atLeastVersion(hass.config.version, 2021, 2, 4)) {
     return hass.callWS({
@@ -162,7 +162,7 @@ export const fetchHassioSupervisorInfo = async (
 };
 
 export const fetchHassioInfo = async (
-  hass: HomeAssistant
+  hass: ThirdEye
 ): Promise<HassioInfo> => {
   if (atLeastVersion(hass.config.version, 2021, 2, 4)) {
     return hass.callWS({
@@ -177,14 +177,14 @@ export const fetchHassioInfo = async (
   );
 };
 
-export const fetchHassioLogs = async (hass: HomeAssistant, provider: string) =>
+export const fetchHassioLogs = async (hass: ThirdEye, provider: string) =>
   hass.callApi<string>(
     "GET",
     `hassio/${provider.includes("_") ? `addons/${provider}` : provider}/logs`
   );
 
 export const setSupervisorOption = async (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   data: SupervisorOptions
 ) => {
   if (atLeastVersion(hass.config.version, 2021, 2, 4)) {

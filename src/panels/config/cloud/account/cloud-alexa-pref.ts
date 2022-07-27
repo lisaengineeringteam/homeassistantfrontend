@@ -7,10 +7,10 @@ import "../../../../components/ha-switch";
 import type { HaSwitch } from "../../../../components/ha-switch";
 import { syncCloudAlexaEntities } from "../../../../data/alexa";
 import { CloudStatusLoggedIn, updateCloudPref } from "../../../../data/cloud";
-import type { HomeAssistant } from "../../../../types";
+import type { ThirdEye } from "../../../../types";
 
 export class CloudAlexaPref extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public cloudStatus?: CloudStatusLoggedIn;
 

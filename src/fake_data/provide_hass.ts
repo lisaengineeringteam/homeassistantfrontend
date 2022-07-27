@@ -8,7 +8,7 @@ import { computeLocalize } from "../common/translations/localize";
 import { DEFAULT_PANEL } from "../data/panel";
 import { NumberFormat, TimeFormat } from "../data/translation";
 import { translationMetadata } from "../resources/translations-metadata";
-import { HomeAssistant } from "../types";
+import { ThirdEye } from "../types";
 import { getLocalLanguage, getTranslation } from "../util/common-translation";
 import { demoConfig } from "./demo_config";
 import { demoPanels } from "./demo_panels";
@@ -19,15 +19,15 @@ const ensureArray = <T>(val: T | T[]): T[] =>
   Array.isArray(val) ? val : [val];
 
 type MockRestCallback = (
-  hass: MockHomeAssistant,
+  hass: MockThirdEye,
   method: string,
   path: string,
   parameters: Record<string, any> | undefined
 ) => any;
 
-export interface MockHomeAssistant extends HomeAssistant {
+export interface MockThirdEye extends ThirdEye {
   mockEntities: any;
-  updateHass(obj: Partial<MockHomeAssistant>);
+  updateHass(obj: Partial<MockThirdEye>);
   updateStates(newStates: HassEntities);
   addEntities(entites: Entity | Entity[], replace?: boolean);
   updateTranslations(fragment: null | string, language?: string);
@@ -36,7 +36,7 @@ export interface MockHomeAssistant extends HomeAssistant {
     type: string,
     callback: (
       msg: any,
-      hass: MockHomeAssistant,
+      hass: MockThirdEye,
       onChange?: (response: any) => void
     ) => any
   );
@@ -47,11 +47,11 @@ export interface MockHomeAssistant extends HomeAssistant {
 
 export const provideHass = (
   elements,
-  overrideData: Partial<HomeAssistant> = {}
-): MockHomeAssistant => {
+  overrideData: Partial<ThirdEye> = {}
+): MockThirdEye => {
   elements = ensureArray(elements);
   // Can happen because we store sidebar, more info etc on hass.
-  const hass = (): MockHomeAssistant => elements[0].hass;
+  const hass = (): MockThirdEye => elements[0].hass;
 
   const wsCommands = {};
   const restResponses: Array<[string | RegExp, MockRestCallback]> = [];
@@ -136,8 +136,8 @@ export const provideHass = (
   const localLanguage = getLocalLanguage();
   const noop = () => undefined;
 
-  const hassObj: MockHomeAssistant = {
-    // Home Assistant properties
+  const hassObj: MockThirdEye = {
+    // Third Eyeerties
     auth: {
       data: {
         hassUrl: "",
@@ -265,7 +265,7 @@ export const provideHass = (
 
     // Mock stuff
     mockEntities: entities,
-    updateHass(obj: Partial<MockHomeAssistant>) {
+    updateHass(obj: Partial<MockThirdEye>) {
       const newHass = { ...hass(), ...obj };
       elements.forEach((el) => {
         el.hass = newHass;

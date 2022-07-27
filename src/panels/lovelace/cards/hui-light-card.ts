@@ -21,7 +21,7 @@ import "../../../components/ha-state-icon";
 import { UNAVAILABLE, UNAVAILABLE_STATES } from "../../../data/entity";
 import { LightEntity, lightSupportsDimming } from "../../../data/light";
 import { ActionHandlerEvent } from "../../../data/lovelace";
-import { HomeAssistant } from "../../../types";
+import { ThirdEye } from "../../../types";
 import { actionHandler } from "../common/directives/action-handler-directive";
 import { findEntities } from "../common/find-entities";
 import { handleAction } from "../common/handle-action";
@@ -39,7 +39,7 @@ export class HuiLightCard extends LitElement implements LovelaceCard {
   }
 
   public static getStubConfig(
-    hass: HomeAssistant,
+    hass: ThirdEye,
     entities: string[],
     entitiesFallback: string[]
   ): LightCardConfig {
@@ -56,7 +56,7 @@ export class HuiLightCard extends LitElement implements LovelaceCard {
     return { type: "light", entity: foundEntities[0] || "" };
   }
 
-  @property({ attribute: false }) public hass?: HomeAssistant;
+  @property({ attribute: false }) public hass?: ThirdEye;
 
   @state() private _config?: LightCardConfig;
 
@@ -187,7 +187,7 @@ export class HuiLightCard extends LitElement implements LovelaceCard {
       return;
     }
 
-    const oldHass = changedProps.get("hass") as HomeAssistant | undefined;
+    const oldHass = changedProps.get("hass") as ThirdEye | undefined;
     const oldConfig = changedProps.get("_config") as
       | LightCardConfig
       | undefined;

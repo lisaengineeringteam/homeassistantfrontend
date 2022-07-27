@@ -44,7 +44,7 @@ import { findRelated, RelatedResult } from "../../../data/search";
 import { showConfirmationDialog } from "../../../dialogs/generic/show-dialog-box";
 import { SubscribeMixin } from "../../../mixins/subscribe-mixin";
 import { haStyle } from "../../../resources/styles";
-import { HomeAssistant, Route } from "../../../types";
+import { ThirdEye, Route } from "../../../types";
 import "../../logbook/ha-logbook";
 import { showEntityEditorDialog } from "../entities/show-dialog-entity-editor";
 import { configSections } from "../ha-panel-config";
@@ -60,7 +60,7 @@ declare type NameAndEntity<EntityType extends HassEntity> = {
 
 @customElement("ha-config-area-page")
 class HaConfigAreaPage extends SubscribeMixin(LitElement) {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public areaId!: string;
 

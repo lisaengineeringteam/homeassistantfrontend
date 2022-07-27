@@ -19,12 +19,12 @@ import {
   ZHA_CHANNEL_MSG_CFG_RPT,
 } from "../../../../../data/zha";
 import { haStyleDialog } from "../../../../../resources/styles";
-import { HomeAssistant } from "../../../../../types";
+import { ThirdEye } from "../../../../../types";
 import { ZHAReconfigureDeviceDialogParams } from "./show-dialog-zha-reconfigure-device";
 
 @customElement("dialog-zha-reconfigure-device")
 class DialogZHAReconfigureDevice extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @state() private _status?: string;
 

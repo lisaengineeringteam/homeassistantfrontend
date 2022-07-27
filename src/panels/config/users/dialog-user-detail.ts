@@ -23,12 +23,12 @@ import {
   showPromptDialog,
 } from "../../../dialogs/generic/show-dialog-box";
 import { haStyleDialog } from "../../../resources/styles";
-import { HomeAssistant } from "../../../types";
+import { ThirdEye } from "../../../types";
 import { UserDetailDialogParams } from "./show-dialog-user-detail";
 
 @customElement("dialog-user-detail")
 class DialogUserDetail extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @state() private _name!: string;
 
@@ -260,11 +260,11 @@ class DialogUserDetail extends LitElement {
 
   private async _changePassword() {
     const credential = this._params?.entry.credentials.find(
-      (cred) => cred.type === "homeassistant"
+      (cred) => cred.type === "thirdeye"
     );
     if (!credential) {
       showAlertDialog(this, {
-        title: "No Home Assistant credentials found.",
+        title: "No Third Eyeund.",
       });
       return;
     }

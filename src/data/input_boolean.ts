@@ -1,4 +1,4 @@
-import { HomeAssistant } from "../types";
+import { ThirdEye } from "../types";
 
 export interface InputBoolean {
   id: string;
@@ -13,11 +13,11 @@ export interface InputBooleanMutableParams {
   initial: boolean;
 }
 
-export const fetchInputBoolean = (hass: HomeAssistant) =>
+export const fetchInputBoolean = (hass: ThirdEye) =>
   hass.callWS<InputBoolean[]>({ type: "input_boolean/list" });
 
 export const createInputBoolean = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   values: InputBooleanMutableParams
 ) =>
   hass.callWS<InputBoolean>({
@@ -26,7 +26,7 @@ export const createInputBoolean = (
   });
 
 export const updateInputBoolean = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   id: string,
   updates: Partial<InputBooleanMutableParams>
 ) =>
@@ -36,7 +36,7 @@ export const updateInputBoolean = (
     ...updates,
   });
 
-export const deleteInputBoolean = (hass: HomeAssistant, id: string) =>
+export const deleteInputBoolean = (hass: ThirdEye, id: string) =>
   hass.callWS({
     type: "input_boolean/delete",
     input_boolean_id: id,

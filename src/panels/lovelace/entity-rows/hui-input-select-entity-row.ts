@@ -10,7 +10,7 @@ import {
   InputSelectEntity,
   setInputSelectOption,
 } from "../../../data/input_select";
-import { HomeAssistant } from "../../../types";
+import { ThirdEye } from "../../../types";
 import { EntitiesCardEntityConfig } from "../cards/types";
 import { hasConfigOrEntityChanged } from "../common/has-changed";
 import "../components/hui-generic-entity-row";
@@ -19,7 +19,7 @@ import { LovelaceRow } from "./types";
 
 @customElement("hui-input-select-entity-row")
 class HuiInputSelectEntityRow extends LitElement implements LovelaceRow {
-  @property({ attribute: false }) public hass?: HomeAssistant;
+  @property({ attribute: false }) public hass?: ThirdEye;
 
   @state() private _config?: EntitiesCardEntityConfig;
 

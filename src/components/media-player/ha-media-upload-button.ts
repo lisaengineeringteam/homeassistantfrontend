@@ -10,7 +10,7 @@ import {
   isLocalMediaSourceContentId,
   uploadLocalMedia,
 } from "../../data/media_source";
-import type { HomeAssistant } from "../../types";
+import type { ThirdEye } from "../../types";
 import { showAlertDialog } from "../../dialogs/generic/show-dialog-box";
 
 declare global {
@@ -22,7 +22,7 @@ declare global {
 
 @customElement("ha-media-upload-button")
 class MediaUploadButton extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() currentItem?: MediaPlayerItem;
 

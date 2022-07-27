@@ -1,4 +1,4 @@
-import { HomeAssistant } from "../types";
+import { ThirdEye } from "../types";
 
 function urlBase64ToUint8Array(base64String) {
   const padding = "=".repeat((4 - (base64String.length % 4)) % 4);
@@ -13,7 +13,7 @@ function urlBase64ToUint8Array(base64String) {
   return outputArray;
 }
 
-export const getAppKey = async (hass: HomeAssistant) => {
+export const getAppKey = async (hass: ThirdEye) => {
   const res = await hass.callWS<string>({
     type: "notify/html5/appkey",
   });

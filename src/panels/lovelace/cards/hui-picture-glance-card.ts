@@ -18,7 +18,7 @@ import "../../../components/ha-card";
 import "../../../components/ha-icon-button";
 import "../../../components/ha-state-icon";
 import { ActionHandlerEvent } from "../../../data/lovelace";
-import { HomeAssistant } from "../../../types";
+import { ThirdEye } from "../../../types";
 import { actionHandler } from "../common/directives/action-handler-directive";
 import { findEntities } from "../common/find-entities";
 import { handleAction } from "../common/handle-action";
@@ -41,7 +41,7 @@ class HuiPictureGlanceCard extends LitElement implements LovelaceCard {
   }
 
   public static getStubConfig(
-    hass: HomeAssistant,
+    hass: ThirdEye,
     entities: string[],
     entitiesFallback: string[]
   ): PictureGlanceCardConfig {
@@ -62,7 +62,7 @@ class HuiPictureGlanceCard extends LitElement implements LovelaceCard {
     };
   }
 
-  @property({ attribute: false }) public hass?: HomeAssistant;
+  @property({ attribute: false }) public hass?: ThirdEye;
 
   @state() private _config?: PictureGlanceCardConfig;
 
@@ -111,7 +111,7 @@ class HuiPictureGlanceCard extends LitElement implements LovelaceCard {
       return true;
     }
 
-    const oldHass = changedProps.get("hass") as HomeAssistant | undefined;
+    const oldHass = changedProps.get("hass") as ThirdEye | undefined;
 
     if (
       !oldHass ||
@@ -149,7 +149,7 @@ class HuiPictureGlanceCard extends LitElement implements LovelaceCard {
     if (!this._config || !this.hass) {
       return;
     }
-    const oldHass = changedProps.get("hass") as HomeAssistant | undefined;
+    const oldHass = changedProps.get("hass") as ThirdEye | undefined;
     const oldConfig = changedProps.get("_config") as
       | PictureGlanceCardConfig
       | undefined;

@@ -1,7 +1,7 @@
 import { UnsubscribeFunc } from "home-assistant-js-websocket";
 import { PropertyValues, ReactiveElement } from "lit";
 import { property } from "lit/decorators";
-import { Constructor, HomeAssistant } from "../types";
+import { Constructor, ThirdEye } from "../types";
 
 export interface HassSubscribeElement {
   hassSubscribe(): UnsubscribeFunc[];
@@ -11,7 +11,7 @@ export const SubscribeMixin = <T extends Constructor<ReactiveElement>>(
   superClass: T
 ) => {
   class SubscribeClass extends superClass {
-    @property({ attribute: false }) public hass?: HomeAssistant;
+    @property({ attribute: false }) public hass?: ThirdEye;
 
     // we wait with subscribing till these properties are set on the host element
     protected hassSubscribeRequiredHostProps?: string[];

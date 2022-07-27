@@ -9,11 +9,11 @@ import "../../../../components/ha-textfield";
 import { cloudForgotPassword } from "../../../../data/cloud";
 import "../../../../layouts/hass-subpage";
 import { haStyle } from "../../../../resources/styles";
-import { HomeAssistant } from "../../../../types";
+import { ThirdEye } from "../../../../types";
 
 @customElement("cloud-forgot-password")
 export class CloudForgotPassword extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ type: Boolean }) public narrow = false;
 

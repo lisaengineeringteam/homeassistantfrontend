@@ -11,7 +11,7 @@ import { DOMAINS_TOGGLE } from "../../../common/const";
 import { applyThemesOnElement } from "../../../common/dom/apply_themes_on_element";
 import { computeDomain } from "../../../common/entity/compute_domain";
 import "../../../components/ha-card";
-import { HomeAssistant } from "../../../types";
+import { ThirdEye } from "../../../types";
 import { computeCardSize } from "../common/compute-card-size";
 import { findEntities } from "../common/find-entities";
 import { processConfigEntities } from "../common/process-config-entities";
@@ -38,7 +38,7 @@ class HuiEntitiesCard extends LitElement implements LovelaceCard {
   }
 
   public static getStubConfig(
-    hass: HomeAssistant,
+    hass: ThirdEye,
     entities: string[],
     entitiesFallback: string[]
   ): EntitiesCardConfig {
@@ -56,7 +56,7 @@ class HuiEntitiesCard extends LitElement implements LovelaceCard {
 
   @state() private _config?: EntitiesCardConfig;
 
-  private _hass?: HomeAssistant;
+  private _hass?: ThirdEye;
 
   private _configEntities?: LovelaceRowConfig[];
 
@@ -66,7 +66,7 @@ class HuiEntitiesCard extends LitElement implements LovelaceCard {
 
   private _footerElement?: LovelaceHeaderFooter;
 
-  set hass(hass: HomeAssistant) {
+  set hass(hass: ThirdEye) {
     this._hass = hass;
     this.shadowRoot
       ?.querySelectorAll("#states > div > *")
@@ -163,7 +163,7 @@ class HuiEntitiesCard extends LitElement implements LovelaceCard {
     if (!this._config || !this._hass) {
       return;
     }
-    const oldHass = changedProps.get("_hass") as HomeAssistant | undefined;
+    const oldHass = changedProps.get("_hass") as ThirdEye | undefined;
     const oldConfig = changedProps.get("_config") as
       | EntitiesCardConfig
       | undefined;

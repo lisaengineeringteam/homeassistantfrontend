@@ -7,7 +7,7 @@ import { computeStateDomain } from "../../../../../common/entity/compute_state_d
 import { hasLocation } from "../../../../../common/entity/has_location";
 import type { ZoneTrigger } from "../../../../../data/automation";
 import type { PolymerChangedEvent } from "../../../../../polymer-types";
-import type { HomeAssistant } from "../../../../../types";
+import type { ThirdEye } from "../../../../../types";
 import type { HaRadio } from "../../../../../components/ha-radio";
 
 function zoneAndLocationFilter(stateObj) {
@@ -18,7 +18,7 @@ const includeDomains = ["zone"];
 
 @customElement("ha-automation-trigger-zone")
 export class HaZoneTrigger extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public trigger!: ZoneTrigger;
 

@@ -14,12 +14,12 @@ import {
   supportsStop,
 } from "../data/cover";
 import { UNAVAILABLE } from "../data/entity";
-import type { HomeAssistant } from "../types";
+import type { ThirdEye } from "../types";
 import "./ha-icon-button";
 
 @customElement("ha-cover-controls")
 class HaCoverControls extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ attribute: false }) public stateObj!: CoverEntity;
 

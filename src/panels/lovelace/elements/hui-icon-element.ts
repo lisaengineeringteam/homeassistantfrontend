@@ -3,7 +3,7 @@ import { customElement, state } from "lit/decorators";
 import { ifDefined } from "lit/directives/if-defined";
 import "../../../components/ha-icon";
 import { ActionHandlerEvent } from "../../../data/lovelace";
-import { HomeAssistant } from "../../../types";
+import { ThirdEye } from "../../../types";
 import { computeTooltip } from "../common/compute-tooltip";
 import { actionHandler } from "../common/directives/action-handler-directive";
 import { handleAction } from "../common/handle-action";
@@ -12,7 +12,7 @@ import { IconElementConfig, LovelaceElement } from "./types";
 
 @customElement("hui-icon-element")
 export class HuiIconElement extends LitElement implements LovelaceElement {
-  public hass?: HomeAssistant;
+  public hass?: ThirdEye;
 
   @state() private _config?: IconElementConfig;
 

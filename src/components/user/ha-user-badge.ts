@@ -11,11 +11,11 @@ import { classMap } from "lit/directives/class-map";
 import { styleMap } from "lit/directives/style-map";
 import { computeStateDomain } from "../../common/entity/compute_state_domain";
 import { computeUserInitials, User } from "../../data/user";
-import { CurrentUser, HomeAssistant } from "../../types";
+import { CurrentUser, ThirdEye } from "../../types";
 
 @customElement("ha-user-badge")
 class UserBadge extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ attribute: false }) public user?: User | CurrentUser;
 
@@ -29,7 +29,7 @@ class UserBadge extends LitElement {
       this._getPersonPicture();
       return;
     }
-    const oldHass = changedProps.get("hass") as HomeAssistant | undefined;
+    const oldHass = changedProps.get("hass") as ThirdEye | undefined;
     if (
       this._personEntityId &&
       oldHass &&

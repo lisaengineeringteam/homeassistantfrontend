@@ -2,11 +2,11 @@ import { HassEntity } from "home-assistant-js-websocket";
 import { css, CSSResultGroup, html, LitElement, TemplateResult } from "lit";
 import { customElement, property } from "lit/decorators";
 import "../../../components/ha-relative-time";
-import { HomeAssistant } from "../../../types";
+import { ThirdEye } from "../../../types";
 
 @customElement("more-info-script")
 class MoreInfoScript extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public stateObj?: HassEntity;
 

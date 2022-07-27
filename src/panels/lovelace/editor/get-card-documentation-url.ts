@@ -2,11 +2,11 @@ import {
   CUSTOM_TYPE_PREFIX,
   getCustomCardEntry,
 } from "../../../data/lovelace_custom_cards";
-import { HomeAssistant } from "../../../types";
+import { ThirdEye } from "../../../types";
 import { documentationUrl } from "../../../util/documentation-url";
 
 export const getCardDocumentationURL = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   type: string
 ): string | undefined => {
   if (type.startsWith(CUSTOM_TYPE_PREFIX)) {

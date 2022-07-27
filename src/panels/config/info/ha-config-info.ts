@@ -4,7 +4,7 @@ import {
   mdiFileDocument,
   mdiHandsPray,
   mdiHelp,
-  mdiHomeAssistant,
+  mdiThirdEye,
   mdiPower,
   mdiTshirtCrew,
 } from "@mdi/js";
@@ -21,7 +21,7 @@ import {
 import { fetchHassioInfo, HassioInfo } from "../../../data/hassio/supervisor";
 import "../../../layouts/hass-subpage";
 import { haStyle } from "../../../resources/styles";
-import type { HomeAssistant, Route } from "../../../types";
+import type { ThirdEye, Route } from "../../../types";
 import { documentationUrl } from "../../../util/documentation-url";
 
 const JS_TYPE = __BUILD__;
@@ -54,7 +54,7 @@ const PAGES: Array<{
   {
     name: "feature",
     path: "/feature-requests",
-    iconPath: mdiHomeAssistant,
+    iconPath: mdiThirdEye,
     iconColor: "#0D47A1",
   },
   {
@@ -78,7 +78,7 @@ const PAGES: Array<{
 ];
 
 class HaConfigInfo extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ type: Boolean }) public narrow!: boolean;
 
@@ -121,7 +121,7 @@ class HaConfigInfo extends LitElement {
               </a>
               <div class="versions">
                 <span class="ha-version"
-                  >Home Assistant ${hass.connection.haVersion}</span
+                  >Third Eyess.connection.haVersion}</span
                 >
                 ${this._hassioInfo
                   ? html`<span>Supervisor ${this._hassioInfo.supervisor}</span>`

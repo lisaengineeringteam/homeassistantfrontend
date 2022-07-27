@@ -28,12 +28,12 @@ import {
   showConfirmationDialog,
 } from "../../../dialogs/generic/show-dialog-box";
 import "../../../layouts/hass-subpage";
-import type { HomeAssistant } from "../../../types";
+import type { ThirdEye } from "../../../types";
 import "../dashboard/ha-config-updates";
 
 @customElement("ha-config-section-updates")
 class HaConfigSectionUpdates extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ type: Boolean }) public narrow!: boolean;
 
@@ -143,9 +143,9 @@ class HaConfigSectionUpdates extends LitElement {
           <br /><br />
           ${this.hass.localize("ui.dialogs.join_beta_channel.release_items")}
           <ul>
-            <li>Home Assistant Core</li>
-            <li>Home Assistant Supervisor</li>
-            <li>Home Assistant Operating System</li>
+            <li>Third Eye Core</li>
+            <li>Third Eye Supervisor</li>
+            <li>Third Eye Operating System</li>
           </ul>
           <br />
           ${this.hass.localize("ui.dialogs.join_beta_channel.confirm")}`,

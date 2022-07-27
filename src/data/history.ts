@@ -6,7 +6,7 @@ import {
   computeStateNameFromEntityAttributes,
 } from "../common/entity/compute_state_name";
 import { LocalizeFunc } from "../common/translations/localize";
-import { HomeAssistant } from "../types";
+import { ThirdEye } from "../types";
 import { FrontendLocaleData } from "./translation";
 
 const DOMAINS_USE_LAST_UPDATED = ["climate", "humidifier", "water_heater"];
@@ -159,14 +159,14 @@ interface EntityHistoryState {
 }
 
 export const entityIdHistoryNeedsAttributes = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   entityId: string
 ) =>
   !hass.states[entityId] ||
   NEED_ATTRIBUTE_DOMAINS.includes(computeDomain(entityId));
 
 export const fetchRecent = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   entityId: string,
   startTime: Date,
   endTime: Date,
@@ -199,7 +199,7 @@ export const fetchRecent = (
 };
 
 export const fetchRecentWS = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   entityId: string, // This may be CSV
   startTime: Date,
   endTime: Date,
@@ -220,7 +220,7 @@ export const fetchRecentWS = (
   });
 
 export const fetchDate = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   startTime: Date,
   endTime: Date,
   entityIds: string[]
@@ -233,7 +233,7 @@ export const fetchDate = (
   );
 
 export const fetchDateWS = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   startTime: Date,
   endTime: Date,
   entityIds: string[]
@@ -371,7 +371,7 @@ const attributesHaveUnits = (attributes: { [key: string]: any }) =>
   "unit_of_measurement" in attributes || "state_class" in attributes;
 
 export const computeHistory = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   stateHistory: HistoryStates,
   localize: LocalizeFunc
 ): HistoryResult => {
@@ -433,7 +433,7 @@ export const computeHistory = (
 // Statistics
 
 export const getStatisticIds = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   statistic_type?: "mean" | "sum"
 ) =>
   hass.callWS<StatisticsMetaData[]>({
@@ -442,7 +442,7 @@ export const getStatisticIds = (
   });
 
 export const getStatisticMetadata = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   statistic_ids?: string[]
 ) =>
   hass.callWS<StatisticsMetaData[]>({
@@ -451,7 +451,7 @@ export const getStatisticMetadata = (
   });
 
 export const fetchStatistics = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   startTime: Date,
   endTime?: Date,
   statistic_ids?: string[],
@@ -465,13 +465,13 @@ export const fetchStatistics = (
     period,
   });
 
-export const validateStatistics = (hass: HomeAssistant) =>
+export const validateStatistics = (hass: ThirdEye) =>
   hass.callWS<StatisticsValidationResults>({
     type: "recorder/validate_statistics",
   });
 
 export const updateStatisticsMetadata = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   statistic_id: string,
   unit_of_measurement: string | null
 ) =>
@@ -481,7 +481,7 @@ export const updateStatisticsMetadata = (
     unit_of_measurement,
   });
 
-export const clearStatistics = (hass: HomeAssistant, statistic_ids: string[]) =>
+export const clearStatistics = (hass: ThirdEye, statistic_ids: string[]) =>
   hass.callWS<void>({
     type: "recorder/clear_statistics",
     statistic_ids,
@@ -535,7 +535,7 @@ export const statisticsHaveType = (
 ) => stats.some((stat) => stat[type] !== null);
 
 export const adjustStatisticsSum = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   statistic_id: string,
   start_time: string,
   adjustment: number
@@ -548,7 +548,7 @@ export const adjustStatisticsSum = (
   });
 
 export const getStatisticLabel = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   statisticsId: string,
   statisticsMetaData: Record<string, StatisticsMetaData>
 ): string => {

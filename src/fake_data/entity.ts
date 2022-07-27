@@ -75,7 +75,7 @@ export class Entity {
 
 class LightEntity extends Entity {
   public async handleService(domain, service, data) {
-    if (!["homeassistant", this.domain].includes(domain)) {
+    if (!["thirdeye", this.domain].includes(domain)) {
       return;
     }
 
@@ -118,7 +118,7 @@ class LightEntity extends Entity {
 
 class ToggleEntity extends Entity {
   public async handleService(domain, service, data) {
-    if (!["homeassistant", this.domain].includes(domain)) {
+    if (!["thirdeye", this.domain].includes(domain)) {
       return;
     }
 
@@ -317,7 +317,7 @@ class ClimateEntity extends Entity {
 
 class GroupEntity extends Entity {
   public async handleService(domain, service, data) {
-    if (!["homeassistant", this.domain].includes(domain)) {
+    if (!["thirdeye", this.domain].includes(domain)) {
       return;
     }
 

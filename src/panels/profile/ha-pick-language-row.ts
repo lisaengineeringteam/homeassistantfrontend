@@ -4,11 +4,11 @@ import { customElement, property, state } from "lit/decorators";
 import { fireEvent } from "../../common/dom/fire_event";
 import "../../components/ha-select";
 import "../../components/ha-settings-row";
-import { HomeAssistant, Translation } from "../../types";
+import { ThirdEye, Translation } from "../../types";
 
 @customElement("ha-pick-language-row")
 export class HaPickLanguageRow extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public narrow!: boolean;
 

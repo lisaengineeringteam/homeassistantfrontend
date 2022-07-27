@@ -3,7 +3,7 @@ import { css, CSSResultGroup, html, LitElement, TemplateResult } from "lit";
 import { customElement, property } from "lit/decorators";
 import { fireEvent } from "../../../common/dom/fire_event";
 import "../../../components/ha-icon-button";
-import { HomeAssistant } from "../../../types";
+import { ThirdEye } from "../../../types";
 import { EditorTarget } from "../editor/types";
 import "../../../components/ha-textfield";
 
@@ -11,7 +11,7 @@ import "../../../components/ha-textfield";
 export class HuiInputListEditor extends LitElement {
   @property() protected value?: string[];
 
-  @property() protected hass?: HomeAssistant;
+  @property() protected hass?: ThirdEye;
 
   @property() protected inputLabel?: string;
 

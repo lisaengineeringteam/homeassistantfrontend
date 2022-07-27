@@ -8,12 +8,12 @@ import "../../components/ha-menu-button";
 import "../../components/ha-tabs";
 import "../../layouts/ha-app-layout";
 import { haStyle } from "../../resources/styles";
-import { HomeAssistant, Route } from "../../types";
+import { ThirdEye, Route } from "../../types";
 import "./developer-tools-router";
 
 @customElement("ha-panel-developer-tools")
 class PanelDeveloperTools extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public route!: Route;
 

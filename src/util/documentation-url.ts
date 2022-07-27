@@ -1,6 +1,6 @@
-import { HomeAssistant } from "../types";
+import { ThirdEye } from "../types";
 
-export const documentationUrl = (hass: HomeAssistant, path: string) =>
+export const documentationUrl = (hass: ThirdEye, path: string) =>
   `https://${
     hass.config.version.includes("b")
       ? "rc"

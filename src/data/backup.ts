@@ -1,4 +1,4 @@
-import { HomeAssistant } from "../types";
+import { ThirdEye } from "../types";
 
 export interface BackupContent {
   slug: string;
@@ -16,13 +16,13 @@ export interface BackupData {
 export const getBackupDownloadUrl = (slug: string) =>
   `/api/backup/download/${slug}`;
 
-export const fetchBackupInfo = (hass: HomeAssistant): Promise<BackupData> =>
+export const fetchBackupInfo = (hass: ThirdEye): Promise<BackupData> =>
   hass.callWS({
     type: "backup/info",
   });
 
 export const removeBackup = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   slug: string
 ): Promise<void> =>
   hass.callWS({
@@ -30,7 +30,7 @@ export const removeBackup = (
     slug,
   });
 
-export const generateBackup = (hass: HomeAssistant): Promise<BackupContent> =>
+export const generateBackup = (hass: ThirdEye): Promise<BackupContent> =>
   hass.callWS({
     type: "backup/generate",
   });

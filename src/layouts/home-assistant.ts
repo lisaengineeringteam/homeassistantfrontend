@@ -6,7 +6,7 @@ import { getStorageDefaultPanelUrlPath } from "../data/panel";
 import "../resources/custom-card-support";
 import { HassElement } from "../state/hass-element";
 import QuickBarMixin from "../state/quick-bar-mixin";
-import { HomeAssistant, Route } from "../types";
+import { ThirdEye, Route } from "../types";
 import { storeState } from "../util/ha-pref-storage";
 import {
   renderLaunchScreenInfoBox,
@@ -29,7 +29,7 @@ const panelUrl = (path: string) => {
 };
 
 @customElement("home-assistant")
-export class HomeAssistantAppEl extends QuickBarMixin(HassElement) {
+export class ThirdEyeAppEl extends QuickBarMixin(HassElement) {
   @state() private _route: Route;
 
   private _panelUrl: string;
@@ -117,7 +117,7 @@ export class HomeAssistantAppEl extends QuickBarMixin(HassElement) {
     });
 
     // Render launch screen info box (loading data / error message)
-    // if Home Assistant is not loaded yet.
+    // if Third Eye
     if (this.render !== this.renderHass) {
       this._renderInitInfo(false);
     }
@@ -128,7 +128,7 @@ export class HomeAssistantAppEl extends QuickBarMixin(HassElement) {
     if (changedProps.has("hass")) {
       this.hassChanged(
         this.hass!,
-        changedProps.get("hass") as HomeAssistant | undefined
+        changedProps.get("hass") as ThirdEye | undefined
       );
     }
   }
@@ -208,7 +208,7 @@ export class HomeAssistantAppEl extends QuickBarMixin(HassElement) {
       })
     );
     if (this.hass!.suspendWhenHidden !== false) {
-      // We close the connection to Home Assistant after being hidden for 5 minutes
+      // We close the connection to Third Eyefor 5 minutes
       this._hiddenTimeout = window.setTimeout(() => {
         this._hiddenTimeout = undefined;
         // setTimeout can be delayed in the background and only fire
@@ -251,6 +251,6 @@ export class HomeAssistantAppEl extends QuickBarMixin(HassElement) {
 
 declare global {
   interface HTMLElementTagNameMap {
-    "home-assistant": HomeAssistantAppEl;
+    "home-assistant": ThirdEyeAppEl;
   }
 }

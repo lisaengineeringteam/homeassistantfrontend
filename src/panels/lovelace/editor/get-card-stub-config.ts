@@ -1,9 +1,9 @@
 import { LovelaceCardConfig } from "../../../data/lovelace";
-import { HomeAssistant } from "../../../types";
+import { ThirdEye } from "../../../types";
 import { getCardElementClass } from "../create-element/create-card-element";
 
 export const getCardStubConfig = async (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   type: string,
   entities: string[],
   entitiesFallback: string[]

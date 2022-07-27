@@ -30,7 +30,7 @@ import {
 } from "../../data/device_registry";
 import { fetchIntegrationManifest } from "../../data/integration";
 import { haStyleDialog } from "../../resources/styles";
-import type { HomeAssistant } from "../../types";
+import type { ThirdEye } from "../../types";
 import { documentationUrl } from "../../util/documentation-url";
 import { showAlertDialog } from "../generic/show-dialog-box";
 import {
@@ -68,7 +68,7 @@ declare global {
 
 @customElement("dialog-data-entry-flow")
 class DataEntryFlowDialog extends LitElement {
-  public hass!: HomeAssistant;
+  public hass!: ThirdEye;
 
   @state() private _params?: DataEntryFlowDialogParams;
 

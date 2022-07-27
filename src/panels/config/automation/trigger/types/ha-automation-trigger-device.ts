@@ -11,11 +11,11 @@ import {
   DeviceTrigger,
   fetchDeviceTriggerCapabilities,
 } from "../../../../../data/device_automation";
-import { HomeAssistant } from "../../../../../types";
+import { ThirdEye } from "../../../../../types";
 
 @customElement("ha-automation-trigger-device")
 export class HaDeviceTrigger extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ type: Object }) public trigger!: DeviceTrigger;
 

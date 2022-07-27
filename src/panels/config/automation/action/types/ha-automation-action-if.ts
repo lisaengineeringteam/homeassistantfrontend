@@ -5,7 +5,7 @@ import { Action, IfAction } from "../../../../../data/script";
 import { HaDeviceCondition } from "../../condition/types/ha-automation-condition-device";
 import { HaDeviceAction } from "./ha-automation-action-device_id";
 import { haStyle } from "../../../../../resources/styles";
-import type { HomeAssistant } from "../../../../../types";
+import type { ThirdEye } from "../../../../../types";
 import type { Condition } from "../../../../lovelace/common/validate-condition";
 import "../ha-automation-action";
 import "../../../../../components/ha-textfield";
@@ -13,7 +13,7 @@ import type { ActionElement } from "../ha-automation-action-row";
 
 @customElement("ha-automation-action-if")
 export class HaIfAction extends LitElement implements ActionElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ attribute: false }) public action!: IfAction;
 

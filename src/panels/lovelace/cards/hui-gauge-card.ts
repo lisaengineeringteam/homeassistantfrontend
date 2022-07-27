@@ -16,7 +16,7 @@ import { isValidEntityId } from "../../../common/entity/valid_entity_id";
 import "../../../components/ha-card";
 import "../../../components/ha-gauge";
 import { UNAVAILABLE } from "../../../data/entity";
-import type { HomeAssistant } from "../../../types";
+import type { ThirdEye } from "../../../types";
 import { findEntities } from "../common/find-entities";
 import { hasConfigOrEntityChanged } from "../common/has-changed";
 import { createEntityNotFoundWarning } from "../components/hui-warning";
@@ -38,7 +38,7 @@ class HuiGaugeCard extends LitElement implements LovelaceCard {
   }
 
   public static getStubConfig(
-    hass: HomeAssistant,
+    hass: ThirdEye,
     entities: string[],
     entitiesFallback: string[]
   ): GaugeCardConfig {
@@ -59,7 +59,7 @@ class HuiGaugeCard extends LitElement implements LovelaceCard {
     return { type: "gauge", entity: foundEntities[0] || "" };
   }
 
-  @property({ attribute: false }) public hass?: HomeAssistant;
+  @property({ attribute: false }) public hass?: ThirdEye;
 
   @state() private _config?: GaugeCardConfig;
 
@@ -155,7 +155,7 @@ class HuiGaugeCard extends LitElement implements LovelaceCard {
       return;
     }
 
-    const oldHass = changedProps.get("hass") as HomeAssistant | undefined;
+    const oldHass = changedProps.get("hass") as ThirdEye | undefined;
     const oldConfig = changedProps.get("_config") as
       | GaugeCardConfig
       | undefined;

@@ -13,14 +13,14 @@ import {
   MQTTDeviceDebugInfo,
 } from "../../../../../../data/mqtt";
 import { haStyleDialog } from "../../../../../../resources/styles";
-import { HomeAssistant } from "../../../../../../types";
+import { ThirdEye } from "../../../../../../types";
 import "./mqtt-discovery-payload";
 import "./mqtt-messages";
 import { MQTTDeviceDebugInfoDialogParams } from "./show-dialog-mqtt-device-debug-info";
 
 @customElement("dialog-mqtt-device-debug-info")
 class DialogMQTTDeviceDebugInfo extends LitElement {
-  public hass!: HomeAssistant;
+  public hass!: ThirdEye;
 
   @state() private _params?: MQTTDeviceDebugInfoDialogParams;
 

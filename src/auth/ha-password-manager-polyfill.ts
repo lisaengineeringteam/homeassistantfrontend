@@ -15,7 +15,7 @@ declare global {
 }
 
 const ENABLED_HANDLERS = [
-  "homeassistant",
+  "thirdeye",
   "legacy_api_password",
   "command_line",
 ];

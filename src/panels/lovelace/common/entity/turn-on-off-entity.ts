@@ -1,13 +1,13 @@
 import { computeDomain } from "../../../../common/entity/compute_domain";
-import { HomeAssistant, ServiceCallResponse } from "../../../../types";
+import { ThirdEye, ServiceCallResponse } from "../../../../types";
 
 export const turnOnOffEntity = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   entityId: string,
   turnOn = true
 ): Promise<ServiceCallResponse> => {
   const stateDomain = computeDomain(entityId);
-  const serviceDomain = stateDomain === "group" ? "homeassistant" : stateDomain;
+  const serviceDomain = stateDomain === "group" ? "thirdeye" : stateDomain;
 
   let service;
   switch (stateDomain) {

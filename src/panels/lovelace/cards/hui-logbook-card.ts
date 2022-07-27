@@ -11,7 +11,7 @@ import { classMap } from "lit/directives/class-map";
 import { isComponentLoaded } from "../../../common/config/is_component_loaded";
 import { applyThemesOnElement } from "../../../common/dom/apply_themes_on_element";
 import "../../../components/ha-card";
-import type { HomeAssistant } from "../../../types";
+import type { ThirdEye } from "../../../types";
 import "../../logbook/ha-logbook";
 import type { HaLogbook } from "../../logbook/ha-logbook";
 import { findEntities } from "../common/find-entities";
@@ -29,7 +29,7 @@ export class HuiLogbookCard extends LitElement implements LovelaceCard {
   }
 
   public static getStubConfig(
-    hass: HomeAssistant,
+    hass: ThirdEye,
     entities: string[],
     entitiesFill: string[]
   ) {
@@ -48,7 +48,7 @@ export class HuiLogbookCard extends LitElement implements LovelaceCard {
     };
   }
 
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @state() private _config?: LogbookCardConfig;
 
@@ -85,7 +85,7 @@ export class HuiLogbookCard extends LitElement implements LovelaceCard {
 
     const configChanged = changedProperties.has("_config");
     const hassChanged = changedProperties.has("hass");
-    const oldHass = changedProperties.get("hass") as HomeAssistant | undefined;
+    const oldHass = changedProperties.get("hass") as ThirdEye | undefined;
     const oldConfig = changedProperties.get("_config") as LogbookCardConfig;
 
     if (

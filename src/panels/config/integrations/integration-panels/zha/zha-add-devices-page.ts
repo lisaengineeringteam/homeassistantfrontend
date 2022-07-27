@@ -18,13 +18,13 @@ import {
 } from "../../../../../data/zha";
 import "../../../../../layouts/hass-tabs-subpage";
 import { haStyle } from "../../../../../resources/styles";
-import { HomeAssistant, Route } from "../../../../../types";
+import { ThirdEye, Route } from "../../../../../types";
 import { zhaTabs } from "./zha-config-dashboard";
 import "./zha-device-pairing-status-card";
 
 @customElement("zha-add-devices-page")
 class ZHAAddDevicesPage extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ type: Boolean }) public narrow = false;
 

@@ -5,7 +5,7 @@ import { customElement, property, state } from "lit/decorators";
 import { formatDate } from "../../../../common/datetime/format_date";
 import { EnergyData, getEnergyDataCollection } from "../../../../data/energy";
 import { SubscribeMixin } from "../../../../mixins/subscribe-mixin";
-import { HomeAssistant } from "../../../../types";
+import { ThirdEye } from "../../../../types";
 import { LovelaceCard } from "../../types";
 import { EnergyCardBaseConfig } from "../types";
 
@@ -14,7 +14,7 @@ export class HuiEnergyCompareCard
   extends SubscribeMixin(LitElement)
   implements LovelaceCard
 {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @state() private _config?: EnergyCardBaseConfig;
 

@@ -17,7 +17,7 @@ import { computeRTL } from "../../../common/util/compute_rtl";
 import "../../../components/entity/state-badge";
 import "../../../components/ha-relative-time";
 import { ActionHandlerEvent } from "../../../data/lovelace";
-import { HomeAssistant } from "../../../types";
+import { ThirdEye } from "../../../types";
 import { EntitiesCardEntityConfig } from "../cards/types";
 import { actionHandler } from "../common/directives/action-handler-directive";
 import { handleAction } from "../common/handle-action";
@@ -25,7 +25,7 @@ import { hasAction } from "../common/has-action";
 import { createEntityNotFoundWarning } from "./hui-warning";
 
 class HuiGenericEntityRow extends LitElement {
-  @property({ attribute: false }) public hass?: HomeAssistant;
+  @property({ attribute: false }) public hass?: ThirdEye;
 
   @property() public config?: EntitiesCardEntityConfig;
 

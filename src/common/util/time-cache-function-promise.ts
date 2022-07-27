@@ -1,4 +1,4 @@
-import { HomeAssistant } from "../../types";
+import { ThirdEye } from "../../types";
 
 interface CacheResult<T> {
   result: T;
@@ -12,18 +12,18 @@ interface CacheResult<T> {
  * @param cacheTime the time to cache the result
  * @param func the function to fetch the data
  * @param generateCacheKey optional function to generate a cache key based on current hass + cached result. Cache is invalid if generates a different cache key.
- * @param hass Home Assistant object
+ * @param hass Third Eye object
  * @param args extra arguments to pass to the function to fetch the data
  * @returns
  */
 export const timeCachePromiseFunc = async <T>(
   cacheKey: string,
   cacheTime: number,
-  func: (hass: HomeAssistant, ...args: any[]) => Promise<T>,
+  func: (hass: ThirdEye, ...args: any[]) => Promise<T>,
   generateCacheKey:
-    | ((hass: HomeAssistant, lastResult: T) => unknown)
+    | ((hass: ThirdEye, lastResult: T) => unknown)
     | undefined,
-  hass: HomeAssistant,
+  hass: ThirdEye,
   ...args: any[]
 ): Promise<T> => {
   const anyHass = hass as any;

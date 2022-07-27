@@ -1,6 +1,6 @@
 import { html, LitElement, TemplateResult } from "lit";
 import { customElement, property, state } from "lit/decorators";
-import { HomeAssistant } from "../../../../types";
+import { ThirdEye } from "../../../../types";
 import { LovelaceCard } from "../../types";
 import { EnergyCardBaseConfig } from "../types";
 import "../../components/hui-energy-period-selector";
@@ -10,7 +10,7 @@ export class HuiEnergyDateSelectionCard
   extends LitElement
   implements LovelaceCard
 {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @state() private _config?: EnergyCardBaseConfig;
 

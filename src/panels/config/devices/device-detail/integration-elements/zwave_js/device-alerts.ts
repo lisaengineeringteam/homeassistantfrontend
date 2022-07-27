@@ -1,10 +1,10 @@
 import { DeviceRegistryEntry } from "../../../../../../data/device_registry";
 import { fetchZwaveNodeComments } from "../../../../../../data/zwave_js";
-import { HomeAssistant } from "../../../../../../types";
+import { ThirdEye } from "../../../../../../types";
 import { DeviceAlert } from "../../../ha-config-device-page";
 
 export const getZwaveDeviceAlerts = async (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   device: DeviceRegistryEntry
 ): Promise<DeviceAlert[]> => {
   const nodeComments = await fetchZwaveNodeComments(hass, device.id);

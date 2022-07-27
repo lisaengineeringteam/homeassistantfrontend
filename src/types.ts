@@ -190,7 +190,7 @@ export interface ServiceCallRequest {
   target?: HassServiceTarget;
 }
 
-export interface HomeAssistant {
+export interface ThirdEye {
   auth: Auth & { external?: ExternalMessaging };
   connection: Connection;
   connected: boolean;
@@ -252,14 +252,14 @@ export interface Route {
 }
 
 export interface PanelElement extends HTMLElement {
-  hass?: HomeAssistant;
+  hass?: ThirdEye;
   narrow?: boolean;
   route?: Route | null;
   panel?: PanelInfo;
 }
 
 export interface LocalizeMixin {
-  hass?: HomeAssistant;
+  hass?: ThirdEye;
   localize: LocalizeFunc;
 }
 

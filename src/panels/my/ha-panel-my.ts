@@ -9,7 +9,7 @@ import {
 } from "../../common/url/search-params";
 import { domainToName } from "../../data/integration";
 import "../../layouts/hass-error-screen";
-import { HomeAssistant, Route } from "../../types";
+import { ThirdEye, Route } from "../../types";
 import { documentationUrl } from "../../util/documentation-url";
 
 export const getMyRedirects = (hasSupervisor: boolean): Redirects => ({
@@ -241,7 +241,7 @@ export interface Redirect {
 
 @customElement("ha-panel-my")
 class HaPanelMy extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public route!: Route;
 

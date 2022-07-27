@@ -3,12 +3,12 @@ import { customElement, property } from "lit/decorators";
 import { fireEvent } from "../../common/dom/fire_event";
 import { AttributeSelector } from "../../data/selector";
 import { SubscribeMixin } from "../../mixins/subscribe-mixin";
-import { HomeAssistant } from "../../types";
+import { ThirdEye } from "../../types";
 import "../entity/ha-entity-attribute-picker";
 
 @customElement("ha-selector-attribute")
 export class HaSelectorAttribute extends SubscribeMixin(LitElement) {
-  @property() public hass!: HomeAssistant;
+  @property() public hass!: ThirdEye;
 
   @property() public selector!: AttributeSelector;
 

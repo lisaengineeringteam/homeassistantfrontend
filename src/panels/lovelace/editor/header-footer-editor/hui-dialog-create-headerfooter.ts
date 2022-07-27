@@ -5,7 +5,7 @@ import { fireEvent } from "../../../../common/dom/fire_event";
 import { createCloseHeading } from "../../../../components/ha-dialog";
 import type { HassDialog } from "../../../../dialogs/make-dialog-manager";
 import { haStyleDialog } from "../../../../resources/styles";
-import type { HomeAssistant } from "../../../../types";
+import type { ThirdEye } from "../../../../types";
 import type { LovelaceHeaderFooterConfig } from "../../header-footer/types";
 import { headerFooterElements } from "../lovelace-headerfooters";
 import { getHeaderFooterStubConfig } from "./get-headerfooter-stub-config";
@@ -16,7 +16,7 @@ export class HuiCreateDialogHeaderFooter
   extends LitElement
   implements HassDialog<CreateHeaderFooterDialogParams>
 {
-  @property({ attribute: false }) protected hass!: HomeAssistant;
+  @property({ attribute: false }) protected hass!: ThirdEye;
 
   @state() private _params?: CreateHeaderFooterDialogParams;
 

@@ -1,4 +1,4 @@
-import { HomeAssistant } from "../types";
+import { ThirdEye } from "../types";
 
 export interface ShoppingListItem {
   id: number;
@@ -6,13 +6,13 @@ export interface ShoppingListItem {
   complete: boolean;
 }
 
-export const fetchItems = (hass: HomeAssistant): Promise<ShoppingListItem[]> =>
+export const fetchItems = (hass: ThirdEye): Promise<ShoppingListItem[]> =>
   hass.callWS({
     type: "shopping_list/items",
   });
 
 export const updateItem = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   itemId: number,
   item: {
     name?: string;
@@ -25,13 +25,13 @@ export const updateItem = (
     ...item,
   });
 
-export const clearItems = (hass: HomeAssistant): Promise<void> =>
+export const clearItems = (hass: ThirdEye): Promise<void> =>
   hass.callWS({
     type: "shopping_list/items/clear",
   });
 
 export const addItem = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   name: string
 ): Promise<ShoppingListItem> =>
   hass.callWS({
@@ -40,7 +40,7 @@ export const addItem = (
   });
 
 export const reorderItems = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   itemIds: [string]
 ): Promise<ShoppingListItem> =>
   hass.callWS({

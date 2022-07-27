@@ -1,6 +1,6 @@
 import { ThemeVars } from "../../data/ws-themes";
 import { darkStyles, derivedStyles } from "../../resources/styles";
-import type { HomeAssistant } from "../../types";
+import type { ThirdEye } from "../../types";
 import {
   hex2rgb,
   lab2hex,
@@ -29,9 +29,9 @@ let PROCESSED_THEMES: Record<string, ProcessedTheme> = {};
  */
 export const applyThemesOnElement = (
   element,
-  themes: HomeAssistant["themes"],
+  themes: ThirdEye["themes"],
   selectedTheme?: string,
-  themeSettings?: Partial<HomeAssistant["selectedTheme"]>,
+  themeSettings?: Partial<ThirdEye["selectedTheme"]>,
   main?: boolean
 ) => {
   // If there is no explicitly desired theme provided, and the element is the main element we automatically

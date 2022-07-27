@@ -11,7 +11,7 @@ import {
   LovelaceBadge,
   LovelaceCard,
 } from "../panels/lovelace/types";
-import { HomeAssistant } from "../types";
+import { ThirdEye } from "../types";
 
 export interface LovelacePanelConfig {
   mode: "yaml" | "storage";
@@ -96,7 +96,7 @@ export interface LovelaceViewConfig {
 }
 
 export interface LovelaceViewElement extends HTMLElement {
-  hass?: HomeAssistant;
+  hass?: ThirdEye;
   lovelace?: Lovelace;
   narrow?: boolean;
   index?: number;
@@ -195,7 +195,7 @@ export const fetchResources = (conn: Connection): Promise<LovelaceResource[]> =>
   });
 
 export const createResource = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   values: LovelaceResourcesMutableParams
 ) =>
   hass.callWS<LovelaceResource>({
@@ -204,7 +204,7 @@ export const createResource = (
   });
 
 export const updateResource = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   id: string,
   updates: Partial<LovelaceResourcesMutableParams>
 ) =>
@@ -214,21 +214,21 @@ export const updateResource = (
     ...updates,
   });
 
-export const deleteResource = (hass: HomeAssistant, id: string) =>
+export const deleteResource = (hass: ThirdEye, id: string) =>
   hass.callWS({
     type: "lovelace/resources/delete",
     resource_id: id,
   });
 
 export const fetchDashboards = (
-  hass: HomeAssistant
+  hass: ThirdEye
 ): Promise<LovelaceDashboard[]> =>
   hass.callWS({
     type: "lovelace/dashboards/list",
   });
 
 export const createDashboard = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   values: LovelaceDashboardCreateParams
 ) =>
   hass.callWS<LovelaceDashboard>({
@@ -237,7 +237,7 @@ export const createDashboard = (
   });
 
 export const updateDashboard = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   id: string,
   updates: Partial<LovelaceDashboardMutableParams>
 ) =>
@@ -247,7 +247,7 @@ export const updateDashboard = (
     ...updates,
   });
 
-export const deleteDashboard = (hass: HomeAssistant, id: string) =>
+export const deleteDashboard = (hass: ThirdEye, id: string) =>
   hass.callWS({
     type: "lovelace/dashboards/delete",
     dashboard_id: id,
@@ -265,7 +265,7 @@ export const fetchConfig = (
   });
 
 export const saveConfig = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   urlPath: string | null,
   config: LovelaceConfig
 ): Promise<void> =>
@@ -276,7 +276,7 @@ export const saveConfig = (
   });
 
 export const deleteConfig = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   urlPath: string | null
 ): Promise<void> =>
   hass.callWS({

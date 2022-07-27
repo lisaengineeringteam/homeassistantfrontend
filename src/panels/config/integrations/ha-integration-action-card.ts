@@ -1,12 +1,12 @@
 import { css, html, LitElement, TemplateResult } from "lit";
 import { customElement, property } from "lit/decorators";
 import type { IntegrationManifest } from "../../../data/integration";
-import type { HomeAssistant } from "../../../types";
+import type { ThirdEye } from "../../../types";
 import "./ha-integration-header";
 
 @customElement("ha-integration-action-card")
 export class HaIntegrationActionCard extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public banner!: string;
 

@@ -15,7 +15,7 @@ import { fireEvent } from "../../../../common/dom/fire_event";
 import "../../../../components/ha-formfield";
 import "../../../../components/ha-switch";
 import { PolymerChangedEvent } from "../../../../polymer-types";
-import { HomeAssistant } from "../../../../types";
+import { ThirdEye } from "../../../../types";
 import { MapCardConfig } from "../../cards/types";
 import "../../components/hui-entity-editor";
 import "../../components/hui-input-list-editor";
@@ -57,7 +57,7 @@ const SCHEMA: HaFormSchema[] = [
 
 @customElement("hui-map-card-editor")
 export class HuiMapCardEditor extends LitElement implements LovelaceCardEditor {
-  @property({ attribute: false }) public hass?: HomeAssistant;
+  @property({ attribute: false }) public hass?: ThirdEye;
 
   @state() private _config?: MapCardConfig;
 

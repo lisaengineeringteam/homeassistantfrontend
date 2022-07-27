@@ -1,13 +1,13 @@
 import { Connection, getCollection } from "home-assistant-js-websocket";
 import { Store } from "home-assistant-js-websocket/dist/store";
 import { LocalizeFunc } from "../../common/translations/localize";
-import { HomeAssistant } from "../../types";
+import { ThirdEye } from "../../types";
 import { HassioAddonsInfo } from "../hassio/addon";
 import { HassioHassOSInfo, HassioHostInfo } from "../hassio/host";
 import { NetworkInfo } from "../hassio/network";
 import { HassioResolution } from "../hassio/resolution";
 import {
-  HassioHomeAssistantInfo,
+  HassioThirdEyeInfo,
   HassioInfo,
   HassioSupervisorInfo,
 } from "../hassio/supervisor";
@@ -61,7 +61,7 @@ export interface Supervisor {
   host: HassioHostInfo;
   supervisor: HassioSupervisorInfo;
   info: HassioInfo;
-  core: HassioHomeAssistantInfo;
+  core: HassioThirdEyeInfo;
   network: NetworkInfo;
   resolution: HassioResolution;
   os: HassioHassOSInfo;
@@ -131,7 +131,7 @@ export const getSupervisorEventCollection = (
   );
 
 export const subscribeSupervisorEvents = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   onChange: (event) => void,
   key: string,
   endpoint: string

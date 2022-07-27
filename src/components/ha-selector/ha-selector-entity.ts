@@ -7,13 +7,13 @@ import {
   fetchEntitySourcesWithCache,
 } from "../../data/entity_sources";
 import { EntitySelector } from "../../data/selector";
-import { HomeAssistant } from "../../types";
+import { ThirdEye } from "../../types";
 import "../entity/ha-entities-picker";
 import "../entity/ha-entity-picker";
 
 @customElement("ha-selector-entity")
 export class HaEntitySelector extends LitElement {
-  @property() public hass!: HomeAssistant;
+  @property() public hass!: ThirdEye;
 
   @property() public selector!: EntitySelector;
 

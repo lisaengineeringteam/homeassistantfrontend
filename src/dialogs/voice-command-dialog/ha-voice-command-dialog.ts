@@ -26,7 +26,7 @@ import {
   setConversationOnboarding,
 } from "../../data/conversation";
 import { haStyleDialog } from "../../resources/styles";
-import type { HomeAssistant } from "../../types";
+import type { ThirdEye } from "../../types";
 
 interface Message {
   who: string;
@@ -41,7 +41,7 @@ interface Results {
 
 @customElement("ha-voice-command-dialog")
 export class HaVoiceCommandDialog extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public results: Results | null = null;
 

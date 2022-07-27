@@ -19,7 +19,7 @@ import "../../../components/ha-card";
 import "../../../components/ha-icon-button";
 import { UNAVAILABLE_STATES } from "../../../data/entity";
 import { HumidifierEntity } from "../../../data/humidifier";
-import { HomeAssistant } from "../../../types";
+import { ThirdEye } from "../../../types";
 import { findEntities } from "../common/find-entities";
 import { hasConfigOrEntityChanged } from "../common/has-changed";
 import { createEntityNotFoundWarning } from "../components/hui-warning";
@@ -34,7 +34,7 @@ export class HuiHumidifierCard extends LitElement implements LovelaceCard {
   }
 
   public static getStubConfig(
-    hass: HomeAssistant,
+    hass: ThirdEye,
     entities: string[],
     entitiesFallback: string[]
   ): HumidifierCardConfig {
@@ -51,7 +51,7 @@ export class HuiHumidifierCard extends LitElement implements LovelaceCard {
     return { type: "humidifier", entity: foundEntities[0] || "" };
   }
 
-  @property({ attribute: false }) public hass?: HomeAssistant;
+  @property({ attribute: false }) public hass?: ThirdEye;
 
   @state() private _config?: HumidifierCardConfig;
 
@@ -195,7 +195,7 @@ export class HuiHumidifierCard extends LitElement implements LovelaceCard {
       return;
     }
 
-    const oldHass = changedProps.get("hass") as HomeAssistant | undefined;
+    const oldHass = changedProps.get("hass") as ThirdEye | undefined;
     const oldConfig = changedProps.get("_config") as
       | HumidifierCardConfig
       | undefined;
@@ -229,7 +229,7 @@ export class HuiHumidifierCard extends LitElement implements LovelaceCard {
       return;
     }
 
-    const oldHass = changedProps.get("hass") as HomeAssistant | undefined;
+    const oldHass = changedProps.get("hass") as ThirdEye | undefined;
 
     if (!oldHass || oldHass.states[this._config.entity] !== stateObj) {
       this._setHum = this._getSetHum(stateObj);

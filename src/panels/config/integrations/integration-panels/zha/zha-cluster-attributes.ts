@@ -26,7 +26,7 @@ import {
   ZHADevice,
 } from "../../../../../data/zha";
 import { haStyle } from "../../../../../resources/styles";
-import { HomeAssistant } from "../../../../../types";
+import { ThirdEye } from "../../../../../types";
 import "../../../ha-config-section";
 import { formatAsPaddedHex } from "./functions";
 import {
@@ -36,7 +36,7 @@ import {
 } from "./types";
 
 export class ZHAClusterAttributes extends LitElement {
-  @property({ attribute: false }) public hass?: HomeAssistant;
+  @property({ attribute: false }) public hass?: ThirdEye;
 
   @property() public isWide?: boolean;
 

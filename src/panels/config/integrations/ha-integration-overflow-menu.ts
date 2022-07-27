@@ -4,11 +4,11 @@ import { customElement, property } from "lit/decorators";
 import "../../../components/ha-button-menu";
 import "../../../components/ha-clickable-list-item";
 import "../../../components/ha-icon-button";
-import type { HomeAssistant } from "../../../types";
+import type { ThirdEye } from "../../../types";
 
 @customElement("ha-integration-overflow-menu")
 export class HaIntegrationOverflowMenu extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   protected render() {
     return html`

@@ -15,7 +15,7 @@ import type {
   LovelaceViewConfig,
   LovelaceViewElement,
 } from "../../../data/lovelace";
-import type { HomeAssistant } from "../../../types";
+import type { ThirdEye } from "../../../types";
 import { HuiErrorCard } from "../cards/hui-error-card";
 import { HuiCardOptions } from "../components/hui-card-options";
 import { HuiWarning } from "../components/hui-warning";
@@ -24,7 +24,7 @@ import type { Lovelace, LovelaceCard } from "../types";
 let editCodeLoaded = false;
 
 export class PanelView extends LitElement implements LovelaceViewElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ attribute: false }) public lovelace?: Lovelace;
 

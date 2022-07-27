@@ -1,5 +1,5 @@
 import { LovelaceConfig, LovelaceViewConfig } from "../../../data/lovelace";
-import { AsyncReturnType, HomeAssistant } from "../../../types";
+import { AsyncReturnType, ThirdEye } from "../../../types";
 
 const MAX_WAIT_STRATEGY_LOAD = 5000;
 const CUSTOM_PREFIX = "custom:";
@@ -7,7 +7,7 @@ const CUSTOM_PREFIX = "custom:";
 export interface LovelaceDashboardStrategy {
   generateDashboard(info: {
     config?: LovelaceConfig;
-    hass: HomeAssistant;
+    hass: ThirdEye;
     narrow: boolean | undefined;
   }): Promise<LovelaceConfig>;
 }
@@ -16,7 +16,7 @@ export interface LovelaceViewStrategy {
   generateView(info: {
     view: LovelaceViewConfig;
     config: LovelaceConfig;
-    hass: HomeAssistant;
+    hass: ThirdEye;
     narrow: boolean | undefined;
   }): Promise<LovelaceViewConfig>;
 }

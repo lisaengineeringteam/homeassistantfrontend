@@ -2,13 +2,13 @@ import "@material/mwc-button/mwc-button";
 import { css, CSSResultGroup, html, LitElement, TemplateResult } from "lit";
 import { customElement, property } from "lit/decorators";
 import "../../../components/ha-card";
-import { HomeAssistant } from "../../../types";
+import { ThirdEye } from "../../../types";
 import { LovelaceCard } from "../types";
 import { EmptyStateCardConfig } from "./types";
 
 @customElement("hui-empty-state-card")
 export class HuiEmptyStateCard extends LitElement implements LovelaceCard {
-  @property({ attribute: false }) public hass?: HomeAssistant;
+  @property({ attribute: false }) public hass?: ThirdEye;
 
   public getCardSize(): number {
     return 2;

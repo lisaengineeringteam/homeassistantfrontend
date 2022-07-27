@@ -1,4 +1,4 @@
-import { HomeAssistant } from "../types";
+import { ThirdEye } from "../types";
 
 interface Image {
   filesize: number;
@@ -15,11 +15,11 @@ export interface ImageMutableParams {
 export const generateImageThumbnailUrl = (mediaId: string, size: number) =>
   `/api/image/serve/${mediaId}/${size}x${size}`;
 
-export const fetchImages = (hass: HomeAssistant) =>
+export const fetchImages = (hass: ThirdEye) =>
   hass.callWS<Image[]>({ type: "image/list" });
 
 export const createImage = async (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   file: File
 ): Promise<Image> => {
   const fd = new FormData();
@@ -37,7 +37,7 @@ export const createImage = async (
 };
 
 export const updateImage = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   id: string,
   updates: Partial<ImageMutableParams>
 ) =>
@@ -47,7 +47,7 @@ export const updateImage = (
     ...updates,
   });
 
-export const deleteImage = (hass: HomeAssistant, id: string) =>
+export const deleteImage = (hass: ThirdEye, id: string) =>
   hass.callWS({
     type: "image/delete",
     media_id: id,

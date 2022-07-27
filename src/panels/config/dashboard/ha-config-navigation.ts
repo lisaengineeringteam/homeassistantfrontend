@@ -8,11 +8,11 @@ import "../../../components/ha-icon-next";
 import "../../../components/ha-navigation-list";
 import type { CloudStatus } from "../../../data/cloud";
 import type { PageNavigation } from "../../../layouts/hass-tabs-subpage";
-import type { HomeAssistant } from "../../../types";
+import type { ThirdEye } from "../../../types";
 
 @customElement("ha-config-navigation")
 class HaConfigNavigation extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ type: Boolean }) public narrow!: boolean;
 

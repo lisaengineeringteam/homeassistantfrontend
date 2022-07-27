@@ -34,7 +34,7 @@ import type {
 } from "home-assistant-js-websocket";
 import { supportsFeature } from "../common/entity/supports-feature";
 import { MediaPlayerItemId } from "../components/media-player/ha-media-player-browse";
-import type { HomeAssistant } from "../types";
+import type { ThirdEye } from "../types";
 import { UNAVAILABLE_STATES } from "./entity";
 import { isTTSMediaSource } from "./tts";
 
@@ -187,7 +187,7 @@ export interface MediaPlayerItem {
 }
 
 export const browseMediaPlayer = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   entityId: string,
   mediaContentId?: string,
   mediaContentType?: string
@@ -403,20 +403,20 @@ export const cleanupMediaTitle = (title?: string): string | undefined => {
 
 /**
  * Set volume of a media player entity.
- * @param hass Home Assistant object
+ * @param hass Third Eye object
  * @param entity_id entity ID of media player
  * @param volume_level number between 0..1
  * @returns
  */
 export const setMediaPlayerVolume = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   entity_id: string,
   volume_level: number
 ) =>
   hass.callService("media_player", "volume_set", { entity_id, volume_level });
 
 export const handleMediaControlClick = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   stateObj: MediaPlayerEntity,
   action: string
 ) =>
@@ -444,7 +444,7 @@ export const handleMediaControlClick = (
   );
 
 export const mediaPlayerPlayMedia = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   entity_id: string,
   media_content_id: string,
   media_content_type: string,

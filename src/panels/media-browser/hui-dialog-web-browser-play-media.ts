@@ -4,12 +4,12 @@ import { fireEvent } from "../../common/dom/fire_event";
 import { createCloseHeading } from "../../components/ha-dialog";
 import "../../components/ha-hls-player";
 import { haStyleDialog } from "../../resources/styles";
-import type { HomeAssistant } from "../../types";
+import type { ThirdEye } from "../../types";
 import { WebBrowserPlayMediaDialogParams } from "./show-media-player-dialog";
 
 @customElement("hui-dialog-web-browser-play-media")
 export class HuiDialogWebBrowserPlayMedia extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ attribute: false })
   private _params?: WebBrowserPlayMediaDialogParams;

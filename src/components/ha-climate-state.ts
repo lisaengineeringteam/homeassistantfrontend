@@ -4,11 +4,11 @@ import { customElement, property } from "lit/decorators";
 import { formatNumber } from "../common/number/format_number";
 import { CLIMATE_PRESET_NONE } from "../data/climate";
 import { UNAVAILABLE_STATES } from "../data/entity";
-import type { HomeAssistant } from "../types";
+import type { ThirdEye } from "../types";
 
 @customElement("ha-climate-state")
 class HaClimateState extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ attribute: false }) public stateObj!: HassEntity;
 

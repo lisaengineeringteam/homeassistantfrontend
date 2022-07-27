@@ -11,11 +11,11 @@ import { UNAVAILABLE_STATES } from "../data/entity";
 import { SENSOR_DEVICE_CLASS_TIMESTAMP } from "../data/sensor";
 import "../panels/lovelace/components/hui-timestamp-display";
 import { haStyle } from "../resources/styles";
-import type { HomeAssistant } from "../types";
+import type { ThirdEye } from "../types";
 
 @customElement("state-card-display")
 export class StateCardDisplay extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ attribute: false }) public stateObj!: HassEntity;
 
@@ -65,7 +65,7 @@ export class StateCardDisplay extends LitElement {
       return;
     }
 
-    const oldHass = changedProps.get("hass") as HomeAssistant | undefined;
+    const oldHass = changedProps.get("hass") as ThirdEye | undefined;
     if (!oldHass || oldHass.language !== this.hass.language) {
       this.rtl = computeRTL(this.hass);
     }

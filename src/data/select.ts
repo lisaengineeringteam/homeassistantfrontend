@@ -2,7 +2,7 @@ import {
   HassEntityAttributeBase,
   HassEntityBase,
 } from "home-assistant-js-websocket";
-import { HomeAssistant } from "../types";
+import { ThirdEye } from "../types";
 
 interface SelectEntityAttributes extends HassEntityAttributeBase {
   options: string[];
@@ -13,7 +13,7 @@ export interface SelectEntity extends HassEntityBase {
 }
 
 export const setSelectOption = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   entity: string,
   option: string
 ) =>

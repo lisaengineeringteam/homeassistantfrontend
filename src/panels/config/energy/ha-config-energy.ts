@@ -12,7 +12,7 @@ import {
 import "../../../layouts/hass-loading-screen";
 import "../../../layouts/hass-subpage";
 import { haStyle } from "../../../resources/styles";
-import type { HomeAssistant, Route } from "../../../types";
+import type { ThirdEye, Route } from "../../../types";
 import "../../../components/ha-alert";
 import "./components/ha-energy-device-settings";
 import "./components/ha-energy-grid-settings";
@@ -27,7 +27,7 @@ const INITIAL_CONFIG: EnergyPreferences = {
 
 @customElement("ha-config-energy")
 class HaConfigEnergy extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ type: Boolean }) public narrow!: boolean;
 

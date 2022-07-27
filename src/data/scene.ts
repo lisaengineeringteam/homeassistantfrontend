@@ -3,7 +3,7 @@ import {
   HassEntityBase,
 } from "home-assistant-js-websocket";
 import { navigate } from "../common/navigate";
-import { HomeAssistant, ServiceCallResponse } from "../types";
+import { ThirdEye, ServiceCallResponse } from "../types";
 
 export const SCENE_IGNORED_DOMAINS = [
   "binary_sensor",
@@ -59,28 +59,28 @@ export interface SceneMetaData {
 }
 
 export const activateScene = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   entityId: string
 ): Promise<ServiceCallResponse> =>
   hass.callService("scene", "turn_on", { entity_id: entityId });
 
 export const applyScene = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   entities: SceneEntities
 ): Promise<ServiceCallResponse> =>
   hass.callService("scene", "apply", { entities });
 
 export const getSceneConfig = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   sceneId: string
 ): Promise<SceneConfig> =>
   hass.callApi<SceneConfig>("GET", `config/scene/config/${sceneId}`);
 
 export const saveScene = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   sceneId: string,
   config: SceneConfig
 ) => hass.callApi("POST", `config/scene/config/${sceneId}`, config);
 
-export const deleteScene = (hass: HomeAssistant, id: string) =>
+export const deleteScene = (hass: ThirdEye, id: string) =>
   hass.callApi("DELETE", `config/scene/config/${id}`);

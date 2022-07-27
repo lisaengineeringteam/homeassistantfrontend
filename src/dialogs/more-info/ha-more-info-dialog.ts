@@ -22,7 +22,7 @@ import { CONTINUOUS_DOMAINS } from "../../data/logbook";
 import { showEntityEditorDialog } from "../../panels/config/entities/show-dialog-entity-editor";
 import { haStyleDialog } from "../../resources/styles";
 import "../../state-summary/state-card-content";
-import { HomeAssistant } from "../../types";
+import { ThirdEye } from "../../types";
 import { showConfirmationDialog } from "../generic/show-dialog-box";
 import { replaceDialog } from "../make-dialog-manager";
 import "./controls/more-info-default";
@@ -47,7 +47,7 @@ export interface MoreInfoDialogParams {
 
 @customElement("ha-more-info-dialog")
 export class MoreInfoDialog extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ type: Boolean, reflect: true }) public large = false;
 

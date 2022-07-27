@@ -1,4 +1,4 @@
-import { HomeAssistant } from "../../../types";
+import { ThirdEye } from "../../../types";
 import { createStyledHuiElement } from "../cards/picture-elements/create-styled-hui-element";
 import {
   checkConditionsMet,
@@ -11,7 +11,7 @@ import {
 } from "./types";
 
 class HuiConditionalElement extends HTMLElement implements LovelaceElement {
-  public _hass?: HomeAssistant;
+  public _hass?: ThirdEye;
 
   private _config?: ConditionalElementConfig;
 
@@ -47,7 +47,7 @@ class HuiConditionalElement extends HTMLElement implements LovelaceElement {
     this.updateElements();
   }
 
-  set hass(hass: HomeAssistant) {
+  set hass(hass: ThirdEye) {
     this._hass = hass;
 
     this.updateElements();

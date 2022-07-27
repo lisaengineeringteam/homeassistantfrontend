@@ -1,6 +1,6 @@
 import { HassEntity } from "home-assistant-js-websocket";
 import type { HaFormSchema } from "../components/ha-form/types";
-import { HomeAssistant } from "../types";
+import { ThirdEye } from "../types";
 
 export interface ZHAEntityReference extends HassEntity {
   name: string;
@@ -133,7 +133,7 @@ export interface ZHAGroupMember {
 }
 
 export const reconfigureNode = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   ieeeAddress: string,
   callbackFunction: (message: ClusterConfigurationEvent) => void
 ) =>
@@ -145,13 +145,13 @@ export const reconfigureNode = (
     }
   );
 
-export const refreshTopology = (hass: HomeAssistant): Promise<void> =>
+export const refreshTopology = (hass: ThirdEye): Promise<void> =>
   hass.callWS({
     type: "zha/topology/update",
   });
 
 export const fetchAttributesForCluster = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   ieeeAddress: string,
   endpointId: number,
   clusterId: number,
@@ -165,13 +165,13 @@ export const fetchAttributesForCluster = (
     cluster_type: clusterType,
   });
 
-export const fetchDevices = (hass: HomeAssistant): Promise<ZHADevice[]> =>
+export const fetchDevices = (hass: ThirdEye): Promise<ZHADevice[]> =>
   hass.callWS({
     type: "zha/devices",
   });
 
 export const fetchZHADevice = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   ieeeAddress: string
 ): Promise<ZHADevice> =>
   hass.callWS({
@@ -180,7 +180,7 @@ export const fetchZHADevice = (
   });
 
 export const fetchBindableDevices = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   ieeeAddress: string
 ): Promise<ZHADevice[]> =>
   hass.callWS({
@@ -189,7 +189,7 @@ export const fetchBindableDevices = (
   });
 
 export const bindDevices = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   sourceIEEE: string,
   targetIEEE: string
 ): Promise<void> =>
@@ -200,7 +200,7 @@ export const bindDevices = (
   });
 
 export const unbindDevices = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   sourceIEEE: string,
   targetIEEE: string
 ): Promise<void> =>
@@ -211,7 +211,7 @@ export const unbindDevices = (
   });
 
 export const bindDeviceToGroup = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   deviceIEEE: string,
   groupId: number,
   clusters: Cluster[]
@@ -224,7 +224,7 @@ export const bindDeviceToGroup = (
   });
 
 export const unbindDeviceFromGroup = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   deviceIEEE: string,
   groupId: number,
   clusters: Cluster[]
@@ -237,7 +237,7 @@ export const unbindDeviceFromGroup = (
   });
 
 export const readAttributeValue = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   data: ReadAttributeServiceData
 ): Promise<string> =>
   hass.callWS({
@@ -246,7 +246,7 @@ export const readAttributeValue = (
   });
 
 export const fetchCommandsForCluster = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   ieeeAddress: string,
   endpointId: number,
   clusterId: number,
@@ -261,7 +261,7 @@ export const fetchCommandsForCluster = (
   });
 
 export const fetchClustersForZhaNode = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   ieeeAddress: string
 ): Promise<Cluster[]> =>
   hass.callWS({
@@ -269,13 +269,13 @@ export const fetchClustersForZhaNode = (
     ieee: ieeeAddress,
   });
 
-export const fetchGroups = (hass: HomeAssistant): Promise<ZHAGroup[]> =>
+export const fetchGroups = (hass: ThirdEye): Promise<ZHAGroup[]> =>
   hass.callWS({
     type: "zha/groups",
   });
 
 export const removeGroups = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   groupIdsToRemove: number[]
 ): Promise<ZHAGroup[]> =>
   hass.callWS({
@@ -284,7 +284,7 @@ export const removeGroups = (
   });
 
 export const fetchGroup = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   groupId: number
 ): Promise<ZHAGroup> =>
   hass.callWS({
@@ -293,14 +293,14 @@ export const fetchGroup = (
   });
 
 export const fetchGroupableDevices = (
-  hass: HomeAssistant
+  hass: ThirdEye
 ): Promise<ZHADeviceEndpoint[]> =>
   hass.callWS({
     type: "zha/devices/groupable",
   });
 
 export const addMembersToGroup = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   groupId: number,
   membersToAdd: ZHAGroupMember[]
 ): Promise<ZHAGroup> =>
@@ -311,7 +311,7 @@ export const addMembersToGroup = (
   });
 
 export const removeMembersFromGroup = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   groupId: number,
   membersToRemove: ZHAGroupMember[]
 ): Promise<ZHAGroup> =>
@@ -322,7 +322,7 @@ export const removeMembersFromGroup = (
   });
 
 export const addGroup = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   groupName: string,
   membersToAdd?: ZHAGroupMember[]
 ): Promise<ZHAGroup> =>
@@ -333,14 +333,14 @@ export const addGroup = (
   });
 
 export const fetchZHAConfiguration = (
-  hass: HomeAssistant
+  hass: ThirdEye
 ): Promise<ZHAConfiguration> =>
   hass.callWS({
     type: "zha/configuration",
   });
 
 export const updateZHAConfiguration = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   data: any
 ): Promise<any> =>
   hass.callWS({

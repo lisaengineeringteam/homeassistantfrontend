@@ -36,7 +36,7 @@ import {
   HvacMode,
 } from "../../../data/climate";
 import { UNAVAILABLE } from "../../../data/entity";
-import { HomeAssistant } from "../../../types";
+import { ThirdEye } from "../../../types";
 import { findEntities } from "../common/find-entities";
 import { hasConfigOrEntityChanged } from "../common/has-changed";
 import { createEntityNotFoundWarning } from "../components/hui-warning";
@@ -61,7 +61,7 @@ export class HuiThermostatCard extends LitElement implements LovelaceCard {
   }
 
   public static getStubConfig(
-    hass: HomeAssistant,
+    hass: ThirdEye,
     entities: string[],
     entitiesFallback: string[]
   ): ThermostatCardConfig {
@@ -78,7 +78,7 @@ export class HuiThermostatCard extends LitElement implements LovelaceCard {
     return { type: "thermostat", entity: foundEntities[0] || "" };
   }
 
-  @property({ attribute: false }) public hass?: HomeAssistant;
+  @property({ attribute: false }) public hass?: ThirdEye;
 
   @state() private _config?: ThermostatCardConfig;
 
@@ -290,7 +290,7 @@ export class HuiThermostatCard extends LitElement implements LovelaceCard {
       return;
     }
 
-    const oldHass = changedProps.get("hass") as HomeAssistant | undefined;
+    const oldHass = changedProps.get("hass") as ThirdEye | undefined;
     const oldConfig = changedProps.get("_config") as
       | ThermostatCardConfig
       | undefined;
@@ -324,7 +324,7 @@ export class HuiThermostatCard extends LitElement implements LovelaceCard {
       return;
     }
 
-    const oldHass = changedProps.get("hass") as HomeAssistant | undefined;
+    const oldHass = changedProps.get("hass") as ThirdEye | undefined;
 
     if (!oldHass || oldHass.states[this._config.entity] !== stateObj) {
       this._setTemp = this._getSetTemp(stateObj);

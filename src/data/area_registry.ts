@@ -2,7 +2,7 @@ import { Connection, createCollection } from "home-assistant-js-websocket";
 import { Store } from "home-assistant-js-websocket/dist/store";
 import { stringCompare } from "../common/string/compare";
 import { debounce } from "../common/util/debounce";
-import { HomeAssistant } from "../types";
+import { ThirdEye } from "../types";
 
 export interface AreaRegistryEntry {
   area_id: string;
@@ -16,7 +16,7 @@ export interface AreaRegistryEntryMutableParams {
 }
 
 export const createAreaRegistryEntry = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   values: AreaRegistryEntryMutableParams
 ) =>
   hass.callWS<AreaRegistryEntry>({
@@ -25,7 +25,7 @@ export const createAreaRegistryEntry = (
   });
 
 export const updateAreaRegistryEntry = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   areaId: string,
   updates: Partial<AreaRegistryEntryMutableParams>
 ) =>
@@ -35,7 +35,7 @@ export const updateAreaRegistryEntry = (
     ...updates,
   });
 
-export const deleteAreaRegistryEntry = (hass: HomeAssistant, areaId: string) =>
+export const deleteAreaRegistryEntry = (hass: ThirdEye, areaId: string) =>
   hass.callWS({
     type: "config/area_registry/delete",
     area_id: areaId,

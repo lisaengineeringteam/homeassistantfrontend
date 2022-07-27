@@ -15,7 +15,7 @@ import { UNAVAILABLE } from "../../../data/entity";
 import { forwardHaptic } from "../../../data/haptics";
 import type { InputSelectEntity } from "../../../data/input_select";
 import { SelectEntity, setSelectOption } from "../../../data/select";
-import { HomeAssistant } from "../../../types";
+import { ThirdEye } from "../../../types";
 import { EntitiesCardEntityConfig } from "../cards/types";
 import { hasConfigOrEntityChanged } from "../common/has-changed";
 import "../components/hui-generic-entity-row";
@@ -24,7 +24,7 @@ import { LovelaceRow } from "./types";
 
 @customElement("hui-select-entity-row")
 class HuiSelectEntityRow extends LitElement implements LovelaceRow {
-  @property({ attribute: false }) public hass?: HomeAssistant;
+  @property({ attribute: false }) public hass?: ThirdEye;
 
   @state() private _config?: EntitiesCardEntityConfig;
 

@@ -4,7 +4,7 @@ import {
   HassRouterPage,
   RouterOptions,
 } from "../../../../../layouts/hass-router-page";
-import { HomeAssistant } from "../../../../../types";
+import { ThirdEye } from "../../../../../types";
 import { navigate } from "../../../../../common/navigate";
 import { PageNavigation } from "../../../../../layouts/hass-tabs-subpage";
 
@@ -23,7 +23,7 @@ export const configTabs: PageNavigation[] = [
 
 @customElement("zwave_js-config-router")
 class ZWaveJSConfigRouter extends HassRouterPage {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public isWide!: boolean;
 

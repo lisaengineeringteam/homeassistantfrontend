@@ -1,5 +1,5 @@
 import { ActionConfig } from "../../../data/lovelace";
-import { HomeAssistant } from "../../../types";
+import { ThirdEye } from "../../../types";
 import { Condition } from "../common/validate-condition";
 
 interface LovelaceElementConfigBase {
@@ -17,7 +17,7 @@ export type LovelaceElementConfig =
   | StateLabelElementConfig;
 
 export interface LovelaceElement extends HTMLElement {
-  hass?: HomeAssistant;
+  hass?: ThirdEye;
   setConfig(config: LovelaceElementConfig): void;
 }
 

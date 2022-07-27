@@ -12,7 +12,7 @@ import type {
   ZHADeviceEndpoint,
   ZHAEntityReference,
 } from "../../../../../data/zha";
-import type { HomeAssistant } from "../../../../../types";
+import type { ThirdEye } from "../../../../../types";
 
 export interface DeviceEndpointRowData extends DataTableRowData {
   id: string;
@@ -25,7 +25,7 @@ export interface DeviceEndpointRowData extends DataTableRowData {
 
 @customElement("zha-device-endpoint-data-table")
 export class ZHADeviceEndpointDataTable extends LitElement {
-  @property({ type: Object }) public hass!: HomeAssistant;
+  @property({ type: Object }) public hass!: ThirdEye;
 
   @property({ type: Boolean }) public narrow = false;
 

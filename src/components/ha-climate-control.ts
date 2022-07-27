@@ -3,13 +3,13 @@ import { css, CSSResultGroup, html, LitElement, TemplateResult } from "lit";
 import { customElement, property, query } from "lit/decorators";
 import { fireEvent } from "../common/dom/fire_event";
 import { conditionalClamp } from "../common/number/clamp";
-import { HomeAssistant } from "../types";
+import { ThirdEye } from "../types";
 import "./ha-icon";
 import "./ha-icon-button";
 
 @customElement("ha-climate-control")
 class HaClimateControl extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public value!: number;
 

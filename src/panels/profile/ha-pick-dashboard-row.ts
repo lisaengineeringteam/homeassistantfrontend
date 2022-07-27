@@ -5,11 +5,11 @@ import "../../components/ha-select";
 import "../../components/ha-settings-row";
 import { fetchDashboards, LovelaceDashboard } from "../../data/lovelace";
 import { setDefaultPanel } from "../../data/panel";
-import { HomeAssistant } from "../../types";
+import { ThirdEye } from "../../types";
 
 @customElement("ha-pick-dashboard-row")
 class HaPickDashboardRow extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public narrow!: boolean;
 

@@ -8,7 +8,7 @@ import { stopPropagation } from "../common/dom/stop_propagation";
 import { computeStateName } from "../common/entity/compute_state_name";
 import { computeDeviceName } from "../data/device_registry";
 import { findRelated, RelatedResult } from "../data/search";
-import type { HomeAssistant } from "../types";
+import type { ThirdEye } from "../types";
 import "./device/ha-device-picker";
 import "./entity/ha-entity-picker";
 import "./ha-area-picker";
@@ -33,7 +33,7 @@ interface FilterValue {
 
 @customElement("ha-button-related-filter-menu")
 export class HaRelatedFilterButtonMenu extends LitElement {
-  @property() public hass!: HomeAssistant;
+  @property() public hass!: ThirdEye;
 
   @property() public corner: Corner = "TOP_START";
 

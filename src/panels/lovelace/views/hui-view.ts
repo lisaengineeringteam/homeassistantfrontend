@@ -9,7 +9,7 @@ import type {
   LovelaceViewConfig,
   LovelaceViewElement,
 } from "../../../data/lovelace";
-import type { HomeAssistant } from "../../../types";
+import type { ThirdEye } from "../../../types";
 import {
   createErrorBadgeConfig,
   createErrorBadgeElement,
@@ -41,7 +41,7 @@ declare global {
 
 @customElement("hui-view")
 export class HUIView extends ReactiveElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ attribute: false }) public lovelace!: Lovelace;
 

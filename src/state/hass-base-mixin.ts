@@ -1,12 +1,12 @@
 import { Auth, Connection } from "home-assistant-js-websocket";
 import { LitElement } from "lit";
 import { property } from "lit/decorators";
-import { HomeAssistant } from "../types";
+import { ThirdEye } from "../types";
 
 export class HassBaseEl extends LitElement {
-  @property({ attribute: false }) public hass?: HomeAssistant;
+  @property({ attribute: false }) public hass?: ThirdEye;
 
-  protected _pendingHass: Partial<HomeAssistant> = {};
+  protected _pendingHass: Partial<ThirdEye> = {};
 
   // eslint-disable-next-line: variable-name
   private __provideHass: HTMLElement[] = [];
@@ -44,7 +44,7 @@ export class HassBaseEl extends LitElement {
     });
   }
 
-  protected _updateHass(obj: Partial<HomeAssistant>) {
+  protected _updateHass(obj: Partial<ThirdEye>) {
     if (!this.hass) {
       this._pendingHass = { ...this._pendingHass, ...obj };
       return;

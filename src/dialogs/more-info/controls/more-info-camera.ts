@@ -2,10 +2,10 @@ import { css, CSSResultGroup, html, LitElement, TemplateResult } from "lit";
 import { property, state } from "lit/decorators";
 import "../../../components/ha-camera-stream";
 import { CameraEntity } from "../../../data/camera";
-import type { HomeAssistant } from "../../../types";
+import type { ThirdEye } from "../../../types";
 
 class MoreInfoCamera extends LitElement {
-  @property({ attribute: false }) public hass?: HomeAssistant;
+  @property({ attribute: false }) public hass?: ThirdEye;
 
   @property({ attribute: false }) public stateObj?: CameraEntity;
 

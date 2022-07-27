@@ -1,7 +1,7 @@
 import { LitElement } from "lit";
-import { HomeAssistant } from "../../types";
+import { ThirdEye } from "../../types";
 
-export function computeRTL(hass: HomeAssistant) {
+export function computeRTL(hass: ThirdEye) {
   const lang = hass.language || "en";
   if (hass.translationMetadata.translations[lang]) {
     return hass.translationMetadata.translations[lang].isRTL || false;
@@ -9,7 +9,7 @@ export function computeRTL(hass: HomeAssistant) {
   return false;
 }
 
-export function computeRTLDirection(hass: HomeAssistant) {
+export function computeRTLDirection(hass: ThirdEye) {
   return emitRTLDirection(computeRTL(hass));
 }
 

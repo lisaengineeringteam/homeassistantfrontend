@@ -4,7 +4,7 @@ import { customElement, property, state } from "lit/decorators";
 import "../../../components/ha-dialog";
 import { fireEvent } from "../../../common/dom/fire_event";
 import { haStyle, haStyleDialog } from "../../../resources/styles";
-import { HomeAssistant } from "../../../types";
+import { ThirdEye } from "../../../types";
 import {
   clearStatistics,
   updateStatisticsMetadata,
@@ -15,7 +15,7 @@ import type { DialogStatisticsUnitsChangedParams } from "./show-dialog-statistic
 
 @customElement("dialog-statistics-fix-units-changed")
 export class DialogStatisticsFixUnitsChanged extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @state() private _params?: DialogStatisticsUnitsChangedParams;
 

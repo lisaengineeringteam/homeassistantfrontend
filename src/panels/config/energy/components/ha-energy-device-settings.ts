@@ -18,7 +18,7 @@ import {
   showConfirmationDialog,
 } from "../../../../dialogs/generic/show-dialog-box";
 import { haStyle } from "../../../../resources/styles";
-import { HomeAssistant } from "../../../../types";
+import { ThirdEye } from "../../../../types";
 import { documentationUrl } from "../../../../util/documentation-url";
 import { showEnergySettingsDeviceDialog } from "../dialogs/show-dialogs-energy";
 import "./ha-energy-validation-result";
@@ -26,7 +26,7 @@ import { energyCardStyles } from "./styles";
 
 @customElement("ha-energy-device-settings")
 export class EnergyDeviceSettings extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ attribute: false })
   public preferences!: EnergyPreferences;

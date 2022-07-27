@@ -15,14 +15,14 @@ import "../../../components/entity/ha-entity-picker";
 import type { HaEntityPicker } from "../../../components/entity/ha-entity-picker";
 import "../../../components/ha-icon-button";
 import { sortableStyles } from "../../../resources/ha-sortable-style";
-import { HomeAssistant } from "../../../types";
+import { ThirdEye } from "../../../types";
 import { EntityConfig } from "../entity-rows/types";
 
 let Sortable;
 
 @customElement("hui-entity-editor")
 export class HuiEntityEditor extends LitElement {
-  @property({ attribute: false }) protected hass?: HomeAssistant;
+  @property({ attribute: false }) protected hass?: ThirdEye;
 
   @property({ attribute: false }) protected entities?: EntityConfig[];
 

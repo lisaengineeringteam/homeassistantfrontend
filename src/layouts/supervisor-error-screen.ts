@@ -13,12 +13,12 @@ import { applyThemesOnElement } from "../common/dom/apply_themes_on_element";
 import "../components/ha-card";
 import "../resources/ha-style";
 import { haStyle } from "../resources/styles";
-import { HomeAssistant } from "../types";
+import { ThirdEye } from "../types";
 import "./hass-subpage";
 
 @customElement("supervisor-error-screen")
 class SupervisorErrorScreen extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   protected firstUpdated(changedProps: PropertyValues) {
     super.firstUpdated(changedProps);
@@ -28,7 +28,7 @@ class SupervisorErrorScreen extends LitElement {
 
   protected updated(changedProps: PropertyValues) {
     super.updated(changedProps);
-    const oldHass = changedProps.get("hass") as HomeAssistant | undefined;
+    const oldHass = changedProps.get("hass") as ThirdEye | undefined;
     if (!oldHass) {
       return;
     }
@@ -50,7 +50,7 @@ class SupervisorErrorScreen extends LitElement {
               <li>
                 <a
                   class="supervisor_error-link"
-                  href="http://homeassistant.local:4357"
+                  href="http://thirdeye.local:4357"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -81,7 +81,7 @@ class SupervisorErrorScreen extends LitElement {
 
   private _applyTheme() {
     let themeName: string;
-    let themeSettings: Partial<HomeAssistant["selectedTheme"]> | undefined;
+    let themeSettings: Partial<ThirdEye["selectedTheme"]> | undefined;
 
     if (atLeastVersion(this.hass.config.version, 0, 114)) {
       themeName =

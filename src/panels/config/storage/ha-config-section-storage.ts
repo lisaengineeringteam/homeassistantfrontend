@@ -7,7 +7,7 @@ import "../../../components/ha-button-menu";
 import "../../../components/ha-metric";
 import { fetchHassioHostInfo, HassioHostInfo } from "../../../data/hassio/host";
 import "../../../layouts/hass-subpage";
-import type { HomeAssistant, Route } from "../../../types";
+import type { ThirdEye, Route } from "../../../types";
 import {
   getValueInPercentage,
   roundWithOneDecimal,
@@ -17,7 +17,7 @@ import { showMoveDatadiskDialog } from "./show-dialog-move-datadisk";
 
 @customElement("ha-config-section-storage")
 class HaConfigSectionStorage extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ attribute: false }) public route!: Route;
 

@@ -1,6 +1,6 @@
 import { computeStateName } from "../common/entity/compute_state_name";
 import type { HaFormSchema } from "../components/ha-form/types";
-import { HomeAssistant } from "../types";
+import { ThirdEye } from "../types";
 import { BaseTrigger } from "./automation";
 
 export interface DeviceAutomation {
@@ -32,26 +32,26 @@ export interface DeviceCapabilities {
   extra_fields: HaFormSchema[];
 }
 
-export const fetchDeviceActions = (hass: HomeAssistant, deviceId: string) =>
+export const fetchDeviceActions = (hass: ThirdEye, deviceId: string) =>
   hass.callWS<DeviceAction[]>({
     type: "device_automation/action/list",
     device_id: deviceId,
   });
 
-export const fetchDeviceConditions = (hass: HomeAssistant, deviceId: string) =>
+export const fetchDeviceConditions = (hass: ThirdEye, deviceId: string) =>
   hass.callWS<DeviceCondition[]>({
     type: "device_automation/condition/list",
     device_id: deviceId,
   });
 
-export const fetchDeviceTriggers = (hass: HomeAssistant, deviceId: string) =>
+export const fetchDeviceTriggers = (hass: ThirdEye, deviceId: string) =>
   hass.callWS<DeviceTrigger[]>({
     type: "device_automation/trigger/list",
     device_id: deviceId,
   });
 
 export const fetchDeviceActionCapabilities = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   action: DeviceAction
 ) =>
   hass.callWS<DeviceCapabilities>({
@@ -60,7 +60,7 @@ export const fetchDeviceActionCapabilities = (
   });
 
 export const fetchDeviceConditionCapabilities = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   condition: DeviceCondition
 ) =>
   hass.callWS<DeviceCapabilities>({
@@ -69,7 +69,7 @@ export const fetchDeviceConditionCapabilities = (
   });
 
 export const fetchDeviceTriggerCapabilities = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   trigger: DeviceTrigger
 ) =>
   hass.callWS<DeviceCapabilities>({
@@ -117,7 +117,7 @@ export const deviceAutomationsEqual = (
 };
 
 export const localizeDeviceAutomationAction = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   action: DeviceAction
 ): string => {
   const state = action.entity_id ? hass.states[action.entity_id] : undefined;
@@ -137,7 +137,7 @@ export const localizeDeviceAutomationAction = (
 };
 
 export const localizeDeviceAutomationCondition = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   condition: DeviceCondition
 ): string => {
   const state = condition.entity_id
@@ -162,7 +162,7 @@ export const localizeDeviceAutomationCondition = (
 };
 
 export const localizeDeviceAutomationTrigger = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   trigger: DeviceTrigger
 ): string => {
   const state = trigger.entity_id ? hass.states[trigger.entity_id] : undefined;

@@ -16,7 +16,7 @@ import parseAspectRatio from "../../../common/util/parse-aspect-ratio";
 import "../../../components/ha-card";
 import "../../../components/ha-icon-button";
 import { fetchRecent } from "../../../data/history";
-import { HomeAssistant } from "../../../types";
+import { ThirdEye } from "../../../types";
 import { findEntities } from "../common/find-entities";
 import { processConfigEntities } from "../common/process-config-entities";
 import { EntityConfig } from "../entity-rows/types";
@@ -30,7 +30,7 @@ const MINUTE = 60000;
 
 @customElement("hui-map-card")
 class HuiMapCard extends LitElement implements LovelaceCard {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ type: Boolean, reflect: true })
   public isPanel = false;
@@ -101,7 +101,7 @@ class HuiMapCard extends LitElement implements LovelaceCard {
   }
 
   public static getStubConfig(
-    hass: HomeAssistant,
+    hass: ThirdEye,
     entities: string[],
     entitiesFallback: string[]
   ): MapCardConfig {
@@ -154,7 +154,7 @@ class HuiMapCard extends LitElement implements LovelaceCard {
       return true;
     }
 
-    const oldHass = changedProps.get("hass") as HomeAssistant | undefined;
+    const oldHass = changedProps.get("hass") as ThirdEye | undefined;
 
     if (!oldHass || !this._configEntities) {
       return true;

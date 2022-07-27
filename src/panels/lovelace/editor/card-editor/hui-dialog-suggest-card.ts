@@ -6,7 +6,7 @@ import "../../../../components/ha-yaml-editor";
 import type { HaYamlEditor } from "../../../../components/ha-yaml-editor";
 import { LovelaceCardConfig } from "../../../../data/lovelace";
 import { haStyleDialog } from "../../../../resources/styles";
-import { HomeAssistant } from "../../../../types";
+import { ThirdEye } from "../../../../types";
 import { showSaveSuccessToast } from "../../../../util/toast-saved-success";
 import { computeCards } from "../../common/generate-lovelace-config";
 import { addCards } from "../config-util";
@@ -16,7 +16,7 @@ import { SuggestCardDialogParams } from "./show-suggest-card-dialog";
 
 @customElement("hui-dialog-suggest-card")
 export class HuiDialogSuggestCard extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @state() private _params?: SuggestCardDialogParams;
 

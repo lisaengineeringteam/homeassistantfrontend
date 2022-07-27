@@ -6,11 +6,11 @@ import "../components/entity/ha-entity-toggle";
 import "../components/entity/state-info";
 import { UNAVAILABLE } from "../data/entity";
 import { haStyle } from "../resources/styles";
-import { HomeAssistant } from "../types";
+import { ThirdEye } from "../types";
 
 @customElement("state-card-button")
 export class StateCardButton extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public stateObj!: HassEntity;
 

@@ -34,7 +34,7 @@ import type {
   CalendarEvent,
   CalendarViewChanged,
   FullCalendarView,
-  HomeAssistant,
+  ThirdEye,
   ToggleButton,
 } from "../../types";
 
@@ -79,7 +79,7 @@ const viewButtons: ToggleButton[] = [
 ];
 
 export class HAFullCalendar extends LitElement {
-  public hass!: HomeAssistant;
+  public hass!: ThirdEye;
 
   @property({ type: Boolean, reflect: true }) public narrow = false;
 
@@ -203,7 +203,7 @@ export class HAFullCalendar extends LitElement {
       this._fireViewChanged();
     }
 
-    const oldHass = changedProps.get("hass") as HomeAssistant;
+    const oldHass = changedProps.get("hass") as ThirdEye;
 
     if (oldHass && oldHass.language !== this.hass.language) {
       this.calendar.setOption("locale", this.hass.language);

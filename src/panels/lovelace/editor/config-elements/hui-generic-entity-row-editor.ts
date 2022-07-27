@@ -9,7 +9,7 @@ import { computeDomain } from "../../../../common/entity/compute_domain";
 import { domainIcon } from "../../../../common/entity/domain_icon";
 import type { LocalizeFunc } from "../../../../common/translations/localize";
 import type { HaFormSchema } from "../../../../components/ha-form/types";
-import type { HomeAssistant } from "../../../../types";
+import type { ThirdEye } from "../../../../types";
 import type { EntitiesCardEntityConfig } from "../../cards/types";
 import type { LovelaceRowEditor } from "../../types";
 import { entitiesConfigStruct } from "../structs/entities-struct";
@@ -30,7 +30,7 @@ export class HuiGenericEntityRowEditor
   extends LitElement
   implements LovelaceRowEditor
 {
-  @property({ attribute: false }) public hass?: HomeAssistant;
+  @property({ attribute: false }) public hass?: ThirdEye;
 
   @state() private _config?: EntitiesCardEntityConfig;
 

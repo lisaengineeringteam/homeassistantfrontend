@@ -9,7 +9,7 @@ import {
 import { customElement, property, state } from "lit/decorators";
 import { applyThemesOnElement } from "../../../common/dom/apply_themes_on_element";
 import "../../../components/ha-card";
-import { HomeAssistant } from "../../../types";
+import { ThirdEye } from "../../../types";
 import { findEntities } from "../common/find-entities";
 import { LovelaceElement, LovelaceElementConfig } from "../elements/types";
 import { LovelaceCard } from "../types";
@@ -18,12 +18,12 @@ import { PictureElementsCardConfig } from "./types";
 
 @customElement("hui-picture-elements-card")
 class HuiPictureElementsCard extends LitElement implements LovelaceCard {
-  @property({ attribute: false }) public hass?: HomeAssistant;
+  @property({ attribute: false }) public hass?: ThirdEye;
 
   @state() private _elements?: LovelaceElement[];
 
   public static getStubConfig(
-    hass: HomeAssistant,
+    hass: ThirdEye,
     entities: string[],
     entitiesFallback: string[]
   ): PictureElementsCardConfig {
@@ -95,7 +95,7 @@ class HuiPictureElementsCard extends LitElement implements LovelaceCard {
       }
     }
 
-    const oldHass = changedProps.get("hass") as HomeAssistant | undefined;
+    const oldHass = changedProps.get("hass") as ThirdEye | undefined;
     const oldConfig = changedProps.get("_config") as
       | PictureElementsCardConfig
       | undefined;

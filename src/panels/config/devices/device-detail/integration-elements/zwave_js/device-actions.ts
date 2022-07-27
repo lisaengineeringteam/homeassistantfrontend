@@ -7,7 +7,7 @@ import {
   fetchZwaveNodeStatus,
 } from "../../../../../../data/zwave_js";
 import { showConfirmationDialog } from "../../../../../../dialogs/generic/show-dialog-box";
-import type { HomeAssistant } from "../../../../../../types";
+import type { ThirdEye } from "../../../../../../types";
 import { showZWaveJSHealNodeDialog } from "../../../../integrations/integration-panels/zwave_js/show-dialog-zwave_js-heal-node";
 import { showZWaveJSNodeStatisticsDialog } from "../../../../integrations/integration-panels/zwave_js/show-dialog-zwave_js-node-statistics";
 import { showZWaveJSReinterviewNodeDialog } from "../../../../integrations/integration-panels/zwave_js/show-dialog-zwave_js-reinterview-node";
@@ -17,7 +17,7 @@ import type { DeviceAction } from "../../../ha-config-device-page";
 
 export const getZwaveDeviceActions = async (
   el: HTMLElement,
-  hass: HomeAssistant,
+  hass: ThirdEye,
   device: DeviceRegistryEntry
 ): Promise<DeviceAction[]> => {
   const configEntries = await getConfigEntries(hass, {

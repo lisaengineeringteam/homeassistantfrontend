@@ -18,13 +18,13 @@ import {
   STREAM_TYPE_HLS,
   STREAM_TYPE_WEB_RTC,
 } from "../data/camera";
-import { HomeAssistant } from "../types";
+import { ThirdEye } from "../types";
 import "./ha-hls-player";
 import "./ha-web-rtc-player";
 
 @customElement("ha-camera-stream")
 class HaCameraStream extends LitElement {
-  @property({ attribute: false }) public hass?: HomeAssistant;
+  @property({ attribute: false }) public hass?: ThirdEye;
 
   @property({ attribute: false }) public stateObj?: CameraEntity;
 

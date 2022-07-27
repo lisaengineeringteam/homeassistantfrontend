@@ -15,7 +15,7 @@ import { customElement, property } from "lit/decorators";
 import { formatDateTime } from "../common/datetime/format_date_time";
 import { useAmPm } from "../common/datetime/use_am_pm";
 import { computeRTLDirection } from "../common/util/compute_rtl";
-import { HomeAssistant } from "../types";
+import { ThirdEye } from "../types";
 import "./date-range-picker";
 import "./ha-svg-icon";
 import "./ha-textfield";
@@ -26,7 +26,7 @@ export interface DateRangePickerRanges {
 
 @customElement("ha-date-range-picker")
 export class HaDateRangePicker extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public startDate!: Date;
 
@@ -42,7 +42,7 @@ export class HaDateRangePicker extends LitElement {
 
   protected updated(changedProps: PropertyValues) {
     if (changedProps.has("hass")) {
-      const oldHass = changedProps.get("hass") as HomeAssistant | undefined;
+      const oldHass = changedProps.get("hass") as ThirdEye | undefined;
       if (!oldHass || oldHass.locale !== this.hass.locale) {
         this._hour24format = !useAmPm(this.hass.locale);
         this._rtlDirection = computeRTLDirection(this.hass);

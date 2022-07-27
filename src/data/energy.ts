@@ -12,7 +12,7 @@ import {
 import { Collection, getCollection } from "home-assistant-js-websocket";
 import { groupBy } from "../common/util/group-by";
 import { subscribeOne } from "../common/util/subscribe-one";
-import { HomeAssistant } from "../types";
+import { ThirdEye } from "../types";
 import { ConfigEntry, getConfigEntries } from "./config_entries";
 import { subscribeEntityRegistry } from "./entity_registry";
 import {
@@ -174,23 +174,23 @@ export interface EnergyPreferencesValidation {
   device_consumption: EnergyValidationIssue[][];
 }
 
-export const getEnergyInfo = (hass: HomeAssistant) =>
+export const getEnergyInfo = (hass: ThirdEye) =>
   hass.callWS<EnergyInfo>({
     type: "energy/info",
   });
 
-export const getEnergyPreferenceValidation = (hass: HomeAssistant) =>
+export const getEnergyPreferenceValidation = (hass: ThirdEye) =>
   hass.callWS<EnergyPreferencesValidation>({
     type: "energy/validate",
   });
 
-export const getEnergyPreferences = (hass: HomeAssistant) =>
+export const getEnergyPreferences = (hass: ThirdEye) =>
   hass.callWS<EnergyPreferences>({
     type: "energy/get_prefs",
   });
 
 export const saveEnergyPreferences = async (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   prefs: Partial<EnergyPreferences>
 ) => {
   const newPrefs = hass.callWS<EnergyPreferences>({
@@ -206,7 +206,7 @@ export interface FossilEnergyConsumption {
 }
 
 export const getFossilEnergyConsumption = async (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   startTime: Date,
   energy_statistic_ids: string[],
   co2_statistic_id: string,
@@ -249,7 +249,7 @@ export interface EnergyData {
 }
 
 const getEnergyData = async (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   prefs: EnergyPreferences,
   start: Date,
   end?: Date,
@@ -448,7 +448,7 @@ export interface EnergyCollection extends Collection<EnergyData> {
   _active: number;
 }
 
-const clearEnergyCollectionPreferences = (hass: HomeAssistant) => {
+const clearEnergyCollectionPreferences = (hass: ThirdEye) => {
   energyCollectionKeys.forEach((key) => {
     const energyCollection = getEnergyDataCollection(hass, { key });
     energyCollection.clearPrefs();
@@ -459,7 +459,7 @@ const clearEnergyCollectionPreferences = (hass: HomeAssistant) => {
 };
 
 export const getEnergyDataCollection = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   options: { prefs?: EnergyPreferences; key?: string } = {}
 ): EnergyCollection => {
   let key = "_energy";
@@ -576,7 +576,7 @@ export const getEnergyDataCollection = (
   return collection;
 };
 
-export const getEnergySolarForecasts = (hass: HomeAssistant) =>
+export const getEnergySolarForecasts = (hass: ThirdEye) =>
   hass.callWS<EnergySolarForecasts>({
     type: "energy/solar_forecast",
   });
@@ -591,7 +591,7 @@ export const ENERGY_GAS_UNITS = [
 export type EnergyGasUnit = "volume" | "energy";
 
 export const getEnergyGasUnitCategory = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   prefs: EnergyPreferences
 ): EnergyGasUnit | undefined => {
   for (const source of prefs.energy_sources) {
@@ -612,7 +612,7 @@ export const getEnergyGasUnitCategory = (
 };
 
 export const getEnergyGasUnit = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   prefs: EnergyPreferences,
   statisticsMetaData: Record<string, StatisticsMetaData> = {}
 ): string | undefined => {

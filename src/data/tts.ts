@@ -1,7 +1,7 @@
-import { HomeAssistant } from "../types";
+import { ThirdEye } from "../types";
 
 export const convertTextToSpeech = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   data: {
     platform: string;
     message: string;

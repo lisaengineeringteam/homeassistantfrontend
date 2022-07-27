@@ -1,14 +1,14 @@
 import { css, CSSResultGroup, html, LitElement, TemplateResult } from "lit";
 import { customElement, property } from "lit/decorators";
 import { LogbookEntry } from "../../data/logbook";
-import { HomeAssistant } from "../../types";
+import { ThirdEye } from "../../types";
 import "./hat-logbook-note";
 import "../../panels/logbook/ha-logbook-renderer";
 import { TraceExtended } from "../../data/trace";
 
 @customElement("ha-trace-logbook")
 export class HaTraceLogbook extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ type: Boolean, reflect: true }) public narrow!: boolean;
 

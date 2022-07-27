@@ -3,7 +3,7 @@ import { css, CSSResultGroup, html, LitElement, TemplateResult } from "lit";
 import { customElement, property } from "lit/decorators";
 import "../../components/ha-circular-progress";
 import { DataEntryFlowStepProgress } from "../../data/data_entry_flow";
-import { HomeAssistant } from "../../types";
+import { ThirdEye } from "../../types";
 import { FlowConfig } from "./show-dialog-data-entry-flow";
 import { configFlowContentStyles } from "./styles";
 
@@ -13,7 +13,7 @@ class StepFlowProgress extends LitElement {
   public flowConfig!: FlowConfig;
 
   @property({ attribute: false })
-  public hass!: HomeAssistant;
+  public hass!: ThirdEye;
 
   @property({ attribute: false })
   public step!: DataEntryFlowStepProgress;

@@ -1,4 +1,4 @@
-import { HomeAssistant } from "../types";
+import { ThirdEye } from "../types";
 import { Selector } from "./selector";
 
 export type Blueprints = Record<string, BlueprintOrError>;
@@ -30,14 +30,14 @@ export interface BlueprintImportResult {
   validation_errors: string[] | null;
 }
 
-export const fetchBlueprints = (hass: HomeAssistant, domain: string) =>
+export const fetchBlueprints = (hass: ThirdEye, domain: string) =>
   hass.callWS<Blueprints>({ type: "blueprint/list", domain });
 
-export const importBlueprint = (hass: HomeAssistant, url: string) =>
+export const importBlueprint = (hass: ThirdEye, url: string) =>
   hass.callWS<BlueprintImportResult>({ type: "blueprint/import", url });
 
 export const saveBlueprint = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   domain: string,
   path: string,
   yaml: string,
@@ -52,7 +52,7 @@ export const saveBlueprint = (
   });
 
 export const deleteBlueprint = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   domain: string,
   path: string
 ) =>

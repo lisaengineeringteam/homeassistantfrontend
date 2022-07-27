@@ -25,12 +25,12 @@ import "../../components/ha-menu-button";
 import { filterLogbookCompatibleEntities } from "../../data/logbook";
 import "../../layouts/ha-app-layout";
 import { haStyle } from "../../resources/styles";
-import { HomeAssistant } from "../../types";
+import { ThirdEye } from "../../types";
 import "./ha-logbook";
 
 @customElement("ha-panel-logbook")
 export class HaPanelLogbook extends LitElement {
-  @property() hass!: HomeAssistant;
+  @property() hass!: ThirdEye;
 
   @property({ reflect: true, type: Boolean }) narrow!: boolean;
 

@@ -3,7 +3,7 @@ import { mdiDotsVertical } from "@mdi/js";
 import "@polymer/paper-tooltip/paper-tooltip";
 import { css, html, LitElement, TemplateResult } from "lit";
 import { customElement, property } from "lit/decorators";
-import { HomeAssistant } from "../types";
+import { ThirdEye } from "../types";
 import "./ha-button-menu";
 import "./ha-icon-button";
 import "./ha-svg-icon";
@@ -20,7 +20,7 @@ export interface IconOverflowMenuItem {
 
 @customElement("ha-icon-overflow-menu")
 export class HaIconOverflowMenu extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ type: Array }) public items: IconOverflowMenuItem[] = [];
 

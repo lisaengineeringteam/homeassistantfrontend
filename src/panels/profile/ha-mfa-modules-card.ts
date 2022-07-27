@@ -6,12 +6,12 @@ import { customElement, property } from "lit/decorators";
 import { fireEvent } from "../../common/dom/fire_event";
 import "../../components/ha-card";
 import { showConfirmationDialog } from "../../dialogs/generic/show-dialog-box";
-import { HomeAssistant, MFAModule } from "../../types";
+import { ThirdEye, MFAModule } from "../../types";
 import { showMfaModuleSetupFlowDialog } from "./show-ha-mfa-module-setup-flow-dialog";
 
 @customElement("ha-mfa-modules-card")
 class HaMfaModulesCard extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ attribute: false }) public mfaModules!: MFAModule[];
 

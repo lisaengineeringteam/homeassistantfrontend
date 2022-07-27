@@ -13,7 +13,7 @@ import { debounce } from "../../../common/util/debounce";
 import "../../../components/ha-slider";
 import { UNAVAILABLE } from "../../../data/entity";
 import { setValue } from "../../../data/input_text";
-import { HomeAssistant } from "../../../types";
+import { ThirdEye } from "../../../types";
 import { hasConfigOrEntityChanged } from "../common/has-changed";
 import { installResizeObserver } from "../common/install-resize-observer";
 import "../components/hui-generic-entity-row";
@@ -23,7 +23,7 @@ import "../../../components/ha-textfield";
 
 @customElement("hui-number-entity-row")
 class HuiNumberEntityRow extends LitElement implements LovelaceRow {
-  @property({ attribute: false }) public hass?: HomeAssistant;
+  @property({ attribute: false }) public hass?: ThirdEye;
 
   @state() private _config?: EntityConfig;
 

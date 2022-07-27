@@ -7,7 +7,7 @@ import { formatNumber } from "../common/number/format_number";
 import { capitalizeFirstLetter } from "../common/string/capitalize-first-letter";
 import { isDate } from "../common/string/is_date";
 import { isTimestamp } from "../common/string/is_timestamp";
-import { HomeAssistant } from "../types";
+import { ThirdEye } from "../types";
 
 let jsYamlPromise: Promise<typeof import("../resources/js-yaml-dump")>;
 
@@ -45,7 +45,7 @@ export function formatAttributeName(value: string): string {
 }
 
 export function formatAttributeValue(
-  hass: HomeAssistant,
+  hass: ThirdEye,
   value: any
 ): string | TemplateResult {
   if (value === null) {

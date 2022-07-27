@@ -29,7 +29,7 @@ import "../ha-checkbox";
 import type { HaCheckbox } from "../ha-checkbox";
 import "../ha-svg-icon";
 import { filterData, sortData } from "./sort-filter";
-import { HomeAssistant } from "../../types";
+import { ThirdEye } from "../../types";
 import "@lit-labs/virtualizer";
 
 declare global {
@@ -95,7 +95,7 @@ export interface SortableColumnContainer {
 
 @customElement("ha-data-table")
 export class HaDataTable extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ type: Object }) public columns: DataTableColumnContainer = {};
 

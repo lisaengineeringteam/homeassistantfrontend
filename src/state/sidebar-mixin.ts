@@ -1,14 +1,14 @@
 import { HASSDomEvent } from "../common/dom/fire_event";
-import { Constructor, HomeAssistant } from "../types";
+import { Constructor, ThirdEye } from "../types";
 import { storeState } from "../util/ha-pref-storage";
 import { HassBaseEl } from "./hass-base-mixin";
 
 interface DockSidebarParams {
-  dock: HomeAssistant["dockedSidebar"];
+  dock: ThirdEye["dockedSidebar"];
 }
 
 interface DefaultPanelParams {
-  defaultPanel: HomeAssistant["defaultPanel"];
+  defaultPanel: ThirdEye["defaultPanel"];
 }
 
 declare global {

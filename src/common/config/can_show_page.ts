@@ -1,12 +1,12 @@
 import { PageNavigation } from "../../layouts/hass-tabs-subpage";
-import { HomeAssistant } from "../../types";
+import { ThirdEye } from "../../types";
 import { isComponentLoaded } from "./is_component_loaded";
 
-export const canShowPage = (hass: HomeAssistant, page: PageNavigation) =>
+export const canShowPage = (hass: ThirdEye, page: PageNavigation) =>
   (isCore(page) || isLoadedIntegration(hass, page)) &&
   !hideAdvancedPage(hass, page);
 
-const isLoadedIntegration = (hass: HomeAssistant, page: PageNavigation) =>
+const isLoadedIntegration = (hass: ThirdEye, page: PageNavigation) =>
   page.component
     ? isComponentLoaded(hass, page.component)
     : page.components
@@ -16,6 +16,6 @@ const isLoadedIntegration = (hass: HomeAssistant, page: PageNavigation) =>
     : true;
 const isCore = (page: PageNavigation) => page.core;
 const isAdvancedPage = (page: PageNavigation) => page.advancedOnly;
-const userWantsAdvanced = (hass: HomeAssistant) => hass.userData?.showAdvanced;
-const hideAdvancedPage = (hass: HomeAssistant, page: PageNavigation) =>
+const userWantsAdvanced = (hass: ThirdEye) => hass.userData?.showAdvanced;
+const hideAdvancedPage = (hass: ThirdEye, page: PageNavigation) =>
   isAdvancedPage(page) && !userWantsAdvanced(hass);

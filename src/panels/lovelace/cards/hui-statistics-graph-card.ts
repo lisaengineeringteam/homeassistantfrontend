@@ -10,7 +10,7 @@ import { customElement, property, state } from "lit/decorators";
 import { classMap } from "lit/directives/class-map";
 import "../../../components/ha-card";
 import "../../../components/chart/statistics-chart";
-import { HomeAssistant } from "../../../types";
+import { ThirdEye } from "../../../types";
 import { hasConfigOrEntitiesChanged } from "../common/has-changed";
 import { processConfigEntities } from "../common/process-config-entities";
 import { LovelaceCard } from "../types";
@@ -28,7 +28,7 @@ export class HuiStatisticsGraphCard extends LitElement implements LovelaceCard {
     return { type: "statistics-graph", entities: [] };
   }
 
-  @property({ attribute: false }) public hass?: HomeAssistant;
+  @property({ attribute: false }) public hass?: ThirdEye;
 
   @state() private _statistics?: Statistics;
 

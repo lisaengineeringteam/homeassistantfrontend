@@ -66,7 +66,7 @@ import { showVoiceCommandDialog } from "../../dialogs/voice-command-dialog/show-
 import "../../layouts/ha-app-layout";
 import type { haAppLayout } from "../../layouts/ha-app-layout";
 import { haStyle } from "../../resources/styles";
-import type { HomeAssistant } from "../../types";
+import type { ThirdEye } from "../../types";
 import { documentationUrl } from "../../util/documentation-url";
 import { swapView } from "./editor/config-util";
 import { showEditLovelaceDialog } from "./editor/lovelace-editor/show-edit-lovelace-dialog";
@@ -76,7 +76,7 @@ import "./views/hui-view";
 import type { HUIView } from "./views/hui-view";
 
 class HUIRoot extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ attribute: false }) public lovelace?: Lovelace;
 

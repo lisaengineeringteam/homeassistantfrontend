@@ -1,12 +1,12 @@
 import { html, LitElement } from "lit";
 import { customElement, property } from "lit/decorators";
 import type { DateSelector } from "../../data/selector";
-import type { HomeAssistant } from "../../types";
+import type { ThirdEye } from "../../types";
 import "../ha-date-input";
 
 @customElement("ha-selector-date")
 export class HaDateSelector extends LitElement {
-  @property() public hass!: HomeAssistant;
+  @property() public hass!: ThirdEye;
 
   @property() public selector!: DateSelector;
 

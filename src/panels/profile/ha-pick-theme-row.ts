@@ -20,12 +20,12 @@ import {
   DEFAULT_ACCENT_COLOR,
   DEFAULT_PRIMARY_COLOR,
 } from "../../resources/ha-style";
-import { HomeAssistant } from "../../types";
+import { ThirdEye } from "../../types";
 import { documentationUrl } from "../../util/documentation-url";
 
 @customElement("ha-pick-theme-row")
 export class HaPickThemeRow extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ type: Boolean }) public narrow!: boolean;
 
@@ -148,7 +148,7 @@ export class HaPickThemeRow extends LitElement {
   }
 
   public willUpdate(changedProperties: PropertyValues) {
-    const oldHass = changedProperties.get("hass") as undefined | HomeAssistant;
+    const oldHass = changedProperties.get("hass") as undefined | ThirdEye;
     const themesChanged =
       changedProperties.has("hass") &&
       (!oldHass || oldHass.themes.themes !== this.hass.themes.themes);

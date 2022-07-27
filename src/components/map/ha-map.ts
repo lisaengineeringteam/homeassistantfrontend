@@ -18,7 +18,7 @@ import {
 import { computeStateDomain } from "../../common/entity/compute_state_domain";
 import { computeStateName } from "../../common/entity/compute_state_name";
 import "./ha-entity-marker";
-import { HomeAssistant } from "../../types";
+import { ThirdEye } from "../../types";
 import "../ha-icon-button";
 import { installResizeObserver } from "../../panels/lovelace/common/install-resize-observer";
 
@@ -38,7 +38,7 @@ export interface HaMapEntity {
 
 @customElement("ha-map")
 export class HaMap extends ReactiveElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ attribute: false }) public entities?: string[] | HaMapEntity[];
 
@@ -97,7 +97,7 @@ export class HaMap extends ReactiveElement {
     if (!this._loaded) {
       return;
     }
-    const oldHass = changedProps.get("hass") as HomeAssistant | undefined;
+    const oldHass = changedProps.get("hass") as ThirdEye | undefined;
 
     if (changedProps.has("_loaded") || changedProps.has("entities")) {
       this._drawEntities();

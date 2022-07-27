@@ -1,10 +1,10 @@
 import { ShowToastParams } from "../managers/notification-manager";
-import { HomeAssistant } from "../types";
+import { ThirdEye } from "../types";
 import { showToast } from "./toast";
 
 export const showDeleteSuccessToast = (
   el: HTMLElement,
-  hass: HomeAssistant,
+  hass: ThirdEye,
   action?: () => void
 ) => {
   const toastParams: ShowToastParams = {

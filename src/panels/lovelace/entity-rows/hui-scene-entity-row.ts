@@ -11,7 +11,7 @@ import { customElement, property, state } from "lit/decorators";
 import "../../../components/entity/ha-entity-toggle";
 import { UNAVAILABLE } from "../../../data/entity";
 import { activateScene } from "../../../data/scene";
-import { HomeAssistant } from "../../../types";
+import { ThirdEye } from "../../../types";
 import { hasConfigOrEntityChanged } from "../common/has-changed";
 import "../components/hui-generic-entity-row";
 import { createEntityNotFoundWarning } from "../components/hui-warning";
@@ -19,7 +19,7 @@ import { ActionRowConfig, LovelaceRow } from "./types";
 
 @customElement("hui-scene-entity-row")
 class HuiSceneEntityRow extends LitElement implements LovelaceRow {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @state() private _config?: ActionRowConfig;
 

@@ -1,14 +1,14 @@
 import { css, CSSResultGroup, html, LitElement } from "lit";
 import { customElement, property } from "lit/decorators";
 import { fireEvent } from "../../common/dom/fire_event";
-import { HomeAssistant } from "../../types";
+import { ThirdEye } from "../../types";
 import "../ha-formfield";
 import "../ha-switch";
 import "../ha-input-helper-text";
 
 @customElement("ha-selector-boolean")
 export class HaBooleanSelector extends LitElement {
-  @property() public hass!: HomeAssistant;
+  @property() public hass!: ThirdEye;
 
   @property() public value?: number;
 

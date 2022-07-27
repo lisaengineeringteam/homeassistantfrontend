@@ -1,5 +1,5 @@
 import { atLeastVersion } from "../../common/config/version";
-import { HomeAssistant } from "../../types";
+import { ThirdEye } from "../../types";
 import { hassioApiResultExtractor, HassioResponse } from "../hassio/common";
 
 export interface SupervisorApiCallOptions {
@@ -9,7 +9,7 @@ export interface SupervisorApiCallOptions {
 }
 
 export const supervisorApiCall = async <T>(
-  hass: HomeAssistant,
+  hass: ThirdEye,
   endpoint: string,
   options?: SupervisorApiCallOptions
 ): Promise<T> => {

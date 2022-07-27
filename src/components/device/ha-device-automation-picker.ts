@@ -7,7 +7,7 @@ import {
   deviceAutomationsEqual,
   sortDeviceAutomations,
 } from "../../data/device_automation";
-import { HomeAssistant } from "../../types";
+import { ThirdEye } from "../../types";
 import "../ha-select";
 
 const NO_AUTOMATION_KEY = "NO_AUTOMATION";
@@ -16,7 +16,7 @@ const UNKNOWN_AUTOMATION_KEY = "UNKNOWN_AUTOMATION";
 export abstract class HaDeviceAutomationPicker<
   T extends DeviceAutomation
 > extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public label?: string;
 
@@ -43,12 +43,12 @@ export abstract class HaDeviceAutomationPicker<
   }
 
   private _localizeDeviceAutomation: (
-    hass: HomeAssistant,
+    hass: ThirdEye,
     automation: T
   ) => string;
 
   private _fetchDeviceAutomations: (
-    hass: HomeAssistant,
+    hass: ThirdEye,
     deviceId: string
   ) => Promise<T[]>;
 

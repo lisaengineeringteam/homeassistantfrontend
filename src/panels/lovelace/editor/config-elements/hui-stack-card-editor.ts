@@ -15,7 +15,7 @@ import {
 import { fireEvent, HASSDomEvent } from "../../../../common/dom/fire_event";
 import "../../../../components/ha-icon-button";
 import { LovelaceCardConfig, LovelaceConfig } from "../../../../data/lovelace";
-import { HomeAssistant } from "../../../../types";
+import { ThirdEye } from "../../../../types";
 import { StackCardConfig } from "../../cards/types";
 import { LovelaceCardEditor } from "../../types";
 import "../card-editor/hui-card-element-editor";
@@ -39,7 +39,7 @@ export class HuiStackCardEditor
   extends LitElement
   implements LovelaceCardEditor
 {
-  @property({ attribute: false }) public hass?: HomeAssistant;
+  @property({ attribute: false }) public hass?: ThirdEye;
 
   @property({ attribute: false }) public lovelace?: LovelaceConfig;
 

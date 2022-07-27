@@ -2,11 +2,11 @@ import { PropertyValues, ReactiveElement } from "lit";
 import { customElement, property } from "lit/decorators";
 import { relativeTime } from "../common/datetime/relative_time";
 import { capitalizeFirstLetter } from "../common/string/capitalize-first-letter";
-import type { HomeAssistant } from "../types";
+import type { ThirdEye } from "../types";
 
 @customElement("ha-relative-time")
 class HaRelativeTime extends ReactiveElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ attribute: false }) public datetime?: string | Date;
 

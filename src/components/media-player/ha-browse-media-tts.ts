@@ -18,7 +18,7 @@ import {
 } from "../../data/media-player";
 import { showAlertDialog } from "../../dialogs/generic/show-dialog-box";
 import { buttonLinkStyle } from "../../resources/styles";
-import { HomeAssistant } from "../../types";
+import { ThirdEye } from "../../types";
 import "../ha-select";
 import "../ha-textarea";
 
@@ -34,7 +34,7 @@ declare global {
 
 @customElement("ha-browse-media-tts")
 class BrowseMediaTTS extends LitElement {
-  @property() public hass!: HomeAssistant;
+  @property() public hass!: ThirdEye;
 
   @property() public item!: MediaPlayerItem;
 

@@ -3,7 +3,7 @@ import {
   FrontendLocaleData,
 } from "../data/translation";
 import { translationMetadata } from "../resources/translations-metadata";
-import { HomeAssistant } from "../types";
+import { ThirdEye } from "../types";
 
 const DEFAULT_BASE_URL = "/static/translations";
 const STORAGE = window.localStorage || {};
@@ -70,7 +70,7 @@ export function findAvailableLanguage(language: string) {
  * Get user selected locale data from backend
  */
 export async function getUserLocale(
-  hass: HomeAssistant
+  hass: ThirdEye
 ): Promise<Partial<FrontendLocaleData>> {
   const result = await fetchTranslationPreferences(hass);
   const language = result?.language;

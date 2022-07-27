@@ -22,7 +22,7 @@ import "../../components/ha-icon-next";
 import { getConfigEntries } from "../../data/config_entries";
 import { domainToName } from "../../data/integration";
 import { showZWaveJSAddNodeDialog } from "../../panels/config/integrations/integration-panels/zwave_js/show-dialog-zwave_js-add-node";
-import { HomeAssistant } from "../../types";
+import { ThirdEye } from "../../types";
 import { brandsUrl } from "../../util/brands-url";
 import { documentationUrl } from "../../util/documentation-url";
 import { configFlowContentStyles } from "./styles";
@@ -46,7 +46,7 @@ declare global {
 
 @customElement("step-flow-pick-handler")
 class StepFlowPickHandler extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ attribute: false }) public handlers!: FlowHandlers;
 

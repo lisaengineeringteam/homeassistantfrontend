@@ -29,7 +29,7 @@ export const demoConfig: HassConfig = {
   config_source: "storage",
   safe_mode: false,
   state: STATE_RUNNING,
-  internal_url: "http://homeassistant.local:8123",
+  internal_url: "http://thirdeye.local:8123",
   external_url: null,
   currency: "USD",
 };

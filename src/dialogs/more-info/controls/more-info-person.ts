@@ -7,11 +7,11 @@ import { fireEvent } from "../../../common/dom/fire_event";
 import "../../../components/ha-attributes";
 import "../../../components/map/ha-map";
 import { showZoneEditor } from "../../../data/zone";
-import { HomeAssistant } from "../../../types";
+import { ThirdEye } from "../../../types";
 
 @customElement("more-info-person")
 class MoreInfoPerson extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public stateObj?: HassEntity;
 

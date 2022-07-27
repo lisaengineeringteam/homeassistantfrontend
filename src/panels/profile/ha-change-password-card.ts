@@ -12,12 +12,12 @@ import "../../components/ha-card";
 import "../../components/ha-circular-progress";
 import "../../components/ha-textfield";
 import { haStyle } from "../../resources/styles";
-import type { HomeAssistant } from "../../types";
+import type { ThirdEye } from "../../types";
 import "../../components/ha-alert";
 
 @customElement("ha-change-password-card")
 class HaChangePasswordCard extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @state() private _loading = false;
 
@@ -151,7 +151,7 @@ class HaChangePasswordCard extends LitElement {
 
     try {
       await this.hass.callWS({
-        type: "config/auth_provider/homeassistant/change_password",
+        type: "config/auth_provider/thirdeye/change_password",
         current_password: this._currentPassword,
         new_password: this._password,
       });

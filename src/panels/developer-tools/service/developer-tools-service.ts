@@ -27,12 +27,12 @@ import {
 } from "../../../data/service";
 import { haStyle } from "../../../resources/styles";
 import "../../../styles/polymer-ha-style";
-import { HomeAssistant } from "../../../types";
+import { ThirdEye } from "../../../types";
 import { documentationUrl } from "../../../util/documentation-url";
 import { showToast } from "../../../util/toast";
 
 class HaPanelDevService extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ type: Boolean }) public narrow!: boolean;
 
@@ -276,7 +276,7 @@ class HaPanelDevService extends LitElement {
 
   private _fields = memoizeOne(
     (
-      serviceDomains: HomeAssistant["services"],
+      serviceDomains: ThirdEye["services"],
       domainService: string | undefined
     ): { target: boolean; fields: any[] } => {
       if (!domainService) {

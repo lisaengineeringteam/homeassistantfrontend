@@ -25,7 +25,7 @@ import {
   ZHAGroup,
 } from "../../../../../data/zha";
 import { haStyle } from "../../../../../resources/styles";
-import type { HomeAssistant } from "../../../../../types";
+import type { ThirdEye } from "../../../../../types";
 import "../../../ha-config-section";
 import { ItemSelectedEvent } from "./types";
 import "./zha-clusters-data-table";
@@ -33,7 +33,7 @@ import type { ZHAClustersDataTable } from "./zha-clusters-data-table";
 
 @customElement("zha-group-binding-control")
 export class ZHAGroupBindingControl extends LitElement {
-  @property({ attribute: false }) public hass?: HomeAssistant;
+  @property({ attribute: false }) public hass?: ThirdEye;
 
   @property() public isWide?: boolean;
 

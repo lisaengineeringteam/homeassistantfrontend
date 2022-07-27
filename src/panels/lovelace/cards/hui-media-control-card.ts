@@ -36,7 +36,7 @@ import {
   SUPPORT_SEEK,
   SUPPORT_TURN_ON,
 } from "../../../data/media-player";
-import type { HomeAssistant } from "../../../types";
+import type { ThirdEye } from "../../../types";
 import { findEntities } from "../common/find-entities";
 import { hasConfigOrEntityChanged } from "../common/has-changed";
 import { installResizeObserver } from "../common/install-resize-observer";
@@ -53,7 +53,7 @@ export class HuiMediaControlCard extends LitElement implements LovelaceCard {
   }
 
   public static getStubConfig(
-    hass: HomeAssistant,
+    hass: ThirdEye,
     entities: string[],
     entitiesFallback: string[]
   ): MediaControlCardConfig {
@@ -70,7 +70,7 @@ export class HuiMediaControlCard extends LitElement implements LovelaceCard {
     return { type: "media-control", entity: foundEntities[0] || "" };
   }
 
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @state() private _config?: MediaControlCardConfig;
 
@@ -356,7 +356,7 @@ export class HuiMediaControlCard extends LitElement implements LovelaceCard {
       return;
     }
 
-    const oldHass = changedProps.get("hass") as HomeAssistant | undefined;
+    const oldHass = changedProps.get("hass") as ThirdEye | undefined;
 
     const oldImage =
       oldHass?.states[this._config.entity]?.attributes.entity_picture_local ||
@@ -385,7 +385,7 @@ export class HuiMediaControlCard extends LitElement implements LovelaceCard {
 
     const stateObj = this._stateObj;
 
-    const oldHass = changedProps.get("hass") as HomeAssistant | undefined;
+    const oldHass = changedProps.get("hass") as ThirdEye | undefined;
     const oldConfig = changedProps.get("_config") as
       | MediaControlCardConfig
       | undefined;

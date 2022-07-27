@@ -10,7 +10,7 @@ import { customElement, property, state } from "lit/decorators";
 import "../../../components/ha-cover-controls";
 import "../../../components/ha-cover-tilt-controls";
 import { CoverEntity, isTiltOnly } from "../../../data/cover";
-import { HomeAssistant } from "../../../types";
+import { ThirdEye } from "../../../types";
 import { hasConfigOrEntityChanged } from "../common/has-changed";
 import "../components/hui-generic-entity-row";
 import { createEntityNotFoundWarning } from "../components/hui-warning";
@@ -18,7 +18,7 @@ import { EntityConfig, LovelaceRow } from "./types";
 
 @customElement("hui-cover-entity-row")
 class HuiCoverEntityRow extends LitElement implements LovelaceRow {
-  @property({ attribute: false }) public hass?: HomeAssistant;
+  @property({ attribute: false }) public hass?: ThirdEye;
 
   @state() private _config?: EntityConfig;
 

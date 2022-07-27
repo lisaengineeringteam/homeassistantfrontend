@@ -3,13 +3,13 @@ import {
   HassRouterPage,
   RouterOptions,
 } from "../../../layouts/hass-router-page";
-import { HomeAssistant } from "../../../types";
+import { ThirdEye } from "../../../types";
 import "./ha-config-area-page";
 import "./ha-config-areas-dashboard";
 
 @customElement("ha-config-areas")
 class HaConfigAreas extends HassRouterPage {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public narrow!: boolean;
 

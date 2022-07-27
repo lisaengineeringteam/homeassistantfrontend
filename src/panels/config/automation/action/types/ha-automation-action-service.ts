@@ -6,7 +6,7 @@ import { hasTemplate } from "../../../../../common/string/has-template";
 import { entityIdOrAll } from "../../../../../common/structs/is-entity-id";
 import "../../../../../components/ha-service-control";
 import { ServiceAction } from "../../../../../data/script";
-import type { HomeAssistant } from "../../../../../types";
+import type { ThirdEye } from "../../../../../types";
 import { ActionElement } from "../ha-automation-action-row";
 
 const actionStruct = object({
@@ -18,7 +18,7 @@ const actionStruct = object({
 
 @customElement("ha-automation-action-service")
 export class HaServiceAction extends LitElement implements ActionElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ attribute: false }) public action!: ServiceAction;
 

@@ -26,7 +26,7 @@ import { css, html, svg, SVGTemplateResult, TemplateResult } from "lit";
 import { styleMap } from "lit/directives/style-map";
 import { formatNumber } from "../common/number/format_number";
 import "../components/ha-svg-icon";
-import type { HomeAssistant } from "../types";
+import type { ThirdEye } from "../types";
 
 interface ForecastAttribute {
   temperature: number;
@@ -165,7 +165,7 @@ const getWindBearing = (bearing: number | string): string => {
 };
 
 export const getWind = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   stateObj: WeatherEntity,
   speed?: number,
   bearing?: number | string
@@ -190,7 +190,7 @@ export const getWind = (
 };
 
 export const getWeatherUnit = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   stateObj: WeatherEntity,
   measure: string
 ): string => {
@@ -222,7 +222,7 @@ export const getWeatherUnit = (
 };
 
 export const getSecondaryWeatherAttribute = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   stateObj: WeatherEntity
 ): TemplateResult | undefined => {
   const extrema = getWeatherExtrema(hass, stateObj);
@@ -262,7 +262,7 @@ export const getSecondaryWeatherAttribute = (
 };
 
 const getWeatherExtrema = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   stateObj: WeatherEntity
 ): TemplateResult | undefined => {
   if (!stateObj.attributes.forecast?.length) {

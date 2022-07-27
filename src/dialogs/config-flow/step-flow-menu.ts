@@ -2,7 +2,7 @@ import "@material/mwc-list/mwc-list-item";
 import { css, html, LitElement, TemplateResult } from "lit";
 import { customElement, property } from "lit/decorators";
 import type { DataEntryFlowStepMenu } from "../../data/data_entry_flow";
-import type { HomeAssistant } from "../../types";
+import type { ThirdEye } from "../../types";
 import type { FlowConfig } from "./show-dialog-data-entry-flow";
 import "../../components/ha-icon-next";
 import { configFlowContentStyles } from "./styles";
@@ -12,7 +12,7 @@ import { fireEvent } from "../../common/dom/fire_event";
 class StepFlowMenu extends LitElement {
   @property({ attribute: false }) public flowConfig!: FlowConfig;
 
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ attribute: false }) public step!: DataEntryFlowStepMenu;
 

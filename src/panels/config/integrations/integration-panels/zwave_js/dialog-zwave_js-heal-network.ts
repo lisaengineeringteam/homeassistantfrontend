@@ -15,12 +15,12 @@ import {
   ZWaveJSNetwork,
 } from "../../../../../data/zwave_js";
 import { haStyleDialog } from "../../../../../resources/styles";
-import { HomeAssistant } from "../../../../../types";
+import { ThirdEye } from "../../../../../types";
 import { ZWaveJSHealNetworkDialogParams } from "./show-dialog-zwave_js-heal-network";
 
 @customElement("dialog-zwave_js-heal-network")
 class DialogZWaveJSHealNetwork extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @state() private entry_id?: string;
 

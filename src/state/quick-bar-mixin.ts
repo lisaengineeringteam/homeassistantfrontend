@@ -6,7 +6,7 @@ import {
   QuickBarParams,
   showQuickBar,
 } from "../dialogs/quick-bar/show-dialog-quick-bar";
-import { Constructor, HomeAssistant } from "../types";
+import { Constructor, ThirdEye } from "../types";
 import { storeState } from "../util/ha-pref-storage";
 import { showToast } from "../util/toast";
 import { HassElement } from "./hass-element";
@@ -15,7 +15,7 @@ declare global {
   interface HASSDomEvents {
     "hass-quick-bar": QuickBarParams;
     "hass-quick-bar-trigger": KeyboardEvent;
-    "hass-enable-shortcuts": HomeAssistant["enableShortcuts"];
+    "hass-enable-shortcuts": ThirdEye["enableShortcuts"];
   }
 }
 

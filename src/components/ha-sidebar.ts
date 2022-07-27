@@ -47,7 +47,7 @@ import {
 import { updateCanInstall, UpdateEntity } from "../data/update";
 import { actionHandler } from "../panels/lovelace/common/directives/action-handler-directive";
 import { haStyleScrollbar } from "../resources/styles";
-import type { HomeAssistant, PanelInfo, Route } from "../types";
+import type { ThirdEye, PanelInfo, Route } from "../types";
 import "./ha-icon";
 import "./ha-icon-button";
 import "./ha-menu-button";
@@ -140,8 +140,8 @@ const defaultPanelSorter = (
 
 const computePanels = memoizeOne(
   (
-    panels: HomeAssistant["panels"],
-    defaultPanel: HomeAssistant["defaultPanel"],
+    panels: ThirdEye["panels"],
+    defaultPanel: ThirdEye["defaultPanel"],
     panelsOrder: string[],
     hiddenPanels: string[]
   ): [PanelInfo[], PanelInfo[]] => {
@@ -178,7 +178,7 @@ let Sortable;
 
 @customElement("ha-sidebar")
 class HaSidebar extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ type: Boolean, reflect: true }) public narrow!: boolean;
 
@@ -249,7 +249,7 @@ class HaSidebar extends LitElement {
     if (!this.hass || !changedProps.has("hass")) {
       return false;
     }
-    const oldHass = changedProps.get("hass") as HomeAssistant;
+    const oldHass = changedProps.get("hass") as ThirdEye;
     if (!oldHass) {
       return true;
     }
@@ -288,7 +288,7 @@ class HaSidebar extends LitElement {
       return;
     }
 
-    const oldHass = changedProps.get("hass") as HomeAssistant | undefined;
+    const oldHass = changedProps.get("hass") as ThirdEye | undefined;
     if (!oldHass || oldHass.locale !== this.hass.locale) {
       toggleAttribute(this, "rtl", computeRTL(this.hass));
     }
@@ -346,7 +346,7 @@ class HaSidebar extends LitElement {
         ? html`<mwc-button outlined @click=${this._closeEditMode}>
             ${this.hass.localize("ui.sidebar.done")}
           </mwc-button>`
-        : html`<div class="title">Home Assistant</div>`}
+        : html`<div class="title">Third Eye</div>`}
     </div>`;
   }
 

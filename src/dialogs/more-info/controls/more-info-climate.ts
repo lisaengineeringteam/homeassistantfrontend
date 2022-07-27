@@ -28,10 +28,10 @@ import {
   CLIMATE_SUPPORT_TARGET_TEMPERATURE_RANGE,
   compareClimateHvacModes,
 } from "../../../data/climate";
-import { HomeAssistant } from "../../../types";
+import { ThirdEye } from "../../../types";
 
 class MoreInfoClimate extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public stateObj?: ClimateEntity;
 

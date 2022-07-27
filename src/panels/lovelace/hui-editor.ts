@@ -27,7 +27,7 @@ import {
 } from "../../dialogs/generic/show-dialog-box";
 import "../../layouts/ha-app-layout";
 import { haStyle } from "../../resources/styles";
-import type { HomeAssistant } from "../../types";
+import type { ThirdEye } from "../../types";
 import { showToast } from "../../util/toast";
 import type { Lovelace } from "./types";
 
@@ -38,7 +38,7 @@ const lovelaceStruct = type({
 
 @customElement("hui-editor")
 class LovelaceFullConfigEditor extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ attribute: false }) public lovelace?: Lovelace;
 

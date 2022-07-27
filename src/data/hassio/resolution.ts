@@ -1,5 +1,5 @@
 import { atLeastVersion } from "../../common/config/version";
-import { HomeAssistant } from "../../types";
+import { ThirdEye } from "../../types";
 import { hassioApiResultExtractor, HassioResponse } from "./common";
 
 export interface HassioResolution {
@@ -10,7 +10,7 @@ export interface HassioResolution {
 }
 
 export const fetchHassioResolution = async (
-  hass: HomeAssistant
+  hass: ThirdEye
 ): Promise<HassioResolution> => {
   if (atLeastVersion(hass.config.version, 2021, 2, 4)) {
     return hass.callWS({

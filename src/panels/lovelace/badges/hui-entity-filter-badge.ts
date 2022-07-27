@@ -1,6 +1,6 @@
 import { PropertyValues, ReactiveElement } from "lit";
 import { property, state } from "lit/decorators";
-import { HomeAssistant } from "../../../types";
+import { ThirdEye } from "../../../types";
 import { evaluateFilter } from "../common/evaluate-filter";
 import { processConfigEntities } from "../common/process-config-entities";
 import { createBadgeElement } from "../create-element/create-badge-element";
@@ -9,7 +9,7 @@ import { LovelaceBadge } from "../types";
 import { EntityFilterBadgeConfig } from "./types";
 
 class EntityFilterBadge extends ReactiveElement implements LovelaceBadge {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @state() private _config?: EntityFilterBadgeConfig;
 
@@ -55,7 +55,7 @@ class EntityFilterBadge extends ReactiveElement implements LovelaceBadge {
       changedProperties.has("_config") ||
       (changedProperties.has("hass") &&
         this.haveEntitiesChanged(
-          changedProperties.get("hass") as HomeAssistant | undefined
+          changedProperties.get("hass") as ThirdEye | undefined
         ))
     ) {
       return true;
@@ -135,7 +135,7 @@ class EntityFilterBadge extends ReactiveElement implements LovelaceBadge {
     this.style.display = "inline";
   }
 
-  private haveEntitiesChanged(oldHass?: HomeAssistant): boolean {
+  private haveEntitiesChanged(oldHass?: ThirdEye): boolean {
     if (!oldHass) {
       return true;
     }

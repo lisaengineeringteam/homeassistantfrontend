@@ -16,11 +16,11 @@ import { computeDomain } from "../../common/entity/compute_domain";
 import { computeStateDomain } from "../../common/entity/compute_state_domain";
 import { iconColorCSS } from "../../common/style/icon_color_css";
 import { cameraUrlWithWidthHeight } from "../../data/camera";
-import type { HomeAssistant } from "../../types";
+import type { ThirdEye } from "../../types";
 import "../ha-state-icon";
 
 export class StateBadge extends LitElement {
-  public hass?: HomeAssistant;
+  public hass?: ThirdEye;
 
   @property() public stateObj?: HassEntity;
 

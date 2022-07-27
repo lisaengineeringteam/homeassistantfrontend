@@ -5,11 +5,11 @@ import memoizeOne from "memoize-one";
 import { isComponentLoaded } from "../../common/config/is_component_loaded";
 import { fireEvent } from "../../common/dom/fire_event";
 import "../../panels/logbook/ha-logbook";
-import type { HomeAssistant } from "../../types";
+import type { ThirdEye } from "../../types";
 
 @customElement("ha-more-info-logbook")
 export class MoreInfoLogbook extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public entityId!: string;
 

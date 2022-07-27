@@ -8,7 +8,7 @@ import {
 } from "lit";
 import { customElement, property, state } from "lit/decorators";
 import "../../../components/ha-climate-state";
-import { HomeAssistant } from "../../../types";
+import { ThirdEye } from "../../../types";
 import { hasConfigOrEntityChanged } from "../common/has-changed";
 import "../components/hui-generic-entity-row";
 import { createEntityNotFoundWarning } from "../components/hui-warning";
@@ -16,7 +16,7 @@ import { EntityConfig, LovelaceRow } from "./types";
 
 @customElement("hui-climate-entity-row")
 class HuiClimateEntityRow extends LitElement implements LovelaceRow {
-  @property({ attribute: false }) public hass?: HomeAssistant;
+  @property({ attribute: false }) public hass?: ThirdEye;
 
   @state() private _config?: EntityConfig;
 

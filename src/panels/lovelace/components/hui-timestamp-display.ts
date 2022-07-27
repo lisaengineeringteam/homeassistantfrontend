@@ -6,7 +6,7 @@ import { formatTime } from "../../../common/datetime/format_time";
 import { relativeTime } from "../../../common/datetime/relative_time";
 import { capitalizeFirstLetter } from "../../../common/string/capitalize-first-letter";
 import { FrontendLocaleData } from "../../../data/translation";
-import { HomeAssistant } from "../../../types";
+import { ThirdEye } from "../../../types";
 import { TimestampRenderingFormat } from "./types";
 
 const FORMATS: {
@@ -20,7 +20,7 @@ const INTERVAL_FORMAT = ["relative", "total"];
 
 @customElement("hui-timestamp-display")
 class HuiTimestampDisplay extends LitElement {
-  @property({ attribute: false }) public hass?: HomeAssistant;
+  @property({ attribute: false }) public hass?: ThirdEye;
 
   @property() public ts?: Date;
 

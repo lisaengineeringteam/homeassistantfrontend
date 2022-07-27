@@ -5,7 +5,7 @@ import { computeRTLDirection } from "../../../../../common/util/compute_rtl";
 import "../../../../../components/ha-code-editor";
 import { createCloseHeading } from "../../../../../components/ha-dialog";
 import { haStyleDialog } from "../../../../../resources/styles";
-import { HomeAssistant } from "../../../../../types";
+import { ThirdEye } from "../../../../../types";
 import { ZHADeviceChildrenDialogParams } from "./show-dialog-zha-device-children";
 import "../../../../../components/data-table/ha-data-table";
 import type {
@@ -24,7 +24,7 @@ export interface DeviceRowData extends DataTableRowData {
 
 @customElement("dialog-zha-device-children")
 class DialogZHADeviceChildren extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @state() private _device: ZHADevice | undefined;
 

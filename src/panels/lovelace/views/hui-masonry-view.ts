@@ -18,7 +18,7 @@ import type {
   LovelaceViewConfig,
   LovelaceViewElement,
 } from "../../../data/lovelace";
-import type { HomeAssistant } from "../../../types";
+import type { ThirdEye } from "../../../types";
 import type { HuiErrorCard } from "../cards/hui-error-card";
 import { computeCardSize } from "../common/compute-card-size";
 import type { Lovelace, LovelaceBadge, LovelaceCard } from "../types";
@@ -42,7 +42,7 @@ const getColumnIndex = (columnSizes: number[], size: number) => {
 };
 
 export class MasonryView extends LitElement implements LovelaceViewElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ attribute: false }) public lovelace?: Lovelace;
 
@@ -139,7 +139,7 @@ export class MasonryView extends LitElement implements LovelaceViewElement {
 
     if (changedProperties.has("hass")) {
       const oldHass = changedProperties.get("hass") as
-        | HomeAssistant
+        | ThirdEye
         | undefined;
 
       if (this.hass!.dockedSidebar !== oldHass?.dockedSidebar) {

@@ -11,7 +11,7 @@ import type {
   DataTableRowData,
   HaDataTable,
 } from "../components/data-table/ha-data-table";
-import type { HomeAssistant, Route } from "../types";
+import type { ThirdEye, Route } from "../types";
 import "./hass-tabs-subpage";
 import type { PageNavigation } from "./hass-tabs-subpage";
 
@@ -25,7 +25,7 @@ declare global {
 
 @customElement("hass-tabs-subpage-data-table")
 export class HaTabsSubpageDataTable extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ attribute: false }) public localizeFunc?: LocalizeFunc;
 

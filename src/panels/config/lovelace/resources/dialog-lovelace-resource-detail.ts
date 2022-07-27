@@ -8,7 +8,7 @@ import "../../../../components/ha-form/ha-form";
 import { HaFormSchema } from "../../../../components/ha-form/types";
 import { LovelaceResourcesMutableParams } from "../../../../data/lovelace";
 import { haStyleDialog } from "../../../../resources/styles";
-import { HomeAssistant } from "../../../../types";
+import { ThirdEye } from "../../../../types";
 import { LovelaceResourceDetailsDialogParams } from "./show-dialog-lovelace-resource-detail";
 
 const detectResourceType = (url?: string) => {
@@ -30,7 +30,7 @@ const detectResourceType = (url?: string) => {
 
 @customElement("dialog-lovelace-resource-detail")
 export class DialogLovelaceResourceDetail extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @state() private _params?: LovelaceResourceDetailsDialogParams;
 

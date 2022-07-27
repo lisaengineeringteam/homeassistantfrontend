@@ -3,7 +3,7 @@ import { customElement, property } from "lit/decorators";
 import { supportsFeature } from "../../../common/entity/supports-feature";
 import "../../../components/ha-attributes";
 import { RemoteEntity, REMOTE_SUPPORT_ACTIVITY } from "../../../data/remote";
-import { HomeAssistant } from "../../../types";
+import { ThirdEye } from "../../../types";
 import "@material/mwc-list/mwc-list-item";
 import "@material/mwc-list/mwc-list";
 import { stopPropagation } from "../../../common/dom/stop_propagation";
@@ -12,7 +12,7 @@ const filterExtraAttributes = "activity_list,current_activity";
 
 @customElement("more-info-remote")
 class MoreInfoRemote extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public stateObj?: RemoteEntity;
 

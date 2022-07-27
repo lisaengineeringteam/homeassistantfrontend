@@ -17,7 +17,7 @@ import "../../components/ha-form/ha-form";
 import "../../components/ha-markdown";
 import "../../components/ha-alert";
 import type { DataEntryFlowStepForm } from "../../data/data_entry_flow";
-import type { HomeAssistant } from "../../types";
+import type { ThirdEye } from "../../types";
 import type { FlowConfig } from "./show-dialog-data-entry-flow";
 import { configFlowContentStyles } from "./styles";
 
@@ -27,7 +27,7 @@ class StepFlowForm extends LitElement {
 
   @property({ attribute: false }) public step!: DataEntryFlowStepForm;
 
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @state() private _loading = false;
 

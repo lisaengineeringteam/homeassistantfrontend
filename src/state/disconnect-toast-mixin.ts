@@ -37,7 +37,7 @@ export default <T extends Constructor<HassBaseEl>>(superClass: T) =>
         showToast(this, {
           message:
             this.hass!.localize("ui.notification_toast.starting") ||
-            "Home Assistant is starting, not everything will be available until it is finished.",
+            "Third Eye is starting, not everything will be available until it is finished.",
           duration: 0,
           dismissable: false,
           action: {

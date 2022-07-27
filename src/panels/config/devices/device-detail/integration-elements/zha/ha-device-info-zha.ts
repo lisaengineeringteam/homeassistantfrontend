@@ -11,12 +11,12 @@ import "../../../../../../components/ha-expansion-panel";
 import { DeviceRegistryEntry } from "../../../../../../data/device_registry";
 import { fetchZHADevice, ZHADevice } from "../../../../../../data/zha";
 import { haStyle } from "../../../../../../resources/styles";
-import { HomeAssistant } from "../../../../../../types";
+import { ThirdEye } from "../../../../../../types";
 import { formatAsPaddedHex } from "../../../../integrations/integration-panels/zha/functions";
 
 @customElement("ha-device-info-zha")
 export class HaDeviceActionsZha extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public device!: DeviceRegistryEntry;
 

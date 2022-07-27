@@ -6,13 +6,13 @@ import type {
   LocationSelector,
   LocationSelectorValue,
 } from "../../data/selector";
-import type { HomeAssistant } from "../../types";
+import type { ThirdEye } from "../../types";
 import type { MarkerLocation } from "../map/ha-locations-editor";
 import "../map/ha-locations-editor";
 
 @customElement("ha-selector-location")
 export class HaLocationSelector extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ attribute: false }) public selector!: LocationSelector;
 

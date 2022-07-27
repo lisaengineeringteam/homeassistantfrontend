@@ -1,14 +1,14 @@
 import { computeRTL } from "../../../common/util/compute_rtl";
 import "../../../components/entity/ha-state-label-badge";
 import { LovelaceBadgeConfig } from "../../../data/lovelace";
-import { HomeAssistant } from "../../../types";
+import { ThirdEye } from "../../../types";
 import { createErrorBadgeConfig } from "../badges/hui-error-badge";
 import { createBadgeElement } from "../create-element/create-badge-element";
 import { LovelaceBadge } from "../types";
 import { ConfigError } from "./types";
 
 export class HuiBadgePreview extends HTMLElement {
-  private _hass?: HomeAssistant;
+  private _hass?: ThirdEye;
 
   private _element?: LovelaceBadge;
 
@@ -28,7 +28,7 @@ export class HuiBadgePreview extends HTMLElement {
     });
   }
 
-  set hass(hass: HomeAssistant) {
+  set hass(hass: ThirdEye) {
     if (!this._hass || this._hass.language !== hass.language) {
       this.style.direction = computeRTL(hass) ? "rtl" : "ltr";
     }

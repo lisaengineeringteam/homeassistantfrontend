@@ -22,13 +22,13 @@ import {
 } from "../../../../../data/zha";
 import "../../../../../layouts/hass-tabs-subpage";
 import { PolymerChangedEvent } from "../../../../../polymer-types";
-import type { HomeAssistant, Route } from "../../../../../types";
+import type { ThirdEye, Route } from "../../../../../types";
 import { formatAsPaddedHex } from "./functions";
 import { zhaTabs } from "./zha-config-dashboard";
 
 @customElement("zha-network-visualization-page")
 export class ZHANetworkVisualizationPage extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ attribute: false }) public route!: Route;
 

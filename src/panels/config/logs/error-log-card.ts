@@ -19,12 +19,12 @@ import "../../../components/ha-select";
 import { fetchErrorLog } from "../../../data/error_log";
 import { extractApiErrorMessage } from "../../../data/hassio/common";
 import { fetchHassioLogs } from "../../../data/hassio/supervisor";
-import { HomeAssistant } from "../../../types";
+import { ThirdEye } from "../../../types";
 import { debounce } from "../../../common/util/debounce";
 
 @customElement("error-log-card")
 class ErrorLogCard extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public filter = "";
 

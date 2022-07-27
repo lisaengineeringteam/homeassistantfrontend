@@ -1,5 +1,5 @@
 import { HassEventBase } from "home-assistant-js-websocket";
-import { HomeAssistant } from "../types";
+import { ThirdEye } from "../types";
 
 export const EVENT_TAG_SCANNED = "tag_scanned";
 
@@ -23,13 +23,13 @@ export interface UpdateTagParams {
   description?: Tag["description"];
 }
 
-export const fetchTags = async (hass: HomeAssistant) =>
+export const fetchTags = async (hass: ThirdEye) =>
   hass.callWS<Tag[]>({
     type: "tag/list",
   });
 
 export const createTag = async (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   params: UpdateTagParams,
   tagId?: string
 ) =>
@@ -40,7 +40,7 @@ export const createTag = async (
   });
 
 export const updateTag = async (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   tagId: string,
   params: UpdateTagParams
 ) =>
@@ -50,7 +50,7 @@ export const updateTag = async (
     tag_id: tagId,
   });
 
-export const deleteTag = async (hass: HomeAssistant, tagId: string) =>
+export const deleteTag = async (hass: ThirdEye, tagId: string) =>
   hass.callWS<void>({
     type: "tag/delete",
     tag_id: tagId,

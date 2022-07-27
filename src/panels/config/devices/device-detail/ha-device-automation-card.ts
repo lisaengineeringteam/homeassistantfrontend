@@ -10,7 +10,7 @@ import {
 } from "../../../../data/device_automation";
 import { showScriptEditor } from "../../../../data/script";
 import { buttonLinkStyle } from "../../../../resources/styles";
-import { HomeAssistant } from "../../../../types";
+import { ThirdEye } from "../../../../types";
 
 declare global {
   interface HASSDomEvents {
@@ -21,7 +21,7 @@ declare global {
 export abstract class HaDeviceAutomationCard<
   T extends DeviceAutomation
 > extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public deviceId?: string;
 
@@ -36,7 +36,7 @@ export abstract class HaDeviceAutomationCard<
   protected type = "";
 
   private _localizeDeviceAutomation: (
-    hass: HomeAssistant,
+    hass: ThirdEye,
     automation: T
   ) => string;
 
@@ -51,7 +51,7 @@ export abstract class HaDeviceAutomationCard<
     if (changedProps.has("deviceId") || changedProps.has("automations")) {
       return true;
     }
-    const oldHass = changedProps.get("hass") as HomeAssistant | undefined;
+    const oldHass = changedProps.get("hass") as ThirdEye | undefined;
     if (!oldHass || oldHass.language !== this.hass.language) {
       return true;
     }

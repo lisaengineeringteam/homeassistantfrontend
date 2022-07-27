@@ -1,4 +1,4 @@
-import { HomeAssistant } from "../types";
+import { ThirdEye } from "../types";
 
 export interface GoogleEntity {
   entity_id: string;
@@ -6,8 +6,8 @@ export interface GoogleEntity {
   might_2fa: boolean;
 }
 
-export const fetchCloudGoogleEntities = (hass: HomeAssistant) =>
+export const fetchCloudGoogleEntities = (hass: ThirdEye) =>
   hass.callWS<GoogleEntity[]>({ type: "cloud/google_assistant/entities" });
 
-export const syncCloudGoogleEntities = (hass: HomeAssistant) =>
+export const syncCloudGoogleEntities = (hass: ThirdEye) =>
   hass.callApi("POST", "cloud/google_actions/sync");

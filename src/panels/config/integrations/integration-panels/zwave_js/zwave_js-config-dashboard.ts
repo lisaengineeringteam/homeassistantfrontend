@@ -39,7 +39,7 @@ import {
 } from "../../../../../data/config_entries";
 import "../../../../../layouts/hass-tabs-subpage";
 import { haStyle } from "../../../../../resources/styles";
-import type { HomeAssistant, Route } from "../../../../../types";
+import type { ThirdEye, Route } from "../../../../../types";
 import "../../../ha-config-section";
 import { showZWaveJSAddNodeDialog } from "./show-dialog-zwave_js-add-node";
 import { showZWaveJSHealNetworkDialog } from "./show-dialog-zwave_js-heal-network";
@@ -51,7 +51,7 @@ import { SubscribeMixin } from "../../../../../mixins/subscribe-mixin";
 
 @customElement("zwave_js-config-dashboard")
 class ZWaveJSConfigDashboard extends SubscribeMixin(LitElement) {
-  @property({ type: Object }) public hass!: HomeAssistant;
+  @property({ type: Object }) public hass!: ThirdEye;
 
   @property({ type: Object }) public route!: Route;
 

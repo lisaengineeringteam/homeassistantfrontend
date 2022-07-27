@@ -2,12 +2,12 @@ import "../../../../../components/ha-textarea";
 import { html, LitElement } from "lit";
 import { customElement, property } from "lit/decorators";
 import type { TemplateTrigger } from "../../../../../data/automation";
-import type { HomeAssistant } from "../../../../../types";
+import type { ThirdEye } from "../../../../../types";
 import { handleChangeEvent } from "../ha-automation-trigger-row";
 
 @customElement("ha-automation-trigger-template")
 export class HaTemplateTrigger extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ attribute: false }) public trigger!: TemplateTrigger;
 

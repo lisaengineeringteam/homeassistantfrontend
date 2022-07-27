@@ -3,7 +3,7 @@ import {
   HassEntityBase,
 } from "home-assistant-js-websocket";
 import { timeCacheEntityPromiseFunc } from "../common/util/time-cache-entity-promise-func";
-import { HomeAssistant } from "../types";
+import { ThirdEye } from "../types";
 import { getSignedPath } from "./auth";
 
 export const CAMERA_SUPPORT_ON_OFF = 1;
@@ -51,7 +51,7 @@ export const computeMJPEGStreamUrl = (entity: CameraEntity) =>
   `/api/camera_proxy_stream/${entity.entity_id}?token=${entity.attributes.access_token}`;
 
 export const fetchThumbnailUrlWithCache = async (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   entityId: string,
   width: number,
   height: number
@@ -67,7 +67,7 @@ export const fetchThumbnailUrlWithCache = async (
 };
 
 export const fetchThumbnailUrl = async (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   entityId: string
 ) => {
   const path = await getSignedPath(hass, `/api/camera_proxy/${entityId}`);
@@ -75,7 +75,7 @@ export const fetchThumbnailUrl = async (
 };
 
 export const fetchStreamUrl = async (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   entityId: string,
   format?: "hls"
 ) => {
@@ -93,7 +93,7 @@ export const fetchStreamUrl = async (
 };
 
 export const handleWebRtcOffer = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   entityId: string,
   offer: string
 ) =>
@@ -103,14 +103,14 @@ export const handleWebRtcOffer = (
     offer: offer,
   });
 
-export const fetchCameraPrefs = (hass: HomeAssistant, entityId: string) =>
+export const fetchCameraPrefs = (hass: ThirdEye, entityId: string) =>
   hass.callWS<CameraPreferences>({
     type: "camera/get_prefs",
     entity_id: entityId,
   });
 
 export const updateCameraPrefs = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   entityId: string,
   prefs: {
     preload_stream?: boolean;

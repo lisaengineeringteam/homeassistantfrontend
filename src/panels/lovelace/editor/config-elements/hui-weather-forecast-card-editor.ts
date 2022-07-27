@@ -4,7 +4,7 @@ import { customElement, property, state } from "lit/decorators";
 import { assert, boolean, object, optional, string, assign } from "superstruct";
 import { memoize } from "@fullcalendar/common";
 import { fireEvent } from "../../../../common/dom/fire_event";
-import type { HomeAssistant } from "../../../../types";
+import type { ThirdEye } from "../../../../types";
 import type { WeatherForecastCardConfig } from "../../cards/types";
 import type { LovelaceCardEditor } from "../../types";
 import { actionConfigStruct } from "../structs/action-struct";
@@ -34,7 +34,7 @@ export class HuiWeatherForecastCardEditor
   extends LitElement
   implements LovelaceCardEditor
 {
-  @property({ attribute: false }) public hass?: HomeAssistant;
+  @property({ attribute: false }) public hass?: ThirdEye;
 
   @state() private _config?: WeatherForecastCardConfig;
 

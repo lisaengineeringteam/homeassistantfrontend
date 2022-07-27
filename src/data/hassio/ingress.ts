@@ -1,5 +1,5 @@
 import { atLeastVersion } from "../../common/config/version";
-import { HomeAssistant } from "../../types";
+import { ThirdEye } from "../../types";
 import { HassioResponse } from "./common";
 import { CreateSessionResponse } from "./supervisor";
 
@@ -11,7 +11,7 @@ function setIngressCookie(session: string): string {
 }
 
 export const createHassioSession = async (
-  hass: HomeAssistant
+  hass: ThirdEye
 ): Promise<string> => {
   if (atLeastVersion(hass.config.version, 2021, 2, 4)) {
     const wsResponse: { session: string } = await hass.callWS({
@@ -29,7 +29,7 @@ export const createHassioSession = async (
 };
 
 export const validateHassioSession = async (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   session: string
 ): Promise<void> => {
   if (atLeastVersion(hass.config.version, 2021, 2, 4)) {

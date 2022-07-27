@@ -1,5 +1,5 @@
 import { UNAVAILABLE } from "../../../data/entity";
-import { HomeAssistant } from "../../../types";
+import { ThirdEye } from "../../../types";
 
 export interface Condition {
   entity: string;
@@ -9,7 +9,7 @@ export interface Condition {
 
 export function checkConditionsMet(
   conditions: Condition[],
-  hass: HomeAssistant
+  hass: ThirdEye
 ): boolean {
   return conditions.every((c) => {
     const state = hass.states[c.entity]

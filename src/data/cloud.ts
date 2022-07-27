@@ -1,6 +1,6 @@
 import { EntityFilter } from "../common/entity/entity_filter";
 import { PlaceholderContainer } from "../panels/config/automation/thingtalk/dialog-thingtalk";
-import { HomeAssistant } from "../types";
+import { ThirdEye } from "../types";
 import { AutomationConfig } from "./automation";
 
 interface CloudStatusNotLoggedIn {
@@ -84,7 +84,7 @@ export interface ThingTalkConversion {
 }
 
 export const cloudLogin = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   email: string,
   password: string
 ) =>
@@ -93,16 +93,16 @@ export const cloudLogin = (
     password,
   });
 
-export const cloudLogout = (hass: HomeAssistant) =>
+export const cloudLogout = (hass: ThirdEye) =>
   hass.callApi("POST", "cloud/logout");
 
-export const cloudForgotPassword = (hass: HomeAssistant, email: string) =>
+export const cloudForgotPassword = (hass: ThirdEye, email: string) =>
   hass.callApi("POST", "cloud/forgot_password", {
     email,
   });
 
 export const cloudRegister = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   email: string,
   password: string
 ) =>
@@ -111,44 +111,44 @@ export const cloudRegister = (
     password,
   });
 
-export const cloudResendVerification = (hass: HomeAssistant, email: string) =>
+export const cloudResendVerification = (hass: ThirdEye, email: string) =>
   hass.callApi("POST", "cloud/resend_confirm", {
     email,
   });
 
-export const fetchCloudStatus = (hass: HomeAssistant) =>
+export const fetchCloudStatus = (hass: ThirdEye) =>
   hass.callWS<CloudStatus>({ type: "cloud/status" });
 
-export const createCloudhook = (hass: HomeAssistant, webhookId: string) =>
+export const createCloudhook = (hass: ThirdEye, webhookId: string) =>
   hass.callWS<CloudWebhook>({
     type: "cloud/cloudhook/create",
     webhook_id: webhookId,
   });
 
-export const deleteCloudhook = (hass: HomeAssistant, webhookId: string) =>
+export const deleteCloudhook = (hass: ThirdEye, webhookId: string) =>
   hass.callWS({
     type: "cloud/cloudhook/delete",
     webhook_id: webhookId,
   });
 
-export const connectCloudRemote = (hass: HomeAssistant) =>
+export const connectCloudRemote = (hass: ThirdEye) =>
   hass.callWS({
     type: "cloud/remote/connect",
   });
 
-export const disconnectCloudRemote = (hass: HomeAssistant) =>
+export const disconnectCloudRemote = (hass: ThirdEye) =>
   hass.callWS({
     type: "cloud/remote/disconnect",
   });
 
-export const fetchCloudSubscriptionInfo = (hass: HomeAssistant) =>
+export const fetchCloudSubscriptionInfo = (hass: ThirdEye) =>
   hass.callWS<SubscriptionInfo>({ type: "cloud/subscription" });
 
-export const convertThingTalk = (hass: HomeAssistant, query: string) =>
+export const convertThingTalk = (hass: ThirdEye, query: string) =>
   hass.callWS<ThingTalkConversion>({ type: "cloud/thingtalk/convert", query });
 
 export const updateCloudPref = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   prefs: {
     google_enabled?: CloudPreferences["google_enabled"];
     alexa_enabled?: CloudPreferences["alexa_enabled"];
@@ -166,7 +166,7 @@ export const updateCloudPref = (
   });
 
 export const updateCloudGoogleEntityConfig = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   entityId: string,
   values: GoogleEntityConfig
 ) =>
@@ -176,11 +176,11 @@ export const updateCloudGoogleEntityConfig = (
     ...values,
   });
 
-export const cloudSyncGoogleAssistant = (hass: HomeAssistant) =>
+export const cloudSyncGoogleAssistant = (hass: ThirdEye) =>
   hass.callApi("POST", "cloud/google_actions/sync");
 
 export const updateCloudAlexaEntityConfig = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   entityId: string,
   values: AlexaEntityConfig
 ) =>

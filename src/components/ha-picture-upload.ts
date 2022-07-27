@@ -8,13 +8,13 @@ import {
   CropOptions,
   showImageCropperDialog,
 } from "../dialogs/image-cropper-dialog/show-image-cropper-dialog";
-import { HomeAssistant } from "../types";
+import { ThirdEye } from "../types";
 import "./ha-circular-progress";
 import "./ha-file-upload";
 
 @customElement("ha-picture-upload")
 export class HaPictureUpload extends LitElement {
-  public hass!: HomeAssistant;
+  public hass!: ThirdEye;
 
   @property() public value: string | null = null;
 

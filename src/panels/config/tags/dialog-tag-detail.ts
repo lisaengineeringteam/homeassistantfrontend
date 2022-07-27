@@ -10,7 +10,7 @@ import "../../../components/ha-textfield";
 import { Tag, UpdateTagParams } from "../../../data/tag";
 import { HassDialog } from "../../../dialogs/make-dialog-manager";
 import { haStyleDialog } from "../../../resources/styles";
-import { HomeAssistant } from "../../../types";
+import { ThirdEye } from "../../../types";
 import { TagDetailDialogParams } from "./show-dialog-tag-detail";
 
 const QR_LOGO_URL = "/static/icons/favicon-192x192.png";
@@ -20,7 +20,7 @@ class DialogTagDetail
   extends LitElement
   implements HassDialog<TagDetailDialogParams>
 {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @state() private _id?: string;
 

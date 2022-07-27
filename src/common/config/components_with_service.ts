@@ -1,8 +1,8 @@
-import { HomeAssistant } from "../../types";
+import { ThirdEye } from "../../types";
 
 /** Return an array of domains with the service. */
 export const componentsWithService = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   service: string
 ): Array<string> =>
   hass &&

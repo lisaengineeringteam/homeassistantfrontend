@@ -6,7 +6,7 @@ import "../../../components/ha-card";
 import "../../../components/ha-alert";
 import { LovelaceCard, LovelaceCardEditor } from "../types";
 import { IframeCardConfig } from "./types";
-import type { HomeAssistant } from "../../../types";
+import type { ThirdEye } from "../../../types";
 
 @customElement("hui-iframe-card")
 export class HuiIframeCard extends LitElement implements LovelaceCard {
@@ -26,7 +26,7 @@ export class HuiIframeCard extends LitElement implements LovelaceCard {
   @property({ type: Boolean, reflect: true })
   public isPanel = false;
 
-  @property() public hass?: HomeAssistant;
+  @property() public hass?: ThirdEye;
 
   @state() protected _config?: IframeCardConfig;
 

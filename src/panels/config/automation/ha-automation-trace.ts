@@ -33,12 +33,12 @@ import {
 } from "../../../data/trace";
 import { showAlertDialog } from "../../../dialogs/generic/show-dialog-box";
 import { haStyle } from "../../../resources/styles";
-import { HomeAssistant, Route } from "../../../types";
+import { ThirdEye, Route } from "../../../types";
 import { configSections } from "../ha-panel-config";
 
 @customElement("ha-automation-trace")
 export class HaAutomationTrace extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public automationId!: string;
 

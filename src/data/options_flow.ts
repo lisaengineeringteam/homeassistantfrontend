@@ -1,7 +1,7 @@
-import { HomeAssistant } from "../types";
+import { ThirdEye } from "../types";
 import { DataEntryFlowStep } from "./data_entry_flow";
 
-export const createOptionsFlow = (hass: HomeAssistant, handler: string) =>
+export const createOptionsFlow = (hass: ThirdEye, handler: string) =>
   hass.callApi<DataEntryFlowStep>(
     "POST",
     "config/config_entries/options/flow",
@@ -11,14 +11,14 @@ export const createOptionsFlow = (hass: HomeAssistant, handler: string) =>
     }
   );
 
-export const fetchOptionsFlow = (hass: HomeAssistant, flowId: string) =>
+export const fetchOptionsFlow = (hass: ThirdEye, flowId: string) =>
   hass.callApi<DataEntryFlowStep>(
     "GET",
     `config/config_entries/options/flow/${flowId}`
   );
 
 export const handleOptionsFlowStep = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   flowId: string,
   data: Record<string, any>
 ) =>
@@ -28,5 +28,5 @@ export const handleOptionsFlowStep = (
     data
   );
 
-export const deleteOptionsFlow = (hass: HomeAssistant, flowId: string) =>
+export const deleteOptionsFlow = (hass: ThirdEye, flowId: string) =>
   hass.callApi("DELETE", `config/config_entries/options/flow/${flowId}`);

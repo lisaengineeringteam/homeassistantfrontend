@@ -1,6 +1,6 @@
 import { HassEntity } from "home-assistant-js-websocket";
 import { computeDomain } from "../../../common/entity/compute_domain";
-import { HomeAssistant } from "../../../types";
+import { ThirdEye } from "../../../types";
 
 const arrayFilter = (
   array: any[],
@@ -32,7 +32,7 @@ const arrayFilter = (
 };
 
 export const findEntities = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   maxEntities: number,
   entities: string[],
   entitiesFallback: string[],

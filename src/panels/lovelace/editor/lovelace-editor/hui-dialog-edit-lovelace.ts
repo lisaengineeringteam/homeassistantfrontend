@@ -5,14 +5,14 @@ import { fireEvent } from "../../../../common/dom/fire_event";
 import "../../../../components/ha-circular-progress";
 import type { LovelaceConfig } from "../../../../data/lovelace";
 import { haStyleDialog } from "../../../../resources/styles";
-import type { HomeAssistant } from "../../../../types";
+import type { ThirdEye } from "../../../../types";
 import type { Lovelace } from "../../types";
 import "./hui-lovelace-editor";
 import "../../../../components/ha-dialog";
 
 @customElement("hui-dialog-edit-lovelace")
 export class HuiDialogEditLovelace extends LitElement {
-  @property({ attribute: false }) public hass?: HomeAssistant;
+  @property({ attribute: false }) public hass?: ThirdEye;
 
   @state() private _lovelace?: Lovelace;
 

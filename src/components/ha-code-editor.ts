@@ -11,7 +11,7 @@ import { customElement, property, state } from "lit/decorators";
 import memoizeOne from "memoize-one";
 import { fireEvent } from "../common/dom/fire_event";
 import { loadCodeMirror } from "../resources/codemirror.ondemand";
-import { HomeAssistant } from "../types";
+import { ThirdEye } from "../types";
 import "./ha-icon";
 
 declare global {
@@ -40,7 +40,7 @@ export class HaCodeEditor extends ReactiveElement {
 
   @property() public mode = "yaml";
 
-  public hass?: HomeAssistant;
+  public hass?: ThirdEye;
 
   @property({ type: Boolean }) public autofocus = false;
 

@@ -8,7 +8,7 @@ import {
 } from "lit";
 import { property, state } from "lit/decorators";
 import { LovelaceCardConfig } from "../../../data/lovelace";
-import { HomeAssistant } from "../../../types";
+import { ThirdEye } from "../../../types";
 import { createCardElement } from "../create-element/create-card-element";
 import { LovelaceCard, LovelaceCardEditor } from "../types";
 import { StackCardConfig } from "./types";
@@ -26,7 +26,7 @@ export abstract class HuiStackCard<T extends StackCardConfig = StackCardConfig>
     return { cards: [] };
   }
 
-  @property({ attribute: false }) public hass?: HomeAssistant;
+  @property({ attribute: false }) public hass?: ThirdEye;
 
   @property() public editMode?: boolean;
 

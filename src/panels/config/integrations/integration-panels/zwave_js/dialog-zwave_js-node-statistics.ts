@@ -21,7 +21,7 @@ import {
   RssiError,
 } from "../../../../../data/zwave_js";
 import { haStyleDialog } from "../../../../../resources/styles";
-import { HomeAssistant } from "../../../../../types";
+import { ThirdEye } from "../../../../../types";
 import { ZWaveJSNodeStatisticsDialogParams } from "./show-dialog-zwave_js-node-statistics";
 import { createCloseHeading } from "../../../../../components/ha-dialog";
 
@@ -35,7 +35,7 @@ type WorkingRouteStatistics =
 
 @customElement("dialog-zwave_js-node-statistics")
 class DialogZWaveJSNodeStatistics extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @state() private device?: DeviceRegistryEntry;
 

@@ -7,13 +7,13 @@ import "../../../components/entity/state-badge";
 import "../../../components/ha-alert";
 import "../../../components/ha-icon-next";
 import type { UpdateEntity } from "../../../data/update";
-import type { HomeAssistant } from "../../../types";
+import type { ThirdEye } from "../../../types";
 import "../../../components/ha-circular-progress";
 import "../../../components/ha-list-item";
 
 @customElement("ha-config-updates")
 class HaConfigUpdates extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ type: Boolean }) public narrow!: boolean;
 

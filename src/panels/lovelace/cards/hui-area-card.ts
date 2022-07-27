@@ -49,7 +49,7 @@ import {
 } from "../../../data/entity_registry";
 import { forwardHaptic } from "../../../data/haptics";
 import { SubscribeMixin } from "../../../mixins/subscribe-mixin";
-import { HomeAssistant } from "../../../types";
+import { ThirdEye } from "../../../types";
 import "../components/hui-warning";
 import { LovelaceCard, LovelaceCardEditor } from "../types";
 import { AreaCardConfig } from "./types";
@@ -92,13 +92,13 @@ export class HuiAreaCard
   }
 
   public static async getStubConfig(
-    hass: HomeAssistant
+    hass: ThirdEye
   ): Promise<AreaCardConfig> {
     const areas = await subscribeOne(hass.connection, subscribeAreaRegistry);
     return { type: "area", area: areas[0]?.area_id || "" };
   }
 
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @state() private _config?: AreaCardConfig;
 
@@ -113,7 +113,7 @@ export class HuiAreaCard
       areaId: string,
       devicesInArea: Set<string>,
       registryEntities: EntityRegistryEntry[],
-      states: HomeAssistant["states"]
+      states: ThirdEye["states"]
     ) => {
       const entitiesInArea = registryEntities
         .filter(
@@ -283,7 +283,7 @@ export class HuiAreaCard
       return false;
     }
 
-    const oldHass = changedProps.get("hass") as HomeAssistant | undefined;
+    const oldHass = changedProps.get("hass") as ThirdEye | undefined;
 
     if (
       !oldHass ||
@@ -448,7 +448,7 @@ export class HuiAreaCard
     if (!this._config || !this.hass) {
       return;
     }
-    const oldHass = changedProps.get("hass") as HomeAssistant | undefined;
+    const oldHass = changedProps.get("hass") as ThirdEye | undefined;
     const oldConfig = changedProps.get("_config") as AreaCardConfig | undefined;
 
     if (

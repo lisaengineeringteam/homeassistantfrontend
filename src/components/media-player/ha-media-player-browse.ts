@@ -42,7 +42,7 @@ import { isTTSMediaSource } from "../../data/tts";
 import { showAlertDialog } from "../../dialogs/generic/show-dialog-box";
 import { installResizeObserver } from "../../panels/lovelace/common/install-resize-observer";
 import { haStyle } from "../../resources/styles";
-import type { HomeAssistant } from "../../types";
+import type { ThirdEye } from "../../types";
 import {
   brandsUrl,
   extractDomainFromBrandUrl,
@@ -81,7 +81,7 @@ export interface MediaPlayerItemId {
 
 @customElement("ha-media-player-browse")
 export class HaMediaPlayerBrowse extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public entityId!: string;
 

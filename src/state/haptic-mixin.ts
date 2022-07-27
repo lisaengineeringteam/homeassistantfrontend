@@ -1,12 +1,12 @@
 import { PropertyValues } from "lit";
 import { HASSDomEvent } from "../common/dom/fire_event";
 import { HapticType } from "../data/haptics";
-import { Constructor, HomeAssistant } from "../types";
+import { Constructor, ThirdEye } from "../types";
 import { storeState } from "../util/ha-pref-storage";
 import { HassBaseEl } from "./hass-base-mixin";
 
 interface VibrateParams {
-  vibrate: HomeAssistant["vibrate"];
+  vibrate: ThirdEye["vibrate"];
 }
 
 declare global {

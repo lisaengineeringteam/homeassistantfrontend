@@ -4,13 +4,13 @@ import { fireEvent } from "../../../common/dom/fire_event";
 import { deleteConfigEntry } from "../../../data/config_entries";
 import type { IntegrationManifest } from "../../../data/integration";
 import { showConfirmationDialog } from "../../../dialogs/generic/show-dialog-box";
-import type { HomeAssistant } from "../../../types";
+import type { ThirdEye } from "../../../types";
 import type { ConfigEntryExtended } from "./ha-config-integrations";
 import "./ha-integration-action-card";
 
 @customElement("ha-ignored-config-entry-card")
 export class HaIgnoredConfigEntryCard extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public entry!: ConfigEntryExtended;
 

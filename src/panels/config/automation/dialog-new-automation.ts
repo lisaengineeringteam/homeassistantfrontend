@@ -8,14 +8,14 @@ import { createCloseHeading } from "../../../components/ha-dialog";
 import { showAutomationEditor } from "../../../data/automation";
 import { HassDialog } from "../../../dialogs/make-dialog-manager";
 import { haStyle, haStyleDialog } from "../../../resources/styles";
-import type { HomeAssistant } from "../../../types";
+import type { ThirdEye } from "../../../types";
 import "@material/mwc-list/mwc-list-item";
 import "../../../components/ha-icon-next";
 import "@material/mwc-list/mwc-list";
 
 @customElement("ha-dialog-new-automation")
 class DialogNewAutomation extends LitElement implements HassDialog {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @state() private _opened = false;
 

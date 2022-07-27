@@ -1,6 +1,6 @@
 import { atLeastVersion } from "../../common/config/version";
 import type { HaFormSchema } from "../../components/ha-form/types";
-import { HomeAssistant } from "../../types";
+import { ThirdEye } from "../../types";
 import { supervisorApiCall } from "../supervisor/common";
 import { StoreAddonDetails } from "../supervisor/store";
 import { Supervisor, SupervisorArch } from "../supervisor/supervisor";
@@ -12,7 +12,7 @@ import {
 
 export type AddonStage = "stable" | "experimental" | "deprecated";
 export type AddonAppArmour = "disable" | "default" | "profile";
-export type AddonRole = "default" | "homeassistant" | "manager" | "admin";
+export type AddonRole = "default" | "thirdeye" | "manager" | "admin";
 export type AddonStartup =
   | "initialize"
   | "system"
@@ -33,7 +33,7 @@ export interface HassioAddonInfo {
   build: boolean;
   description: string;
   detached: boolean;
-  homeassistant: string;
+  thirdeye: string;
   icon: boolean;
   installed: boolean;
   logo: boolean;
@@ -69,7 +69,7 @@ export interface HassioAddonDetails extends HassioAddonInfo {
   hassio_api: boolean;
   hassio_role: AddonRole;
   hostname: string;
-  homeassistant_api: boolean;
+  thirdeye_api: boolean;
   host_dbus: boolean;
   host_ipc: boolean;
   host_network: boolean;
@@ -127,7 +127,7 @@ export interface HassioAddonSetOptionParams {
   watchdog?: boolean;
 }
 
-export const reloadHassioAddons = async (hass: HomeAssistant) => {
+export const reloadHassioAddons = async (hass: ThirdEye) => {
   if (atLeastVersion(hass.config.version, 2021, 2, 4)) {
     await hass.callWS({
       type: "supervisor/api",
@@ -140,7 +140,7 @@ export const reloadHassioAddons = async (hass: HomeAssistant) => {
 };
 
 export const fetchHassioAddonsInfo = async (
-  hass: HomeAssistant
+  hass: ThirdEye
 ): Promise<HassioAddonsInfo> => {
   if (atLeastVersion(hass.config.version, 2021, 2, 4)) {
     return hass.callWS({
@@ -156,7 +156,7 @@ export const fetchHassioAddonsInfo = async (
 };
 
 export const fetchHassioAddonInfo = async (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   slug: string
 ): Promise<HassioAddonDetails> => {
   if (atLeastVersion(hass.config.version, 2021, 2, 4)) {
@@ -176,20 +176,20 @@ export const fetchHassioAddonInfo = async (
 };
 
 export const fetchHassioAddonChangelog = async (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   slug: string
 ) => hass.callApi<string>("GET", `hassio/addons/${slug}/changelog`);
 
-export const fetchHassioAddonLogs = async (hass: HomeAssistant, slug: string) =>
+export const fetchHassioAddonLogs = async (hass: ThirdEye, slug: string) =>
   hass.callApi<string>("GET", `hassio/addons/${slug}/logs`);
 
 export const fetchHassioAddonDocumentation = async (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   slug: string
 ) => hass.callApi<string>("GET", `hassio/addons/${slug}/documentation`);
 
 export const setHassioAddonOption = async (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   slug: string,
   data: HassioAddonSetOptionParams
 ) => {
@@ -215,7 +215,7 @@ export const setHassioAddonOption = async (
 };
 
 export const validateHassioAddonOption = async (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   slug: string,
   data?: any
 ): Promise<{ message: string; valid: boolean }> => {
@@ -236,7 +236,7 @@ export const validateHassioAddonOption = async (
   ).data;
 };
 
-export const startHassioAddon = async (hass: HomeAssistant, slug: string) => {
+export const startHassioAddon = async (hass: ThirdEye, slug: string) => {
   if (atLeastVersion(hass.config.version, 2021, 2, 4)) {
     return hass.callWS({
       type: "supervisor/api",
@@ -249,7 +249,7 @@ export const startHassioAddon = async (hass: HomeAssistant, slug: string) => {
   return hass.callApi<string>("POST", `hassio/addons/${slug}/start`);
 };
 
-export const stopHassioAddon = async (hass: HomeAssistant, slug: string) => {
+export const stopHassioAddon = async (hass: ThirdEye, slug: string) => {
   if (atLeastVersion(hass.config.version, 2021, 2, 4)) {
     return hass.callWS({
       type: "supervisor/api",
@@ -263,7 +263,7 @@ export const stopHassioAddon = async (hass: HomeAssistant, slug: string) => {
 };
 
 export const setHassioAddonSecurity = async (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   slug: string,
   data: HassioAddonSetSecurityParams
 ) => {
@@ -285,7 +285,7 @@ export const setHassioAddonSecurity = async (
 };
 
 export const installHassioAddon = async (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   slug: string
 ): Promise<void> => {
   if (atLeastVersion(hass.config.version, 2021, 2, 4)) {
@@ -305,7 +305,7 @@ export const installHassioAddon = async (
 };
 
 export const updateHassioAddon = async (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   slug: string,
   backup: boolean
 ): Promise<void> => {
@@ -327,7 +327,7 @@ export const updateHassioAddon = async (
 };
 
 export const restartHassioAddon = async (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   slug: string
 ): Promise<void> => {
   if (atLeastVersion(hass.config.version, 2021, 2, 4)) {
@@ -347,7 +347,7 @@ export const restartHassioAddon = async (
 };
 
 export const uninstallHassioAddon = async (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   slug: string
 ) => {
   if (atLeastVersion(hass.config.version, 2021, 2, 4)) {
@@ -367,7 +367,7 @@ export const uninstallHassioAddon = async (
 };
 
 export const fetchAddonInfo = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   supervisor: Supervisor,
   addonSlug: string
 ): Promise<HassioAddonDetails | StoreAddonDetails> =>

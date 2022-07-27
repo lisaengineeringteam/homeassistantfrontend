@@ -12,14 +12,14 @@ import {
 import type { IntegrationManifest } from "../../../data/integration";
 import { showConfigFlowDialog } from "../../../dialogs/config-flow/show-dialog-config-flow";
 import { showConfirmationDialog } from "../../../dialogs/generic/show-dialog-box";
-import type { HomeAssistant } from "../../../types";
+import type { ThirdEye } from "../../../types";
 import type { DataEntryFlowProgressExtended } from "./ha-config-integrations";
 import "./ha-integration-action-card";
 import { documentationUrl } from "../../../util/documentation-url";
 
 @customElement("ha-config-flow-card")
 export class HaConfigFlowCard extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public flow!: DataEntryFlowProgressExtended;
 
@@ -61,12 +61,12 @@ export class HaConfigFlowCard extends LitElement {
           ${this.flow.context.configuration_url
             ? html`<a
                 href=${this.flow.context.configuration_url.replace(
-                  /^homeassistant:\/\//,
+                  /^thirdeye:\/\//,
                   ""
                 )}
                 rel="noreferrer"
                 target=${this.flow.context.configuration_url.startsWith(
-                  "homeassistant://"
+                  "thirdeye://"
                 )
                   ? "_self"
                   : "_blank"}

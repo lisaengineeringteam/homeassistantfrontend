@@ -12,14 +12,14 @@ import { dynamicElement } from "../../../common/dom/dynamic-element-directive";
 import { computeStateDomain } from "../../../common/entity/compute_state_domain";
 import { GroupEntity } from "../../../data/group";
 import "../../../state-summary/state-card-content";
-import { HomeAssistant } from "../../../types";
+import { ThirdEye } from "../../../types";
 import {
   domainMoreInfoType,
   importMoreInfoControl,
 } from "../state_more_info_control";
 
 class MoreInfoGroup extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public stateObj?: GroupEntity;
 

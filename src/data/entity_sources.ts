@@ -1,5 +1,5 @@
 import { timeCachePromiseFunc } from "../common/util/time-cache-function-promise";
-import { HomeAssistant } from "../types";
+import { ThirdEye } from "../types";
 
 interface EntitySourceConfigEntry {
   source: "config_entry";
@@ -20,7 +20,7 @@ export type EntitySources = Record<
 >;
 
 const fetchEntitySources = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   entity_id?: string
 ): Promise<EntitySources> =>
   hass.callWS({
@@ -29,7 +29,7 @@ const fetchEntitySources = (
   });
 
 export const fetchEntitySourcesWithCache = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   entity_id?: string
 ): Promise<EntitySources> =>
   entity_id

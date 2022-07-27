@@ -8,7 +8,7 @@ import {
   saveEnergyPreferences,
 } from "../../../data/energy";
 import { LovelaceCardConfig } from "../../../data/lovelace";
-import { HomeAssistant } from "../../../types";
+import { ThirdEye } from "../../../types";
 import { LovelaceCard, Lovelace } from "../../lovelace/types";
 import "@material/mwc-button/mwc-button";
 import "../../config/energy/components/ha-energy-grid-settings";
@@ -21,7 +21,7 @@ import { showAlertDialog } from "../../../dialogs/generic/show-dialog-box";
 
 @customElement("energy-setup-wizard-card")
 export class EnergySetupWizard extends LitElement implements LovelaceCard {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ attribute: false }) public lovelace?: Lovelace;
 

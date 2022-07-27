@@ -28,7 +28,7 @@ import {
   CUSTOM_TYPE_PREFIX,
   getCustomCardEntry,
 } from "../../../../data/lovelace_custom_cards";
-import type { HomeAssistant } from "../../../../types";
+import type { ThirdEye } from "../../../../types";
 import {
   calcUnusedEntities,
   computeUsedEntities,
@@ -46,7 +46,7 @@ interface CardElement {
 
 @customElement("hui-card-picker")
 export class HuiCardPicker extends LitElement {
-  @property({ attribute: false }) public hass?: HomeAssistant;
+  @property({ attribute: false }) public hass?: ThirdEye;
 
   @state() private _cards: CardElement[] = [];
 
@@ -140,7 +140,7 @@ export class HuiCardPicker extends LitElement {
   }
 
   protected shouldUpdate(changedProps: PropertyValues): boolean {
-    const oldHass = changedProps.get("hass") as HomeAssistant | undefined;
+    const oldHass = changedProps.get("hass") as ThirdEye | undefined;
     if (!oldHass) {
       return true;
     }

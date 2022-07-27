@@ -4,7 +4,7 @@ import { css, CSSResultGroup, html, LitElement, TemplateResult } from "lit";
 import { customElement, property } from "lit/decorators";
 import { fireEvent } from "../common/dom/fire_event";
 import { stopPropagation } from "../common/dom/stop_propagation";
-import { HomeAssistant } from "../types";
+import { ThirdEye } from "../types";
 import "./ha-select";
 
 @customElement("ha-theme-picker")
@@ -13,7 +13,7 @@ export class HaThemePicker extends LitElement {
 
   @property() public label?: string;
 
-  @property({ attribute: false }) public hass?: HomeAssistant;
+  @property({ attribute: false }) public hass?: ThirdEye;
 
   @property({ type: Boolean, reflect: true }) public disabled = false;
 

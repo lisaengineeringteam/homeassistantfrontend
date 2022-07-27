@@ -11,14 +11,14 @@ import { DOMAINS_TOGGLE } from "../../../common/const";
 import "../../../components/ha-switch";
 import type { HaSwitch } from "../../../components/ha-switch";
 import { forwardHaptic } from "../../../data/haptics";
-import type { HomeAssistant } from "../../../types";
+import type { ThirdEye } from "../../../types";
 import { turnOnOffEntities } from "../common/entity/turn-on-off-entities";
 
 @customElement("hui-entities-toggle")
 class HuiEntitiesToggle extends LitElement {
   @property({ type: Array }) public entities?: string[];
 
-  @property({ attribute: false }) protected hass?: HomeAssistant;
+  @property({ attribute: false }) protected hass?: ThirdEye;
 
   @state() private _toggleEntities?: string[];
 

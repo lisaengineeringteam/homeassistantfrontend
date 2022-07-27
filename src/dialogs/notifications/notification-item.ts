@@ -2,13 +2,13 @@ import { HassEntity } from "home-assistant-js-websocket";
 import { html, LitElement, PropertyValues, TemplateResult } from "lit";
 import { customElement, property } from "lit/decorators";
 import { PersistentNotification } from "../../data/persistent_notification";
-import { HomeAssistant } from "../../types";
+import { ThirdEye } from "../../types";
 import "./configurator-notification-item";
 import "./persistent-notification-item";
 
 @customElement("notification-item")
 export class HuiNotificationItem extends LitElement {
-  @property({ attribute: false }) public hass?: HomeAssistant;
+  @property({ attribute: false }) public hass?: ThirdEye;
 
   @property() public notification?: HassEntity | PersistentNotification;
 

@@ -67,7 +67,7 @@ import {
 } from "../../../dialogs/generic/show-dialog-box";
 import { SubscribeMixin } from "../../../mixins/subscribe-mixin";
 import { haStyle } from "../../../resources/styles";
-import type { HomeAssistant } from "../../../types";
+import type { ThirdEye } from "../../../types";
 import { showDeviceRegistryDetailDialog } from "../devices/device-registry-detail/show-dialog-device-registry-detail";
 import { showEntityEditorDialog } from "./show-dialog-entity-editor";
 
@@ -122,7 +122,7 @@ const SWITCH_AS_DOMAINS = ["cover", "fan", "light", "lock", "siren"];
 
 @customElement("entity-registry-settings")
 export class EntityRegistrySettings extends SubscribeMixin(LitElement) {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public entry!: ExtEntityRegistryEntry;
 

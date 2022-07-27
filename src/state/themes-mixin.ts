@@ -4,17 +4,17 @@ import {
 } from "../common/dom/apply_themes_on_element";
 import { HASSDomEvent } from "../common/dom/fire_event";
 import { subscribeThemes } from "../data/ws-themes";
-import { Constructor, HomeAssistant } from "../types";
+import { Constructor, ThirdEye } from "../types";
 import { storeState } from "../util/ha-pref-storage";
 import { HassBaseEl } from "./hass-base-mixin";
 
 declare global {
   // for add event listener
   interface HTMLElementEventMap {
-    settheme: HASSDomEvent<Partial<HomeAssistant["selectedTheme"]>>;
+    settheme: HASSDomEvent<Partial<ThirdEye["selectedTheme"]>>;
   }
   interface HASSDomEvents {
-    settheme: Partial<HomeAssistant["selectedTheme"]>;
+    settheme: Partial<ThirdEye["selectedTheme"]>;
   }
 }
 
@@ -70,7 +70,7 @@ export default <T extends Constructor<HassBaseEl>>(superClass: T) =>
         return;
       }
 
-      let themeSettings: Partial<HomeAssistant["selectedTheme"]> =
+      let themeSettings: Partial<ThirdEye["selectedTheme"]> =
         this.hass!.selectedTheme;
 
       const themeName =

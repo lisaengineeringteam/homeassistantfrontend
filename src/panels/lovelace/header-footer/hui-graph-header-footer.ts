@@ -11,7 +11,7 @@ import { customElement, property, state } from "lit/decorators";
 import "../../../components/ha-circular-progress";
 import { fetchRecent } from "../../../data/history";
 import { computeDomain } from "../../../common/entity/compute_domain";
-import { HomeAssistant } from "../../../types";
+import { ThirdEye } from "../../../types";
 import { findEntities } from "../common/find-entities";
 import { coordinates } from "../common/graph/coordinates";
 import { hasConfigOrEntityChanged } from "../common/has-changed";
@@ -34,7 +34,7 @@ export class HuiGraphHeaderFooter
   }
 
   public static getStubConfig(
-    hass: HomeAssistant,
+    hass: ThirdEye,
     entities: string[],
     entitiesFallback: string[]
   ): GraphHeaderFooterConfig {
@@ -58,7 +58,7 @@ export class HuiGraphHeaderFooter
     };
   }
 
-  @property({ attribute: false }) public hass?: HomeAssistant;
+  @property({ attribute: false }) public hass?: ThirdEye;
 
   @property() public type!: "header" | "footer";
 

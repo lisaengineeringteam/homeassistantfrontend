@@ -4,7 +4,7 @@ import { DOMAINS_TOGGLE } from "../../../common/const";
 import { computeDomain } from "../../../common/entity/compute_domain";
 import { computeStateDisplay } from "../../../common/entity/compute_state_display";
 import "../../../components/entity/ha-entity-toggle";
-import { HomeAssistant } from "../../../types";
+import { ThirdEye } from "../../../types";
 import { hasConfigOrEntityChanged } from "../common/has-changed";
 import "../components/hui-generic-entity-row";
 import { createEntityNotFoundWarning } from "../components/hui-warning";
@@ -12,11 +12,11 @@ import { EntityConfig, LovelaceRow } from "./types";
 
 @customElement("hui-group-entity-row")
 class HuiGroupEntityRow extends LitElement implements LovelaceRow {
-  @property({ attribute: false }) public hass?: HomeAssistant;
+  @property({ attribute: false }) public hass?: ThirdEye;
 
   @state() private _config?: EntityConfig;
 
-  private _computeCanToggle(hass: HomeAssistant, entityIds: string[]): boolean {
+  private _computeCanToggle(hass: ThirdEye, entityIds: string[]): boolean {
     return entityIds.some((entityId) => {
       const domain = computeDomain(entityId);
       if (domain === "group") {

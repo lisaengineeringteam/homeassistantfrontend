@@ -14,7 +14,7 @@ import {
   showConfirmationDialog,
 } from "../../dialogs/generic/show-dialog-box";
 import { haStyle } from "../../resources/styles";
-import { HomeAssistant } from "../../types";
+import { ThirdEye } from "../../types";
 
 const compareTokenLastUsedAt = (tokenA: RefreshToken, tokenB: RefreshToken) => {
   const timeA = tokenA.last_used_at ? new Date(tokenA.last_used_at) : 0;
@@ -30,7 +30,7 @@ const compareTokenLastUsedAt = (tokenA: RefreshToken, tokenB: RefreshToken) => {
 
 @customElement("ha-refresh-tokens-card")
 class HaRefreshTokens extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ attribute: false }) public refreshTokens?: RefreshToken[];
 

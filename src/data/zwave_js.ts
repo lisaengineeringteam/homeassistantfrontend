@@ -1,5 +1,5 @@
 import { UnsubscribeFunc } from "home-assistant-js-websocket";
-import { HomeAssistant } from "../types";
+import { ThirdEye } from "../types";
 
 export enum InclusionState {
   /** The controller isn't doing anything regarding inclusion. */
@@ -355,7 +355,7 @@ export interface RequestedGrant {
 export const nodeStatus = ["unknown", "asleep", "awake", "dead", "alive"];
 
 export const fetchZwaveNetworkStatus = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   device_or_entry_id: {
     device_id?: string;
     entry_id?: string;
@@ -375,7 +375,7 @@ export const fetchZwaveNetworkStatus = (
 };
 
 export const fetchZwaveDataCollectionStatus = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   entry_id: string
 ): Promise<ZWaveJSDataCollectionStatus> =>
   hass.callWS({
@@ -384,7 +384,7 @@ export const fetchZwaveDataCollectionStatus = (
   });
 
 export const setZwaveDataCollectionPreference = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   entry_id: string,
   opted_in: boolean
 ): Promise<any> =>
@@ -395,7 +395,7 @@ export const setZwaveDataCollectionPreference = (
   });
 
 export const fetchZwaveProvisioningEntries = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   entry_id: string
 ): Promise<ZwaveJSProvisioningEntry[]> =>
   hass.callWS({
@@ -404,7 +404,7 @@ export const fetchZwaveProvisioningEntries = (
   });
 
 export const subscribeAddZwaveNode = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   entry_id: string,
   callbackFunction: (message: any) => void,
   inclusion_strategy: InclusionStrategy = InclusionStrategy.Default,
@@ -421,20 +421,20 @@ export const subscribeAddZwaveNode = (
     planned_provisioning_entry,
   });
 
-export const stopZwaveInclusion = (hass: HomeAssistant, entry_id: string) =>
+export const stopZwaveInclusion = (hass: ThirdEye, entry_id: string) =>
   hass.callWS({
     type: "zwave_js/stop_inclusion",
     entry_id,
   });
 
-export const stopZwaveExclusion = (hass: HomeAssistant, entry_id: string) =>
+export const stopZwaveExclusion = (hass: ThirdEye, entry_id: string) =>
   hass.callWS({
     type: "zwave_js/stop_exclusion",
     entry_id,
   });
 
 export const zwaveGrantSecurityClasses = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   entry_id: string,
   security_classes: SecurityClass[],
   client_side_auth?: boolean
@@ -447,7 +447,7 @@ export const zwaveGrantSecurityClasses = (
   });
 
 export const zwaveValidateDskAndEnterPin = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   entry_id: string,
   pin: string
 ) =>
@@ -458,7 +458,7 @@ export const zwaveValidateDskAndEnterPin = (
   });
 
 export const zwaveSupportsFeature = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   entry_id: string,
   feature: ZWaveFeature
 ): Promise<{ supported: boolean }> =>
@@ -469,7 +469,7 @@ export const zwaveSupportsFeature = (
   });
 
 export const zwaveParseQrCode = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   entry_id: string,
   qr_code_string: string
 ): Promise<QRProvisioningInformation> =>
@@ -480,7 +480,7 @@ export const zwaveParseQrCode = (
   });
 
 export const provisionZwaveSmartStartNode = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   entry_id: string,
   qr_provisioning_information?: QRProvisioningInformation,
   qr_code_string?: string,
@@ -495,7 +495,7 @@ export const provisionZwaveSmartStartNode = (
   });
 
 export const unprovisionZwaveSmartStartNode = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   entry_id: string,
   dsk?: string,
   node_id?: number
@@ -508,7 +508,7 @@ export const unprovisionZwaveSmartStartNode = (
   });
 
 export const fetchZwaveNodeStatus = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   device_id: string
 ): Promise<ZWaveJSNodeStatus> =>
   hass.callWS({
@@ -517,7 +517,7 @@ export const fetchZwaveNodeStatus = (
   });
 
 export const subscribeZwaveNodeStatus = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   device_id: string,
   callbackFunction: (message: ZWaveJSNodeStatusUpdatedMessage) => void
 ): Promise<UnsubscribeFunc> =>
@@ -530,7 +530,7 @@ export const subscribeZwaveNodeStatus = (
   );
 
 export const fetchZwaveNodeMetadata = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   device_id: string
 ): Promise<ZwaveJSNodeMetadata> =>
   hass.callWS({
@@ -539,7 +539,7 @@ export const fetchZwaveNodeMetadata = (
   });
 
 export const fetchZwaveNodeComments = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   device_id: string
 ): Promise<ZwaveJSNodeComments> =>
   hass.callWS({
@@ -548,7 +548,7 @@ export const fetchZwaveNodeComments = (
   });
 
 export const fetchZwaveNodeConfigParameters = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   device_id: string
 ): Promise<ZWaveJSNodeConfigParams> =>
   hass.callWS({
@@ -557,7 +557,7 @@ export const fetchZwaveNodeConfigParameters = (
   });
 
 export const setZwaveNodeConfigParameter = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   device_id: string,
   property: number,
   value: number,
@@ -574,7 +574,7 @@ export const setZwaveNodeConfigParameter = (
 };
 
 export const reinterviewZwaveNode = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   device_id: string,
   callbackFunction: (message: ZWaveJSRefreshNodeStatusMessage) => void
 ): Promise<UnsubscribeFunc> =>
@@ -587,7 +587,7 @@ export const reinterviewZwaveNode = (
   );
 
 export const healZwaveNode = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   device_id: string
 ): Promise<boolean> =>
   hass.callWS({
@@ -596,7 +596,7 @@ export const healZwaveNode = (
   });
 
 export const removeFailedZwaveNode = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   device_id: string,
   callbackFunction: (message: any) => void
 ): Promise<UnsubscribeFunc> =>
@@ -609,7 +609,7 @@ export const removeFailedZwaveNode = (
   );
 
 export const healZwaveNetwork = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   entry_id: string
 ): Promise<UnsubscribeFunc> =>
   hass.callWS({
@@ -618,7 +618,7 @@ export const healZwaveNetwork = (
   });
 
 export const stopHealZwaveNetwork = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   entry_id: string
 ): Promise<UnsubscribeFunc> =>
   hass.callWS({
@@ -627,7 +627,7 @@ export const stopHealZwaveNetwork = (
   });
 
 export const subscribeHealZwaveNetworkProgress = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   entry_id: string,
   callbackFunction: (message: ZWaveJSHealNetworkStatusMessage) => void
 ): Promise<UnsubscribeFunc> =>
@@ -640,7 +640,7 @@ export const subscribeHealZwaveNetworkProgress = (
   );
 
 export const subscribeZwaveControllerStatistics = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   entry_id: string,
   callbackFunction: (message: ZWaveJSControllerStatisticsUpdatedMessage) => void
 ): Promise<UnsubscribeFunc> =>
@@ -653,7 +653,7 @@ export const subscribeZwaveControllerStatistics = (
   );
 
 export const subscribeZwaveNodeStatistics = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   device_id: string,
   callbackFunction: (message: ZWaveJSNodeStatisticsUpdatedMessage) => void
 ): Promise<UnsubscribeFunc> =>
@@ -666,7 +666,7 @@ export const subscribeZwaveNodeStatistics = (
   );
 
 export const fetchZwaveNodeIsFirmwareUpdateInProgress = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   device_id: string
 ): Promise<boolean> =>
   hass.callWS({
@@ -675,7 +675,7 @@ export const fetchZwaveNodeIsFirmwareUpdateInProgress = (
   });
 
 export const fetchZwaveIsAnyFirmwareUpdateInProgress = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   entry_id: string
 ): Promise<boolean> =>
   hass.callWS({
@@ -684,7 +684,7 @@ export const fetchZwaveIsAnyFirmwareUpdateInProgress = (
   });
 
 export const fetchZwaveNodeFirmwareUpdateCapabilities = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   device_id: string
 ): Promise<ZWaveJSNodeFirmwareUpdateCapabilities> =>
   hass.callWS({
@@ -693,7 +693,7 @@ export const fetchZwaveNodeFirmwareUpdateCapabilities = (
   });
 
 export const uploadFirmwareAndBeginUpdate = async (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   device_id: string,
   file: File,
   target?: number
@@ -717,7 +717,7 @@ export const uploadFirmwareAndBeginUpdate = async (
 };
 
 export const subscribeZwaveNodeFirmwareUpdate = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   device_id: string,
   callbackFunction: (
     message:
@@ -734,7 +734,7 @@ export const subscribeZwaveNodeFirmwareUpdate = (
   );
 
 export const abortZwaveNodeFirmwareUpdate = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   device_id: string
 ): Promise<UnsubscribeFunc> =>
   hass.callWS({
@@ -762,7 +762,7 @@ export interface ZWaveJSLogMessage {
 }
 
 export const subscribeZWaveJSLogs = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   entry_id: string,
   callback: (update: ZWaveJSLogUpdate) => void
 ) =>
@@ -780,7 +780,7 @@ export interface ZWaveJSLogConfig {
 }
 
 export const fetchZWaveJSLogConfig = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   entry_id: string
 ): Promise<ZWaveJSLogConfig> =>
   hass.callWS({
@@ -789,7 +789,7 @@ export const fetchZWaveJSLogConfig = (
   });
 
 export const setZWaveJSLogLevel = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   entry_id: string,
   level: string
 ): Promise<ZWaveJSLogConfig> =>

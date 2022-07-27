@@ -1,9 +1,9 @@
-import { HomeAssistant } from "../../../../types";
+import { ThirdEye } from "../../../../types";
 import { getHeaderFooterElementClass } from "../../create-element/create-header-footer-element";
 import { LovelaceHeaderFooterConfig } from "../../header-footer/types";
 
 export const getHeaderFooterStubConfig = async (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   type: string,
   entities: string[],
   entitiesFallback: string[]

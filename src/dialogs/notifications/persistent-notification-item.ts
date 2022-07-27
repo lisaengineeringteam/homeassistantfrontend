@@ -6,12 +6,12 @@ import { formatDateTime } from "../../common/datetime/format_date_time";
 import "../../components/ha-markdown";
 import "../../components/ha-relative-time";
 import { PersistentNotification } from "../../data/persistent_notification";
-import { HomeAssistant } from "../../types";
+import { ThirdEye } from "../../types";
 import "./notification-item-template";
 
 @customElement("persistent-notification-item")
 export class HuiPersistentNotificationItem extends LitElement {
-  @property({ attribute: false }) public hass?: HomeAssistant;
+  @property({ attribute: false }) public hass?: ThirdEye;
 
   @property() public notification?: PersistentNotification;
 
@@ -74,7 +74,7 @@ export class HuiPersistentNotificationItem extends LitElement {
   }
 
   private _computeTooltip(
-    hass: HomeAssistant,
+    hass: ThirdEye,
     notification: PersistentNotification
   ): string | undefined {
     if (!hass || !notification) {

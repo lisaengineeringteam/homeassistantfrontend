@@ -21,12 +21,12 @@ import {
 import { SceneEntity } from "../data/scene";
 import { findRelated, ItemType, RelatedResult } from "../data/search";
 import { SubscribeMixin } from "../mixins/subscribe-mixin";
-import { HomeAssistant } from "../types";
+import { ThirdEye } from "../types";
 import "./ha-switch";
 
 @customElement("ha-related-items")
 export class HaRelatedItems extends SubscribeMixin(LitElement) {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public itemType!: ItemType;
 

@@ -13,7 +13,7 @@ import {
 } from "../common/entity/supports-feature";
 import { caseInsensitiveStringCompare } from "../common/string/compare";
 import { showAlertDialog } from "../dialogs/generic/show-dialog-box";
-import { HomeAssistant } from "../types";
+import { ThirdEye } from "../types";
 import { showToast } from "../util/toast";
 
 export const UPDATE_SUPPORT_INSTALL = 1;
@@ -62,7 +62,7 @@ export const updateIsInstallingFromAttributes = (attributes: {
 }): boolean =>
   updateUsesProgressFromAttributes(attributes) || !!attributes.in_progress;
 
-export const updateReleaseNotes = (hass: HomeAssistant, entityId: string) =>
+export const updateReleaseNotes = (hass: ThirdEye, entityId: string) =>
   hass.callWS<string | null>({
     type: "update/release_notes",
     entity_id: entityId,
@@ -74,22 +74,22 @@ export const filterUpdateEntities = (entities: HassEntities) =>
       (entity) => computeStateDomain(entity) === "update"
     ) as UpdateEntity[]
   ).sort((a, b) => {
-    if (a.attributes.title === "Home Assistant Core") {
+    if (a.attributes.title === "Third Eye Core") {
       return -3;
     }
-    if (b.attributes.title === "Home Assistant Core") {
+    if (b.attributes.title === "Third Eye Core") {
       return 3;
     }
-    if (a.attributes.title === "Home Assistant Operating System") {
+    if (a.attributes.title === "Third Eye Operating System") {
       return -2;
     }
-    if (b.attributes.title === "Home Assistant Operating System") {
+    if (b.attributes.title === "Third Eye Operating System") {
       return 2;
     }
-    if (a.attributes.title === "Home Assistant Supervisor") {
+    if (a.attributes.title === "Third Eye Supervisor") {
       return -1;
     }
-    if (b.attributes.title === "Home Assistant Supervisor") {
+    if (b.attributes.title === "Third Eye Supervisor") {
       return 1;
     }
     return caseInsensitiveStringCompare(
@@ -108,7 +108,7 @@ export const filterUpdateEntitiesWithInstall = (
 
 export const checkForEntityUpdates = async (
   element: HTMLElement,
-  hass: HomeAssistant
+  hass: ThirdEye
 ) => {
   const entities = filterUpdateEntities(hass.states).map(
     (entity) => entity.entity_id
@@ -141,7 +141,7 @@ export const checkForEntityUpdates = async (
     "state_changed"
   );
 
-  await hass.callService("homeassistant", "update_entity", {
+  await hass.callService("thirdeye", "update_entity", {
     entity_id: entities,
   });
 

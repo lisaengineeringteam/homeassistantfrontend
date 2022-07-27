@@ -37,11 +37,11 @@ import "../../../components/ha-button-toggle-group";
 import "../../../components/ha-icon-button";
 import { EnergyData, getEnergyDataCollection } from "../../../data/energy";
 import { SubscribeMixin } from "../../../mixins/subscribe-mixin";
-import { HomeAssistant, ToggleButton } from "../../../types";
+import { ThirdEye, ToggleButton } from "../../../types";
 
 @customElement("hui-energy-period-selector")
 export class HuiEnergyPeriodSelector extends SubscribeMixin(LitElement) {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public collectionKey?: string;
 

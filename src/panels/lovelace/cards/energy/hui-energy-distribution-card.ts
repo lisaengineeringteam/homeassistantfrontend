@@ -26,7 +26,7 @@ import {
 } from "../../../../data/energy";
 import { calculateStatisticsSumGrowth } from "../../../../data/history";
 import { SubscribeMixin } from "../../../../mixins/subscribe-mixin";
-import { HomeAssistant } from "../../../../types";
+import { ThirdEye } from "../../../../types";
 import { LovelaceCard } from "../../types";
 import { EnergyDistributionCardConfig } from "../types";
 
@@ -37,7 +37,7 @@ class HuiEnergyDistrubutionCard
   extends SubscribeMixin(LitElement)
   implements LovelaceCard
 {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @state() private _config?: EnergyDistributionCardConfig;
 

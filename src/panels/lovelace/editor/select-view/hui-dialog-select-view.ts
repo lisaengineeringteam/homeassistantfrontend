@@ -15,7 +15,7 @@ import {
   LovelaceDashboard,
 } from "../../../../data/lovelace";
 import { haStyleDialog } from "../../../../resources/styles";
-import { HomeAssistant } from "../../../../types";
+import { ThirdEye } from "../../../../types";
 import type { SelectViewDialogParams } from "./show-select-view-dialog";
 
 declare global {
@@ -28,7 +28,7 @@ declare global {
 
 @customElement("hui-dialog-select-view")
 export class HuiDialogSelectView extends LitElement {
-  public hass!: HomeAssistant;
+  public hass!: ThirdEye;
 
   @state() private _params?: SelectViewDialogParams;
 

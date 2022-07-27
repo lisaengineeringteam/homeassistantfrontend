@@ -3,11 +3,11 @@ import { PropertyValues, ReactiveElement } from "lit";
 import { property } from "lit/decorators";
 import dynamicContentUpdater from "../../common/dom/dynamic_content_updater";
 import { importMoreInfoControl } from "../../panels/lovelace/custom-card-helpers";
-import { HomeAssistant } from "../../types";
+import { ThirdEye } from "../../types";
 import { stateMoreInfoType } from "./state_more_info_control";
 
 class MoreInfoContent extends ReactiveElement {
-  @property({ attribute: false }) public hass?: HomeAssistant;
+  @property({ attribute: false }) public hass?: ThirdEye;
 
   @property({ attribute: false }) public stateObj?: HassEntity;
 

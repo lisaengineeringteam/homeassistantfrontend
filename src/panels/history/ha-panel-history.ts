@@ -29,7 +29,7 @@ import "../../components/ha-menu-button";
 import { computeHistory, fetchDateWS } from "../../data/history";
 import "../../layouts/ha-app-layout";
 import { haStyle } from "../../resources/styles";
-import { HomeAssistant } from "../../types";
+import { ThirdEye } from "../../types";
 import {
   EntityRegistryEntry,
   subscribeEntityRegistry,
@@ -39,7 +39,7 @@ import { computeStateName } from "../../common/entity/compute_state_name";
 import { computeDomain } from "../../common/entity/compute_domain";
 
 class HaPanelHistory extends SubscribeMixin(LitElement) {
-  @property() hass!: HomeAssistant;
+  @property() hass!: ThirdEye;
 
   @property({ reflect: true, type: Boolean }) narrow!: boolean;
 
@@ -206,7 +206,7 @@ class HaPanelHistory extends SubscribeMixin(LitElement) {
     }
 
     if (changedProps.has("hass") || changedProps.has("_entities")) {
-      const oldHass = changedProps.get("hass") as HomeAssistant | undefined;
+      const oldHass = changedProps.get("hass") as ThirdEye | undefined;
       if (!oldHass || oldHass.language !== this.hass.language) {
         this.rtl = computeRTL(this.hass);
       }

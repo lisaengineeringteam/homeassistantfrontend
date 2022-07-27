@@ -1,5 +1,5 @@
 import { PropertyValues } from "lit";
-import { HomeAssistant } from "../../../types";
+import { ThirdEye } from "../../../types";
 import { processConfigEntities } from "./process-config-entities";
 
 function hasConfigChanged(element: any, changedProps: PropertyValues): boolean {
@@ -7,7 +7,7 @@ function hasConfigChanged(element: any, changedProps: PropertyValues): boolean {
     return true;
   }
 
-  const oldHass = changedProps.get("hass") as HomeAssistant | undefined;
+  const oldHass = changedProps.get("hass") as ThirdEye | undefined;
   if (!oldHass) {
     return true;
   }
@@ -33,7 +33,7 @@ export function hasConfigOrEntityChanged(
     return true;
   }
 
-  const oldHass = changedProps.get("hass") as HomeAssistant;
+  const oldHass = changedProps.get("hass") as ThirdEye;
 
   return (
     oldHass.states[element._config!.entity] !==
@@ -50,7 +50,7 @@ export function hasConfigOrEntitiesChanged(
     return true;
   }
 
-  const oldHass = changedProps.get("hass") as HomeAssistant;
+  const oldHass = changedProps.get("hass") as ThirdEye;
 
   const entities = processConfigEntities(element._config!.entities, false);
 

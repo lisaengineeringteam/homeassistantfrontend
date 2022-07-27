@@ -1,5 +1,5 @@
 import { atLeastVersion } from "../../common/config/version";
-import { HomeAssistant } from "../../types";
+import { ThirdEye } from "../../types";
 
 export interface HassioResponse<T> {
   data: T;
@@ -46,7 +46,7 @@ export const ignoreSupervisorError = (error): boolean => {
 };
 
 export const fetchHassioStats = async (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   container: string
 ): Promise<HassioStats> => {
   if (atLeastVersion(hass.config.version, 2021, 2, 4)) {

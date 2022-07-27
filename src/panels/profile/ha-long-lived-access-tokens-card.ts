@@ -16,12 +16,12 @@ import {
 } from "../../dialogs/generic/show-dialog-box";
 import { haStyle } from "../../resources/styles";
 import "../../styles/polymer-ha-style";
-import { HomeAssistant } from "../../types";
+import { ThirdEye } from "../../types";
 import { showLongLivedAccessTokenDialog } from "./show-long-lived-access-token-dialog";
 
 @customElement("ha-long-lived-access-tokens-card")
 class HaLongLivedTokens extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ attribute: false }) public refreshTokens?: RefreshToken[];
 

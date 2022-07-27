@@ -7,11 +7,11 @@ import "../../components/ha-card";
 import "../../components/ha-select";
 import "../../components/ha-settings-row";
 import { TimeFormat } from "../../data/translation";
-import { HomeAssistant } from "../../types";
+import { ThirdEye } from "../../types";
 
 @customElement("ha-pick-time-format-row")
 class TimeFormatRow extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public narrow!: boolean;
 

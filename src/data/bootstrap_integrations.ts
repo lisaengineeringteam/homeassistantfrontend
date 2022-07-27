@@ -1,9 +1,9 @@
-import { HomeAssistant } from "../types";
+import { ThirdEye } from "../types";
 
 export type BootstrapIntegrationsTimings = { [key: string]: number };
 
 export const subscribeBootstrapIntegrations = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   callback: (message: BootstrapIntegrationsTimings) => void
 ) => {
   const unsubProm =

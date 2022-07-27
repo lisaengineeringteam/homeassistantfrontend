@@ -5,13 +5,13 @@ import { customElement, property } from "lit/decorators";
 import { fireEvent } from "../../../../common/dom/fire_event";
 import "../../../../components/ha-card";
 import { Condition } from "../../../../data/automation";
-import { HomeAssistant } from "../../../../types";
+import { ThirdEye } from "../../../../types";
 import "./ha-automation-condition-row";
 import { HaDeviceCondition } from "./types/ha-automation-condition-device";
 
 @customElement("ha-automation-condition")
 export default class HaAutomationCondition extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public conditions!: Condition[];
 

@@ -2,7 +2,7 @@ import { html, LitElement } from "lit";
 import { customElement, property } from "lit/decorators";
 import { dynamicElement } from "../../common/dom/dynamic-element-directive";
 import type { Selector } from "../../data/selector";
-import type { HomeAssistant } from "../../types";
+import type { ThirdEye } from "../../types";
 import "./ha-selector-action";
 import "./ha-selector-addon";
 import "./ha-selector-area";
@@ -29,7 +29,7 @@ import "./ha-selector-color-temp";
 
 @customElement("ha-selector")
 export class HaSelector extends LitElement {
-  @property() public hass!: HomeAssistant;
+  @property() public hass!: ThirdEye;
 
   @property() public selector!: Selector;
 

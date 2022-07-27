@@ -20,10 +20,10 @@ import {
   HumidifierEntity,
   HUMIDIFIER_SUPPORT_MODES,
 } from "../../../data/humidifier";
-import { HomeAssistant } from "../../../types";
+import { ThirdEye } from "../../../types";
 
 class MoreInfoHumidifier extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public stateObj?: HumidifierEntity;
 

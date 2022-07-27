@@ -11,7 +11,7 @@ import {
   DataEntryFlowStepProgress,
 } from "../../data/data_entry_flow";
 import { IntegrationManifest } from "../../data/integration";
-import { HomeAssistant } from "../../types";
+import { ThirdEye } from "../../types";
 
 export interface FlowHandlers {
   integrations: string[];
@@ -20,93 +20,93 @@ export interface FlowHandlers {
 export interface FlowConfig {
   loadDevicesAndAreas: boolean;
 
-  getFlowHandlers?: (hass: HomeAssistant) => Promise<FlowHandlers>;
+  getFlowHandlers?: (hass: ThirdEye) => Promise<FlowHandlers>;
 
-  createFlow(hass: HomeAssistant, handler: string): Promise<DataEntryFlowStep>;
+  createFlow(hass: ThirdEye, handler: string): Promise<DataEntryFlowStep>;
 
-  fetchFlow(hass: HomeAssistant, flowId: string): Promise<DataEntryFlowStep>;
+  fetchFlow(hass: ThirdEye, flowId: string): Promise<DataEntryFlowStep>;
 
   handleFlowStep(
-    hass: HomeAssistant,
+    hass: ThirdEye,
     flowId: string,
     data: Record<string, any>
   ): Promise<DataEntryFlowStep>;
 
-  deleteFlow(hass: HomeAssistant, flowId: string): Promise<unknown>;
+  deleteFlow(hass: ThirdEye, flowId: string): Promise<unknown>;
 
   renderAbortDescription(
-    hass: HomeAssistant,
+    hass: ThirdEye,
     step: DataEntryFlowStepAbort
   ): TemplateResult | "";
 
   renderShowFormStepHeader(
-    hass: HomeAssistant,
+    hass: ThirdEye,
     step: DataEntryFlowStepForm
   ): string;
 
   renderShowFormStepDescription(
-    hass: HomeAssistant,
+    hass: ThirdEye,
     step: DataEntryFlowStepForm
   ): TemplateResult | "";
 
   renderShowFormStepFieldLabel(
-    hass: HomeAssistant,
+    hass: ThirdEye,
     step: DataEntryFlowStepForm,
     field: HaFormSchema
   ): string;
 
   renderShowFormStepFieldHelper(
-    hass: HomeAssistant,
+    hass: ThirdEye,
     step: DataEntryFlowStepForm,
     field: HaFormSchema
   ): string;
 
   renderShowFormStepFieldError(
-    hass: HomeAssistant,
+    hass: ThirdEye,
     step: DataEntryFlowStepForm,
     error: string
   ): string;
 
   renderExternalStepHeader(
-    hass: HomeAssistant,
+    hass: ThirdEye,
     step: DataEntryFlowStepExternal
   ): string;
 
   renderExternalStepDescription(
-    hass: HomeAssistant,
+    hass: ThirdEye,
     step: DataEntryFlowStepExternal
   ): TemplateResult | "";
 
   renderCreateEntryDescription(
-    hass: HomeAssistant,
+    hass: ThirdEye,
     step: DataEntryFlowStepCreateEntry
   ): TemplateResult | "";
 
   renderShowFormProgressHeader(
-    hass: HomeAssistant,
+    hass: ThirdEye,
     step: DataEntryFlowStepProgress
   ): string;
 
   renderShowFormProgressDescription(
-    hass: HomeAssistant,
+    hass: ThirdEye,
     step: DataEntryFlowStepProgress
   ): TemplateResult | "";
 
-  renderMenuHeader(hass: HomeAssistant, step: DataEntryFlowStepMenu): string;
+  renderMenuHeader(hass: ThirdEye, step: DataEntryFlowStepMenu): string;
 
   renderMenuDescription(
-    hass: HomeAssistant,
+    hass: ThirdEye,
     step: DataEntryFlowStepMenu
   ): TemplateResult | "";
 
   renderMenuOption(
-    hass: HomeAssistant,
+    hass: ThirdEye,
     step: DataEntryFlowStepMenu,
     option: string
   ): string;
 
   renderLoadingDescription(
-    hass: HomeAssistant,
+    hass: ThirdEye,
     loadingReason: LoadingReason,
     handler?: string,
     step?: DataEntryFlowStep | null

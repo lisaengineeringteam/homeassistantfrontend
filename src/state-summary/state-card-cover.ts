@@ -5,11 +5,11 @@ import "../components/ha-cover-controls";
 import "../components/ha-cover-tilt-controls";
 import { CoverEntity, isTiltOnly } from "../data/cover";
 import { haStyle } from "../resources/styles";
-import { HomeAssistant } from "../types";
+import { ThirdEye } from "../types";
 
 @customElement("state-card-cover")
 class StateCardCover extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ attribute: false }) public stateObj!: CoverEntity;
 

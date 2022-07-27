@@ -7,11 +7,11 @@ import "../components/ha-analytics";
 import { analyticsLearnMore } from "../components/ha-analytics-learn-more";
 import { Analytics, setAnalyticsPreferences } from "../data/analytics";
 import { onboardAnalyticsStep } from "../data/onboarding";
-import type { HomeAssistant } from "../types";
+import type { ThirdEye } from "../types";
 
 @customElement("onboarding-analytics")
 class OnboardingAnalytics extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public localize!: LocalizeFunc;
 

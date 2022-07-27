@@ -18,7 +18,7 @@ import {
   showConfirmationDialog,
 } from "../../../../dialogs/generic/show-dialog-box";
 import { haStyleDialog } from "../../../../resources/styles";
-import type { HomeAssistant } from "../../../../types";
+import type { ThirdEye } from "../../../../types";
 import "../../components/hui-entity-editor";
 import { addView, deleteView, replaceView } from "../config-util";
 import "../hui-badge-preview";
@@ -40,7 +40,7 @@ import { deepEqual } from "../../../../common/util/deep-equal";
 
 @customElement("hui-dialog-edit-view")
 export class HuiDialogEditView extends LitElement {
-  @property({ attribute: false }) public hass?: HomeAssistant;
+  @property({ attribute: false }) public hass?: ThirdEye;
 
   @state() private _params?: EditViewDialogParams;
 

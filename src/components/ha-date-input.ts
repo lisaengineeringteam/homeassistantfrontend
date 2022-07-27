@@ -3,7 +3,7 @@ import { css, CSSResultGroup, html, LitElement } from "lit";
 import { customElement, property } from "lit/decorators";
 import { formatDateNumeric } from "../common/datetime/format_date";
 import { fireEvent } from "../common/dom/fire_event";
-import { HomeAssistant } from "../types";
+import { ThirdEye } from "../types";
 import "./ha-svg-icon";
 import "./ha-textfield";
 
@@ -29,7 +29,7 @@ const showDatePickerDialog = (
 };
 @customElement("ha-date-input")
 export class HaDateInput extends LitElement {
-  @property({ attribute: false }) public locale!: HomeAssistant["locale"];
+  @property({ attribute: false }) public locale!: ThirdEye["locale"];
 
   @property() public value?: string;
 

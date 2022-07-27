@@ -15,13 +15,13 @@ import {
   ZHADevice,
 } from "../../../../../data/zha";
 import { haStyle } from "../../../../../resources/styles";
-import { HomeAssistant } from "../../../../../types";
+import { ThirdEye } from "../../../../../types";
 import { formatAsPaddedHex } from "./functions";
 import "./zha-device-card";
 
 @customElement("zha-device-pairing-status-card")
 class ZHADevicePairingStatusCard extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public device?: ZHADevice;
 

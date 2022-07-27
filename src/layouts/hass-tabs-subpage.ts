@@ -18,7 +18,7 @@ import "../components/ha-icon-button-arrow-prev";
 import "../components/ha-menu-button";
 import "../components/ha-svg-icon";
 import "../components/ha-tab";
-import { HomeAssistant, Route } from "../types";
+import { ThirdEye, Route } from "../types";
 
 export interface PageNavigation {
   path: string;
@@ -36,7 +36,7 @@ export interface PageNavigation {
 
 @customElement("hass-tabs-subpage")
 class HassTabsSubpage extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ type: Boolean }) public supervisor = false;
 
@@ -125,7 +125,7 @@ class HassTabsSubpage extends LitElement {
     }
     if (changedProperties.has("hass")) {
       const oldHass = changedProperties.get("hass") as
-        | HomeAssistant
+        | ThirdEye
         | undefined;
       if (!oldHass || oldHass.language !== this.hass.language) {
         this.rtl = computeRTL(this.hass);

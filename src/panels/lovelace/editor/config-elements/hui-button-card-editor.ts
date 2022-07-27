@@ -9,7 +9,7 @@ import { domainIcon } from "../../../../common/entity/domain_icon";
 import "../../../../components/ha-form/ha-form";
 import type { HaFormSchema } from "../../../../components/ha-form/types";
 import { ActionConfig } from "../../../../data/lovelace";
-import type { HomeAssistant } from "../../../../types";
+import type { ThirdEye } from "../../../../types";
 import type { ButtonCardConfig } from "../../cards/types";
 import "../../components/hui-action-editor";
 import type { LovelaceCardEditor } from "../../types";
@@ -48,7 +48,7 @@ export class HuiButtonCardEditor
   extends LitElement
   implements LovelaceCardEditor
 {
-  @property({ attribute: false }) public hass?: HomeAssistant;
+  @property({ attribute: false }) public hass?: ThirdEye;
 
   @state() private _config?: ButtonCardConfig;
 

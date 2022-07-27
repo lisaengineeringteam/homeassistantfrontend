@@ -1,13 +1,13 @@
 import { caseInsensitiveStringCompare } from "../../common/string/compare";
 import { LocalizeFunc } from "../../common/translations/localize";
 import { translationMetadata } from "../../resources/translations-metadata";
-import { HomeAssistant } from "../../types";
+import { ThirdEye } from "../../types";
 
 export interface CloudTTSInfo {
   languages: Array<[string, string]>;
 }
 
-export const getCloudTTSInfo = (hass: HomeAssistant) =>
+export const getCloudTTSInfo = (hass: ThirdEye) =>
   hass.callWS<CloudTTSInfo>({ type: "cloud/tts/info" });
 
 export const getCloudTtsLanguages = (info?: CloudTTSInfo) => {

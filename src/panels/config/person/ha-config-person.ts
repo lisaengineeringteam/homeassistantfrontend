@@ -22,7 +22,7 @@ import {
 } from "../../../dialogs/generic/show-dialog-box";
 import "../../../layouts/hass-loading-screen";
 import "../../../layouts/hass-tabs-subpage";
-import { HomeAssistant, Route } from "../../../types";
+import { ThirdEye, Route } from "../../../types";
 import { documentationUrl } from "../../../util/documentation-url";
 import "../ha-config-section";
 import { configSections } from "../ha-panel-config";
@@ -32,7 +32,7 @@ import {
 } from "./show-dialog-person-detail";
 
 class HaConfigPerson extends LitElement {
-  @property({ attribute: false }) public hass?: HomeAssistant;
+  @property({ attribute: false }) public hass?: ThirdEye;
 
   @property() public isWide?: boolean;
 

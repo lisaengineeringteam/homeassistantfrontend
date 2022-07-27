@@ -7,12 +7,12 @@ import {
   DeviceRegistryEntry,
 } from "../../../../data/device_registry";
 import { haStyle } from "../../../../resources/styles";
-import { HomeAssistant } from "../../../../types";
+import { ThirdEye } from "../../../../types";
 import { loadDeviceRegistryDetailDialog } from "../device-registry-detail/show-dialog-device-registry-detail";
 
 @customElement("ha-device-info-card")
 export class HaDeviceCard extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public device!: DeviceRegistryEntry;
 

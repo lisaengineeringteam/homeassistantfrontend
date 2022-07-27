@@ -2,7 +2,7 @@ import { css, html, LitElement } from "lit";
 import { customElement, property, query } from "lit/decorators";
 import { fireEvent } from "../../common/dom/fire_event";
 import type { DateTimeSelector } from "../../data/selector";
-import type { HomeAssistant } from "../../types";
+import type { ThirdEye } from "../../types";
 import "../ha-date-input";
 import type { HaDateInput } from "../ha-date-input";
 import "../ha-time-input";
@@ -11,7 +11,7 @@ import type { HaTimeInput } from "../ha-time-input";
 
 @customElement("ha-selector-datetime")
 export class HaDateTimeSelector extends LitElement {
-  @property() public hass!: HomeAssistant;
+  @property() public hass!: ThirdEye;
 
   @property() public selector!: DateTimeSelector;
 

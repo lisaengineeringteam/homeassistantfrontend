@@ -5,12 +5,12 @@ import { customElement, property } from "lit/decorators";
 import "../../../components/ha-svg-icon";
 import { ConfigEntry } from "../../../data/config_entries";
 import { domainToName, IntegrationManifest } from "../../../data/integration";
-import { HomeAssistant } from "../../../types";
+import { ThirdEye } from "../../../types";
 import { brandsUrl } from "../../../util/brands-url";
 
 @customElement("ha-integration-header")
 export class HaIntegrationHeader extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public banner!: string;
 

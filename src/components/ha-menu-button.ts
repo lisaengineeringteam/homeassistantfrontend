@@ -4,7 +4,7 @@ import { css, CSSResultGroup, html, LitElement, TemplateResult } from "lit";
 import { customElement, property, state } from "lit/decorators";
 import { fireEvent } from "../common/dom/fire_event";
 import { subscribeNotifications } from "../data/persistent_notification";
-import { HomeAssistant } from "../types";
+import { ThirdEye } from "../types";
 import "./ha-icon-button";
 
 @customElement("ha-menu-button")
@@ -13,7 +13,7 @@ class HaMenuButton extends LitElement {
 
   @property() public narrow!: boolean;
 
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @state() private _hasNotifications = false;
 
@@ -73,7 +73,7 @@ class HaMenuButton extends LitElement {
       return;
     }
 
-    const oldHass = changedProps.get("hass") as HomeAssistant | undefined;
+    const oldHass = changedProps.get("hass") as ThirdEye | undefined;
     const oldNarrow =
       changedProps.get("narrow") ||
       (oldHass && oldHass.dockedSidebar === "always_hidden");

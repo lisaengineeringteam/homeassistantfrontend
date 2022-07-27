@@ -2,7 +2,7 @@ import {
   HassEntityAttributeBase,
   HassEntityBase,
 } from "home-assistant-js-websocket";
-import { HomeAssistant } from "../types";
+import { ThirdEye } from "../types";
 
 interface InputSelectEntityAttributes extends HassEntityAttributeBase {
   options: string[];
@@ -28,7 +28,7 @@ export interface InputSelectMutableParams {
 }
 
 export const setInputSelectOption = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   entity: string,
   option: string
 ) =>
@@ -37,11 +37,11 @@ export const setInputSelectOption = (
     entity_id: entity,
   });
 
-export const fetchInputSelect = (hass: HomeAssistant) =>
+export const fetchInputSelect = (hass: ThirdEye) =>
   hass.callWS<InputSelect[]>({ type: "input_select/list" });
 
 export const createInputSelect = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   values: InputSelectMutableParams
 ) =>
   hass.callWS<InputSelect>({
@@ -50,7 +50,7 @@ export const createInputSelect = (
   });
 
 export const updateInputSelect = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   id: string,
   updates: Partial<InputSelectMutableParams>
 ) =>
@@ -60,7 +60,7 @@ export const updateInputSelect = (
     ...updates,
   });
 
-export const deleteInputSelect = (hass: HomeAssistant, id: string) =>
+export const deleteInputSelect = (hass: ThirdEye, id: string) =>
   hass.callWS({
     type: "input_select/delete",
     input_select_id: id,

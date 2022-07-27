@@ -1,12 +1,12 @@
 import { css, html, LitElement } from "lit";
 import { customElement, property } from "lit/decorators";
 import { AddonSelector } from "../../data/selector";
-import { HomeAssistant } from "../../types";
+import { ThirdEye } from "../../types";
 import "../ha-addon-picker";
 
 @customElement("ha-selector-addon")
 export class HaAddonSelector extends LitElement {
-  @property() public hass!: HomeAssistant;
+  @property() public hass!: ThirdEye;
 
   @property() public selector!: AddonSelector;
 

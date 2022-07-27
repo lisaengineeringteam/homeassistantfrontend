@@ -3,11 +3,11 @@ import { customElement, eventOptions, property } from "lit/decorators";
 import { restoreScroll } from "../common/decorators/restore-scroll";
 import "../components/ha-icon-button-arrow-prev";
 import "../components/ha-menu-button";
-import { HomeAssistant } from "../types";
+import { ThirdEye } from "../types";
 
 @customElement("hass-subpage")
 class HassSubpage extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public header?: string;
 

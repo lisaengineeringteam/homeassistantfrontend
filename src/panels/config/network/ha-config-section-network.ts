@@ -2,7 +2,7 @@ import { css, html, LitElement, TemplateResult } from "lit";
 import { customElement, property } from "lit/decorators";
 import { isComponentLoaded } from "../../../common/config/is_component_loaded";
 import "../../../layouts/hass-subpage";
-import type { HomeAssistant, Route } from "../../../types";
+import type { ThirdEye, Route } from "../../../types";
 import "./ha-config-network";
 import "./ha-config-url-form";
 import "./supervisor-hostname";
@@ -10,7 +10,7 @@ import "./supervisor-network";
 
 @customElement("ha-config-section-network")
 class HaConfigSectionNetwork extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ attribute: false }) public route!: Route;
 

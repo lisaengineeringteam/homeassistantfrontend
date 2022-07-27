@@ -45,7 +45,7 @@ import {
   showPromptDialog,
 } from "../../../dialogs/generic/show-dialog-box";
 import { haStyle, haStyleScrollbar } from "../../../resources/styles";
-import type { HomeAssistant } from "../../../types";
+import type { ThirdEye } from "../../../types";
 import { documentationUrl } from "../../../util/documentation-url";
 import { fileDownload } from "../../../util/file_download";
 import type { ConfigEntryExtended } from "./ha-config-integrations";
@@ -59,7 +59,7 @@ const integrationsWithPanel = {
 
 @customElement("ha-integration-card")
 export class HaIntegrationCard extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public domain!: string;
 

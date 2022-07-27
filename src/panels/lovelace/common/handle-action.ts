@@ -4,7 +4,7 @@ import { forwardHaptic } from "../../../data/haptics";
 import { domainToName } from "../../../data/integration";
 import { ActionConfig } from "../../../data/lovelace";
 import { showConfirmationDialog } from "../../../dialogs/generic/show-dialog-box";
-import { HomeAssistant } from "../../../types";
+import { ThirdEye } from "../../../types";
 import { showToast } from "../../../util/toast";
 import { toggleEntity } from "./entity/toggle-entity";
 
@@ -16,7 +16,7 @@ declare global {
 
 export const handleAction = async (
   node: HTMLElement,
-  hass: HomeAssistant,
+  hass: ThirdEye,
   config: {
     entity?: string;
     camera_image?: string;

@@ -8,11 +8,11 @@ import "../../../../components/ha-textfield";
 import type { HaRadio } from "../../../../components/ha-radio";
 import { InputDateTime } from "../../../../data/input_datetime";
 import { haStyle } from "../../../../resources/styles";
-import { HomeAssistant } from "../../../../types";
+import { ThirdEye } from "../../../../types";
 
 @customElement("ha-input_datetime-form")
 class HaInputDateTimeForm extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public new?: boolean;
 

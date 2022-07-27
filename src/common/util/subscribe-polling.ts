@@ -1,8 +1,8 @@
-import { HomeAssistant } from "../../types";
+import { ThirdEye } from "../../types";
 
 export const subscribePollingCollection = (
-  hass: HomeAssistant,
-  updateData: (hass: HomeAssistant) => void,
+  hass: ThirdEye,
+  updateData: (hass: ThirdEye) => void,
   interval: number
 ) => {
   let timeout;

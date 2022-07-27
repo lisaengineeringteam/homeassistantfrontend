@@ -6,7 +6,7 @@ import { createDurationData } from "../../../../../common/datetime/create_durati
 import { fireEvent } from "../../../../../common/dom/fire_event";
 import type { HaFormSchema } from "../../../../../components/ha-form/types";
 import type { StateCondition } from "../../../../../data/automation";
-import type { HomeAssistant } from "../../../../../types";
+import type { ThirdEye } from "../../../../../types";
 import { forDictStruct } from "../../structs";
 import type { ConditionElement } from "../ha-automation-condition-row";
 import "../../../../../components/ha-form/ha-form";
@@ -21,7 +21,7 @@ const stateConditionStruct = object({
 
 @customElement("ha-automation-condition-state")
 export class HaStateCondition extends LitElement implements ConditionElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ attribute: false }) public condition!: StateCondition;
 

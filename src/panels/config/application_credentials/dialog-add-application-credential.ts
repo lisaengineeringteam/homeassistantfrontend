@@ -17,7 +17,7 @@ import {
 } from "../../../data/application_credential";
 import { domainToName } from "../../../data/integration";
 import { haStyleDialog } from "../../../resources/styles";
-import { HomeAssistant } from "../../../types";
+import { ThirdEye } from "../../../types";
 import { AddApplicationCredentialDialogParams } from "./show-dialog-add-application-credential";
 
 interface Domain {
@@ -31,7 +31,7 @@ const rowRenderer: ComboBoxLitRenderer<Domain> = (item) => html`<mwc-list-item>
 
 @customElement("dialog-add-application-credential")
 export class DialogAddApplicationCredential extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @state() private _loading = false;
 

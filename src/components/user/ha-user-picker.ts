@@ -5,13 +5,13 @@ import memoizeOne from "memoize-one";
 import { fireEvent } from "../../common/dom/fire_event";
 import { stringCompare } from "../../common/string/compare";
 import { fetchUsers, User } from "../../data/user";
-import { HomeAssistant } from "../../types";
+import { ThirdEye } from "../../types";
 import "../ha-select";
 import "./ha-user-badge";
 import "../ha-list-item";
 
 class HaUserPicker extends LitElement {
-  public hass?: HomeAssistant;
+  public hass?: ThirdEye;
 
   @property() public label?: string;
 

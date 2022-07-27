@@ -12,7 +12,7 @@ import { css, CSSResultGroup, html, LitElement, TemplateResult } from "lit";
 import { ComboBoxLitRenderer, comboBoxRenderer } from "lit-vaadin-helpers";
 import { customElement, property, query } from "lit/decorators";
 import { fireEvent } from "../common/dom/fire_event";
-import { HomeAssistant } from "../types";
+import { ThirdEye } from "../types";
 import "./ha-icon-button";
 import "./ha-textfield";
 
@@ -58,7 +58,7 @@ registerStyles(
 
 @customElement("ha-combo-box")
 export class HaComboBox extends LitElement {
-  @property({ attribute: false }) public hass?: HomeAssistant;
+  @property({ attribute: false }) public hass?: ThirdEye;
 
   @property() public label?: string;
 

@@ -15,12 +15,12 @@ import { customElement, property, state, query } from "lit/decorators";
 import { classMap } from "lit/directives/class-map";
 import "../../components/ha-dialog";
 import { haStyleDialog } from "../../resources/styles";
-import type { HomeAssistant } from "../../types";
+import type { ThirdEye } from "../../types";
 import { HaImageCropperDialogParams } from "./show-image-cropper-dialog";
 
 @customElement("image-cropper-dialog")
 export class HaImagecropperDialog extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @state() private _params?: HaImageCropperDialogParams;
 

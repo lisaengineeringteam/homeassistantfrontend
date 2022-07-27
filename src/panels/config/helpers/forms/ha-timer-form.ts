@@ -5,11 +5,11 @@ import "../../../../components/ha-icon-picker";
 import "../../../../components/ha-textfield";
 import { DurationDict, Timer } from "../../../../data/timer";
 import { haStyle } from "../../../../resources/styles";
-import { HomeAssistant } from "../../../../types";
+import { ThirdEye } from "../../../../types";
 
 @customElement("ha-timer-form")
 class HaTimerForm extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public new?: boolean;
 

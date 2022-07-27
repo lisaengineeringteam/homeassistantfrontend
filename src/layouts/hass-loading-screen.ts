@@ -5,11 +5,11 @@ import "../components/ha-circular-progress";
 import "../components/ha-icon-button-arrow-prev";
 import "../components/ha-menu-button";
 import { haStyle } from "../resources/styles";
-import { HomeAssistant } from "../types";
+import { ThirdEye } from "../types";
 
 @customElement("hass-loading-screen")
 class HassLoadingScreen extends LitElement {
-  @property({ attribute: false }) public hass?: HomeAssistant;
+  @property({ attribute: false }) public hass?: ThirdEye;
 
   @property({ type: Boolean, attribute: "no-toolbar" })
   public noToolbar = false;

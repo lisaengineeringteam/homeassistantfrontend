@@ -1,4 +1,4 @@
-import { HomeAssistant } from "../types";
+import { ThirdEye } from "../types";
 
 interface ProcessResults {
   card: { [key: string]: Record<string, string> };
@@ -13,7 +13,7 @@ export interface AgentInfo {
 }
 
 export const processText = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   text: string,
   // eslint-disable-next-line: variable-name
   conversation_id: string
@@ -24,13 +24,13 @@ export const processText = (
     conversation_id,
   });
 
-export const getAgentInfo = (hass: HomeAssistant): Promise<AgentInfo> =>
+export const getAgentInfo = (hass: ThirdEye): Promise<AgentInfo> =>
   hass.callWS({
     type: "conversation/agent/info",
   });
 
 export const setConversationOnboarding = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   value: boolean
 ): Promise<boolean> =>
   hass.callWS({

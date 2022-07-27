@@ -31,7 +31,7 @@ import {
   zwaveValidateDskAndEnterPin,
 } from "../../../../../data/zwave_js";
 import { haStyle, haStyleDialog } from "../../../../../resources/styles";
-import { HomeAssistant } from "../../../../../types";
+import { ThirdEye } from "../../../../../types";
 import { ZWaveJSAddNodeDialogParams } from "./show-dialog-zwave_js-add-node";
 
 export interface ZWaveJSAddNodeDevice {
@@ -41,7 +41,7 @@ export interface ZWaveJSAddNodeDevice {
 
 @customElement("dialog-zwave_js-add-node")
 class DialogZWaveJSAddNode extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @state() private _params?: ZWaveJSAddNodeDialogParams;
 

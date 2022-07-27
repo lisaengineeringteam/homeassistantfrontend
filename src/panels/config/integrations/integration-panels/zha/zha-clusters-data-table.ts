@@ -8,7 +8,7 @@ import type {
   HaDataTable,
 } from "../../../../../components/data-table/ha-data-table";
 import type { Cluster } from "../../../../../data/zha";
-import type { HomeAssistant } from "../../../../../types";
+import type { ThirdEye } from "../../../../../types";
 import { formatAsPaddedHex } from "./functions";
 
 export interface ClusterRowData extends Cluster {
@@ -18,7 +18,7 @@ export interface ClusterRowData extends Cluster {
 
 @customElement("zha-clusters-data-table")
 export class ZHAClustersDataTable extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public narrow = false;
 

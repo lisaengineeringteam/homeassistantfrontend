@@ -8,7 +8,7 @@ import "../../components/ha-icon-next";
 import { localizeConfigFlowTitle } from "../../data/config_flow";
 import { DataEntryFlowProgress } from "../../data/data_entry_flow";
 import { domainToName } from "../../data/integration";
-import { HomeAssistant } from "../../types";
+import { ThirdEye } from "../../types";
 import { brandsUrl } from "../../util/brands-url";
 import { FlowConfig } from "./show-dialog-data-entry-flow";
 import { configFlowContentStyles } from "./styles";
@@ -17,7 +17,7 @@ import { configFlowContentStyles } from "./styles";
 class StepFlowPickFlow extends LitElement {
   public flowConfig!: FlowConfig;
 
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ attribute: false })
   public flowsInProgress!: DataEntryFlowProgress[];

@@ -16,7 +16,7 @@ import {
   showConfirmationDialog,
 } from "../../../../dialogs/generic/show-dialog-box";
 import { haStyle } from "../../../../resources/styles";
-import { HomeAssistant } from "../../../../types";
+import { ThirdEye } from "../../../../types";
 import "./ha-automation-condition-editor";
 import { validateConfig } from "../../../../data/config";
 import { HaYamlEditor } from "../../../../components/ha-yaml-editor";
@@ -52,7 +52,7 @@ export const handleChangeEvent = (
 
 @customElement("ha-automation-condition-row")
 export default class HaAutomationConditionRow extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public condition!: Condition;
 

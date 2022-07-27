@@ -1,5 +1,5 @@
 import { showAlertDialog } from "../../../dialogs/generic/show-dialog-box";
-import { HomeAssistant } from "../../../types";
+import { ThirdEye } from "../../../types";
 import { showDeleteSuccessToast } from "../../../util/toast-deleted-success";
 import { Lovelace } from "../types";
 import { showDeleteCardDialog } from "./card-editor/show-delete-card-dialog";
@@ -7,7 +7,7 @@ import { deleteCard, insertCard } from "./config-util";
 
 export async function confDeleteCard(
   element: HTMLElement,
-  hass: HomeAssistant,
+  hass: ThirdEye,
   lovelace: Lovelace,
   path: [number, number]
 ): Promise<void> {

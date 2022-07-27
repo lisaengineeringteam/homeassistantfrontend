@@ -9,11 +9,11 @@ import "../../../components/ha-form/ha-form";
 import { HaFormSchema } from "../../../components/ha-form/types";
 import { getZoneEditorInitData, ZoneMutableParams } from "../../../data/zone";
 import { haStyleDialog } from "../../../resources/styles";
-import { HomeAssistant } from "../../../types";
+import { ThirdEye } from "../../../types";
 import { ZoneDetailDialogParams } from "./show-dialog-zone-detail";
 
 class DialogZoneDetail extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @state() private _error?: Record<string, string>;
 

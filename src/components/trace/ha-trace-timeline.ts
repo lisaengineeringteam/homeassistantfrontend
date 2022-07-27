@@ -4,12 +4,12 @@ import "./hat-logbook-note";
 import "./hat-trace-timeline";
 import type { LogbookEntry } from "../../data/logbook";
 import type { TraceExtended } from "../../data/trace";
-import type { HomeAssistant } from "../../types";
+import type { ThirdEye } from "../../types";
 import type { NodeInfo } from "./hat-script-graph";
 
 @customElement("ha-trace-timeline")
 export class HaTraceTimeline extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ attribute: false }) public trace!: TraceExtended;
 

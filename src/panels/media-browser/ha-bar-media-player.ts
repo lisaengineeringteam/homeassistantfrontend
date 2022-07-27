@@ -54,7 +54,7 @@ import {
 import { ResolvedMediaSource } from "../../data/media_source";
 import { showAlertDialog } from "../../dialogs/generic/show-dialog-box";
 import { SubscribeMixin } from "../../mixins/subscribe-mixin";
-import type { HomeAssistant } from "../../types";
+import type { ThirdEye } from "../../types";
 import "../lovelace/components/hui-marquee";
 import {
   BrowserMediaPlayer,
@@ -69,7 +69,7 @@ declare global {
 
 @customElement("ha-bar-media-player")
 export class BarMediaPlayer extends SubscribeMixin(LitElement) {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ attribute: false }) public entityId!: string;
 
@@ -380,7 +380,7 @@ export class BarMediaPlayer extends SubscribeMixin(LitElement) {
       return;
     }
     // Reset new media expected if media player state changes
-    const oldHass = changedProps.get("hass") as HomeAssistant | undefined;
+    const oldHass = changedProps.get("hass") as ThirdEye | undefined;
     if (
       !oldHass ||
       oldHass.states[this.entityId] !== this.hass.states[this.entityId]
@@ -397,7 +397,7 @@ export class BarMediaPlayer extends SubscribeMixin(LitElement) {
         return;
       }
     } else {
-      const oldHass = changedProps.get("hass") as HomeAssistant | undefined;
+      const oldHass = changedProps.get("hass") as ThirdEye | undefined;
       if (oldHass && oldHass.states[this.entityId] === this._stateObj) {
         return;
       }

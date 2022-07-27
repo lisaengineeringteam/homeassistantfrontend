@@ -17,7 +17,7 @@ import {
 } from "superstruct";
 import { computeObjectId } from "../common/entity/compute_object_id";
 import { navigate } from "../common/navigate";
-import { HomeAssistant } from "../types";
+import { ThirdEye } from "../types";
 import {
   Condition,
   ShorthandAndCondition,
@@ -264,7 +264,7 @@ export interface ActionTypes {
 export type ActionType = keyof ActionTypes;
 
 export const triggerScript = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   entityId: string,
   variables?: Record<string, unknown>
 ) => hass.callService("script", computeObjectId(entityId), variables);
@@ -283,7 +283,7 @@ export const canRun = (state: ScriptEntity) => {
   return false;
 };
 
-export const deleteScript = (hass: HomeAssistant, objectId: string) =>
+export const deleteScript = (hass: ThirdEye, objectId: string) =>
   hass.callApi("DELETE", `config/script/config/${objectId}`);
 
 let inititialScriptEditorData: Partial<ScriptConfig> | undefined;

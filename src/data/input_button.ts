@@ -1,4 +1,4 @@
-import { HomeAssistant } from "../types";
+import { ThirdEye } from "../types";
 
 export interface InputButton {
   id: string;
@@ -11,11 +11,11 @@ export interface InputButtonMutableParams {
   icon: string;
 }
 
-export const fetchInputButton = (hass: HomeAssistant) =>
+export const fetchInputButton = (hass: ThirdEye) =>
   hass.callWS<InputButton[]>({ type: "input_button/list" });
 
 export const createInputButton = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   values: InputButtonMutableParams
 ) =>
   hass.callWS<InputButton>({
@@ -24,7 +24,7 @@ export const createInputButton = (
   });
 
 export const updateInputButton = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   id: string,
   updates: Partial<InputButtonMutableParams>
 ) =>
@@ -34,7 +34,7 @@ export const updateInputButton = (
     ...updates,
   });
 
-export const deleteInputButton = (hass: HomeAssistant, id: string) =>
+export const deleteInputButton = (hass: ThirdEye, id: string) =>
   hass.callWS({
     type: "input_button/delete",
     input_button_id: id,

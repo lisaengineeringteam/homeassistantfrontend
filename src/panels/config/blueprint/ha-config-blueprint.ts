@@ -5,7 +5,7 @@ import {
   HassRouterPage,
   RouterOptions,
 } from "../../../layouts/hass-router-page";
-import { HomeAssistant } from "../../../types";
+import { ThirdEye } from "../../../types";
 import "./ha-blueprint-overview";
 
 declare global {
@@ -17,7 +17,7 @@ declare global {
 
 @customElement("ha-config-blueprint")
 class HaConfigBlueprint extends HassRouterPage {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public narrow!: boolean;
 

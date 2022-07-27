@@ -35,7 +35,7 @@ import { CloudStatus, fetchCloudStatus } from "../../data/cloud";
 import "../../layouts/hass-loading-screen";
 import { HassRouterPage, RouterOptions } from "../../layouts/hass-router-page";
 import { PageNavigation } from "../../layouts/hass-tabs-subpage";
-import { HomeAssistant, Route } from "../../types";
+import { ThirdEye, Route } from "../../types";
 
 declare global {
   // for fire event
@@ -337,7 +337,7 @@ export const configSections: { [name: string]: PageNavigation[] } = {
 
 @customElement("ha-panel-config")
 class HaPanelConfig extends HassRouterPage {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public narrow!: boolean;
 

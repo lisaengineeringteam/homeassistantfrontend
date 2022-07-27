@@ -16,7 +16,7 @@ import { fireEvent, HASSDomEvent } from "../common/dom/fire_event";
 import { listenMediaQuery } from "../common/dom/media_query";
 import { toggleAttribute } from "../common/dom/toggle_attribute";
 import { showNotificationDrawer } from "../dialogs/notifications/show-notification-drawer";
-import type { HomeAssistant, Route } from "../types";
+import type { ThirdEye, Route } from "../types";
 import "./partial-panel-resolver";
 
 const NON_SWIPABLE_PANELS = ["map"];
@@ -38,8 +38,8 @@ interface EditSideBarEvent {
 }
 
 @customElement("home-assistant-main")
-export class HomeAssistantMain extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+export class ThirdEyeMain extends LitElement {
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public route?: Route;
 
@@ -180,7 +180,7 @@ export class HomeAssistantMain extends LitElement {
       this.drawer.close();
     }
 
-    const oldHass = changedProps.get("hass") as HomeAssistant | undefined;
+    const oldHass = changedProps.get("hass") as ThirdEye | undefined;
 
     // Make app-drawer adjust to a potential LTR/RTL change
     if (oldHass && oldHass.language !== this.hass!.language) {
@@ -222,6 +222,6 @@ export class HomeAssistantMain extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    "home-assistant-main": HomeAssistantMain;
+    "home-assistant-main": ThirdEyeMain;
   }
 }

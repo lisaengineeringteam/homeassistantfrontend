@@ -26,7 +26,7 @@ import {
   updateItem,
 } from "../../../data/shopping-list";
 import { SubscribeMixin } from "../../../mixins/subscribe-mixin";
-import { HomeAssistant } from "../../../types";
+import { ThirdEye } from "../../../types";
 import { LovelaceCard, LovelaceCardEditor } from "../types";
 import { SensorCardConfig, ShoppingListCardConfig } from "./types";
 import type { HaTextField } from "../../../components/ha-textfield";
@@ -47,7 +47,7 @@ class HuiShoppingListCard
     return { type: "shopping-list" };
   }
 
-  @property({ attribute: false }) public hass?: HomeAssistant;
+  @property({ attribute: false }) public hass?: ThirdEye;
 
   @state() private _config?: ShoppingListCardConfig;
 
@@ -89,7 +89,7 @@ class HuiShoppingListCard
       return;
     }
 
-    const oldHass = changedProps.get("hass") as HomeAssistant | undefined;
+    const oldHass = changedProps.get("hass") as ThirdEye | undefined;
     const oldConfig = changedProps.get("_config") as
       | SensorCardConfig
       | undefined;

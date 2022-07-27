@@ -4,14 +4,14 @@ import { fireEvent } from "../../../../../common/dom/fire_event";
 import { Action, ParallelAction } from "../../../../../data/script";
 import { HaDeviceAction } from "./ha-automation-action-device_id";
 import { haStyle } from "../../../../../resources/styles";
-import type { HomeAssistant } from "../../../../../types";
+import type { ThirdEye } from "../../../../../types";
 import "../ha-automation-action";
 import "../../../../../components/ha-textfield";
 import type { ActionElement } from "../ha-automation-action-row";
 
 @customElement("ha-automation-action-parallel")
 export class HaParallelAction extends LitElement implements ActionElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ attribute: false }) public action!: ParallelAction;
 

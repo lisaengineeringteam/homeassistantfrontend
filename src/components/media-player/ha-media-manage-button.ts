@@ -5,7 +5,7 @@ import { customElement, property, state } from "lit/decorators";
 import { MediaPlayerItem } from "../../data/media-player";
 import "../ha-svg-icon";
 import { isLocalMediaSourceContentId } from "../../data/media_source";
-import type { HomeAssistant } from "../../types";
+import type { ThirdEye } from "../../types";
 import { showMediaManageDialog } from "./show-media-manage-dialog";
 import { fireEvent } from "../../common/dom/fire_event";
 
@@ -17,7 +17,7 @@ declare global {
 
 @customElement("ha-media-manage-button")
 class MediaManageButton extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() currentItem?: MediaPlayerItem;
 

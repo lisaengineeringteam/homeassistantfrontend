@@ -15,7 +15,7 @@ import { HaSwitch } from "../../../../components/ha-switch";
 import "../../../../components/user/ha-user-badge";
 import { LovelaceViewConfig, ShowViewConfig } from "../../../../data/lovelace";
 import { fetchUsers, User } from "../../../../data/user";
-import { HomeAssistant } from "../../../../types";
+import { ThirdEye } from "../../../../types";
 
 declare global {
   interface HASSDomEvents {
@@ -33,7 +33,7 @@ export class HuiViewVisibilityEditor extends LitElement {
       this._config.visible === undefined ? true : this._config.visible;
   }
 
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public _config!: LovelaceViewConfig;
 

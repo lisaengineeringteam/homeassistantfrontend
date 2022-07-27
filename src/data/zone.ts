@@ -1,5 +1,5 @@
 import { navigate } from "../common/navigate";
-import { HomeAssistant } from "../types";
+import { ThirdEye } from "../types";
 
 export interface Zone {
   id: string;
@@ -20,17 +20,17 @@ export interface ZoneMutableParams {
   radius?: number;
 }
 
-export const fetchZones = (hass: HomeAssistant) =>
+export const fetchZones = (hass: ThirdEye) =>
   hass.callWS<Zone[]>({ type: "zone/list" });
 
-export const createZone = (hass: HomeAssistant, values: ZoneMutableParams) =>
+export const createZone = (hass: ThirdEye, values: ZoneMutableParams) =>
   hass.callWS<Zone>({
     type: "zone/create",
     ...values,
   });
 
 export const updateZone = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   zoneId: string,
   updates: Partial<ZoneMutableParams>
 ) =>
@@ -40,7 +40,7 @@ export const updateZone = (
     ...updates,
   });
 
-export const deleteZone = (hass: HomeAssistant, zoneId: string) =>
+export const deleteZone = (hass: ThirdEye, zoneId: string) =>
   hass.callWS({
     type: "zone/delete",
     zone_id: zoneId,

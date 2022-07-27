@@ -9,7 +9,7 @@ import {
 } from "../../../../data/energy";
 import { HassDialog } from "../../../../dialogs/make-dialog-manager";
 import { haStyle, haStyleDialog } from "../../../../resources/styles";
-import { HomeAssistant } from "../../../../types";
+import { ThirdEye } from "../../../../types";
 import { EnergySettingsBatteryDialogParams } from "./show-dialogs-energy";
 import "@material/mwc-button/mwc-button";
 import "../../../../components/entity/ha-statistic-picker";
@@ -22,7 +22,7 @@ export class DialogEnergyBatterySettings
   extends LitElement
   implements HassDialog<EnergySettingsBatteryDialogParams>
 {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @state() private _params?: EnergySettingsBatteryDialogParams;
 

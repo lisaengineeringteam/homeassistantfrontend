@@ -1,5 +1,5 @@
 import { atLeastVersion } from "../../common/config/version";
-import { HomeAssistant } from "../../types";
+import { ThirdEye } from "../../types";
 import { hassioApiResultExtractor, HassioResponse } from "./common";
 
 interface IpConfiguration {
@@ -53,7 +53,7 @@ export interface NetworkInfo {
 }
 
 export const fetchNetworkInfo = async (
-  hass: HomeAssistant
+  hass: ThirdEye
 ): Promise<NetworkInfo> => {
   if (atLeastVersion(hass.config.version, 2021, 2, 4)) {
     return hass.callWS({
@@ -72,7 +72,7 @@ export const fetchNetworkInfo = async (
 };
 
 export const updateNetworkInterface = async (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   network_interface: string,
   options: Partial<NetworkInterface>
 ) => {
@@ -95,7 +95,7 @@ export const updateNetworkInterface = async (
 };
 
 export const accesspointScan = async (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   network_interface: string
 ): Promise<AccessPoints> => {
   if (atLeastVersion(hass.config.version, 2021, 2, 4)) {

@@ -5,11 +5,11 @@ import { customElement, property, state } from "lit/decorators";
 import { formatTime } from "../../../common/datetime/format_time";
 import "../../../components/ha-card";
 import "../../../components/ha-textfield";
-import { HomeAssistant } from "../../../types";
+import { ThirdEye } from "../../../types";
 
 @customElement("event-subscribe-card")
 class EventSubscribeCard extends LitElement {
-  @property({ attribute: false }) public hass?: HomeAssistant;
+  @property({ attribute: false }) public hass?: ThirdEye;
 
   @state() private _eventType = "";
 

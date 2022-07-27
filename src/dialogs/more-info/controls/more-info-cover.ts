@@ -12,11 +12,11 @@ import {
   supportsSetPosition,
   supportsSetTiltPosition,
 } from "../../../data/cover";
-import { HomeAssistant } from "../../../types";
+import { ThirdEye } from "../../../types";
 
 @customElement("more-info-cover")
 class MoreInfoCover extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ attribute: false }) public stateObj!: CoverEntity;
 

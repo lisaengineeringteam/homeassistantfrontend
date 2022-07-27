@@ -13,7 +13,7 @@ import "../../../components/ha-yaml-editor";
 import type { LovelaceConfig } from "../../../data/lovelace";
 import type { HassDialog } from "../../../dialogs/make-dialog-manager";
 import { haStyleDialog } from "../../../resources/styles";
-import type { HomeAssistant } from "../../../types";
+import type { ThirdEye } from "../../../types";
 import { documentationUrl } from "../../../util/documentation-url";
 import { expandLovelaceConfigStrategies } from "../strategies/get-strategy";
 import type { SaveDialogParams } from "./show-save-config-dialog";
@@ -22,7 +22,7 @@ const EMPTY_CONFIG: LovelaceConfig = { views: [{ title: "Home" }] };
 
 @customElement("hui-dialog-save-config")
 export class HuiSaveConfig extends LitElement implements HassDialog {
-  @property({ attribute: false }) public hass?: HomeAssistant;
+  @property({ attribute: false }) public hass?: ThirdEye;
 
   @state() private _params?: SaveDialogParams;
 

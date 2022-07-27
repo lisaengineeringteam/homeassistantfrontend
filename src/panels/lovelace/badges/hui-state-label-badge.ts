@@ -3,7 +3,7 @@ import { customElement, property } from "lit/decorators";
 import { ifDefined } from "lit/directives/if-defined";
 import "../../../components/entity/ha-state-label-badge";
 import { ActionHandlerEvent } from "../../../data/lovelace";
-import { HomeAssistant } from "../../../types";
+import { ThirdEye } from "../../../types";
 import { actionHandler } from "../common/directives/action-handler-directive";
 import { handleAction } from "../common/handle-action";
 import { hasAction } from "../common/has-action";
@@ -12,7 +12,7 @@ import { StateLabelBadgeConfig } from "./types";
 
 @customElement("hui-state-label-badge")
 export class HuiStateLabelBadge extends LitElement implements LovelaceBadge {
-  @property({ attribute: false }) public hass?: HomeAssistant;
+  @property({ attribute: false }) public hass?: ThirdEye;
 
   @property() protected _config?: StateLabelBadgeConfig;
 

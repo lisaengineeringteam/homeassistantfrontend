@@ -22,7 +22,7 @@ import {
 import { subscribeUser } from "../data/ws-user";
 import { litLocalizeLiteMixin } from "../mixins/lit-localize-lite-mixin";
 import { HassElement } from "../state/hass-element";
-import { HomeAssistant } from "../types";
+import { ThirdEye } from "../types";
 import { registerServiceWorker } from "../util/register-service-worker";
 import "./onboarding-analytics";
 import "./onboarding-create-user";
@@ -56,7 +56,7 @@ declare global {
 
 @customElement("ha-onboarding")
 class HaOnboarding extends litLocalizeLiteMixin(HassElement) {
-  @property({ attribute: false }) public hass?: HomeAssistant;
+  @property({ attribute: false }) public hass?: ThirdEye;
 
   @property() public translationFragment = "page-onboarding";
 
@@ -156,7 +156,7 @@ class HaOnboarding extends litLocalizeLiteMixin(HassElement) {
     if (changedProps.has("hass")) {
       this.hassChanged(
         this.hass!,
-        changedProps.get("hass") as HomeAssistant | undefined
+        changedProps.get("hass") as ThirdEye | undefined
       );
     }
   }
@@ -173,8 +173,8 @@ class HaOnboarding extends litLocalizeLiteMixin(HassElement) {
     try {
       const response = await fetchInstallationType();
       this._supervisor = [
-        "Home Assistant OS",
-        "Home Assistant Supervised",
+        "Third Eye
+        "Third Eye
       ].includes(response.installation_type);
       if (this._supervisor) {
         // Only load if we have supervisor

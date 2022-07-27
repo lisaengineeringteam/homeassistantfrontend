@@ -15,13 +15,13 @@ import {
 import "../../../../../layouts/hass-tabs-subpage";
 import { SubscribeMixin } from "../../../../../mixins/subscribe-mixin";
 import { haStyle } from "../../../../../resources/styles";
-import { HomeAssistant, Route } from "../../../../../types";
+import { ThirdEye, Route } from "../../../../../types";
 import { fileDownload } from "../../../../../util/file_download";
 import { configTabs } from "./zwave_js-config-router";
 
 @customElement("zwave_js-logs")
 class ZWaveJSLogs extends SubscribeMixin(LitElement) {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ type: Object }) public route!: Route;
 

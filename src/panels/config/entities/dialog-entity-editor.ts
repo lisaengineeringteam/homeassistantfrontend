@@ -19,7 +19,7 @@ import {
 } from "../../../data/entity_registry";
 import { replaceDialog } from "../../../dialogs/make-dialog-manager";
 import { haStyleDialog } from "../../../resources/styles";
-import type { HomeAssistant } from "../../../types";
+import type { ThirdEye } from "../../../types";
 import { documentationUrl } from "../../../util/documentation-url";
 import { PLATFORMS_WITH_SETTINGS_TAB } from "./const";
 import "./entity-registry-settings";
@@ -36,7 +36,7 @@ interface Tab {
 
 @customElement("dialog-entity-editor")
 export class DialogEntityEditor extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @state() private _params?: EntityRegistryDetailDialogParams;
 

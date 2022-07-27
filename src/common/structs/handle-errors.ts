@@ -1,8 +1,8 @@
 import { StructError } from "superstruct";
-import type { HomeAssistant } from "../../types";
+import type { ThirdEye } from "../../types";
 
 export const handleStructError = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   err: Error
 ): { warnings: string[]; errors?: string[] } => {
   if (!(err instanceof StructError)) {

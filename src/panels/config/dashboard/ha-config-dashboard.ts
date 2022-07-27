@@ -32,14 +32,14 @@ import { showQuickBar } from "../../../dialogs/quick-bar/show-dialog-quick-bar";
 import "../../../layouts/ha-app-layout";
 import { PageNavigation } from "../../../layouts/hass-tabs-subpage";
 import { haStyle } from "../../../resources/styles";
-import { HomeAssistant } from "../../../types";
+import { ThirdEye } from "../../../types";
 import { documentationUrl } from "../../../util/documentation-url";
 import "../ha-config-section";
 import { configSections } from "../ha-panel-config";
 import "./ha-config-navigation";
 import "./ha-config-updates";
 
-const randomTip = (hass: HomeAssistant, narrow: boolean) => {
+const randomTip = (hass: ThirdEye, narrow: boolean) => {
   const weighted: string[] = [];
   let tips = [
     {
@@ -105,7 +105,7 @@ const randomTip = (hass: HomeAssistant, narrow: boolean) => {
 
 @customElement("ha-config-dashboard")
 class HaConfigDashboard extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ type: Boolean, reflect: true })
   public narrow!: boolean;
@@ -124,7 +124,7 @@ class HaConfigDashboard extends LitElement {
       pages.push({
         component: "cloud",
         path: "/config/cloud",
-        name: "Home Assistant Cloud",
+        name: "Third Eyed",
         info: this.cloudStatus,
         iconPath: mdiCloudLock,
         iconColor: "#3B808E",

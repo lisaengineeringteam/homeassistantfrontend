@@ -14,7 +14,7 @@ import {
   LineChartUnit,
   TimelineEntity,
 } from "../../data/history";
-import type { HomeAssistant } from "../../types";
+import type { ThirdEye } from "../../types";
 import "./state-history-chart-line";
 import "./state-history-chart-timeline";
 import { restoreScroll } from "../../common/decorators/restore-scroll";
@@ -33,7 +33,7 @@ const chunkData = (inputArray: any[], chunks: number) =>
 
 @customElement("state-history-charts")
 class StateHistoryCharts extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ attribute: false }) public historyData!: HistoryResult;
 

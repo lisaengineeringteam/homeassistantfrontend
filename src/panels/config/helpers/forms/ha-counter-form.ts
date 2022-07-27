@@ -7,11 +7,11 @@ import "../../../../components/ha-textfield";
 import type { HaSwitch } from "../../../../components/ha-switch";
 import { Counter } from "../../../../data/counter";
 import { haStyle } from "../../../../resources/styles";
-import { HomeAssistant } from "../../../../types";
+import { ThirdEye } from "../../../../types";
 
 @customElement("ha-counter-form")
 class HaCounterForm extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public new?: boolean;
 

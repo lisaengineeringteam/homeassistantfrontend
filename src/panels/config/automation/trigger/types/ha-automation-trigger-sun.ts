@@ -3,14 +3,14 @@ import { customElement, property } from "lit/decorators";
 import memoizeOne from "memoize-one";
 import { fireEvent } from "../../../../../common/dom/fire_event";
 import type { SunTrigger } from "../../../../../data/automation";
-import type { HomeAssistant } from "../../../../../types";
+import type { ThirdEye } from "../../../../../types";
 import type { TriggerElement } from "../ha-automation-trigger-row";
 import type { HaFormSchema } from "../../../../../components/ha-form/types";
 import type { LocalizeFunc } from "../../../../../common/translations/localize";
 
 @customElement("ha-automation-trigger-sun")
 export class HaSunTrigger extends LitElement implements TriggerElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ attribute: false }) public trigger!: SunTrigger;
 

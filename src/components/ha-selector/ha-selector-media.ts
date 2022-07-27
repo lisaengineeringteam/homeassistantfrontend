@@ -11,7 +11,7 @@ import {
   SUPPORT_BROWSE_MEDIA,
 } from "../../data/media-player";
 import type { MediaSelector, MediaSelectorValue } from "../../data/selector";
-import type { HomeAssistant } from "../../types";
+import type { ThirdEye } from "../../types";
 import { brandsUrl, extractDomainFromBrandUrl } from "../../util/brands-url";
 import "../ha-alert";
 import "../ha-form/ha-form";
@@ -25,7 +25,7 @@ const MANUAL_SCHEMA = [
 
 @customElement("ha-selector-media")
 export class HaMediaSelector extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ attribute: false }) public selector!: MediaSelector;
 

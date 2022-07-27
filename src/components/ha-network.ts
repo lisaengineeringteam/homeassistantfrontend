@@ -17,7 +17,7 @@ import {
   NetworkConfig,
 } from "../data/network";
 import { haStyle } from "../resources/styles";
-import { HomeAssistant } from "../types";
+import { ThirdEye } from "../types";
 import "./ha-checkbox";
 import type { HaCheckbox } from "./ha-checkbox";
 import "./ha-settings-row";
@@ -48,7 +48,7 @@ declare global {
 }
 @customElement("ha-network")
 export class HaNetwork extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ attribute: false }) public networkConfig?: NetworkConfig;
 

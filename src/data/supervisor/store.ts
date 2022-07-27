@@ -1,4 +1,4 @@
-import { HomeAssistant } from "../../types";
+import { ThirdEye } from "../../types";
 import { AddonStage } from "../hassio/addon";
 import { supervisorApiCall } from "./common";
 import { SupervisorArch } from "./supervisor";
@@ -8,7 +8,7 @@ export interface StoreAddon {
   available: boolean;
   build: boolean;
   description: string;
-  homeassistant: string | null;
+  thirdeye: string | null;
   icon: boolean;
   installed: boolean;
   logo: boolean;
@@ -32,7 +32,7 @@ export interface StoreAddonDetails extends StoreAddon {
   full_access: boolean;
   hassio_api: boolean;
   hassio_role: string;
-  homeassistant_api: boolean;
+  thirdeye_api: boolean;
   host_network: boolean;
   host_pid: boolean;
   ingress: boolean;
@@ -55,15 +55,15 @@ export interface SupervisorStore {
 }
 
 export const fetchSupervisorStore = async (
-  hass: HomeAssistant
+  hass: ThirdEye
 ): Promise<SupervisorStore> => supervisorApiCall(hass, "/store");
 
 export const fetchStoreRepositories = async (
-  hass: HomeAssistant
+  hass: ThirdEye
 ): Promise<StoreRepository[]> => supervisorApiCall(hass, "/store/repositories");
 
 export const addStoreRepository = async (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   repository: string
 ): Promise<void> =>
   supervisorApiCall(hass, "/store/repositories", {
@@ -72,7 +72,7 @@ export const addStoreRepository = async (
   });
 
 export const removeStoreRepository = async (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   repository: string
 ): Promise<void> =>
   supervisorApiCall(hass, `/store/repositories/${repository}`, {

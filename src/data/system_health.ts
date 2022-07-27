@@ -1,4 +1,4 @@
-import { HomeAssistant } from "../types";
+import { ThirdEye } from "../types";
 
 interface SystemCheckValueDateObject {
   type: "date";
@@ -68,7 +68,7 @@ type SystemHealthEvent =
   | SystemHealthEventFinish;
 
 export const subscribeSystemHealthInfo = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   callback: (info: SystemHealthInfo) => void
 ) => {
   let data = {};

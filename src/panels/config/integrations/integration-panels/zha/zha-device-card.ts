@@ -12,7 +12,7 @@ import "../../../../../components/ha-service-description";
 import { updateDeviceRegistryEntry } from "../../../../../data/device_registry";
 import { ZHADevice } from "../../../../../data/zha";
 import { haStyle } from "../../../../../resources/styles";
-import { HomeAssistant } from "../../../../../types";
+import { ThirdEye } from "../../../../../types";
 import "../../../../../components/ha-area-picker";
 import { showAlertDialog } from "../../../../../dialogs/generic/show-dialog-box";
 import { SubscribeMixin } from "../../../../../mixins/subscribe-mixin";
@@ -28,7 +28,7 @@ import { slugify } from "../../../../../common/string/slugify";
 
 @customElement("zha-device-card")
 class ZHADeviceCard extends SubscribeMixin(LitElement) {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public device?: ZHADevice;
 

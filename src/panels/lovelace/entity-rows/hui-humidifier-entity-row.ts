@@ -1,7 +1,7 @@
 import { html, LitElement, PropertyValues, TemplateResult } from "lit";
 import { customElement, property } from "lit/decorators";
 import "../../../components/entity/ha-entity-toggle";
-import { HomeAssistant } from "../../../types";
+import { ThirdEye } from "../../../types";
 import { hasConfigOrEntityChanged } from "../common/has-changed";
 import "../components/hui-generic-entity-row";
 import { createEntityNotFoundWarning } from "../components/hui-warning";
@@ -9,7 +9,7 @@ import { EntityConfig, LovelaceRow } from "./types";
 
 @customElement("hui-humidifier-entity-row")
 class HuiHumidifierEntityRow extends LitElement implements LovelaceRow {
-  @property() public hass?: HomeAssistant;
+  @property() public hass?: ThirdEye;
 
   @property() private _config?: EntityConfig;
 

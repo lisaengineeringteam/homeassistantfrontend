@@ -3,7 +3,7 @@ import { css, CSSResultGroup, html, LitElement, TemplateResult } from "lit";
 import { customElement, state } from "lit/decorators";
 import "../../../components/ha-label-badge";
 import "../../../components/ha-svg-icon";
-import { HomeAssistant } from "../../../types";
+import { ThirdEye } from "../../../types";
 import { LovelaceBadge } from "../types";
 import { ErrorBadgeConfig } from "./types";
 
@@ -20,7 +20,7 @@ export const createErrorBadgeConfig = (error) => ({
 
 @customElement("hui-error-badge")
 export class HuiErrorBadge extends LitElement implements LovelaceBadge {
-  public hass?: HomeAssistant;
+  public hass?: ThirdEye;
 
   @state() private _config?: ErrorBadgeConfig;
 

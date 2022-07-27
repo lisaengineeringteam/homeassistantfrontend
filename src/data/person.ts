@@ -1,4 +1,4 @@
-import { HomeAssistant } from "../types";
+import { ThirdEye } from "../types";
 
 export interface Person {
   id: string;
@@ -15,14 +15,14 @@ export interface PersonMutableParams {
   picture: string | null;
 }
 
-export const fetchPersons = (hass: HomeAssistant) =>
+export const fetchPersons = (hass: ThirdEye) =>
   hass.callWS<{
     storage: Person[];
     config: Person[];
   }>({ type: "person/list" });
 
 export const createPerson = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   values: PersonMutableParams
 ) =>
   hass.callWS<Person>({
@@ -31,7 +31,7 @@ export const createPerson = (
   });
 
 export const updatePerson = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   personId: string,
   updates: Partial<PersonMutableParams>
 ) =>
@@ -41,7 +41,7 @@ export const updatePerson = (
     ...updates,
   });
 
-export const deletePerson = (hass: HomeAssistant, personId: string) =>
+export const deletePerson = (hass: ThirdEye, personId: string) =>
   hass.callWS({
     type: "person/delete",
     person_id: personId,

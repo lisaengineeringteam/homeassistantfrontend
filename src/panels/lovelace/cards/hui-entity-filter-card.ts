@@ -1,7 +1,7 @@
 import { PropertyValues, ReactiveElement } from "lit";
 import { property, state } from "lit/decorators";
 import { LovelaceCardConfig } from "../../../data/lovelace";
-import { HomeAssistant } from "../../../types";
+import { ThirdEye } from "../../../types";
 import { computeCardSize } from "../common/compute-card-size";
 import { evaluateFilter } from "../common/evaluate-filter";
 import { findEntities } from "../common/find-entities";
@@ -13,7 +13,7 @@ import { EntityFilterCardConfig } from "./types";
 
 class EntityFilterCard extends ReactiveElement implements LovelaceCard {
   public static getStubConfig(
-    hass: HomeAssistant,
+    hass: ThirdEye,
     entities: string[],
     entitiesFallback: string[]
   ): EntityFilterCardConfig {
@@ -36,7 +36,7 @@ class EntityFilterCard extends ReactiveElement implements LovelaceCard {
     };
   }
 
-  @property({ attribute: false }) public hass?: HomeAssistant;
+  @property({ attribute: false }) public hass?: ThirdEye;
 
   @property() public isPanel = false;
 
@@ -104,7 +104,7 @@ class EntityFilterCard extends ReactiveElement implements LovelaceCard {
     }
     if (changedProps.has("hass")) {
       return this._haveEntitiesChanged(
-        changedProps.get("hass") as HomeAssistant | null
+        changedProps.get("hass") as ThirdEye | null
       );
     }
     return false;
@@ -179,7 +179,7 @@ class EntityFilterCard extends ReactiveElement implements LovelaceCard {
     this.style.display = "block";
   }
 
-  private _haveEntitiesChanged(oldHass: HomeAssistant | null): boolean {
+  private _haveEntitiesChanged(oldHass: ThirdEye | null): boolean {
     if (!this.hass || !oldHass) {
       return true;
     }

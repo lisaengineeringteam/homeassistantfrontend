@@ -1,4 +1,4 @@
-import { HomeAssistant } from "../types";
+import { ThirdEye } from "../types";
 
 export interface IPv6ConfiguredAddress {
   address: string;
@@ -26,13 +26,13 @@ export interface NetworkConfig {
   configured_adapters: string[];
 }
 
-export const getNetworkConfig = (hass: HomeAssistant) =>
+export const getNetworkConfig = (hass: ThirdEye) =>
   hass.callWS<NetworkConfig>({
     type: "network",
   });
 
 export const setNetworkConfig = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   configured_adapters: string[]
 ) =>
   hass.callWS<string[]>({

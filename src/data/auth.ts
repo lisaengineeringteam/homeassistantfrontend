@@ -1,4 +1,4 @@
-import { HomeAssistant } from "../types";
+import { ThirdEye } from "../types";
 
 export interface AuthUrlSearchParams {
   client_id?: string;
@@ -23,7 +23,7 @@ export interface SignedPath {
 export const hassUrl = `${location.protocol}//${location.host}`;
 
 export const getSignedPath = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   path: string
 ): Promise<SignedPath> => hass.callWS({ type: "auth/sign_path", path });
 
@@ -33,25 +33,25 @@ export const fetchAuthProviders = () =>
   });
 
 export const createAuthForUser = async (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   userId: string,
   username: string,
   password: string
 ) =>
   hass.callWS({
-    type: "config/auth_provider/homeassistant/create",
+    type: "config/auth_provider/thirdeye/create",
     user_id: userId,
     username,
     password,
   });
 
 export const adminChangePassword = async (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   userId: string,
   password: string
 ) =>
   hass.callWS<void>({
-    type: "config/auth_provider/homeassistant/admin_change_password",
+    type: "config/auth_provider/thirdeye/admin_change_password",
     user_id: userId,
     password,
   });

@@ -18,7 +18,7 @@ import {
 } from "../../../../../data/zha";
 import "../../../../../layouts/hass-error-screen";
 import "../../../../../layouts/hass-subpage";
-import { HomeAssistant } from "../../../../../types";
+import { ThirdEye } from "../../../../../types";
 import "../../../ha-config-section";
 import { formatAsPaddedHex } from "./functions";
 import "./zha-device-endpoint-data-table";
@@ -26,7 +26,7 @@ import type { ZHADeviceEndpointDataTable } from "./zha-device-endpoint-data-tabl
 
 @customElement("zha-group-page")
 export class ZHAGroupPage extends LitElement {
-  @property({ type: Object }) public hass!: HomeAssistant;
+  @property({ type: Object }) public hass!: ThirdEye;
 
   @property({ type: Object }) public group?: ZHAGroup;
 

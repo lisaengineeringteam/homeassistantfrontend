@@ -9,7 +9,7 @@ import {
   WhileRepeat,
 } from "../../../../../data/script";
 import { haStyle } from "../../../../../resources/styles";
-import type { HomeAssistant } from "../../../../../types";
+import type { ThirdEye } from "../../../../../types";
 import type { Condition } from "../../../../lovelace/common/validate-condition";
 import "../ha-automation-action";
 import "../../../../../components/ha-textfield";
@@ -21,7 +21,7 @@ const getType = (action) => OPTIONS.find((option) => option in action);
 
 @customElement("ha-automation-action-repeat")
 export class HaRepeatAction extends LitElement implements ActionElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ attribute: false }) public action!: RepeatAction;
 

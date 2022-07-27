@@ -9,7 +9,7 @@ import {
   HassRouterPage,
   RouterOptions,
 } from "../../../layouts/hass-router-page";
-import { HomeAssistant } from "../../../types";
+import { ThirdEye } from "../../../types";
 import "./ha-script-editor";
 import "./ha-script-picker";
 
@@ -22,7 +22,7 @@ const equal = (a: ScriptEntity[], b: ScriptEntity[]): boolean => {
 
 @customElement("ha-config-script")
 class HaConfigScript extends HassRouterPage {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public narrow!: boolean;
 

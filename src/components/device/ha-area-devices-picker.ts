@@ -22,7 +22,7 @@ import {
 } from "../../data/entity_registry";
 import { SubscribeMixin } from "../../mixins/subscribe-mixin";
 import { PolymerChangedEvent } from "../../polymer-types";
-import { HomeAssistant } from "../../types";
+import { ThirdEye } from "../../types";
 import "../ha-icon-button";
 import "../ha-svg-icon";
 import "./ha-devices-picker";
@@ -46,7 +46,7 @@ const rowRenderer: ComboBoxLitRenderer<AreaDevices> = (
 
 @customElement("ha-area-devices-picker")
 export class HaAreaDevicesPicker extends SubscribeMixin(LitElement) {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public label?: string;
 

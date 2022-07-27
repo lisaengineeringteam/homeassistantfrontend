@@ -11,12 +11,12 @@ import {
 } from "../../../../../data/zwave_js";
 import { showConfirmationDialog } from "../../../../../dialogs/generic/show-dialog-box";
 import "../../../../../layouts/hass-tabs-subpage-data-table";
-import { HomeAssistant, Route } from "../../../../../types";
+import { ThirdEye, Route } from "../../../../../types";
 import { configTabs } from "./zwave_js-config-router";
 
 @customElement("zwave_js-provisioned")
 class ZWaveJSProvisioned extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ type: Object }) public route!: Route;
 

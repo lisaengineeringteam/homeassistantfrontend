@@ -19,7 +19,7 @@ import {
 } from "../../data/lovelace";
 import "../../layouts/hass-error-screen";
 import "../../layouts/hass-loading-screen";
-import { HomeAssistant, PanelInfo, Route } from "../../types";
+import { ThirdEye, PanelInfo, Route } from "../../types";
 import { showToast } from "../../util/toast";
 import { loadLovelaceResources } from "./common/load-resources";
 import { showSaveDialog } from "./editor/show-save-config-dialog";
@@ -41,7 +41,7 @@ let resourcesLoaded = false;
 class LovelacePanel extends LitElement {
   @property() public panel?: PanelInfo<LovelacePanelConfig>;
 
-  @property({ attribute: false }) public hass?: HomeAssistant;
+  @property({ attribute: false }) public hass?: ThirdEye;
 
   @property() public narrow?: boolean;
 

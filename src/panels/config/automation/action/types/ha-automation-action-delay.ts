@@ -5,13 +5,13 @@ import { hasTemplate } from "../../../../../common/string/has-template";
 import type { HaDurationData } from "../../../../../components/ha-duration-input";
 import "../../../../../components/ha-duration-input";
 import { DelayAction } from "../../../../../data/script";
-import { HomeAssistant } from "../../../../../types";
+import { ThirdEye } from "../../../../../types";
 import { ActionElement } from "../ha-automation-action-row";
 import { createDurationData } from "../../../../../common/datetime/create_duration_data";
 
 @customElement("ha-automation-action-delay")
 export class HaDelayAction extends LitElement implements ActionElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public action!: DelayAction;
 

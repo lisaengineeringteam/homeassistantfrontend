@@ -2,13 +2,13 @@ import { PropertyValues, ReactiveElement } from "lit";
 import { property } from "lit/decorators";
 import { computeRTL } from "../../../../common/util/compute_rtl";
 import { LovelaceCardConfig } from "../../../../data/lovelace";
-import { HomeAssistant } from "../../../../types";
+import { ThirdEye } from "../../../../types";
 import { createCardElement } from "../../create-element/create-card-element";
 import { createErrorCardConfig } from "../../create-element/create-element-base";
 import { LovelaceCard } from "../../types";
 
 export class HuiCardPreview extends ReactiveElement {
-  @property({ attribute: false }) public hass?: HomeAssistant;
+  @property({ attribute: false }) public hass?: ThirdEye;
 
   @property() public config?: LovelaceCardConfig;
 
@@ -71,7 +71,7 @@ export class HuiCardPreview extends ReactiveElement {
 
     if (changedProperties.has("hass")) {
       const oldHass = changedProperties.get("hass") as
-        | HomeAssistant
+        | ThirdEye
         | undefined;
       if (!oldHass || oldHass.language !== this.hass!.language) {
         this.style.direction = computeRTL(this.hass!) ? "rtl" : "ltr";

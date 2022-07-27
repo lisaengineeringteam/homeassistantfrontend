@@ -6,13 +6,13 @@ import {
   saveConfig,
 } from "../../../data/lovelace";
 import { showAlertDialog } from "../../../dialogs/generic/show-dialog-box";
-import { HomeAssistant } from "../../../types";
+import { ThirdEye } from "../../../types";
 import { showSuggestCardDialog } from "./card-editor/show-suggest-card-dialog";
 import { showSelectViewDialog } from "./select-view/show-select-view-dialog";
 
 export const addEntitiesToLovelaceView = async (
   element: HTMLElement,
-  hass: HomeAssistant,
+  hass: ThirdEye,
   entities: string[],
   cardTitle?: string
 ) => {

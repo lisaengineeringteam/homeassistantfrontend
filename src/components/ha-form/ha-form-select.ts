@@ -2,7 +2,7 @@ import memoizeOne from "memoize-one";
 import { html, LitElement, TemplateResult } from "lit";
 import { customElement, property } from "lit/decorators";
 import { fireEvent } from "../../common/dom/fire_event";
-import type { HomeAssistant } from "../../types";
+import type { ThirdEye } from "../../types";
 import type {
   HaFormElement,
   HaFormSelectData,
@@ -13,7 +13,7 @@ import "../ha-selector/ha-selector-select";
 
 @customElement("ha-form-select")
 export class HaFormSelect extends LitElement implements HaFormElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ attribute: false }) public schema!: HaFormSelectSchema;
 

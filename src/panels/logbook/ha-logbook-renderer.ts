@@ -32,7 +32,7 @@ import {
   haStyleScrollbar,
   buttonLinkStyle,
 } from "../../resources/styles";
-import { HomeAssistant } from "../../types";
+import { ThirdEye } from "../../types";
 import { brandsUrl } from "../../util/brands-url";
 
 declare global {
@@ -50,7 +50,7 @@ const stripEntityId = (message: string, entityId?: string) =>
 
 @customElement("ha-logbook-renderer")
 class HaLogbookRenderer extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ attribute: false }) public userIdToName = {};
 
@@ -78,7 +78,7 @@ class HaLogbookRenderer extends LitElement {
   @restoreScroll(".container") private _savedScrollPos?: number;
 
   protected shouldUpdate(changedProps: PropertyValues<this>) {
-    const oldHass = changedProps.get("hass") as HomeAssistant | undefined;
+    const oldHass = changedProps.get("hass") as ThirdEye | undefined;
     const languageChanged =
       oldHass === undefined || oldHass.locale !== this.hass.locale;
 

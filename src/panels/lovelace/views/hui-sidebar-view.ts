@@ -15,14 +15,14 @@ import type {
   LovelaceViewConfig,
   LovelaceViewElement,
 } from "../../../data/lovelace";
-import type { HomeAssistant } from "../../../types";
+import type { ThirdEye } from "../../../types";
 import { HuiErrorCard } from "../cards/hui-error-card";
 import { HuiCardOptions } from "../components/hui-card-options";
 import { replaceCard } from "../editor/config-util";
 import type { Lovelace, LovelaceCard } from "../types";
 
 export class SideBarView extends LitElement implements LovelaceViewElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ attribute: false }) public lovelace?: Lovelace;
 

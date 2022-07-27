@@ -7,7 +7,7 @@ import {
   RouterOptions,
 } from "../../../layouts/hass-router-page";
 import { PolymerChangedEvent } from "../../../polymer-types";
-import { HomeAssistant, Route } from "../../../types";
+import { ThirdEye, Route } from "../../../types";
 import "./account/cloud-account";
 import "./login/cloud-login";
 
@@ -16,7 +16,7 @@ const NOT_LOGGED_IN_URLS = ["login", "register", "forgot-password"];
 
 @customElement("ha-config-cloud")
 class HaConfigCloud extends HassRouterPage {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public isWide!: boolean;
 

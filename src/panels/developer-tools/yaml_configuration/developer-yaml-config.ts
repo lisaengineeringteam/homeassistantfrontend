@@ -9,11 +9,11 @@ import { checkCoreConfig } from "../../../data/core";
 import { domainToName } from "../../../data/integration";
 import { showConfirmationDialog } from "../../../dialogs/generic/show-dialog-box";
 import { haStyle } from "../../../resources/styles";
-import type { HomeAssistant, Route } from "../../../types";
+import type { ThirdEye, Route } from "../../../types";
 
 @customElement("developer-yaml-config")
 export class DeveloperYamlConfig extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ type: Boolean }) public isWide!: boolean;
 
@@ -119,7 +119,7 @@ export class DeveloperYamlConfig extends LitElement {
           <div class="card-actions">
             <ha-call-service-button
               .hass=${this.hass}
-              domain="homeassistant"
+              domain="thirdeye"
               service="reload_core_config"
               >${this.hass.localize(
                 "ui.panel.developer-tools.tabs.yaml.section.reloading.core"
@@ -177,7 +177,7 @@ export class DeveloperYamlConfig extends LitElement {
         "ui.panel.developer-tools.tabs.yaml.section.server_management.restart"
       ),
       confirm: () => {
-        this.hass.callService("homeassistant", "restart").catch((reason) => {
+        this.hass.callService("thirdeye", "restart").catch((reason) => {
           this._isValid = false;
           this._validateLog = reason.message;
         });

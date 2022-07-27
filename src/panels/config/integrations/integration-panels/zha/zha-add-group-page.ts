@@ -16,14 +16,14 @@ import {
 import "../../../../../layouts/hass-error-screen";
 import "../../../../../layouts/hass-subpage";
 import type { PolymerChangedEvent } from "../../../../../polymer-types";
-import type { HomeAssistant } from "../../../../../types";
+import type { ThirdEye } from "../../../../../types";
 import "../../../ha-config-section";
 import "./zha-device-endpoint-data-table";
 import type { ZHADeviceEndpointDataTable } from "./zha-device-endpoint-data-table";
 
 @customElement("zha-add-group-page")
 export class ZHAAddGroupPage extends LitElement {
-  @property({ type: Object }) public hass!: HomeAssistant;
+  @property({ type: Object }) public hass!: ThirdEye;
 
   @property({ type: Boolean }) public narrow!: boolean;
 

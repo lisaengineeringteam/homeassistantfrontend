@@ -2,13 +2,13 @@ import { dump } from "js-yaml";
 import { css, CSSResultGroup, html, LitElement, TemplateResult } from "lit";
 import { customElement, state } from "lit/decorators";
 import "../../../components/ha-alert";
-import { HomeAssistant } from "../../../types";
+import { ThirdEye } from "../../../types";
 import { LovelaceCard } from "../types";
 import { ErrorCardConfig } from "./types";
 
 @customElement("hui-error-card")
 export class HuiErrorCard extends LitElement implements LovelaceCard {
-  public hass?: HomeAssistant;
+  public hass?: ThirdEye;
 
   @state() private _config?: ErrorCardConfig;
 

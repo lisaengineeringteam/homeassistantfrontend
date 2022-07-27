@@ -5,11 +5,11 @@ import { customElement, property, state } from "lit/decorators";
 import { formatTime } from "../../../../../common/datetime/format_time";
 import "../../../../../components/ha-card";
 import { MQTTMessage, subscribeMQTTTopic } from "../../../../../data/mqtt";
-import { HomeAssistant } from "../../../../../types";
+import { ThirdEye } from "../../../../../types";
 
 @customElement("mqtt-subscribe-card")
 class MqttSubscribeCard extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @state() private _topic = "";
 

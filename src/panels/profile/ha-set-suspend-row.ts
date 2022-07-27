@@ -4,24 +4,24 @@ import { fireEvent, HASSDomEvent } from "../../common/dom/fire_event";
 import "../../components/ha-settings-row";
 import "../../components/ha-switch";
 import type { HaSwitch } from "../../components/ha-switch";
-import type { HomeAssistant } from "../../types";
+import type { ThirdEye } from "../../types";
 
 declare global {
   // for fire event
   interface HASSDomEvents {
-    "hass-suspend-when-hidden": { suspend: HomeAssistant["suspendWhenHidden"] };
+    "hass-suspend-when-hidden": { suspend: ThirdEye["suspendWhenHidden"] };
   }
   // for add event listener
   interface HTMLElementEventMap {
     "hass-suspend-when-hidden": HASSDomEvent<{
-      suspend: HomeAssistant["suspendWhenHidden"];
+      suspend: ThirdEye["suspendWhenHidden"];
     }>;
   }
 }
 
 @customElement("ha-set-suspend-row")
 class HaSetSuspendRow extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public narrow!: boolean;
 

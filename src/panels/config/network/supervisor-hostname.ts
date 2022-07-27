@@ -22,11 +22,11 @@ import {
   fetchHassioHostInfo,
 } from "../../../data/hassio/host";
 import { showAlertDialog } from "../../../dialogs/generic/show-dialog-box";
-import type { HomeAssistant } from "../../../types";
+import type { ThirdEye } from "../../../types";
 
 @customElement("supervisor-hostname")
 export class HassioHostname extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ type: Boolean }) narrow!: boolean;
 
@@ -64,7 +64,7 @@ export class HassioHostname extends LitElement {
               .disabled=${this._processing}
               .value=${this._hostname}
               @change=${this._handleChange}
-              placeholder="homeassistant"
+              placeholder="thirdeye"
             >
             </ha-textfield>
           </ha-settings-row>

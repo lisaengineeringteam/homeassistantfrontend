@@ -25,7 +25,7 @@ import {
 import { CropOptions } from "../../../dialogs/image-cropper-dialog/show-image-cropper-dialog";
 import { PolymerChangedEvent } from "../../../polymer-types";
 import { haStyleDialog } from "../../../resources/styles";
-import { HomeAssistant } from "../../../types";
+import { ThirdEye } from "../../../types";
 import { documentationUrl } from "../../../util/documentation-url";
 import { showAddUserDialog } from "../users/show-dialog-add-user";
 import { PersonDetailDialogParams } from "./show-dialog-person-detail";
@@ -40,7 +40,7 @@ const cropOptions: CropOptions = {
 };
 
 class DialogPersonDetail extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @state() private _name!: string;
 
@@ -342,11 +342,11 @@ class DialogPersonDetail extends LitElement {
       return;
     }
     const credential = this._user.credentials.find(
-      (cred) => cred.type === "homeassistant"
+      (cred) => cred.type === "thirdeye"
     );
     if (!credential) {
       showAlertDialog(this, {
-        title: "No Home Assistant credentials found.",
+        title: "No Third Eyels found.",
       });
       return;
     }

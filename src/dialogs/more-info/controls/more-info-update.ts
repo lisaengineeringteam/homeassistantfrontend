@@ -20,12 +20,12 @@ import {
   UPDATE_SUPPORT_RELEASE_NOTES,
   UPDATE_SUPPORT_SPECIFIC_VERSION,
 } from "../../../data/update";
-import type { HomeAssistant } from "../../../types";
+import type { ThirdEye } from "../../../types";
 import { BINARY_STATE_OFF } from "../../../common/const";
 
 @customElement("more-info-update")
 class MoreInfoUpdate extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ attribute: false }) public stateObj?: UpdateEntity;
 

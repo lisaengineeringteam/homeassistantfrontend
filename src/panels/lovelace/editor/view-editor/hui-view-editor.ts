@@ -6,7 +6,7 @@ import { fireEvent } from "../../../../common/dom/fire_event";
 import { slugify } from "../../../../common/string/slugify";
 import type { HaFormSchema } from "../../../../components/ha-form/types";
 import type { LovelaceViewConfig } from "../../../../data/lovelace";
-import type { HomeAssistant } from "../../../../types";
+import type { ThirdEye } from "../../../../types";
 import {
   DEFAULT_VIEW_LAYOUT,
   PANEL_VIEW_LAYOUT,
@@ -23,7 +23,7 @@ declare global {
 
 @customElement("hui-view-editor")
 export class HuiViewEditor extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public isNew!: boolean;
 

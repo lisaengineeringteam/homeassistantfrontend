@@ -18,12 +18,12 @@ import { SUPPORT_PLAY_MEDIA } from "../../../../data/media-player";
 import { convertTextToSpeech } from "../../../../data/tts";
 import { showAlertDialog } from "../../../../dialogs/generic/show-dialog-box";
 import { haStyleDialog } from "../../../../resources/styles";
-import { HomeAssistant } from "../../../../types";
+import { ThirdEye } from "../../../../types";
 import { TryTtsDialogParams } from "./show-dialog-cloud-tts-try";
 
 @customElement("dialog-cloud-try-tts")
 export class DialogTryTts extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @state() private _loadingExample = false;
 

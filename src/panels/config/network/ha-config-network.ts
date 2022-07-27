@@ -21,11 +21,11 @@ import {
   setNetworkConfig,
 } from "../../../data/network";
 import { haStyle } from "../../../resources/styles";
-import type { HomeAssistant } from "../../../types";
+import type { ThirdEye } from "../../../types";
 
 @customElement("ha-config-network")
 class ConfigNetwork extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @state() private _networkConfig?: NetworkConfig;
 

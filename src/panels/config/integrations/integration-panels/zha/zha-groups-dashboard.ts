@@ -21,7 +21,7 @@ import "../../../../../components/ha-icon-button";
 import { fetchGroups, ZHADevice, ZHAGroup } from "../../../../../data/zha";
 import "../../../../../layouts/hass-tabs-subpage-data-table";
 import { haStyle } from "../../../../../resources/styles";
-import { HomeAssistant, Route } from "../../../../../types";
+import { ThirdEye, Route } from "../../../../../types";
 import { formatAsPaddedHex, sortZHAGroups } from "./functions";
 import { zhaTabs } from "./zha-config-dashboard";
 
@@ -32,7 +32,7 @@ export interface GroupRowData extends ZHAGroup {
 
 @customElement("zha-groups-dashboard")
 export class ZHAGroupsDashboard extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ type: Object }) public route!: Route;
 

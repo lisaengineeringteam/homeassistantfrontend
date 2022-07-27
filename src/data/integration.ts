@@ -1,5 +1,5 @@
 import { LocalizeFunc } from "../common/translations/localize";
-import { HomeAssistant } from "../types";
+import { ThirdEye } from "../types";
 
 export interface IntegrationManifest {
   is_built_in: boolean;
@@ -43,7 +43,7 @@ export const domainToName = (
 ) => localize(`component.${domain}.title`) || manifest?.name || domain;
 
 export const fetchIntegrationManifests = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   integrations?: string[]
 ) => {
   const params: any = {
@@ -56,9 +56,9 @@ export const fetchIntegrationManifests = (
 };
 
 export const fetchIntegrationManifest = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   integration: string
 ) => hass.callWS<IntegrationManifest>({ type: "manifest/get", integration });
 
-export const fetchIntegrationSetups = (hass: HomeAssistant) =>
+export const fetchIntegrationSetups = (hass: ThirdEye) =>
   hass.callWS<IntegrationSetup[]>({ type: "integration/setup_info" });

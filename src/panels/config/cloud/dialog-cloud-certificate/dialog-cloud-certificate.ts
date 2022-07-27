@@ -4,12 +4,12 @@ import { customElement, property } from "lit/decorators";
 import { formatDateTime } from "../../../../common/datetime/format_date_time";
 import { fireEvent } from "../../../../common/dom/fire_event";
 import { haStyleDialog } from "../../../../resources/styles";
-import type { HomeAssistant } from "../../../../types";
+import type { ThirdEye } from "../../../../types";
 import type { CloudCertificateParams as CloudCertificateDialogParams } from "./show-dialog-cloud-certificate";
 
 @customElement("dialog-cloud-certificate")
 class DialogCloudCertificate extends LitElement {
-  public hass!: HomeAssistant;
+  public hass!: ThirdEye;
 
   @property()
   private _params?: CloudCertificateDialogParams;

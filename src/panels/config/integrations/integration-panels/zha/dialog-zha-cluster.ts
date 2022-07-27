@@ -17,7 +17,7 @@ import {
   ZHAGroup,
 } from "../../../../../data/zha";
 import { haStyleDialog } from "../../../../../resources/styles";
-import { HomeAssistant } from "../../../../../types";
+import { ThirdEye } from "../../../../../types";
 import { sortZHADevices, sortZHAGroups } from "./functions";
 import { ZHADeviceZigbeeInfoDialogParams } from "./show-dialog-zha-device-zigbee-info";
 import { ZHAClusterSelectedParams } from "./types";
@@ -29,7 +29,7 @@ import "./zha-group-binding";
 
 @customElement("dialog-zha-cluster")
 class DialogZHACluster extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @state() private _device?: ZHADevice;
 

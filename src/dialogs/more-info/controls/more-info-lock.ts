@@ -5,11 +5,11 @@ import { customElement, property, query } from "lit/decorators";
 import "../../../components/ha-attributes";
 import "../../../components/ha-textfield";
 import type { HaTextField } from "../../../components/ha-textfield";
-import type { HomeAssistant } from "../../../types";
+import type { ThirdEye } from "../../../types";
 
 @customElement("more-info-lock")
 class MoreInfoLock extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ attribute: false }) public stateObj?: HassEntity;
 

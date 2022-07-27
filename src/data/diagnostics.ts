@@ -1,4 +1,4 @@
-import { HomeAssistant } from "../types";
+import { ThirdEye } from "../types";
 
 export interface DiagnosticInfo {
   domain: string;
@@ -9,14 +9,14 @@ export interface DiagnosticInfo {
 }
 
 export const fetchDiagnosticHandlers = (
-  hass: HomeAssistant
+  hass: ThirdEye
 ): Promise<DiagnosticInfo[]> =>
   hass.callWS<DiagnosticInfo[]>({
     type: "diagnostics/list",
   });
 
 export const fetchDiagnosticHandler = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   domain: string
 ): Promise<DiagnosticInfo> =>
   hass.callWS<DiagnosticInfo>({

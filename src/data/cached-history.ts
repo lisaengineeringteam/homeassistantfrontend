@@ -1,5 +1,5 @@
 import { LocalizeFunc } from "../common/translations/localize";
-import { HomeAssistant } from "../types";
+import { ThirdEye } from "../types";
 import {
   computeHistory,
   HistoryStates,
@@ -36,7 +36,7 @@ const stateHistoryCache: { [cacheKey: string]: CachedResults } = {};
 
 // Cached type 1 function. Without cache config.
 export const getRecent = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   entityId: string,
   startTime: Date,
   endTime: Date,
@@ -96,7 +96,7 @@ function getEmptyCache(
 }
 
 export const getRecentWithCache = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   entityId: string,
   cacheConfig: CacheConfig,
   localize: LocalizeFunc,

@@ -16,7 +16,7 @@ import type { HaEntityPicker } from "../../../components/entity/ha-entity-picker
 import "../../../components/ha-icon-button";
 import "../../../components/ha-svg-icon";
 import { sortableStyles } from "../../../resources/ha-sortable-style";
-import { HomeAssistant } from "../../../types";
+import { ThirdEye } from "../../../types";
 import { EntityConfig, LovelaceRowConfig } from "../entity-rows/types";
 
 let Sortable;
@@ -31,7 +31,7 @@ declare global {
 
 @customElement("hui-entities-card-row-editor")
 export class HuiEntitiesCardRowEditor extends LitElement {
-  @property({ attribute: false }) protected hass?: HomeAssistant;
+  @property({ attribute: false }) protected hass?: ThirdEye;
 
   @property({ attribute: false }) protected entities?: LovelaceRowConfig[];
 

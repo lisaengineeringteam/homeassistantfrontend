@@ -4,7 +4,7 @@ import { assert, assign, boolean, object, optional, string } from "superstruct";
 import { fireEvent } from "../../../../common/dom/fire_event";
 import type { HaFormSchema } from "../../../../components/ha-form/types";
 import type { ActionConfig } from "../../../../data/lovelace";
-import type { HomeAssistant } from "../../../../types";
+import type { ThirdEye } from "../../../../types";
 import type { PictureEntityCardConfig } from "../../cards/types";
 import "../../components/hui-action-editor";
 import type { LovelaceCardEditor } from "../../types";
@@ -68,7 +68,7 @@ export class HuiPictureEntityCardEditor
   extends LitElement
   implements LovelaceCardEditor
 {
-  @property({ attribute: false }) public hass?: HomeAssistant;
+  @property({ attribute: false }) public hass?: ThirdEye;
 
   @state() private _config?: PictureEntityCardConfig;
 

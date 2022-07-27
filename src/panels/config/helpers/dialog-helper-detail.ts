@@ -20,7 +20,7 @@ import { domainToName } from "../../../data/integration";
 import { createTimer } from "../../../data/timer";
 import { showConfigFlowDialog } from "../../../dialogs/config-flow/show-dialog-config-flow";
 import { haStyleDialog } from "../../../resources/styles";
-import { HomeAssistant } from "../../../types";
+import { ThirdEye } from "../../../types";
 import { brandsUrl } from "../../../util/brands-url";
 import { Helper } from "./const";
 import "./forms/ha-counter-form";
@@ -46,7 +46,7 @@ const HELPERS = {
 
 @customElement("dialog-helper-detail")
 export class DialogHelperDetail extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @state() private _item?: Helper;
 

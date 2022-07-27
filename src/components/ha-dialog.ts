@@ -3,12 +3,12 @@ import { styles } from "@material/mwc-dialog/mwc-dialog.css";
 import { mdiClose } from "@mdi/js";
 import { css, html, TemplateResult } from "lit";
 import { customElement } from "lit/decorators";
-import type { HomeAssistant } from "../types";
+import type { ThirdEye } from "../types";
 import { FOCUS_TARGET } from "../dialogs/make-dialog-manager";
 import "./ha-icon-button";
 
 export const createCloseHeading = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   title: string | TemplateResult
 ) => html`
   <span class="header_title">${title}</span>

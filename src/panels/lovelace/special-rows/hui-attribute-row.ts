@@ -10,7 +10,7 @@ import { customElement, property, state } from "lit/decorators";
 import checkValidDate from "../../../common/datetime/check_valid_date";
 import { formatNumber } from "../../../common/number/format_number";
 import { formatAttributeValue } from "../../../data/entity_attributes";
-import { HomeAssistant } from "../../../types";
+import { ThirdEye } from "../../../types";
 import { hasConfigOrEntityChanged } from "../common/has-changed";
 import "../components/hui-generic-entity-row";
 import "../components/hui-timestamp-display";
@@ -19,7 +19,7 @@ import { AttributeRowConfig, LovelaceRow } from "../entity-rows/types";
 
 @customElement("hui-attribute-row")
 class HuiAttributeRow extends LitElement implements LovelaceRow {
-  @property({ attribute: false }) public hass?: HomeAssistant;
+  @property({ attribute: false }) public hass?: ThirdEye;
 
   @state() private _config?: AttributeRowConfig;
 

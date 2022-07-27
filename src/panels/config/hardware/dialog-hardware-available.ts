@@ -17,7 +17,7 @@ import { showAlertDialog } from "../../../dialogs/generic/show-dialog-box";
 import type { HassDialog } from "../../../dialogs/make-dialog-manager";
 import { dump } from "../../../resources/js-yaml-dump";
 import { haStyle, haStyleDialog } from "../../../resources/styles";
-import type { HomeAssistant } from "../../../types";
+import type { ThirdEye } from "../../../types";
 
 const _filterDevices = memoizeOne(
   (showAdvanced: boolean, hardware: HassioHardwareInfo, filter: string) =>
@@ -38,7 +38,7 @@ const _filterDevices = memoizeOne(
 
 @customElement("ha-dialog-hardware-available")
 class DialogHardwareAvailable extends LitElement implements HassDialog {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @state() private _hardware?: HassioHardwareInfo;
 

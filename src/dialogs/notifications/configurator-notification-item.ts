@@ -5,12 +5,12 @@ import { fireEvent } from "../../common/dom/fire_event";
 import { computeStateDisplay } from "../../common/entity/compute_state_display";
 import { domainToName } from "../../data/integration";
 import { PersitentNotificationEntity } from "../../data/persistent_notification";
-import { HomeAssistant } from "../../types";
+import { ThirdEye } from "../../types";
 import "./notification-item-template";
 
 @customElement("configurator-notification-item")
 export class HuiConfiguratorNotificationItem extends LitElement {
-  @property({ attribute: false }) public hass?: HomeAssistant;
+  @property({ attribute: false }) public hass?: ThirdEye;
 
   @property() public notification?: PersitentNotificationEntity;
 

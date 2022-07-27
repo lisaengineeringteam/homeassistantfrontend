@@ -8,12 +8,12 @@ import type { HaSwitch } from "../../../../components/ha-switch";
 import "../../../../components/ha-textfield";
 import { computeDeviceName } from "../../../../data/device_registry";
 import { haStyle, haStyleDialog } from "../../../../resources/styles";
-import { HomeAssistant } from "../../../../types";
+import { ThirdEye } from "../../../../types";
 import { DeviceRegistryDetailDialogParams } from "./show-dialog-device-registry-detail";
 
 @customElement("dialog-device-registry-detail")
 class DialogDeviceRegistryDetail extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @state() private _nameByUser!: string;
 

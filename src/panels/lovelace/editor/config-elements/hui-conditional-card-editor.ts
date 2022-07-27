@@ -22,7 +22,7 @@ import type {
   LovelaceCardConfig,
   LovelaceConfig,
 } from "../../../../data/lovelace";
-import type { HomeAssistant } from "../../../../types";
+import type { ThirdEye } from "../../../../types";
 import type { ConditionalCardConfig } from "../../cards/types";
 import type { LovelaceCardEditor } from "../../types";
 import "../card-editor/hui-card-element-editor";
@@ -52,7 +52,7 @@ export class HuiConditionalCardEditor
   extends LitElement
   implements LovelaceCardEditor
 {
-  @property({ attribute: false }) public hass?: HomeAssistant;
+  @property({ attribute: false }) public hass?: ThirdEye;
 
   @property({ attribute: false }) public lovelace?: LovelaceConfig;
 

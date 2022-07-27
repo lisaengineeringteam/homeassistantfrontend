@@ -27,16 +27,16 @@ import {
 import { showAlertDialog } from "../../../dialogs/generic/show-dialog-box";
 import "../../../layouts/hass-subpage";
 import { SubscribeMixin } from "../../../mixins/subscribe-mixin";
-import type { HomeAssistant } from "../../../types";
+import type { ThirdEye } from "../../../types";
 import { documentationUrl } from "../../../util/documentation-url";
 import { showToast } from "../../../util/toast";
 import "./integrations-card";
 
 const sortKeys = (a: string, b: string) => {
-  if (a === "homeassistant") {
+  if (a === "thirdeye") {
     return -1;
   }
-  if (b === "homeassistant") {
+  if (b === "thirdeye") {
     return 1;
   }
   if (a < b) {
@@ -55,7 +55,7 @@ export const UNHEALTHY_REASON_URL = {
 
 @customElement("ha-config-system-health")
 class HaConfigSystemHealth extends SubscribeMixin(LitElement) {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ type: Boolean }) public narrow!: boolean;
 
@@ -172,7 +172,7 @@ class HaConfigSystemHealth extends SubscribeMixin(LitElement) {
             </tr>
           `);
         }
-        if (domain !== "homeassistant") {
+        if (domain !== "thirdeye") {
           sections.push(
             html`
               <div class="card-header">
@@ -396,7 +396,7 @@ class HaConfigSystemHealth extends SubscribeMixin(LitElement) {
       let first = true;
       const parts = [
         `${
-          github && domain !== "homeassistant"
+          github && domain !== "thirdeye"
             ? `<details><summary>${domainToName(
                 this.hass.localize,
                 domain
@@ -429,11 +429,11 @@ class HaConfigSystemHealth extends SubscribeMixin(LitElement) {
         }
       }
 
-      if (domain === "homeassistant") {
+      if (domain === "thirdeye") {
         haContent = parts.join("\n");
       } else {
         domainParts.push(parts.join("\n"));
-        if (github && domain !== "homeassistant") {
+        if (github && domain !== "thirdeye") {
           domainParts.push("</details>");
         }
       }

@@ -3,7 +3,7 @@ import { html, LitElement, PropertyValues, TemplateResult } from "lit";
 import { customElement, property, query } from "lit/decorators";
 import { formatAttributeName } from "../../data/entity_attributes";
 import { PolymerChangedEvent } from "../../polymer-types";
-import { HomeAssistant } from "../../types";
+import { ThirdEye } from "../../types";
 import "../ha-combo-box";
 import type { HaComboBox } from "../ha-combo-box";
 
@@ -11,7 +11,7 @@ export type HaEntityPickerEntityFilterFunc = (entityId: HassEntity) => boolean;
 
 @customElement("ha-entity-attribute-picker")
 class HaEntityAttributePicker extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public entityId?: string;
 

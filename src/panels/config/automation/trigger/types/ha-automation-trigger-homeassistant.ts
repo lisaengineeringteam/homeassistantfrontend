@@ -4,13 +4,13 @@ import { customElement, property } from "lit/decorators";
 import memoizeOne from "memoize-one";
 import { fireEvent } from "../../../../../common/dom/fire_event";
 import type { HassTrigger } from "../../../../../data/automation";
-import type { HomeAssistant } from "../../../../../types";
+import type { ThirdEye } from "../../../../../types";
 import type { HaFormSchema } from "../../../../../components/ha-form/types";
 import type { LocalizeFunc } from "../../../../../common/translations/localize";
 
-@customElement("ha-automation-trigger-homeassistant")
+@customElement("ha-automation-trigger-thirdeye")
 export class HaHassTrigger extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ attribute: false }) public trigger!: HassTrigger;
 
@@ -23,13 +23,13 @@ export class HaHassTrigger extends LitElement {
         [
           "start",
           localize(
-            "ui.panel.config.automation.editor.triggers.type.homeassistant.start"
+            "ui.panel.config.automation.editor.triggers.type.thirdeye.start"
           ),
         ],
         [
           "shutdown",
           localize(
-            "ui.panel.config.automation.editor.triggers.type.homeassistant.shutdown"
+            "ui.panel.config.automation.editor.triggers.type.thirdeye.shutdown"
           ),
         ],
       ],
@@ -75,6 +75,6 @@ export class HaHassTrigger extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    "ha-automation-trigger-homeassistant": HaHassTrigger;
+    "ha-automation-trigger-thirdeye": HaHassTrigger;
   }
 }

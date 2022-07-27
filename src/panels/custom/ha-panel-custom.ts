@@ -2,7 +2,7 @@ import { PropertyValues, ReactiveElement } from "lit";
 import { property } from "lit/decorators";
 import { navigate, NavigateOptions } from "../../common/navigate";
 import { CustomPanelInfo } from "../../data/panel_custom";
-import { HomeAssistant, Route } from "../../types";
+import { ThirdEye, Route } from "../../types";
 import { createCustomPanelElement } from "../../util/custom-panel/create-custom-panel-element";
 import {
   getUrl,
@@ -17,7 +17,7 @@ declare global {
 }
 
 export class HaPanelCustom extends ReactiveElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public narrow!: boolean;
 

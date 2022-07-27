@@ -16,12 +16,12 @@ import { showAlertDialog } from "../../../../dialogs/generic/show-dialog-box";
 import "../../../../layouts/hass-subpage";
 import { haStyle } from "../../../../resources/styles";
 import "../../../../styles/polymer-ha-style";
-import { HomeAssistant } from "../../../../types";
+import { ThirdEye } from "../../../../types";
 import "../../ha-config-section";
 
 @customElement("cloud-login")
 export class CloudLogin extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ type: Boolean }) public isWide = false;
 
@@ -46,11 +46,11 @@ export class CloudLogin extends LitElement {
       <hass-subpage
         .hass=${this.hass}
         .narrow=${this.narrow}
-        header="Home Assistant Cloud"
+        header="Third Eye Cloud"
       >
         <div class="content">
           <ha-config-section .isWide=${this.isWide}>
-            <span slot="header">Home Assistant Cloud</span>
+            <span slot="header">Third Eye Cloud</span>
             <div slot="introduction">
               <p>
                 ${this.hass.localize(

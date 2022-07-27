@@ -12,11 +12,11 @@ import type {
 } from "../../../../components/data-table/ha-data-table";
 import "../../../../components/entity/state-badge";
 import "../../../../components/ha-relative-time";
-import type { HomeAssistant } from "../../../../types";
+import type { ThirdEye } from "../../../../types";
 
 @customElement("hui-entity-picker-table")
 export class HuiEntityPickerTable extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ type: Boolean }) public narrow?: boolean;
 

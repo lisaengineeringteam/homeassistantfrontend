@@ -10,11 +10,11 @@ import type {
   Trigger,
   TriggerCondition,
 } from "../../../../../data/automation";
-import type { HomeAssistant } from "../../../../../types";
+import type { ThirdEye } from "../../../../../types";
 
 @customElement("ha-automation-condition-trigger")
 export class HaTriggerCondition extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ attribute: false }) public condition!: TriggerCondition;
 

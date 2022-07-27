@@ -9,7 +9,7 @@ import {
   DeviceRegistryEntry,
   updateDeviceRegistryEntry,
 } from "../../data/device_registry";
-import { HomeAssistant } from "../../types";
+import { ThirdEye } from "../../types";
 import { showAlertDialog } from "../generic/show-dialog-box";
 import { FlowConfig } from "./show-dialog-data-entry-flow";
 import { configFlowContentStyles } from "./styles";
@@ -18,7 +18,7 @@ import { configFlowContentStyles } from "./styles";
 class StepFlowCreateEntry extends LitElement {
   @property({ attribute: false }) public flowConfig!: FlowConfig;
 
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ attribute: false }) public step!: DataEntryFlowStepCreateEntry;
 

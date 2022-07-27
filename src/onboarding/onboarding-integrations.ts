@@ -26,7 +26,7 @@ import {
   loadConfigFlowDialog,
   showConfigFlowDialog,
 } from "../dialogs/config-flow/show-dialog-config-flow";
-import { HomeAssistant } from "../types";
+import { ThirdEye } from "../types";
 import "./action-badge";
 import "./integration-badge";
 
@@ -40,7 +40,7 @@ const HIDDEN_DOMAINS = new Set([
 
 @customElement("onboarding-integrations")
 class OnboardingIntegrations extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public onboardingLocalize!: LocalizeFunc;
 

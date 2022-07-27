@@ -10,7 +10,7 @@ import type {
   MediaPlayerItem,
 } from "../../data/media-player";
 import { haStyleDialog } from "../../resources/styles";
-import type { HomeAssistant } from "../../types";
+import type { ThirdEye } from "../../types";
 import "../ha-dialog";
 import "./ha-media-player-browse";
 import "./ha-media-manage-button";
@@ -22,7 +22,7 @@ import { MediaPlayerBrowseDialogParams } from "./show-media-browser-dialog";
 
 @customElement("dialog-media-player-browse")
 class DialogMediaPlayerBrowse extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @state() private _currentItem?: MediaPlayerItem;
 

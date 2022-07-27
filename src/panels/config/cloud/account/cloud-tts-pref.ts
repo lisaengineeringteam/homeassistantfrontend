@@ -16,12 +16,12 @@ import {
   getCloudTtsSupportedGenders,
 } from "../../../../data/cloud/tts";
 import { showAlertDialog } from "../../../../dialogs/generic/show-dialog-box";
-import type { HomeAssistant } from "../../../../types";
+import type { ThirdEye } from "../../../../types";
 import { showTryTtsDialog } from "./show-dialog-cloud-tts-try";
 
 @customElement("cloud-tts-pref")
 export class CloudTTSPref extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public cloudStatus?: CloudStatusLoggedIn;
 

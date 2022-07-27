@@ -5,7 +5,7 @@ import { customElement, property, query } from "lit/decorators";
 import { fireEvent } from "../../common/dom/fire_event";
 import { stopPropagation } from "../../common/dom/stop_propagation";
 import type { SelectOption, SelectSelector } from "../../data/selector";
-import type { HomeAssistant } from "../../types";
+import type { ThirdEye } from "../../types";
 import "../ha-checkbox";
 import "../ha-chip";
 import "../ha-chip-set";
@@ -16,7 +16,7 @@ import "../ha-select";
 
 @customElement("ha-selector-select")
 export class HaSelectSelector extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ attribute: false }) public selector!: SelectSelector;
 

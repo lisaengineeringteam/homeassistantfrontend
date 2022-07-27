@@ -40,7 +40,7 @@ import { getPanelNameTranslationKey } from "../../data/panel";
 import { PageNavigation } from "../../layouts/hass-tabs-subpage";
 import { configSections } from "../../panels/config/ha-panel-config";
 import { haStyleDialog, haStyleScrollbar } from "../../resources/styles";
-import { HomeAssistant } from "../../types";
+import { ThirdEye } from "../../types";
 import {
   ConfirmationDialogParams,
   showConfirmationDialog,
@@ -78,7 +78,7 @@ type BaseNavigationCommand = Pick<
 >;
 @customElement("ha-quick-bar")
 export class QuickBar extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @state() private _commandItems?: CommandItem[];
 
@@ -529,13 +529,13 @@ export class QuickBar extends LitElement {
       ),
     });
 
-    // Add "homeassistant.reload_core_config"
+    // Add "thirdeye.reload_core_config"
     commands.push({
       primaryText: this.hass.localize(
         "ui.dialogs.quick-bar.commands.reload.core"
       ),
       action: () =>
-        this.hass.callService("homeassistant", "reload_core_config"),
+        this.hass.callService("thirdeye", "reload_core_config"),
       iconPath: mdiReload,
       categoryText: this.hass.localize(
         "ui.dialogs.quick-bar.commands.types.reload"
@@ -568,7 +568,7 @@ export class QuickBar extends LitElement {
           `ui.dialogs.quick-bar.commands.types.${categoryKey}`
         ),
         categoryKey,
-        action: () => this.hass.callService("homeassistant", action),
+        action: () => this.hass.callService("thirdeye", action),
       };
 
       return this._generateConfirmationCommand(

@@ -2,7 +2,7 @@ import memoizeOne from "memoize-one";
 import { html, LitElement, PropertyValues } from "lit";
 import { customElement, property, state } from "lit/decorators";
 import type { TimeTrigger } from "../../../../../data/automation";
-import type { HomeAssistant } from "../../../../../types";
+import type { ThirdEye } from "../../../../../types";
 import type { TriggerElement } from "../ha-automation-trigger-row";
 import type { LocalizeFunc } from "../../../../../common/translations/localize";
 import type { HaFormSchema } from "../../../../../components/ha-form/types";
@@ -11,7 +11,7 @@ import "../../../../../components/ha-form/ha-form";
 
 @customElement("ha-automation-trigger-time")
 export class HaTimeTrigger extends LitElement implements TriggerElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ attribute: false }) public trigger!: TimeTrigger;
 

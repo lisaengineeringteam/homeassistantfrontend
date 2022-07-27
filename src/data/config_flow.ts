@@ -1,7 +1,7 @@
 import { Connection, getCollection } from "home-assistant-js-websocket";
 import { LocalizeFunc } from "../common/translations/localize";
 import { debounce } from "../common/util/debounce";
-import { HomeAssistant } from "../types";
+import { ThirdEye } from "../types";
 import { DataEntryFlowProgress, DataEntryFlowStep } from "./data_entry_flow";
 import { domainToName } from "./integration";
 
@@ -24,7 +24,7 @@ const HEADERS = {
   "HA-Frontend-Base": `${location.protocol}//${location.host}`,
 };
 
-export const createConfigFlow = (hass: HomeAssistant, handler: string) =>
+export const createConfigFlow = (hass: ThirdEye, handler: string) =>
   hass.callApi<DataEntryFlowStep>(
     "POST",
     "config/config_entries/flow",
@@ -35,7 +35,7 @@ export const createConfigFlow = (hass: HomeAssistant, handler: string) =>
     HEADERS
   );
 
-export const fetchConfigFlow = (hass: HomeAssistant, flowId: string) =>
+export const fetchConfigFlow = (hass: ThirdEye, flowId: string) =>
   hass.callApi<DataEntryFlowStep>(
     "GET",
     `config/config_entries/flow/${flowId}`,
@@ -44,7 +44,7 @@ export const fetchConfigFlow = (hass: HomeAssistant, flowId: string) =>
   );
 
 export const handleConfigFlowStep = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   flowId: string,
   data: Record<string, any>
 ) =>
@@ -56,17 +56,17 @@ export const handleConfigFlowStep = (
   );
 
 export const ignoreConfigFlow = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   flowId: string,
   title: string
 ) =>
   hass.callWS({ type: "config_entries/ignore_flow", flow_id: flowId, title });
 
-export const deleteConfigFlow = (hass: HomeAssistant, flowId: string) =>
+export const deleteConfigFlow = (hass: ThirdEye, flowId: string) =>
   hass.callApi("DELETE", `config/config_entries/flow/${flowId}`);
 
 export const getConfigFlowHandlers = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   type?: "helper" | "integration"
 ) =>
   hass.callApi<string[]>(
@@ -103,7 +103,7 @@ export const getConfigFlowInProgressCollection = (conn: Connection) =>
   );
 
 export const subscribeConfigFlowInProgress = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   onChange: (flows: DataEntryFlowProgress[]) => void
 ) => getConfigFlowInProgressCollection(hass.connection).subscribe(onChange);
 

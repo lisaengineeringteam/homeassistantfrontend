@@ -17,7 +17,7 @@ import {
 } from "../../data/media_source";
 import { showConfirmationDialog } from "../../dialogs/generic/show-dialog-box";
 import { haStyleDialog } from "../../resources/styles";
-import type { HomeAssistant } from "../../types";
+import type { ThirdEye } from "../../types";
 import "../ha-circular-progress";
 import "../ha-dialog";
 import "../ha-header-bar";
@@ -29,7 +29,7 @@ import type { MediaManageDialogParams } from "./show-media-manage-dialog";
 
 @customElement("dialog-media-manage")
 class DialogMediaManage extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @state() private _currentItem?: MediaPlayerItem;
 

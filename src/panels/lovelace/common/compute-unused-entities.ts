@@ -1,5 +1,5 @@
 import { ActionConfig, LovelaceConfig } from "../../../data/lovelace";
-import { HomeAssistant } from "../../../types";
+import { ThirdEye } from "../../../types";
 
 export const EXCLUDED_DOMAINS = ["zone", "persistent_notification"];
 
@@ -72,7 +72,7 @@ export const computeUsedEntities = (config: LovelaceConfig): Set<string> => {
 };
 
 export const calcUnusedEntities = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   usedEntities: Set<string>
 ): Set<string> => {
   const unusedEntities: Set<string> = new Set();
@@ -90,7 +90,7 @@ export const calcUnusedEntities = (
 };
 
 export const computeUnusedEntities = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   config: LovelaceConfig
 ): Set<string> => {
   const usedEntities = computeUsedEntities(config);

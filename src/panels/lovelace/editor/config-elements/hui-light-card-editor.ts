@@ -5,7 +5,7 @@ import type { HassEntity } from "home-assistant-js-websocket";
 import memoizeOne from "memoize-one";
 import { fireEvent } from "../../../../common/dom/fire_event";
 import type { ActionConfig } from "../../../../data/lovelace";
-import type { HomeAssistant } from "../../../../types";
+import type { ThirdEye } from "../../../../types";
 import type { LightCardConfig } from "../../cards/types";
 import "../../components/hui-action-editor";
 import type { LovelaceCardEditor } from "../../types";
@@ -34,7 +34,7 @@ export class HuiLightCardEditor
   extends LitElement
   implements LovelaceCardEditor
 {
-  @property({ attribute: false }) public hass?: HomeAssistant;
+  @property({ attribute: false }) public hass?: ThirdEye;
 
   @state() private _config?: LightCardConfig;
 

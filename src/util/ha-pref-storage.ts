@@ -1,4 +1,4 @@
-import { HomeAssistant } from "../types";
+import { ThirdEye } from "../types";
 
 const STORED_STATE = [
   "dockedSidebar",
@@ -11,7 +11,7 @@ const STORED_STATE = [
 ];
 const STORAGE = window.localStorage || {};
 
-export function storeState(hass: HomeAssistant) {
+export function storeState(hass: ThirdEye) {
   try {
     STORED_STATE.forEach((key) => {
       const value = hass[key];

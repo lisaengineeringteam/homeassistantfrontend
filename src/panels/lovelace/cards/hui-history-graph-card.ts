@@ -13,7 +13,7 @@ import "../../../components/ha-card";
 import "../../../components/chart/state-history-charts";
 import { CacheConfig, getRecentWithCache } from "../../../data/cached-history";
 import { HistoryResult } from "../../../data/history";
-import { HomeAssistant } from "../../../types";
+import { ThirdEye } from "../../../types";
 import { hasConfigOrEntitiesChanged } from "../common/has-changed";
 import { processConfigEntities } from "../common/process-config-entities";
 import { EntityConfig } from "../entity-rows/types";
@@ -32,7 +32,7 @@ export class HuiHistoryGraphCard extends LitElement implements LovelaceCard {
     return { type: "history-graph", entities: ["sun.sun"] };
   }
 
-  @property({ attribute: false }) public hass?: HomeAssistant;
+  @property({ attribute: false }) public hass?: ThirdEye;
 
   @state() private _stateHistory?: HistoryResult;
 

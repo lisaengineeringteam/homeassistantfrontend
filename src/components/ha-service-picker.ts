@@ -5,7 +5,7 @@ import memoizeOne from "memoize-one";
 import { fireEvent } from "../common/dom/fire_event";
 import { LocalizeFunc } from "../common/translations/localize";
 import { domainToName } from "../data/integration";
-import { HomeAssistant } from "../types";
+import { ThirdEye } from "../types";
 import "./ha-combo-box";
 
 const rowRenderer: ComboBoxLitRenderer<{ service: string; name: string }> = (
@@ -18,7 +18,7 @@ const rowRenderer: ComboBoxLitRenderer<{ service: string; name: string }> = (
 </mwc-list-item>`;
 
 class HaServicePicker extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public value?: string;
 
@@ -48,7 +48,7 @@ class HaServicePicker extends LitElement {
   private _services = memoizeOne(
     (
       localize: LocalizeFunc,
-      services: HomeAssistant["services"]
+      services: ThirdEye["services"]
     ): {
       service: string;
       name: string;
@@ -80,7 +80,7 @@ class HaServicePicker extends LitElement {
   private _filteredServices = memoizeOne(
     (
       localize: LocalizeFunc,
-      services: HomeAssistant["services"],
+      services: ThirdEye["services"],
       filter?: string
     ) => {
       if (!services) {

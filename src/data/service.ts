@@ -1,8 +1,8 @@
-import { HomeAssistant } from "../types";
+import { ThirdEye } from "../types";
 import { Action } from "./script";
 
 export const callExecuteScript = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   sequence: Action | Action[]
 ) =>
   hass.callWS({
@@ -11,4 +11,4 @@ export const callExecuteScript = (
   });
 
 export const serviceCallWillDisconnect = (domain: string, service: string) =>
-  domain === "homeassistant" && ["restart", "stop"].includes(service);
+  domain === "thirdeye" && ["restart", "stop"].includes(service);

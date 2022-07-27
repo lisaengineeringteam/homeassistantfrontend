@@ -1,4 +1,4 @@
-import { HomeAssistant } from "../types";
+import { ThirdEye } from "../types";
 import { MediaPlayerItem } from "./media-player";
 
 export interface ResolvedMediaSource {
@@ -7,7 +7,7 @@ export interface ResolvedMediaSource {
 }
 
 export const resolveMediaSource = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   media_content_id: string
 ) =>
   hass.callWS<ResolvedMediaSource>({
@@ -16,7 +16,7 @@ export const resolveMediaSource = (
   });
 
 export const browseLocalMediaPlayer = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   mediaContentId?: string
 ): Promise<MediaPlayerItem> =>
   hass.callWS<MediaPlayerItem>({
@@ -28,7 +28,7 @@ export const isLocalMediaSourceContentId = (mediaId: string) =>
   mediaId.startsWith("media-source://media_source");
 
 export const uploadLocalMedia = async (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   media_content_id: string,
   file: File
 ) => {
@@ -51,7 +51,7 @@ export const uploadLocalMedia = async (
 };
 
 export const removeLocalMedia = async (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   media_content_id: string
 ) =>
   hass.callWS({

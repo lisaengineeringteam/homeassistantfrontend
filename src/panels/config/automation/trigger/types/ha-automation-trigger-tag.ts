@@ -6,12 +6,12 @@ import { caseInsensitiveStringCompare } from "../../../../../common/string/compa
 import "../../../../../components/ha-select";
 import { TagTrigger } from "../../../../../data/automation";
 import { fetchTags, Tag } from "../../../../../data/tag";
-import { HomeAssistant } from "../../../../../types";
+import { ThirdEye } from "../../../../../types";
 import { TriggerElement } from "../ha-automation-trigger-row";
 
 @customElement("ha-automation-trigger-tag")
 export class HaTagTrigger extends LitElement implements TriggerElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public trigger!: TagTrigger;
 

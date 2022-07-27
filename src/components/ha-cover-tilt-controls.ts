@@ -11,12 +11,12 @@ import {
   supportsStopTilt,
 } from "../data/cover";
 import { UNAVAILABLE } from "../data/entity";
-import { HomeAssistant } from "../types";
+import { ThirdEye } from "../types";
 import "./ha-icon-button";
 
 @customElement("ha-cover-tilt-controls")
 class HaCoverTiltControls extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ attribute: false }) stateObj!: CoverEntity;
 

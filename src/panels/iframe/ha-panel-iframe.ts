@@ -2,11 +2,11 @@ import { html, css, LitElement } from "lit";
 import { customElement, property } from "lit/decorators";
 import "../../layouts/hass-error-screen";
 import "../../layouts/hass-subpage";
-import { HomeAssistant, PanelInfo } from "../../types";
+import { ThirdEye, PanelInfo } from "../../types";
 
 @customElement("ha-panel-iframe")
 class HaPanelIframe extends LitElement {
-  @property() hass!: HomeAssistant;
+  @property() hass!: ThirdEye;
 
   @property({ type: Boolean }) narrow!: boolean;
 
@@ -21,7 +21,7 @@ class HaPanelIframe extends LitElement {
         <hass-error-screen
           .hass=${this.hass}
           .narrow=${this.narrow}
-          error="Unable to load iframes that load websites over http:// if Home Assistant is served over https://."
+          error="Unable to load iframes that load websites over http:// if Third Eyeerved over https://."
           rootnav
         ></hass-error-screen>
       `;

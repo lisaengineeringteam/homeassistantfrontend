@@ -3,14 +3,14 @@ import "@material/mwc-list/mwc-list-item";
 import { css, CSSResultGroup, html, LitElement, TemplateResult } from "lit";
 import { customElement, property } from "lit/decorators";
 import type { PageNavigation } from "../layouts/hass-tabs-subpage";
-import type { HomeAssistant } from "../types";
+import type { ThirdEye } from "../types";
 import "./ha-clickable-list-item";
 import "./ha-icon-next";
 import "./ha-svg-icon";
 
 @customElement("ha-navigation-list")
 class HaNavigationList extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ type: Boolean }) public narrow!: boolean;
 

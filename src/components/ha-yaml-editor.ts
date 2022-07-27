@@ -2,7 +2,7 @@ import { DEFAULT_SCHEMA, dump, load, Schema } from "js-yaml";
 import { html, LitElement, TemplateResult } from "lit";
 import { customElement, property, state } from "lit/decorators";
 import { fireEvent } from "../common/dom/fire_event";
-import type { HomeAssistant } from "../types";
+import type { ThirdEye } from "../types";
 import "./ha-code-editor";
 
 const isEmpty = (obj: Record<string, unknown>): boolean => {
@@ -19,7 +19,7 @@ const isEmpty = (obj: Record<string, unknown>): boolean => {
 
 @customElement("ha-yaml-editor")
 export class HaYamlEditor extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public value?: any;
 

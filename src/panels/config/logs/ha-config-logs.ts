@@ -10,7 +10,7 @@ import { fetchHassioAddonsInfo } from "../../../data/hassio/addon";
 import "../../../layouts/hass-subpage";
 import "../../../layouts/hass-tabs-subpage";
 import { haStyle } from "../../../resources/styles";
-import { HomeAssistant, Route } from "../../../types";
+import { ThirdEye, Route } from "../../../types";
 import "./error-log-card";
 import "./system-log-card";
 import type { SystemLogCard } from "./system-log-card";
@@ -18,7 +18,7 @@ import type { SystemLogCard } from "./system-log-card";
 const logProviders: LogProvider[] = [
   {
     key: "core",
-    name: "Home Assistant Core",
+    name: "Third Eye
   },
   {
     key: "supervisor",
@@ -44,7 +44,7 @@ const logProviders: LogProvider[] = [
 
 @customElement("ha-config-logs")
 export class HaConfigLogs extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ type: Boolean }) public narrow!: boolean;
 

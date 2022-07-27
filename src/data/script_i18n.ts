@@ -2,7 +2,7 @@ import secondsToDuration from "../common/datetime/seconds_to_duration";
 import { ensureArray } from "../common/ensure-array";
 import { computeStateName } from "../common/entity/compute_state_name";
 import { isTemplate } from "../common/string/has-template";
-import { HomeAssistant } from "../types";
+import { ThirdEye } from "../types";
 import { Condition } from "./automation";
 import { describeCondition, describeTrigger } from "./automation_i18n";
 import {
@@ -24,7 +24,7 @@ import {
 } from "./script";
 
 export const describeAction = <T extends ActionType>(
-  hass: HomeAssistant,
+  hass: ThirdEye,
   action: ActionTypes[T],
   actionType?: T
 ): string => {

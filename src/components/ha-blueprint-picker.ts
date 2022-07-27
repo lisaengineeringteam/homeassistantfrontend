@@ -7,11 +7,11 @@ import { fireEvent } from "../common/dom/fire_event";
 import { stopPropagation } from "../common/dom/stop_propagation";
 import { stringCompare } from "../common/string/compare";
 import { Blueprint, Blueprints, fetchBlueprints } from "../data/blueprint";
-import { HomeAssistant } from "../types";
+import { ThirdEye } from "../types";
 
 @customElement("ha-blueprint-picker")
 class HaBluePrintPicker extends LitElement {
-  public hass?: HomeAssistant;
+  public hass?: ThirdEye;
 
   @property() public label?: string;
 

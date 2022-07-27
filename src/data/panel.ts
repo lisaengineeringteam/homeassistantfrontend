@@ -1,5 +1,5 @@
 import { fireEvent } from "../common/dom/fire_event";
-import { HomeAssistant, PanelInfo } from "../types";
+import { ThirdEye, PanelInfo } from "../types";
 
 /** Panel to show when no panel is picked. */
 export const DEFAULT_PANEL = "lovelace";
@@ -16,7 +16,7 @@ export const setDefaultPanel = (
   fireEvent(element, "hass-default-panel", { defaultPanel: urlPath });
 };
 
-export const getDefaultPanel = (hass: HomeAssistant): PanelInfo =>
+export const getDefaultPanel = (hass: ThirdEye): PanelInfo =>
   hass.panels[hass.defaultPanel]
     ? hass.panels[hass.defaultPanel]
     : hass.panels[DEFAULT_PANEL];
@@ -33,7 +33,7 @@ export const getPanelNameTranslationKey = (panel: PanelInfo): string => {
   return `panel.${panel.title}`;
 };
 
-export const getPanelTitle = (hass: HomeAssistant): string | undefined => {
+export const getPanelTitle = (hass: ThirdEye): string | undefined => {
   if (!hass.panels) {
     return undefined;
   }

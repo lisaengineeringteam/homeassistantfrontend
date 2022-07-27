@@ -16,7 +16,7 @@ import "../../../../components/entity/state-badge";
 import "../../../../components/ha-card";
 import "../../../../components/ha-icon";
 import type { LovelaceRowConfig } from "../../../lovelace/entity-rows/types";
-import type { HomeAssistant } from "../../../../types";
+import type { ThirdEye } from "../../../../types";
 import type { HuiErrorCard } from "../../../lovelace/cards/hui-error-card";
 import { createRowElement } from "../../../lovelace/create-element/create-row-element";
 import { addEntitiesToLovelaceView } from "../../../lovelace/editor/add-entities-to-view";
@@ -36,7 +36,7 @@ export class HaDeviceEntitiesCard extends LitElement {
 
   @property() public deviceName!: string;
 
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public entities!: EntityRegistryStateEntry[];
 

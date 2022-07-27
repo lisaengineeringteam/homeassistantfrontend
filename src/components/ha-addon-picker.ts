@@ -7,7 +7,7 @@ import { stringCompare } from "../common/string/compare";
 import { fetchHassioAddonsInfo, HassioAddonInfo } from "../data/hassio/addon";
 import { showAlertDialog } from "../dialogs/generic/show-dialog-box";
 import { PolymerChangedEvent } from "../polymer-types";
-import { HomeAssistant } from "../types";
+import { ThirdEye } from "../types";
 import { HaComboBox } from "./ha-combo-box";
 
 const rowRenderer: ComboBoxLitRenderer<HassioAddonInfo> = (
@@ -22,7 +22,7 @@ const rowRenderer: ComboBoxLitRenderer<HassioAddonInfo> = (
 
 @customElement("ha-addon-picker")
 class HaAddonPicker extends LitElement {
-  public hass!: HomeAssistant;
+  public hass!: ThirdEye;
 
   @property() public label?: string;
 

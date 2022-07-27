@@ -1,7 +1,7 @@
 import { css, CSSResultGroup, html, LitElement, TemplateResult } from "lit";
 import { customElement, state } from "lit/decorators";
 import "../../../components/buttons/ha-call-service-button";
-import { HomeAssistant } from "../../../types";
+import { ThirdEye } from "../../../types";
 import { LovelaceElement, ServiceButtonElementConfig } from "./types";
 
 @customElement("hui-service-button-element")
@@ -9,7 +9,7 @@ export class HuiServiceButtonElement
   extends LitElement
   implements LovelaceElement
 {
-  public hass?: HomeAssistant;
+  public hass?: ThirdEye;
 
   @state() private _config?: ServiceButtonElementConfig;
 

@@ -31,14 +31,14 @@ import {
 } from "../../../dialogs/generic/show-dialog-box";
 import "../../../layouts/hass-subpage";
 import { haStyle } from "../../../resources/styles";
-import type { HomeAssistant } from "../../../types";
+import type { ThirdEye } from "../../../types";
 import { hardwareBrandsUrl } from "../../../util/brands-url";
 import { showToast } from "../../../util/toast";
 import { showhardwareAvailableDialog } from "./show-dialog-hardware-available";
 
 @customElement("ha-config-hardware")
 class HaConfigHardware extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ type: Boolean }) public narrow!: boolean;
 

@@ -1,4 +1,4 @@
-import { HomeAssistant } from "../types";
+import { ThirdEye } from "../types";
 
 export interface LoggedError {
   name: string;
@@ -13,12 +13,12 @@ export interface LoggedError {
   first_occurred: number;
 }
 
-export const fetchSystemLog = (hass: HomeAssistant) =>
+export const fetchSystemLog = (hass: ThirdEye) =>
   hass.callWS<LoggedError[]>({ type: "system_log/list" });
 
 export const getLoggedErrorIntegration = (item: LoggedError) => {
   // Try to derive from logger name
-  if (item.name.startsWith("homeassistant.components.")) {
+  if (item.name.startsWith("thirdeye.components.")) {
     return item.name.split(".")[2];
   }
   if (item.name.startsWith("custom_components.")) {
@@ -30,7 +30,7 @@ export const getLoggedErrorIntegration = (item: LoggedError) => {
     return item.source[0].split("/")[1];
   }
 
-  if (item.source[0].startsWith("homeassistant/components/")) {
+  if (item.source[0].startsWith("thirdeye/components/")) {
     return item.source[0].split("/")[2];
   }
 

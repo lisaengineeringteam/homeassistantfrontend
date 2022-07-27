@@ -1,4 +1,4 @@
-import { HomeAssistant } from "../types";
+import { ThirdEye } from "../types";
 
 export interface ConfigEntry {
   entry_id: string;
@@ -35,7 +35,7 @@ export const ERROR_STATES: ConfigEntry["state"][] = [
 ];
 
 export const getConfigEntries = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   filters?: { type?: "helper" | "integration"; domain?: string }
 ): Promise<ConfigEntry[]> => {
   const params: any = {};
@@ -54,7 +54,7 @@ export const getConfigEntries = (
 };
 
 export const updateConfigEntry = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   configEntryId: string,
   updatedValues: ConfigEntryMutableParams
 ) =>
@@ -64,12 +64,12 @@ export const updateConfigEntry = (
     ...updatedValues,
   });
 
-export const deleteConfigEntry = (hass: HomeAssistant, configEntryId: string) =>
+export const deleteConfigEntry = (hass: ThirdEye, configEntryId: string) =>
   hass.callApi<{
     require_restart: boolean;
   }>("DELETE", `config/config_entries/entry/${configEntryId}`);
 
-export const reloadConfigEntry = (hass: HomeAssistant, configEntryId: string) =>
+export const reloadConfigEntry = (hass: ThirdEye, configEntryId: string) =>
   hass.callApi<{
     require_restart: boolean;
   }>("POST", `config/config_entries/entry/${configEntryId}/reload`);
@@ -79,7 +79,7 @@ export interface DisableConfigEntryResult {
 }
 
 export const disableConfigEntry = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   configEntryId: string
 ) =>
   hass.callWS<DisableConfigEntryResult>({
@@ -88,7 +88,7 @@ export const disableConfigEntry = (
     disabled_by: "user",
   });
 
-export const enableConfigEntry = (hass: HomeAssistant, configEntryId: string) =>
+export const enableConfigEntry = (hass: ThirdEye, configEntryId: string) =>
   hass.callWS<{
     require_restart: boolean;
   }>({

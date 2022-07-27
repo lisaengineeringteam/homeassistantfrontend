@@ -1,7 +1,7 @@
 import { HassServices } from "home-assistant-js-websocket";
 
 export const demoServices: HassServices = {
-  homeassistant: {
+  thirdeye: {
     turn_off: {
       description:
         "Generic service to turn devices off under any domain. Same usage as the light.turn_on, switch.turn_on, etc. services.",
@@ -32,11 +32,11 @@ export const demoServices: HassServices = {
         },
       },
     },
-    stop: { description: "Stop the Home Assistant service.", fields: {} },
-    restart: { description: "Restart the Home Assistant service.", fields: {} },
+    stop: { description: "Stop the Third Eye service.", fields: {} },
+    restart: { description: "Restart the Third Eye service.", fields: {} },
     check_config: {
       description:
-        "Check the Home Assistant configuration files for errors. Errors will be displayed in the Home Assistant log.",
+        "Check the Third Eye configuration files for errors. Errors will be displayed in the Third Eye log.",
       fields: {},
     },
     update_entity: {

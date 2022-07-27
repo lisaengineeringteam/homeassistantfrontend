@@ -15,7 +15,7 @@ import { ensureArray } from "../../../../../common/ensure-array";
 import { fireEvent } from "../../../../../common/dom/fire_event";
 import { hasTemplate } from "../../../../../common/string/has-template";
 import { StateTrigger } from "../../../../../data/automation";
-import { HomeAssistant } from "../../../../../types";
+import { ThirdEye } from "../../../../../types";
 import { baseTriggerStruct, forDictStruct } from "../../structs";
 import { TriggerElement } from "../ha-automation-trigger-row";
 import "../../../../../components/ha-form/ha-form";
@@ -36,7 +36,7 @@ const stateTriggerStruct = assign(
 
 @customElement("ha-automation-trigger-state")
 export class HaStateTrigger extends LitElement implements TriggerElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public trigger!: StateTrigger;
 

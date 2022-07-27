@@ -17,13 +17,13 @@ import {
   IntegrationManifest,
   IntegrationSetup,
 } from "../../../data/integration";
-import type { HomeAssistant } from "../../../types";
+import type { ThirdEye } from "../../../types";
 import { brandsUrl } from "../../../util/brands-url";
 import { documentationUrl } from "../../../util/documentation-url";
 
 @customElement("integrations-card")
 class IntegrationsCard extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ type: Boolean }) public narrow = false;
 

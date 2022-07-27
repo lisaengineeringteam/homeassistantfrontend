@@ -1,4 +1,4 @@
-import { HomeAssistant } from "../types";
+import { ThirdEye } from "../types";
 
-export const scanUSBDevices = (hass: HomeAssistant) =>
+export const scanUSBDevices = (hass: ThirdEye) =>
   hass.callWS({ type: "usb/scan" });

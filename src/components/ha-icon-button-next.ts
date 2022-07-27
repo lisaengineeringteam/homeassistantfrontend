@@ -1,12 +1,12 @@
 import { mdiChevronLeft, mdiChevronRight } from "@mdi/js";
 import { html, LitElement, TemplateResult } from "lit";
 import { customElement, property, state } from "lit/decorators";
-import { HomeAssistant } from "../types";
+import { ThirdEye } from "../types";
 import "./ha-icon-button";
 
 @customElement("ha-icon-button-next")
 export class HaIconButtonNext extends LitElement {
-  @property({ attribute: false }) public hass?: HomeAssistant;
+  @property({ attribute: false }) public hass?: ThirdEye;
 
   @property({ type: Boolean }) public disabled = false;
 

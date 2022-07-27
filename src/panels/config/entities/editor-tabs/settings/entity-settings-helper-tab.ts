@@ -17,7 +17,7 @@ import {
 import { HELPERS_CRUD } from "../../../../../data/helpers_crud";
 import { showConfirmationDialog } from "../../../../../dialogs/generic/show-dialog-box";
 import { haStyle } from "../../../../../resources/styles";
-import type { HomeAssistant } from "../../../../../types";
+import type { ThirdEye } from "../../../../../types";
 import type { Helper } from "../../../helpers/const";
 import "../../../helpers/forms/ha-counter-form";
 import "../../../helpers/forms/ha-input_boolean-form";
@@ -32,7 +32,7 @@ import type { HaEntityRegistryBasicEditor } from "../../entity-registry-basic-ed
 
 @customElement("entity-settings-helper-tab")
 export class EntityRegistrySettingsHelper extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public entry!: ExtEntityRegistryEntry;
 

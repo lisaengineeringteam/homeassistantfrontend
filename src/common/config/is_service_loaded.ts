@@ -1,8 +1,8 @@
-import { HomeAssistant } from "../../types";
+import { ThirdEye } from "../../types";
 
 /** Return if a service is loaded. */
 export const isServiceLoaded = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   domain: string,
   service: string
 ): boolean =>

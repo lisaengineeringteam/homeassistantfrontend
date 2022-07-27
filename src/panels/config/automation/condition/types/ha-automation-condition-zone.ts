@@ -6,7 +6,7 @@ import { hasLocation } from "../../../../../common/entity/has_location";
 import "../../../../../components/entity/ha-entity-picker";
 import { ZoneCondition } from "../../../../../data/automation";
 import { PolymerChangedEvent } from "../../../../../polymer-types";
-import { HomeAssistant } from "../../../../../types";
+import { ThirdEye } from "../../../../../types";
 
 function zoneAndLocationFilter(stateObj) {
   return hasLocation(stateObj) && computeStateDomain(stateObj) !== "zone";
@@ -16,7 +16,7 @@ const includeDomains = ["zone"];
 
 @customElement("ha-automation-condition-zone")
 export class HaZoneCondition extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public condition!: ZoneCondition;
 

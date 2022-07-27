@@ -2,12 +2,12 @@ import { html, LitElement } from "lit";
 import { customElement, property } from "lit/decorators";
 import "../../../../../components/ha-textarea";
 import type { TemplateCondition } from "../../../../../data/automation";
-import type { HomeAssistant } from "../../../../../types";
+import type { ThirdEye } from "../../../../../types";
 import { handleChangeEvent } from "../ha-automation-condition-row";
 
 @customElement("ha-automation-condition-template")
 export class HaTemplateCondition extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ attribute: false }) public condition!: TemplateCondition;
 

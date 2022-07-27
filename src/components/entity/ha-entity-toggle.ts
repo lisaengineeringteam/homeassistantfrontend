@@ -14,7 +14,7 @@ import { computeStateDomain } from "../../common/entity/compute_state_domain";
 import { computeStateName } from "../../common/entity/compute_state_name";
 import { UNAVAILABLE, UNAVAILABLE_STATES, UNKNOWN } from "../../data/entity";
 import { forwardHaptic } from "../../data/haptics";
-import { HomeAssistant } from "../../types";
+import { ThirdEye } from "../../types";
 import "../ha-formfield";
 import "../ha-icon-button";
 import "../ha-switch";
@@ -26,7 +26,7 @@ const isOn = (stateObj?: HassEntity) =>
 
 export class HaEntityToggle extends LitElement {
   // hass is not a property so that we only re-render on stateObj changes
-  public hass?: HomeAssistant;
+  public hass?: ThirdEye;
 
   @property() public stateObj?: HassEntity;
 
@@ -129,7 +129,7 @@ export class HaEntityToggle extends LitElement {
       serviceDomain = "cover";
       service = turnOn ? "open_cover" : "close_cover";
     } else if (stateDomain === "group") {
-      serviceDomain = "homeassistant";
+      serviceDomain = "thirdeye";
       service = turnOn ? "turn_on" : "turn_off";
     } else {
       serviceDomain = stateDomain;

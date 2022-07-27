@@ -1,5 +1,5 @@
 import { atLeastVersion } from "../../common/config/version";
-import { HomeAssistant } from "../../types";
+import { ThirdEye } from "../../types";
 import { hassioApiResultExtractor, HassioResponse } from "./common";
 
 interface HassioDockerRegistries {
@@ -7,7 +7,7 @@ interface HassioDockerRegistries {
 }
 
 export const fetchHassioDockerRegistries = async (
-  hass: HomeAssistant
+  hass: ThirdEye
 ): Promise<HassioDockerRegistries> => {
   if (atLeastVersion(hass.config.version, 2021, 2, 4)) {
     return hass.callWS({
@@ -26,7 +26,7 @@ export const fetchHassioDockerRegistries = async (
 };
 
 export const addHassioDockerRegistry = async (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   data: HassioDockerRegistries
 ) => {
   if (atLeastVersion(hass.config.version, 2021, 2, 4)) {
@@ -47,7 +47,7 @@ export const addHassioDockerRegistry = async (
 };
 
 export const removeHassioDockerRegistry = async (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   registry: string
 ) => {
   if (atLeastVersion(hass.config.version, 2021, 2, 4)) {

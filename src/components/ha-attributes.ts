@@ -7,13 +7,13 @@ import {
   STATE_ATTRIBUTES,
 } from "../data/entity_attributes";
 import { haStyle } from "../resources/styles";
-import { HomeAssistant } from "../types";
+import { ThirdEye } from "../types";
 
 import "./ha-expansion-panel";
 
 @customElement("ha-attributes")
 class HaAttributes extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public stateObj?: HassEntity;
 

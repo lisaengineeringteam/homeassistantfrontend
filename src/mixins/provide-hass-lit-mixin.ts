@@ -1,5 +1,5 @@
 import { PropertyValues, ReactiveElement } from "lit";
-import { Constructor, HomeAssistant } from "../types";
+import { Constructor, ThirdEye } from "../types";
 
 export interface ProvideHassElement {
   provideHass(element: HTMLElement);
@@ -9,7 +9,7 @@ export const ProvideHassLitMixin = <T extends Constructor<ReactiveElement>>(
   superClass: T
 ) =>
   class extends superClass {
-    protected hass!: HomeAssistant;
+    protected hass!: ThirdEye;
 
     private __provideHass: HTMLElement[] = [];
 

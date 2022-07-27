@@ -7,11 +7,11 @@ import { computeStateName } from "../common/entity/compute_state_name";
 import "../components/entity/state-badge";
 import { UNAVAILABLE_STATES } from "../data/entity";
 import { InputSelectEntity, setInputSelectOption } from "../data/input_select";
-import type { HomeAssistant } from "../types";
+import type { ThirdEye } from "../types";
 
 @customElement("state-card-input_select")
 class StateCardInputSelect extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public stateObj!: InputSelectEntity;
 

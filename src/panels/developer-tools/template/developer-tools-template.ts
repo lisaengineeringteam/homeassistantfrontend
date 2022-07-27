@@ -11,7 +11,7 @@ import {
   subscribeRenderTemplate,
 } from "../../../data/ws-templates";
 import { haStyle } from "../../../resources/styles";
-import { HomeAssistant } from "../../../types";
+import { ThirdEye } from "../../../types";
 import { documentationUrl } from "../../../util/documentation-url";
 
 const DEMO_TEMPLATE = `{## Imitate available variables: ##}
@@ -37,7 +37,7 @@ For loop example getting entity values in the weather domain:
 
 @customElement("developer-tools-template")
 class HaPanelDevTemplate extends LitElement {
-  @property() public hass!: HomeAssistant;
+  @property() public hass!: ThirdEye;
 
   @property() public narrow!: boolean;
 

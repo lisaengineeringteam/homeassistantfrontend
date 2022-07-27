@@ -8,12 +8,12 @@ import "../../components/ha-dialog";
 import "../../components/ha-svg-icon";
 import "../../components/ha-switch";
 import { HaTextField } from "../../components/ha-textfield";
-import { HomeAssistant } from "../../types";
+import { ThirdEye } from "../../types";
 import { DialogBoxParams } from "./show-dialog-box";
 
 @customElement("dialog-box")
 class DialogBox extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @state() private _params?: DialogBoxParams;
 

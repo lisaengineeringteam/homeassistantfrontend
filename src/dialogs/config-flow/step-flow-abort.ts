@@ -9,7 +9,7 @@ import {
 import { customElement, property } from "lit/decorators";
 import { fireEvent } from "../../common/dom/fire_event";
 import { DataEntryFlowStepAbort } from "../../data/data_entry_flow";
-import { HomeAssistant } from "../../types";
+import { ThirdEye } from "../../types";
 import { showAddApplicationCredentialDialog } from "../../panels/config/application_credentials/show-dialog-add-application-credential";
 import { configFlowContentStyles } from "./styles";
 import { showConfirmationDialog } from "../generic/show-dialog-box";
@@ -21,7 +21,7 @@ import { showConfigFlowDialog } from "./show-dialog-config-flow";
 class StepFlowAbort extends LitElement {
   @property({ attribute: false }) public params!: DataEntryFlowDialogParams;
 
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ attribute: false }) public step!: DataEntryFlowStepAbort;
 

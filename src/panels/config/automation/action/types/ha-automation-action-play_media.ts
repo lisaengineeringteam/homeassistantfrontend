@@ -5,12 +5,12 @@ import { fireEvent } from "../../../../../common/dom/fire_event";
 import "../../../../../components/ha-selector/ha-selector-media";
 import { PlayMediaAction } from "../../../../../data/script";
 import type { MediaSelectorValue } from "../../../../../data/selector";
-import type { HomeAssistant } from "../../../../../types";
+import type { ThirdEye } from "../../../../../types";
 import { ActionElement } from "../ha-automation-action-row";
 
 @customElement("ha-automation-action-play_media")
 export class HaPlayMediaAction extends LitElement implements ActionElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ attribute: false }) public action!: PlayMediaAction;
 

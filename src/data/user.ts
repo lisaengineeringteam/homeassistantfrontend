@@ -4,7 +4,7 @@ import {
   mdiHomeCircleOutline,
   mdiCancel,
 } from "@mdi/js";
-import { HomeAssistant } from "../types";
+import { ThirdEye } from "../types";
 import { Credential } from "./auth";
 
 export const SYSTEM_GROUP_ID_ADMIN = "system-admin";
@@ -32,13 +32,13 @@ export interface UpdateUserParams {
   local_only?: boolean;
 }
 
-export const fetchUsers = async (hass: HomeAssistant) =>
+export const fetchUsers = async (hass: ThirdEye) =>
   hass.callWS<User[]>({
     type: "config/auth/list",
   });
 
 export const createUser = async (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   name: string,
   // eslint-disable-next-line: variable-name
   group_ids?: User["group_ids"],
@@ -52,7 +52,7 @@ export const createUser = async (
   });
 
 export const updateUser = async (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   userId: string,
   params: UpdateUserParams
 ) =>
@@ -62,7 +62,7 @@ export const updateUser = async (
     user_id: userId,
   });
 
-export const deleteUser = async (hass: HomeAssistant, userId: string) =>
+export const deleteUser = async (hass: ThirdEye, userId: string) =>
   hass.callWS<void>({
     type: "config/auth/delete",
     user_id: userId,
@@ -90,7 +90,7 @@ const LOCAL_ICON = mdiHomeCircleOutline;
 const DISABLED_ICON = mdiCancel;
 
 export const computeUserBadges = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   user: User,
   includeSystem: boolean
 ) => {

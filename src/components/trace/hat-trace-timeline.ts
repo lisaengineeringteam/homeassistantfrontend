@@ -39,7 +39,7 @@ import {
   isTriggerPath,
   TriggerTraceStep,
 } from "../../data/trace";
-import { HomeAssistant } from "../../types";
+import { ThirdEye } from "../../types";
 import "./ha-timeline";
 import type { HaTimeline } from "./ha-timeline";
 
@@ -57,7 +57,7 @@ class RenderedTimeTracker {
   private lastReportedTime: Date;
 
   constructor(
-    private hass: HomeAssistant,
+    private hass: ThirdEye,
     private entries: TemplateResult[],
     trace: AutomationTraceExtended
   ) {
@@ -192,7 +192,7 @@ class ActionRenderer {
   private keys: string[];
 
   constructor(
-    private hass: HomeAssistant,
+    private hass: ThirdEye,
     private entries: TemplateResult[],
     private trace: AutomationTraceExtended,
     private logbookRenderer: LogbookRenderer,
@@ -563,7 +563,7 @@ class ActionRenderer {
 
 @customElement("hat-trace-timeline")
 export class HaAutomationTracer extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ attribute: false }) public trace?: AutomationTraceExtended;
 

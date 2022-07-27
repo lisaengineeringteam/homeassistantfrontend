@@ -4,11 +4,11 @@ import { customElement, property, state } from "lit/decorators";
 import { classMap } from "lit/directives/class-map";
 import { formatTimeWithSeconds } from "../../../../../../common/datetime/format_time";
 import { MQTTMessage } from "../../../../../../data/mqtt";
-import { HomeAssistant } from "../../../../../../types";
+import { ThirdEye } from "../../../../../../types";
 
 @customElement("mqtt-messages")
 class MQTTMessages extends LitElement {
-  public hass!: HomeAssistant;
+  public hass!: ThirdEye;
 
   @property() public messages!: MQTTMessage[];
 

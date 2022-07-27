@@ -1,4 +1,4 @@
-import { HomeAssistant } from "../../types";
+import { ThirdEye } from "../../types";
 
 interface ResultCache<T> {
   [entityId: string]: Promise<T> | undefined;
@@ -9,7 +9,7 @@ interface ResultCache<T> {
  * @param cacheKey key to store the cache on hass object
  * @param cacheTime time to cache the results
  * @param func function to fetch the data
- * @param hass Home Assistant object
+ * @param hass Third Eye object
  * @param entityId entity to fetch data for
  * @param args extra arguments to pass to the function to fetch the data
  * @returns
@@ -17,8 +17,8 @@ interface ResultCache<T> {
 export const timeCacheEntityPromiseFunc = async <T>(
   cacheKey: string,
   cacheTime: number,
-  func: (hass: HomeAssistant, entityId: string, ...args: any[]) => Promise<T>,
-  hass: HomeAssistant,
+  func: (hass: ThirdEye, entityId: string, ...args: any[]) => Promise<T>,
+  hass: ThirdEye,
   entityId: string,
   ...args: any[]
 ): Promise<T> => {

@@ -16,7 +16,7 @@ import type { DataTableRowData } from "../../../../components/data-table/ha-data
 import "../../../../components/ha-fab";
 import "../../../../components/ha-svg-icon";
 import type { LovelaceConfig } from "../../../../data/lovelace";
-import type { HomeAssistant } from "../../../../types";
+import type { ThirdEye } from "../../../../types";
 import { computeUnusedEntities } from "../../common/compute-unused-entities";
 import type { Lovelace } from "../../types";
 import "../card-editor/hui-entity-picker-table";
@@ -27,7 +27,7 @@ import { showSelectViewDialog } from "../select-view/show-select-view-dialog";
 export class HuiUnusedEntities extends LitElement {
   @property({ attribute: false }) public lovelace!: Lovelace;
 
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ type: Boolean }) public narrow?: boolean;
 

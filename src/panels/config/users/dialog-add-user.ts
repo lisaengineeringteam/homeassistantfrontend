@@ -24,12 +24,12 @@ import {
 } from "../../../data/user";
 import { PolymerChangedEvent } from "../../../polymer-types";
 import { haStyleDialog } from "../../../resources/styles";
-import { HomeAssistant } from "../../../types";
+import { ThirdEye } from "../../../types";
 import { AddUserDialogParams } from "./show-dialog-add-user";
 
 @customElement("dialog-add-user")
 export class DialogAddUser extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @state() private _loading = false;
 

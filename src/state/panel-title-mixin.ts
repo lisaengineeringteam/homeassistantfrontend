@@ -1,9 +1,9 @@
 import { getPanelTitle } from "../data/panel";
-import { Constructor, HomeAssistant } from "../types";
+import { Constructor, ThirdEye } from "../types";
 import { HassBaseEl } from "./hass-base-mixin";
 
 const setTitle = (title: string | undefined) => {
-  document.title = title ? `${title} – Home Assistant` : "Home Assistant";
+  document.title = title ? `${title} – Third Eye` : "Third Eye";
 };
 
 export const panelTitleMixin = <T extends Constructor<HassBaseEl>>(
@@ -16,7 +16,7 @@ export const panelTitleMixin = <T extends Constructor<HassBaseEl>>(
         return;
       }
 
-      const oldHass = changedProps.get("hass") as HomeAssistant | undefined;
+      const oldHass = changedProps.get("hass") as ThirdEye | undefined;
 
       if (
         !oldHass ||

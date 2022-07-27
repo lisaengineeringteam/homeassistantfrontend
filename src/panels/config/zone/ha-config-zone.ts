@@ -43,14 +43,14 @@ import {
 import "../../../layouts/hass-loading-screen";
 import "../../../layouts/hass-tabs-subpage";
 import { SubscribeMixin } from "../../../mixins/subscribe-mixin";
-import type { HomeAssistant, Route } from "../../../types";
+import type { ThirdEye, Route } from "../../../types";
 import "../ha-config-section";
 import { configSections } from "../ha-panel-config";
 import { showZoneDetailDialog } from "./show-dialog-zone-detail";
 
 @customElement("ha-config-zone")
 export class HaConfigZone extends SubscribeMixin(LitElement) {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public isWide?: boolean;
 
@@ -275,7 +275,7 @@ export class HaConfigZone extends SubscribeMixin(LitElement) {
 
   public willUpdate(changedProps: PropertyValues) {
     super.updated(changedProps);
-    const oldHass = changedProps.get("hass") as HomeAssistant | undefined;
+    const oldHass = changedProps.get("hass") as ThirdEye | undefined;
     if (oldHass && this._stateItems) {
       this._getStates(oldHass);
     }
@@ -288,7 +288,7 @@ export class HaConfigZone extends SubscribeMixin(LitElement) {
     this._getStates();
   }
 
-  private _getStates(oldHass?: HomeAssistant) {
+  private _getStates(oldHass?: ThirdEye) {
     let changed = false;
     const tempStates = Object.values(this.hass!.states).filter((entity) => {
       if (computeStateDomain(entity) !== "zone") {

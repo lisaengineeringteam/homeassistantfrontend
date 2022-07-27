@@ -7,11 +7,11 @@ import { computeStateName } from "../common/entity/compute_state_name";
 import "../components/entity/state-badge";
 import { UNAVAILABLE } from "../data/entity";
 import { SelectEntity, setSelectOption } from "../data/select";
-import type { HomeAssistant } from "../types";
+import type { ThirdEye } from "../types";
 
 @customElement("state-card-select")
 class StateCardSelect extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public stateObj!: SelectEntity;
 

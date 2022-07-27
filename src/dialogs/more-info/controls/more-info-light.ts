@@ -28,11 +28,11 @@ import {
   lightSupportsDimming,
   SUPPORT_EFFECT,
 } from "../../../data/light";
-import type { HomeAssistant } from "../../../types";
+import type { ThirdEye } from "../../../types";
 
 @customElement("more-info-light")
 class MoreInfoLight extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ attribute: false }) public stateObj?: LightEntity;
 

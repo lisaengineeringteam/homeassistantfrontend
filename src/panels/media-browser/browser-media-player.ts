@@ -7,7 +7,7 @@ import {
   SUPPORT_VOLUME_SET,
 } from "../../data/media-player";
 import { ResolvedMediaSource } from "../../data/media_source";
-import { HomeAssistant } from "../../types";
+import { ThirdEye } from "../../types";
 
 export const ERR_UNSUPPORTED_MEDIA = "Unsupported Media";
 
@@ -20,7 +20,7 @@ export class BrowserMediaPlayer {
   private _removed = false;
 
   constructor(
-    public hass: HomeAssistant,
+    public hass: ThirdEye,
     public item: MediaPlayerItem,
     public resolved: ResolvedMediaSource,
     volume: number,

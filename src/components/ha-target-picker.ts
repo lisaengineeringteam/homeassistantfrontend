@@ -35,7 +35,7 @@ import {
   subscribeEntityRegistry,
 } from "../data/entity_registry";
 import { SubscribeMixin } from "../mixins/subscribe-mixin";
-import { HomeAssistant } from "../types";
+import { ThirdEye } from "../types";
 import "./device/ha-device-picker";
 import type { HaDevicePickerDeviceFilterFunc } from "./device/ha-device-picker";
 import "./entity/ha-entity-picker";
@@ -47,7 +47,7 @@ import "./ha-input-helper-text";
 
 @customElement("ha-target-picker")
 export class HaTargetPicker extends SubscribeMixin(LitElement) {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ attribute: false }) public value?: HassServiceTarget;
 

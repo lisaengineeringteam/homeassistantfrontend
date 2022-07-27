@@ -5,12 +5,12 @@ import "./ha-icon-button";
 import "./ha-svg-icon";
 import "./ha-textfield";
 import type { HaTextField } from "./ha-textfield";
-import { HomeAssistant } from "../types";
+import { ThirdEye } from "../types";
 import { fireEvent } from "../common/dom/fire_event";
 
 @customElement("search-input")
 class SearchInput extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public filter?: string;
 

@@ -3,7 +3,7 @@ import { customElement, property } from "lit/decorators";
 import { fireEvent } from "../../../../../common/dom/fire_event";
 import type { HaFormSchema } from "../../../../../components/ha-form/types";
 import { MqttTrigger } from "../../../../../data/automation";
-import { HomeAssistant } from "../../../../../types";
+import { ThirdEye } from "../../../../../types";
 import type { TriggerElement } from "../ha-automation-trigger-row";
 
 const SCHEMA: HaFormSchema[] = [
@@ -13,7 +13,7 @@ const SCHEMA: HaFormSchema[] = [
 
 @customElement("ha-automation-trigger-mqtt")
 export class HaMQTTTrigger extends LitElement implements TriggerElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public trigger!: MqttTrigger;
 

@@ -26,7 +26,7 @@ import {
 } from "../dialogs/generic/show-dialog-box";
 import { SubscribeMixin } from "../mixins/subscribe-mixin";
 import { PolymerChangedEvent } from "../polymer-types";
-import { HomeAssistant } from "../types";
+import { ThirdEye } from "../types";
 import type { HaDevicePickerDeviceFilterFunc } from "./device/ha-device-picker";
 import "./ha-combo-box";
 import type { HaComboBox } from "./ha-combo-box";
@@ -43,7 +43,7 @@ const rowRenderer: ComboBoxLitRenderer<AreaRegistryEntry> = (
 
 @customElement("ha-area-picker")
 export class HaAreaPicker extends SubscribeMixin(LitElement) {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public label?: string;
 

@@ -16,7 +16,7 @@ import { RefreshToken } from "../../data/refresh_token";
 import { showConfirmationDialog } from "../../dialogs/generic/show-dialog-box";
 import "../../layouts/ha-app-layout";
 import { haStyle } from "../../resources/styles";
-import { HomeAssistant } from "../../types";
+import { ThirdEye } from "../../types";
 import "./ha-advanced-mode-row";
 import "./ha-change-password-card";
 import "./ha-enable-shortcuts-row";
@@ -35,7 +35,7 @@ import "./ha-set-vibrate-row";
 
 @customElement("ha-panel-profile")
 class HaPanelProfile extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ type: Boolean }) public narrow!: boolean;
 
@@ -174,7 +174,7 @@ class HaPanelProfile extends LitElement {
           </ha-card>
 
           ${this.hass.user!.credentials.some(
-            (cred) => cred.auth_provider_type === "homeassistant"
+            (cred) => cred.auth_provider_type === "thirdeye"
           )
             ? html`
                 <ha-change-password-card

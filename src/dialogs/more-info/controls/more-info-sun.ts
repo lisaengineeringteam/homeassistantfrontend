@@ -4,11 +4,11 @@ import { customElement, property } from "lit/decorators";
 import { formatTime } from "../../../common/datetime/format_time";
 import { formatNumber } from "../../../common/number/format_number";
 import "../../../components/ha-relative-time";
-import { HomeAssistant } from "../../../types";
+import { ThirdEye } from "../../../types";
 
 @customElement("more-info-sun")
 class MoreInfoSun extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public stateObj?: HassEntity;
 

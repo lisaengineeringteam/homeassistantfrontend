@@ -9,7 +9,7 @@ import {
 } from "lit";
 import { customElement, property, query, state } from "lit/decorators";
 import { nextRender } from "../common/util/render-status";
-import type { HomeAssistant } from "../types";
+import type { ThirdEye } from "../types";
 import "./ha-alert";
 
 type HlsLite = Omit<
@@ -19,7 +19,7 @@ type HlsLite = Omit<
 
 @customElement("ha-hls-player")
 class HaHLSPlayer extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public url!: string;
 

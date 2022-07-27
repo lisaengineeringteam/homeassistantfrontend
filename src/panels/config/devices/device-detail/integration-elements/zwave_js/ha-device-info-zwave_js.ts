@@ -22,12 +22,12 @@ import {
   ZWaveJSNodeStatus,
 } from "../../../../../../data/zwave_js";
 import { haStyle } from "../../../../../../resources/styles";
-import { HomeAssistant } from "../../../../../../types";
+import { ThirdEye } from "../../../../../../types";
 import { SubscribeMixin } from "../../../../../../mixins/subscribe-mixin";
 
 @customElement("ha-device-info-zwave_js")
 export class HaDeviceInfoZWaveJS extends SubscribeMixin(LitElement) {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ attribute: false }) public device!: DeviceRegistryEntry;
 

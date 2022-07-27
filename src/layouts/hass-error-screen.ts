@@ -3,11 +3,11 @@ import { css, CSSResultGroup, html, LitElement, TemplateResult } from "lit";
 import { customElement, property } from "lit/decorators";
 import "../components/ha-icon-button-arrow-prev";
 import "../components/ha-menu-button";
-import { HomeAssistant } from "../types";
+import { ThirdEye } from "../types";
 
 @customElement("hass-error-screen")
 class HassErrorScreen extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property({ type: Boolean }) public toolbar = true;
 

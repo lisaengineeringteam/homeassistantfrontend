@@ -1,4 +1,4 @@
-import { HomeAssistant } from "../types";
+import { ThirdEye } from "../types";
 
 export interface MQTTMessage {
   topic: string;
@@ -35,7 +35,7 @@ export interface MQTTDeviceDebugInfo {
 }
 
 export const subscribeMQTTTopic = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   topic: string,
   callback: (message: MQTTMessage) => void
 ) =>
@@ -45,7 +45,7 @@ export const subscribeMQTTTopic = (
   });
 
 export const fetchMQTTDebugInfo = (
-  hass: HomeAssistant,
+  hass: ThirdEye,
   deviceId: string
 ): Promise<MQTTDeviceDebugInfo> =>
   hass.callWS<MQTTDeviceDebugInfo>({

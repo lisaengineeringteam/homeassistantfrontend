@@ -16,7 +16,7 @@ import {
 } from "../../../data/automation";
 import { Action, MODES, MODES_MAX } from "../../../data/script";
 import { haStyle } from "../../../resources/styles";
-import type { HomeAssistant } from "../../../types";
+import type { ThirdEye } from "../../../types";
 import { documentationUrl } from "../../../util/documentation-url";
 import "../ha-config-section";
 import "./action/ha-automation-action";
@@ -25,7 +25,7 @@ import "./trigger/ha-automation-trigger";
 
 @customElement("manual-automation-editor")
 export class HaManualAutomationEditor extends LitElement {
-  @property({ attribute: false }) public hass!: HomeAssistant;
+  @property({ attribute: false }) public hass!: ThirdEye;
 
   @property() public isWide!: boolean;
 
