@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Home Assistant</title>
+    <title>LISA Third Eye</title>
     <link
       rel="modulepreload"
       href="<%= latestPageJS %>"
@@ -65,7 +65,7 @@
     <div class="content">
       <div class="header">
         <img src="/static/icons/favicon-192x192.png" height="52" width="52" alt="" />
-        Home Assistant
+        Third Eye
       </div>
 
       <ha-onboarding></ha-onboarding>
