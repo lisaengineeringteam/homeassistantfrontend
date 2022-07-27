@@ -73,7 +73,7 @@ class HaAuthorize extends litLocalizeLiteMixin(LitElement) {
           this.clientId ? punycode.toASCII(this.clientId) : this.clientId
         )}
       </p>
-      ${loggingInWith}
+
 
       <ha-auth-flow
         .resources=${this.resources}
