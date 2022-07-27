@@ -170,7 +170,7 @@ export class SupervisorBackupContent extends LitElement {
         ? html`<div class="partial-picker">
             <ha-formfield
               .label=${html`<supervisor-formfield-label
-                label="Home Assistant"
+                label="Third Eye"
                 .iconPath=${mdiHomeAssistant}
                 .version=${this.backup
                   ? this.backup.homeassistant

@@ -692,10 +692,10 @@
                     },
                     "device_disabled": "Dispozitivul acestei entități este dezactivat.",
                     "enabled_cause": "Dezactivat de către {cause}.",
-                    "enabled_delay_confirm": "Entitățile activate vor fi adăugate în Home Assistant în {delay} secunde",
-                    "enabled_description": "Entitățile dezactivate nu vof fi adăugate in Home Assistant",
+                    "enabled_delay_confirm": "Entitățile activate vor fi adăugate în Third Eye în {delay} secunde",
+                    "enabled_description": "Entitățile dezactivate nu vof fi adăugate in Third Eye",
                     "enabled_label": "Activați entitatea",
-                    "enabled_restart_confirm": "Reporniți Home Assistant pentru a finaliza activarea entităților",
+                    "enabled_restart_confirm": "Reporniți Third Eye pentru a finaliza activarea entităților",
                     "entity_id": "ID-ul entității",
                     "follow_device_area": "Urmați zona dispozitivului",
                     "icon": "Pictogramă",
@@ -723,7 +723,7 @@
                     "initial": "Valoare inițială",
                     "maximum": "Valoare maximă",
                     "minimum": "Valoare minimă",
-                    "restore": "Restabiliți ultima valoare cunoscută atunci când pornește Home Assistant",
+                    "restore": "Restabiliți ultima valoare cunoscută atunci când pornește Third Eye",
                     "step": "Dimensiunea pasului"
                 },
                 "generic": {
@@ -878,7 +878,7 @@
                 "filter_placeholder": "Filtru entitate"
             },
             "voice_command": {
-                "did_not_hear": "Home Assistant nu a auzit nimic",
+                "did_not_hear": "Third Eye nu a auzit nimic",
                 "error": "Oops, a apărut o eroare",
                 "found": "Am găsit următoarele pentru tine:",
                 "how_can_i_help": "Cu ce vă pot ajuta?",
@@ -951,8 +951,8 @@
             "connection_lost": "Conexiunea a fost pierdută. Se reconectează…",
             "dismiss": "Renunțați",
             "service_call_failed": "Nu s-a putut apela serviciul {service}.",
-            "started": "Home Assistant a pornit!",
-            "starting": "Home Assistant pornește, nu totul va fi disponibil până la finalizare.",
+            "started": "Third Eye a pornit!",
+            "starting": "Third Eye pornește, nu totul va fi disponibil până la finalizare.",
             "triggered": "Declanșat {name}"
         },
         "panel": {
@@ -988,7 +988,7 @@
                         "create_area": "Creați zonă",
                         "header": "Zone",
                         "integrations_page": "Pagina de integrari",
-                        "introduction": "Zonele sunt folosite pentru a organiza unde sunt dispozitivele. Aceste informații vor fi utilizate de către Home Assistant pentru a vă ajuta să vă organizați interfața, permisiunile și integrarea cu alte sisteme.",
+                        "introduction": "Zonele sunt folosite pentru a organiza unde sunt dispozitivele. Aceste informații vor fi utilizate de către Third Eye pentru a vă ajuta să vă organizați interfața, permisiunile și integrarea cu alte sisteme.",
                         "introduction2": "Pentru a plasa dispozitive într-o zonă, utilizați link-ul de mai jos pentru a naviga la pagina de integrare și apoi faceți click pe o integrare configurată pentru a ajunge la cardurile dispozitivului.",
                         "no_areas": "Se pare că nu aveți nicio zonă încă!"
                     },
@@ -1018,7 +1018,7 @@
                             "delete_confirm": "Ești sigur că vrei să ștergi?",
                             "duplicate": "Dublează",
                             "header": "Acţiuni",
-                            "introduction": "Acțiunile sunt ceea ce va face Home Assistant atunci când este declanșată automatizarea.",
+                            "introduction": "Acțiunile sunt ceea ce va face Third Eye atunci când este declanșată automatizarea.",
                             "learn_more": "Aflați mai multe despre acțiuni",
                             "name": "Acțiune",
                             "type": {
@@ -1210,7 +1210,7 @@
                             "duplicate": "Dublați",
                             "header": "Declanșatoare",
                             "id": "ID-ul declanșatorului (utilizat de condiția de declanșare)",
-                            "introduction": "Declanșatoarele sunt cele ce încep procesarea unei reguli de automatizare. Este posibil să specificați mai multe declanșatoare pentru aceeași regulă. Odată ce începe declanșarea, Home Assistant o să valideze condițiile, dacă este cazul, și va apela acțiunea.",
+                            "introduction": "Declanșatoarele sunt cele ce încep procesarea unei reguli de automatizare. Este posibil să specificați mai multe declanșatoare pentru aceeași regulă. Odată ce începe declanșarea, Third Eye o să valideze condițiile, dacă este cazul, și va apela acțiunea.",
                             "learn_more": "Aflați mai multe despre triggeri",
                             "name": "Activator",
                             "type": {
@@ -1241,7 +1241,7 @@
                                 },
                                 "homeassistant": {
                                     "event": "Eveniment:",
-                                    "label": "Home Assistant",
+                                    "label": "Third Eye",
                                     "shutdown": "Închide",
                                     "start": "Începe"
                                 },
@@ -1317,7 +1317,7 @@
                         "headers": {
                             "name": "Nume"
                         },
-                        "introduction": "Editorul de automatizare vă permite să creați și să modificați automatizări. Urmați legătura de mai jos pentru a citi instrucțiunile pentru a vă asigura că ați configurat corect Home Assistant.",
+                        "introduction": "Editorul de automatizare vă permite să creați și să modificați automatizări. Urmați legătura de mai jos pentru a citi instrucțiunile pentru a vă asigura că ați configurat corect Third Eye.",
                         "learn_more": "Aflați mai multe despre automatizări",
                         "no_automations": "Nu am putut găsi automatizări editabile",
                         "only_editable": "Numai automatizările din automations.yaml pot fi editate.",
@@ -1334,7 +1334,7 @@
                             "error_unsupported": "Nu am putut crea o automatizare pentru asta (încă?).",
                             "for_example": "De exemplu:",
                             "header": "Creați o nouă automatizare",
-                            "introduction": "Tastați mai jos ce ar trebui să facă această automatizare și vom încerca să o transformăm într-o automatizare Home Assistant.",
+                            "introduction": "Tastați mai jos ce ar trebui să facă această automatizare și vom încerca să o transformăm într-o automatizare Third Eye.",
                             "language_note": "Notă: Deocamdată este acceptată numai limba engleză."
                         }
                     }
@@ -1385,10 +1385,10 @@
                             "config_documentation": "Documentație de configurare",
                             "disable": "dezactivați",
                             "enable": "activați",
-                            "enable_ha_skill": "Activați abilitatea Home Assistant pentru Alexa",
+                            "enable_ha_skill": "Activați abilitatea Third Eye pentru Alexa",
                             "enable_state_reporting": "Activați raportarea stării",
-                            "info": "Cu integrarea Alexa pentru Home Assistant Cloud veți putea controla toate dispozitivele dvs. Home Assistant prin orice dispozitiv compatibil Alexa.",
-                            "info_state_reporting": "Dacă activați raportarea stării, Home Assistant va trimite toate modificările de stare ale entităților expuse către Amazon. Acest lucru vă permite să vedeți întotdeauna cele mai recente stări în aplicația Alexa și să utilizați modificările de stare pentru a crea rutine.",
+                            "info": "Cu integrarea Alexa pentru Third Eye Cloud veți putea controla toate dispozitivele dvs. Third Eye prin orice dispozitiv compatibil Alexa.",
+                            "info_state_reporting": "Dacă activați raportarea stării, Third Eye va trimite toate modificările de stare ale entităților expuse către Amazon. Acest lucru vă permite să vedeți întotdeauna cele mai recente stări în aplicația Alexa și să utilizați modificările de stare pentru a crea rutine.",
                             "manage_entities": "Gestionați entități",
                             "state_reporting_error": "Imposibil de {enable_disable} stare raport.",
                             "sync_entities": "Sincronizați entitățile cu Amazon",
@@ -1400,13 +1400,13 @@
                         "fetching_subscription": "Preluare abonament…",
                         "google": {
                             "config_documentation": "Documentație de configurare",
-                            "enable_ha_skill": "Activați abilitate Home Assistant Cloud pentru Google Assistant",
+                            "enable_ha_skill": "Activați abilitate Third Eye Cloud pentru Google Assistant",
                             "enable_state_reporting": "Activați raportarea de stare",
                             "enter_pin_error": "Nu se poate stoca codul PIN:",
                             "enter_pin_hint": "Introduceți un cod PIN pentru a utiliza dispozitivele de securitate",
                             "enter_pin_info": "Vă rugăm să introduceți un cod PIN pentru a interacționa cu dispozitivele de securitate. Dispozitivele de securitate sunt ușile, ușile de garaj și încuietorile. Vi se va cere să spuneți/introduceți acest PIN atunci când interacționați cu astfel de dispozitive prin intermediul Google Assistant.",
-                            "info": "Cu integrarea Asistentului Google pentru Home Assistant Cloud veți putea controla toate dispozitivele dvs. Home Assistant prin orice dispozitiv compatibil cu Asistentul Google.",
-                            "info_state_reporting": "Dacă activați raportarea stării, Home Assistant va trimite toate schimbările de stare ale entităților expuse către Google. Acest lucru vă permite să vedeți întotdeauna cele mai recente stări în aplicația Google.",
+                            "info": "Cu integrarea Asistentului Google pentru Third Eye Cloud veți putea controla toate dispozitivele dvs. Third Eye prin orice dispozitiv compatibil cu Asistentul Google.",
+                            "info_state_reporting": "Dacă activați raportarea stării, Third Eye va trimite toate schimbările de stare ale entităților expuse către Google. Acest lucru vă permite să vedeți întotdeauna cele mai recente stări în aplicația Google.",
                             "manage_entities": "Gestionați entități",
                             "security_devices": "Dispozitive de securitate",
                             "sync_entities": "Sincronizați entitățile cu Google",
@@ -1414,7 +1414,7 @@
                             "title": "Asistentul Google"
                         },
                         "integrations": "Integrări",
-                        "integrations_introduction": "Integrările pentru Home Assistant Cloud vă permit să vă conectați cu servicii din cloud fără a fi nevoie să expuneți public instanța Home Assistant pe internet.",
+                        "integrations_introduction": "Integrările pentru Third Eye Cloud vă permit să vă conectați cu servicii din cloud fără a fi nevoie să expuneți public instanța Third Eye pe internet.",
                         "integrations_introduction2": "Verificați site-ul web pentru ",
                         "integrations_link_all_features": " toate caracteristicile disponibile",
                         "manage_account": "Gestionați contul",
@@ -1423,7 +1423,7 @@
                         "remote": {
                             "access_is_being_prepared": "Se pregătește accesul de la distanță. Vă vom anunța când este gata.",
                             "certificate_info": "Informații despre certificat",
-                            "info": "Home Assistant Cloud oferă o conexiune sigură la distanță la instanța dvs. în timp ce sunteți departe de casă.",
+                            "info": "Third Eye Cloud oferă o conexiune sigură la distanță la instanța dvs. în timp ce sunteți departe de casă.",
                             "instance_is_available": "Instanța dvs. este disponibilă la",
                             "instance_will_be_available": "Instanța dvs. va fi disponibilă la",
                             "link_learn_how_it_works": "Aflați cum funcționează",
@@ -1431,7 +1431,7 @@
                             "title": "Control de la distanță"
                         },
                         "sign_out": "Deconectare",
-                        "thank_you_note": "Vă mulțumim că faceți parte din Home Assistant Cloud. Datorită oamenilor ca dvs. suntem capabili să facem o experiență excelentă de automatizare a locuinței pentru toată lumea. Mulțumim!",
+                        "thank_you_note": "Vă mulțumim că faceți parte din Third Eye Cloud. Datorită oamenilor ca dvs. suntem capabili să facem o experiență excelentă de automatizare a locuinței pentru toată lumea. Mulțumim!",
                         "tts": {
                             "default_language": "Limba implicită folosită",
                             "dialog": {
@@ -1450,7 +1450,7 @@
                         },
                         "webhooks": {
                             "disable_hook_error_msg": "Nu putut fi dezactivat webhook-ul:",
-                            "info": "Orice lucru care este configurat pentru a fi declanșat de un webhook poate primi o adresă URL accesibilă publicului pentru a vă permite să trimiteți date înapoi la Home Assistant de oriunde, fără a vă expune instanța pe internet.",
+                            "info": "Orice lucru care este configurat pentru a fi declanșat de un webhook poate primi o adresă URL accesibilă publicului pentru a vă permite să trimiteți date înapoi la Third Eye de oriunde, fără a vă expune instanța pe internet.",
                             "link_learn_more": "Aflați mai multe despre crearea automatizărilor bazate pe webhook.",
                             "loading": "Se încarcă …",
                             "manage": "Gestionați",
@@ -1524,10 +1524,10 @@
                         "email": "E-mail",
                         "email_error_msg": "E-mail invalid",
                         "forgot_password": "Ați uitat parola?",
-                        "introduction": "Home Assistant Cloud vă oferă o conexiune la distanță sigură la instanța dvs. în timp ce sunteți departe de casă. De asemenea, vă permite să vă conectați cu servicii disponibile doar în cloud: Amazon Alexa și Asistentul Google.",
+                        "introduction": "Third Eye Cloud vă oferă o conexiune la distanță sigură la instanța dvs. în timp ce sunteți departe de casă. De asemenea, vă permite să vă conectați cu servicii disponibile doar în cloud: Amazon Alexa și Asistentul Google.",
                         "introduction2": "Acest serviciu este administrat de partenerul nostru ",
-                        "introduction2a": ", o companie fondată de inițiatorii Home Assistant și Hass.io.",
-                        "introduction3": "Home Assistant Cloud este un serviciu pe bază de abonament cu o perioadă de încercare gratuită de o lună. Nu sunt necesare informații de plată.",
+                        "introduction2a": ", o companie fondată de inițiatorii Third Eye și Hass.io.",
+                        "introduction3": "Third Eye Cloud este un serviciu pe bază de abonament cu o perioadă de încercare gratuită de o lună. Nu sunt necesare informații de plată.",
                         "learn_more_link": "Aflați mai multe despre Assistant Home Cloud",
                         "password": "Parolă",
                         "password_error_msg": "Parolele au cel puțin 8 caractere",
@@ -1543,13 +1543,13 @@
                         "email_error_msg": "Adresă de e-mail invalidă",
                         "feature_amazon_alexa": "Integrare cu Amazon Alexa",
                         "feature_google_home": "Integrare cu Asistentul Google",
-                        "feature_remote_control": "Controlul Home Assistant departe de casă",
+                        "feature_remote_control": "Controlul Third Eye departe de casă",
                         "feature_webhook_apps": "Integrare ușoară cu aplicații bazate pe webhook, precum OwnTracks",
                         "headline": "Începeți perioada gratuită de testare",
-                        "information": "Creați un cont pentru a începe o versiune de încercare gratuită de o lună cu Home Assistant Cloud. Nu sunt necesare informații de plată.",
-                        "information2": "Perioada de încercare vă va oferi acces la toate avantajele Home Assistant Cloud, incluzând:",
+                        "information": "Creați un cont pentru a începe o versiune de încercare gratuită de o lună cu Third Eye Cloud. Nu sunt necesare informații de plată.",
+                        "information2": "Perioada de încercare vă va oferi acces la toate avantajele Third Eye Cloud, incluzând:",
                         "information3": "Acest serviciu este condus de către partenerul nostru ",
-                        "information3a": ", o companie fondată de inițiatorii Home Assistant și Hass.io.",
+                        "information3a": ", o companie fondată de inițiatorii Third Eye și Hass.io.",
                         "information4": "Prin înregistrarea unui cont sunteți de acord cu următorii termeni și condiții.",
                         "link_privacy_policy": "Politica de Confidențialitate",
                         "link_terms_conditions": "Termeni și condiții",
@@ -1581,7 +1581,7 @@
                                 "imperial_example": "Fahrenheit, livre",
                                 "internal_url": "URL intern",
                                 "latitude": "Latitudine",
-                                "location_name": "Numele instalarii Home Assistant",
+                                "location_name": "Numele instalarii Third Eye",
                                 "longitude": "Longitudine",
                                 "metric_example": "Celsius, kilograme",
                                 "save_button": "Salvați",
@@ -1641,7 +1641,7 @@
                         "title": "Energie"
                     },
                     "people": {
-                        "description": "Gestionați persoanele și zonele pe care Home Assistant le urmărește",
+                        "description": "Gestionați persoanele și zonele pe care Third Eye le urmărește",
                         "title": "Oameni și zone"
                     },
                     "settings": {
@@ -1710,7 +1710,7 @@
                     "download_diagnostics": "Descarcă diagnosticele",
                     "edit_settings": "Editează setarile",
                     "enabled_cause": "Dispozitivul este dezactivat de {cause}.",
-                    "enabled_description": "Dispozitivele dezactivate nu vor fi afișate, iar entitățile aparținând dispozitivului vor fi dezactivate și nu vor fi adăugate la Home Assistant.",
+                    "enabled_description": "Dispozitivele dezactivate nu vor fi afișate, iar entitățile aparținând dispozitivului vor fi dezactivate și nu vor fi adăugate la Third Eye.",
                     "enabled_label": "Activează dispozitiv",
                     "entities": {
                         "add_entities_lovelace": "Adăugați la Lovelace",
@@ -1800,12 +1800,12 @@
                     "picker": {
                         "disable_selected": {
                             "button": "Dezactivați selecția",
-                            "confirm_text": "Entitățile dezactivate nu vof fi adăugate in Home Assistant",
+                            "confirm_text": "Entitățile dezactivate nu vof fi adăugate in Third Eye",
                             "confirm_title": "Doriți să dezactivați {number} {number, plural,\n  one {entitate}\n  other {entități}\n}?"
                         },
                         "enable_selected": {
                             "button": "Activați selectarea",
-                            "confirm_text": "Acest lucru le va face disponibile în Home Assistant din nou, dacă acestea sunt acum dezactivate.",
+                            "confirm_text": "Acest lucru le va face disponibile în Third Eye din nou, dacă acestea sunt acum dezactivate.",
                             "confirm_title": "Doriți să activați {number} {number, plural,\n  one {entitate}\n  other {entități}\n}?"
                         },
                         "filter": {
@@ -1825,8 +1825,8 @@
                             "name": "Nume",
                             "status": "Stare"
                         },
-                        "introduction": "Home Assistant păstrează un registru al fiecărei entități pe care a văzut-o vreodată, care poate fi identificată în mod unic. Fiecare dintre aceste entități va avea un ID de entitate atribuit care va fi rezervat doar pentru această entitate.",
-                        "introduction2": "Utilizați registrul de entități pentru a înlocui numele, schimba identitatea entității sau a elimina înregistrarea din Home Assistant. Rețineți că eliminarea intrării din registrul entității nu va elimina entitatea. Pentru aceasta, urmați linkul de mai jos și eliminați-l din pagina de integrare.",
+                        "introduction": "Third Eye păstrează un registru al fiecărei entități pe care a văzut-o vreodată, care poate fi identificată în mod unic. Fiecare dintre aceste entități va avea un ID de entitate atribuit care va fi rezervat doar pentru această entitate.",
+                        "introduction2": "Utilizați registrul de entități pentru a înlocui numele, schimba identitatea entității sau a elimina înregistrarea din Third Eye. Rețineți că eliminarea intrării din registrul entității nu va elimina entitatea. Pentru aceasta, urmați linkul de mai jos și eliminați-l din pagina de integrare.",
                         "remove_selected": {
                             "button": "Eliminați selecția",
                             "confirm_partly_title": "Doar {number} {number, plural,\n  one {entitate selectată}\n  other {entități selectate}\n} pot fi eliminate.",
@@ -1844,7 +1844,7 @@
                         }
                     }
                 },
-                "header": "Configurați Home Assistant",
+                "header": "Configurați Third Eye",
                 "helpers": {
                     "caption": "Ajutoare",
                     "description": "Elemente care ajută la construirea automatizărilor",
@@ -1883,7 +1883,7 @@
                     "developed_by": "Dezvoltat de o grămadă de oameni minunați.",
                     "documentation": "Documentație",
                     "frontend": "front-end-ui",
-                    "home_assistant_logo": "Logo-ul Home Assistant",
+                    "home_assistant_logo": "Logo-ul Third Eye",
                     "icons_by": "Icoane ca",
                     "integrations": "Integrări",
                     "issues": "Probleme",
@@ -1917,7 +1917,7 @@
                         },
                         "documentation": "Documentație",
                         "download_diagnostics": "Descarcă diagnosticele",
-                        "enable_restart_confirm": "Reporniți Home Assistant pentru a finaliza activarea acestei integrări",
+                        "enable_restart_confirm": "Reporniți Third Eye pentru a finaliza activarea acestei integrări",
                         "entities": "{count} {count, plural,\n  one {entity}\n  other {entities}\n}",
                         "entity_unavailable": "Entitate indisponibilă",
                         "firmware": "Firmware: {version}",
@@ -1930,9 +1930,9 @@
                         "provided_by_custom_integration": "Furnizat de o integrare personalizată",
                         "reload": "Reîncărcați",
                         "reload_confirm": "Integrarea a fost reîncărcată",
-                        "reload_restart_confirm": "Reporniți Home Assistant pentru a finaliza reîncărcarea acestei integrări",
+                        "reload_restart_confirm": "Reporniți Third Eye pentru a finaliza reîncărcarea acestei integrări",
                         "rename": "Redenumiți",
-                        "restart_confirm": "Reporniți Home Assistant pentru a termina eliminarea acestei integrări",
+                        "restart_confirm": "Reporniți Third Eye pentru a termina eliminarea acestei integrări",
                         "services": "{count} {count, plural,\n  one {serviciu}\n  other {servicii}\n}",
                         "state": {
                             "failed_unload": "Descărcarea nu a reușit",
@@ -1971,7 +1971,7 @@
                         "show_disabled": "Afișați integrări dezactivate"
                     },
                     "discovered": "Descoperit",
-                    "home_assistant_website": "Site-ul Home Assistant",
+                    "home_assistant_website": "Site-ul Third Eye",
                     "ignore": {
                         "confirm_delete_ignore": "Acest lucru va face ca integrarea să apară din nou în integrările descoperite atunci când este descoperită. Acest lucru ar putea necesita o repornire sau să dureze ceva timp.",
                         "confirm_delete_ignore_title": "Încetați să ignorați {name}?",
@@ -1996,13 +1996,13 @@
                     "rename_input_label": "Numele intrării",
                     "search": "Căutați integrări"
                 },
-                "introduction": "În această vizualizare este posibil să vă configurați componentele și Home Assistant. Nu este totuși încă posibil să se configureze din interfața de utilizare, dar lucrăm la asta.",
+                "introduction": "În această vizualizare este posibil să vă configurați componentele și Third Eye. Nu este totuși încă posibil să se configureze din interfața de utilizare, dar lucrăm la asta.",
                 "logs": {
                     "caption": "Jurnale",
                     "clear": "Şterge",
-                    "description": "Vizualizați jurnalele Home Assistant",
+                    "description": "Vizualizați jurnalele Third Eye",
                     "details": "Detalii jurnal ({level})",
-                    "load_full_log": "Încărcare jurnal complet Home Assistant",
+                    "load_full_log": "Încărcare jurnal complet Third Eye",
                     "loading_log": "Se încarcă jurnalul de erori...",
                     "multiple_messages": "mesajul a apărut prima dată pe {time} și apare de {counter} ori",
                     "no_errors": "Nu au fost raportate erori.",
@@ -2194,7 +2194,7 @@
                     "select_instance": {
                         "header": "Selectați o instanță OpenZWave",
                         "introduction": "Aveți mai multe instanțe OpenZWave care rulează. Ce instanță ați dori să gestionați?",
-                        "none_found": "Nu am putut găsi o instanță OpenZWave. Dacă credeți că acest lucru este incorect, verificați configurările OpenZWave și MQTT și asigurați-vă că Home Assistant poate comunica cu agentul dvs. MQTT."
+                        "none_found": "Nu am putut găsi o instanță OpenZWave. Dacă credeți că acest lucru este incorect, verificați configurările OpenZWave și MQTT și asigurați-vă că Third Eye poate comunica cu agentul dvs. MQTT."
                     },
                     "services": {
                         "add_node": "Adăugați nod",
@@ -2207,7 +2207,7 @@
                     "caption": "Persoane",
                     "confirm_delete": "Sigur doriți să ștergeți această persoană?",
                     "create_person": "Creați o persoană",
-                    "description": "Gestionați persoanele pe care Home Assistant le urmărește.",
+                    "description": "Gestionați persoanele pe care Third Eye le urmărește.",
                     "detail": {
                         "admin": "Administrator",
                         "allow_login": "Permiteți persoanei să se conecteze",
@@ -2226,7 +2226,7 @@
                         "no_device_tracker_available_intro": "Când aveți dispozitive care indică prezența unei persoane, le veți putea atribui unei persoane aici. Puteți adăuga primul dispozitiv adăugând o integrare de detectare a prezenței din pagina de integrări.",
                         "update": "Actualizați"
                     },
-                    "introduction": "Aici puteți defini fiecare persoană de interes în Home Assistant.",
+                    "introduction": "Aici puteți defini fiecare persoană de interes în Third Eye.",
                     "learn_more": "Aflați mai multe despre persoane",
                     "no_persons_created_yet": "Se pare că nu ați creat încă nicio persoană.",
                     "note_about_persons_configured_in_yaml": "Notă: persoanele configurate prin configuration.yaml nu pot fi editate prin interfața de utilizator.",
@@ -2273,7 +2273,7 @@
                         "headers": {
                             "name": "Nume"
                         },
-                        "introduction": "Editorul de scene vă permite să creați și să editați scene. Urmați legătura de mai jos pentru a citi instrucțiunile pentru a vă asigura că ați configurat corect Home Assistant.",
+                        "introduction": "Editorul de scene vă permite să creați și să editați scene. Urmați legătura de mai jos pentru a citi instrucțiunile pentru a vă asigura că ați configurat corect Third Eye.",
                         "learn_more": "Aflați mai multe despre scene",
                         "no_scenes": "Nu am putut găsi nicio scenă ce poate fi modificată",
                         "only_editable": "Numai scenele definite în scene.yaml sunt editabile.",
@@ -2322,7 +2322,7 @@
                         "headers": {
                             "name": "Nume"
                         },
-                        "introduction": "Editorul de scripturi vă permite să creați și să editați scripturi. Urmați linkul de mai jos pentru a citi instrucțiunile pentru a vă asigura că ați configurat corect Home Assistant.",
+                        "introduction": "Editorul de scripturi vă permite să creați și să editați scripturi. Urmați linkul de mai jos pentru a citi instrucțiunile pentru a vă asigura că ați configurat corect Third Eye.",
                         "learn_more": "Aflați mai multe despre scripturi",
                         "no_scripts": "Nu am putut găsi niciun script modificabil",
                         "run_script": "Rulați scriptul",
@@ -2331,7 +2331,7 @@
                 },
                 "server_control": {
                     "caption": "Control server",
-                    "description": "Reporniți și opriți serverul Home Assistant",
+                    "description": "Reporniți și opriți serverul Third Eye",
                     "section": {
                         "reloading": {
                             "automation": "Reîncarcă automatizările",
@@ -2339,7 +2339,7 @@
                             "group": "Reîncărcați grupuri, grupurile de entități și servicii de notificare de grup",
                             "heading": "Reîncărcarea configurației YAML",
                             "homekit": "HomeKit",
-                            "introduction": "Unele părți din Home Assistant se pot reîncărca fără a necesita o repornire. Apăsarea reîncărcării va descărca configurația actuală și va încărca noua configurație.",
+                            "introduction": "Unele părți din Third Eye se pot reîncărca fără a necesita o repornire. Apăsarea reîncărcării va descărca configurația actuală și va încărca noua configurație.",
                             "mqtt": "Reîncărcați entitățile MQTT configurate manual",
                             "person": "Reîncărcați persoanele",
                             "reload": "Reîncarcă {domain}",
@@ -2352,10 +2352,10 @@
                             "zone": "Reîncărcare zone"
                         },
                         "server_management": {
-                            "confirm_restart": "Sigur doriți să reporniți Home Assistant?",
-                            "confirm_stop": "Sigur doriți să opriți Home Assistant?",
+                            "confirm_restart": "Sigur doriți să reporniți Third Eye?",
+                            "confirm_stop": "Sigur doriți să opriți Third Eye?",
                             "heading": "Managementul serverului",
-                            "introduction": "Controlați-vă serverul Home Assistant... din Home Assistant.",
+                            "introduction": "Controlați-vă serverul Third Eye... din Third Eye.",
                             "restart": "Reporniți",
                             "stop": "Oprire"
                         },
@@ -2416,7 +2416,7 @@
                         "password_not_match": "Parolele nu se potrivesc"
                     },
                     "caption": "Utilizatori",
-                    "description": "Gestionați conturile de utilizator Home Assistant",
+                    "description": "Gestionați conturile de utilizator Third Eye",
                     "editor": {
                         "activate_user": "Activați utilizatorul",
                         "active": "Activ",
@@ -2619,7 +2619,7 @@
                         "add_to_group": "Adăugați la grup",
                         "entities": "Entități ale acestui nod",
                         "entity_info": "Informații entitate",
-                        "exclude_entity": "Excludeți această entitate din Home Assistant",
+                        "exclude_entity": "Excludeți această entitate din Third Eye",
                         "group": "Grup",
                         "max_associations": "Nr. maxim de asocieri:",
                         "node_group_associations": "Asociații de grupuri de noduri",
@@ -2745,7 +2745,7 @@
                         "unknown": "Necunoscut"
                     },
                     "provisioned": {
-                        "confirm_unprovision_text": "Dacă anulați furnizarea dispozitivului, acesta nu va fi adăugat la Home Assistant când este pornit. Dacă este deja adăugat la Home Assistant, eliminarea dispozitivului furnizat nu îl va elimina din Home Assistant.",
+                        "confirm_unprovision_text": "Dacă anulați furnizarea dispozitivului, acesta nu va fi adăugat la Third Eye când este pornit. Dacă este deja adăugat la Third Eye, eliminarea dispozitivului furnizat nu îl va elimina din Third Eye.",
                         "confirm_unprovision_title": "Sunteți sigur că doriți să anulați provizionarea dispozitivului?",
                         "included": "Inclus",
                         "not_included": "Nu este inclus",
@@ -2803,7 +2803,7 @@
                         "column_description": "Descriere",
                         "column_example": "Exemplu",
                         "column_parameter": "Parametru",
-                        "description": "Instrumentul de serviciu dev vă permite să apelați orice serviciu disponibil în Home Assistant.",
+                        "description": "Instrumentul de serviciu dev vă permite să apelați orice serviciu disponibil în Third Eye.",
                         "fill_example_data": "Completați exemple de date",
                         "title": "Servicii"
                     },
@@ -2812,7 +2812,7 @@
                         "attributes": "Atribute",
                         "copy_id": "Copiați ID-ul în clipboard",
                         "current_entities": "Entități actuale",
-                        "description1": "Setați reprezentarea stării curente a unei entități în Home Assistant.",
+                        "description1": "Setați reprezentarea stării curente a unei entități în Third Eye.",
                         "description2": "Acesta nu va comunica cu dispozitivul actual.",
                         "entity": "Entitate",
                         "filter_attributes": "Filtrare atribute",
@@ -2835,7 +2835,7 @@
                     },
                     "templates": {
                         "all_listeners": "Acest șablon ascultă următoarele evenimente modificate de stare:",
-                        "description": "Șabloanele sunt redate utilizând motorul de șablon Jinja2 cu unele extensii specifice Home Assistant.",
+                        "description": "Șabloanele sunt redate utilizând motorul de șablon Jinja2 cu unele extensii specifice Third Eye.",
                         "domain": "Domeniu",
                         "editor": "Editor șabloane",
                         "entity": "Entitate",
@@ -2844,7 +2844,7 @@
                         "no_listeners": "Acest șablon ascultă următoarele evenimente modificate de stare:",
                         "reset": "Reinițializați la șablonul demo",
                         "result_type": "Tipul rezultatului",
-                        "template_extensions": "Șabloane de extensie pentru Home Assistant",
+                        "template_extensions": "Șabloane de extensie pentru Third Eye",
                         "time": "Acest șablon se actualizează la începutul fiecărui minut.",
                         "title": "Şablon",
                         "unknown_error_template": "Sa produs o eroare de randare necunoscută."
@@ -2886,7 +2886,7 @@
                         "never_triggered": "Nu s-a declanșat niciodată"
                     },
                     "iframe": {
-                        "error_secure_context": "Imposibil de încărcat iframe care indică site-uri web folosind {target_protocol} dacă Home Assistant este difuzat prin {context_protocol} ."
+                        "error_secure_context": "Imposibil de încărcat iframe care indică site-uri web folosind {target_protocol} dacă Third Eye este difuzat prin {context_protocol} ."
                     },
                     "picture-elements": {
                         "call_service": "Apelați serviciul {name}",
@@ -2898,7 +2898,7 @@
                         "url": "Deschideți fereastra către {url_path}"
                     },
                     "safe-mode": {
-                        "description": "Home Assistant a avut probleme în timpul încărcării configurației și rulează acum în modul de siguranță. Aruncați o privire la jurnalul de erori pentru a vedea ce a mers prost.",
+                        "description": "Third Eye a avut probleme în timpul încărcării configurației și rulează acum în modul de siguranță. Aruncați o privire la jurnalul de erori pentru a vedea ce a mers prost.",
                         "header": "Mod de siguranță activat"
                     },
                     "shopping-list": {
@@ -2908,7 +2908,7 @@
                         "reorder_items": "Reordonați articolele"
                     },
                     "starting": {
-                        "description": "Home Assistant pornește, vă rugăm să așteptați…"
+                        "description": "Third Eye pornește, vă rugăm să așteptați…"
                     }
                 },
                 "changed_toast": {
@@ -3074,7 +3074,7 @@
                             "name": "Umidificator"
                         },
                         "iframe": {
-                            "description": "Cardul Pagină Web vă permite să încorporați pagina dvs. web preferată chiar în Home Assistant.",
+                            "description": "Cardul Pagină Web vă permite să încorporați pagina dvs. web preferată chiar în Third Eye.",
                             "name": "Pagină web"
                         },
                         "light": {
@@ -3241,7 +3241,7 @@
                     "migrate": {
                         "header": "Configurație incompatibilă",
                         "migrate": "Migrați configurația",
-                        "para_migrate": "Home Assistant poate adăuga ID-ul la toate cardurile și vizualizările în mod automat pentru tine apăsând butonul \"Migrați configurația\".",
+                        "para_migrate": "Third Eye poate adăuga ID-ul la toate cardurile și vizualizările în mod automat pentru tine apăsând butonul \"Migrați configurația\".",
                         "para_no_id": "Acest element nu are un ID. Adăugați un ID la acest element în \"ui-lovelace.yaml\"."
                     },
                     "move_card": {
@@ -3266,7 +3266,7 @@
                         "close": "Închideți",
                         "empty_config": "Începeți cu un tablou de bord gol",
                         "header": "Preia controlul asupra interfața dvs. Lovelace",
-                        "para": "În mod implicit, Home Assistant va menține interfața dvs. de utilizator, actualizând-o atunci când entitățile noi sau componente Lovelace devin disponibile. Dacă preluați controlul, nu vom mai face automat modificări pentru dvs. Puteți oricând crea un nou tablou de bord în configurație pentru a vă juca cu el.",
+                        "para": "În mod implicit, Third Eye va menține interfața dvs. de utilizator, actualizând-o atunci când entitățile noi sau componente Lovelace devin disponibile. Dacă preluați controlul, nu vom mai face automat modificări pentru dvs. Puteți oricând crea un nou tablou de bord în configurație pentru a vă juca cu el.",
                         "para_sure": "Sigur doriți să preluați controlul asupra interfeței dvs. de utilizator?",
                         "save": "Preia controlul",
                         "yaml_config": "Pentru a vă ajuta să începeți aici este configurarea curentă a acestui tablou de bord:",
@@ -3330,7 +3330,7 @@
                     "entity_non_numeric": "Entitatea este non-numerică: {entity}",
                     "entity_not_found": "Entitatea nu este disponibilă: {entity}",
                     "entity_unavailable": "Entitate momentan indisponibilă: {entity}",
-                    "starting": "Home Assistant pornește, nu totul poate fi disponibil încă"
+                    "starting": "Third Eye pornește, nu totul poate fi disponibil încă"
                 }
             },
             "mailbox": {
@@ -3342,12 +3342,12 @@
             "my": {
                 "documentation": "documentație",
                 "error": "A apărut o eroare necunoscută",
-                "faq_link": "Întrebări frecvente despre Home Assistant",
-                "not_supported": "Această redirecționare nu este acceptată de instanța Home Assistant. Verificați {link} pentru redirecționările acceptate și versiunea pe care au fost introduse."
+                "faq_link": "Întrebări frecvente despre Third Eye",
+                "not_supported": "Această redirecționare nu este acceptată de instanța Third Eye. Verificați {link} pentru redirecționările acceptate și versiunea pe care au fost introduse."
             },
             "page-authorize": {
                 "abort_intro": "Conectarea a fost anulată",
-                "authorizing_client": "Sunteți pe punctul de a da {clientId} accesul la instanța dumneavoastra de Home Assistant",
+                "authorizing_client": "Sunteți pe punctul de a da {clientId} accesul la instanța dumneavoastra de Third Eye",
                 "form": {
                     "error": "Eroare: {error}",
                     "next": "Următorul",
@@ -3449,8 +3449,8 @@
                 "cards": {
                     "demo": {
                         "demo_by": "după {name}",
-                        "introduction": "Bine ați venit acasă! Ați ajuns la demo-ul Home Assistant, unde prezentăm cele mai bune interfețe utilizator, create de comunitatea noastră.",
-                        "learn_more": "Aflați mai multe despre Home Assistant",
+                        "introduction": "Bine ați venit acasă! Ați ajuns la demo-ul Third Eye, unde prezentăm cele mai bune interfețe utilizator, create de comunitatea noastră.",
+                        "learn_more": "Aflați mai multe despre Third Eye",
                         "next_demo": "Următorul demo"
                     }
                 },
@@ -3493,16 +3493,16 @@
                 "core-config": {
                     "button_detect": "Detectează",
                     "finish": "Următorul",
-                    "intro": "Salut {name}, bine ai venit la Home Assistant. Cum ți-ar plăcea să-ți numești casa?",
+                    "intro": "Salut {name}, bine ai venit la Third Eye. Cum ți-ar plăcea să-ți numești casa?",
                     "intro_location": "Am vrea să știm unde locuiți. Aceste informații vă vor ajuta să afișați informații și să configurați automatizări bazate pe soare. Aceste date nu sunt niciodată distribuite în afara rețelei dvs.",
                     "intro_location_detect": "Vă putem ajuta să completați aceste informații făcând o cerere unică unui serviciu extern.",
-                    "location_name": "Numele instalării Home Assistant",
+                    "location_name": "Numele instalării Third Eye",
                     "location_name_default": "Acasă"
                 },
                 "finish": "Finalizare",
                 "integration": {
                     "finish": "Finalizați",
-                    "intro": "Dispozitivele și serviciile sunt reprezentate în Home Assistant ca integrări. Aveți posibilitatea să le configurați acum sau să le faceți mai târziu din ecranul de configurare.",
+                    "intro": "Dispozitivele și serviciile sunt reprezentate în Third Eye ca integrări. Aveți posibilitatea să le configurați acum sau să le faceți mai târziu din ecranul de configurare.",
                     "more_integrations": "Mai Mult"
                 },
                 "intro": "Sunteți gata să vă treziți casa, să vă recuperați intimitatea și să vă alăturați unei comunități mondiale de creatori?",
@@ -3588,7 +3588,7 @@
                     "create_failed": "Crearea token-ului de acces nu a reușit.",
                     "created": "Creat în {date}",
                     "delete_failed": "Ștergerea token-ului de acces nu a reușit.",
-                    "description": "Creați tokenuri de acces cu durată lungă de viață pentru a permite script-urilor dvs. să interacționeze cu instanța dvs. Home Assistant. Fiecare token va fi valabil timp de 10 ani de la creare. Următoarele token-uri de acces de lungă durată sunt active la ora actuală.",
+                    "description": "Creați tokenuri de acces cu durată lungă de viață pentru a permite script-urilor dvs. să interacționeze cu instanța dvs. Third Eye. Fiecare token va fi valabil timp de 10 ani de la creare. Următoarele token-uri de acces de lungă durată sunt active la ora actuală.",
                     "empty_state": "Nu aveți tokenuri de acces de lungă durată deocamdata",
                     "header": "Token-uri de acces de lungă durată",
                     "learn_auth_requests": "Aflați cum să faceți cereri autentificate.",

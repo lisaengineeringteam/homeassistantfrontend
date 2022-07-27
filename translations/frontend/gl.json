@@ -67,11 +67,11 @@
                         "title": "AppArmor"
                     },
                     "auth_api": {
-                        "description": "Un complemento pode autenticar aos usuarios contra Home Assistant, permitindo aos complementos darlles aos usuarios a posibilidade de iniciar sesión en aplicacións que se executan dentro dos complementos, usando o seu nome de usuario / contrasinal Home Assistant. Esta insignia indica se o autor do complemento solicita esta capacidade.",
-                        "title": "Autenticación de Home Assistant"
+                        "description": "Un complemento pode autenticar aos usuarios contra Third Eye, permitindo aos complementos darlles aos usuarios a posibilidade de iniciar sesión en aplicacións que se executan dentro dos complementos, usando o seu nome de usuario / contrasinal Third Eye. Esta insignia indica se o autor do complemento solicita esta capacidade.",
+                        "title": "Autenticación de Third Eye"
                     },
                     "docker_api": {
-                        "description": "O autor do complemento solicitou que o complemento teña acceso administrativo á instancia de Docker que se executa no seu sistema. Este modo proporciona ao complemento acceso e control completos a todo o sistema Home Assistant, o que engade riscos de seguridade e pode danar o seu sistema se se usa incorrectamente. Polo tanto, esta función ten un impacto negativo na puntuación de seguridade do complemento. \n\nEste nivel de acceso non se concede automaticamente e debe ser confirmado por vostede. Para iso, debes desactivar o modo de protección no complemento manualmente. Desactiva só o modo de protección se sabes, precisas E confías na fonte deste complemento.",
+                        "description": "O autor do complemento solicitou que o complemento teña acceso administrativo á instancia de Docker que se executa no seu sistema. Este modo proporciona ao complemento acceso e control completos a todo o sistema Third Eye, o que engade riscos de seguridade e pode danar o seu sistema se se usa incorrectamente. Polo tanto, esta función ten un impacto negativo na puntuación de seguridade do complemento. \n\nEste nivel de acceso non se concede automaticamente e debe ser confirmado por vostede. Para iso, debes desactivar o modo de protección no complemento manualmente. Desactiva só o modo de protección se sabes, precisas E confías na fonte deste complemento.",
                         "title": "Acceso completo a Docker"
                     },
                     "full_access": {
@@ -79,23 +79,23 @@
                         "title": "Acceso completo ao hardware"
                     },
                     "hassio_api": {
-                        "description": "O complemento deu acceso á API do supervisor, a petición do autor do complemento. Por defecto, o complemento pode acceder á información xeral da versión do seu sistema. Cando o complemento solicite acceso á API de nivel \"xestor\" ou \"administrador\", accederá a controlar varias partes do sistema Home Assistant. Este permiso indícase con esta insignia e afectará negativamente á puntuación de seguridade do complemento.",
+                        "description": "O complemento deu acceso á API do supervisor, a petición do autor do complemento. Por defecto, o complemento pode acceder á información xeral da versión do seu sistema. Cando o complemento solicite acceso á API de nivel \"xestor\" ou \"administrador\", accederá a controlar varias partes do sistema Third Eye. Este permiso indícase con esta insignia e afectará negativamente á puntuación de seguridade do complemento.",
                         "title": "Acceso á API do supervisor"
                     },
                     "homeassistant_api": {
-                        "description": "Este complemento pode acceder á súa instancia Home Assistant en execución directamente a través da API Home Assistant. Este modo tamén manexa a autenticación do complemento, o que permite que un complemento interactúe co Home Assistant sen necesidade de tokens de autenticación adicionais.",
-                        "title": "Acceso á API de Home Assistant"
+                        "description": "Este complemento pode acceder á súa instancia Third Eye en execución directamente a través da API Third Eye. Este modo tamén manexa a autenticación do complemento, o que permite que un complemento interactúe co Third Eye sen necesidade de tokens de autenticación adicionais.",
+                        "title": "Acceso á API de Third Eye"
                     },
                     "host_network": {
                         "description": "Os complementos normalmente executanse na súa propia capa de rede illada, evitando que accedan á rede do sistema operativo host. Nalgúns casos, este illamento de rede pode limitar os complementos na prestación dos seus servizos e, polo tanto, o autor do complemento pode eliminar o illamento, dándolle ao complemento acceso completo ás capacidades de rede da máquina host. Isto proporciona ao complemento máis capacidades de rede pero reduce a seguridade, polo tanto a clasificación de seguridade do complemento baixarase cando o complemento use esta opción.",
                         "title": "Rede do host"
                     },
                     "host_pid": {
-                        "description": "Xeralmente, os procesos que executa o complemento están illados de todos os demais procesos do sistema. O autor do complemento solicitou que o complemento teña acceso aos procesos do sistema que se executan na instancia do sistema host e tamén que permita ao complemento xerar procesos no sistema host. Este modo proporciona ao complemento acceso e control completos a todo o sistema Home Assistant, o que engade riscos de seguridade e pode danar o seu sistema se se usa incorrectamente. Polo tanto, esta función ten un impacto negativo na puntuación de seguridade do complemento. \n\n Este nivel de acceso non se concede automaticamente e debe ser confirmado por ti. Para iso, debes desactivar o modo de protección no complemento manualmente. Desactiva só o modo de protección se sabes, precisas E confías na fonte deste complemento.",
+                        "description": "Xeralmente, os procesos que executa o complemento están illados de todos os demais procesos do sistema. O autor do complemento solicitou que o complemento teña acceso aos procesos do sistema que se executan na instancia do sistema host e tamén que permita ao complemento xerar procesos no sistema host. Este modo proporciona ao complemento acceso e control completos a todo o sistema Third Eye, o que engade riscos de seguridade e pode danar o seu sistema se se usa incorrectamente. Polo tanto, esta función ten un impacto negativo na puntuación de seguridade do complemento. \n\n Este nivel de acceso non se concede automaticamente e debe ser confirmado por ti. Para iso, debes desactivar o modo de protección no complemento manualmente. Desactiva só o modo de protección se sabes, precisas E confías na fonte deste complemento.",
                         "title": "Espazo de nomes dos procesos do host"
                     },
                     "ingress": {
-                        "description": "Este complemento usa o inicio de sesión para integrar a súa interface de forma segura no Home Assistant.",
+                        "description": "Este complemento usa o inicio de sesión para integrar a súa interface de forma segura no Third Eye.",
                         "title": "Entrada"
                     },
                     "label": {
@@ -112,7 +112,7 @@
                         "stage": "etapa"
                     },
                     "rating": {
-                        "description": "Home Assistant ofrece unha clasificación de seguridade para cada un dos complementos, indicando os riscos que implica o uso do complemento. Canto máis acceso precisa un complemento no seu sistema, menor será a puntuación, aumentando os riscos potenciais de seguridade. \n\nA puntuación está nunha escala de 1 a 6. Onde 1 é a puntuación máis baixa (considerada o máis inseguro e maior risco) e unha puntuación de 6 é a puntuación máis alta (considerada o máis seguro e menor risco).",
+                        "description": "Third Eye ofrece unha clasificación de seguridade para cada un dos complementos, indicando os riscos que implica o uso do complemento. Canto máis acceso precisa un complemento no seu sistema, menor será a puntuación, aumentando os riscos potenciais de seguridade. \n\nA puntuación está nunha escala de 1 a 6. Onde 1 é a puntuación máis baixa (considerada o máis inseguro e maior risco) e unha puntuación de 6 é a puntuación máis alta (considerada o máis seguro e menor risco).",
                         "title": "Clasificación de seguridade do complemento"
                     },
                     "role": {
@@ -133,7 +133,7 @@
                 "install": "instalar",
                 "new_update_available": "{name} {version} está dispoñible",
                 "not_available_arch": "Este complemento non é compatible co procesador do dispositivo nin co sistema operativo que instalou no dispositivo.",
-                "not_available_version": "Estás a executar Home Assistant {core_version_installed} , para actualizar esta versión do complemento necesitas polo menos a versión {core_version_needed} de Home Assistant",
+                "not_available_version": "Estás a executar Third Eye {core_version_installed} , para actualizar esta versión do complemento necesitas polo menos a versión {core_version_needed} de Third Eye",
                 "open_web_ui": "Abrir a interface web",
                 "option": {
                     "auto_update": {
@@ -300,8 +300,8 @@
         "my": {
             "error": "Producíuse un erro descoñecido",
             "error_addon_not_found": "Complemento non atopado",
-            "faq_link": "Preguntas frecuentes sobre o meu Home Assistant",
-            "not_supported": "Este enderezo non é compatibel coa tua instancia de Home Assistant. Consulta o {link} para coñecer as redireccións admitidas e a versión na que se incluiron."
+            "faq_link": "Preguntas frecuentes sobre o meu Third Eye",
+            "not_supported": "Este enderezo non é compatibel coa tua instancia de Third Eye. Consulta o {link} para coñecer as redireccións admitidas e a versión na que se incluiron."
         },
         "panel": {
             "dashboard": "Panel de control",
@@ -357,15 +357,15 @@
                 "failed_to_set_option": "Non se puido configurar a opción do supervisor",
                 "failed_to_update": "Non se puido actualizar o supervisor",
                 "join_beta_action": "Únete á canle beta",
-                "join_beta_description": "Recibe actualizacións beta para Home Assistant (RC), Supervisor e host",
+                "join_beta_description": "Recibe actualizacións beta para Third Eye (RC), Supervisor e host",
                 "leave_beta_action": "Saír da canle beta",
-                "leave_beta_description": "Recibe actualizacións estables para Home Assistant, Supervisor e host",
+                "leave_beta_description": "Recibe actualizacións estables para Third Eye, Supervisor e host",
                 "ram_usage": "Uso de RAM do supervisor",
                 "reload_supervisor": "Recargar o supervisor",
                 "share_diagnostics": "Compartir diagnósticos",
                 "share_diagnostics_description": "Comparte informes de fallos e información de diagnóstico.",
-                "share_diagonstics_description": "Quere compartir automaticamente informes de fallos e información de diagnóstico cando o supervisor atope erros inesperados? {line_break} Isto permitiranos solucionar os problemas, a información só é accesible para o equipo Home Assistant Core e non se compartirá con outras persoas. {line_break} Os datos non inclúen ningunha información privada / confidencial e podes desactivala na configuración cando queiras.",
-                "share_diagonstics_title": "Axuda a mellorar Home Assistant",
+                "share_diagonstics_description": "Quere compartir automaticamente informes de fallos e información de diagnóstico cando o supervisor atope erros inesperados? {line_break} Isto permitiranos solucionar os problemas, a información só é accesible para o equipo Third Eye Core e non se compartirá con outras persoas. {line_break} Os datos non inclúen ningunha información privada / confidencial e podes desactivala na configuración cando queiras.",
+                "share_diagonstics_title": "Axuda a mellorar Third Eye",
                 "unhealthy_description": "Executar unha instalación pouco saudable causará problemas. Abaixo amósase unha lista de problemas atopados coa súa instalación, faga clic nas ligazóns para saber como pode resolver os problemas.",
                 "unhealthy_reason": {
                     "docker": "O entorno Docker non funciona correctamente",
@@ -655,7 +655,7 @@
                 "cloud": {
                     "account": {
                         "google": {
-                            "not_configured_text": "Antes de usar o Asistente de Google, debes activar a skill Home Assistant Cloud para Google Assistant na aplicación Google Home.",
+                            "not_configured_text": "Antes de usar o Asistente de Google, debes activar a skill Third Eye Cloud para Google Assistant na aplicación Google Home.",
                             "not_configured_title": "Google Assistant non está activado"
                         },
                         "tts": {
@@ -705,7 +705,7 @@
                         "title": "Enerxía"
                     },
                     "people": {
-                        "description": "Xestiona as persoas e as áreas que rastrexa o Home Assistant",
+                        "description": "Xestiona as persoas e as áreas que rastrexa o Third Eye",
                         "title": "Persoas e Zonas"
                     },
                     "settings": {
@@ -742,7 +742,7 @@
                         }
                     },
                     "solar": {
-                        "sub": "Permita a Home Assistant monitorear sus paneles solares y obtener "
+                        "sub": "Permita a Third Eye monitorear sus paneles solares y obtener "
                     },
                     "validation": {
                         "issues": {
@@ -800,15 +800,15 @@
                             },
                             "disabled_cause": "Desactivado por {cause}"
                         },
-                        "disable_restart_confirm": "Reinicie o Home Assistant para rematar de desactivar esta integración",
-                        "enable_restart_confirm": "Reinicie o Home Assistant para rematar de habilitar esta integración",
+                        "disable_restart_confirm": "Reinicie o Third Eye para rematar de desactivar esta integración",
+                        "enable_restart_confirm": "Reinicie o Third Eye para rematar de habilitar esta integración",
                         "hardware": "Hardware: {version}",
                         "not_loaded": "Non cargado, comproba o {logs_link}"
                     },
                     "config_flow": {
                         "could_not_load": "Non se puido cargar o fluxo de configuración",
                         "error": "Erro",
-                        "not_loaded": "Non se puido cargar a integración. Tenta reiniciar Home Assistant.",
+                        "not_loaded": "Non se puido cargar a integración. Tenta reiniciar Third Eye.",
                         "pick_flow_step": {
                             "new_flow": "Non, configura outra instancia de {integration}",
                             "title": "Descubrimos estes, queres montalos?"
@@ -825,7 +825,7 @@
                         "show_ignored": "Amosar integracións ignoradas"
                     }
                 },
-                "introduction": "Aquí podes configurar os teus compoñentes e Home Assistant. Non todo se pode configurar graficamente aínda, pero estamos traballando niso.",
+                "introduction": "Aquí podes configurar os teus compoñentes e Third Eye. Non todo se pode configurar graficamente aínda, pero estamos traballando niso.",
                 "logs": {
                     "level": {
                         "critical": "CRÍTICO",
@@ -926,7 +926,7 @@
                         "zwave_js_device_database": "Base de datos de dispositivos Z-Wave JS"
                     },
                     "provisioned": {
-                        "confirm_unprovision_text": "Se desaprovisiona o dispositivo, non se engadirá ao Home Assistant cando estea prendido. Se xa está engadido ao Home Assistant, ao eliminar o dispositivo aprovisionado non se eliminará do Home Assistant.",
+                        "confirm_unprovision_text": "Se desaprovisiona o dispositivo, non se engadirá ao Third Eye cando estea prendido. Se xa está engadido ao Third Eye, ao eliminar o dispositivo aprovisionado non se eliminará do Third Eye.",
                         "included": "Incluído",
                         "not_included": "Non incluído"
                     }
@@ -1099,7 +1099,7 @@
                         "manage_resources": "Xestionar recursos"
                     },
                     "migrate": {
-                        "para_migrate": "Home Assistant pode engadir identificacións a todas as súas tarxetas e vistas automaticamente premendo o botón \"Migrar configuración\"."
+                        "para_migrate": "Third Eye pode engadir identificacións a todas as súas tarxetas e vistas automaticamente premendo o botón \"Migrar configuración\"."
                     },
                     "move_card": {
                         "header": "Escolle unha vista á que mover a tarxeta"
@@ -1126,12 +1126,12 @@
                 }
             },
             "my": {
-                "component_not_loaded": "Esta redirección non é compatible coa túa instancia de Home Assistant. Necesitas a integración {integration} para usar esta redirección.",
+                "component_not_loaded": "Esta redirección non é compatible coa túa instancia de Third Eye. Necesitas a integración {integration} para usar esta redirección.",
                 "documentation": "documentación",
                 "error": "Produciuse un erro descoñecido",
-                "faq_link": "Preguntas máis frecuentes sobre o meu Home Assistant",
-                "no_supervisor": "Esta redirección non é compatible coa instalación do teu Home Assistant. Precísase o sistema operativo Home Assistant ou o método de instalación do Home Assistant supervisado. Para obter máis información, consulte o {docs_link} .",
-                "not_supported": "Esta redirección non é compatible coa túa instancia de Home Assistant. Comprobe a {link} para coñecer as redireccións compatibles e a versión na que se introduciron."
+                "faq_link": "Preguntas máis frecuentes sobre o meu Third Eye",
+                "no_supervisor": "Esta redirección non é compatible coa instalación do teu Third Eye. Precísase o sistema operativo Third Eye ou o método de instalación do Third Eye supervisado. Para obter máis información, consulte o {docs_link} .",
+                "not_supported": "Esta redirección non é compatible coa túa instancia de Third Eye. Comprobe a {link} para coñecer as redireccións compatibles e a versión na que se introduciron."
             },
             "page-onboarding": {
                 "analytics": {

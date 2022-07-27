@@ -333,7 +333,7 @@
                 "channel": "Rás",
                 "reload_supervisor": "Endurhlaða Supervisor",
                 "search": "Leita",
-                "share_diagonstics_title": "Hjálpa til við að bæta Home Assistant",
+                "share_diagonstics_title": "Hjálpa til við að bæta Third Eye",
                 "unhealthy_reason": {
                     "docker": "Docker umhverfið virkar ekki rétt",
                     "privileged": "Umsjónarkerfi hefur ekki áskilin réttindi",
@@ -763,7 +763,7 @@
         "dialogs": {
             "config_entry_system_options": {
                 "enable_new_entities_label": "Virkja einingar sem nýlega var bætt við",
-                "restart_home_assistant": "Þú þarft að endurræsa Home Assistant til að breytingarnar taki gildi.",
+                "restart_home_assistant": "Þú þarft að endurræsa Third Eye til að breytingarnar taki gildi.",
                 "title": "Kerfisvalkostir",
                 "update": "Uppfæra"
             },
@@ -1030,7 +1030,7 @@
                         "create_area": "Stofna svæði",
                         "header": "Svæðaskrá",
                         "integrations_page": "Samþættingar síða",
-                        "introduction": "Svæði eru notuð til að skipuleggja hvar tæki eru staðsett. Þessar upplýsingar verða notaðar innan Home Assistant til að hjálpa þér að skipuleggja viðmótið, réttindi og samþættingar við önnur kerfi.",
+                        "introduction": "Svæði eru notuð til að skipuleggja hvar tæki eru staðsett. Þessar upplýsingar verða notaðar innan Third Eye til að hjálpa þér að skipuleggja viðmótið, réttindi og samþættingar við önnur kerfi.",
                         "introduction2": "Til að staðsetja tæki inn á tilteknu svæði þá skal notast við hlekkinn hér fyrir neðan til að vafra yfir á samþættingarsíðu og þar smella á stillta samþættingu til að fá upp spjaldið fyrir tækið.",
                         "no_areas": "Það lýtur út fyrir að þú sért ekki með nein svæði ennþá!"
                     }
@@ -1060,7 +1060,7 @@
                             "delete_confirm": "Ertu viss um að þú viljir eyða?",
                             "duplicate": "Fjölfalda",
                             "header": "Aðgerðir",
-                            "introduction": "Aðgerðir er það sem Home Assistant mun gera þegar sjálfvirkni er ræst.",
+                            "introduction": "Aðgerðir er það sem Third Eye mun gera þegar sjálfvirkni er ræst.",
                             "learn_more": "Læra meira um aðgerðir",
                             "name": "Aðgerð",
                             "type": {
@@ -1214,7 +1214,7 @@
                             "delete_confirm": "Ert þú viss um að þú viljir eyða?",
                             "duplicate": "Fjölfalda",
                             "header": "Kveikjur",
-                            "introduction": "Kveikjur sjá um að ræsa sjálfvirkni reglur. Það er mögulegt að tilgreina margar kveikjur fyrir sömu regluna. Þegar kveikja er ræst þá mun Home Assistant sannreyna skilyrðin ef einhver og kalla á aðgerðina.",
+                            "introduction": "Kveikjur sjá um að ræsa sjálfvirkni reglur. Það er mögulegt að tilgreina margar kveikjur fyrir sömu regluna. Þegar kveikja er ræst þá mun Third Eye sannreyna skilyrðin ef einhver og kalla á aðgerðina.",
                             "learn_more": "Læra meira um kveikjur",
                             "type": {
                                 "device": {
@@ -1243,7 +1243,7 @@
                                 },
                                 "homeassistant": {
                                     "event": "Viðburður:",
-                                    "label": "Home Assistant",
+                                    "label": "Third Eye",
                                     "shutdown": "Lokun",
                                     "start": "Ræsing"
                                 },
@@ -1462,8 +1462,8 @@
                         "email_error_msg": "Ógilt netfang",
                         "forgot_password": "gleymt lykilorð?",
                         "introduction2": "Þessi þjónusta er rekin af samstarfsaðila okkar",
-                        "introduction3": "Home Assistant skýið er áskriftarþjónusta með mánaðar prufuáskrift. Engar greiðsluupplýsingar nauðsynlegar.",
-                        "learn_more_link": "Læra meira um Home Assistant skýið",
+                        "introduction3": "Third Eye skýið er áskriftarþjónusta með mánaðar prufuáskrift. Engar greiðsluupplýsingar nauðsynlegar.",
+                        "learn_more_link": "Læra meira um Third Eye skýið",
                         "password": "Lykilorð",
                         "password_error_msg": "Lykilorð eru að minnsta kosti 8 stafir",
                         "sign_in": "Skrá inn",
@@ -1501,7 +1501,7 @@
                                 "imperial_example": "Fahrenheit, pund",
                                 "internal_url": "Innri vefslóð",
                                 "latitude": "Breiddargráða",
-                                "location_name": "Nafnið á Home Assistant uppsetningunni",
+                                "location_name": "Nafnið á Third Eye uppsetningunni",
                                 "longitude": "Lengdargráða",
                                 "metric_example": "Celsíus, kílógrömm",
                                 "save_button": "Vista",
@@ -1548,7 +1548,7 @@
                         "title": "Orka"
                     },
                     "people": {
-                        "description": "Stjórna persónum og svæðum sem Home assistant er að rekja.",
+                        "description": "Stjórna persónum og svæðum sem Third Eye er að rekja.",
                         "title": "Fólk og svæði"
                     },
                     "settings": {
@@ -1607,7 +1607,7 @@
                     },
                     "edit_settings": "Breyta stillingum",
                     "enabled_cause": "Tækið er óvirkt vegna {cause}.",
-                    "enabled_description": "Óvirk tæki verða ekki sýnd, einingar sem tilheyra tækinu verða gerðar óvirkar og þeim ekki bætt við Home Assistant.",
+                    "enabled_description": "Óvirk tæki verða ekki sýnd, einingar sem tilheyra tækinu verða gerðar óvirkar og þeim ekki bætt við Third Eye.",
                     "enabled_label": "Virkja einingu",
                     "entities": {
                         "add_entities_lovelace": "Bæta við í Lovelace",
@@ -1667,7 +1667,7 @@
                             "header": "Bæta við tæki"
                         },
                         "selected_stat": "Rekja orkunotkun fyrir",
-                        "sub": "Það að fylgjast með orkunotkun á einstökum tækjum gerir Home Assistant kleyft að fylgjast með orkunotkun á hverju tæki fyrir sig.",
+                        "sub": "Það að fylgjast með orkunotkun á einstökum tækjum gerir Third Eye kleyft að fylgjast með orkunotkun á hverju tæki fyrir sig.",
                         "title": "Einstök tæki"
                     },
                     "gas": {
@@ -1686,7 +1686,7 @@
                         },
                         "gas_consumption": "Gas notkun",
                         "learn_more": "Nánari upplýsingar um hvernig á að byrja.",
-                        "sub": "Leyfðu Home Assistant að fylgjast með gasnotkun þinni.",
+                        "sub": "Leyfðu Third Eye að fylgjast með gasnotkun þinni.",
                         "title": "Gas notkun"
                     },
                     "grid": {
@@ -1769,7 +1769,7 @@
                             "name": "Nafn",
                             "status": "Staða"
                         },
-                        "introduction": "Home Assistant heldur bókhald utanum allar einingar sem verið greindar. Hver þessara eininga hafa einingar-auðkenni (ID) sem er frátekið bara fyrir þessa tilteknu einingu.",
+                        "introduction": "Third Eye heldur bókhald utanum allar einingar sem verið greindar. Hver þessara eininga hafa einingar-auðkenni (ID) sem er frátekið bara fyrir þessa tilteknu einingu.",
                         "remove_selected": {
                             "button": "Fjarlægja val",
                             "confirm_partly_title": "Einungis er hægt að fjarlægja {number} {number, plural,\n  one {valda einingu}\n  other {valdar einingar}\n}.",
@@ -1786,7 +1786,7 @@
                         }
                     }
                 },
-                "header": "Stilla af Home Assistant",
+                "header": "Stilla af Third Eye",
                 "helpers": {
                     "caption": "Hjálparar",
                     "dialog": {
@@ -1890,7 +1890,7 @@
                         "show": "Sýna"
                     },
                     "discovered": "Uppgötvað",
-                    "home_assistant_website": "Vefsíða Home Assistant",
+                    "home_assistant_website": "Vefsíða Third Eye",
                     "ignore": {
                         "ignore": "Hunsa",
                         "ignored": "Hunsað",
@@ -1904,7 +1904,7 @@
                     "note_about_integrations": "Það er ekki er hægt að stilla allar samþættingar í gegnum viðmótið ennþá.",
                     "search": "Leita í samþættingum"
                 },
-                "introduction": "Hér er mögulegt að stilla af íhluti og Home Assistant. Því miður er ekki hægt að breyta öllu í gegnum viðmótið ennþá, en við erum að vinna í því.",
+                "introduction": "Hér er mögulegt að stilla af íhluti og Third Eye. Því miður er ekki hægt að breyta öllu í gegnum viðmótið ennþá, en við erum að vinna í því.",
                 "logs": {
                     "clear": "Hreinsa",
                     "copy": "Afrita færslu",
@@ -2014,7 +2014,7 @@
                     "confirm_delete": "Ertu viss um að þú viljir eyða þessari persónu?",
                     "confirm_delete2": "Öll tæki sem tilheyra þessari persónu munu verða óúthlutuð.",
                     "create_person": "Stofna persónu",
-                    "description": "Stjórna persónum sem Home assistant er að rekja.",
+                    "description": "Stjórna persónum sem Third Eye er að rekja.",
                     "detail": {
                         "admin": "Kerfisstjóri",
                         "allow_login": "Leyfa persónu að skrá sig inn",
@@ -2031,7 +2031,7 @@
                         "new_person": "Ný persóna",
                         "update": "Uppfæra"
                     },
-                    "introduction": "Hér getur þú skilgreint þær persónur sem eiga að vera í Home Assistant.",
+                    "introduction": "Hér getur þú skilgreint þær persónur sem eiga að vera í Third Eye.",
                     "learn_more": "Frekari upplýsingar um fólk",
                     "no_persons_created_yet": "Það lítur út fyrir að þú hafir ekki búið til neina einstaklinga ennþá.",
                     "person_not_found_title": "Persóna fannst ekki"
@@ -2101,7 +2101,7 @@
                 },
                 "server_control": {
                     "caption": "Stjórnun þjóns",
-                    "description": "Endurræsa og stöðva Home Assistant þjóni",
+                    "description": "Endurræsa og stöðva Third Eye þjóni",
                     "section": {
                         "reloading": {
                             "automation": "Endurhlaða sjálfvirkni",
@@ -2110,7 +2110,7 @@
                             "group": "Endurhlaða hópa",
                             "heading": "Endurhleðsla stillinga",
                             "homekit": "Endurhlaða HomeKit",
-                            "introduction": "Sumir hlutar af Home Assistant er hægt að hlaða inn að nýju án þess að það krefjist endurræsingar. Með því að velja að endurhlaða þá mun sú aðgerð hlaða inn nýjum stillingum.",
+                            "introduction": "Sumir hlutar af Third Eye er hægt að hlaða inn að nýju án þess að það krefjist endurræsingar. Með því að velja að endurhlaða þá mun sú aðgerð hlaða inn nýjum stillingum.",
                             "person": "Fólk",
                             "reload": "{domain}",
                             "scene": "Endurhlaða senum",
@@ -2118,10 +2118,10 @@
                             "zone": "Svæði"
                         },
                         "server_management": {
-                            "confirm_restart": "Ertu viss um að þú viljir endurræsa Home Assistant?",
-                            "confirm_stop": "Ertu viss um að þú viljir stöðva Home Assistant?",
+                            "confirm_restart": "Ertu viss um að þú viljir endurræsa Third Eye?",
+                            "confirm_stop": "Ertu viss um að þú viljir stöðva Third Eye?",
                             "heading": "Stjórnun miðlara",
-                            "introduction": "Stjórna Home Assistant miðlara... frá Home Assistant.",
+                            "introduction": "Stjórna Third Eye miðlara... frá Third Eye.",
                             "restart": "Endurræsa",
                             "stop": "Stöðva"
                         },
@@ -2411,7 +2411,7 @@
                         "exclusion_failed": "Ekki tókst að fjarlægja hnútinn. Vinsamlegast athugaðu atburðaskrár fyrir frekari upplýsingar.",
                         "exclusion_finished": "Hnúturinn {id} hefur verið fjarlægður af Z-Wave netinu.",
                         "follow_device_instructions": "Fylgdu leiðbeiningunum sem fylgdu tækinu þínu til að kveikja á útilokun í tækinu.",
-                        "introduction": "Fjarlægðu hnút af Z-Wave netinu þínu og fjarlægðu tengd tæki og einingar úr Home Assistant.",
+                        "introduction": "Fjarlægðu hnút af Z-Wave netinu þínu og fjarlægðu tengd tæki og einingar úr Third Eye.",
                         "start_exclusion": "Hefja útilokun",
                         "title": "Fjarlægja Z-Wave hnút"
                     },
@@ -2450,7 +2450,7 @@
                         "call_service": "Kalla í þjónustu",
                         "column_description": "Lýsing",
                         "column_example": "Dæmi",
-                        "description": "Þjónustu þróunartólið leyfir þér að kalla í allar þjónustur sem eru tiltækar innan Home Assistant",
+                        "description": "Þjónustu þróunartólið leyfir þér að kalla í allar þjónustur sem eru tiltækar innan Third Eye",
                         "title": "Þjónustur"
                     },
                     "states": {
@@ -2864,7 +2864,7 @@
                     "save_config": {
                         "close": "Loka",
                         "header": "Taka yfir stjórn á Lovelace viðmótinu",
-                        "para": "Home Assistant mun sjálfgefið halda utan um notendaviðmótið og uppfæra það þegar nýjar einingar eða Lovlace íhlutir verða aðgengilegir. Ef þú tekur yfir stjórn á viðmótinu þá mun þetta ekki gerast sjálfkrafa fyrir þig.",
+                        "para": "Third Eye mun sjálfgefið halda utan um notendaviðmótið og uppfæra það þegar nýjar einingar eða Lovlace íhlutir verða aðgengilegir. Ef þú tekur yfir stjórn á viðmótinu þá mun þetta ekki gerast sjálfkrafa fyrir þig.",
                         "para_sure": "Ertu viss um að þú viljir taka yfir stjórn á notendaviðmótinu þínu?",
                         "save": "Taka stjórnina"
                     },
@@ -2914,7 +2914,7 @@
             },
             "page-authorize": {
                 "abort_intro": "Hætt var við innskráningu",
-                "authorizing_client": "Þú ert að fara að veita {clientId} aðgang að Home Assistant uppsetningunni.",
+                "authorizing_client": "Þú ert að fara að veita {clientId} aðgang að Third Eye uppsetningunni.",
                 "form": {
                     "error": "Villa: {error}",
                     "next": "Næsta",
@@ -3013,7 +3013,7 @@
                 "cards": {
                     "demo": {
                         "demo_by": "eftir {name}",
-                        "learn_more": "Læra meira um Home Assistant",
+                        "learn_more": "Læra meira um Third Eye",
                         "next_demo": "Næsta sýnidæmi"
                     }
                 },
@@ -3057,16 +3057,16 @@
                 "core-config": {
                     "button_detect": "Uppgötva",
                     "finish": "Næsta",
-                    "intro": "Hæ {name}, velkomin(n) í Home Assistant. Hvað á heimilið þitt að heita?",
+                    "intro": "Hæ {name}, velkomin(n) í Third Eye. Hvað á heimilið þitt að heita?",
                     "intro_location": "Okkur langar að vita hvar þú býrð. Þessar upplýsingar munu hjálpa varðandi upplýsingar og uppsetningu á sólar-tengdri sjálfvirkni. Þessum upplýsingum er aldrei deilt út fyrir þitt net.",
                     "intro_location_detect": "Við getum aðstoðað þig við að fylla út þessar upplýsingar með því að kalla einu sinni á utanaðkomandi þjónustu til að sækja þær.",
-                    "location_name": "Nafnið á Home Assistant uppsetningunni",
+                    "location_name": "Nafnið á Third Eye uppsetningunni",
                     "location_name_default": "Heima"
                 },
                 "finish": "Ljúka",
                 "integration": {
                     "finish": "Ljúka",
-                    "intro": "Tæki og þjónustur koma fram í Home Assistant sem samþættingar. Þú getur farið í uppsetningu á þeim núna eða síðar í gegnum stillingar skjáinn.",
+                    "intro": "Tæki og þjónustur koma fram í Third Eye sem samþættingar. Þú getur farið í uppsetningu á þeim núna eða síðar í gegnum stillingar skjáinn.",
                     "more_integrations": "Meira"
                 },
                 "intro": "Ertu tilbúinn að vekja heimilið þitt, endurheimta friðhelgi þína og gerast þáttakandi í  samfélagi grúskara á heimsvísu?",

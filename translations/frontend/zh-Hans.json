@@ -146,11 +146,11 @@
                         "title": "AppArmor"
                     },
                     "auth_api": {
-                        "description": "加载项可以通过 Home Assistant 验证用户身份，从而允许其用户通过 Home Assistant 的用户名和密码登录加载项内部的应用程序。此标识代表加载项是否请求此项功能。",
-                        "title": "Home Assistant 身份认证"
+                        "description": "加载项可以通过 Third Eye 验证用户身份，从而允许其用户通过 Third Eye 的用户名和密码登录加载项内部的应用程序。此标识代表加载项是否请求此项功能。",
+                        "title": "Third Eye 身份认证"
                     },
                     "docker_api": {
-                        "description": "加载项要求其有权访问并管理系统上运行的 Docker 实例。此模式为加载项提供了对整个 Home Assistant 系统的完全访问和控制权，这增加了安全风险，并且在使用不当时可能会损坏系统。因此，此功能会降低加载项的安全评分。 \n\n这种级别的访问权限不会自动授予，必须由您确认。为此，您需要手动禁用加载项的保护模式。请务必在了解、信任加载项来源并且确有需要时，才禁用保护模式。",
+                        "description": "加载项要求其有权访问并管理系统上运行的 Docker 实例。此模式为加载项提供了对整个 Third Eye 系统的完全访问和控制权，这增加了安全风险，并且在使用不当时可能会损坏系统。因此，此功能会降低加载项的安全评分。 \n\n这种级别的访问权限不会自动授予，必须由您确认。为此，您需要手动禁用加载项的保护模式。请务必在了解、信任加载项来源并且确有需要时，才禁用保护模式。",
                         "title": "完全 Docker 访问"
                     },
                     "full_access": {
@@ -158,23 +158,23 @@
                         "title": "完全硬件访问"
                     },
                     "hassio_api": {
-                        "description": "加载项要求其有权访问 Supervisor API。默认情况下，加载项只能访问系统的常规版本信息。如果加载项要求了“管理”或“超级管理”级别的 API 访问权限，就有权控制 Home Assistant 系统的多个部分。此标识代表加载项是否请求此项权限，此权限会降低加载项的安全评分。",
+                        "description": "加载项要求其有权访问 Supervisor API。默认情况下，加载项只能访问系统的常规版本信息。如果加载项要求了“管理”或“超级管理”级别的 API 访问权限，就有权控制 Third Eye 系统的多个部分。此标识代表加载项是否请求此项权限，此权限会降低加载项的安全评分。",
                         "title": "Supervisor API 访问"
                     },
                     "homeassistant_api": {
-                        "description": "此加载项可以直接通过 Home Assistant API 访问正在运行的 Home Assistant 实例。此模式还处理加载项的身份验证，使加载项无需再经过其他验证即可与 Home Assistant 进行交互。",
-                        "title": "Home Assistant API 访问"
+                        "description": "此加载项可以直接通过 Third Eye API 访问正在运行的 Third Eye 实例。此模式还处理加载项的身份验证，使加载项无需再经过其他验证即可与 Third Eye 进行交互。",
+                        "title": "Third Eye API 访问"
                     },
                     "host_network": {
                         "description": "加载项通常在各自隔离的网络层中运行，以阻止其访问宿主操作系统的网络。某些情况下，这种网络隔离会限制加载项的正常工作，因此加载项可以要求解除隔离，给予加载项完全的宿主网络访问权限。这为加载项提供了更多的网络功能，也增加了安全风险。因此，此功能会降低加载项的安全评分。",
                         "title": "宿主网络"
                     },
                     "host_pid": {
-                        "description": "通常情况下，加载项进程与其他系统进程是隔离的。加载项要求其有权访问在宿主系统上运行的系统进程，并且在宿主系统上生成进程。此模式为加载项提供了对整个 Home Assistant 系统的完全访问和控制权，这增加了安全风险，并且在使用不当时可能会损坏系统。因此，此功能会降低加载项的安全评分。 \n\n这种级别的访问权限不会自动授予，必须由您确认。为此，您需要手动禁用加载项的保护模式。请务必在了解、信任加载项来源并且确有需要时，才禁用保护模式。",
+                        "description": "通常情况下，加载项进程与其他系统进程是隔离的。加载项要求其有权访问在宿主系统上运行的系统进程，并且在宿主系统上生成进程。此模式为加载项提供了对整个 Third Eye 系统的完全访问和控制权，这增加了安全风险，并且在使用不当时可能会损坏系统。因此，此功能会降低加载项的安全评分。 \n\n这种级别的访问权限不会自动授予，必须由您确认。为此，您需要手动禁用加载项的保护模式。请务必在了解、信任加载项来源并且确有需要时，才禁用保护模式。",
                         "title": "宿主进程命名空间"
                     },
                     "ingress": {
-                        "description": "此加载项使用 Ingress 将其界面安全地嵌入 Home Assistant 中。",
+                        "description": "此加载项使用 Ingress 将其界面安全地嵌入 Third Eye 中。",
                         "title": "Ingress"
                     },
                     "label": {
@@ -192,7 +192,7 @@
                         "stage": "状态"
                     },
                     "rating": {
-                        "description": "Home Assistant 对每个加载项都进行了安全评分，以代表使用该加载项可能带来的风险。加载项请求的系统访问权限越高，安全风险就越高，安全评分就会越低。\n\n评分的范围从 1 到 6。1 为最低分（最不安全、最高风险），6 为最高分（最安全、最低风险）。",
+                        "description": "Third Eye 对每个加载项都进行了安全评分，以代表使用该加载项可能带来的风险。加载项请求的系统访问权限越高，安全风险就越高，安全评分就会越低。\n\n评分的范围从 1 到 6。1 为最低分（最不安全、最高风险），6 为最高分（最安全、最低风险）。",
                         "title": "加载项安全评分"
                     },
                     "role": {
@@ -217,7 +217,7 @@
                 "install": "安装",
                 "new_update_available": "{name} 有新版本 {version}",
                 "not_available_arch": "此加载项与设备的处理器或安装的操作系统不兼容。",
-                "not_available_version": "您正在运行 Home Assistant 版本 {core_version_installed}，要将加载项更新到此版本，至少需要 Home Assistant 版本 {core_version_needed}",
+                "not_available_version": "您正在运行 Third Eye 版本 {core_version_installed}，要将加载项更新到此版本，至少需要 Third Eye 版本 {core_version_needed}",
                 "open_web_ui": "打开 Web UI",
                 "option": {
                     "auto_update": {
@@ -358,7 +358,7 @@
         "dialog": {
             "datadisk_move": {
                 "cancel": "取消",
-                "description": "您正在使用“{current_path}”作为数据磁盘。迁移数据磁盘大约需要 {time} 分钟，设备将重新启动。在此期间，Home Assistant 将无法访问。迁移过程中请勿切断电源！",
+                "description": "您正在使用“{current_path}”作为数据磁盘。迁移数据磁盘大约需要 {time} 分钟，设备将重新启动。在此期间，Third Eye 将无法访问。迁移过程中请勿切断电源！",
                 "loading_devices": "正在加载设备",
                 "move": "迁移",
                 "moving": "正在迁移数据磁盘",
@@ -428,8 +428,8 @@
             "error_addon_not_found": "未找到加载项",
             "error_addon_not_installed": "请求的加载项尚未安装，请先安装",
             "error_addon_not_started": "请求的加载项未运行，请先运行",
-            "faq_link": "我的 Home Assistant 常见问题",
-            "not_supported": "您的 Home Assistant 不支持此重定向。请查阅{link}以获取受支持的重定向及其引入的版本。"
+            "faq_link": "我的 Third Eye 常见问题",
+            "not_supported": "您的 Third Eye 不支持此重定向。请查阅{link}以获取受支持的重定向及其引入的版本。"
         },
         "panel": {
             "addons": "加载项",
@@ -490,16 +490,16 @@
                 "failed_to_set_option": "设定 Supervisor 选项失败",
                 "failed_to_update": "更新 Supervisor 失败",
                 "join_beta_action": "加入测试频道",
-                "join_beta_description": "获取 Home Assistant(及其预览版)、Supervisor 和主机的测试版更新",
+                "join_beta_description": "获取 Third Eye(及其预览版)、Supervisor 和主机的测试版更新",
                 "leave_beta_action": "退出测试频道",
-                "leave_beta_description": "获取 Home Assistant、Supervisor 和主机的稳定版更新",
+                "leave_beta_description": "获取 Third Eye、Supervisor 和主机的稳定版更新",
                 "ram_usage": "Supervisor 内存使用率",
                 "reload_supervisor": "重载 Supervisor",
                 "search": "搜索",
                 "share_diagnostics": "共享诊断信息",
                 "share_diagnostics_description": "共享崩溃报告和诊断信息。",
-                "share_diagonstics_description": "您想要在 Supervisor 遇到异常错误时，共享崩溃报告和诊断信息吗？{line_break}这将帮助我们解决问题，此信息仅限 Home Assistant Core 团队访问，不会共享给他人。{line_break}此信息不包含私密、敏感信息，您可以随时在设置中将其禁用。",
-                "share_diagonstics_title": "帮助改进 Home Assistant",
+                "share_diagonstics_description": "您想要在 Supervisor 遇到异常错误时，共享崩溃报告和诊断信息吗？{line_break}这将帮助我们解决问题，此信息仅限 Third Eye Core 团队访问，不会共享给他人。{line_break}此信息不包含私密、敏感信息，您可以随时在设置中将其禁用。",
+                "share_diagonstics_title": "帮助改进 Third Eye",
                 "unhealthy_description": "运行状态不良的系统可能导致问题。以下是已发现的系统问题的列表，请点击链接以了解如何解决问题。",
                 "unhealthy_reason": {
                     "docker": "Docker 环境无法正常工作",
@@ -534,7 +534,7 @@
             }
         },
         "update_available": {
-            "core_note": "如果 Home Assistant 在更新后无法启动，Supervisor 将回滚到版本 {version}。",
+            "core_note": "如果 Third Eye 在更新后无法启动，Supervisor 将回滚到版本 {version}。",
             "create_backup": "在更新前创建备份",
             "creating_backup": "正在为 {name} 创建备份",
             "description": "当前版本 {version}。点击“更新”可更新至版本 {newest_version}。",
@@ -1026,11 +1026,11 @@
         },
         "dialogs": {
             "config_entry_system_options": {
-                "enable_new_entities_description": "是否将 {integration} 新发现的实体自动添加到 Home Assistant。",
+                "enable_new_entities_description": "是否将 {integration} 新发现的实体自动添加到 Third Eye。",
                 "enable_new_entities_label": "启用新添加的实体。",
-                "enable_polling_description": "是否让 Home Assistant 轮询 {integration} 的实体，以便更新其状态。",
+                "enable_polling_description": "是否让 Third Eye 轮询 {integration} 的实体，以便更新其状态。",
                 "enable_polling_label": "启用轮询刷新。",
-                "restart_home_assistant": "需要重新启动 Home Assistant 才能使更改生效。",
+                "restart_home_assistant": "需要重新启动 Third Eye 才能使更改生效。",
                 "title": "{integration} 系统选项",
                 "update": "更新"
             },
@@ -1065,10 +1065,10 @@
                     },
                     "device_disabled": "该实体的设备已禁用。",
                     "enabled_cause": "由于 {cause} 而被禁用",
-                    "enabled_delay_confirm": "已启用的实体将在 {delay} 秒后添加到 Home Assistant",
-                    "enabled_description": "已禁用的实体不再添加到 Home Assistant。",
+                    "enabled_delay_confirm": "已启用的实体将在 {delay} 秒后添加到 Third Eye",
+                    "enabled_description": "已禁用的实体不再添加到 Third Eye。",
                     "enabled_label": "启用实体",
-                    "enabled_restart_confirm": "重启 Home Assistant 以完成实体的启用",
+                    "enabled_restart_confirm": "重启 Third Eye 以完成实体的启用",
                     "entity_id": "实体 ID",
                     "follow_device_area": "跟随设备区域",
                     "icon": "图标",
@@ -1096,7 +1096,7 @@
                     "initial": "初始值",
                     "maximum": "最大值",
                     "minimum": "最小值",
-                    "restore": "当 Home Assistant 启动时，还原为最近一次的值",
+                    "restore": "当 Third Eye 启动时，还原为最近一次的值",
                     "step": "步长"
                 },
                 "generic": {
@@ -1295,7 +1295,7 @@
                 "title": "快捷搜索"
             },
             "voice_command": {
-                "did_not_hear": "Home Assistant 什么也没有听到",
+                "did_not_hear": "Third Eye 什么也没有听到",
                 "error": "糟糕，发生错误",
                 "found": "为您找到以下结果：",
                 "how_can_i_help": "请问需要什么帮助？",
@@ -1398,8 +1398,8 @@
             "dismiss": "关闭",
             "integration_starting": "正在启动 {integration}。在启动完成前，部分功能暂不可用。",
             "service_call_failed": "调用服务 {service} 失败。",
-            "started": "Home Assistant 已启动！",
-            "starting": "Home Assistant 正在启动。在启动完成前，部分功能暂不可用。",
+            "started": "Third Eye 已启动！",
+            "starting": "Third Eye 正在启动。在启动完成前，部分功能暂不可用。",
             "triggered": "已触发 {name}",
             "wrapping_up_startup": "启动即将完成。完成后即可使用全部功能。"
         },
@@ -1440,7 +1440,7 @@
                         "create_area": "创建区域",
                         "header": "区域注册表",
                         "integrations_page": "集成页面",
-                        "introduction": "区域用于组织设备所在的位置。此信息将用于 Home Assistant 的各个地方，以帮助您组织界面、权限和与其他系统的集成。",
+                        "introduction": "区域用于组织设备所在的位置。此信息将用于 Third Eye 的各个地方，以帮助您组织界面、权限和与其他系统的集成。",
                         "introduction2": "要将设备置入某个区域，请使用下面的链接转到集成页面，然后点击一个已配置的集成以进入设备卡片。",
                         "no_areas": "您还没有建立区域。"
                     },
@@ -1471,7 +1471,7 @@
                             "delete_confirm": "确认删除？",
                             "duplicate": "复制",
                             "header": "动作",
-                            "introduction": "“动作”是当自动化条件满足时 Home Assistant 执行的操作。",
+                            "introduction": "“动作”是当自动化条件满足时 Third Eye 执行的操作。",
                             "learn_more": "详细了解动作",
                             "name": "执行",
                             "type": {
@@ -1677,7 +1677,7 @@
                             "edit_id": "编辑触发条件 ID",
                             "header": "触发条件",
                             "id": "触发条件 ID",
-                            "introduction": "“触发条件”是整个自动化流程的起点。一个自动化规则中可以设置多个触发条件。一旦该条件满足，Home Assistant 将验证“环境条件”是否符合，如果符合，则执行“动作”。",
+                            "introduction": "“触发条件”是整个自动化流程的起点。一个自动化规则中可以设置多个触发条件。一旦该条件满足，Third Eye 将验证“环境条件”是否符合，如果符合，则执行“动作”。",
                             "learn_more": "详细了解触发条件",
                             "name": "触发条件",
                             "type": {
@@ -1709,7 +1709,7 @@
                                 },
                                 "homeassistant": {
                                     "event": "事件：",
-                                    "label": "Home Assistant",
+                                    "label": "Third Eye",
                                     "shutdown": "关闭",
                                     "start": "启动"
                                 },
@@ -1807,7 +1807,7 @@
                             "error_unsupported": "目前无法创建这样的自动化。",
                             "for_example": "例如：",
                             "header": "创建新的自动化",
-                            "introduction": "请在下方输入这个自动化要实现什么功能，Home Assistant 会尝试将其转换为自动化。",
+                            "introduction": "请在下方输入这个自动化要实现什么功能，Third Eye 会尝试将其转换为自动化。",
                             "language_note": "注意：目前只支持英文。"
                         }
                     },
@@ -1869,10 +1869,10 @@
                             "config_documentation": "配置文档",
                             "disable": "禁用",
                             "enable": "启用",
-                            "enable_ha_skill": "为 Alexa 启用Home Assistant技能",
+                            "enable_ha_skill": "为 Alexa 启用Third Eye技能",
                             "enable_state_reporting": "启用状态报告",
-                            "info": "借助用于Home Assistant Cloud的Alexa集成，您将能够通过任何支持Alexa的设备控制所有Home Assistant设备。",
-                            "info_state_reporting": "如果启用状态报告，Home Assistant将向 Amazon 发送所有公开实体的状态更改。这允许您始终查看 Alexa 应用中的最新状态，并使用状态更改创建例程。",
+                            "info": "借助用于Third Eye Cloud的Alexa集成，您将能够通过任何支持Alexa的设备控制所有Third Eye设备。",
+                            "info_state_reporting": "如果启用状态报告，Third Eye将向 Amazon 发送所有公开实体的状态更改。这允许您始终查看 Alexa 应用中的最新状态，并使用状态更改创建例程。",
                             "manage_entities": "管理实体：",
                             "state_reporting_error": "无法{enable_disable}状态报告。",
                             "sync_entities": "同步实体到 Amazon",
@@ -1886,15 +1886,15 @@
                         "google": {
                             "config_documentation": "配置文档",
                             "devices_pin": "安全设备 PIN 码",
-                            "enable_ha_skill": "为 Google Assistant 激活 Home Assistant 技能",
+                            "enable_ha_skill": "为 Google Assistant 激活 Third Eye 技能",
                             "enable_state_reporting": "启用状态报告",
                             "enter_pin_error": "无法存储pin：",
                             "enter_pin_hint": "输入 PIN 码以使用安全设备",
                             "enter_pin_info": "请输入一个 PIN 码以和安全设备交互。安全设备就是门、车库开门器和锁之类的物品。通过 Google Assistant 与此类设备互动时，会要求您说出或输入此 PIN 码。",
-                            "info": "通过 Home Assistant Cloud 的 Google Assistant 集成，您将可以通过任何启用了 Google Assistant 的设备来控制所有 Home Assistant 设备。",
-                            "info_state_reporting": "如果启用状态报告，则 Home Assistant 会将公开实体的所有状态变化发送给 Google。这样您就可以始终在 Google 应用中看到最新状态。",
+                            "info": "通过 Third Eye Cloud 的 Google Assistant 集成，您将可以通过任何启用了 Google Assistant 的设备来控制所有 Third Eye 设备。",
+                            "info_state_reporting": "如果启用状态报告，则 Third Eye 会将公开实体的所有状态变化发送给 Google。这样您就可以始终在 Google 应用中看到最新状态。",
                             "manage_entities": "管理实体",
-                            "not_configured_text": "在使用 Google Assistant 之前，需要在 Google Home 应用中激活 Google Assistant 的 Home Assistant Cloud 技能。",
+                            "not_configured_text": "在使用 Google Assistant 之前，需要在 Google Home 应用中激活 Google Assistant 的 Third Eye Cloud 技能。",
                             "not_configured_title": "Google Assistant 未激活",
                             "security_devices": "安全设备",
                             "sync_entities": "同步实体到 Google",
@@ -1902,7 +1902,7 @@
                             "title": "Google Assistant"
                         },
                         "integrations": "集成",
-                        "integrations_introduction": "Home Assistant Cloud 的集成使您可以连接云中的服务，而不必在 Internet 上公开 Home Assistant 实例。",
+                        "integrations_introduction": "Third Eye Cloud 的集成使您可以连接云中的服务，而不必在 Internet 上公开 Third Eye 实例。",
                         "integrations_introduction2": "浏览网站以查找",
                         "integrations_link_all_features": "所有可用功能",
                         "manage_account": "管理帐户",
@@ -1912,7 +1912,7 @@
                             "access_is_being_prepared": "正在准备远程访问。准备就绪后，我们会通知您。",
                             "certificate_info": "证书信息",
                             "connected": "已连接",
-                            "info": "Home Assistant Cloud可以在您不在家时为您的实例提供安全的远程连接。",
+                            "info": "Third Eye Cloud可以在您不在家时为您的实例提供安全的远程连接。",
                             "instance_is_available": "您的实例在以下位置可用",
                             "instance_will_be_available": "您的实例将在以下位置可用",
                             "link_learn_how_it_works": "了解其工作原理",
@@ -1920,12 +1920,12 @@
                             "reconnecting": "未连接，正在重新连接。",
                             "remote_enabled": {
                                 "caption": "自动连接",
-                                "description": "要使 Home Assistant 始终可以远程访问，请启用此选项。"
+                                "description": "要使 Third Eye 始终可以远程访问，请启用此选项。"
                             },
                             "title": "远程控制"
                         },
                         "sign_out": "退出",
-                        "thank_you_note": "感谢您加入 Home Assistant Cloud。正是因为像您这样的人，我们才得以为每个人带来出色的智能家居体验。谢谢！",
+                        "thank_you_note": "感谢您加入 Third Eye Cloud。正是因为像您这样的人，我们才得以为每个人带来出色的智能家居体验。谢谢！",
                         "tts": {
                             "default_language": "默认使用语言",
                             "dialog": {
@@ -2020,11 +2020,11 @@
                         "email": "电子邮箱",
                         "email_error_msg": "电子邮件无效",
                         "forgot_password": "忘记密码？",
-                        "introduction": "当您不在家时，Home Assistant Cloud 供您安全地远程连接到您的实例。它还允许您连接仅限云端的服务：Amazon Alexa 和 Google Assistant。",
+                        "introduction": "当您不在家时，Third Eye Cloud 供您安全地远程连接到您的实例。它还允许您连接仅限云端的服务：Amazon Alexa 和 Google Assistant。",
                         "introduction2": "此服务由我们的合作伙伴运行",
-                        "introduction2a": "，由 Home Assistant 的创始人创立的公司。",
-                        "introduction3": "Home Assistant Cloud 是一项订阅服务，提供一个月免费试用。无需提供付款信息。",
-                        "learn_more_link": "详细了解 Home Assistant Cloud",
+                        "introduction2a": "，由 Third Eye 的创始人创立的公司。",
+                        "introduction3": "Third Eye Cloud 是一项订阅服务，提供一个月免费试用。无需提供付款信息。",
+                        "learn_more_link": "详细了解 Third Eye Cloud",
                         "password": "密码",
                         "password_error_msg": "密码至少为 8 个字符",
                         "sign_in": "登录",
@@ -2039,13 +2039,13 @@
                         "email_error_msg": "电子邮件无效",
                         "feature_amazon_alexa": "接入 Amazon Alexa",
                         "feature_google_home": "接入 Google Assistant",
-                        "feature_remote_control": "出门在外也可控制 Home Assistant",
+                        "feature_remote_control": "出门在外也可控制 Third Eye",
                         "feature_webhook_apps": "轻松接入基于 Webhook 的应用程序（如 OwnTracks）",
                         "headline": "开始免费试用",
-                        "information": "创建一个帐户以开始 Home Assistant Cloud 的一个月免费试用。无需提供付款信息。",
-                        "information2": "试用版将为您提供 Home Assistant Cloud 的所有权益，包括：",
+                        "information": "创建一个帐户以开始 Third Eye Cloud 的一个月免费试用。无需提供付款信息。",
+                        "information2": "试用版将为您提供 Third Eye Cloud 的所有权益，包括：",
                         "information3": "此服务由我们的合作伙伴运行",
-                        "information3a": "，由 Home Assistant 的创始人创立的公司。",
+                        "information3a": "，由 Third Eye 的创始人创立的公司。",
                         "information4": "注册帐户即表示您同意以下条款和条件。",
                         "link_privacy_policy": "隐私政策",
                         "link_terms_conditions": "条款和条件",
@@ -2077,7 +2077,7 @@
                                 "imperial_example": "华氏、磅",
                                 "internal_url": "内部 URL",
                                 "latitude": "纬度",
-                                "location_name": "Home Assistant 安装的名称",
+                                "location_name": "Third Eye 安装的名称",
                                 "longitude": "经度",
                                 "metric_example": "摄氏、千克",
                                 "save_button": "保存",
@@ -2138,7 +2138,7 @@
                         "title": "能源"
                     },
                     "people": {
-                        "description": "管理 Home Assistant 跟踪的人员和地点",
+                        "description": "管理 Third Eye 跟踪的人员和地点",
                         "title": "人员与地点"
                     },
                     "settings": {
@@ -2208,7 +2208,7 @@
                     "download_diagnostics": "下载诊断信息",
                     "edit_settings": "编辑设置",
                     "enabled_cause": "设备已通过{cause}禁用。",
-                    "enabled_description": "禁用的设备将不会显示，并且属于该设备的实体也将被禁用并且不会添加到 Home Assistant。",
+                    "enabled_description": "禁用的设备将不会显示，并且属于该设备的实体也将被禁用并且不会添加到 Third Eye。",
                     "enabled_label": "启用设备",
                     "entities": {
                         "add_entities_lovelace": "添加到 Lovelace",
@@ -2282,7 +2282,7 @@
                         },
                         "learn_more": "进一步了解如何开始使用。",
                         "selected_stat": "能耗监测:",
-                        "sub": "通过监测单个设备的能耗，Home Assistant 可以将能源使用情况细化到每个设备。",
+                        "sub": "通过监测单个设备的能耗，Third Eye 可以将能源使用情况细化到每个设备。",
                         "title": "单个设备"
                     },
                     "gas": {
@@ -2293,7 +2293,7 @@
                             "cost_number": "使用固定价格",
                             "cost_number_input": "每 {unit} 价格",
                             "cost_number_suffix": "{currency}/m³",
-                            "cost_para": "选择 Home Assistant 如何监测消耗燃气的费用。",
+                            "cost_para": "选择 Third Eye 如何监测消耗燃气的费用。",
                             "cost_stat": "使用监测总费用的实体",
                             "cost_stat_input": "监测总燃气费的实体",
                             "energy_stat": "燃气用量 (m³)",
@@ -2305,7 +2305,7 @@
                         },
                         "gas_consumption": "耗气量",
                         "learn_more": "进一步了解如何开始使用。",
-                        "sub": "让 Home Assistant 监控您的燃气使用情况。",
+                        "sub": "让 Third Eye 监控您的燃气使用情况。",
                         "title": "燃气消耗"
                     },
                     "grid": {
@@ -2319,7 +2319,7 @@
                                 "cost_number": "使用固定价格",
                                 "cost_number_input": "每度电价格",
                                 "cost_number_suffix": "{currency}/度",
-                                "cost_para": "选择 Home Assistant 如何监测消耗电能的费用。",
+                                "cost_para": "选择 Third Eye 如何监测消耗电能的费用。",
                                 "cost_stat": "使用监测总费用的实体",
                                 "cost_stat_input": "监测总费用的实体",
                                 "energy_stat": "消耗电能（度）",
@@ -2346,7 +2346,7 @@
                         "grid_consumption": "用电量",
                         "learn_more": "进一步了解如何开始使用。",
                         "return_to_grid": "发电量",
-                        "sub": "配置从电网消耗的电量，以及自发电用户返还给电力公司的电量，以便 Home Assistant 可以监测您的全屋能源使用情况。",
+                        "sub": "配置从电网消耗的电量，以及自发电用户返还给电力公司的电量，以便 Third Eye 可以监测您的全屋能源使用情况。",
                         "title": "电力公司"
                     },
                     "new_device_info": "设置新的设备后，新数据最长需要 2 小时才能同步到能源仪表盘。",
@@ -2366,7 +2366,7 @@
                         "stat_predicted_production": "光伏发电产能预测",
                         "stat_production": "光伏发电产出",
                         "stat_return_to_grid": "返还给电力公司的电能",
-                        "sub": "让 Home Assistant 监控您的太阳能板，并向您展示其性能。",
+                        "sub": "让 Third Eye 监控您的太阳能板，并向您展示其性能。",
                         "title": "光伏发电"
                     },
                     "validation": {
@@ -2432,12 +2432,12 @@
                     "picker": {
                         "disable_selected": {
                             "button": "禁用所选实体",
-                            "confirm_text": "已禁用的实体不再添加到 Home Assistant。",
+                            "confirm_text": "已禁用的实体不再添加到 Third Eye。",
                             "confirm_title": "您要禁用这 {number} 个实体吗？"
                         },
                         "enable_selected": {
                             "button": "启用所选实体",
-                            "confirm_text": "如果它们正在被禁用，这将使它们在 Home Assistant 重新可用。",
+                            "confirm_text": "如果它们正在被禁用，这将使它们在 Third Eye 重新可用。",
                             "confirm_title": "您要启用这 {number} 个实体吗？"
                         },
                         "filter": {
@@ -2457,11 +2457,11 @@
                             "name": "名称",
                             "status": "状态"
                         },
-                        "introduction": "Home Assistant 将会以唯一标识的形式记录发现的每个实体。这些实体被各自分配一个实体 ID，仅保留给对应实体。",
-                        "introduction2": "使用本实体注册工具重写名称，修改实体 ID 或者从 Home Assistant 删除实体。注意，删除实体注册信息并不会删除实体本身。如果要删除实体，请点击下面的链接进入集成页面进行操作。",
+                        "introduction": "Third Eye 将会以唯一标识的形式记录发现的每个实体。这些实体被各自分配一个实体 ID，仅保留给对应实体。",
+                        "introduction2": "使用本实体注册工具重写名称，修改实体 ID 或者从 Third Eye 删除实体。注意，删除实体注册信息并不会删除实体本身。如果要删除实体，请点击下面的链接进入集成页面进行操作。",
                         "remove_selected": {
                             "button": "删除所选实体",
-                            "confirm_partly_text": "在所选的 {selected} 个实体中有 {removable} 个可被删除。实体可被删除的条件是集成不再提供它们。有时，即使集成已删除，也必须先重新启动 Home Assistant 才能删除它们的实体。您确定要删除实体吗？",
+                            "confirm_partly_text": "在所选的 {selected} 个实体中有 {removable} 个可被删除。实体可被删除的条件是集成不再提供它们。有时，即使集成已删除，也必须先重新启动 Third Eye 才能删除它们的实体。您确定要删除实体吗？",
                             "confirm_partly_title": "所选实体中只有 {number} 个可被删除。",
                             "confirm_text": "如果 Lovelace 配置和自动化中包含这些实体，请将它们一并删除。",
                             "confirm_title": "您要删除这 {number} 个实体吗？"
@@ -2477,7 +2477,7 @@
                         }
                     }
                 },
-                "header": "配置 Home Assistant",
+                "header": "配置 Third Eye",
                 "helpers": {
                     "caption": "辅助元素",
                     "description": "辅助构建自动化的元素",
@@ -2514,12 +2514,12 @@
                     "copy_menu": "复制菜单",
                     "copy_raw": "原始文本",
                     "custom_uis": "自定义用户界面：",
-                    "description": "Home Assistant 的版本号、系统状态和各类文档的链接",
+                    "description": "Third Eye 的版本号、系统状态和各类文档的链接",
                     "developed_by": "由一帮很 Awesome~~~ 的人开发。",
                     "documentation": "文档",
                     "frontend": "前端用户界面",
                     "frontend_version": "前端版本： {version} - {type}",
-                    "home_assistant_logo": "Home Assistant logo",
+                    "home_assistant_logo": "Third Eye logo",
                     "icons_by": "图标来自",
                     "integrations": "集成",
                     "issues": "问题",
@@ -2558,11 +2558,11 @@
                             "disabled_cause": "通过{cause}禁用"
                         },
                         "disable_error": "启用/禁用集成失败",
-                        "disable_restart_confirm": "重启 Home Assistant 以完成此集成的禁用",
+                        "disable_restart_confirm": "重启 Third Eye 以完成此集成的禁用",
                         "disabled_polling": "自动轮询刷新数据已禁用",
                         "documentation": "文档",
                         "download_diagnostics": "下载诊断信息",
-                        "enable_restart_confirm": "重启 Home Assistant 以完成此集成的启用",
+                        "enable_restart_confirm": "重启 Third Eye 以完成此集成的启用",
                         "entities": "{count} {count, plural,\n  one {个实体}\n  other {个实体}\n}",
                         "entity_unavailable": "实体不可用",
                         "firmware": "固件：{version}",
@@ -2576,9 +2576,9 @@
                         "provided_by_custom_integration": "由自定义集成提供",
                         "reload": "重载",
                         "reload_confirm": "集成已重新加载",
-                        "reload_restart_confirm": "重启 Home Assistant 以完成此集成的重载",
+                        "reload_restart_confirm": "重启 Third Eye 以完成此集成的重载",
                         "rename": "重命名",
-                        "restart_confirm": "重启 Home Assistant 以完成此集成的删除",
+                        "restart_confirm": "重启 Third Eye 以完成此集成的删除",
                         "services": "{count} {count, plural,\n  one {个服务}\n  other {个服务}\n}",
                         "state": {
                             "failed_unload": "卸载失败",
@@ -2613,7 +2613,7 @@
                         },
                         "next": "下一步",
                         "not_all_required_fields": "请填写所有必填字段",
-                        "not_loaded": "集成未能加载，请尝试重启 Home Assistant。",
+                        "not_loaded": "集成未能加载，请尝试重启 Third Eye。",
                         "pick_flow_step": {
                             "new_flow": "否，设置另一个 {integration} 实例",
                             "title": "已发现以下集成，要设置它们吗？"
@@ -2631,7 +2631,7 @@
                         "show_disabled": "显示禁用的集成"
                     },
                     "discovered": "已发现",
-                    "home_assistant_website": "Home Assistant 网站",
+                    "home_assistant_website": "Third Eye 网站",
                     "ignore": {
                         "confirm_delete_ignore": "这将使集成在被发现时再次出现在已发现集成中。这可能需要重新启动或等待一段时间。",
                         "confirm_delete_ignore_title": "不再忽略 {name} 吗？",
@@ -2656,13 +2656,13 @@
                     "rename_input_label": "条目名称",
                     "search": "搜索集成"
                 },
-                "introduction": "您可以在此配置 Home Assistant 及组件。目前并非所有配置都能通过前端 UI 完成，但是我们在努力实现中。",
+                "introduction": "您可以在此配置 Third Eye 及组件。目前并非所有配置都能通过前端 UI 完成，但是我们在努力实现中。",
                 "logs": {
                     "caption": "日志",
                     "clear": "清除",
                     "copy": "复制日志条目",
                     "custom_integration": "自定义集成",
-                    "description": "查看 Home Assistant 日志",
+                    "description": "查看 Third Eye 日志",
                     "details": "日志详细信息（ {level} ）",
                     "error_from_custom_integration": "此错误来自自定义集成。",
                     "level": {
@@ -2672,7 +2672,7 @@
                         "info": "INFO",
                         "warning": "WARNING"
                     },
-                    "load_full_log": "加载完整 Home Assistant 日志",
+                    "load_full_log": "加载完整 Third Eye 日志",
                     "loading_log": "正在加载错误日志...",
                     "multiple_messages": "消息首次出现在 {time}，显示了 {counter} 次",
                     "no_errors": "未报告任何错误",
@@ -2877,7 +2877,7 @@
                     "select_instance": {
                         "header": "选择一个 OpenZWave 实例",
                         "introduction": "有多个 OpenZWave 实例正在运行。您要管理哪个实例？",
-                        "none_found": "无法找到 OpenZWave 实例。如有疑问，请检查 OpenZWave 和 MQTT 设置，确保 Home Assistant 可以与 MQTT broker 通信。"
+                        "none_found": "无法找到 OpenZWave 实例。如有疑问，请检查 OpenZWave 和 MQTT 设置，确保 Third Eye 可以与 MQTT broker 通信。"
                     },
                     "services": {
                         "add_node": "添加节点",
@@ -2891,7 +2891,7 @@
                     "confirm_delete": "您确定要删除此人员吗？",
                     "confirm_delete2": "属于此人的所有设备都将被取消分配。",
                     "create_person": "创建人员",
-                    "description": "管理 Home Assistant 跟踪的人员",
+                    "description": "管理 Third Eye 跟踪的人员",
                     "detail": {
                         "admin": "管理员",
                         "allow_login": "允许此人登录",
@@ -2911,7 +2911,7 @@
                         "no_device_tracker_available_intro": "当您拥有检测人体存在的设备时，可以在此处将其分配给某人。您可以通过从集成页面添加存在检测集成来添加第一台设备。",
                         "update": "更新"
                     },
-                    "introduction": "您可以在这里定义 Home Assistant 中关注的每个人员。",
+                    "introduction": "您可以在这里定义 Third Eye 中关注的每个人员。",
                     "learn_more": "详细了解人员",
                     "no_persons_created_yet": "您还没有创建人员。",
                     "note_about_persons_configured_in_yaml": "注意：通过 configuration.yaml 配置的人员不能通过 UI 编辑。",
@@ -3019,7 +3019,7 @@
                 },
                 "server_control": {
                     "caption": "服务控制",
-                    "description": "检查配置后重启 Home Assistant 服务",
+                    "description": "检查配置后重启 Third Eye 服务",
                     "section": {
                         "reloading": {
                             "automation": "自动化",
@@ -3039,7 +3039,7 @@
                             "input_number": "辅助数值输入器",
                             "input_select": "辅助选择器",
                             "input_text": "文字输入",
-                            "introduction": "Home Assistant 中的部分配置可以直接重载，而无需重启服务。点击下方的选项将重新载入对应功能的配置。",
+                            "introduction": "Third Eye 中的部分配置可以直接重载，而无需重启服务。点击下方的选项将重新载入对应功能的配置。",
                             "min_max": "最小值/最大值实体",
                             "mqtt": "手动配置的 MQTT 实体",
                             "person": "人员",
@@ -3060,10 +3060,10 @@
                             "zone": "地点"
                         },
                         "server_management": {
-                            "confirm_restart": "您确定要重新启动 Home Assistant 吗？",
-                            "confirm_stop": "您确定要停止 Home Assistant 吗？",
+                            "confirm_restart": "您确定要重新启动 Third Eye 吗？",
+                            "confirm_stop": "您确定要停止 Third Eye 吗？",
                             "heading": "服务管理",
-                            "introduction": "在这里即可控制 Home Assistant 服务。",
+                            "introduction": "在这里即可控制 Third Eye 服务。",
                             "restart": "重新启动",
                             "stop": "停止服务"
                         },
@@ -3338,7 +3338,7 @@
                         "add_to_group": "添加到群组",
                         "entities": "该节点的实体",
                         "entity_info": "实体信息",
-                        "exclude_entity": "从 Home Assistant 中排除该实体",
+                        "exclude_entity": "从 Third Eye 中排除该实体",
                         "group": "群组",
                         "header": "Z-Wave 节点管理",
                         "introduction": "运行影响单个设备的 Z-Wave 命令。选择节点以查看可用命令列表。",
@@ -3534,7 +3534,7 @@
                         "unknown": "未知"
                     },
                     "provisioned": {
-                        "confirm_unprovision_text": "解除设备的预配置状态后，设备开机后不会再自动添加到 Home Assistant。如果它已经添加到 Home Assistant，此操作不会将其从 Home Assistant 中删除。",
+                        "confirm_unprovision_text": "解除设备的预配置状态后，设备开机后不会再自动添加到 Third Eye。如果它已经添加到 Third Eye，此操作不会将其从 Third Eye 中删除。",
                         "confirm_unprovision_title": "您确定要解除设备的预配置状态吗？",
                         "dsk": "DSK",
                         "included": "已包含",
@@ -3566,7 +3566,7 @@
                         "exclusion_failed": "无法删除该设备。请查看日志以了解更多信息。",
                         "exclusion_finished": "设备 {id} 已从 Z-Wave 网络中删除。",
                         "follow_device_instructions": "请按照设备说明书，触发设备的 exclusion。",
-                        "introduction": "从 Z-Wave 网络中删除设备，并从 Home Assistant 中删除关联的设备和实体。",
+                        "introduction": "从 Z-Wave 网络中删除设备，并从 Third Eye 中删除关联的设备和实体。",
                         "start_exclusion": "开始 exclusion",
                         "title": "删除 Z-Wave 设备"
                     },
@@ -3595,7 +3595,7 @@
             },
             "custom": {
                 "external_panel": {
-                    "complete_access": "它将有权访问 Home Assistant 中的所有数据。",
+                    "complete_access": "它将有权访问 Third Eye 中的所有数据。",
                     "hide_message": "查看有关 panel_custom 的文档以隐藏此消息",
                     "question_trust": "您是否信任 {link} 处的外部面板 {name}？"
                 }
@@ -3628,7 +3628,7 @@
                         "column_description": "描述",
                         "column_example": "示例",
                         "column_parameter": "参数",
-                        "description": "服务开发工具可让您调用 Home Assistant 中任何可用的服务。",
+                        "description": "服务开发工具可让您调用 Third Eye 中任何可用的服务。",
                         "fill_example_data": "填写示例数据",
                         "no_template_ui_support": "UI 不支持模板，请使用 YAML 编辑器。",
                         "title": "服务",
@@ -3641,7 +3641,7 @@
                         "attributes": "属性",
                         "copy_id": "将 ID 复制到剪贴板",
                         "current_entities": "现有实体",
-                        "description1": "此处可设置实体在 Home Assistant 中的状态。",
+                        "description1": "此处可设置实体在 Third Eye 中的状态。",
                         "description2": "此操作只会改变实体在系统中显示的状态，而不会改变实际设备的状态。",
                         "entity": "实体",
                         "filter_attributes": "输入筛选属性",
@@ -3683,7 +3683,7 @@
                     },
                     "templates": {
                         "all_listeners": "此模板监听所有的状态改变事件。",
-                        "description": "模板使用 jinja2 模板引擎和一些 Home Assistant 特定的插件进行渲染。",
+                        "description": "模板使用 jinja2 模板引擎和一些 Third Eye 特定的插件进行渲染。",
                         "domain": "域",
                         "editor": "模板编辑器",
                         "entity": "实体",
@@ -3692,7 +3692,7 @@
                         "no_listeners": "此模板不监听任何状态改变事件，并且不会自动更新。",
                         "reset": "重置为演示模板",
                         "result_type": "结果类型",
-                        "template_extensions": "Home Assistant 模板插件",
+                        "template_extensions": "Third Eye 模板插件",
                         "time": "此模板在每分钟初更新。",
                         "title": "模板",
                         "unknown_error_template": "渲染模板时发生了未知错误"
@@ -3801,7 +3801,7 @@
                         "never_triggered": "从未触发"
                     },
                     "iframe": {
-                        "error_secure_context": "无法加载 iframe，因为其指向的网站使用 {target_protocol}，而 Home Assistant 正通过 {context_protocol} 提供服务。"
+                        "error_secure_context": "无法加载 iframe，因为其指向的网站使用 {target_protocol}，而 Third Eye 正通过 {context_protocol} 提供服务。"
                     },
                     "map": {
                         "reset_focus": "重置焦点"
@@ -3816,7 +3816,7 @@
                         "url": "打开窗口前往 {url_path}"
                     },
                     "safe-mode": {
-                        "description": "Home Assistant 在加载配置时遇到问题，现正以安全模式运行。请查看错误日志以排查问题。",
+                        "description": "Third Eye 在加载配置时遇到问题，现正以安全模式运行。请查看错误日志以排查问题。",
                         "header": "安全模式已开启"
                     },
                     "shopping-list": {
@@ -3828,7 +3828,7 @@
                     },
                     "show_more_info": "显示更多信息",
                     "starting": {
-                        "description": "Home Assistant 正在启动，请稍候。"
+                        "description": "Third Eye 正在启动，请稍候。"
                     }
                 },
                 "changed_toast": {
@@ -4012,7 +4012,7 @@
                             "name": "加湿器"
                         },
                         "iframe": {
-                            "description": "“网页”卡片供您将喜欢的网页直接嵌入 Home Assistant 中。",
+                            "description": "“网页”卡片供您将喜欢的网页直接嵌入 Third Eye 中。",
                             "name": "网页"
                         },
                         "light": {
@@ -4195,7 +4195,7 @@
                     "migrate": {
                         "header": "配置不兼容",
                         "migrate": "迁移配置",
-                        "para_migrate": "通过点击“迁移配置”按钮，Home Assistant 可以自动为您的所有卡片和视图添加 ID。",
+                        "para_migrate": "通过点击“迁移配置”按钮，Third Eye 可以自动为您的所有卡片和视图添加 ID。",
                         "para_no_id": "此元素没有 ID。请在 'ui-lovelace.yaml' 中为此元素添加 ID。"
                     },
                     "move_card": {
@@ -4222,7 +4222,7 @@
                         "close": "关闭",
                         "empty_config": "从空白仪表盘开始",
                         "header": "自行编辑您的 Lovelace UI",
-                        "para": "该仪表盘目前由 Home Assistant 维护，当新的实体或 Lovelace 组件可用时会自动更新。如果您选择自行编辑，将不再自动更新仪表盘。您始终可以在配置中新建一个仪表盘用于试验。",
+                        "para": "该仪表盘目前由 Third Eye 维护，当新的实体或 Lovelace 组件可用时会自动更新。如果您选择自行编辑，将不再自动更新仪表盘。您始终可以在配置中新建一个仪表盘用于试验。",
                         "para_sure": "您确定要自行编辑用户界面吗？",
                         "save": "自行编辑",
                         "yaml_config": "为方便您开始，以下是此仪表盘的当前配置：",
@@ -4287,7 +4287,7 @@
                     "entity_non_numeric": "实体 {entity} 非数值",
                     "entity_not_found": "实体 {entity} 不可用",
                     "entity_unavailable": "实体当前不可用: {entity}",
-                    "starting": "Home Assistant 正在启动，部分功能暂不可用"
+                    "starting": "Third Eye 正在启动，部分功能暂不可用"
                 }
             },
             "mailbox": {
@@ -4300,16 +4300,16 @@
                 "edit_zones": "编辑地点"
             },
             "my": {
-                "component_not_loaded": "您的 Home Assistant 不支持此重定向。需要使用 {integration} 集成才能使用它。",
+                "component_not_loaded": "您的 Third Eye 不支持此重定向。需要使用 {integration} 集成才能使用它。",
                 "documentation": "文档",
                 "error": "发生未知错误",
-                "faq_link": "我的 Home Assistant 常见问题",
-                "no_supervisor": "您的 Home Assistant 不支持此重定向。它需要 Home Assistant OS 或 Home Assistant Supervised 安装方法。有关更多信息，请参阅 {docs_link} 。",
-                "not_supported": "您的 Home Assistant 不支持此重定向。请查阅{link}以获取受支持的重定向及其引入的版本。"
+                "faq_link": "我的 Third Eye 常见问题",
+                "no_supervisor": "您的 Third Eye 不支持此重定向。它需要 Third Eye OS 或 Third Eye Supervised 安装方法。有关更多信息，请参阅 {docs_link} 。",
+                "not_supported": "您的 Third Eye 不支持此重定向。请查阅{link}以获取受支持的重定向及其引入的版本。"
             },
             "page-authorize": {
                 "abort_intro": "登录中断",
-                "authorizing_client": "您即将授权 {clientId} 访问 Home Assistant 实例。",
+                "authorizing_client": "您即将授权 {clientId} 访问 Third Eye 实例。",
                 "form": {
                     "error": "错误：{error}",
                     "next": "登录",
@@ -4412,8 +4412,8 @@
                 "cards": {
                     "demo": {
                         "demo_by": "来自 {name}",
-                        "introduction": "欢迎回家！您现在位于 Home Assistant 演示，这里展示了我们的社区创作的最佳 UI。",
-                        "learn_more": "详细了解 Home Assistant",
+                        "introduction": "欢迎回家！您现在位于 Third Eye 演示，这里展示了我们的社区创作的最佳 UI。",
+                        "learn_more": "详细了解 Third Eye",
                         "next_demo": "下一个演示"
                     }
                 },
@@ -4459,16 +4459,16 @@
                 "core-config": {
                     "button_detect": "自动检测",
                     "finish": "下一步",
-                    "intro": "{name}，您好！欢迎来到 Home Assistant。您想怎样命名您的家呢？",
+                    "intro": "{name}，您好！欢迎来到 Third Eye。您想怎样命名您的家呢？",
                     "intro_location": "设置家庭的所在位置，以便向您提供天气和日出日落等信息。这些数据不会发送到家庭网络以外。",
                     "intro_location_detect": "通过点击“自动检测”按钮，允许系统向外部网站发出一次请求，即可自动获取并填写这些信息。",
-                    "location_name": "Home Assistant 安装的名称",
+                    "location_name": "Third Eye 安装的名称",
                     "location_name_default": "我的家"
                 },
                 "finish": "完成",
                 "integration": {
                     "finish": "完成",
-                    "intro": "“集成”用于将智能设备和网络服务连接到 Home Assistant。您可以现在就把它们设置好，也可以稍后到“配置”页面进行设置。",
+                    "intro": "“集成”用于将智能设备和网络服务连接到 Third Eye。您可以现在就把它们设置好，也可以稍后到“配置”页面进行设置。",
                     "more_integrations": "更多"
                 },
                 "intro": "准备好唤醒你的家、找回你的隐私，并加入世界级的极客社区了吗？",
@@ -4556,7 +4556,7 @@
                     "create_failed": "无法创建访问令牌。",
                     "created": "创建于 {date}",
                     "delete_failed": "无法删除访问令牌。",
-                    "description": "创建长期访问令牌以允许脚本与 Home Assistant 实例进行交互。每个令牌在创建后有效期为 10 年。以下是处于激活状态的长期访问令牌。",
+                    "description": "创建长期访问令牌以允许脚本与 Third Eye 实例进行交互。每个令牌在创建后有效期为 10 年。以下是处于激活状态的长期访问令牌。",
                     "empty_state": "您还没有长期访问令牌。",
                     "header": "长期访问令牌",
                     "learn_auth_requests": "了解如何创建经过身份验证的请求。",

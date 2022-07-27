@@ -55,9 +55,9 @@ declare global {
 }
 
 const SUPERVISOR_UPDATE_NAMES = {
-  core: "Home Assistant Core",
-  os: "Home Assistant Operating System",
-  supervisor: "Home Assistant Supervisor",
+  core: "Third Eye Core",
+  os: "Third Eye Operating System",
+  supervisor: "Third Eye Supervisor",
 };
 
 type updateType = "os" | "supervisor" | "core" | "addon";

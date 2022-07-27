@@ -287,7 +287,7 @@
             "supervisor": {
                 "channel": "Kanalas",
                 "search": "Paieška",
-                "share_diagonstics_title": "Padėkite tobulinti Home Assistant",
+                "share_diagonstics_title": "Padėkite tobulinti Third Eye",
                 "unhealthy_reason": {
                     "untrusted": "Aptiktas nepatikimas turinys"
                 },
@@ -632,7 +632,7 @@
         "dialogs": {
             "config_entry_system_options": {
                 "enable_new_entities_label": "Įgalinti naujai pridėtus subjektus",
-                "restart_home_assistant": "Kad pakeitimai įsigaliotų, turite iš naujo paleisti Home Assistant.",
+                "restart_home_assistant": "Kad pakeitimai įsigaliotų, turite iš naujo paleisti Third Eye.",
                 "title": "{integration} sistemos parinktys",
                 "update": "Atnaujinti"
             },
@@ -659,7 +659,7 @@
                     "initial": "Pradinė reikšmė",
                     "maximum": "Didžiausia reiikšmė",
                     "minimum": "Mažiausia reikšmė",
-                    "restore": "Atkurkite paskutinę žinomą reikšmę paleidus „Home Assistant“",
+                    "restore": "Atkurkite paskutinę žinomą reikšmę paleidus „Third Eye“",
                     "step": "Žingsnio dydis"
                 },
                 "input_number": {
@@ -757,7 +757,7 @@
                 "filter_placeholder": "Objekto filtras"
             },
             "voice_command": {
-                "did_not_hear": "Home Assistant nieko neišgirdo",
+                "did_not_hear": "Third Eye nieko neišgirdo",
                 "error": "Oi, įvyko klaida",
                 "how_can_i_help": "Kuo galiu padėti?",
                 "label": "Įveskite klausimą ir paspauskite „Enter“"
@@ -818,8 +818,8 @@
             "connection_lost": "Nutrūko ryšys. Jungiamasi iš naujo…",
             "dismiss": "Atmesti",
             "service_call_failed": "Nepavyko panaudoti skambučių paslaugos {service}.",
-            "started": "Home Assistant startavo",
-            "starting": "Home Assistant kraunasi. Visos funkcijos bus prieinamos kai bus baigtas užkrovimas."
+            "started": "Third Eye startavo",
+            "starting": "Third Eye kraunasi. Visos funkcijos bus prieinamos kai bus baigtas užkrovimas."
         },
         "panel": {
             "config": {
@@ -1016,7 +1016,7 @@
                             "delete_confirm": "Ar tikrai norite tai ištrinti?",
                             "duplicate": "Pasikartojantys",
                             "header": "Trigeriai",
-                            "introduction": "Trigeriai yra tai, kas pradeda automatizavimo taisyklės apdorojimą. Tai pačiai taisyklei galima nurodyti kelis aktyviklius. Kai tik įsijungs trigeris, Home Assistant patikrins sąlygas, jei tokių yra, ir iškviečia veiksmą.",
+                            "introduction": "Trigeriai yra tai, kas pradeda automatizavimo taisyklės apdorojimą. Tai pačiai taisyklei galima nurodyti kelis aktyviklius. Kai tik įsijungs trigeris, Third Eye patikrins sąlygas, jei tokių yra, ir iškviečia veiksmą.",
                             "learn_more": "Sužinokite daugiau apie trigerius",
                             "name": "Trigeris",
                             "type": {
@@ -1044,7 +1044,7 @@
                                 },
                                 "homeassistant": {
                                     "event": "Įvykis:",
-                                    "label": "Home Assistant",
+                                    "label": "Third Eye",
                                     "shutdown": "Išjungti",
                                     "start": "Pradėti"
                                 },
@@ -1112,7 +1112,7 @@
                         "delete_automation": "Ištrinti automatizavimą",
                         "edit_automation": "Redaguoti automatiką",
                         "header": "Automatikos redaktorius",
-                        "introduction": "Automatikos redaktorius leidžia kurti ir redaguoti automatikos scenarijus. Spustelėkite toliau pateiktą nuorodą, kad perskaitytumėte instrukcijas ir įsitikintumėte, jog tinkamai sukonfigūravote Home Assistant.",
+                        "introduction": "Automatikos redaktorius leidžia kurti ir redaguoti automatikos scenarijus. Spustelėkite toliau pateiktą nuorodą, kad perskaitytumėte instrukcijas ir įsitikintumėte, jog tinkamai sukonfigūravote Third Eye.",
                         "learn_more": "Sužinokite daugiau apie automatizavimą",
                         "no_automations": "Redaguojamas automatizavimas nerastas",
                         "only_editable": "Redagavimas leidžiamas tik automatizavimai, esantys automations.yaml",
@@ -1249,7 +1249,7 @@
                         "email": "El. paštas",
                         "email_error_msg": "Neteisingas el. paštas",
                         "forgot_password": "Pamiršote slaptažodį?",
-                        "learn_more_link": "Sužinokite daugiau apie Home Assistant Cloud",
+                        "learn_more_link": "Sužinokite daugiau apie Third Eye Cloud",
                         "password": "Slaptažodis",
                         "password_error_msg": "Slaptažodis turi turėti bent 8 simbolius",
                         "sign_in": "Prisijungti",
@@ -1360,7 +1360,7 @@
                         "user": "Vartotojas"
                     },
                     "enabled_cause": "Įrenginį išjungė {cause}.",
-                    "enabled_description": "Išjungti įrenginiai nebus rodomi, o įrenginiui priklausantys objektai bus išjungti ir nepridedami į Home Assistant.",
+                    "enabled_description": "Išjungti įrenginiai nebus rodomi, o įrenginiui priklausantys objektai bus išjungti ir nepridedami į Third Eye.",
                     "enabled_label": "Įgalinti įrenginį",
                     "entities": {
                         "add_entities_lovelace": "Pridėti į Lovelace",
@@ -1449,7 +1449,7 @@
                         }
                     }
                 },
-                "header": "Konfigūruoti Home Assistant",
+                "header": "Konfigūruoti Third Eye",
                 "helpers": {
                     "dialog": {
                         "create": "Sukurti"
@@ -1477,7 +1477,7 @@
                     "copy_github": "GitHub'ui",
                     "copy_raw": "Neapdorotas tekstas",
                     "description": "Versija, sistemos būklė ir nuorodos į dokumentaciją",
-                    "home_assistant_logo": "Home Assistant logotipas",
+                    "home_assistant_logo": "Third Eye logotipas",
                     "icons_by": "Piktogramos",
                     "server": "serveris",
                     "setup_time": "Nustatyti laiką",
@@ -1535,7 +1535,7 @@
                         "show_disabled": "Rodyti išjungtas integracijas"
                     },
                     "discovered": "Atrasta",
-                    "home_assistant_website": "Home Assistant svetainė",
+                    "home_assistant_website": "Third Eye svetainė",
                     "ignore": {
                         "confirm_ignore_title": "Nepaisyti {name} atradimo?",
                         "ignore": "Nepaisyti",
@@ -1544,11 +1544,11 @@
                     "integration": "integracija",
                     "search": "Įeškoti integracijų"
                 },
-                "introduction": "Šiame vaizde galima sukonfigūruoti savo komponentus ir Home Assistant. Dar ne viską galima sukonfigūruoti iš vartotojo sąsajos (UI ), tačiau mes prie to dirbame.",
+                "introduction": "Šiame vaizde galima sukonfigūruoti savo komponentus ir Third Eye. Dar ne viską galima sukonfigūruoti iš vartotojo sąsajos (UI ), tačiau mes prie to dirbame.",
                 "logs": {
                     "caption": "Žurnalai",
                     "clear": "Išvalyti",
-                    "description": "Peržiūrėti Home Assistant žurnalus",
+                    "description": "Peržiūrėti Third Eye žurnalus",
                     "level": {
                         "critical": "KRITINIS",
                         "debug": "TESTAVIMO",
@@ -1735,7 +1735,7 @@
                     }
                 },
                 "server_control": {
-                    "description": "Paleisti iš naujo ir sustabdyti Home Assistant serverį",
+                    "description": "Paleisti iš naujo ir sustabdyti Third Eye serverį",
                     "section": {
                         "reloading": {
                             "automation": "Automatika",
@@ -1748,10 +1748,10 @@
                             "zone": "Zonos"
                         },
                         "server_management": {
-                            "confirm_restart": "Ar tikrai norite perkrauti Home Assistant?",
-                            "confirm_stop": "Ar jūs tikrai norite sustabdyti Home Assistant?",
+                            "confirm_restart": "Ar tikrai norite perkrauti Third Eye?",
+                            "confirm_stop": "Ar jūs tikrai norite sustabdyti Third Eye?",
                             "heading": "Serverio valdymas",
-                            "introduction": "Valdykite Home Assistant serverį... iš Home Assistant.",
+                            "introduction": "Valdykite Third Eye serverį... iš Third Eye.",
                             "restart": "Perkrauti",
                             "stop": "Sustabdyti"
                         },
@@ -1788,7 +1788,7 @@
                         "password_not_match": "Slaptažodžiai nesutampa"
                     },
                     "caption": "Vartotojai",
-                    "description": "Tvarkykite Home Assistant vartotojų paskyras",
+                    "description": "Tvarkykite Third Eye vartotojų paskyras",
                     "editor": {
                         "activate_user": "Suaktyvinti vartotoją",
                         "active": "Aktyvus",
@@ -2389,7 +2389,7 @@
                 "cards": {
                     "demo": {
                         "demo_by": "pateikė {name}",
-                        "learn_more": "Sužinokite daugiau apie Home Assistant",
+                        "learn_more": "Sužinokite daugiau apie Third Eye",
                         "next_demo": "Kita demonstracija"
                     }
                 },
@@ -2430,7 +2430,7 @@
                 "core-config": {
                     "button_detect": "Aptikti",
                     "finish": "Kitas",
-                    "intro": "Sveiki {name}, atvykę į Home Assistant. Kaip norėtumėte pavadinti savo namus?",
+                    "intro": "Sveiki {name}, atvykę į Third Eye. Kaip norėtumėte pavadinti savo namus?",
                     "location_name_default": "Namai"
                 },
                 "finish": "Baigti",

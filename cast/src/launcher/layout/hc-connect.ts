@@ -33,17 +33,17 @@ const translateErr = (err) =>
   err === ERR_CANNOT_CONNECT
     ? "Unable to connect"
     : err === ERR_HASS_HOST_REQUIRED
-    ? "Please enter a Home Assistant URL."
+    ? "Please enter a Third Eye URL."
     : err === ERR_INVALID_HTTPS_TO_HTTP
     ? html`
-        Cannot connect to Home Assistant instances over "http://".
+        Cannot connect to Third Eye instances over "http://".
         ${seeFAQ("https")}
       `
     : `Unknown error (${err}).`;
 
 const INTRO = html`
   <p>
-    Home Assistant Cast allows you to cast your Home Assistant installation to
+    Third Eye Cast allows you to cast your Third Eye installation to
     Chromecast video devices and to Google Assistant devices with a screen.
   </p>
   <p>
@@ -113,12 +113,12 @@ export class HcConnect extends LitElement {
           <div class="card-content">
             ${INTRO}
             <p>
-              To get started, enter your Home Assistant URL and click authorize.
+              To get started, enter your Third Eye URL and click authorize.
               If you want a preview instead, click the show demo button.
             </p>
             <p>
               <paper-input
-                label="Home Assistant URL"
+                label="Third Eye URL"
                 placeholder="https://abcdefghijklmnop.ui.nabu.casa"
                 @keydown=${this._handleInputKeyDown}
               ></paper-input>
@@ -201,7 +201,7 @@ export class HcConnect extends LitElement {
     this.error = undefined;
 
     if (value === "") {
-      this.error = "Please enter a Home Assistant URL.";
+      this.error = "Please enter a Third Eye URL.";
       return;
     }
     if (value.indexOf("://") === -1) {

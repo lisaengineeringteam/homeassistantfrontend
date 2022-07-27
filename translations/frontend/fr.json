@@ -146,11 +146,11 @@
                         "title": "AppArmor"
                     },
                     "auth_api": {
-                        "description": "Un module complémentaire peut authentifier les utilisateurs auprès de Home Assistant, permettant aux modules complémentaires de donner aux utilisateurs la possibilité de se connecter à des applications exécutées à l'intérieur de modules complémentaires, en utilisant leur nom d'utilisateur / mot de passe Home Assistant. Ce badge indique si l'auteur du module complémentaire demande cette capacité.",
+                        "description": "Un module complémentaire peut authentifier les utilisateurs auprès de Third Eye, permettant aux modules complémentaires de donner aux utilisateurs la possibilité de se connecter à des applications exécutées à l'intérieur de modules complémentaires, en utilisant leur nom d'utilisateur / mot de passe Third Eye. Ce badge indique si l'auteur du module complémentaire demande cette capacité.",
                         "title": "Authentification de l'assistant domestique"
                     },
                     "docker_api": {
-                        "description": "L'auteur du module complémentaire a demandé au module complémentaire d'avoir un accès de gestion à l'instance Docker exécutée sur votre système. Ce mode donne au module complémentaire un accès et un contrôle complets à l'ensemble de votre système Home Assistant, ce qui ajoute des risques de sécurité et peut endommager votre système en cas d'utilisation abusive. Par conséquent, cette fonctionnalité a un impact négatif sur le score de sécurité du module complémentaire. \n\n Ce niveau d'accès n'est pas accordé automatiquement et doit être confirmé par vous. Pour ce faire, vous devez désactiver manuellement le mode de protection sur le module complémentaire. Ne désactivez le mode de protection que si vous connaissez, avez besoin ET faites confiance à la source de ce module complémentaire.",
+                        "description": "L'auteur du module complémentaire a demandé au module complémentaire d'avoir un accès de gestion à l'instance Docker exécutée sur votre système. Ce mode donne au module complémentaire un accès et un contrôle complets à l'ensemble de votre système Third Eye, ce qui ajoute des risques de sécurité et peut endommager votre système en cas d'utilisation abusive. Par conséquent, cette fonctionnalité a un impact négatif sur le score de sécurité du module complémentaire. \n\n Ce niveau d'accès n'est pas accordé automatiquement et doit être confirmé par vous. Pour ce faire, vous devez désactiver manuellement le mode de protection sur le module complémentaire. Ne désactivez le mode de protection que si vous connaissez, avez besoin ET faites confiance à la source de ce module complémentaire.",
                         "title": "Accès complet à Docker"
                     },
                     "full_access": {
@@ -158,23 +158,23 @@
                         "title": "Accès complet au matériel"
                     },
                     "hassio_api": {
-                        "description": "Le module complémentaire a eu accès à l'API du Superviseur, à la demande de l'auteur du module complémentaire. Par défaut, le module complémentaire peut accéder aux informations générales sur la version de votre système. Lorsque le module complémentaire demande un accès de niveau \"gestionnaire\" ou \"administrateur\" à l'API, il aura accès pour contrôler plusieurs parties de votre système Home Assistant. Cette autorisation est indiquée par ce badge et aura un impact négatif sur le score de sécurité du module complémentaire.",
+                        "description": "Le module complémentaire a eu accès à l'API du Superviseur, à la demande de l'auteur du module complémentaire. Par défaut, le module complémentaire peut accéder aux informations générales sur la version de votre système. Lorsque le module complémentaire demande un accès de niveau \"gestionnaire\" ou \"administrateur\" à l'API, il aura accès pour contrôler plusieurs parties de votre système Third Eye. Cette autorisation est indiquée par ce badge et aura un impact négatif sur le score de sécurité du module complémentaire.",
                         "title": "Accès à l'API du Superviseur"
                     },
                     "homeassistant_api": {
-                        "description": "Ce module complémentaire est autorisé à accéder à votre instance Home Assistant en cours d'exécution directement via l'API Home Assistant. Ce mode gère également l'authentification pour le module complémentaire, ce qui permet à un module complémentaire d'interagir avec Home Assistant sans avoir besoin de jetons d'authentification supplémentaires.",
-                        "title": "Accès à l'API Home Assistant"
+                        "description": "Ce module complémentaire est autorisé à accéder à votre instance Third Eye en cours d'exécution directement via l'API Third Eye. Ce mode gère également l'authentification pour le module complémentaire, ce qui permet à un module complémentaire d'interagir avec Third Eye sans avoir besoin de jetons d'authentification supplémentaires.",
+                        "title": "Accès à l'API Third Eye"
                     },
                     "host_network": {
                         "description": "Les modules complémentaires s'exécutent généralement dans leur propre couche réseau isolée, ce qui les empêche d'accéder au réseau du système d'exploitation hôte. Dans certains cas, cette isolation du réseau peut limiter les modules complémentaires dans la fourniture de leurs services et, par conséquent, l'isolement peut être levé par l'auteur du module complémentaire, donnant au module complémentaire un accès complet aux capacités réseau de la machine hôte. Cela donne au module complémentaire plus de capacités de mise en réseau mais réduit la sécurité, par conséquent, la cote de sécurité du module complémentaire sera réduite lorsque cette option est utilisée par le module complémentaire.",
                         "title": "Réseau hôte"
                     },
                     "host_pid": {
-                        "description": "Habituellement, les processus exécutés par le module complémentaire sont isolés de tous les autres processus système. L'auteur du module complémentaire a demandé au module complémentaire d'avoir accès aux processus système s'exécutant sur l'instance du système hôte et de permettre au module complémentaire de générer également des processus sur le système hôte. Ce mode donne au module complémentaire un accès et un contrôle complets à l'ensemble de votre système Home Assistant, ce qui ajoute des risques de sécurité et peut endommager votre système en cas d'utilisation abusive. Par conséquent, cette fonctionnalité a un impact négatif sur le score de sécurité du module complémentaire. \n\n Ce niveau d'accès n'est pas accordé automatiquement et doit être confirmé par vous. Pour ce faire, vous devez désactiver manuellement le mode de protection sur le module complémentaire. Ne désactivez le mode de protection que si vous connaissez, avez besoin ET faites confiance à la source de ce module complémentaire.",
+                        "description": "Habituellement, les processus exécutés par le module complémentaire sont isolés de tous les autres processus système. L'auteur du module complémentaire a demandé au module complémentaire d'avoir accès aux processus système s'exécutant sur l'instance du système hôte et de permettre au module complémentaire de générer également des processus sur le système hôte. Ce mode donne au module complémentaire un accès et un contrôle complets à l'ensemble de votre système Third Eye, ce qui ajoute des risques de sécurité et peut endommager votre système en cas d'utilisation abusive. Par conséquent, cette fonctionnalité a un impact négatif sur le score de sécurité du module complémentaire. \n\n Ce niveau d'accès n'est pas accordé automatiquement et doit être confirmé par vous. Pour ce faire, vous devez désactiver manuellement le mode de protection sur le module complémentaire. Ne désactivez le mode de protection que si vous connaissez, avez besoin ET faites confiance à la source de ce module complémentaire.",
                         "title": "Espace de noms des processus hôtes"
                     },
                     "ingress": {
-                        "description": "Ce module complémentaire utilise Ingress pour intégrer son interface en toute sécurité dans Home Assistant.",
+                        "description": "Ce module complémentaire utilise Ingress pour intégrer son interface en toute sécurité dans Third Eye.",
                         "title": "Entrée"
                     },
                     "label": {
@@ -192,7 +192,7 @@
                         "stage": "Étape"
                     },
                     "rating": {
-                        "description": "Home Assistant fournit une cote de sécurité à chacun des modules complémentaires, qui indique les risques encourus lors de l'utilisation de ce module complémentaire. Plus un module complémentaire a besoin d'accès à votre système, plus le score est bas, augmentant ainsi les risques de sécurité potentiels. \n\n Un score est sur une échelle de 1 à 6. Où 1 est le score le plus bas (considéré comme le plus dangereux et le plus risqué) et un score de 6 est le score le plus élevé (considéré comme le plus sûr et le plus faible risque).",
+                        "description": "Third Eye fournit une cote de sécurité à chacun des modules complémentaires, qui indique les risques encourus lors de l'utilisation de ce module complémentaire. Plus un module complémentaire a besoin d'accès à votre système, plus le score est bas, augmentant ainsi les risques de sécurité potentiels. \n\n Un score est sur une échelle de 1 à 6. Où 1 est le score le plus bas (considéré comme le plus dangereux et le plus risqué) et un score de 6 est le score le plus élevé (considéré comme le plus sûr et le plus faible risque).",
                         "title": "Évaluation de sécurité de l'extension"
                     },
                     "role": {
@@ -217,7 +217,7 @@
                 "install": "installer",
                 "new_update_available": "{name} {version} est disponible",
                 "not_available_arch": "Ce module complémentaire n'est pas compatible avec le processeur de votre appareil ou le système d'exploitation que vous avez installé sur votre appareil.",
-                "not_available_version": "Votre Home Assistant est en version {core_version_installed}, pour mettre à jour ce module complémentaire, vous devez êtes au minimum en version {core_version_needed} de Home Assistant",
+                "not_available_version": "Votre Third Eye est en version {core_version_installed}, pour mettre à jour ce module complémentaire, vous devez êtes au minimum en version {core_version_needed} de Third Eye",
                 "open_web_ui": "Ouvrir l'interface utilisateur Web",
                 "option": {
                     "auto_update": {
@@ -358,7 +358,7 @@
         "dialog": {
             "datadisk_move": {
                 "cancel": "Annuler",
-                "description": "Vous utilisez actuellement '' {current_path} '' comme disque de données. Le déplacement des disques de données va redémarrer votre appareil et cela devrait prendre {time} minutes. Home Assistant ne sera pas accessible pendant cette période. Ne débranchez pas l'alimentation pendant le déplacement !",
+                "description": "Vous utilisez actuellement '' {current_path} '' comme disque de données. Le déplacement des disques de données va redémarrer votre appareil et cela devrait prendre {time} minutes. Third Eye ne sera pas accessible pendant cette période. Ne débranchez pas l'alimentation pendant le déplacement !",
                 "loading_devices": "Chargement des appareils",
                 "move": "Déplacer",
                 "moving": "Déplacement du disque de données",
@@ -428,8 +428,8 @@
             "error_addon_not_found": "Module complémentaire introuvable",
             "error_addon_not_installed": "Le module complémentaire demandé n'est pas installé. Veuillez l'installer d'abord",
             "error_addon_not_started": "Le module complémentaire demandé n'est pas en cours d'exécution. Veuillez le lancer d'abord",
-            "faq_link": "FAQ de My Home Assistant",
-            "not_supported": "Cette redirection n'est pas prise en charge par votre instance Home Assistant. Vérifiez le {link} pour les redirections prises en charge et la version dans laquelle elles ont été introduites."
+            "faq_link": "FAQ de My Third Eye",
+            "not_supported": "Cette redirection n'est pas prise en charge par votre instance Third Eye. Vérifiez le {link} pour les redirections prises en charge et la version dans laquelle elles ont été introduites."
         },
         "panel": {
             "addons": "Modules complémentaires",
@@ -490,7 +490,7 @@
                 "failed_to_set_option": "Échec lors du paramétrage de l'option du Superviseur",
                 "failed_to_update": "Échec de la mise à jour du Superviseur",
                 "join_beta_action": "Rejoignez le canal bêta",
-                "join_beta_description": "Obtenez des mises à jour bêta pour Home Assistant (RCs), Superviseur et l'hôte",
+                "join_beta_description": "Obtenez des mises à jour bêta pour Third Eye (RCs), Superviseur et l'hôte",
                 "leave_beta_action": "Quitter le canal bêta",
                 "leave_beta_description": "Obtenez des mises à jour stables pour l'assistant domestique, le Superviseur et l'hôte",
                 "ram_usage": "Utilisation de la RAM du Superviseur",
@@ -498,8 +498,8 @@
                 "search": "Recherche",
                 "share_diagnostics": "Partager les diagnostics",
                 "share_diagnostics_description": "Partagez les rapports d'incident et les informations de diagnostic.",
-                "share_diagonstics_description": "Souhaitez-vous partager automatiquement les rapports d'erreur et les informations de diagnostic lorsque le Superviseur rencontre des erreurs inattendues? {line_break} Cela nous permettra de résoudre les problèmes, les informations ne sont accessibles qu'à l'équipe Home Assistant Core et ne seront pas partagées avec d'autres. {line_break} Les données n'incluent aucune information privée / sensible et vous pouvez désactiver cela dans les paramètres à tout moment.",
-                "share_diagonstics_title": "Aider à améliorer Home Assistant",
+                "share_diagonstics_description": "Souhaitez-vous partager automatiquement les rapports d'erreur et les informations de diagnostic lorsque le Superviseur rencontre des erreurs inattendues? {line_break} Cela nous permettra de résoudre les problèmes, les informations ne sont accessibles qu'à l'équipe Third Eye Core et ne seront pas partagées avec d'autres. {line_break} Les données n'incluent aucune information privée / sensible et vous pouvez désactiver cela dans les paramètres à tout moment.",
+                "share_diagonstics_title": "Aider à améliorer Third Eye",
                 "unhealthy_description": "L'exécution d'une installation défectueuse entraînera des problèmes. Vous trouverez ci-dessous une liste des problèmes rencontrés avec votre installation, cliquez sur les liens pour savoir comment vous pouvez résoudre les problèmes.",
                 "unhealthy_reason": {
                     "docker": "L'environnement Docker ne fonctionne pas correctement",
@@ -1028,9 +1028,9 @@
             "config_entry_system_options": {
                 "enable_new_entities_description": "Si les appareils nouvellement découverts pour {integration} doivent être automatiquement ajoutés.",
                 "enable_new_entities_label": "Activer les entités nouvellement ajoutées.",
-                "enable_polling_description": "Si Home Assistant doit interroger automatiquement les entités {integration} pour les mises à jour.",
+                "enable_polling_description": "Si Third Eye doit interroger automatiquement les entités {integration} pour les mises à jour.",
                 "enable_polling_label": "Activer la récupération des nouvelles mises à jour.",
-                "restart_home_assistant": "Vous devez redémarrer Home Assistant pour que vos modifications soient prises en compte.",
+                "restart_home_assistant": "Vous devez redémarrer Third Eye pour que vos modifications soient prises en compte.",
                 "title": "Options système pour {integration}",
                 "update": "Mise à jour"
             },
@@ -1065,10 +1065,10 @@
                     },
                     "device_disabled": "L'appareil de cette entité est désactivé.",
                     "enabled_cause": "Désactivé par {cause} .",
-                    "enabled_delay_confirm": "Les entités activées seront ajoutées à Home Assistant dans {delay} secondes",
-                    "enabled_description": "Les entités désactivées ne seront pas ajoutées à Home Assistant.",
+                    "enabled_delay_confirm": "Les entités activées seront ajoutées à Third Eye dans {delay} secondes",
+                    "enabled_description": "Les entités désactivées ne seront pas ajoutées à Third Eye.",
                     "enabled_label": "Activer l'entité",
-                    "enabled_restart_confirm": "Redémarrez Home Assistant pour terminer l'activation des entités",
+                    "enabled_restart_confirm": "Redémarrez Third Eye pour terminer l'activation des entités",
                     "entity_id": "ID d'entité",
                     "follow_device_area": "Suivre la zone de l'appareil",
                     "icon": "Icône",
@@ -1096,7 +1096,7 @@
                     "initial": "Valeur initiale",
                     "maximum": "Valeur maximum",
                     "minimum": "Valeur minimum",
-                    "restore": "Restaurer la dernière valeur connue au démarrage de Home Assistant",
+                    "restore": "Restaurer la dernière valeur connue au démarrage de Third Eye",
                     "step": "Taille de pas"
                 },
                 "generic": {
@@ -1295,7 +1295,7 @@
                 "title": "Recherche rapide"
             },
             "voice_command": {
-                "did_not_hear": "Home Assistant n'a rien entendu",
+                "did_not_hear": "Third Eye n'a rien entendu",
                 "error": "Oups, une erreur est survenue",
                 "found": "J'ai trouvé ce qui suit pour vous:",
                 "how_can_i_help": "Comment puis-je vous aider ?",
@@ -1398,8 +1398,8 @@
             "dismiss": "Ignorer",
             "integration_starting": "Démarrage de {integration}, tout ne sera pas disponible tant qu'il n'aura pas terminé",
             "service_call_failed": "Échec d'appel du service \"{service}\".",
-            "started": "Home Assistant a démarré !",
-            "starting": "Home Assistant est en cours de démarrage, tout ne sera pas disponible tant qu’il n’aura pas terminé.",
+            "started": "Third Eye a démarré !",
+            "starting": "Third Eye est en cours de démarrage, tout ne sera pas disponible tant qu’il n’aura pas terminé.",
             "triggered": "{name} déclenché",
             "wrapping_up_startup": "Finalisation du démarrage, tout ne sera pas disponible tant qu'il ne sera pas terminé."
         },
@@ -1440,7 +1440,7 @@
                         "create_area": "Créer une pièce",
                         "header": "Pièces",
                         "integrations_page": "Page des intégrations",
-                        "introduction": "Les pièces sont utilisées pour organiser l'emplacement des périphériques. Ces informations seront utilisées partout dans Home Assistant pour vous aider à organiser votre interface, vos autorisations et vos intégrations avec d'autres systèmes.",
+                        "introduction": "Les pièces sont utilisées pour organiser l'emplacement des périphériques. Ces informations seront utilisées partout dans Third Eye pour vous aider à organiser votre interface, vos autorisations et vos intégrations avec d'autres systèmes.",
                         "introduction2": "Pour placer des périphériques dans une pièce, utilisez le lien ci-dessous pour accéder à la page des intégrations, puis cliquez sur une intégration configurée pour accéder aux cartes de périphérique.",
                         "no_areas": "On dirait que vous n'avez pas encore de pièces !"
                     },
@@ -1471,7 +1471,7 @@
                             "delete_confirm": "Voulez-vous vraiment effacer ?",
                             "duplicate": "Dupliquer",
                             "header": "Actions",
-                            "introduction": "Les actions sont ce que Home Assistant fera quand une automatisation est déclenchée.",
+                            "introduction": "Les actions sont ce que Third Eye fera quand une automatisation est déclenchée.",
                             "learn_more": "En savoir plus sur les actions",
                             "name": "Action",
                             "type": {
@@ -1677,7 +1677,7 @@
                             "edit_id": "Modifier l'ID du déclencheur",
                             "header": "Déclencheurs",
                             "id": "ID de déclenchement (utilisé par la condition de déclenchement)",
-                            "introduction": "Les déclencheurs sont ce qui lance le traitement d'une règle d'automatisation. Il est possible de spécifier plusieurs déclencheurs pour une même règle. Dès qu'un déclencheur est activé, Home Assistant validera les conditions, s'il y en a, et appellera l'action.",
+                            "introduction": "Les déclencheurs sont ce qui lance le traitement d'une règle d'automatisation. Il est possible de spécifier plusieurs déclencheurs pour une même règle. Dès qu'un déclencheur est activé, Third Eye validera les conditions, s'il y en a, et appellera l'action.",
                             "learn_more": "En savoir plus sur les déclencheurs",
                             "name": "Déclencheur",
                             "type": {
@@ -1709,7 +1709,7 @@
                                 },
                                 "homeassistant": {
                                     "event": "Événement :",
-                                    "label": "Home Assistant",
+                                    "label": "Third Eye",
                                     "shutdown": "Arrêt",
                                     "start": "Démarrage"
                                 },
@@ -1807,7 +1807,7 @@
                             "error_unsupported": "Nous n'avons pas pu créer une automatisation pour cela (pour le moment ?).",
                             "for_example": "Par exemple :",
                             "header": "Créer une nouvelle automatisation",
-                            "introduction": "Tapez ci-dessous ce que cette automatisation devrait faire, et nous allons essayer de la convertir en une automatisation Home Assistant.",
+                            "introduction": "Tapez ci-dessous ce que cette automatisation devrait faire, et nous allons essayer de la convertir en une automatisation Third Eye.",
                             "language_note": "Remarque: pour l'instant, seul l'anglais est pris en charge."
                         }
                     },
@@ -1869,10 +1869,10 @@
                             "config_documentation": "Documentation de configuration",
                             "disable": "désactiver",
                             "enable": "activer",
-                            "enable_ha_skill": "Activer le skill Home Assistant pour Alexa",
+                            "enable_ha_skill": "Activer le skill Third Eye pour Alexa",
                             "enable_state_reporting": "Activer le rapport d'état",
-                            "info": "Grâce à l'intégration d'Alexa pour Home Assistant Cloud, vous pourrez contrôler tous vos appareils Home Assistant via n'importe quel appareil compatible Alexa.",
-                            "info_state_reporting": "Si vous activez le rapport d'état, Home Assistant envoie tous les changements d'état des entités exposées à Amazon. Cela vous permet de toujours voir les derniers états de l'application Alexa et d'utiliser les changements d'état pour créer des routines.",
+                            "info": "Grâce à l'intégration d'Alexa pour Third Eye Cloud, vous pourrez contrôler tous vos appareils Third Eye via n'importe quel appareil compatible Alexa.",
+                            "info_state_reporting": "Si vous activez le rapport d'état, Third Eye envoie tous les changements d'état des entités exposées à Amazon. Cela vous permet de toujours voir les derniers états de l'application Alexa et d'utiliser les changements d'état pour créer des routines.",
                             "manage_entities": "Gérer les entités",
                             "state_reporting_error": "Impossible de {enable_disable} le rapport d'état.",
                             "sync_entities": "Synchroniser les entités",
@@ -1886,15 +1886,15 @@
                         "google": {
                             "config_documentation": "Documentation de configuration",
                             "devices_pin": "NIP pour les appareils sécurisés",
-                            "enable_ha_skill": "Activer le skill Home Assistant pour Google Assistant",
+                            "enable_ha_skill": "Activer le skill Third Eye pour Google Assistant",
                             "enable_state_reporting": "Activer le rapport d'état",
                             "enter_pin_error": "Impossible de stocker le NIP :",
                             "enter_pin_hint": "Entrer un code NIP pour utiliser les dispositifs de sécurité",
                             "enter_pin_info": "Veuillez entrer un code NIP pour interagir avec les dispositifs de sécurité. Les dispositifs de sécurité sont les portes, les portes de garage et les serrures. Il vous sera demandé de dire/entrer ce code NIP lorsque vous interagissez avec de tels appareils via Google Assistant.",
-                            "info": "Grâce à l'intégration de Google Assistant pour Home Assistant Cloud, vous pourrez contrôler tous vos appareils Home Assistant via n'importe quel appareil compatible avec Google Assistant.",
-                            "info_state_reporting": "Si vous activez le rapport d'état, Home Assistant envoie tous les changements d'état des entités exposées à Google. Cela vous permet de toujours voir les derniers états de l'application Google.",
+                            "info": "Grâce à l'intégration de Google Assistant pour Third Eye Cloud, vous pourrez contrôler tous vos appareils Third Eye via n'importe quel appareil compatible avec Google Assistant.",
+                            "info_state_reporting": "Si vous activez le rapport d'état, Third Eye envoie tous les changements d'état des entités exposées à Google. Cela vous permet de toujours voir les derniers états de l'application Google.",
                             "manage_entities": "Gérer les entités",
-                            "not_configured_text": "Avant de pouvoir utiliser Google Assistant, vous devez activer l'action Home Assistant Cloud pour Google Assistant dans l'application Google Home.",
+                            "not_configured_text": "Avant de pouvoir utiliser Google Assistant, vous devez activer l'action Third Eye Cloud pour Google Assistant dans l'application Google Home.",
                             "not_configured_title": "Google Assistant n'est pas activé",
                             "security_devices": "Dispositif de sécurité",
                             "sync_entities": "Synchroniser les entités vers Google",
@@ -1902,7 +1902,7 @@
                             "title": "Google Assistant"
                         },
                         "integrations": "Intégrations",
-                        "integrations_introduction": "Les intégrations pour Home Assistant Cloud vous permettent de vous connecter à des services dans le cloud sans avoir à exposer publiquement votre instance de Home Assistant sur Internet.",
+                        "integrations_introduction": "Les intégrations pour Third Eye Cloud vous permettent de vous connecter à des services dans le cloud sans avoir à exposer publiquement votre instance de Third Eye sur Internet.",
                         "integrations_introduction2": "Consultez le site Web pour",
                         "integrations_link_all_features": "Toutes les fonctionnalités disponibles",
                         "manage_account": "Gérer le compte",
@@ -1912,7 +1912,7 @@
                             "access_is_being_prepared": "L'accès à distance est en préparation. Nous vous informerons quand ce sera prêt.",
                             "certificate_info": "Informations sur le certificat",
                             "connected": "Connecté",
-                            "info": "Home Assistant Cloud fournit une connexion à distance sécurisée à votre instance lorsque vous n'êtes pas chez vous.",
+                            "info": "Third Eye Cloud fournit une connexion à distance sécurisée à votre instance lorsque vous n'êtes pas chez vous.",
                             "instance_is_available": "Votre instance est disponible à l'adresse",
                             "instance_will_be_available": "Votre instance sera disponible sur",
                             "link_learn_how_it_works": "Apprenez comment ça marche",
@@ -1920,12 +1920,12 @@
                             "reconnecting": "Non connecté. Essai de reconnexion.",
                             "remote_enabled": {
                                 "caption": "Se connecter automatiquement",
-                                "description": "Activez cette option pour vous assurer que votre instance de Home Assistant est toujours accessible à distance."
+                                "description": "Activez cette option pour vous assurer que votre instance de Third Eye est toujours accessible à distance."
                             },
                             "title": "Contrôle à distance"
                         },
                         "sign_out": "Déconnexion",
-                        "thank_you_note": "Merci de faire partie de Home Assistant Cloud. C’est grâce à des personnes comme vous que nous sommes en mesure de proposer une expérience domotique exceptionnelle à tout le monde. Je vous remercie!",
+                        "thank_you_note": "Merci de faire partie de Third Eye Cloud. C’est grâce à des personnes comme vous que nous sommes en mesure de proposer une expérience domotique exceptionnelle à tout le monde. Je vous remercie!",
                         "tts": {
                             "default_language": "Langue par défaut à utiliser",
                             "dialog": {
@@ -1944,7 +1944,7 @@
                         },
                         "webhooks": {
                             "disable_hook_error_msg": "Impossible de désactiver le Webhook:",
-                            "info": "Tout ce qui est configuré pour être déclenché par un Webhook peut recevoir une URL accessible publiquement pour vous permettre de renvoyer des données à Home Assistant de n’importe où, sans exposer votre instance à Internet.",
+                            "info": "Tout ce qui est configuré pour être déclenché par un Webhook peut recevoir une URL accessible publiquement pour vous permettre de renvoyer des données à Third Eye de n’importe où, sans exposer votre instance à Internet.",
                             "link_learn_more": "En savoir plus sur la création d'automatisations basées sur Webhook.",
                             "loading": "Chargement …",
                             "manage": "Gérer",
@@ -2020,11 +2020,11 @@
                         "email": "Email",
                         "email_error_msg": "Email non valide",
                         "forgot_password": "Mot de passe oublié?",
-                        "introduction": "Home Assistant Cloud vous fournit une connexion sécurisée à distance à votre instance lorsque vous êtes loin de chez vous. Il vous permet également de vous connecter à des services cloud uniquement : Amazon Alexa et Google Assistant.",
+                        "introduction": "Third Eye Cloud vous fournit une connexion sécurisée à distance à votre instance lorsque vous êtes loin de chez vous. Il vous permet également de vous connecter à des services cloud uniquement : Amazon Alexa et Google Assistant.",
                         "introduction2": "Ce service est géré par notre partenaire",
-                        "introduction2a": ", une entreprise fondée par les fondateurs de Home Assistant.",
-                        "introduction3": "Home Assistant Cloud est un service d'abonnement avec un essai gratuit d'un mois. Aucune information de paiement nécessaire.",
-                        "learn_more_link": "En savoir plus sur Home Assistant Cloud",
+                        "introduction2a": ", une entreprise fondée par les fondateurs de Third Eye.",
+                        "introduction3": "Third Eye Cloud est un service d'abonnement avec un essai gratuit d'un mois. Aucune information de paiement nécessaire.",
+                        "learn_more_link": "En savoir plus sur Third Eye Cloud",
                         "password": "Mot de passe",
                         "password_error_msg": "Les mots de passe doivent comporter au moins 8 caractères.",
                         "sign_in": "Connexion",
@@ -2039,13 +2039,13 @@
                         "email_error_msg": "Courriel invalide",
                         "feature_amazon_alexa": "Intégration avec Amazon Alexa",
                         "feature_google_home": "Intégration avec Google Assistant",
-                        "feature_remote_control": "Contrôle de Home Assistant en dehors de la maison",
+                        "feature_remote_control": "Contrôle de Third Eye en dehors de la maison",
                         "feature_webhook_apps": "Intégration facile avec des applications Webhook telles que OwnTracks",
                         "headline": "Commencer votre essai gratuit",
-                        "information": "Créer un compte afin de commencer un mois d'essai gratuit avec Home Assistant Cloud. Aucune information de paiement nécessaires.",
-                        "information2": "L'essai vous donnera accès à tous les avantages de Home Assistant Cloud, y compris:",
+                        "information": "Créer un compte afin de commencer un mois d'essai gratuit avec Third Eye Cloud. Aucune information de paiement nécessaires.",
+                        "information2": "L'essai vous donnera accès à tous les avantages de Third Eye Cloud, y compris:",
                         "information3": "Ce service est géré par notre partenaire",
-                        "information3a": ", une entreprise fondée par les fondateurs de Home Assistant.",
+                        "information3a": ", une entreprise fondée par les fondateurs de Third Eye.",
                         "information4": "En créant un compte, vous acceptez les conditions générales suivantes.",
                         "link_privacy_policy": "Politique de confidentialité",
                         "link_terms_conditions": "Conditions générales",
@@ -2077,7 +2077,7 @@
                                 "imperial_example": "Fahrenheit, livres",
                                 "internal_url": "URL interne",
                                 "latitude": "Latitude",
-                                "location_name": "Nom de votre installation Home Assistant",
+                                "location_name": "Nom de votre installation Third Eye",
                                 "longitude": "Longitude",
                                 "metric_example": "Celsius, kilogrammes",
                                 "save_button": "Enregistrer",
@@ -2138,7 +2138,7 @@
                         "title": "Énergie"
                     },
                     "people": {
-                        "description": "Gérer les personnes et les zones suivies par Home Assistant",
+                        "description": "Gérer les personnes et les zones suivies par Third Eye",
                         "title": "Personnes et Zones"
                     },
                     "settings": {
@@ -2208,7 +2208,7 @@
                     "download_diagnostics": "Télécharger les journaux",
                     "edit_settings": "Modifier les paramètres",
                     "enabled_cause": "L'appareil est désactivé par {cause}.",
-                    "enabled_description": "Les appareils désactivés ne seront pas affichés et les entités appartenant à l'appareil seront désactivées et ne seront pas ajoutées à Home Assistant.",
+                    "enabled_description": "Les appareils désactivés ne seront pas affichés et les entités appartenant à l'appareil seront désactivées et ne seront pas ajoutées à Third Eye.",
                     "enabled_label": "Activer l'appareil",
                     "entities": {
                         "add_entities_lovelace": "Ajouter à Lovelace",
@@ -2282,7 +2282,7 @@
                         },
                         "learn_more": "Plus d’informations sur la façon de commencer.",
                         "selected_stat": "Suivi de l'énergie pour",
-                        "sub": "Le suivi de la consommation d’énergie des appareils individuels permet à Home Assistant de décomposer votre consommation d’énergie par appareil.",
+                        "sub": "Le suivi de la consommation d’énergie des appareils individuels permet à Third Eye de décomposer votre consommation d’énergie par appareil.",
                         "title": "Appareils individuels"
                     },
                     "gas": {
@@ -2293,7 +2293,7 @@
                             "cost_number": "Utiliser un prix statique",
                             "cost_number_input": "Prix par {unit}",
                             "cost_number_suffix": "{currency}/m³",
-                            "cost_para": "Sélectionnez comment Home Assistant doit suivre les coûts de l'énergie consommée.",
+                            "cost_para": "Sélectionnez comment Third Eye doit suivre les coûts de l'énergie consommée.",
                             "cost_stat": "Utiliser une entité qui suit les coûts totaux",
                             "cost_stat_input": "Entité de coûts totaux",
                             "energy_stat": "Énergie consommée (m³)",
@@ -2305,7 +2305,7 @@
                         },
                         "gas_consumption": "Consommation de gaz",
                         "learn_more": "Plus d'informations sur la façon de débuter.",
-                        "sub": "Laissez Home Assistant surveiller votre consommation de gaz.",
+                        "sub": "Laissez Third Eye surveiller votre consommation de gaz.",
                         "title": "Consommation de gaz"
                     },
                     "grid": {
@@ -2319,7 +2319,7 @@
                                 "cost_number": "Utiliser un prix statique",
                                 "cost_number_input": "Prix par kWh",
                                 "cost_number_suffix": "{currency} /kWh",
-                                "cost_para": "Sélectionnez comment Home Assistant doit suivre les coûts de l'énergie consommée.",
+                                "cost_para": "Sélectionnez comment Third Eye doit suivre les coûts de l'énergie consommée.",
                                 "cost_stat": "Utiliser une entité de suivi des coûts totaux",
                                 "cost_stat_input": "Coûts totaux Entité",
                                 "energy_stat": "Énergie consommée (kWh)",
@@ -2346,7 +2346,7 @@
                         "grid_consumption": "Consommation du réseau",
                         "learn_more": "Plus d’informations sur la façon de commencer.",
                         "return_to_grid": "Retourné au réseau",
-                        "sub": "Configurer la quantité d'énergie que vous consommez du réseau et, si vous produisez de l'énergie, redonnez au réseau. Cela permet à Home Assistant de suivre votre consommation d'énergie dans toute la maison.",
+                        "sub": "Configurer la quantité d'énergie que vous consommez du réseau et, si vous produisez de l'énergie, redonnez au réseau. Cela permet à Third Eye de suivre votre consommation d'énergie dans toute la maison.",
                         "title": "Réseau électrique"
                     },
                     "new_device_info": "Après avoir configuré un nouvel appareil, cela peut prendre jusqu'à 2 heures pour que de nouvelles données arrivent dans votre tableau de bord énergétique.",
@@ -2366,7 +2366,7 @@
                         "stat_predicted_production": "Prévision de votre production d'énergie solaire",
                         "stat_production": "Votre production d'énergie solaire",
                         "stat_return_to_grid": "L'énergie solaire restituée au réseau",
-                        "sub": "Laissez Home Assistant surveiller vos panneaux solaires et vous donner un aperçu de leurs performances.",
+                        "sub": "Laissez Third Eye surveiller vos panneaux solaires et vous donner un aperçu de leurs performances.",
                         "title": "Panneaux solaires"
                     },
                     "validation": {
@@ -2432,12 +2432,12 @@
                     "picker": {
                         "disable_selected": {
                             "button": "Désactiver la sélection",
-                            "confirm_text": "Les entités désactivées ne seront pas ajoutées à Home Assistant.",
+                            "confirm_text": "Les entités désactivées ne seront pas ajoutées à Third Eye.",
                             "confirm_title": "Voulez-vous désactiver {number} {number, plural,\n  one {entité}\n  other {entités}\n} ?"
                         },
                         "enable_selected": {
                             "button": "Activer la sélection",
-                            "confirm_text": "Cela les rendra à nouveau disponibles dans Home Assistant s'ils sont maintenant désactivés.",
+                            "confirm_text": "Cela les rendra à nouveau disponibles dans Third Eye s'ils sont maintenant désactivés.",
                             "confirm_title": "Voulez-vous activer {number} {number, plural,\n  one {entité}\n  other {entités}\n} ?"
                         },
                         "filter": {
@@ -2457,11 +2457,11 @@
                             "name": "Nom",
                             "status": "Statut"
                         },
-                        "introduction": "Home Assistant tient un registre de chaque entité qu'il a déjà vu au moins une fois et qui peut être identifiée de manière unique. Chacune de ces entités se verra attribuer un identifiant qui sera réservé à cette seule entité.",
-                        "introduction2": "Utilisé le registre des entités pour remplacer le nom, modifier l'ID de l'entité ou supprimer l'entrée de Home Assistant.",
+                        "introduction": "Third Eye tient un registre de chaque entité qu'il a déjà vu au moins une fois et qui peut être identifiée de manière unique. Chacune de ces entités se verra attribuer un identifiant qui sera réservé à cette seule entité.",
+                        "introduction2": "Utilisé le registre des entités pour remplacer le nom, modifier l'ID de l'entité ou supprimer l'entrée de Third Eye.",
                         "remove_selected": {
                             "button": "Supprimer la sélection",
-                            "confirm_partly_text": "Vous ne pouvez supprimer que {removable} des {selected} entités. Les entités ne peuvent être supprimées que lorsque l'intégration ne fournit plus les entités. Parfois, vous devez redémarrer Home Assistant avant de pouvoir supprimer les entités d'une intégration supprimée. Voulez-vous vraiment supprimer les entités obsolètes?",
+                            "confirm_partly_text": "Vous ne pouvez supprimer que {removable} des {selected} entités. Les entités ne peuvent être supprimées que lorsque l'intégration ne fournit plus les entités. Parfois, vous devez redémarrer Third Eye avant de pouvoir supprimer les entités d'une intégration supprimée. Voulez-vous vraiment supprimer les entités obsolètes?",
                             "confirm_partly_title": "Seulement {number} {number, plural,\n  one {entité sélectionnée peut être supprimée}\n  other {entités sélectionnées peuvent être supprimées}\n}.",
                             "confirm_text": "Les entités ne peuvent être supprimées que lorsque l'intégration ne fournit plus les entités.",
                             "confirm_title": "Voulez-vous supprimer {number} {number, plural,\n  one {entité}\n  other {entités}\n} ?"
@@ -2477,7 +2477,7 @@
                         }
                     }
                 },
-                "header": "Configurer Home Assistant",
+                "header": "Configurer Third Eye",
                 "helpers": {
                     "caption": "Entrées",
                     "description": "Éléments pouvant aider à construire des automatisations.",
@@ -2519,7 +2519,7 @@
                     "documentation": "Documentation",
                     "frontend": "interface utilisateur",
                     "frontend_version": "Version interface utilisateur : {version} - {type}",
-                    "home_assistant_logo": "Logo de Home Assistant",
+                    "home_assistant_logo": "Logo de Third Eye",
                     "icons_by": "Icônes par",
                     "integrations": "Intégrations",
                     "issues": "Problèmes",
@@ -2558,11 +2558,11 @@
                             "disabled_cause": "Désactivé par {cause}"
                         },
                         "disable_error": "Échec de l’activation ou de la désactivation de l’intégration",
-                        "disable_restart_confirm": "Redémarrez Home Assistant pour terminer la désactivation de cette intégration",
+                        "disable_restart_confirm": "Redémarrez Third Eye pour terminer la désactivation de cette intégration",
                         "disabled_polling": "Interrogation automatique des données mises à jour désactivée",
                         "documentation": "Documentation",
                         "download_diagnostics": "Télécharger les journaux",
-                        "enable_restart_confirm": "Redémarrez Home Assistant pour terminer l'activation de cette intégration",
+                        "enable_restart_confirm": "Redémarrez Third Eye pour terminer l'activation de cette intégration",
                         "entities": "{count} {count, plural,\n  one {entity}\n  other {entities}\n}",
                         "entity_unavailable": "Entité indisponible",
                         "firmware": "Firmware: {version}",
@@ -2576,9 +2576,9 @@
                         "provided_by_custom_integration": "Fourni par une intégration personnalisée",
                         "reload": "Recharger",
                         "reload_confirm": "L'intégration a été rechargée",
-                        "reload_restart_confirm": "Redémarrer Home Assistant pour finaliser le rechargement de cette intégration",
+                        "reload_restart_confirm": "Redémarrer Third Eye pour finaliser le rechargement de cette intégration",
                         "rename": "Renommer",
-                        "restart_confirm": "Redémarrer Home Assistant pour terminer la suppression de cette intégration",
+                        "restart_confirm": "Redémarrer Third Eye pour terminer la suppression de cette intégration",
                         "services": "{count} {count, plural,\n  one {service}\n  other {services}\n}",
                         "state": {
                             "failed_unload": "Échec du déchargement",
@@ -2613,7 +2613,7 @@
                         },
                         "next": "Suivant",
                         "not_all_required_fields": "Tous les champs obligatoires ne sont pas renseignés.",
-                        "not_loaded": "Cette intégration ne peut être chargée, essayez de redémarrer Home Assistant",
+                        "not_loaded": "Cette intégration ne peut être chargée, essayez de redémarrer Third Eye",
                         "pick_flow_step": {
                             "new_flow": "Non, configurez une autre instance de {integration}",
                             "title": "Nous les avons découverts, vous voulez les mettre en place?"
@@ -2631,7 +2631,7 @@
                         "show_disabled": "Afficher les intégrations désactivées"
                     },
                     "discovered": "Découvert",
-                    "home_assistant_website": "site web de Home Assistant",
+                    "home_assistant_website": "site web de Third Eye",
                     "ignore": {
                         "confirm_delete_ignore": "Cela fera réintégrer l'intégration dans vos intégrations découvertes lorsqu'elle sera découverte. Cela peut nécessiter un redémarrage ou prendre un certain temps.",
                         "confirm_delete_ignore_title": "Arrêter d'ignorer {name} ?",
@@ -2656,13 +2656,13 @@
                     "rename_input_label": "Nom de l'entrée",
                     "search": "Chercher les intégrations"
                 },
-                "introduction": "Ici, il est possible de configurer vos composants et Home Assistant. Tout n'est pas encore configurable à partir de l'interface utilisateur, mais nous y travaillons.",
+                "introduction": "Ici, il est possible de configurer vos composants et Third Eye. Tout n'est pas encore configurable à partir de l'interface utilisateur, mais nous y travaillons.",
                 "logs": {
                     "caption": "Journaux",
                     "clear": "Nettoyer",
                     "copy": "Copier l'entrée du journal",
                     "custom_integration": "intégration personnalisée",
-                    "description": "Afficher les journaux de Home Assistant",
+                    "description": "Afficher les journaux de Third Eye",
                     "details": "Détails du journal ({level})",
                     "error_from_custom_integration": "Cette erreur provient d'une intégration personnalisée",
                     "level": {
@@ -2672,7 +2672,7 @@
                         "info": "INFO",
                         "warning": "ATTENTION"
                     },
-                    "load_full_log": "Charger le journal complet de Home Assistant",
+                    "load_full_log": "Charger le journal complet de Third Eye",
                     "loading_log": "Chargement du journal des erreurs…",
                     "multiple_messages": "message survenu pour la première fois à {time} et apparu {counter} fois.",
                     "no_errors": "Aucune erreur n'a été signalée.",
@@ -2877,7 +2877,7 @@
                     "select_instance": {
                         "header": "Sélectionnez une instance OpenZWave",
                         "introduction": "Vous avez plus d'une instance OpenZWave en cours d'exécution. Quelle instance souhaitez-vous gérer ?",
-                        "none_found": "Nous n'avons pas trouvé d'instance d'OpenZWave. Si vous pensez c'est incorrect, vérifiez vos configurations OpenZWave et MQTT et assurez-vous que Home Assistant peut communiquer avec votre serveur MQTT."
+                        "none_found": "Nous n'avons pas trouvé d'instance d'OpenZWave. Si vous pensez c'est incorrect, vérifiez vos configurations OpenZWave et MQTT et assurez-vous que Third Eye peut communiquer avec votre serveur MQTT."
                     },
                     "services": {
                         "add_node": "Ajouter un nœud",
@@ -2891,7 +2891,7 @@
                     "confirm_delete": "Êtes-vous sûr de vouloir supprimer cette personne?",
                     "confirm_delete2": "Tous les appareils appartenant à cette personne ne seront plus affectés.",
                     "create_person": "Créer une personne",
-                    "description": "Gérez les personnes suivies par Home Assistant",
+                    "description": "Gérez les personnes suivies par Third Eye",
                     "detail": {
                         "admin": "Administrateur",
                         "allow_login": "Autoriser la personne à se connecter",
@@ -2911,7 +2911,7 @@
                         "no_device_tracker_available_intro": "Lorsque vous avez des appareils qui indiquent la présence d'une personne, vous serez en mesure de les affecter à une personne ici. Vous pouvez ajouter votre premier appareil en ajoutant une intégration de détection de présence à partir de la page d'intégration.",
                         "update": "Mettre à jour"
                     },
-                    "introduction": "Ici, vous pouvez définir chaque personne d'intérêt dans Home Assistant.",
+                    "introduction": "Ici, vous pouvez définir chaque personne d'intérêt dans Third Eye.",
                     "learn_more": "En savoir plus sur les personnes",
                     "no_persons_created_yet": "Il semble que vous n’avez encore créé personne.",
                     "note_about_persons_configured_in_yaml": "Remarque: les personnes configurées via configuration.yaml ne peuvent pas être modifiées via l'interface utilisateur.",
@@ -2958,7 +2958,7 @@
                         "headers": {
                             "name": "Nom"
                         },
-                        "introduction": "L'éditeur de scène vous permet de créer et d'éditer des scènes. Suivez le lien ci-dessous pour lire les instructions afin de vous assurer que vous avez correctement configuré Home Assistant.",
+                        "introduction": "L'éditeur de scène vous permet de créer et d'éditer des scènes. Suivez le lien ci-dessous pour lire les instructions afin de vous assurer que vous avez correctement configuré Third Eye.",
                         "learn_more": "En savoir plus sur les scènes",
                         "no_scenes": "Nous n'avons pas pu trouver de scènes modifiables",
                         "only_editable": "Seules les scènes définies dans scenes.yaml sont modifiables.",
@@ -3010,7 +3010,7 @@
                         "headers": {
                             "name": "Nom"
                         },
-                        "introduction": "L'éditeur de script vous permet de créer et d'éditer des scripts. Suivez le lien ci-dessous pour lire les instructions afin de vous assurer que vous avez correctement configuré Home Assistant.",
+                        "introduction": "L'éditeur de script vous permet de créer et d'éditer des scripts. Suivez le lien ci-dessous pour lire les instructions afin de vous assurer que vous avez correctement configuré Third Eye.",
                         "learn_more": "En savoir plus sur les scripts",
                         "no_scripts": "Nous n'avons pas trouvé de scripts modifiables",
                         "run_script": "Exécuter le script",
@@ -3019,7 +3019,7 @@
                 },
                 "server_control": {
                     "caption": "Contrôle du serveur",
-                    "description": "Redémarrer et arrêter le serveur Home Assistant",
+                    "description": "Redémarrer et arrêter le serveur Third Eye",
                     "section": {
                         "reloading": {
                             "automation": "Automatisations",
@@ -3039,7 +3039,7 @@
                             "input_number": "Entrées numériques",
                             "input_select": "Listes de sélection",
                             "input_text": "Entrées de texte",
-                            "introduction": "Certaines parties de Home Assistant peuvent être rechargées sans nécessiter de redémarrage. Le fait de cliquer sur recharger déchargera leur configuration actuelle et chargera la nouvelle.",
+                            "introduction": "Certaines parties de Third Eye peuvent être rechargées sans nécessiter de redémarrage. Le fait de cliquer sur recharger déchargera leur configuration actuelle et chargera la nouvelle.",
                             "min_max": "Min/max entités",
                             "mqtt": "Entités MQTT configurées manuellement",
                             "person": "Personnes",
@@ -3060,10 +3060,10 @@
                             "zone": "Zones"
                         },
                         "server_management": {
-                            "confirm_restart": "Êtes-vous sûr de vouloir redémarrer Home Assistant?",
-                            "confirm_stop": "Êtes-vous sûr de vouloir arrêter Home Assistant?",
+                            "confirm_restart": "Êtes-vous sûr de vouloir redémarrer Third Eye?",
+                            "confirm_stop": "Êtes-vous sûr de vouloir arrêter Third Eye?",
                             "heading": "Gestion du serveur",
-                            "introduction": "Contrôler votre serveur Home Assistant… à partir de Home Assistant.",
+                            "introduction": "Contrôler votre serveur Third Eye… à partir de Third Eye.",
                             "restart": "Redémarrer",
                             "stop": "Arrêter"
                         },
@@ -3126,7 +3126,7 @@
                         "password_not_match": "Le mot de passe ne correspond pas"
                     },
                     "caption": "Utilisateurs",
-                    "description": "Gérer les comptes utilisateur de Home Assistant",
+                    "description": "Gérer les comptes utilisateur de Third Eye",
                     "editor": {
                         "activate_user": "Activer l'utilisateur",
                         "active": "Actif",
@@ -3338,7 +3338,7 @@
                         "add_to_group": "Ajouter au groupe",
                         "entities": "Entités du nœud",
                         "entity_info": "Informations sur l'entité",
-                        "exclude_entity": "Exclure cette entité de Home Assistant",
+                        "exclude_entity": "Exclure cette entité de Third Eye",
                         "group": "Groupe",
                         "header": "Gestion des nœuds Z-Wave",
                         "introduction": "Exécute des commandes Z-Wave affectant individuellement un nœud. Sélectionnez un nœud pour voir une liste des commandes disponibles.",
@@ -3534,7 +3534,7 @@
                         "unknown": "Inconnu"
                     },
                     "provisioned": {
-                        "confirm_unprovision_text": "Si vous annulez le provisionnement de l'appareil, il ne sera pas ajouté à Home Assistant lors de sa mise sous tension. S'il est déjà ajouté à Home Assistant, la suppression de l'appareil configuré ne le supprimera pas de Home Assistant.",
+                        "confirm_unprovision_text": "Si vous annulez le provisionnement de l'appareil, il ne sera pas ajouté à Third Eye lors de sa mise sous tension. S'il est déjà ajouté à Third Eye, la suppression de l'appareil configuré ne le supprimera pas de Third Eye.",
                         "confirm_unprovision_title": "Voulez-vous vraiment annuler le provisionnement de l'appareil ?",
                         "dsk": "DSK",
                         "included": "Inclus",
@@ -3566,7 +3566,7 @@
                         "exclusion_failed": "L'appareil n'a pas pu être retiré. Veuillez consulter les journaux pour plus d'informations.",
                         "exclusion_finished": "L'appareil {id} a été supprimé de votre réseau Z-Wave.",
                         "follow_device_instructions": "Suivez les instructions fournies avec votre appareil pour déclencher une exclusion sur l'appareil.",
-                        "introduction": "Supprimez un appareil de votre réseau Z-Wave et supprimez l'appareil et les entités associés de Home Assistant.",
+                        "introduction": "Supprimez un appareil de votre réseau Z-Wave et supprimez l'appareil et les entités associés de Third Eye.",
                         "start_exclusion": "Commencer l'exclusion",
                         "title": "Supprimer un périphérique Z-Wave"
                     },
@@ -3595,7 +3595,7 @@
             },
             "custom": {
                 "external_panel": {
-                    "complete_access": "Il aura accès à toutes les données de Home Assistant",
+                    "complete_access": "Il aura accès à toutes les données de Third Eye",
                     "hide_message": "Vérifiez la documentation du composant panel_custom pour masquer ce message",
                     "question_trust": "Faites-vous confiance au panneau externe {name} sur {link} ?"
                 }
@@ -3628,7 +3628,7 @@
                         "column_description": "Description",
                         "column_example": "Exemple",
                         "column_parameter": "Paramètre",
-                        "description": "L'outil de développement 'services' vous permet d'appeler n'importe quel service disponible dans Home Assistant.",
+                        "description": "L'outil de développement 'services' vous permet d'appeler n'importe quel service disponible dans Third Eye.",
                         "fill_example_data": "Remplir des exemples de données",
                         "no_template_ui_support": "L'interface utilisateur ne prend pas en charge les modèles, vous pouvez toujours utiliser l'éditeur YAML.",
                         "title": "Services",
@@ -3641,7 +3641,7 @@
                         "attributes": "Attributs",
                         "copy_id": "Copier l'ID dans le presse-papiers",
                         "current_entities": "Entités actuelles",
-                        "description1": "Définir la représentation d'un périphérique dans Home Assistant.",
+                        "description1": "Définir la représentation d'un périphérique dans Third Eye.",
                         "description2": "Cela ne communiquera pas avec le périphérique réel.",
                         "entity": "Entité",
                         "filter_attributes": "Filtrer les attributs",
@@ -3683,7 +3683,7 @@
                     },
                     "templates": {
                         "all_listeners": "Ce modèle écoute tous les événements de changement d'état.",
-                        "description": "Les modèles sont rendus à l'aide du moteur de modèles Jinja2 avec certaines extensions spécifiques de Home Assistant.",
+                        "description": "Les modèles sont rendus à l'aide du moteur de modèles Jinja2 avec certaines extensions spécifiques de Third Eye.",
                         "domain": "Domaine",
                         "editor": "Éditeur de modèles",
                         "entity": "Entité",
@@ -3692,7 +3692,7 @@
                         "no_listeners": "Ce modèle n'écoute aucun événement de changement d'état et ne sera pas mis à jour automatiquement.",
                         "reset": "Réinitialiser au modèle de démonstration",
                         "result_type": "Type de résultat",
-                        "template_extensions": "Extensions de modèles de Home Assistant",
+                        "template_extensions": "Extensions de modèles de Third Eye",
                         "time": "Ce modèle est mis à jour au début de chaque minute.",
                         "title": "Modèle",
                         "unknown_error_template": "Erreur inconnue lors du rendu du modèle"
@@ -3801,7 +3801,7 @@
                         "never_triggered": "Jamais déclenché"
                     },
                     "iframe": {
-                        "error_secure_context": "Impossible de charger les iframes pointant vers des sites Web utilisant le protocole {target_protocol} si Home Assistant est servi par le protocole {context_protocol}."
+                        "error_secure_context": "Impossible de charger les iframes pointant vers des sites Web utilisant le protocole {target_protocol} si Third Eye est servi par le protocole {context_protocol}."
                     },
                     "map": {
                         "reset_focus": "Réinitialiser le focus"
@@ -3816,7 +3816,7 @@
                         "url": "Ouvrir la fenêtre vers {url_path}."
                     },
                     "safe-mode": {
-                        "description": "Home Assistant a rencontré des problèmes lors du chargement de votre configuration et fonctionne désormais en mode sans échec. Jetez un œil au journal des erreurs pour voir ce qui ne va pas.",
+                        "description": "Third Eye a rencontré des problèmes lors du chargement de votre configuration et fonctionne désormais en mode sans échec. Jetez un œil au journal des erreurs pour voir ce qui ne va pas.",
                         "header": "Mode sans échec activé"
                     },
                     "shopping-list": {
@@ -3828,7 +3828,7 @@
                     },
                     "show_more_info": "Afficher plus d'informations",
                     "starting": {
-                        "description": "Home Assistant démarre, veuillez patienter."
+                        "description": "Third Eye démarre, veuillez patienter."
                     }
                 },
                 "changed_toast": {
@@ -4012,7 +4012,7 @@
                             "name": "Humidificateur"
                         },
                         "iframe": {
-                            "description": "La carte Page Web vous permet d'intégrer votre page Web préférée directement dans Home Assistant.",
+                            "description": "La carte Page Web vous permet d'intégrer votre page Web préférée directement dans Third Eye.",
                             "name": "Page Web"
                         },
                         "light": {
@@ -4195,7 +4195,7 @@
                     "migrate": {
                         "header": "Configuration incompatible",
                         "migrate": "Migrer la configuration",
-                        "para_migrate": "Home Assistant peut ajouter automatiquement des identifiants à toutes vos cartes et vues en appuyant sur le bouton «Migrer la configuration».",
+                        "para_migrate": "Third Eye peut ajouter automatiquement des identifiants à toutes vos cartes et vues en appuyant sur le bouton «Migrer la configuration».",
                         "para_no_id": "Cet élément n'a pas d'identifiant. Veuillez ajouter un identifiant à cet élément dans 'ui-lovelace.yaml'."
                     },
                     "move_card": {
@@ -4222,7 +4222,7 @@
                         "close": "Fermer",
                         "empty_config": "Commencer par un tableau de bord vide",
                         "header": "Prenez le contrôle de votre Interface Lovelace",
-                        "para": "Par défaut, Home Assistant maintient votre interface utilisateur et la met à jour lorsque de nouvelles entités ou de nouveaux composants Lovelace UI sont disponibles. Si vous prenez le contrôle, nous ne ferons plus les changements automatiquement pour vous.",
+                        "para": "Par défaut, Third Eye maintient votre interface utilisateur et la met à jour lorsque de nouvelles entités ou de nouveaux composants Lovelace UI sont disponibles. Si vous prenez le contrôle, nous ne ferons plus les changements automatiquement pour vous.",
                         "para_sure": "Êtes-vous sûr de vouloir prendre le contrôle de l'interface utilisateur?",
                         "save": "Prenez le contrôle",
                         "yaml_config": "Pour vous aider à démarrer, voici la configuration actuelle de ce tableau de bord:",
@@ -4287,7 +4287,7 @@
                     "entity_non_numeric": "L'entité est non numérique: {entity}",
                     "entity_not_found": "Entité non disponible: {entity}",
                     "entity_unavailable": "Entité non disponible actuellement : {entity}",
-                    "starting": "Home Assistant démarre, tout n'est peut-être pas encore disponible"
+                    "starting": "Third Eye démarre, tout n'est peut-être pas encore disponible"
                 }
             },
             "mailbox": {
@@ -4300,16 +4300,16 @@
                 "edit_zones": "Modifier les zones"
             },
             "my": {
-                "component_not_loaded": "Cette redirection n'est pas prise en charge par votre instance Home Assistant. Vous avez besoin de l'intégration {integration} pour utiliser cette redirection.",
+                "component_not_loaded": "Cette redirection n'est pas prise en charge par votre instance Third Eye. Vous avez besoin de l'intégration {integration} pour utiliser cette redirection.",
                 "documentation": "documentation",
                 "error": "Une erreur inconnue est survenue",
-                "faq_link": "Ma Home Assistant FAQ",
-                "no_supervisor": "Cette redirection n'est pas prise en charge par votre installation Home Assistant. Il nécessite soit le système d'exploitation Home Assistant, soit la méthode d'installation supervisée par Home Assistant. Pour plus d'informations, consultez le {docs_link} .",
-                "not_supported": "Cette redirection n'est pas prise en charge par votre instance Home Assistant. Vérifiez le {link} pour les redirections prises en charge et la version dans laquelle elles ont été introduites."
+                "faq_link": "Ma Third Eye FAQ",
+                "no_supervisor": "Cette redirection n'est pas prise en charge par votre installation Third Eye. Il nécessite soit le système d'exploitation Third Eye, soit la méthode d'installation supervisée par Third Eye. Pour plus d'informations, consultez le {docs_link} .",
+                "not_supported": "Cette redirection n'est pas prise en charge par votre instance Third Eye. Vérifiez le {link} pour les redirections prises en charge et la version dans laquelle elles ont été introduites."
             },
             "page-authorize": {
                 "abort_intro": "Connexion interrompue",
-                "authorizing_client": "Vous êtes sur le point de donner accès à {clientId} à votre instance de Home Assistant.",
+                "authorizing_client": "Vous êtes sur le point de donner accès à {clientId} à votre instance de Third Eye.",
                 "form": {
                     "error": "Erreur: {error}",
                     "next": "Connexion",
@@ -4412,8 +4412,8 @@
                 "cards": {
                     "demo": {
                         "demo_by": "par {name}",
-                        "introduction": "Bienvenue à la maison ! Vous êtes sur la démo de Home Assistant, où nous présentons les meilleures interfaces utilisateur créées par notre communauté.",
-                        "learn_more": "En savoir plus sur Home Assistant",
+                        "introduction": "Bienvenue à la maison ! Vous êtes sur la démo de Third Eye, où nous présentons les meilleures interfaces utilisateur créées par notre communauté.",
+                        "learn_more": "En savoir plus sur Third Eye",
                         "next_demo": "Prochaine démo"
                     }
                 },
@@ -4459,16 +4459,16 @@
                 "core-config": {
                     "button_detect": "Détecter",
                     "finish": "Suivant",
-                    "intro": "Bonjour {name}, bienvenue dans Home Assistant. Comment voudriez-vous nommer votre maison?",
+                    "intro": "Bonjour {name}, bienvenue dans Third Eye. Comment voudriez-vous nommer votre maison?",
                     "intro_location": "Nous aimerions savoir où vous habitez. Ces informations vous aideront à afficher des informations et à configurer des automatisations basés sur le soleil. Ces données ne sont jamais partagées en dehors de votre réseau.",
                     "intro_location_detect": "Nous pouvons vous aider à renseigner ces informations en adressant une demande unique à un service externe.",
-                    "location_name": "Nom de votre installation Home Assistant",
+                    "location_name": "Nom de votre installation Third Eye",
                     "location_name_default": "Maison"
                 },
                 "finish": "Terminer",
                 "integration": {
                     "finish": "Terminer",
-                    "intro": "Les appareils et les services sont représentés dans Home Assistant sous forme d’intégrations. Vous pouvez les configurer maintenant ou le faire plus tard à partir de l'écran de configuration.",
+                    "intro": "Les appareils et les services sont représentés dans Third Eye sous forme d’intégrations. Vous pouvez les configurer maintenant ou le faire plus tard à partir de l'écran de configuration.",
                     "more_integrations": "Plus"
                 },
                 "intro": "Êtes-vous prêt à réveiller votre maison, à récupérer votre vie privée et à rejoindre une communauté mondiale de bricoleurs?",
@@ -4506,7 +4506,7 @@
             },
             "profile": {
                 "advanced_mode": {
-                    "description": "Home Assistant cache les fonctionnalités et options avancées par défaut. Vous pouvez rendre ces fonctionnalités accessibles en cochant cette case. Il s'agit d'un paramètre spécifique à l'utilisateur et n'a pas d'impact sur les autres utilisateurs utilisant Home Assistant.",
+                    "description": "Third Eye cache les fonctionnalités et options avancées par défaut. Vous pouvez rendre ces fonctionnalités accessibles en cochant cette case. Il s'agit d'un paramètre spécifique à l'utilisateur et n'a pas d'impact sur les autres utilisateurs utilisant Third Eye.",
                     "link_promo": "Apprendre encore plus",
                     "title": "Mode avancé"
                 },
@@ -4556,7 +4556,7 @@
                     "create_failed": "Impossible de créer le jeton d'accès.",
                     "created": "Créé le {date}",
                     "delete_failed": "Impossible de supprimer le jeton d'accès.",
-                    "description": "Créez des jetons d'accès de longue durée pour permettre à vos scripts d'interagir avec votre instance de Home Assistant. Chaque jeton sera valable 10 ans à compter de sa création. Les jetons d'accès longue durée suivants sont actuellement actifs.",
+                    "description": "Créez des jetons d'accès de longue durée pour permettre à vos scripts d'interagir avec votre instance de Third Eye. Chaque jeton sera valable 10 ans à compter de sa création. Les jetons d'accès longue durée suivants sont actuellement actifs.",
                     "empty_state": "Vous n'avez pas encore de jetons d'accès longue durée.",
                     "header": "Jetons d'accès de longue durée",
                     "learn_auth_requests": "Apprenez comment faire des demandes authentifiées.",

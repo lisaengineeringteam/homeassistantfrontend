@@ -30,7 +30,7 @@
     }
   ],
   "lang": "en-US",
-  "name": "Home Assistant Demo",
+  "name": "Third Eye Demo",
   "short_name": "HA Demo",
   "start_url": "/?homescreen=1",
   "theme_color": "#03A9F4"

@@ -38,7 +38,7 @@
             "config": {
                 "areas": {
                     "picker": {
-                        "introduction": "Areas are used to organise where devices are. This information will be used throughout Home Assistant to help you in organising your interface, permissions and integrations with other systems."
+                        "introduction": "Areas are used to organise where devices are. This information will be used throughout Third Eye to help you in organising your interface, permissions and integrations with other systems."
                     }
                 },
                 "automation": {
@@ -88,7 +88,7 @@
                             "state_color": "Colour icons based on state?"
                         },
                         "iframe": {
-                            "description": "The Webpage card allows you to embed your favourite webpage right into Home Assistant."
+                            "description": "The Webpage card allows you to embed your favourite webpage right into Third Eye."
                         },
                         "sensor": {
                             "description": "The Sensor card gives you a quick overview of your sensors state with an optional graph to visualise change over time."

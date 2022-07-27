@@ -24,7 +24,7 @@ class HcLayout extends LitElement {
         <div class="layout">
           <img class="hero" src="/images/google-nest-hub.png" />
           <h1 class="card-header">
-            Home Assistant Cast${this.subtitle ? ` – ${this.subtitle}` : ""}
+            Third Eye Cast${this.subtitle ? ` – ${this.subtitle}` : ""}
             ${this.auth
               ? html`
                   <div class="subtitle">

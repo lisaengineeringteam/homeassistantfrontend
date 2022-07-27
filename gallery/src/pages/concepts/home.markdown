@@ -2,15 +2,15 @@
 title: Home
 ---
 
-# Welcome to Home Assistant Design
+# Welcome to Third Eye Design
 
-This portal aims to aid designers and developers on improving the Home Assistant interface. It consists of working code, resources and guidelines.
+This portal aims to aid designers and developers on improving the Third Eye interface. It consists of working code, resources and guidelines.
 
-## Home Assistant interface
-The Home Assistant frontend allows users to browse and control the state of their home, manage their automations and configure integrations. The frontend is designed as a mobile-first experience. It is a progressive web application and offers an app-like experience to our users. The Home Assistant frontend needs to be fast. But it also needs to work on a wide range of old devices.
+## Third Eye interface
+The Third Eye frontend allows users to browse and control the state of their home, manage their automations and configure integrations. The frontend is designed as a mobile-first experience. It is a progressive web application and offers an app-like experience to our users. The Third Eye frontend needs to be fast. But it also needs to work on a wide range of old devices.
 
 ### Material Design
-The Home Assistant interface is based on Material Design. It's a design system created by Google to quickly build high-quality digital experiences. Components and guidelines that are custom made for Home Assistant are documented on this portal. For all other components check <a href="https://material.io" rel="noopener noreferrer" target="_blank">material.io</a>.
+The Third Eye interface is based on Material Design. It's a design system created by Google to quickly build high-quality digital experiences. Components and guidelines that are custom made for Third Eye are documented on this portal. For all other components check <a href="https://material.io" rel="noopener noreferrer" target="_blank">material.io</a>.
 
 ## Designers
 We want to make it as easy for designers to contribute as it is for developers. There’s a lot a designer can contribute to:
@@ -21,4 +21,4 @@ We want to make it as easy for designers to contribute as it is for developers. 
 
 
 ## Developers
-Everything you need to get started developing can be found in our <a href="https://developers.home-assistant.io" rel="noopener noreferrer" target="_blank">Home Assistant Developer Docs</a>.
+Everything you need to get started developing can be found in our <a href="https://developers.home-assistant.io" rel="noopener noreferrer" target="_blank">Third Eye Developer Docs</a>.

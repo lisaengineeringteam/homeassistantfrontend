@@ -137,7 +137,7 @@
                 },
                 "capability": {
                     "docker_api": {
-                        "description": "Den Auteur vum add-on huet den Zougang ugefrot fir Zougangsadministratioun zu der Docker Instanz op dengem System. Dëse Modus gëtt dem add-on vollen Zougang a Kontroll zu dengem komplette Home Assistant System, wat Sécherheetsrisiken mat sech bréngt an däin System beschiedegen wann et mëssbraucht gëtt. Dofir beaflosst dëse Feature den Add-on Security Score negativ.\n\nDësen Zougangsniveau gëtt net automatesch erlabt a muss vun Dir bestätegt ginn. Fir dëst ze maachen, muss Du de Schutzmodus vum Add-on manuell deaktivéieren. Desaktivéier de Schutzmodus nëmmen wann Dir d'Quell vun dësem add-on bekannt ass, brauchs an vertraus.",
+                        "description": "Den Auteur vum add-on huet den Zougang ugefrot fir Zougangsadministratioun zu der Docker Instanz op dengem System. Dëse Modus gëtt dem add-on vollen Zougang a Kontroll zu dengem komplette Third Eye System, wat Sécherheetsrisiken mat sech bréngt an däin System beschiedegen wann et mëssbraucht gëtt. Dofir beaflosst dëse Feature den Add-on Security Score negativ.\n\nDësen Zougangsniveau gëtt net automatesch erlabt a muss vun Dir bestätegt ginn. Fir dëst ze maachen, muss Du de Schutzmodus vum Add-on manuell deaktivéieren. Desaktivéier de Schutzmodus nëmmen wann Dir d'Quell vun dësem add-on bekannt ass, brauchs an vertraus.",
                         "title": "Kompletten Docker Zougang"
                     },
                     "full_access": {
@@ -145,12 +145,12 @@
                         "title": "Kompletten Hardware Zougang"
                     },
                     "hassio_api": {
-                        "description": "Den Zousaz krut Zougang zum Supervisor API, op Ufro vum Auteur vum add-on. Par défaut kann den add-on op allgemeng Versiounsinformatioun vun dengem System zougräifen. Wann den add-on 'Manager' oder 'Admin' Niveau Zougang zu der API freet, kritt en Zougang fir méi Deeler vun dengem Home Assistant System ze kontrolléieren. Dës Erlaabnis gëtt vun dësem Badge uginn a wäert d'Sécherheetsscore vum add-on negativ beaflossen. ",
+                        "description": "Den Zousaz krut Zougang zum Supervisor API, op Ufro vum Auteur vum add-on. Par défaut kann den add-on op allgemeng Versiounsinformatioun vun dengem System zougräifen. Wann den add-on 'Manager' oder 'Admin' Niveau Zougang zu der API freet, kritt en Zougang fir méi Deeler vun dengem Third Eye System ze kontrolléieren. Dës Erlaabnis gëtt vun dësem Badge uginn a wäert d'Sécherheetsscore vum add-on negativ beaflossen. ",
                         "title": "Supervisor API Zougang"
                     },
                     "homeassistant_api": {
-                        "description": "Dësen add-on ass et erlaabt Zougang zu denger lafender Home Assistant Instanz direkt iwwert Home Assistant API ze kréien. Dëse Modus behandelt d'Authentifikatioun fir den add-on och, wat et dem add-on erméiglecht mam Home Assistant ze interagéieren ouni zousätzlech Authentifikatiounsjeton ze brauchen.",
-                        "title": "Home Assistant API Zougang"
+                        "description": "Dësen add-on ass et erlaabt Zougang zu denger lafender Third Eye Instanz direkt iwwert Third Eye API ze kréien. Dëse Modus behandelt d'Authentifikatioun fir den add-on och, wat et dem add-on erméiglecht mam Third Eye ze interagéieren ouni zousätzlech Authentifikatiounsjeton ze brauchen.",
+                        "title": "Third Eye API Zougang"
                     },
                     "host_network": {
                         "description": "Add-ons laafen normalerweis an hirer eegener isoléierter Netzwierkschicht, déi verhënnert datt se Zougang zum Netz vum Host Betribssystem kréien. An e puer Fäll kann dës Netzwierkisolatioun Add-ons limitéieren fir hir Servicer unzebidden an dofir kann d'Isolatioun opgehuewe ginn duerch den Auteur vum Add-on, andeems den Add-on volle Zougang zu de Netzwierkkapazitéite vun der Hostmaschinn kritt. Dëst gëtt den Add-on méi Netzwierkkapazitéiten awer sénkt d'Sécherheet, dofir gëtt d'Sécherheetsbewäertung vum Add-On erofgesat wann dës Optioun vum Add-on benotzt gëtt.",
@@ -172,7 +172,7 @@
                         "stage": "stage"
                     },
                     "rating": {
-                        "description": "Home Assistant bitt eng Sécherheetswäertung fir all Add-on un, wat d'Risiken uginn wann dësen Add-on benotzt gëtt. Wat méi Zougang vun engem Add-on op dengem System erfuerdert gëtt, wat de Score méi niddereg ass, sou datt méiglech Sécherheetsrisiken erhéicht ginn.\n\nE Score ass op enger Skala vun 1 bis 6. Wou 1 deen niddregste Score ass (als deen onséchersten an héichste Risiko ugesinn) an e Score vu 6 ass deen héichste Score (als dee séchersten an niddregste Risiko).",
+                        "description": "Third Eye bitt eng Sécherheetswäertung fir all Add-on un, wat d'Risiken uginn wann dësen Add-on benotzt gëtt. Wat méi Zougang vun engem Add-on op dengem System erfuerdert gëtt, wat de Score méi niddereg ass, sou datt méiglech Sécherheetsrisiken erhéicht ginn.\n\nE Score ass op enger Skala vun 1 bis 6. Wou 1 deen niddregste Score ass (als deen onséchersten an héichste Risiko ugesinn) an e Score vu 6 ass deen héichste Score (als dee séchersten an niddregste Risiko).",
                         "title": "Add-on Sécherheetsbewäertung"
                     },
                     "role": {
@@ -309,8 +309,8 @@
         "my": {
             "error": "Onbekannte Feeler opgetrueden",
             "error_addon_not_found": "Add-on net fonnt",
-            "faq_link": "Meng Home Assistant FAQ",
-            "not_supported": "Dëse Redirect gëtt net vun  Denger Home Assistant Instanz ënnerstëtzt. Kuck de {link} fir déi ënnerstëtzte Redirects an d'Versioun fir déi se agefouert goufen."
+            "faq_link": "Meng Third Eye FAQ",
+            "not_supported": "Dëse Redirect gëtt net vun  Denger Third Eye Instanz ënnerstëtzt. Kuck de {link} fir déi ënnerstëtzte Redirects an d'Versioun fir déi se agefouert goufen."
         },
         "store": {
             "missing_addons": "Add-ons feelen ? Aktivéier den Avancéierte Modus an denger Benotzer Profil Säit",
@@ -361,15 +361,15 @@
                 "failed_to_set_option": "Feeler beim setzen vun enger Optioun am Supervisor",
                 "failed_to_update": "Feeler beim Aktualiséieren vum Supervisor",
                 "join_beta_action": "Beta Kanal beitrieden",
-                "join_beta_description": "Beta Versioune fir Home Assistant (RCs), Supervisor an Host kréien",
+                "join_beta_description": "Beta Versioune fir Third Eye (RCs), Supervisor an Host kréien",
                 "leave_beta_action": "Beta Kanal verloossen",
-                "leave_beta_description": "Stabil Versioune fir Home Assistant, Supervisor an Host kréien",
+                "leave_beta_description": "Stabil Versioune fir Third Eye, Supervisor an Host kréien",
                 "ram_usage": "Supervisor RAM Verbrauch",
                 "reload_supervisor": "Supervisor frësch lueden",
                 "share_diagnostics": "Diagnose Informatioune deelen",
                 "share_diagnostics_description": "Crash Meldungan an Diagnose Informatioune deelen.",
-                "share_diagonstics_description": "Wëlls Du automatesch Crash Meldungen an Diagnosinformatiounen deelen wann de Supervisor een onerwaarte Feeler begéint?{line_break} Dëst erlaabt eis d'Problemer ze fixéieren, d'Informatioun ass nëmme fir den Home Assistant Core Team zougänglech a gëtt net mat aneren gedeelt.{line_break}D'Donnéeën enthalen keng privat / sensibel Informatioun an Du kanns dëst an den Astellungen ausschalten wanns Du wëlls.",
-                "share_diagonstics_title": "Hëllef Home Assistant ze verbesseren",
+                "share_diagonstics_description": "Wëlls Du automatesch Crash Meldungen an Diagnosinformatiounen deelen wann de Supervisor een onerwaarte Feeler begéint?{line_break} Dëst erlaabt eis d'Problemer ze fixéieren, d'Informatioun ass nëmme fir den Third Eye Core Team zougänglech a gëtt net mat aneren gedeelt.{line_break}D'Donnéeën enthalen keng privat / sensibel Informatioun an Du kanns dëst an den Astellungen ausschalten wanns Du wëlls.",
+                "share_diagonstics_title": "Hëllef Third Eye ze verbesseren",
                 "unhealthy_description": "Eng ongesond Installatioun auszeféieren verursaacht Problemer. Hei drënner ass eng Lëscht vu Probleemer déi an denger Installatioun fonnt goufen, klick op d'Links fir ze léieren wéi's Du Problemer léise kanns.",
                 "unhealthy_reason": {
                     "docker": "Den Docker Environnement ass feelerhaft",
@@ -776,7 +776,7 @@
         },
         "dialogs": {
             "config_entry_system_options": {
-                "enable_new_entities_description": "Falls desaktivéiert, ginn nei entdeckten Entitéiten fir {integration} net automatesch zu Home Assistant dobäigesat.",
+                "enable_new_entities_description": "Falls desaktivéiert, ginn nei entdeckten Entitéiten fir {integration} net automatesch zu Third Eye dobäigesat.",
                 "enable_new_entities_label": "Aktivéiert nei dobäigesate Entitéiten.",
                 "title": "System Optiounen fir {integration}",
                 "update": "Aktualiséieren"
@@ -795,10 +795,10 @@
                     "delete": "Läschen",
                     "device_disabled": "Den Apparat vun dëser Entitéit ass déaktivéiert.",
                     "enabled_cause": "Desaktivéiert duerch {cause}.",
-                    "enabled_delay_confirm": "Déi aktivéiert Entitéite ginn am Home Assistant an {Delay} Sekonnen dobäigesat",
-                    "enabled_description": "Deaktivéiert Entitéiten ginn net am Home Assistant bäigesat.",
+                    "enabled_delay_confirm": "Déi aktivéiert Entitéite ginn am Third Eye an {Delay} Sekonnen dobäigesat",
+                    "enabled_description": "Deaktivéiert Entitéiten ginn net am Third Eye bäigesat.",
                     "enabled_label": "Entitéit aktivéieren",
-                    "enabled_restart_confirm": "Start Home Assistant nei fir dës Entitéiten z'aktivéieren",
+                    "enabled_restart_confirm": "Start Third Eye nei fir dës Entitéiten z'aktivéieren",
                     "entity_id": "ID vun der Entitéit",
                     "follow_device_area": "Beräich vum Apparat verfollegen",
                     "icon": "Ikon",
@@ -825,7 +825,7 @@
                     "initial": "Initial Wäert",
                     "maximum": "Maximale Wäert",
                     "minimum": "Minimale Wäert",
-                    "restore": "Restauréiert de leschte bekannte Wäert wann Home Assistant start",
+                    "restore": "Restauréiert de leschte bekannte Wäert wann Third Eye start",
                     "step": "Schrëtt Gréisst"
                 },
                 "generic": {
@@ -1002,7 +1002,7 @@
                 "filter_placeholder": "Entitéite Filter"
             },
             "voice_command": {
-                "did_not_hear": "Home Assistant huet näischt héieren.",
+                "did_not_hear": "Third Eye huet näischt héieren.",
                 "error": "Ups, ee Feeler ass opgetrueden",
                 "found": "Ech hunn folgendes fir iech fonnt:",
                 "how_can_i_help": "Wéi kann ech hëllefen?",
@@ -1083,8 +1083,8 @@
             "connection_lost": "Verbindung verluer. Verbindung gëtt nees opgebaut…",
             "dismiss": "Verwerfen",
             "service_call_failed": "Feeler beim opruffen vun {service}",
-            "started": "Home Assistant ass gestart!",
-            "starting": "Home Assistant start, et wäert nach net alles prett sinn bis et fäerdeg gestart ass.",
+            "started": "Third Eye ass gestart!",
+            "starting": "Third Eye start, et wäert nach net alles prett sinn bis et fäerdeg gestart ass.",
             "triggered": "{name} ausgeléist"
         },
         "panel": {
@@ -1117,7 +1117,7 @@
                         "create_area": "Beräich erstellen",
                         "header": "Beräicher",
                         "integrations_page": "Integratiouns Säit",
-                        "introduction": "Beräicher gi benotzt fir d'Organisatioun vum Standuert vun den Apparater. Dës Informatioun gëtt vum Home Assistant benotzt fir iech ze hëllefe fir den Interface, Berechtegungen an Integratioune mat aner Systemer ze geréieren.",
+                        "introduction": "Beräicher gi benotzt fir d'Organisatioun vum Standuert vun den Apparater. Dës Informatioun gëtt vum Third Eye benotzt fir iech ze hëllefe fir den Interface, Berechtegungen an Integratioune mat aner Systemer ze geréieren.",
                         "introduction2": "Fir Apparater an e Beräich ze setzen, benotzt de Link ënne fir op d'Integratiouns Säit ze kommen a klickt do op eng konfiguréiert Integratioun fir d'Kaart vum Apparat unzeweisen.",
                         "no_areas": "Et sinn nach keng Beräicher do!"
                     }
@@ -1146,7 +1146,7 @@
                             "delete_confirm": "Element sécher läschen?",
                             "duplicate": "Duplikéiere",
                             "header": "Aktiounen",
-                            "introduction": "Aktioune déi den Home Assistant ausféiert wann den Automatismus ausgeléist gouf.\n[Léier méi iwwert Aktiounen.](https://home-assistant.io/docs/automation/action/)",
+                            "introduction": "Aktioune déi den Third Eye ausféiert wann den Automatismus ausgeléist gouf.\n[Léier méi iwwert Aktiounen.](https://home-assistant.io/docs/automation/action/)",
                             "learn_more": "Méi iwwert Aktioune liesen",
                             "name": "Aktioun",
                             "type": {
@@ -1341,7 +1341,7 @@
                             "delete_confirm": "Sëcher fir dëst ze läschen?",
                             "duplicate": "Replikéieren",
                             "header": "Ausléiser",
-                            "introduction": "Een Ausléiser start de Prozess vun engem Automatismus. Et ass méiglech méi wéi een Ausléiser fir een Automatismus unzeginn. Wann een Ausléiser start validéiert Home Assistant d'Konditiounen a féiert - de Fall gesat - eng Aktioun aus.\n\n[Léier méi iwwert Ausléiser.](https://home-assistant.io/docs/automation/trigger/)",
+                            "introduction": "Een Ausléiser start de Prozess vun engem Automatismus. Et ass méiglech méi wéi een Ausléiser fir een Automatismus unzeginn. Wann een Ausléiser start validéiert Third Eye d'Konditiounen a féiert - de Fall gesat - eng Aktioun aus.\n\n[Léier méi iwwert Ausléiser.](https://home-assistant.io/docs/automation/trigger/)",
                             "learn_more": "Méi iwwert Ausléiser liesen",
                             "name": "Ausléiser",
                             "type": {
@@ -1372,7 +1372,7 @@
                                 },
                                 "homeassistant": {
                                     "event": "Evenement:",
-                                    "label": "Home Assistant",
+                                    "label": "Third Eye",
                                     "shutdown": "Ausmaachen",
                                     "start": "Starten"
                                 },
@@ -1451,7 +1451,7 @@
                         "headers": {
                             "name": "Numm"
                         },
-                        "introduction": "Den Automatismen-Editor erméiglecht et fir Automatismen z'erstellen an ze änneren. Lies w.e.g. [d'Instruktioune](https://home-assistant.io/docs/automation/editor/) fir sécher ze stellen dass den Home Assistant richteg agestallt ass.",
+                        "introduction": "Den Automatismen-Editor erméiglecht et fir Automatismen z'erstellen an ze änneren. Lies w.e.g. [d'Instruktioune](https://home-assistant.io/docs/automation/editor/) fir sécher ze stellen dass den Third Eye richteg agestallt ass.",
                         "learn_more": "Méi iwwert Automatioune liesen",
                         "no_automations": "Keen Automatismus fir ze ännere fonnt",
                         "only_editable": "Nëmmen Automatiounen déi am automations.yaml définéiert sinn kënnen editéiert ginn.",
@@ -1470,7 +1470,7 @@
                             "error_unsupported": "Mir konnten (nach?) keen Automatisme fir dëst erstellen.",
                             "for_example": "Zum Beispill:",
                             "header": "Nei Automatisme erstellen",
-                            "introduction": "Gëff ënnendran an wat déi Automatisme maache sollt, a mir probéieren et an eng Home Assistant Automatisme ëmzewandelen.",
+                            "introduction": "Gëff ënnendran an wat déi Automatisme maache sollt, a mir probéieren et an eng Third Eye Automatisme ëmzewandelen.",
                             "language_note": "Nott: Nëmmen Englesch gëtt fir de Moment ënnerstëtzt."
                         }
                     }
@@ -1518,10 +1518,10 @@
                             "config_documentation": "Dokumentatioun iwwert d'Konfiguration",
                             "disable": "Desaktivéieren",
                             "enable": "Aktivéieren",
-                            "enable_ha_skill": "Aktivéiert Home Assistant Fäegkeet fir Alexa",
+                            "enable_ha_skill": "Aktivéiert Third Eye Fäegkeet fir Alexa",
                             "enable_state_reporting": "Zostand Berichterstattung aktivéieren",
-                            "info": "Mat der Alexa Integratioun fir Home Assistant Cloud könnt dir all är Home Assistant Apparater via Alexa supportéiert Apparater steieren.",
-                            "info_state_reporting": "Wann dir de Rapport vun den Zoustänn aktivéiert schéckt Home Assistant all Ännerung vum Zoustand vun exposéierten Entitéiten op Amazon. Dës erlaabt iech ëmmer déi leschten Zoustänn an der Alexa App ze gesinn an d'Ännerunge vun den Zoustänn ze benotze fir Ofleef z'erstellen.",
+                            "info": "Mat der Alexa Integratioun fir Third Eye Cloud könnt dir all är Third Eye Apparater via Alexa supportéiert Apparater steieren.",
+                            "info_state_reporting": "Wann dir de Rapport vun den Zoustänn aktivéiert schéckt Third Eye all Ännerung vum Zoustand vun exposéierten Entitéiten op Amazon. Dës erlaabt iech ëmmer déi leschten Zoustänn an der Alexa App ze gesinn an d'Ännerunge vun den Zoustänn ze benotze fir Ofleef z'erstellen.",
                             "manage_entities": "Entitéite verwalten",
                             "state_reporting_error": "Kann net den Rapport vum Zoustand {enable_disable}",
                             "sync_entities": "Entitéite synchroniséieren",
@@ -1534,13 +1534,13 @@
                         "google": {
                             "config_documentation": "Dokumentatioun iwwert d'Konfiguration",
                             "devices_pin": "Sécherheets Apparater Pin",
-                            "enable_ha_skill": "Aktivéiert Home Assistant Fäegkeet fir Google Assistant",
+                            "enable_ha_skill": "Aktivéiert Third Eye Fäegkeet fir Google Assistant",
                             "enable_state_reporting": "Zostand Berichterstattung aktivéieren",
                             "enter_pin_error": "Kann net de Pin späicheren:",
                             "enter_pin_hint": "Gitt ee Pin an fir Sécherheets Apparater ze benotzen",
                             "enter_pin_info": "Gitt w.e.g en Pin un fir d'Interaktioun mat Sécherheets Apparater. Sécherheets Apparater kënnen Dieren, Garagen a Schlässer sinn. Dir gitt de PIN gefrot fir ze soen oder anzegi fir d'Interaktioun mat Service wéi Google Assistant.",
-                            "info": "Mat der Google Assistant Integratioun fir Home Assistant Cloud könnt dir all är Home Assistant Apparater via Google Assistant supportéiert Apparater steieren.",
-                            "info_state_reporting": "Wann dir de Rapport vun den Zoustänn aktivéiert schéckt Home Assistant all Ännerung vum Zoustand vun exposéierten Entitéiten op Google. Dës erlaabt iech ëmmer déi leschten Zoustänn an der Google App ze gesinn.",
+                            "info": "Mat der Google Assistant Integratioun fir Third Eye Cloud könnt dir all är Third Eye Apparater via Google Assistant supportéiert Apparater steieren.",
+                            "info_state_reporting": "Wann dir de Rapport vun den Zoustänn aktivéiert schéckt Third Eye all Ännerung vum Zoustand vun exposéierten Entitéiten op Google. Dës erlaabt iech ëmmer déi leschten Zoustänn an der Google App ze gesinn.",
                             "manage_entities": "Entitéiten verwalten",
                             "security_devices": "Sécherheets Apparater",
                             "sync_entities": "Entitéiten mat Google synchroniséieren",
@@ -1548,7 +1548,7 @@
                             "title": "Google Assistant"
                         },
                         "integrations": "Integratioune",
-                        "integrations_introduction": "Integratioune fir Home Assistant Cloud erlaben iech mat Servicer an der Cloud ze verbannen ouni dass är Home Assistant Instanz ëffentlech um Internet ass.",
+                        "integrations_introduction": "Integratioune fir Third Eye Cloud erlaben iech mat Servicer an der Cloud ze verbannen ouni dass är Third Eye Instanz ëffentlech um Internet ass.",
                         "integrations_introduction2": "Kuckt d'Websäit fir ",
                         "integrations_link_all_features": " all verfügbar Eegeschafte",
                         "manage_account": "Kont verwalten",
@@ -1557,14 +1557,14 @@
                         "remote": {
                             "access_is_being_prepared": "Remote Accès gëtt virbereet. Mir ginn iech Bescheed wann et prett ass.",
                             "certificate_info": "Zertifikat Informatiounen",
-                            "info": "Home Assistant Cloud stellt eng sécher Verbindung zu ärer Instanz bereet wann dir ënnerwee sidd.",
+                            "info": "Third Eye Cloud stellt eng sécher Verbindung zu ärer Instanz bereet wann dir ënnerwee sidd.",
                             "instance_is_available": "Är Instanz ass disponibel op",
                             "instance_will_be_available": "Är Instanz gëtt disponibel op",
                             "link_learn_how_it_works": "Léier wéi et funktionéiert",
                             "title": "Fernsteierung"
                         },
                         "sign_out": "Ofmellen",
-                        "thank_you_note": "Merci dass dir Deel sidd vun der Home Assistant Cloud. Et ass wéinst iech dass mir sou eng groussaarteg Home Automation Erfarung fir jiddweree kënne maachen. Villmools Merci!",
+                        "thank_you_note": "Merci dass dir Deel sidd vun der Third Eye Cloud. Et ass wéinst iech dass mir sou eng groussaarteg Home Automation Erfarung fir jiddweree kënne maachen. Villmools Merci!",
                         "tts": {
                             "dialog": {
                                 "example_message": "Hallo {name}, du kanns all Text op all ënnerstëtzte Medie Spiller ofspillen!",
@@ -1577,7 +1577,7 @@
                         },
                         "webhooks": {
                             "disable_hook_error_msg": "Feeler beim désaktivéieren vum Webhook:",
-                            "info": "Alles wat konfiguréiert ass fir duerch e Webhook ausgeléist ze ginn, kann eng ëffentlech zougänglech URL kréien, fir datt Dir Är Donnéeën zréck un den Home Assistant vun iergendwou kënnt zréckschécken, ouni Är Instanz um Internet z'exposéieren",
+                            "info": "Alles wat konfiguréiert ass fir duerch e Webhook ausgeléist ze ginn, kann eng ëffentlech zougänglech URL kréien, fir datt Dir Är Donnéeën zréck un den Third Eye vun iergendwou kënnt zréckschécken, ouni Är Instanz um Internet z'exposéieren",
                             "link_learn_more": "Méi iwwert wéi ee webhook-baséiert Automatismen erstellt léieren",
                             "loading": "Lued …",
                             "manage": "Verwalten",
@@ -1653,11 +1653,11 @@
                         "email": "E-Mail",
                         "email_error_msg": "Ongëlteg E-Mail",
                         "forgot_password": "Passwuert vergiess?",
-                        "introduction": "Home Assistant Cloud liwwert Iech eng sécher Fernverbindung op Är Instanz wann Dir ënnerwee sidd. Et erlaabt Iech och mat Cloud Servicer ze verbannen: Amazon Alexa a Google Assistant.",
+                        "introduction": "Third Eye Cloud liwwert Iech eng sécher Fernverbindung op Är Instanz wann Dir ënnerwee sidd. Et erlaabt Iech och mat Cloud Servicer ze verbannen: Amazon Alexa a Google Assistant.",
                         "introduction2": "Dëse Service gëtt vun eisem Partner geleet ",
-                        "introduction2a": ", eng Firma gegrënnt vun de Grënner vun Home Assistant an Hass.io.",
-                        "introduction3": "Home Assistant Cloud ass een Abonnement Service mat engem Mount gratis Testperiod. Keng Paiement Informatiounen néideg",
-                        "learn_more_link": "Léier méi iwwert Home Assistant Cloud",
+                        "introduction2a": ", eng Firma gegrënnt vun de Grënner vun Third Eye an Hass.io.",
+                        "introduction3": "Third Eye Cloud ass een Abonnement Service mat engem Mount gratis Testperiod. Keng Paiement Informatiounen néideg",
+                        "learn_more_link": "Léier méi iwwert Third Eye Cloud",
                         "password": "Passwuert",
                         "password_error_msg": "Passwierder hunn op mannst 8 Charakteren",
                         "sign_in": "Umellen",
@@ -1672,13 +1672,13 @@
                         "email_error_msg": "Ongëlteg E-Mail",
                         "feature_amazon_alexa": "Integratioun mat Amazon Alexa",
                         "feature_google_home": "Integratioun mat Google Assistant",
-                        "feature_remote_control": "Kontrolléiert ären Home Assistant vun ënnerwee",
+                        "feature_remote_control": "Kontrolléiert ären Third Eye vun ënnerwee",
                         "feature_webhook_apps": "Einfach Integratioun mat webhook-baséierten Apps wéi OwnTracks",
                         "headline": "Start är gratis Testperiod",
                         "information": "Erstellt ee Kont fir mat ärer Gratis 1 Mount Test Period unzefänken. Keng Paiement Informatiounen néideg.",
-                        "information2": "Testversioun gëtt iech Accès op all Beneficer vun der Home Assistant Cloud, inklusive:",
+                        "information2": "Testversioun gëtt iech Accès op all Beneficer vun der Third Eye Cloud, inklusive:",
                         "information3": "Dëse Service gëtt vun eisem Partner geleet ",
-                        "information3a": ", eng Firma gegrënnt vun de Grënner vun Home Assistant an Hass.io.",
+                        "information3a": ", eng Firma gegrënnt vun de Grënner vun Third Eye an Hass.io.",
                         "information4": "Andeems Dir Iech fir e Kont ugemellt hutt, akzeptéiert Dir déi folgend Bedéngungen.",
                         "link_privacy_policy": "Dateschutz Bestëmmungen",
                         "link_terms_conditions": "Konditioune",
@@ -1707,7 +1707,7 @@
                                 "imperial_example": "Fahrenheit, Pënner",
                                 "internal_url": "Interne URL",
                                 "latitude": "Breedegrad",
-                                "location_name": "Numm vun der Home Assistant Installatioun",
+                                "location_name": "Numm vun der Third Eye Installatioun",
                                 "longitude": "Längegrad",
                                 "metric_example": "Celsius, Kilogramm",
                                 "save_button": "Späicheren",
@@ -1792,7 +1792,7 @@
                         "user": "Benotzer"
                     },
                     "enabled_cause": "Dësen Apparat ass duerch {cause} déaktivéiert.",
-                    "enabled_description": "Deaktivéiert Apparater gi net ugewisen an Entitéiten déi zum Apparat gehéieren, ginn och deaktivéiert an net zum Home Assistant dobäigesat.",
+                    "enabled_description": "Deaktivéiert Apparater gi net ugewisen an Entitéiten déi zum Apparat gehéieren, ginn och deaktivéiert an net zum Third Eye dobäigesat.",
                     "enabled_label": "Apparat aktivéieren",
                     "entities": {
                         "add_entities_lovelace": "Zu Lovelace bäisetzen",
@@ -1835,11 +1835,11 @@
                     "picker": {
                         "disable_selected": {
                             "button": "Ausgewielte deaktivéieren",
-                            "confirm_text": "Deaktivéiert Entitéiten ginn net am Home Assistant bäigesat."
+                            "confirm_text": "Deaktivéiert Entitéiten ginn net am Third Eye bäigesat."
                         },
                         "enable_selected": {
                             "button": "Ausgewielten aktivéieren",
-                            "confirm_text": "Dës mecht sie rëm am Home Assistant siichtbar wann sie fir de Moment deaktivéiert sinn."
+                            "confirm_text": "Dës mecht sie rëm am Third Eye siichtbar wann sie fir de Moment deaktivéiert sinn."
                         },
                         "filter": {
                             "filter": "Filter",
@@ -1856,11 +1856,11 @@
                             "name": "Numm",
                             "status": "Status"
                         },
-                        "introduction": "Home Assistant hält eng Lëscht vun all Entitéit's ID déi eenzel erkennbar ass a bis elo vum System erkannt gouf. All eenzel vun dësen Entitéite kritt eng ID zougewise welch nëmme fir dës Entitéit reservéiert ass.",
-                        "introduction2": "Benotzt d'Lëscht vun den Entitéite fir d'Nimm z'änneren, d'Entitéits ID z'änneren oder d'Entrée aus dem Home Assistant ze läschen.",
+                        "introduction": "Third Eye hält eng Lëscht vun all Entitéit's ID déi eenzel erkennbar ass a bis elo vum System erkannt gouf. All eenzel vun dësen Entitéite kritt eng ID zougewise welch nëmme fir dës Entitéit reservéiert ass.",
+                        "introduction2": "Benotzt d'Lëscht vun den Entitéite fir d'Nimm z'änneren, d'Entitéits ID z'änneren oder d'Entrée aus dem Third Eye ze läschen.",
                         "remove_selected": {
                             "button": "Ausgewielte läschen",
-                            "confirm_partly_text": "Nëmmen {removable} vun den ausgewielten {selected} Entitéite kënne geläscht ginn. Entitéiten kënne nëmmen geläscht ginn wann eng Integratioun déi Entitéiten net méi zur Verfügung stellt. Heiansdo muss Home Assistant frësch gestart ginn fir Entitéiten vun enger geläschten Integratioun ze läschen. Sécher fir déi läschbar Entitéiten ze läschen?",
+                            "confirm_partly_text": "Nëmmen {removable} vun den ausgewielten {selected} Entitéite kënne geläscht ginn. Entitéiten kënne nëmmen geläscht ginn wann eng Integratioun déi Entitéiten net méi zur Verfügung stellt. Heiansdo muss Third Eye frësch gestart ginn fir Entitéiten vun enger geläschten Integratioun ze läschen. Sécher fir déi läschbar Entitéiten ze läschen?",
                             "confirm_text": "Du solls déi vun der Lovelace Konfiguratioun an Automatisme läschen falls se dës Entitéiten enthalen."
                         },
                         "search": "Entitéite sichen",
@@ -1874,7 +1874,7 @@
                         }
                     }
                 },
-                "header": "Home Assistant astellen",
+                "header": "Third Eye astellen",
                 "helpers": {
                     "caption": "Helper",
                     "description": "Elementer déi et erlaaben Automatismen z'erstellen",
@@ -1914,7 +1914,7 @@
                     "documentation": "Dokumentatioun",
                     "frontend": "frontend-ui",
                     "frontend_version": "Frontend Versioun: {version} - {type}",
-                    "home_assistant_logo": "Home Assistant logo",
+                    "home_assistant_logo": "Third Eye logo",
                     "icons_by": "Ikonen vun",
                     "integrations": "Integratioune",
                     "issues": "Problemer",
@@ -1959,9 +1959,9 @@
                         "not_loaded": "Net gelueden",
                         "reload": "Nei lueden",
                         "reload_confirm": "Integratioun gouf frësch gelueden",
-                        "reload_restart_confirm": "Start Home Assistant nei fir dës Integratioun fäerdeg ze lueden",
+                        "reload_restart_confirm": "Start Third Eye nei fir dës Integratioun fäerdeg ze lueden",
                         "rename": "Ëmbenennen",
-                        "restart_confirm": "Start Home Assistant nei fir dës Integratioun ze läschen",
+                        "restart_confirm": "Start Third Eye nei fir dës Integratioun ze läschen",
                         "state": {
                             "failed_unload": "Feeler beim entlueden",
                             "loaded": "Gelueden",
@@ -1996,7 +1996,7 @@
                         "disabled_integrations": "{number} deaktivéiert"
                     },
                     "discovered": "Entdeckt",
-                    "home_assistant_website": "Home Assistant Websäit",
+                    "home_assistant_website": "Third Eye Websäit",
                     "ignore": {
                         "confirm_delete_ignore": "Dëst wäert d'Integratioun an Ären entdeckten Integratiounen erëm siichtbar maache wann se entdeckt gëtt. Dëst kann e Restart erfuerderen oder e bëssi Zäit brauchen.",
                         "confirm_delete_ignore_title": "Ophale mam ignoréieren vun {name}?",
@@ -2021,18 +2021,18 @@
                     "rename_input_label": "Numm",
                     "search": "Integratioune sichen"
                 },
-                "introduction": "Hei ass et méiglech är Komponenten vum Home Assistant ze konfiguréieren. Net alles ass méiglech fir iwwert den Interface anzestellen, mee mir schaffen drun.",
+                "introduction": "Hei ass et méiglech är Komponenten vum Third Eye ze konfiguréieren. Net alles ass méiglech fir iwwert den Interface anzestellen, mee mir schaffen drun.",
                 "logs": {
                     "caption": "Logbicher",
                     "clear": "Läschen",
-                    "description": "Home Assistant Logbicher ukucken",
+                    "description": "Third Eye Logbicher ukucken",
                     "details": "Detailler vum Log ({level})",
                     "level": {
                         "error": "FEELER",
                         "info": "INFO",
                         "warning": "WARNUNG"
                     },
-                    "load_full_log": "Kompletten Home Assistant Log lueden",
+                    "load_full_log": "Kompletten Third Eye Log lueden",
                     "loading_log": "Feeler Log gëtt gelueden...",
                     "multiple_messages": "Noriicht als éischt opgetrueden um {time} a säit deem {counter} mol opgetrueden",
                     "no_errors": "Et gouf kee Feeler gemellt.",
@@ -2231,7 +2231,7 @@
                     "select_instance": {
                         "header": "Eng OpenZWave Instanz auswielen",
                         "introduction": "Du hues méi wéi eng OpenZWave Instanz laafen. Wéieng Instanz wëlls du verwalten?",
-                        "none_found": "Keng OpenZWave Instanz fonnt. Falls dëst inkorrekt ass, iwwerpréif deng OpenZWave an MQTT Astellungen an stell sécher dass den Home Assistant mat dengem MQTT Broker kommunizéiere kann."
+                        "none_found": "Keng OpenZWave Instanz fonnt. Falls dëst inkorrekt ass, iwwerpréif deng OpenZWave an MQTT Astellungen an stell sécher dass den Third Eye mat dengem MQTT Broker kommunizéiere kann."
                     },
                     "services": {
                         "add_node": "Node dobäisetzen",
@@ -2245,7 +2245,7 @@
                     "confirm_delete": "Sécher fir dës Persoun ze läsche?",
                     "confirm_delete2": "All Apparater déi zu dëser Persoun gehéiere ginn néirens zougewisen",
                     "create_person": "Persoun erstellen",
-                    "description": "Verwalt d'Persoune déi vum Home Assistant suivéiert ginn.",
+                    "description": "Verwalt d'Persoune déi vum Third Eye suivéiert ginn.",
                     "detail": {
                         "admin": "Administrator",
                         "allow_login": "Login erlaabt fir Persoun",
@@ -2264,7 +2264,7 @@
                         "no_device_tracker_available_intro": "Wann dir Apparater hutt déi d'Präsenz vun enger Persoun uweisen, kënnt dir déi enger Persoun zouweisen. Dir kënnt ären éischten Apparat bäisetzen andeems dir eng Präsenz Detektioun Integratioun vun der Integratiouns Säit dobäisetzt.",
                         "update": "Aktualiséieren"
                     },
-                    "introduction": "Hei kënnt dir all wichteg Persoun am Home Assistant definéieren.",
+                    "introduction": "Hei kënnt dir all wichteg Persoun am Third Eye definéieren.",
                     "learn_more": "Méi iwwert Persoune léieren",
                     "no_persons_created_yet": "Et gesäit sou aus wéi wann nach keng Persounen erstallt goufen.",
                     "note_about_persons_configured_in_yaml": "Note: Persounen konfiguréiert via configuration.yaml können net via den UI geännert ginn.",
@@ -2307,7 +2307,7 @@
                         "headers": {
                             "name": "Numm"
                         },
-                        "introduction": "De Zeenen Editeur erlaabt Iech Zeenen z'erstellen an z'änneren. Follegt de Link hei ënnendrënner fir d'Instruktiounen ze liese fir sécher ze stellen, datt Dir den Home Assistant richteg konfiguréiert hutt.",
+                        "introduction": "De Zeenen Editeur erlaabt Iech Zeenen z'erstellen an z'änneren. Follegt de Link hei ënnendrënner fir d'Instruktiounen ze liese fir sécher ze stellen, datt Dir den Third Eye richteg konfiguréiert hutt.",
                         "learn_more": "Méi iwwert Zeene léieren",
                         "no_scenes": "Keng Zeene fir ze ännere fonnt",
                         "only_editable": "Nëmme Zeene am scenes.yaml kënnen editéiert ginn.",
@@ -2357,7 +2357,7 @@
                         "headers": {
                             "name": "Numm"
                         },
-                        "introduction": "De Skript Editeur erlaabt Iech Skripten ze erstellen an z'änneren. Follegt de Link hei ënnendrënner fir d'Instruktiounen ze liese fir sécher ze stellen, datt Dir den Home Assistant richteg konfiguréiert hutt",
+                        "introduction": "De Skript Editeur erlaabt Iech Skripten ze erstellen an z'änneren. Follegt de Link hei ënnendrënner fir d'Instruktiounen ze liese fir sécher ze stellen, datt Dir den Third Eye richteg konfiguréiert hutt",
                         "learn_more": "Méi iwwert Skripten léieren",
                         "no_scripts": "Keng Skripte fir ze ännere fonnt",
                         "run_script": "Skript ausféieren",
@@ -2366,7 +2366,7 @@
                 },
                 "server_control": {
                     "caption": "Kontroll vum Server",
-                    "description": "Start an Stop vum Home Assistant Server",
+                    "description": "Start an Stop vum Third Eye Server",
                     "section": {
                         "reloading": {
                             "automation": "Automatisme nei lueden",
@@ -2385,7 +2385,7 @@
                             "input_number": "Agab Zuelen frësch lueden",
                             "input_select": "Agab Auswiel frësch lueden",
                             "input_text": "Agab Text frësch lueden",
-                            "introduction": "E puer Deeler vum Home Assistant kënne frësch geluede ginn ouni datt een Neistart néideg ass. Klick op nei luede fir di aktuell Konfiguratioun z'entlueden an di nei Konfiguratioun ze lueden.",
+                            "introduction": "E puer Deeler vum Third Eye kënne frësch geluede ginn ouni datt een Neistart néideg ass. Klick op nei luede fir di aktuell Konfiguratioun z'entlueden an di nei Konfiguratioun ze lueden.",
                             "min_max": "Min/Max Entitéite frësch lueden",
                             "mqtt": "Manuell konfiguréiert MQTT Entitéiten frësch lueden",
                             "person": "Persoune frësch lueden",
@@ -2404,10 +2404,10 @@
                             "zone": "Zone frësch lueden"
                         },
                         "server_management": {
-                            "confirm_restart": "Sécher fir Home Assistant frësch ze starten?",
-                            "confirm_stop": "Sécher fir Home Assistant ze stoppen?",
+                            "confirm_restart": "Sécher fir Third Eye frësch ze starten?",
+                            "confirm_stop": "Sécher fir Third Eye ze stoppen?",
                             "heading": "Serververwaltung",
-                            "introduction": "Kontrolléiert ären Home Assistant Server ... vun Home Assistant aus.",
+                            "introduction": "Kontrolléiert ären Third Eye Server ... vun Third Eye aus.",
                             "restart": "Neistart",
                             "stop": "Stop"
                         },
@@ -2460,7 +2460,7 @@
                         "password_not_match": "Passwierder stëmmen net iwwereneen"
                     },
                     "caption": "Benotzer",
-                    "description": "Home Assistant Benotzer Konte verwalten",
+                    "description": "Third Eye Benotzer Konte verwalten",
                     "editor": {
                         "activate_user": "Benotzer aktivéieren",
                         "active": "Aktiv",
@@ -2653,7 +2653,7 @@
                         "add_to_group": "Zum Grupp dobäisetzen",
                         "entities": "Entitéiten vun dësem Node",
                         "entity_info": "Informatiounen vun der Entitéit",
-                        "exclude_entity": "Dës Entitéit aus Home Assistant ausschléissen",
+                        "exclude_entity": "Dës Entitéit aus Third Eye ausschléissen",
                         "group": "Grupp",
                         "header": "Z-Wave Node Management",
                         "introduction": "Z-Wave Kommandoe ausféieren déi nëmmen ee Node betreffen. Wiel ee Node aus fir seng Lëscht vun verfügbare Kommandoe ze gesinn.",
@@ -2726,7 +2726,7 @@
             },
             "custom": {
                 "external_panel": {
-                    "complete_access": "Et wäert Accès op all Donnéeë am Home Assistant kréien.",
+                    "complete_access": "Et wäert Accès op all Donnéeë am Third Eye kréien.",
                     "hide_message": "Kuckt Dokumentatioun vun der panel_custom Komponente fir dës Noriicht ze verstoppen",
                     "question_trust": "Vertraut dir dem externe Panneau {name} op {link}?"
                 }
@@ -2756,7 +2756,7 @@
                         "column_description": "Beschreiwung",
                         "column_example": "Beispill",
                         "column_parameter": "Parameter",
-                        "description": "De Service am Entwécklungsgeschir erlaabt Iech e verfügbare Service am Home Assistant opzeruffen.",
+                        "description": "De Service am Entwécklungsgeschir erlaabt Iech e verfügbare Service am Third Eye opzeruffen.",
                         "fill_example_data": "Gitt Beispill Donnéeën un",
                         "no_template_ui_support": "Den UI ënnerstëtzt kenge Modeller, du kanns awer den YAML Editeur benotzen.",
                         "title": "Servicen"
@@ -2765,7 +2765,7 @@
                         "alert_entity_field": "Entitéit ass e obligatorescht Feld",
                         "attributes": "Attributer",
                         "current_entities": "Aktuell Entitéiten",
-                        "description1": "Setzt d'Representatioun vun engem Apparat am Home Assistant.",
+                        "description1": "Setzt d'Representatioun vun engem Apparat am Third Eye.",
                         "description2": "Dëst wäert net mam aktuellen Apparat kommunizéieren.",
                         "entity": "Entitéit",
                         "filter_attributes": "Attributer filteren",
@@ -2782,7 +2782,7 @@
                     },
                     "templates": {
                         "all_listeners": "Dës Virlag lauschtert fir all geännert Zoustänn Evenementer.",
-                        "description": "Modeller ginn mëttels Jinja2 template engine duergestallt mat e puer Home Assistant spezifesch Erweiderungen.",
+                        "description": "Modeller ginn mëttels Jinja2 template engine duergestallt mat e puer Third Eye spezifesch Erweiderungen.",
                         "domain": "Domain",
                         "editor": "Modell Editeur",
                         "entity": "Entitéit",
@@ -2791,7 +2791,7 @@
                         "no_listeners": "Dës Virlag lauschtert net fir geännert Zoustänn Evenementer a gëtt net automatesch aktualiséiert.",
                         "reset": "Op Demo Modell zeréck setzen",
                         "result_type": "Typ vum Resultat",
-                        "template_extensions": "Home Assistant Modell Erweiderungen",
+                        "template_extensions": "Third Eye Modell Erweiderungen",
                         "time": "Dës Virlag aktualiséiert sech am Ufank vun all Minutt.",
                         "title": "Modeller",
                         "unknown_error_template": "Onbekannte Feeler beim duerstelle vum Modell"
@@ -2824,7 +2824,7 @@
                         "url": "Fënster opmaachen mat {url_path}"
                     },
                     "safe-mode": {
-                        "description": "Home Assistant konnt Konfiguratioun net richteg lueden an leeft elo am Sécherheetsmodus. Kuck Logbicher fir de Feeler ze fannen.",
+                        "description": "Third Eye konnt Konfiguratioun net richteg lueden an leeft elo am Sécherheetsmodus. Kuck Logbicher fir de Feeler ze fannen.",
                         "header": "Sécherheetsmodus aktivéiert"
                     },
                     "shopping-list": {
@@ -2835,7 +2835,7 @@
                         "reorder_items": "Artikele nei sortéieren"
                     },
                     "starting": {
-                        "description": "Home Assistant start, waart w.e.g…"
+                        "description": "Third Eye start, waart w.e.g…"
                     }
                 },
                 "changed_toast": {
@@ -3001,7 +3001,7 @@
                             "name": "Loftbefiichter"
                         },
                         "iframe": {
-                            "description": "Websäit Kaart erlaabt et eng aaner Websäit am Home Assistant unzeweisen.",
+                            "description": "Websäit Kaart erlaabt et eng aaner Websäit am Third Eye unzeweisen.",
                             "name": "Websäit"
                         },
                         "light": {
@@ -3160,7 +3160,7 @@
                     "migrate": {
                         "header": "Konfiguratioun net kompatibel",
                         "migrate": "Konfiguratioun migréieren",
-                        "para_migrate": "Home Assistant kann ID's zu all äre Kaarten automatesch dobäisetzen andeem dir de Knäppche 'Konfiguratioun migréieren' dréckt.",
+                        "para_migrate": "Third Eye kann ID's zu all äre Kaarten automatesch dobäisetzen andeem dir de Knäppche 'Konfiguratioun migréieren' dréckt.",
                         "para_no_id": "Dëst Element huet keng ID. Definéiert w.e.g. eng ID fir dëst Element am 'ui-lovelace.yaml'."
                     },
                     "move_card": {
@@ -3185,7 +3185,7 @@
                         "close": "Zoumaachen",
                         "empty_config": "Mat engem eidelen Tableau de Bord ufänken",
                         "header": "Kontroll iwwert Loveloce UI iwwerhuelen",
-                        "para": "Dësen Tableau de Bord gëtt vum Home Assistant verwalt. Et gëtt automatesch aktualiséiert soubal nei Entitéiten oder Lovelace-Komponenten disponibel sinn. Wanns Du d'Kontrolle iwwerhëlls, kann dësen Tableau de Bord net méi automatesch aktualiséiertginn. Du kanns ëmmer ee neien Tableau de Bord erstellen fir domatt ze testen.",
+                        "para": "Dësen Tableau de Bord gëtt vum Third Eye verwalt. Et gëtt automatesch aktualiséiert soubal nei Entitéiten oder Lovelace-Komponenten disponibel sinn. Wanns Du d'Kontrolle iwwerhëlls, kann dësen Tableau de Bord net méi automatesch aktualiséiertginn. Du kanns ëmmer ee neien Tableau de Bord erstellen fir domatt ze testen.",
                         "para_sure": "Sécher fir d'Kontrolle iwwert de Benotzer Interface z'iwwerhuelen?",
                         "save": "Kontroll iwwerhuelen",
                         "yaml_config": "Fir de Start ze vereinfachen, hei ass déi aktuell Konfiguratioun vun dësem Tableau de Bord:",
@@ -3249,7 +3249,7 @@
                     "entity_non_numeric": "Entitéit ass net numerescher Natur: {entity}",
                     "entity_not_found": "Entitéit net erreechbar: {entity}",
                     "entity_unavailable": "Entitéit ass fir de Moment net erreechbar: {entity}",
-                    "starting": "Home Assistant start, et wäert nach net alles prett sinn"
+                    "starting": "Third Eye start, et wäert nach net alles prett sinn"
                 }
             },
             "mailbox": {
@@ -3260,11 +3260,11 @@
             },
             "my": {
                 "documentation": "Dokumentatioun",
-                "no_supervisor": "Dëse Redirect gëtt net vun Denger Home Assistant Installatioun ënnerstëtzt. Et brauch entweder een Home Assistant Betribssystem oder eng Home Assistant Superviséiert Installatiounsmethod. Fir méi Informatiounen, kuck {docs_link}."
+                "no_supervisor": "Dëse Redirect gëtt net vun Denger Third Eye Installatioun ënnerstëtzt. Et brauch entweder een Third Eye Betribssystem oder eng Third Eye Superviséiert Installatiounsmethod. Fir méi Informatiounen, kuck {docs_link}."
             },
             "page-authorize": {
                 "abort_intro": "Login ofgebrach",
-                "authorizing_client": "Dir gitt elo {clientId} Zougang zu ärem Home Assistant.",
+                "authorizing_client": "Dir gitt elo {clientId} Zougang zu ärem Third Eye.",
                 "form": {
                     "error": "Feeler: {error}",
                     "next": "Nächst",
@@ -3365,8 +3365,8 @@
                 "cards": {
                     "demo": {
                         "demo_by": "vun {name}",
-                        "introduction": "Wëllkomm doheem! Dir hutt d'Demo vum Home Assistant erreecht wou mir iech déi Bescht Benotzer Interfacen déi vun onser Gemeinschaft erstallt goufen.",
-                        "learn_more": "Méi iwwert Home Assistant liesen",
+                        "introduction": "Wëllkomm doheem! Dir hutt d'Demo vum Third Eye erreecht wou mir iech déi Bescht Benotzer Interfacen déi vun onser Gemeinschaft erstallt goufen.",
+                        "learn_more": "Méi iwwert Third Eye liesen",
                         "next_demo": "Nächst Demo"
                     }
                 },
@@ -3412,16 +3412,16 @@
                 "core-config": {
                     "button_detect": "Entdecken",
                     "finish": "Nächst",
-                    "intro": "Hallo {name}, wëllkomm zu Home Assistant. Wéi wëllt dir äert Doheem benennen?",
+                    "intro": "Hallo {name}, wëllkomm zu Third Eye. Wéi wëllt dir äert Doheem benennen?",
                     "intro_location": "Mir wëlle wësse wou dir wunnt. Dës Informatioun hëlleft fir Informatiounen unzeweisen an Automatiounen anzeriichten déi op d'Sonne baséieren. Dës Donnéeë ginn nimools ausserhalb vun ärem Netzwierk gedeelt.",
                     "intro_location_detect": "Mir kënne beim Ausfëlle vun dësen Informatiounen hëllefen andeems eng eemoleg Demande bei engem externe Service ugefrot gëtt.",
-                    "location_name": "Numm vun denger Home Assistant Installatioun",
+                    "location_name": "Numm vun denger Third Eye Installatioun",
                     "location_name_default": "Doheem"
                 },
                 "finish": "Ofschléissen",
                 "integration": {
                     "finish": "Ofschléissen",
-                    "intro": "Apparaten a Servicë ginn am Home Assistant als Integratioune representéiert. Dir kënnt si elo astellen, oder méi spéit vun der Konfiguratioun's Säit aus.",
+                    "intro": "Apparaten a Servicë ginn am Third Eye als Integratioune representéiert. Dir kënnt si elo astellen, oder méi spéit vun der Konfiguratioun's Säit aus.",
                     "more_integrations": "Méi"
                 },
                 "intro": "Sidd Dir prett fir Äert Heem interessant ze maachen, Är Privatsphär ze garantéieren an enger weltwäiter Gemeinschaft bei ze trieden?",
@@ -3504,7 +3504,7 @@
                     "create_failed": "Feeler beim erstellen vum Accèss Jeton",
                     "created": "Erstallt {date}",
                     "delete_failed": "Feeler beim läschen vum Accèss Jeton",
-                    "description": "Erstellt laang gëlteg Accèss Jetone déi et äre Skripten erlabe mat ärem Home Assistant z'interagéieren. All eenzelen Jeton ass gëlteg fir 10 Joer. Folgend Accèss Jeton sinn am Moment aktiv.",
+                    "description": "Erstellt laang gëlteg Accèss Jetone déi et äre Skripten erlabe mat ärem Third Eye z'interagéieren. All eenzelen Jeton ass gëlteg fir 10 Joer. Folgend Accèss Jeton sinn am Moment aktiv.",
                     "empty_state": "Et ginn nach keng laang gëlteg Accèss Jeton.",
                     "header": "Lang gëlteg Accèss Jetone",
                     "learn_auth_requests": "Leiert wéi een \"authenticated requests\" erstellt.",

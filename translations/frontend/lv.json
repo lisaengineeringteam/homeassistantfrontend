@@ -330,7 +330,7 @@
         },
         "dialogs": {
             "config_entry_system_options": {
-                "enable_new_entities_description": "Ja atspējots, jaunatklātās {integration} integrācijas vienības netiks automātiski pievienotas Home Assistant.",
+                "enable_new_entities_description": "Ja atspējots, jaunatklātās {integration} integrācijas vienības netiks automātiski pievienotas Third Eye.",
                 "enable_new_entities_label": "Iespējot tikko pievienotās vienības.",
                 "title": "Sistēmas opcijas {integration} integrācijai",
                 "update": "Atjaunināt"
@@ -343,7 +343,7 @@
                     "confirm_delete": "Vai tiešām vēlaties dzēst šo vienību?",
                     "delete": "Dzēst",
                     "enabled_cause": "Atspējots dēļ {cause}.",
-                    "enabled_description": "Atspējotās vienības netiks pievienotas Home Assistant.",
+                    "enabled_description": "Atspējotās vienības netiks pievienotas Third Eye.",
                     "enabled_label": "Iespējot vienību",
                     "entity_id": "Vienības ID",
                     "follow_device_area": "Sekot ierīces apgabalam",
@@ -522,7 +522,7 @@
                         "create_area": "Izveidot Apgabalu",
                         "header": "Apgabali",
                         "integrations_page": "Integrāciju lapa",
-                        "introduction": "Apgabali tiek izmantoti, lai organizētu ierīces atrašanās vietu. Šī informācija tiks izmantota daudzviet Home Assistant, lai palīdzētu organizēt lietotāja saskarni, atļaujas un integrācijas ar citām sistēmām.",
+                        "introduction": "Apgabali tiek izmantoti, lai organizētu ierīces atrašanās vietu. Šī informācija tiks izmantota daudzviet Third Eye, lai palīdzētu organizēt lietotāja saskarni, atļaujas un integrācijas ar citām sistēmām.",
                         "introduction2": "Lai piesaistītu ierīces noteiktam apgabalam, izmantojiet zemāk esošo saiti, lai pārietu uz integrāciju lapu un tad noklikšķiniet uz konfigurētas integrācijas, lai nonāktu pie ierīču kartīšu saraksta."
                     }
                 },
@@ -536,7 +536,7 @@
                             "delete_confirm": "Vai tiešām vēlaties dzēst?",
                             "duplicate": "Dublicēt",
                             "header": "Darbības",
-                            "introduction": "Darbības nosaka, ko Home Assistant darīs, kad tiks aktivizēta automatizācija.",
+                            "introduction": "Darbības nosaka, ko Third Eye darīs, kad tiks aktivizēta automatizācija.",
                             "learn_more": "Uzziniet vairāk par darbībām",
                             "name": "Darbība",
                             "type": {
@@ -656,7 +656,7 @@
                             "delete_confirm": "Vai tiešām vēlaties dzēst?",
                             "duplicate": "Dublicēt",
                             "header": "Trigeri",
-                            "introduction": "Trigeri ir tas, kas sāk automatizācijas noteikuma apstrādi. Vienam noteikumam ir iespējams norādīt vairākus trigerus. Kad trigeris sāk, Home Assistant apstiprina nosacījumus, ja tādi ir, un izsauc darbību.",
+                            "introduction": "Trigeri ir tas, kas sāk automatizācijas noteikuma apstrādi. Vienam noteikumam ir iespējams norādīt vairākus trigerus. Kad trigeris sāk, Third Eye apstiprina nosacījumus, ja tādi ir, un izsauc darbību.",
                             "learn_more": "Uzziniet vairāk par trigeriem",
                             "name": "Izsaukt",
                             "type": {
@@ -684,7 +684,7 @@
                                 },
                                 "homeassistant": {
                                     "event": "Notikums:",
-                                    "label": "Home Assistant",
+                                    "label": "Third Eye",
                                     "shutdown": "Izslēgt",
                                     "start": "Sākt"
                                 },
@@ -753,7 +753,7 @@
                         "headers": {
                             "name": "Nosaukums"
                         },
-                        "introduction": "Automatizācijas redaktors ļauj jums izveidot un rediģēt automatizācijas. Lūdzu, sekojiet saitei zemāk, lai pārliecinātos, ka esat pareizi konfigurējis Home Assistant.",
+                        "introduction": "Automatizācijas redaktors ļauj jums izveidot un rediģēt automatizācijas. Lūdzu, sekojiet saitei zemāk, lai pārliecinātos, ka esat pareizi konfigurējis Third Eye.",
                         "learn_more": "Uzziniet vairāk par automatizācijām",
                         "no_automations": "Mēs nevarējām atrast rediģējamas automatizācijas",
                         "only_editable": "Rediģēt var tikai tās automatizācijas, kas definētas automations.yaml.",
@@ -802,7 +802,7 @@
                 },
                 "core": {
                     "caption": "Vispārīgi",
-                    "description": "Mainiet vispārējo Home Assistant konfigurāciju",
+                    "description": "Mainiet vispārējo Third Eye konfigurāciju",
                     "section": {
                         "core": {
                             "core_config": {
@@ -815,7 +815,7 @@
                                 "imperial_example": "Fārenheita, mārciņas",
                                 "internal_url": "Iekšējais URL",
                                 "latitude": "Platums",
-                                "location_name": "Jūsu Home Assistant instalācijas nosaukums",
+                                "location_name": "Jūsu Third Eye instalācijas nosaukums",
                                 "longitude": "Garums",
                                 "metric_example": "Celsija, kilogrami",
                                 "save_button": "Saglabāt",
@@ -920,12 +920,12 @@
                     "picker": {
                         "disable_selected": {
                             "button": "Atspējot atlasītās",
-                            "confirm_text": "Atspējotās vienības netiks pievienotas Home Assistant.",
+                            "confirm_text": "Atspējotās vienības netiks pievienotas Third Eye.",
                             "confirm_title": "Vai vēlaties atspējot{number} {number, plural,\n  one {vienību}\n  other {vienības}\n}?"
                         },
                         "enable_selected": {
                             "button": "Iespējot atlasītās",
-                            "confirm_text": "Tas atkārtoti padarīs tās pieejamas Home Assistant, ja tās šobrīd ir atspējotas.",
+                            "confirm_text": "Tas atkārtoti padarīs tās pieejamas Third Eye, ja tās šobrīd ir atspējotas.",
                             "confirm_title": "Vai vēlaties iespējot {number} {number, plural,\n  one {vienību}\n  other {vienības}\n}?"
                         },
                         "filter": {
@@ -944,8 +944,8 @@
                             "name": "Nosaukums",
                             "status": "Statuss"
                         },
-                        "introduction": "Home Assistant uztur visu vienību reģistru, kuras jebkad parādījušās un kuras var unikāli identificēt. Katrai no šīm vienībām piešķirts vienības ID, kas tiks rezervēts tikai šai vienībai.",
-                        "introduction2": "Izmantojiet vienību reģistru, lai pārlabotu nosaukumu, mainītu vienības ID vai noņemtu ierakstu no Home Assistant.",
+                        "introduction": "Third Eye uztur visu vienību reģistru, kuras jebkad parādījušās un kuras var unikāli identificēt. Katrai no šīm vienībām piešķirts vienības ID, kas tiks rezervēts tikai šai vienībai.",
+                        "introduction2": "Izmantojiet vienību reģistru, lai pārlabotu nosaukumu, mainītu vienības ID vai noņemtu ierakstu no Third Eye.",
                         "remove_selected": {
                             "button": "Noņemt atlasītās",
                             "confirm_partly_title": "Tikai {number} {number, plural,\n  one {atlasītā vienība}\n  other {atlasītās vienības}\n} var tikt dzēstas.",
@@ -963,7 +963,7 @@
                         }
                     }
                 },
-                "header": "Home Assistant konfigurēšana",
+                "header": "Third Eye konfigurēšana",
                 "helpers": {
                     "caption": "Palīgi",
                     "description": "Pārvaldiet elementus, kas palīdz veidot automatizācijas",
@@ -993,11 +993,11 @@
                     "built_using": "Veidots, izmantojot",
                     "caption": "Informācija",
                     "custom_uis": "Pielāgots UI:",
-                    "description": "Informācija par šo Home Assistant instalāciju",
+                    "description": "Informācija par šo Third Eye instalāciju",
                     "documentation": "Dokumentācija",
                     "frontend": "lietotāja saskarne",
                     "frontend_version": "Lietotāja saskarnes versija: {version} - {type}",
-                    "home_assistant_logo": "Home Assistant logotips",
+                    "home_assistant_logo": "Third Eye logotips",
                     "icons_by": "Ikonas no",
                     "integrations": "Integrācijas",
                     "issues": "Problēmas",
@@ -1026,9 +1026,9 @@
                         "no_area": "Nav apgabala",
                         "reload": "Pārlādēt",
                         "reload_confirm": "Integrācija tika pārlādēta",
-                        "reload_restart_confirm": "Restartējiet Home Assistant, lai pabeigtu šīs integrācijas pārlādēšanu",
+                        "reload_restart_confirm": "Restartējiet Third Eye, lai pabeigtu šīs integrācijas pārlādēšanu",
                         "rename": "Pārdēvēt",
-                        "restart_confirm": "Restartēt Home Assistant, lai pabeigtu šīs integrācijas noņemšanu",
+                        "restart_confirm": "Restartēt Third Eye, lai pabeigtu šīs integrācijas noņemšanu",
                         "services": "{count} {count, plural,\n  one {serviss}\n  other {servisi}\n}",
                         "system_options": "Sistēmas opcijas",
                         "unnamed_entry": "Ieraksts bez nosaukuma"
@@ -1056,7 +1056,7 @@
                         "show_disabled": "Rādīt atspējotās integrācijas"
                     },
                     "discovered": "Atklātās",
-                    "home_assistant_website": "Home Assistant tīmekļa vietne",
+                    "home_assistant_website": "Third Eye tīmekļa vietne",
                     "ignore": {
                         "confirm_delete_ignore": "Tas ļaus integrācijai atkal parādīties starp atklātajām integrācijām. Atklāšanai var būt nepieciešama restartēšana vai nepieciešams ilgāks laiks.",
                         "confirm_delete_ignore_title": "Pārtraukt ignorēt {name}?",
@@ -1081,13 +1081,13 @@
                     "rename_input_label": "Ieraksta nosaukums",
                     "search": "Meklēt integrācijas"
                 },
-                "introduction": "Šeit iespējams konfigurēt Jūsu komponentus un pašu Home Assistant. Pagaidām ne visu ir iespējams konfigurēt, izmantojot lietotāja saskarni, bet mēs strādājam pie tā.",
+                "introduction": "Šeit iespējams konfigurēt Jūsu komponentus un pašu Third Eye. Pagaidām ne visu ir iespējams konfigurēt, izmantojot lietotāja saskarni, bet mēs strādājam pie tā.",
                 "logs": {
                     "caption": "Žurnāli",
                     "clear": "Notīrīt",
-                    "description": "Pārskatiet Home Assistant žurnālus",
+                    "description": "Pārskatiet Third Eye žurnālus",
                     "details": "Detaļas ({level})",
-                    "load_full_log": "Ielādēt pilnu Home Assistant žurnālu",
+                    "load_full_log": "Ielādēt pilnu Third Eye žurnālu",
                     "loading_log": "Kļūdu žurnāla ielāde...",
                     "multiple_messages": "ieraksts pirmo reizi parādījās {time} un pārādas {counter} reizes",
                     "no_errors": "Par kļūdām nav ziņots",
@@ -1167,7 +1167,7 @@
                     "confirm_delete": "Vai tiešām vēlaties dzēst šo personu?",
                     "confirm_delete2": "Visas šai personai piederošās ierīces kļus par nepiesaistītām.",
                     "create_person": "Izveidot personu",
-                    "description": "Pārvaldīt personas, kuras izseko Home Assistant.",
+                    "description": "Pārvaldīt personas, kuras izseko Third Eye.",
                     "detail": {
                         "admin": "Administrators",
                         "allow_login": "Atļaut personai pieteikties",
@@ -1186,7 +1186,7 @@
                         "no_device_tracker_available_intro": "Ja jums ir ierīces, kas norāda uz personas klātbūtni, jūs šeit varēsit tās piesaistīt personai. Pirmo ierīci varat pievienot, integrāciju lapā pievienojot klātbūtnes noteikšanas integrāciju.",
                         "update": "Atjaunināt"
                     },
-                    "introduction": "Šeit jūs varat definēt personas izmantošanai Home Assistant.",
+                    "introduction": "Šeit jūs varat definēt personas izmantošanai Third Eye.",
                     "no_persons_created_yet": "Izskatās, ka vēl neesat izveidojis nevienu personu.",
                     "note_about_persons_configured_in_yaml": "Ievērībai: configuration.yaml konfigurētās personas nevar rediģēt, izmantojot lietotāja saskarni.",
                     "person_not_found": "Mēs nevarējām atrast personu, kuru mēģinājāt rediģēt.",
@@ -1225,7 +1225,7 @@
                         "delete_scene": "Dzēst ainu",
                         "edit_scene": "Rediģēt ainu",
                         "header": "Ainu redaktors",
-                        "introduction": "Ainu redaktors ļauj Jums izveidot un rediģēt ainas. Lūdzu, sekojiet saitei zemāk, lai izlasītu instrukciju, ka Jūs esat pareizi konfigurējis Home Assistant.",
+                        "introduction": "Ainu redaktors ļauj Jums izveidot un rediģēt ainas. Lūdzu, sekojiet saitei zemāk, lai izlasītu instrukciju, ka Jūs esat pareizi konfigurējis Third Eye.",
                         "learn_more": "Uzzināt vairāk par ainām",
                         "no_scenes": "Mēs nevarējām atrast nevienu rediģējamu ainu",
                         "only_editable": "Rediģēt var tikai ainas, kas definētas scenes.yaml.",
@@ -1252,7 +1252,7 @@
                         "add_script": "Pievienot jaunu skriptu",
                         "edit_script": "Rediģēt skriptu",
                         "header": "Skriptu redaktors",
-                        "introduction": "Skriptu redaktors ļauj jums izveidot un rediģēt skriptus. Lūdzu, izmantojiet zemāk esošo saiti, lai izlasītu instrukcijas, lai pārliecinātos, ka esat pareizi konfigurējis Home Assistant.",
+                        "introduction": "Skriptu redaktors ļauj jums izveidot un rediģēt skriptus. Lūdzu, izmantojiet zemāk esošo saiti, lai izlasītu instrukcijas, lai pārliecinātos, ka esat pareizi konfigurējis Third Eye.",
                         "learn_more": "Uzziniet vairāk par skriptiem",
                         "no_scripts": "Rediģējami skripti nav atrasti",
                         "show_info": "Rādīt informāciju par skriptu"
@@ -1260,7 +1260,7 @@
                 },
                 "server_control": {
                     "caption": "Servera vadība",
-                    "description": "Home Assistant servera restartēšana un apturēšana",
+                    "description": "Third Eye servera restartēšana un apturēšana",
                     "section": {
                         "reloading": {
                             "automation": "Pārlādēt automatizācijas",
@@ -1268,7 +1268,7 @@
                             "group": "Pārlādēt grupas, grupas vienības un notify servisus",
                             "heading": "YAML konfigurācijas pārlādēšana",
                             "history_stats": "Pārlādēt history stats vienības",
-                            "introduction": "Atsevišķas Home Assistant daļas var pārlādēt bez nepieciešamības restartēt. Veicot pārlādēšanu, pašreizējā YAML konfigurācija tiks atiestatīta un tiks ielādēta jaunā.",
+                            "introduction": "Atsevišķas Third Eye daļas var pārlādēt bez nepieciešamības restartēt. Veicot pārlādēšanu, pašreizējā YAML konfigurācija tiks atiestatīta un tiks ielādēta jaunā.",
                             "mqtt": "Pārlādēt mqtt vienības",
                             "person": "Pārlādēt personas",
                             "reload": "Pārlādēt {domain}",
@@ -1281,10 +1281,10 @@
                             "zone": "Pārlādēt zonas"
                         },
                         "server_management": {
-                            "confirm_restart": "Vai tiešām vēlaties restartēt Home Assistant?",
-                            "confirm_stop": "Vai tiešām vēlaties apturēt Home Assistant?",
+                            "confirm_restart": "Vai tiešām vēlaties restartēt Third Eye?",
+                            "confirm_stop": "Vai tiešām vēlaties apturēt Third Eye?",
                             "heading": "Servera pārvaldība",
-                            "introduction": "Kontrolējiet savu Home Assistant serveri… no Home Assistant.",
+                            "introduction": "Kontrolējiet savu Third Eye serveri… no Third Eye.",
                             "restart": "Restartēt",
                             "stop": "Apturēt"
                         },
@@ -1497,7 +1497,7 @@
             },
             "custom": {
                 "external_panel": {
-                    "complete_access": "Tai būs pieejami visi dati no Home Assistant",
+                    "complete_access": "Tai būs pieejami visi dati no Third Eye",
                     "hide_message": "Pārskatiet komponentes panel_custom dokumentus, lai paslēptu šo paziņojumu",
                     "question_trust": "Vai Jūs uzticaties ārējam panelim {name} uz {link}?"
                 }
@@ -1652,7 +1652,7 @@
                     "migrate": {
                         "header": "Nesaderīga konfigurācija",
                         "migrate": "Pārvietot konfigurāciju",
-                        "para_migrate": "Home Assistant var automātiski pievienot ID visām kartītēm un skatiem, nospiežot pogu \"Pārvietot konfigurāciju\".",
+                        "para_migrate": "Third Eye var automātiski pievienot ID visām kartītēm un skatiem, nospiežot pogu \"Pārvietot konfigurāciju\".",
                         "para_no_id": "Šim elementam nav ID. Lūdzu, pievienojiet ID šim elementam 'ui-lovelace.yaml' failā."
                     },
                     "raw_editor": {
@@ -1670,7 +1670,7 @@
                     "save_config": {
                         "close": "Aizvērt",
                         "header": "Pārņemt kontroli pār savu Lovelace lietotāja saskarni",
-                        "para": "Šo infopaneli pašlaik konktrolē Home Assistant, automātiski atjauninot, kad kļūst pieejamas jaunas vienības vai Lovelace UI komponenti. Ja pārņemsiet kontroli, šis informācijas panelis vairs netiks automātiski atjaunināts. Izmēģinājumiem jūs vienmēr varat izveidot jaunu infopaneli konfigurācijā.",
+                        "para": "Šo infopaneli pašlaik konktrolē Third Eye, automātiski atjauninot, kad kļūst pieejamas jaunas vienības vai Lovelace UI komponenti. Ja pārņemsiet kontroli, šis informācijas panelis vairs netiks automātiski atjaunināts. Izmēģinājumiem jūs vienmēr varat izveidot jaunu infopaneli konfigurācijā.",
                         "para_sure": "Vai tiešām vēlaties pārņemt kontroli pār lietotāja saskarni?",
                         "save": "Pārņemt kontroli"
                     }
@@ -1708,7 +1708,7 @@
             },
             "page-authorize": {
                 "abort_intro": "Pieteikšanās pārtraukta",
-                "authorizing_client": "Jūs gatavojaties piešķirt {clientId} piekļuvi jūsu Home Assistant.",
+                "authorizing_client": "Jūs gatavojaties piešķirt {clientId} piekļuvi jūsu Third Eye.",
                 "form": {
                     "error": "Kļūda: {error}",
                     "next": "Tālāk",
@@ -1810,8 +1810,8 @@
                 "cards": {
                     "demo": {
                         "demo_by": "{name}",
-                        "introduction": "Laipni lūgts mājās! Jūs esat sasniedzis Home Assistant demonstrāciju, kurā mēs parādām labākos lietotāja kopienas izveidotos lietotāja interfeisus.",
-                        "learn_more": "Uzziniet vairāk par Home Assistant",
+                        "introduction": "Laipni lūgts mājās! Jūs esat sasniedzis Third Eye demonstrāciju, kurā mēs parādām labākos lietotāja kopienas izveidotos lietotāja interfeisus.",
+                        "learn_more": "Uzziniet vairāk par Third Eye",
                         "next_demo": "Nākamā demonstrācija"
                     }
                 },
@@ -1856,16 +1856,16 @@
                 "core-config": {
                     "button_detect": "Noteikt",
                     "finish": "Tālāk",
-                    "intro": "Sveiki {name}! Laipni lūdzam Home Assistant. Kā jūs vēlētos nosaukt savas mājas?",
+                    "intro": "Sveiki {name}! Laipni lūdzam Third Eye. Kā jūs vēlētos nosaukt savas mājas?",
                     "intro_location": "Mēs gribētu zināt, kur tu dzīvo. Šī informācija palīdzēs parādīt informāciju un iestatīt uz saules bāzes balstītas automātikas. Šie dati nekad netiek koplietoti ārpus jūsu tīkla.",
                     "intro_location_detect": "Mēs varam palīdzēt jums aizpildīt šo informāciju, iesniedzot vienreizēju pieprasījumu ārējam servisam.",
-                    "location_name": "Jūsu Home Assistant instalācijas nosaukums",
+                    "location_name": "Jūsu Third Eye instalācijas nosaukums",
                     "location_name_default": "Mājas"
                 },
                 "finish": "Pabeigt",
                 "integration": {
                     "finish": "Pabeigt",
-                    "intro": "Home Assistant ierīces un servisi tiek attēloti kā integrācijas. Jūs varat tās iestatīt uzreiz vai vēlāk konfigurācijas ekrānā.",
+                    "intro": "Third Eye ierīces un servisi tiek attēloti kā integrācijas. Jūs varat tās iestatīt uzreiz vai vēlāk konfigurācijas ekrānā.",
                     "more_integrations": "Vairāk"
                 },
                 "intro": "Vai esat gatavs pamodināt savu māju, atgūt savu konfidencialitāti un pievienoties pasaules mēroga kopienai?",
@@ -1943,7 +1943,7 @@
                     "create_failed": "Neizdevās izveidot piekļuves pilnvaru.",
                     "created": "Izveidota {date}",
                     "delete_failed": "Neizdevās dzēst piekļuves pilnvaru.",
-                    "description": "Izveidojiet ilgtermiņa piekļuves pilnvaras, lai ļautu jūsu skriptiem mijiedarboties ar jūsu Home Assistant instanci. Katra pilnvara būs derīga 10 gadus pēc tās izveidošanas. Pašlaik ir aktīvas sekojošas ilgtermiņa piekļuves pilvaras.",
+                    "description": "Izveidojiet ilgtermiņa piekļuves pilnvaras, lai ļautu jūsu skriptiem mijiedarboties ar jūsu Third Eye instanci. Katra pilnvara būs derīga 10 gadus pēc tās izveidošanas. Pašlaik ir aktīvas sekojošas ilgtermiņa piekļuves pilvaras.",
                     "empty_state": "Jums vēl nav ilgtermiņa piekļuves pilnvaru.",
                     "header": "Ilgtermiņa piekļuves pilnvaras",
                     "learn_auth_requests": "Uzziniet, kā veikt autentificētus pieprasījumus.",

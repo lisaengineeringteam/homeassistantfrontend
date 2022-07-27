@@ -1,5 +1,5 @@
 {
-  "description": "A frontend for Home Assistant",
+  "description": "A frontend for Third Eye",
   "repository": {
     "type": "git",
     "url": "https://github.com/home-assistant/frontend"

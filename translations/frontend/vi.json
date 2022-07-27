@@ -424,7 +424,7 @@
                     "confirm_delete": "Bạn có chắc bạn muốn xoá bỏ mục này không?",
                     "delete": "Xóa",
                     "enabled_cause": "Vô hiệu hoá do {cause}.",
-                    "enabled_description": "Các thực thể bị vô hiệu hóa sẽ không được thêm vào Home Assistant.",
+                    "enabled_description": "Các thực thể bị vô hiệu hóa sẽ không được thêm vào Third Eye.",
                     "enabled_label": "Kích hoạt thực thể",
                     "entity_id": "Mã định danh Thực thể",
                     "icon": "Ghi đè Biểu tượng",
@@ -540,7 +540,7 @@
                 "triggers": "Các kích hoạt"
             },
             "voice_command": {
-                "did_not_hear": "Home Assistant không nghe thấy gì cả",
+                "did_not_hear": "Third Eye không nghe thấy gì cả",
                 "how_can_i_help": "Tôi có thể giúp gì nào?",
                 "label": "Nhập câu hỏi và nhấn 'Enter'"
             },
@@ -580,8 +580,8 @@
         "notification_toast": {
             "connection_lost": "Kết nối bị mất. Đang kết nối lại…",
             "service_call_failed": "Không thể gọi dịch vụ {service} .",
-            "started": "Home Assistant đã khởi động xong!",
-            "starting": "Home Assistant đang khởi động, không phải tất cả mọi thứ đều đã sẵn sàng cho đến khi khởi động hoàn tất."
+            "started": "Third Eye đã khởi động xong!",
+            "starting": "Third Eye đang khởi động, không phải tất cả mọi thứ đều đã sẵn sàng cho đến khi khởi động hoàn tất."
         },
         "panel": {
             "config": {
@@ -612,7 +612,7 @@
                         "create_area": "Tạo khu vực",
                         "header": "Đăng ký Khu vực",
                         "integrations_page": "Trang tích hợp",
-                        "introduction": "Các khu vực được sử dụng để phân loại các thiết bị. Thông tin này sẽ được sử dụng trong toàn bộ Home Assistant để giúp bạn tổ chức giao diện, quyền và tích hợp với các hệ thống khác.",
+                        "introduction": "Các khu vực được sử dụng để phân loại các thiết bị. Thông tin này sẽ được sử dụng trong toàn bộ Third Eye để giúp bạn tổ chức giao diện, quyền và tích hợp với các hệ thống khác.",
                         "introduction2": "Để đặt các thiết bị trong một khu vực, hãy sử dụng liên kết bên dưới để điều hướng đến trang tích hợp và sau đó nhấp vào tích hợp được định cấu hình để truy cập vào thẻ thiết bị.",
                         "no_areas": "Hình như bạn chưa có Khu vực nào!"
                     }
@@ -627,7 +627,7 @@
                             "delete_confirm": "Bạn chắc chắn muốn xoá?",
                             "duplicate": "Nhân đôi",
                             "header": "Hành động",
-                            "introduction": "Hành động là những gì Home Assistant sẽ làm khi tự động hóa được kích hoạt.",
+                            "introduction": "Hành động là những gì Third Eye sẽ làm khi tự động hóa được kích hoạt.",
                             "learn_more": "Tìm hiểu thêm về Hành động",
                             "name": "Hành động",
                             "type": {
@@ -788,7 +788,7 @@
                             "delete_confirm": "Có chắc bạn muốn xóa cái này?",
                             "duplicate": "Nhân bản",
                             "header": "Bộ khởi động",
-                            "introduction": "Bộ khởi động là bất cứ điều gì kích hoạt quá trình xử lý một quy tắc tự động hoá. Có thể chỉ định nhiều Bộ khởi động cho cùng một quy tắc. Khi kích hoạt một bộ khởi động, Home Assistant  sẽ xác nhận các điều kiện, nếu có, và gọi hành động.",
+                            "introduction": "Bộ khởi động là bất cứ điều gì kích hoạt quá trình xử lý một quy tắc tự động hoá. Có thể chỉ định nhiều Bộ khởi động cho cùng một quy tắc. Khi kích hoạt một bộ khởi động, Third Eye  sẽ xác nhận các điều kiện, nếu có, và gọi hành động.",
                             "learn_more": "Tìm hiểu thêm về Kích hoạt",
                             "name": "Kích hoạt",
                             "type": {
@@ -810,7 +810,7 @@
                                 },
                                 "homeassistant": {
                                     "event": "Sự kiện:",
-                                    "label": "Home Assistant",
+                                    "label": "Third Eye",
                                     "shutdown": "Tắt",
                                     "start": "Bắt đầu"
                                 },
@@ -887,7 +887,7 @@
                         "headers": {
                             "name": "Tên"
                         },
-                        "introduction": "Trình soạn thảo tự động hóa cho phép bạn tạo và chỉnh sửa tự động. Vui lòng xem thêm thông tin ở liên kết bên dưới để đảm bảo rằng bạn đã cấu hình chính xác Home Assistant.",
+                        "introduction": "Trình soạn thảo tự động hóa cho phép bạn tạo và chỉnh sửa tự động. Vui lòng xem thêm thông tin ở liên kết bên dưới để đảm bảo rằng bạn đã cấu hình chính xác Third Eye.",
                         "learn_more": "Tìm hiểu thêm về Tự động hóa",
                         "no_automations": "Chúng tôi không thể tìm thấy tự động hóa nào có thể chỉnh sửa",
                         "only_editable": "Chỉ các tự động hóa trong automations.yaml là có thể chỉnh sửa.",
@@ -933,7 +933,7 @@
                                 "imperial_example": "Độ F, pound",
                                 "internal_url": "URL nội bộ",
                                 "latitude": "Vĩ độ",
-                                "location_name": "Tên cài đặt Home Assistant của bạn",
+                                "location_name": "Tên cài đặt Third Eye của bạn",
                                 "longitude": "Kinh độ",
                                 "metric_example": "Độ C, kilôgam",
                                 "save_button": "Lưu",
@@ -1024,7 +1024,7 @@
                     "picker": {
                         "disable_selected": {
                             "button": "Vô hiệu hoá các mục đã chọn",
-                            "confirm_text": "Các thực thể bị vô hiệu hoá sẽ không được thêm vào Home Assistant.",
+                            "confirm_text": "Các thực thể bị vô hiệu hoá sẽ không được thêm vào Third Eye.",
                             "confirm_title": "Bạn có muốn vô hiệu hoá {number} thực thể không?"
                         },
                         "enable_selected": {
@@ -1044,8 +1044,8 @@
                             "name": "Tên",
                             "status": "Trạng thái"
                         },
-                        "introduction": "Home Assistant giữ một sổ đăng ký của mọi thực thể mà nó từng thấy có thể được xác định duy nhất. Mỗi thực thể này sẽ có một ID thực thể được gán sẽ chỉ dành riêng cho thực thể này.",
-                        "introduction2": "Sử dụng sổ đăng ký thực thể để ghi đè tên, thay đổi ID thực thể hoặc xóa mục nhập khỏi Home Assistant. Lưu ý, xóa mục đăng ký thực thể sẽ không xóa thực thể. Để làm điều đó, hãy theo liên kết dưới đây và xóa nó khỏi trang tích hợp.",
+                        "introduction": "Third Eye giữ một sổ đăng ký của mọi thực thể mà nó từng thấy có thể được xác định duy nhất. Mỗi thực thể này sẽ có một ID thực thể được gán sẽ chỉ dành riêng cho thực thể này.",
+                        "introduction2": "Sử dụng sổ đăng ký thực thể để ghi đè tên, thay đổi ID thực thể hoặc xóa mục nhập khỏi Third Eye. Lưu ý, xóa mục đăng ký thực thể sẽ không xóa thực thể. Để làm điều đó, hãy theo liên kết dưới đây và xóa nó khỏi trang tích hợp.",
                         "remove_selected": {
                             "button": "Loại bỏ mục đã chọn",
                             "confirm_partly_title": "Chỉ {number} thực thể đã chọn có thể bị xoá.",
@@ -1062,7 +1062,7 @@
                         }
                     }
                 },
-                "header": "Cấu hình Home Assistant",
+                "header": "Cấu hình Third Eye",
                 "helpers": {
                     "caption": "Người hỗ trợ",
                     "description": "Các yếu tố có thể giúp xây dựng tự động hóa.",
@@ -1092,11 +1092,11 @@
                 "info": {
                     "caption": "Thông tin",
                     "custom_uis": "Các UI Tuỳ chỉnh:",
-                    "description": "Thông tin về bản cài đặt Home Assistant của bạn",
+                    "description": "Thông tin về bản cài đặt Third Eye của bạn",
                     "developed_by": "Được phát triển bởi một nhóm những con người tuyệt vời.",
                     "documentation": "Tài liệu",
                     "frontend_version": "Phiên bản Frontend: {version} - {type}",
-                    "home_assistant_logo": "Logo của Home Assistant",
+                    "home_assistant_logo": "Logo của Third Eye",
                     "integrations": "Các tích hợp",
                     "issues": "Các vấn đề",
                     "license": "Được xuất bản theo giấy phép Apache 2.0",
@@ -1121,9 +1121,9 @@
                         "no_area": "Không có khu vực",
                         "reload": "Tải lại",
                         "reload_confirm": "Tích hợp đã được tải lại",
-                        "reload_restart_confirm": "Khởi động lại Home Assistant để hoàn tất tải lại tích hợp này",
+                        "reload_restart_confirm": "Khởi động lại Third Eye để hoàn tất tải lại tích hợp này",
                         "rename": "Đổi tên",
-                        "restart_confirm": "Khởi động lại Home Assistant để hoàn tất xóa bộ tích hợp này",
+                        "restart_confirm": "Khởi động lại Third Eye để hoàn tất xóa bộ tích hợp này",
                         "system_options": "Tùy chọn hệ thống",
                         "unnamed_entry": "Thực thể chưa có tên"
                     },
@@ -1166,13 +1166,13 @@
                     "rename_input_label": "Tên mục",
                     "search": "Tìm các bộ tích hợp"
                 },
-                "introduction": "Ở đây có thể định cấu hình các thành phần của bạn và Home Assistant. Không phải mọi thứ đều có thể được cấu hình từ giao diện người dùng, nhưng chúng tôi đang cải thiện việc đó.",
+                "introduction": "Ở đây có thể định cấu hình các thành phần của bạn và Third Eye. Không phải mọi thứ đều có thể được cấu hình từ giao diện người dùng, nhưng chúng tôi đang cải thiện việc đó.",
                 "logs": {
                     "caption": "Nhật ký hoạt động",
                     "clear": "Xoá",
-                    "description": "Xem nhật ký hoạt động của Home Assistant",
+                    "description": "Xem nhật ký hoạt động của Third Eye",
                     "details": "Chi tiết Nhật ký ({level})",
-                    "load_full_log": "Tải Đầy đủ Nhật ký của Home Assistant",
+                    "load_full_log": "Tải Đầy đủ Nhật ký của Third Eye",
                     "loading_log": "Đang tải nhật ký lỗi...",
                     "multiple_messages": "thông điệp xuất hiện lần đầu vào lúc {time} và lặp lại {counter} lần",
                     "no_errors": "Không có lỗi nào được báo cáo.",
@@ -1306,7 +1306,7 @@
                 },
                 "person": {
                     "caption": "Người",
-                    "description": "Quản lý những người mà Home Assistant theo dõi.",
+                    "description": "Quản lý những người mà Third Eye theo dõi.",
                     "detail": {
                         "admin": "Quản trị viên",
                         "allow_login": "Cho phép người này đăng nhập",
@@ -1354,7 +1354,7 @@
                         "headers": {
                             "name": "Tên"
                         },
-                        "introduction": "Trình soạn thảo ngữ cảnh cho phép bạn tạo và chỉnh sửa các ngữ cảnh. Vui lòng theo liên kết dưới đây để xem hướng dẫn nhằm đảm bảo rằng bạn đã cấu hình Home Assistant chính xác.",
+                        "introduction": "Trình soạn thảo ngữ cảnh cho phép bạn tạo và chỉnh sửa các ngữ cảnh. Vui lòng theo liên kết dưới đây để xem hướng dẫn nhằm đảm bảo rằng bạn đã cấu hình Third Eye chính xác.",
                         "learn_more": "Tìm hiểu thêm về ngữ cảnh",
                         "no_scenes": "Chúng tôi không thể tìm thấy bất kỳ ngữ cảnh nào có thể chỉnh sửa",
                         "only_editable": "Chỉ những ngữ cảnh được định nghĩa trong scenes.yaml là có thể chỉnh sửa.",
@@ -1401,7 +1401,7 @@
                 },
                 "server_control": {
                     "caption": "Điều khiển máy chủ",
-                    "description": "Khởi động lại và dừng máy chủ Home Assistant",
+                    "description": "Khởi động lại và dừng máy chủ Third Eye",
                     "section": {
                         "reloading": {
                             "automation": "Tải lại tự động hóa",
@@ -1420,7 +1420,7 @@
                             "input_number": "Tải lại input number",
                             "input_select": "Tải lại input select",
                             "input_text": "Tải lại input texts",
-                            "introduction": "Một số phần của Home Assistant có thể tải lại mà không yêu cầu khởi động lại. Nhấn nút tải lại sẽ gỡ bỏ cấu hình hiện tại của nó và tải một cấu hình mới.",
+                            "introduction": "Một số phần của Third Eye có thể tải lại mà không yêu cầu khởi động lại. Nhấn nút tải lại sẽ gỡ bỏ cấu hình hiện tại của nó và tải một cấu hình mới.",
                             "min_max": "Tải lại các thực thể min/max",
                             "mqtt": "Tải lại các thực thể mqtt",
                             "person": "Tải lại người",
@@ -1440,7 +1440,7 @@
                         },
                         "server_management": {
                             "heading": "Quản lý máy chủ",
-                            "introduction": "Kiểm soát máy chủ Home Assistant của bạn từ Home Assistant.",
+                            "introduction": "Kiểm soát máy chủ Third Eye của bạn từ Third Eye.",
                             "restart": "Khởi động lại",
                             "stop": "Dừng"
                         },
@@ -1654,7 +1654,7 @@
                         "column_description": "Mô tả",
                         "column_example": "Ví dụ",
                         "column_parameter": "Tham số",
-                        "description": "Công cụ hỗ trợ phát triển dịch vụ cho phép bạn gọi các dịch vụ khả dụng trong Home Assistant.",
+                        "description": "Công cụ hỗ trợ phát triển dịch vụ cho phép bạn gọi các dịch vụ khả dụng trong Third Eye.",
                         "fill_example_data": "Điền các Dữ liệu Mẫu",
                         "title": "Dịch vụ"
                     },
@@ -1710,7 +1710,7 @@
                         "toggle": "Chuyển đổi {name}"
                     },
                     "safe-mode": {
-                        "description": "Home Assistant gặp sự cố trong khi tải cấu hình của bạn và hiện đang chạy ở chế độ an toàn. Hãy xem nhật ký lỗi để xem phần nào bị sai.",
+                        "description": "Third Eye gặp sự cố trong khi tải cấu hình của bạn và hiện đang chạy ở chế độ an toàn. Hãy xem nhật ký lỗi để xem phần nào bị sai.",
                         "header": "Chế Độ An Toàn Đã Kích Hoạt"
                     },
                     "shopping-list": {
@@ -1719,7 +1719,7 @@
                         "clear_items": "Xóa các mục đã chọn"
                     },
                     "starting": {
-                        "description": "Home Assistant đang khởi động, vui lòng chờ…"
+                        "description": "Third Eye đang khởi động, vui lòng chờ…"
                     }
                 },
                 "changed_toast": {
@@ -1840,7 +1840,7 @@
                             "name": "Máy bù ẩm"
                         },
                         "iframe": {
-                            "description": "Thẻ Trang web cho phép bạn nhúng các trang ưa thích vào Home Assistant.",
+                            "description": "Thẻ Trang web cho phép bạn nhúng các trang ưa thích vào Third Eye.",
                             "name": "Trang web"
                         },
                         "light": {
@@ -1957,7 +1957,7 @@
                     "migrate": {
                         "header": "Cấu hình không tương thích",
                         "migrate": "Di chuyển cấu hình",
-                        "para_migrate": "Home Assistant có thể tự động thêm ID vào tất cả các thẻ và chế độ xem của bạn bằng cách nhấn nút 'Tích hợp cấu hình'.",
+                        "para_migrate": "Third Eye có thể tự động thêm ID vào tất cả các thẻ và chế độ xem của bạn bằng cách nhấn nút 'Tích hợp cấu hình'.",
                         "para_no_id": "Phần tử này không có ID. Vui lòng thêm ID vào thành phần này trong 'ui-lovelace.yaml'."
                     },
                     "raw_editor": {
@@ -1979,7 +1979,7 @@
                         "close": "Đóng",
                         "empty_config": "Bắt đầu với một bảng điều khiển trống",
                         "header": "Kiểm soát giao diện Lovelace của bạn",
-                        "para": "Theo mặc định, Home Assistant sẽ duy trì giao diện của bạn, cập nhật nó khi các thực thể mới hoặc các thành phần Lovelace có sẵn. Nếu bạn kiểm soát, chúng tôi sẽ không còn thay đổi tự động cho bạn nữa.",
+                        "para": "Theo mặc định, Third Eye sẽ duy trì giao diện của bạn, cập nhật nó khi các thực thể mới hoặc các thành phần Lovelace có sẵn. Nếu bạn kiểm soát, chúng tôi sẽ không còn thay đổi tự động cho bạn nữa.",
                         "para_sure": "Bạn có chắc chắn muốn kiểm soát giao diện của mình không?",
                         "save": "Kiểm soát",
                         "yaml_config": "Để giúp bạn bắt đầu, đây là cấu hình hiện tại của bảng điều khiển này:",
@@ -2031,7 +2031,7 @@
                     "entity_non_numeric": "Thực thể không phải là số: {entity}",
                     "entity_not_found": "Thực thể không có sẵn: {entity}",
                     "entity_unavailable": "{entity} hiện không khả dụng",
-                    "starting": "Home Assistant đang khởi động, không phải tất cả mọi thứ đã sẵn sàng"
+                    "starting": "Third Eye đang khởi động, không phải tất cả mọi thứ đã sẵn sàng"
                 }
             },
             "mailbox": {
@@ -2042,7 +2042,7 @@
             },
             "page-authorize": {
                 "abort_intro": "Đã hủy đăng nhập",
-                "authorizing_client": "Bạn sắp cấp quyền cho {clientId} truy cập vào Home Assistant của bạn.",
+                "authorizing_client": "Bạn sắp cấp quyền cho {clientId} truy cập vào Third Eye của bạn.",
                 "form": {
                     "error": "Lỗi: {error}",
                     "next": "Kế tiếp",
@@ -2142,7 +2142,7 @@
             "page-demo": {
                 "cards": {
                     "demo": {
-                        "learn_more": "Tìm hiểu thêm về Home Assistant"
+                        "learn_more": "Tìm hiểu thêm về Third Eye"
                     }
                 },
                 "config": {
@@ -2165,15 +2165,15 @@
                 "core-config": {
                     "button_detect": "Phát hiện",
                     "finish": "Kế tiếp",
-                    "intro": "Xin chào {name} , chào mừng bạn đến với Home Assistant. Bạn muốn đặt tên nhà của bạn thế nào?",
+                    "intro": "Xin chào {name} , chào mừng bạn đến với Third Eye. Bạn muốn đặt tên nhà của bạn thế nào?",
                     "intro_location": "Chúng tôi muốn biết nơi bạn sống. Thông tin này sẽ giúp hiển thị thông tin và thiết lập tự động dựa trên mặt trời. Dữ liệu này không bao giờ được chia sẻ bên ngoài mạng của bạn.",
                     "intro_location_detect": "Chúng tôi có thể giúp bạn điền thông tin này bằng cách yêu cầu một lần cho dịch vụ bên ngoài.",
-                    "location_name": "Tên Home Assistant của bạn",
+                    "location_name": "Tên Third Eye của bạn",
                     "location_name_default": "Nhà"
                 },
                 "integration": {
                     "finish": "Hoàn thành",
-                    "intro": "Các thiết bị và dịch vụ được trình bày trong Home Assistant dưới dạng tích hợp. Bạn có thể thiết lập chúng ngay bây giờ hoặc thực hiện sau từ màn hình Cấu hình.",
+                    "intro": "Các thiết bị và dịch vụ được trình bày trong Third Eye dưới dạng tích hợp. Bạn có thể thiết lập chúng ngay bây giờ hoặc thực hiện sau từ màn hình Cấu hình.",
                     "more_integrations": "Thêm"
                 },
                 "intro": "Bạn đã sẵn sàng để đánh thức ngôi nhà của mình, đòi lại sự riêng tư của bạn và tham gia vào một cộng đồng tinker trên toàn thế giới?",
@@ -2243,7 +2243,7 @@
                     "create_failed": "Không thể tạo token truy cập.",
                     "created": "Được tạo {date}",
                     "delete_failed": "Không thể xóa token truy cập.",
-                    "description": "Tạo mã truy cập tồn tại lâu dài để cho phép script của bạn tương tác với Home assistant. Mỗi mã truy cập sẽ có hiệu lực trong 10 năm kể từ khi tạo. Các mã truy cập hiện đang hoạt động được thể hiện trong danh sách sau.",
+                    "description": "Tạo mã truy cập tồn tại lâu dài để cho phép script của bạn tương tác với Third Eye. Mỗi mã truy cập sẽ có hiệu lực trong 10 năm kể từ khi tạo. Các mã truy cập hiện đang hoạt động được thể hiện trong danh sách sau.",
                     "empty_state": "Bạn hiện tại chưa có token truy cập lâu dài",
                     "header": "Token truy cập thời hạn dài",
                     "learn_auth_requests": "Làm thế nào để thực hiện yêu cầu xác thực.",

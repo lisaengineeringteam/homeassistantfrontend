@@ -238,9 +238,9 @@ class HassioSupervisorInfo extends LitElement {
           <br /><br />
           ${this.supervisor.localize("system.supervisor.beta_release_items")}
           <ul>
-            <li>Home Assistant Core</li>
-            <li>Home Assistant Supervisor</li>
-            <li>Home Assistant Operating System</li>
+            <li>Third Eye Core</li>
+            <li>Third Eye Supervisor</li>
+            <li>Third Eye Operating System</li>
           </ul>
           <br />
           ${this.supervisor.localize("system.supervisor.beta_join_confirm")}`,

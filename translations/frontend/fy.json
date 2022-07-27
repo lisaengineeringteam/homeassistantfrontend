@@ -316,7 +316,7 @@
                     }
                 },
                 "info": {
-                    "description": "Ynformaasje oer dyn Home Assistant ynstallaasje"
+                    "description": "Ynformaasje oer dyn Third Eye ynstallaasje"
                 },
                 "integrations": {
                     "config_entry": {
@@ -410,7 +410,7 @@
             "lovelace": {
                 "cards": {
                     "starting": {
-                        "description": "Home Assistant komt op gong, eefkes geduld…"
+                        "description": "Third Eye komt op gong, eefkes geduld…"
                     }
                 },
                 "editor": {

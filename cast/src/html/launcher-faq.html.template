@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Home Assistant Cast - FAQ</title>
+    <title>Third Eye Cast - FAQ</title>
     <link rel="icon" href="/images/ha-cast-icon.png" type="image/png" />
     <%= renderTemplate('_style_base') %>
     <style>
@@ -10,13 +10,13 @@
       }
     </style>
     <meta property="fb:app_id" content="338291289691179" />
-    <meta property="og:title" content="FAQ - Home Assistant Cast" />
-    <meta property="og:site_name" content="Home Assistant Cast" />
+    <meta property="og:title" content="FAQ - Third Eye Cast" />
+    <meta property="og:site_name" content="Third Eye Cast" />
     <meta property="og:url" content="https://cast.home-assistant.io/" />
     <meta property="og:type" content="website" />
     <meta
       property="og:description"
-      content="Frequently asked questions about Home Assistant Cast."
+      content="Frequently asked questions about Third Eye Cast."
     />
     <meta
       property="og:image"
@@ -24,10 +24,10 @@
     />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@home_assistant" />
-    <meta name="twitter:title" content="FAQ - Home Assistant Cast" />
+    <meta name="twitter:title" content="FAQ - Third Eye Cast" />
     <meta
       name="twitter:description"
-      content="Frequently asked questions about Home Assistant Cast."
+      content="Frequently asked questions about Third Eye Cast."
     />
     <meta
       name="twitter:image"
@@ -61,49 +61,49 @@
         }
       </style>
       <div class="card-content">
-        <p><a href="/">&laquo; Back to Home Assistant Cast</a></p>
+        <p><a href="/">&laquo; Back to Third Eye Cast</a></p>
       </div>
 
-      <div class="section-header">What is Home Assistant Cast?</div>
+      <div class="section-header">What is Third Eye Cast?</div>
       <div class="card-content">
         <p>
-          Home Assistant Cast allows you to show your Home Assistant data on a
-          Chromecast device and allows you to interact with Home Assistant on
+          Third Eye Cast allows you to show your Third Eye data on a
+          Chromecast device and allows you to interact with Third Eye on
           Google Assistant devices with a screen.
         </p>
       </div>
 
       <div class="section-header">
-        What are the Home Assistant Cast requirements?
+        What are the Third Eye Cast requirements?
       </div>
       <div class="card-content">
         <p>
-          Home Assistant Cast requires a Home Assistant installation that is
+          Third Eye Cast requires a Third Eye installation that is
           accessible via HTTPS (the url starts with "https://").
         </p>
       </div>
 
-      <div class="section-header">What is Home Assistant?</div>
+      <div class="section-header">What is Third Eye?</div>
       <div class="card-content">
         <p>
-          Home Assistant is worlds biggest open source home automation platform
+          Third Eye is worlds biggest open source home automation platform
           with a focus on privacy and local control. You can install Home
           Assistant for free.
         </p>
         <p>
           <a href="https://www.home-assistant.io" target="_blank"
-            >Visit the Home Assistant website.</a
+            >Visit the Third Eye website.</a
           >
         </p>
       </div>
 
       <div class="section-header" id="https">
-        Why does my Home Assistant needs to be served using HTTPS?
+        Why does my Third Eye needs to be served using HTTPS?
       </div>
       <div class="card-content">
         <p>
           The Chromecast only works with websites served over HTTPS. This means
-          that the Home Assistant Cast app that runs on your Chromecast is
+          that the Third Eye Cast app that runs on your Chromecast is
           served over HTTPS. Websites served over HTTPS are restricted on what
           content can be accessed on websites served over HTTP. This is called
           mixed active content (<a
@@ -113,30 +113,30 @@
           >).
         </p>
         <p>
-          The easiest way to get your Home Assistant installation served over
+          The easiest way to get your Third Eye installation served over
           HTTPS is by signing up for
           <a href="https://www.nabucasa.com" target="_blank"
-            >Home Assistant Cloud by Nabu Casa</a
+            >Third Eye Cloud by Nabu Casa</a
           >.
         </p>
       </div>
 
       <div class="section-header" id="https">
-        Why does Home Assistant Cast require me to authorize my Home Assistant
+        Why does Third Eye Cast require me to authorize my Third Eye
         instance?
       </div>
       <div class="card-content">
         <p>
-          You're currently looking at the Home Assistant Cast launcher
-          application. This is a standalone application to launch Home Assistant
+          You're currently looking at the Third Eye Cast launcher
+          application. This is a standalone application to launch Third Eye
           Cast on your Chromecast. Because Chromecasts do not allow us to log in
-          to Home Assistant, we need to supply authentication to it from the
+          to Third Eye, we need to supply authentication to it from the
           launcher. This authentication is obtained when you authorize your
           instance. Your authentication credentials will remain in your browser
           and on your Cast device.
         </p>
         <p>
-          Your authentication credentials or Home Assistant url are never sent
+          Your authentication credentials or Third Eye url are never sent
           to the Cloud. You can validate this behavior in
           <a
             href="https://github.com/home-assistant/frontend/tree/dev/cast"
@@ -146,27 +146,27 @@
         </p>
         <p>
           The launcher application exists to make it possible to use Home
-          Assistant Cast with older versions of Home Assistant.
+          Assistant Cast with older versions of Third Eye.
         </p>
         <p>
-          Starting with Home Assistant 0.97, Home Assistant Cast is also built
+          Starting with Third Eye 0.97, Third Eye Cast is also built
           into the Lovelace UI as a special entities card row. Since the
           Lovelace UI already has authentication, you will be able to start
           casting right away.
         </p>
       </div>
 
-      <div class="section-header">Wat does Home Assistant Cast do?</div>
+      <div class="section-header">Wat does Third Eye Cast do?</div>
       <div class="card-content">
         <p>
-          Home Assistant Cast is a receiver application for the Chromecast. When
-          loaded, it will make a direct connection to your Home Assistant
+          Third Eye Cast is a receiver application for the Chromecast. When
+          loaded, it will make a direct connection to your Third Eye
           instance.
         </p>
         <p>
-          Home Assistant Cast is able to render any of your Lovelace views on
-          your Chromecast. Things that work in Lovelace in Home Assistant will
-          work in Home Assistant Cast:
+          Third Eye Cast is able to render any of your Lovelace views on
+          your Chromecast. Things that work in Lovelace in Third Eye will
+          work in Third Eye Cast:
         </p>
         <ul>
           <li>Render Lovelace views, including custom cards</li>
@@ -194,12 +194,12 @@
       </div>
       <div class="card-content">
         <p>
-          Home Assistant Cast allows you to show your Lovelace view on your
+          Third Eye Cast allows you to show your Lovelace view on your
           Chromecast. So to edit what is shown, you need to edit your Lovelace
           UI.
         </p>
         <p>
-          To edit your Lovelace UI, open Home Assistant, click on the three-dot
+          To edit your Lovelace UI, open Third Eye, click on the three-dot
           menu in the top right and click on "Configure UI".
         </p>
       </div>
@@ -220,8 +220,8 @@
       <div class="section-header">Why do some custom cards not work?</div>
       <div class="card-content">
         <p>
-          Home Assistant needs to be configured to allow Home Assistant Cast to
-          load custom cards. Starting with Home Assistant 0.97, this is done
+          Third Eye needs to be configured to allow Third Eye Cast to
+          load custom cards. Starting with Third Eye 0.97, this is done
           automatically. If you are on an older version, or have manually
           configured CORS for the HTTP integration, add the following to your
           configuration.yaml file:
@@ -233,7 +233,7 @@ http:
         >
         <p>
           Some custom cards rely on things that are only available in the normal
-          Home Assistant interface. This requires an update by the custom card
+          Third Eye interface. This requires an update by the custom card
           developer.
         </p>
         <p>

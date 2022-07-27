@@ -206,7 +206,7 @@
                                 },
                                 "homeassistant": {
                                     "event": "ఈవెంట్",
-                                    "label": "Home Assistant",
+                                    "label": "Third Eye",
                                     "start": "ప్రారంభం"
                                 },
                                 "mqtt": {
@@ -261,7 +261,7 @@
                         }
                     }
                 },
-                "header": "కాన్ఫిగర్ Home Assistant",
+                "header": "కాన్ఫిగర్ Third Eye",
                 "mqtt": {
                     "title": "MQTT"
                 },

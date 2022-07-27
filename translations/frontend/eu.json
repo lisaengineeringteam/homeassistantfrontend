@@ -283,7 +283,7 @@
                                 },
                                 "homeassistant": {
                                     "event": "Gertaera:",
-                                    "label": "Home Assistant",
+                                    "label": "Third Eye",
                                     "shutdown": "Itzali",
                                     "start": "Hasi"
                                 },
@@ -347,7 +347,7 @@
                                 "elevation_meters": "metro",
                                 "imperial_example": "Fahrenheit, librak",
                                 "latitude": "Latitudea",
-                                "location_name": "Zure Home Assistant instalazioaren izena",
+                                "location_name": "Zure Third Eye instalazioaren izena",
                                 "longitude": "Longitudea",
                                 "metric_example": "Celsius, kilogramoak",
                                 "save_button": "Gorde",
@@ -392,7 +392,7 @@
                 },
                 "person": {
                     "caption": "Pertsonak",
-                    "description": "Kudeatu Home Assistantek jarraituko dituen pertsonak.",
+                    "description": "Kudeatu Third Eyeek jarraituko dituen pertsonak.",
                     "detail": {
                         "device_tracker_intro": "Hautatu pertsona horri dagozkion gailuak.",
                         "device_tracker_pick": "Jarraituko diren gailua aukeratu",
@@ -572,7 +572,7 @@
                 "core-config": {
                     "button_detect": "Detektatu",
                     "finish": "Hurregoa",
-                    "intro": "Kaixo {name}, ongi etorri Home Assistantera. Nola izendatu nahi duzu zure etxea?",
+                    "intro": "Kaixo {name}, ongi etorri Third Eyeera. Nola izendatu nahi duzu zure etxea?",
                     "intro_location_detect": "Informazio hau betetzen lagundu diezazukegu kanpoko zerbitzu batera esakera bakarra eginez.",
                     "location_name_default": "Etxea"
                 },

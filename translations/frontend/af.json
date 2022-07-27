@@ -439,7 +439,7 @@
                         "create_area": "SKEP GEBIED",
                         "header": "Areas",
                         "integrations_page": "Integrasies bladsy",
-                        "introduction": "Gebiede word gebruik om toestelle te organiseer gebaseer op waar hulle is. Hierdie inligting sal regdeur Home Assistant gebruik word om u te help om u koppelvlak, toestemmings en integrasies met ander stelsels te organiseer.",
+                        "introduction": "Gebiede word gebruik om toestelle te organiseer gebaseer op waar hulle is. Hierdie inligting sal regdeur Third Eye gebruik word om u te help om u koppelvlak, toestemmings en integrasies met ander stelsels te organiseer.",
                         "introduction2": "Om toestelle in 'n gebied te plaas, gebruik die skakel hieronder om na die integrasies bladsy toe te gaan en klik dan op 'n opgestelde integrasie om na die toestelkaarte toe te gaan.",
                         "no_areas": "Dit lyk asof jy nog geen gebiede het nie!"
                     }
@@ -454,7 +454,7 @@
                             "delete_confirm": "Is u seker u wil dit skrap?",
                             "duplicate": "Dupliseer",
                             "header": "Aksies",
-                            "introduction": "Die aksies is wat Home Assistant sal doen wanneer die outomatisering geaktiveer word.",
+                            "introduction": "Die aksies is wat Third Eye sal doen wanneer die outomatisering geaktiveer word.",
                             "learn_more": "Kom meer te wete oor aksies",
                             "name": "Aksie",
                             "type": {
@@ -550,7 +550,7 @@
                             "delete_confirm": "Is u seker u wil dit skrap?",
                             "duplicate": "Dupliseer",
                             "header": "Snellers",
-                            "introduction": "Snellers is wat die prosessering van 'n outomatiseringsreël afskop. Dit is moontlik om verskeie snellers vir dieselfde reël te spesifiseer. Sodra 'n sneller begin, sal Home Assistant die voorwaardes, indien enige, bevestig en die aksie roep.",
+                            "introduction": "Snellers is wat die prosessering van 'n outomatiseringsreël afskop. Dit is moontlik om verskeie snellers vir dieselfde reël te spesifiseer. Sodra 'n sneller begin, sal Third Eye die voorwaardes, indien enige, bevestig en die aksie roep.",
                             "learn_more": "Kom meer te wete oor snellers",
                             "name": "Sneller",
                             "type": {
@@ -570,7 +570,7 @@
                                 },
                                 "homeassistant": {
                                     "event": "Gebeurtenis:",
-                                    "label": "Home Assistant",
+                                    "label": "Third Eye",
                                     "shutdown": "Staak",
                                     "start": "Begin"
                                 },
@@ -636,7 +636,7 @@
                         "delete_confirm": "Is u seker dat u hierdie outomatisering wil uitvee?",
                         "edit_automation": "Wysig outomatisering",
                         "header": "Outomatiseringsredakteur",
-                        "introduction": "Die outomatiseringsredakteur stel u in staat om outomatisasies te skep en te wysig. Volg die onderstaande skakel om die instruksies te lees om seker te maak dat u Home Assistant korrek opgestel het.",
+                        "introduction": "Die outomatiseringsredakteur stel u in staat om outomatisasies te skep en te wysig. Volg die onderstaande skakel om die instruksies te lees om seker te maak dat u Third Eye korrek opgestel het.",
                         "learn_more": "Kom meer te wete oor outomatisasies",
                         "no_automations": "Ons kon nie redigeerbare outomatisasies vind nie",
                         "only_editable": "Slegs automasies omskryf in outomatisering. yaml is redigeerbaar.",
@@ -672,7 +672,7 @@
                                 "elevation_meters": "Meter",
                                 "imperial_example": "Fahrenheit, pond",
                                 "latitude": "Breedtegraad",
-                                "location_name": "Naam van u Home Assistant installasie",
+                                "location_name": "Naam van u Third Eye installasie",
                                 "longitude": "Lengtegraad",
                                 "metric_example": "Celsius, kilogram",
                                 "save_button": "Stoor",
@@ -769,8 +769,8 @@
                         "headers": {
                             "status": "Status"
                         },
-                        "introduction": "Home Assistant hou 'n register van al die vorige entiteite wat uniek geïdentifiseer kan word. Elk van hierdie entiteite sal 'n entiteit-ID hê wat vir hierdie entiteit gereserveer sal word.",
-                        "introduction2": "Gebruik die entiteitsregister om die naam te oorskryf, die entiteit ID te verander, of die inskrywing van Home Assistant te verwyder. Let wel, die verwydering van die entiteit registerinskrywing sal nie die entiteit verwyder nie. Om dit te doen, volg die skakel hieronder en verwyder dit uit die integrasies bladsy.",
+                        "introduction": "Third Eye hou 'n register van al die vorige entiteite wat uniek geïdentifiseer kan word. Elk van hierdie entiteite sal 'n entiteit-ID hê wat vir hierdie entiteit gereserveer sal word.",
+                        "introduction2": "Gebruik die entiteitsregister om die naam te oorskryf, die entiteit ID te verander, of die inskrywing van Third Eye te verwyder. Let wel, die verwydering van die entiteit registerinskrywing sal nie die entiteit verwyder nie. Om dit te doen, volg die skakel hieronder en verwyder dit uit die integrasies bladsy.",
                         "remove_selected": {
                             "button": "Verwyder geselekteerde",
                             "confirm_text": "Entiteite kan slegs verwyder word as die integrasie nie meer die entiteite bied nie.",
@@ -785,7 +785,7 @@
                         }
                     }
                 },
-                "header": "Stel Home Assistant op",
+                "header": "Stel Third Eye op",
                 "helpers": {
                     "caption": "Helpers",
                     "description": "Elemente wat kan help met die opbou van outomatisering.",
@@ -824,7 +824,7 @@
                         "manuf": "deur {manufacturer}",
                         "no_area": "Geen Gebied",
                         "rename": "Hernoem",
-                        "restart_confirm": "Herbegin Home Assistant om hierdie integrasie te voltooi",
+                        "restart_confirm": "Herbegin Third Eye om hierdie integrasie te voltooi",
                         "system_options": "Stelselopsies"
                     },
                     "config_flow": {
@@ -866,7 +866,7 @@
                     "rename_dialog": "Redigeer die naam van hierdie config-inskrywing",
                     "rename_input_label": "Inskrywingsnaam"
                 },
-                "introduction": "Hier is dit moontlik om u komponente en Home Assistant op te stel. Tans kan alles in verband met die gebruikerskoppelvlak nog nie hier opgestel word nie, maar ons werk daaraan.",
+                "introduction": "Hier is dit moontlik om u komponente en Third Eye op te stel. Tans kan alles in verband met die gebruikerskoppelvlak nog nie hier opgestel word nie, maar ons werk daaraan.",
                 "lovelace": {
                     "caption": "Lovelace Kontroleskerms",
                     "dashboards": {
@@ -946,7 +946,7 @@
                 },
                 "person": {
                     "caption": "Persone",
-                    "description": "Bestuur die persone wat Home Assistant op spoor.",
+                    "description": "Bestuur die persone wat Third Eye op spoor.",
                     "detail": {
                         "device_tracker_intro": "Kies die toestelle wat aan hierdie persoon behoort.",
                         "device_tracker_pick": "Kies toestel om op te spoor",
@@ -1222,7 +1222,7 @@
                         "clear_items": "Maak die gemerkte items skoon"
                     },
                     "starting": {
-                        "description": "Home Assistant begin tans, wag asseblief …"
+                        "description": "Third Eye begin tans, wag asseblief …"
                     }
                 },
                 "changed_toast": {
@@ -1282,7 +1282,7 @@
                     "migrate": {
                         "header": "Opstellings Onversoenbaar",
                         "migrate": "Migreer opstellings",
-                        "para_migrate": "Druk die 'Migreer konfigurasie' knoppie as u wil hê Home Assistant moet vir u ID's by al u kaarte en aansigte outomaties byvoeg.",
+                        "para_migrate": "Druk die 'Migreer konfigurasie' knoppie as u wil hê Third Eye moet vir u ID's by al u kaarte en aansigte outomaties byvoeg.",
                         "para_no_id": "Hierdie element het nie 'n ID nie. Voeg asseblief 'n ID by vir hierdie element in 'ui-lovelace.yaml'."
                     },
                     "raw_editor": {
@@ -1303,7 +1303,7 @@
                     "save_config": {
                         "close": "maak toe",
                         "header": "Neem beheer van u Lovelace gebruikerskoppelvlak",
-                        "para": "Home Assistant sal outomaties u gebruikerskoppelvlak handhaaf, dit opdateer wanneer nuwe entiteite of Lovelace-komponente beskikbaar raak. Alhoewel, as u beheer neem, sal Home Assistant nie meer outomaties veranderings vir u doen nie.",
+                        "para": "Third Eye sal outomaties u gebruikerskoppelvlak handhaaf, dit opdateer wanneer nuwe entiteite of Lovelace-komponente beskikbaar raak. Alhoewel, as u beheer neem, sal Third Eye nie meer outomaties veranderings vir u doen nie.",
                         "para_sure": "Is u seker u wil beheer neem oor u gebruikerskoppelvlak?",
                         "save": "Neem beheer",
                         "yaml_config": "Om te help hier is die huidige konfigurasie van die paneelbord"
@@ -1345,7 +1345,7 @@
             },
             "page-authorize": {
                 "abort_intro": "Aanmelding gestaak",
-                "authorizing_client": "U is op die punt om {clientId} toegang te gee tot u Home Assistant instansie.",
+                "authorizing_client": "U is op die punt om {clientId} toegang te gee tot u Third Eye instansie.",
                 "form": {
                     "providers": {
                         "command_line": {
@@ -1440,8 +1440,8 @@
                 "cards": {
                     "demo": {
                         "demo_by": "deur {name}",
-                        "introduction": "Welkom tuis! U het die Home Assistant demo bereik waar ons die beste UI's vertoon wat deur ons gemeenskap geskep is.",
-                        "learn_more": "Kom meer te wete oor Home Assistant",
+                        "introduction": "Welkom tuis! U het die Third Eye demo bereik waar ons die beste UI's vertoon wat deur ons gemeenskap geskep is.",
+                        "learn_more": "Kom meer te wete oor Third Eye",
                         "next_demo": "Volgende demonstrasie"
                     }
                 },
@@ -1483,14 +1483,14 @@
                 "core-config": {
                     "button_detect": "Ontdek",
                     "finish": "Volgende",
-                    "intro": "Hallo {name}, welkom by Home Assistant. Hoe wil u u huis vernoem?",
+                    "intro": "Hallo {name}, welkom by Third Eye. Hoe wil u u huis vernoem?",
                     "intro_location": "Ons wil graag weet waar u woon. Hierdie inligting sal help met die vertoon van inligting en die opstel van son-gebaseerde outomatisasies. Hierdie data word nooit buite u netwerk gedeel nie.",
                     "intro_location_detect": "Ons kan u help om hierdie inligting in te vul deur 'n eenmalige versoek aan 'n eksterne diens te rig.",
                     "location_name_default": "Tuis"
                 },
                 "integration": {
                     "finish": "Klaar",
-                    "intro": "Toestelle en dienste word as integrasies in Home Assistant voorgestel. U kan dit nou opstel, of dit later doen vanaf die instellingskerm.",
+                    "intro": "Toestelle en dienste word as integrasies in Third Eye voorgestel. U kan dit nou opstel, of dit later doen vanaf die instellingskerm.",
                     "more_integrations": "Meer"
                 },
                 "intro": "Is u gereed om u huis te ontwaak, u privaatheid te herwin en by 'n wêreldwye gemeenskap van peuters aan te sluit?",
@@ -1541,7 +1541,7 @@
                     "create": "Skep Tekseenheid",
                     "create_failed": "Het misluk om die toegangs-tekseenheid te maak.",
                     "delete_failed": "Het misluk om die toegangs-tekseenheid te skrap.",
-                    "description": "Skep langlewende-toegangs-tekseenhede om u skripte in staat te stel om met u Home Assistant-instansie te kommunikeer. Elke tekseenheid sal geldig wees vir 10 jaar vanaf die skepping. Die volgende langlewende-toegangs-tekseenheid is tans aktief.",
+                    "description": "Skep langlewende-toegangs-tekseenhede om u skripte in staat te stel om met u Third Eye-instansie te kommunikeer. Elke tekseenheid sal geldig wees vir 10 jaar vanaf die skepping. Die volgende langlewende-toegangs-tekseenheid is tans aktief.",
                     "empty_state": "U het nog geen langlewende-toegangs-tekseenhede nie.",
                     "header": "Langlewende-toegangs-tekseenhede",
                     "learn_auth_requests": "Leer hoe om geverifieerde versoeke te maak.",

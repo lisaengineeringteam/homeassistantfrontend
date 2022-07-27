@@ -262,7 +262,7 @@
         },
         "dialogs": {
             "config_entry_system_options": {
-                "enable_new_entities_description": "Ako nije aktivno, novootkriveni entiteti neće biti automatski dodani u Home Assistant.",
+                "enable_new_entities_description": "Ako nije aktivno, novootkriveni entiteti neće biti automatski dodani u Third Eye.",
                 "enable_new_entities_label": "Aktiviraj novododane entitete.",
                 "title": "Mogućnosti sustava"
             },
@@ -274,7 +274,7 @@
                     "confirm_delete": "Jeste li sigurni da želite izbrisati ovaj unos?",
                     "delete": "OBRIŠI",
                     "enabled_cause": "Deaktivirano zbog {cause}.",
-                    "enabled_description": "Onemogućeni entiteti neće biti dodani u Home Assistant.",
+                    "enabled_description": "Onemogućeni entiteti neće biti dodani u Third Eye.",
                     "enabled_label": "Aktiviraj entitet",
                     "entity_id": "ID entiteta",
                     "name": "Premosti naziv",
@@ -313,7 +313,7 @@
                 }
             },
             "voice_command": {
-                "did_not_hear": "Home Assistant nije ništa čuo",
+                "did_not_hear": "Third Eye nije ništa čuo",
                 "error": "Ups, došlo je do pogreške",
                 "found": "Pronašao sam za vas sljedeće:",
                 "how_can_i_help": "Kako mogu pomoći?",
@@ -382,7 +382,7 @@
                     "picker": {
                         "header": "Područja",
                         "integrations_page": "Stranica integracija",
-                        "introduction": "Područja se koriste za organiziranje gdje su uređaji. Ove informacije će se koristiti u cijelom Home Assistant da vam pomogne u organizaciji sučelja, dopuštenja i integracija s drugim sustavima.",
+                        "introduction": "Područja se koriste za organiziranje gdje su uređaji. Ove informacije će se koristiti u cijelom Third Eye da vam pomogne u organizaciji sučelja, dopuštenja i integracija s drugim sustavima.",
                         "introduction2": "Da biste postavili uređaje u neko područje, pomoću donje veze idite na stranicu s integracijama, a zatim kliknite na konfiguriranu integraciju da biste došli do kartica uređaja."
                     }
                 },
@@ -396,7 +396,7 @@
                             "delete_confirm": "Sigurno želite pobrisati?",
                             "duplicate": "Dupliciraj",
                             "header": "Akcije",
-                            "introduction": "Radnje su ono što će Home Assistant učiniti kada se aktivira automatizacija. \n\n [Saznajte više o radnjama.] (Https://home-assistant.io/docs/automation/action/)",
+                            "introduction": "Radnje su ono što će Third Eye učiniti kada se aktivira automatizacija. \n\n [Saznajte više o radnjama.] (Https://home-assistant.io/docs/automation/action/)",
                             "learn_more": "Saznajte više o akcijama",
                             "name": "Radnja",
                             "type": {
@@ -510,7 +510,7 @@
                             "delete_confirm": "Jeste li sigurni dai želite izbrisati?",
                             "duplicate": "Udvostruči",
                             "header": "Okidači",
-                            "introduction": "Okidači pokreću automatizacije. Moguće je odrediti više okidača za istu automatizaciju. Kada se okidač pokrene, Home Assistant provjerit će uvjete (ako ih ima) i pozvati akciju.",
+                            "introduction": "Okidači pokreću automatizacije. Moguće je odrediti više okidača za istu automatizaciju. Kada se okidač pokrene, Third Eye provjerit će uvjete (ako ih ima) i pozvati akciju.",
                             "learn_more": "Saznajte više o okidačima",
                             "name": "Okidač",
                             "type": {
@@ -537,7 +537,7 @@
                                 },
                                 "homeassistant": {
                                     "event": "Događaj:",
-                                    "label": "Home Assistant",
+                                    "label": "Third Eye",
                                     "shutdown": "Ugasiti",
                                     "start": "Početak"
                                 },
@@ -603,7 +603,7 @@
                         "delete_confirm": "Jeste li sigurni da želite izbrisati tu automatizaciju?",
                         "edit_automation": "Uredi automatizaciju",
                         "header": "Urednik Automatizacije",
-                        "introduction": "Automatizacijski urednik omogućuje stvaranje i uređivanje automatizacije. Molimo pročitajte [upute] (https://home-assistant.io/docs/automation/editor/) kako biste bili sigurni da ste ispravno konfigurirali Home Assistant.",
+                        "introduction": "Automatizacijski urednik omogućuje stvaranje i uređivanje automatizacije. Molimo pročitajte [upute] (https://home-assistant.io/docs/automation/editor/) kako biste bili sigurni da ste ispravno konfigurirali Third Eye.",
                         "learn_more": "Saznajte više o automatizacijama",
                         "no_automations": "Nismo mogli pronaći nikakve automatizirane uređaje",
                         "only_editable": "Samo automatizacije definirane u automations.yaml se mogu uređivati.",
@@ -634,11 +634,11 @@
                         "email": "E-mail",
                         "email_error_msg": "Neispravan e-mail",
                         "forgot_password": "zaboravljena lozinka?",
-                        "introduction": "Home Assistant Cloud vam pruža sigurnu udaljenu vezu s vašom instancom dok ste izvan kuće. Također vam omogućuje povezivanje s uslugama samo u cloudu: Amazon Alexa i Google Assistant.",
+                        "introduction": "Third Eye Cloud vam pruža sigurnu udaljenu vezu s vašom instancom dok ste izvan kuće. Također vam omogućuje povezivanje s uslugama samo u cloudu: Amazon Alexa i Google Assistant.",
                         "introduction2": "Ovu uslugu vodi naš partner ",
-                        "introduction2a": ", tvrtka koju su osnovali osnivači Home Assistanta i Hass.ioa.",
-                        "introduction3": "Home Assistant Cloud je usluga na pretplatu s besplatnim probnim razdobljem od mjesec dana. Nisu potrebne informacije o plaćanju.",
-                        "learn_more_link": "Saznajte više o Home Assistant Cloudu.",
+                        "introduction2a": ", tvrtka koju su osnovali osnivači Third Eyea i Hass.ioa.",
+                        "introduction3": "Third Eye Cloud je usluga na pretplatu s besplatnim probnim razdobljem od mjesec dana. Nisu potrebne informacije o plaćanju.",
+                        "learn_more_link": "Saznajte više o Third Eye Cloudu.",
                         "password": "Lozinka",
                         "password_error_msg": "Lozinke imaju najmanje 8 znakova",
                         "sign_in": "Prijava",
@@ -668,7 +668,7 @@
                 },
                 "core": {
                     "caption": "Općenito",
-                    "description": "Promijenite Home Assistant općenite postavke",
+                    "description": "Promijenite Third Eye općenite postavke",
                     "section": {
                         "core": {
                             "core_config": {
@@ -679,7 +679,7 @@
                                 "find_currency_value": "Nađite vašu valutu",
                                 "imperial_example": "Fahrenheit, funte",
                                 "latitude": "Zemljopisna širina",
-                                "location_name": "Naziv Home Assistant instalacije",
+                                "location_name": "Naziv Third Eye instalacije",
                                 "longitude": "Zemljopisna dužina",
                                 "metric_example": "Celzija, kilograma",
                                 "save_button": "Spremi",
@@ -768,14 +768,14 @@
                     "description": "Pregled svih poznatih entiteta.",
                     "picker": {
                         "header": "Entiteti",
-                        "introduction": "Home Assistant drži registar svakog entiteta koji je ikada vidio da se može jedinstveno identificirati. Svaki od tih entiteta imat će dodijeljeni ID entiteta koji će biti rezerviran za samo ovaj entitet.",
-                        "introduction2": "Koristite registar entiteta da biste nadjačali naziv, promijenili ID entiteta ili uklonili stavku iz Home Assistant. Napomena, uklanjanjem unosa registra entiteta neće se ukloniti entitet. Da biste to učinili, slijedite donju vezu i uklonite je s stranice integracije."
+                        "introduction": "Third Eye drži registar svakog entiteta koji je ikada vidio da se može jedinstveno identificirati. Svaki od tih entiteta imat će dodijeljeni ID entiteta koji će biti rezerviran za samo ovaj entitet.",
+                        "introduction2": "Koristite registar entiteta da biste nadjačali naziv, promijenili ID entiteta ili uklonili stavku iz Third Eye. Napomena, uklanjanjem unosa registra entiteta neće se ukloniti entitet. Da biste to učinili, slijedite donju vezu i uklonite je s stranice integracije."
                     }
                 },
-                "header": "Konfigurirajte Home Assistant",
+                "header": "Konfigurirajte Third Eye",
                 "info": {
                     "frontend_version": "Verzija sučelja: {version} - {type}",
-                    "home_assistant_logo": "Logotip Home Assistanta",
+                    "home_assistant_logo": "Logotip Third Eyea",
                     "license": "Objavljeno pod licencom Apache 2.0",
                     "path_configuration": "Put do configuration.yaml: {path}",
                     "source": "Izvorni kod:"
@@ -791,7 +791,7 @@
                         "hub": "Povezan putem",
                         "manuf": "od {manufacturer}",
                         "no_area": "Nema područja",
-                        "restart_confirm": "Ponovo pokrenite Home Assistant da biste dovršili uklanjanje ove integracije"
+                        "restart_confirm": "Ponovo pokrenite Third Eye da biste dovršili uklanjanje ove integracije"
                     },
                     "config_flow": {
                         "aborted": "Prekinut",
@@ -816,7 +816,7 @@
                     "none": "Još ništa nije konfigurirano",
                     "search": "Pretraživanje integracija"
                 },
-                "introduction": "Ovdje možete konfigurirati vaše komponente i Home Assistant. Nije moguće baš sve konfigurirati koristeći UI zasada, ali radimo na tome.",
+                "introduction": "Ovdje možete konfigurirati vaše komponente i Third Eye. Nije moguće baš sve konfigurirati koristeći UI zasada, ali radimo na tome.",
                 "mqtt": {
                     "title": "MQTT"
                 },
@@ -827,7 +827,7 @@
                 },
                 "person": {
                     "caption": "Osobe",
-                    "description": "Upravljajte osobama koje Home Assistant prati.",
+                    "description": "Upravljajte osobama koje Third Eye prati.",
                     "detail": {
                         "device_tracker_intro": "Odaberite uređaje koji pripadaju ovoj osobi.",
                         "device_tracker_pick": "Odaberite uređaj za praćenje",
@@ -868,7 +868,7 @@
                         "delete_scene": "Izbriši scenu",
                         "edit_scene": "Uredi scenu",
                         "header": "Urednik scena",
-                        "introduction": "Urednik scena omogućuje vam stvaranje i uređivanje scena. Molimo slijedite donju vezu da biste pročitali upute kako biste bili sigurni da ste ispravno konfigurirali Home Assistant.",
+                        "introduction": "Urednik scena omogućuje vam stvaranje i uređivanje scena. Molimo slijedite donju vezu da biste pročitali upute kako biste bili sigurni da ste ispravno konfigurirali Third Eye.",
                         "learn_more": "Saznajte više o scenama",
                         "no_scenes": "Nismo mogli pronaći nikakve scene koje se mogu uređivati",
                         "only_editable": "Samo scene definirane u scenes.yaml se mogu uređivati.",
@@ -894,29 +894,29 @@
                         "add_script": "Dodaj skriptu",
                         "edit_script": "Uredi skriptu",
                         "header": "Urednik skripta",
-                        "introduction": "Urednik skripta omogućuje vam stvaranje i uređivanje skripta. Molimo slijedite donju vezu da biste pročitali upute kako biste bili sigurni da ste ispravno konfigurirali Home Assistant.",
+                        "introduction": "Urednik skripta omogućuje vam stvaranje i uređivanje skripta. Molimo slijedite donju vezu da biste pročitali upute kako biste bili sigurni da ste ispravno konfigurirali Third Eye.",
                         "learn_more": "Saznajte više o skriptama",
                         "no_scripts": "Nismo mogli pronaći nikakve skripte koje se mogu uređivati"
                     }
                 },
                 "server_control": {
                     "caption": "Upravljanje poslužiteljem",
-                    "description": "Ponovo pokrenite i zaustavite Home Assistant poslužitelj",
+                    "description": "Ponovo pokrenite i zaustavite Third Eye poslužitelj",
                     "section": {
                         "reloading": {
                             "automation": "Ponovo učitavanje automatizacija",
                             "core": "Ponovno učitavanje jezgre",
                             "group": "Ponovno učitavanje grupa",
                             "heading": "Ponovno učitavanje konfiguracije",
-                            "introduction": "Neki dijelovi programa Home Assistant mogu se ponovno učitati bez potrebe za ponovnim pokretanjem. Pritiskom na ponovno učitavanje učitava se nova konfiguracija.",
+                            "introduction": "Neki dijelovi programa Third Eye mogu se ponovno učitati bez potrebe za ponovnim pokretanjem. Pritiskom na ponovno učitavanje učitava se nova konfiguracija.",
                             "scene": "Ponovno učitaj scene",
                             "script": "Ponovno učitavanje skripti"
                         },
                         "server_management": {
-                            "confirm_restart": "Jeste li sigurni da želite ponovo pokrenuti Home Assistant?",
+                            "confirm_restart": "Jeste li sigurni da želite ponovo pokrenuti Third Eye?",
                             "confirm_stop": "Jeste li sigurni da želite zaustaviti Home Assostant?",
                             "heading": "Upravljanje poslužiteljem",
-                            "introduction": "Upravljajte vašim Home Assistantom.",
+                            "introduction": "Upravljajte vašim Third Eyeom.",
                             "restart": "Ponovno pokretanje",
                             "stop": "Stop"
                         },
@@ -1040,7 +1040,7 @@
             },
             "custom": {
                 "external_panel": {
-                    "complete_access": "Imat će pristup svim podacima u Home Assistantu.",
+                    "complete_access": "Imat će pristup svim podacima u Third Eyeu.",
                     "hide_message": "Provjerite dokumentaciju za komponentu panel_custom kako biste sakrili ovu poruku",
                     "question_trust": "Vjerujete li vanjskom panelu {name} na {link}?"
                 }
@@ -1059,7 +1059,7 @@
                         "title": "Status"
                     },
                     "templates": {
-                        "template_extensions": "Proširenja predložaka Home Assistanta",
+                        "template_extensions": "Proširenja predložaka Third Eyea",
                         "title": "Predlošci",
                         "unknown_error_template": "Nepoznata pogreška pri prikazu predloška"
                     }
@@ -1182,7 +1182,7 @@
                     "migrate": {
                         "header": "Konfiguracija nije kompatibilna",
                         "migrate": "Migriraj konfiguraciju",
-                        "para_migrate": "Home Assistant može dodati ID-ove na sve vaše kartice i pogleda automatski za vas pritiskom na gumb 'Migriraj konfiguriranje'.",
+                        "para_migrate": "Third Eye može dodati ID-ove na sve vaše kartice i pogleda automatski za vas pritiskom na gumb 'Migriraj konfiguriranje'.",
                         "para_no_id": "Ovaj element nema ID. Dodajte ID ovom elementu u 'ui-lovelace.yaml'."
                     },
                     "raw_editor": {
@@ -1198,7 +1198,7 @@
                     },
                     "save_config": {
                         "header": "Preuzmite kontrolu nad Lovelace UI",
-                        "para": "Home Assistant će prema zadanim postavkama održavati vaše korisničko sučelje, ažurirati ga kada novi entiteti ili Lovelace komponente postanu dostupni. Ako preuzmete kontrolu, više nećemo automatski vršiti izmjene za vas.",
+                        "para": "Third Eye će prema zadanim postavkama održavati vaše korisničko sučelje, ažurirati ga kada novi entiteti ili Lovelace komponente postanu dostupni. Ako preuzmete kontrolu, više nećemo automatski vršiti izmjene za vas.",
                         "para_sure": "Jeste li sigurni da želite preuzeti kontrolu nad svojim korisničkim sučeljem?",
                         "save": "Preuzmi kontrolu"
                     }
@@ -1231,7 +1231,7 @@
             },
             "page-authorize": {
                 "abort_intro": "Prijava je prekinuta",
-                "authorizing_client": "Dati ćete {clientId} pristup svojoj instanci pomoćnika Home Assistant.",
+                "authorizing_client": "Dati ćete {clientId} pristup svojoj instanci pomoćnika Third Eye.",
                 "form": {
                     "providers": {
                         "command_line": {
@@ -1326,8 +1326,8 @@
                 "cards": {
                     "demo": {
                         "demo_by": "od {name}",
-                        "introduction": "Dobrodošli kući! Stigli ste do Home Assistant demo gdje prikazujemo najbolja korisnička sučelja koje je kreirala naša zajednica.",
-                        "learn_more": "Saznajte više o Home Assistant",
+                        "introduction": "Dobrodošli kući! Stigli ste do Third Eye demo gdje prikazujemo najbolja korisnička sučelja koje je kreirala naša zajednica.",
+                        "learn_more": "Saznajte više o Third Eye",
                         "next_demo": "Sljedeći demo"
                     }
                 },
@@ -1369,14 +1369,14 @@
                 "core-config": {
                     "button_detect": "Otkrij",
                     "finish": "Sljedeći",
-                    "intro": "Pozdrav {name}, dobrodošli u Home Assistant. Kako biste željeli nazvati svoj dom?",
+                    "intro": "Pozdrav {name}, dobrodošli u Third Eye. Kako biste željeli nazvati svoj dom?",
                     "intro_location": "Željeli bismo znati gdje živite. Te će informacije pomoći pri prikazivanju informacija i postavljanju automatizacije na temelju sunca. Ti se podaci nikada ne dijele izvan vaše mreže.",
                     "intro_location_detect": "Možemo vam pomoći da ispunite ove informacije tako što ćete napraviti jedan zahtjev na vanjsku uslugu.",
                     "location_name_default": "Dom"
                 },
                 "integration": {
                     "finish": "Završi",
-                    "intro": "Uređaji i usluge predstavljeni su u programu Home Assistant kao integracije. Možete ih postaviti sada ili to učiniti kasnije s zaslona konfiguracije.",
+                    "intro": "Uređaji i usluge predstavljeni su u programu Third Eye kao integracije. Možete ih postaviti sada ili to učiniti kasnije s zaslona konfiguracije.",
                     "more_integrations": "Više"
                 },
                 "intro": "Jeste li spremni probuditi svoj dom, vratiti svoju privatnost i pridružiti se svjetskoj zajednici tinkerera?",
@@ -1427,7 +1427,7 @@
                     "create": "Izradite token",
                     "create_failed": "Nije uspjelo stvaranje pristupnog tokena.",
                     "delete_failed": "Nije uspjelo brisanje pristupnog tokena.",
-                    "description": "Izradite dugotrajne tokene za pristup kako biste omogućili da vaše skripte stupaju u interakciju sa vašim primjerom Home Assistanta. Svaki token će vrijediti 10 godina od stvaranja.  Sljedeći su dugotrajni tokeni trenutno aktivni.",
+                    "description": "Izradite dugotrajne tokene za pristup kako biste omogućili da vaše skripte stupaju u interakciju sa vašim primjerom Third Eyea. Svaki token će vrijediti 10 godina od stvaranja.  Sljedeći su dugotrajni tokeni trenutno aktivni.",
                     "empty_state": "Još nemate dugovječnih tokena pristupa.",
                     "header": "Dugotrajni tokeni",
                     "learn_auth_requests": "Saznajte kako obaviti provjeru autentičnosti zahtjeva.",

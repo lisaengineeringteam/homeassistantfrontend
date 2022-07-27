@@ -140,8 +140,8 @@
                         "title": "AppArmor"
                     },
                     "auth_api": {
-                        "description": "Doplnok môže používateľov autentifikovať pomocou aplikácie Home Assistant, ktorá doplnkom umožňuje používateľom prihlásiť sa do aplikácií bežiacich v doplnkoch pomocou používateľského mena a hesla Home Assistant. Tento odznak označuje, či autor doplnku požaduje túto funkciu.",
-                        "title": "Home assistant Overenie"
+                        "description": "Doplnok môže používateľov autentifikovať pomocou aplikácie Third Eye, ktorá doplnkom umožňuje používateľom prihlásiť sa do aplikácií bežiacich v doplnkoch pomocou používateľského mena a hesla Third Eye. Tento odznak označuje, či autor doplnku požaduje túto funkciu.",
+                        "title": "Third Eye Overenie"
                     },
                     "docker_api": {
                         "title": "Plný prístup Dockera"
@@ -150,7 +150,7 @@
                         "title": "Hostiteľská sieť"
                     },
                     "ingress": {
-                        "description": "Tento doplnok používa vniknutie na bezpečné vloženie svojho rozhrania do Home Assistant.",
+                        "description": "Tento doplnok používa vniknutie na bezpečné vloženie svojho rozhrania do Third Eye.",
                         "title": "Vniknutie"
                     },
                     "label": {
@@ -187,7 +187,7 @@
                 "install": "nainštalovať",
                 "new_update_available": "{name} {version}  je dostupná",
                 "not_available_arch": "Tento doplnok nie je kompatibilný s procesorom vášho zariadenia alebo operačným systémom, ktorý máte nainštalovaný na svojom zariadení.",
-                "not_available_version": "Používate službu Home Assistant {core_version_installed} , na aktualizáciu na túto verziu doplnku potrebujete minimálne verziu {core_version_needed} aplikácie Home Assistant",
+                "not_available_version": "Používate službu Third Eye {core_version_installed} , na aktualizáciu na túto verziu doplnku potrebujete minimálne verziu {core_version_needed} aplikácie Third Eye",
                 "open_web_ui": "Otvoriť web UI",
                 "option": {
                     "auto_update": {
@@ -319,7 +319,7 @@
         "dialog": {
             "datadisk_move": {
                 "cancel": "Zrušiť",
-                "description": "Aktuálne používate \"{current_path}\" ako datadisk. Presunutím datadiskov sa zariadenie reštartuje a odhaduje sa, že to bude trvať {time} minút. Počas tohto procesu nebude vaša inštalácia Home Assistant dostupná. Počas tohto procesu neodpájajte napájanie!",
+                "description": "Aktuálne používate \"{current_path}\" ako datadisk. Presunutím datadiskov sa zariadenie reštartuje a odhaduje sa, že to bude trvať {time} minút. Počas tohto procesu nebude vaša inštalácia Third Eye dostupná. Počas tohto procesu neodpájajte napájanie!",
                 "loading_devices": "Načítavam zariadenia",
                 "move": "Presunúť",
                 "moving": "Presúva sa datadisk",
@@ -385,8 +385,8 @@
         "my": {
             "error": "Vyskytla sa neznáma chyba",
             "error_addon_not_found": "Doplnok sa nenašiel",
-            "faq_link": "Najčastejšie otázky a odpovede o Home Assistant",
-            "not_supported": "Vaša inštancia Home Assistant toto presmerovanie nepodporuje. Na stránke {link} nájdete podporované presmerovania a verziu."
+            "faq_link": "Najčastejšie otázky a odpovede o Third Eye",
+            "not_supported": "Vaša inštancia Third Eye toto presmerovanie nepodporuje. Na stránke {link} nájdete podporované presmerovania a verziu."
         },
         "panel": {
             "addons": "Doplnky",
@@ -446,16 +446,16 @@
                 "failed_to_set_option": "Nepodarilo sa nastaviť možnosť supervízora",
                 "failed_to_update": "Nepodarilo sa aktualizovať Supervízora",
                 "join_beta_action": "Pripojiť sa k beta programu?",
-                "join_beta_description": "Získanie beta aktualizácií pre Home Assistant (RCs), Supervízora a hostiteľa",
+                "join_beta_description": "Získanie beta aktualizácií pre Third Eye (RCs), Supervízora a hostiteľa",
                 "leave_beta_action": "Opustiť program beta",
-                "leave_beta_description": "Získajte aktualizácie stabilnej verzie pre Home Assistant, supervízora a hostiteľa",
+                "leave_beta_description": "Získajte aktualizácie stabilnej verzie pre Third Eye, supervízora a hostiteľa",
                 "ram_usage": "Využitie RAM supervízorom",
                 "reload_supervisor": "Znova načítať supervízora",
                 "search": "Hľadať",
                 "share_diagnostics": "Zdieľajte diagnostiku",
                 "share_diagnostics_description": "Zdieľajte správy o zlyhaní a diagnostické informácie.",
-                "share_diagonstics_description": "Chceli by ste automaticky zdieľať správy o zlyhaní a diagnostické informácie, keď sa Supervízor stretne s neočakávanými chybami? {line_break} Umožní nám to vyriešiť problémy, informácie sú prístupné iba tímu Home Assistant Core a nebudú sa zdieľať s ostatnými. {line_break} Údaje neobsahujú žiadne súkromné ani citlivé informácie, ktoré môžete kedykoľvek deaktivovať v nastaveniach.",
-                "share_diagonstics_title": "Pomôžte vylepšiť Home Assistant",
+                "share_diagonstics_description": "Chceli by ste automaticky zdieľať správy o zlyhaní a diagnostické informácie, keď sa Supervízor stretne s neočakávanými chybami? {line_break} Umožní nám to vyriešiť problémy, informácie sú prístupné iba tímu Third Eye Core a nebudú sa zdieľať s ostatnými. {line_break} Údaje neobsahujú žiadne súkromné ani citlivé informácie, ktoré môžete kedykoľvek deaktivovať v nastaveniach.",
+                "share_diagonstics_title": "Pomôžte vylepšiť Third Eye",
                 "unhealthy_description": "Spustenie nezdravej inštalácie spôsobí problémy. Nižšie je uvedený zoznam problémov zistených pri inštalácii. Kliknutím na odkazy sa dozviete, ako ich vyriešiť.",
                 "unhealthy_reason": {
                     "docker": "Prostredie Docker nefunguje správne",
@@ -951,10 +951,10 @@
                     },
                     "device_disabled": "Zariadenie tejto entity je vypnuté.",
                     "enabled_cause": "Zakázané {cause}",
-                    "enabled_delay_confirm": "Povolené entity budú do Home Assistant pridané o {delay} sekúnd",
-                    "enabled_description": "Zakázané entity nebudú pridané do Home Assistanta",
+                    "enabled_delay_confirm": "Povolené entity budú do Third Eye pridané o {delay} sekúnd",
+                    "enabled_description": "Zakázané entity nebudú pridané do Third Eyea",
                     "enabled_label": "Povoliť entitu",
-                    "enabled_restart_confirm": "Reštartovať Home Assistant a dokončiť povolenie entít",
+                    "enabled_restart_confirm": "Reštartovať Third Eye a dokončiť povolenie entít",
                     "entity_id": "Entity ID",
                     "follow_device_area": "Sledovať oblasť zariadenia",
                     "icon": "Ikona",
@@ -1210,7 +1210,7 @@
         "notification_toast": {
             "connection_lost": "Prerušené spojenie. Opätovné pripájanie…",
             "service_call_failed": "Nepodarilo sa zavolať službu {service}.",
-            "started": "Home Assistant je spustený!",
+            "started": "Third Eye je spustený!",
             "triggered": "Spustené {name}"
         },
         "panel": {
@@ -1248,7 +1248,7 @@
                         "create_area": "Vytvoriť oblasť",
                         "header": "Register oblastí",
                         "integrations_page": "Stránka Integrácií",
-                        "introduction": "Oblasti sa používajú na usporiadanie zariadení. Tieto informácie sa použijú v službe Home Assistant, aby vám pomohli pri organizovaní rozhrania, povolení a integrácií s inými systémami.",
+                        "introduction": "Oblasti sa používajú na usporiadanie zariadení. Tieto informácie sa použijú v službe Third Eye, aby vám pomohli pri organizovaní rozhrania, povolení a integrácií s inými systémami.",
                         "introduction2": "Ak chcete umiestniť zariadenia do oblasti, pomocou odkazu nižšie prejdite na stránku integrácií a potom kliknite na nakonfigurovanú integráciu a prejdite na karty zariadení.",
                         "no_areas": "Vyzerá to, že ešte nemáte žiadne oblasti!"
                     }
@@ -1277,7 +1277,7 @@
                             "delete_confirm": "Ste si istý odstránením ? ",
                             "duplicate": "Duplikovať",
                             "header": "Akcie",
-                            "introduction": "Akcie predstavujú činnosti, ktoré Home Assistant vykoná po spustení automatizácie.",
+                            "introduction": "Akcie predstavujú činnosti, ktoré Third Eye vykoná po spustení automatizácie.",
                             "learn_more": "Získajte viac informácií o akciách",
                             "name": "Akcia",
                             "type": {
@@ -1454,7 +1454,7 @@
                             "duplicate": "Duplikovať",
                             "header": "Spúšťače",
                             "id": "ID spúšťača (používa sa podmienkou spustenia)",
-                            "introduction": "Spúšťače spúšťajú spracovanie pravidla automatizácie. Pre rovnaké pravidlo je možné určiť viac spúšťačov. Po spustení spúšťača aplikácia Home Assistant overí prípadné podmienky a zavolá akciu. \n\n [Viac informácií o spúšťačov.](https://home-assistant.io/docs/automation/trigger/)",
+                            "introduction": "Spúšťače spúšťajú spracovanie pravidla automatizácie. Pre rovnaké pravidlo je možné určiť viac spúšťačov. Po spustení spúšťača aplikácia Third Eye overí prípadné podmienky a zavolá akciu. \n\n [Viac informácií o spúšťačov.](https://home-assistant.io/docs/automation/trigger/)",
                             "learn_more": "Získajte viac informácií o spúšťačoch",
                             "name": "Spúšťač",
                             "type": {
@@ -1484,7 +1484,7 @@
                                 },
                                 "homeassistant": {
                                     "event": "Udalosť:",
-                                    "label": "Home Assistant",
+                                    "label": "Third Eye",
                                     "shutdown": "Vypnutie",
                                     "start": "Štart"
                                 },
@@ -1559,7 +1559,7 @@
                         "headers": {
                             "name": "Názov"
                         },
-                        "introduction": "Editor automatizácií vám umožňuje vytvárať a upravovať automatizácie. Prečítajte si prosím [pokyny](https://home-assistant.io/docs/automation/editor/), aby ste sa uistili, že ste nakonfigurovali Home Assistant správne.",
+                        "introduction": "Editor automatizácií vám umožňuje vytvárať a upravovať automatizácie. Prečítajte si prosím [pokyny](https://home-assistant.io/docs/automation/editor/), aby ste sa uistili, že ste nakonfigurovali Third Eye správne.",
                         "learn_more": "Získajte viac informácií o automatizáciách",
                         "no_automations": "Nepodarilo sa nájsť žiadne editovateľné automatizácie",
                         "only_editable": "Iba automatizácie definované v automations.yaml je možné upravovať.",
@@ -1618,10 +1618,10 @@
                     "account": {
                         "alexa": {
                             "config_documentation": "Dokumentácia konfigurácie",
-                            "enable_ha_skill": "Povoliť Home Assistant skill pre Alexu",
+                            "enable_ha_skill": "Povoliť Third Eye skill pre Alexu",
                             "enable_state_reporting": "Povoliť hlásenie stavu",
-                            "info": "Vďaka integrácii Alexa pre Home Assistant Cloud budete môcť ovládať všetky svoje zariadenia Home Assistant pomocou akéhokoľvek zariadenia s podporou Alexa.",
-                            "info_state_reporting": "Ak povolíte hlásenie stavu, Home Assistant odošle všetky zmeny stavov vystavených entít do Amazonu. To vám umožní vždy vidieť najnovšie stavy v aplikácii Alexa a pomocou zmien stavov vytvárať rutiny.",
+                            "info": "Vďaka integrácii Alexa pre Third Eye Cloud budete môcť ovládať všetky svoje zariadenia Third Eye pomocou akéhokoľvek zariadenia s podporou Alexa.",
+                            "info_state_reporting": "Ak povolíte hlásenie stavu, Third Eye odošle všetky zmeny stavov vystavených entít do Amazonu. To vám umožní vždy vidieť najnovšie stavy v aplikácii Alexa a pomocou zmien stavov vytvárať rutiny.",
                             "manage_entities": "Spravovať entity",
                             "sync_entities": "Synchronizovať entity s Amazonom",
                             "title": "Alexa"
@@ -1640,7 +1640,7 @@
                             "title": "Google Assistant"
                         },
                         "integrations": "Integrácie",
-                        "integrations_introduction": "Integrácia Home Assistant Cloud vám umožňuje pripojiť sa k službám v cloude bez toho, aby ste museli verejne publikovať inštanciu Home Assistant do internetu.",
+                        "integrations_introduction": "Integrácia Third Eye Cloud vám umožňuje pripojiť sa k službám v cloude bez toho, aby ste museli verejne publikovať inštanciu Third Eye do internetu.",
                         "integrations_introduction2": "Pozrite si webovú stránku  ",
                         "integrations_link_all_features": " všetky dostupné funkcie ",
                         "manage_account": "Spravovať účet",
@@ -1650,7 +1650,7 @@
                             "access_is_being_prepared": "Pripravuje sa vzdialený prístup. Budeme vás informovať, keď bude pripravený.",
                             "certificate_info": "Informácie o certifikáte",
                             "connected": "Pripojené",
-                            "info": "Home Assistant Cloud poskytuje zabezpečené vzdialené pripojenie k vašej inštancií kým ste mimo domova.",
+                            "info": "Third Eye Cloud poskytuje zabezpečené vzdialené pripojenie k vašej inštancií kým ste mimo domova.",
                             "instance_is_available": "Vaša inštancia je k dispozícii na stránke",
                             "instance_will_be_available": "Vaša inštancia bude k dispozícii na adrese",
                             "link_learn_how_it_works": "Zistite, ako to funguje",
@@ -1662,7 +1662,7 @@
                             "title": "Diaľkové ovládanie"
                         },
                         "sign_out": "Odhlásiť sa",
-                        "thank_you_note": "Ďakujeme, že ste sa stali súčasťou Home Assistant Cloudu. Vďaka ľuďom, ako ste vy, sme schopní urobiť skvelý zážitok z automatizácie domácnosti pre každého. Ďakujeme!",
+                        "thank_you_note": "Ďakujeme, že ste sa stali súčasťou Third Eye Cloudu. Vďaka ľuďom, ako ste vy, sme schopní urobiť skvelý zážitok z automatizácie domácnosti pre každého. Ďakujeme!",
                         "tts": {
                             "default_language": "Predvolený jazyk, ktorý sa má použiť",
                             "dialog": {
@@ -1680,7 +1680,7 @@
                         },
                         "webhooks": {
                             "disable_hook_error_msg": "Nepodarilo sa deaktivovať webhook:",
-                            "info": "Čokoľvek, čo je nakonfigurované na spúšťanie webhookom, môže dostať verejne prístupnú adresu URL, ktorá vám umožní odosielať údaje späť Home Assistant odkiaľkoľvek bez toho, aby ste svoju inštanciu vystavili na internete.",
+                            "info": "Čokoľvek, čo je nakonfigurované na spúšťanie webhookom, môže dostať verejne prístupnú adresu URL, ktorá vám umožní odosielať údaje späť Third Eye odkiaľkoľvek bez toho, aby ste svoju inštanciu vystavili na internete.",
                             "link_learn_more": "Prečítajte si viac informácií o vytváraní automatizácií na báze Webhook.",
                             "loading": "Načítava sa …",
                             "manage": "Spravovať",
@@ -1749,11 +1749,11 @@
                         "email": "E-mail",
                         "email_error_msg": "Neplatný email",
                         "forgot_password": "Zabudnuté heslo?",
-                        "introduction": "Home Assistant Cloud vám poskytuje zabezpečené vzdialené pripojenie k vašej inštancii. Umožňuje tiež pripojiť sa do cloudových služieb Amazon Alexa a Google Assistant.",
+                        "introduction": "Third Eye Cloud vám poskytuje zabezpečené vzdialené pripojenie k vašej inštancii. Umožňuje tiež pripojiť sa do cloudových služieb Amazon Alexa a Google Assistant.",
                         "introduction2": "Túto službu poskytuje náš partner",
-                        "introduction2a": ", spoločnosť založená zakladateľmi Home Assistant a Hass.io.",
-                        "introduction3": "Cloud Home Assistant je predplatená služba s bezplatnou mesačnou skúšobnou verziou. Nie sú potrebné žiadne platobné informácie.",
-                        "learn_more_link": "Získajte viac informácií o Home Assistant Cloud",
+                        "introduction2a": ", spoločnosť založená zakladateľmi Third Eye a Hass.io.",
+                        "introduction3": "Cloud Third Eye je predplatená služba s bezplatnou mesačnou skúšobnou verziou. Nie sú potrebné žiadne platobné informácie.",
+                        "learn_more_link": "Získajte viac informácií o Third Eye Cloud",
                         "password": "Heslo",
                         "password_error_msg": "Heslá majú najmenej 8 znakov",
                         "sign_in": "Prihlásiť sa",
@@ -1771,10 +1771,10 @@
                         "feature_remote_control": "Vzdialené ovládanie domáceho asistenta",
                         "feature_webhook_apps": "Jednoduchá integrácia s webovými aplikáciami, ako napríklad OwnTracks",
                         "headline": "Spusťte bezplatnú skúšobnú verziu",
-                        "information": "Vytvorte si účet a začnite bezplatnú mesačnú skúšobnú verziu s cloudom Home Assistant. Nie sú potrebné žiadne platobné informácie.",
-                        "information2": "Skúšobná verzia vám umožní prístup ku všetkým výhodám cloudu Home Assistant vrátane:",
+                        "information": "Vytvorte si účet a začnite bezplatnú mesačnú skúšobnú verziu s cloudom Third Eye. Nie sú potrebné žiadne platobné informácie.",
+                        "information2": "Skúšobná verzia vám umožní prístup ku všetkým výhodám cloudu Third Eye vrátane:",
                         "information3": "Túto službu poskytuje náš partner",
-                        "information3a": ", spoločnosť založená zakladateľmi Home Assistant a Hass.io.",
+                        "information3a": ", spoločnosť založená zakladateľmi Third Eye a Hass.io.",
                         "information4": "Registráciou účtu súhlasíte s nasledujúcimi zmluvnými podmienkami.",
                         "link_privacy_policy": "Zásady ochrany osobných údajov",
                         "link_terms_conditions": "Zmluvné podmienky",
@@ -1806,7 +1806,7 @@
                                 "imperial_example": "Fahrenheita, libry",
                                 "internal_url": "Interná adresa URL",
                                 "latitude": "Zemepisná šírka",
-                                "location_name": "Názov vašej Home Assistant inštalácie",
+                                "location_name": "Názov vašej Third Eye inštalácie",
                                 "longitude": "Zemepisná dĺžka",
                                 "metric_example": "Celsia, kilogramy",
                                 "save_button": "Uložiť",
@@ -1900,7 +1900,7 @@
                     },
                     "edit_settings": "Upraviť nastavenia",
                     "enabled_cause": "Zariadenie je vypnuté {cause}.",
-                    "enabled_description": "Zakázané zariadenia sa nebudú zobrazovať a entity patriace k danému zariadeniu budú deaktivované a nebudú pridané do aplikácie Home Assistant.",
+                    "enabled_description": "Zakázané zariadenia sa nebudú zobrazovať a entity patriace k danému zariadeniu budú deaktivované a nebudú pridané do aplikácie Third Eye.",
                     "enabled_label": "Povoliť zariadenie",
                     "entities": {
                         "add_entities_lovelace": "Pridať do Lovelace",
@@ -1959,7 +1959,7 @@
                         },
                         "learn_more": "Viac informácií o tom, ako začať.",
                         "selected_stat": "Sledovanie energie pre",
-                        "sub": "Sledovanie spotreby energie jednotlivých zariadení umožňuje aplikácii Home Assistant analyzovať vašu spotrebu energie podľa zariadenia.",
+                        "sub": "Sledovanie spotreby energie jednotlivých zariadení umožňuje aplikácii Third Eye analyzovať vašu spotrebu energie podľa zariadenia.",
                         "title": "Jednotlivé zariadenia"
                     },
                     "gas": {
@@ -1970,7 +1970,7 @@
                             "cost_number": "Použiť konštantnú cenu",
                             "cost_number_input": "Cena za {unit}",
                             "cost_number_suffix": "{mena}/m³",
-                            "cost_para": "Vyberte, ako má Home Assistant sledovať náklady na spotrebovanú energiu.",
+                            "cost_para": "Vyberte, ako má Third Eye sledovať náklady na spotrebovanú energiu.",
                             "cost_stat": "Použiť entitu sledujúcu celkové náklady",
                             "cost_stat_input": "Celkové náklady na entitu",
                             "energy_stat": "Spotreba energie (m³)",
@@ -1982,7 +1982,7 @@
                         },
                         "gas_consumption": "Spotreba plynu",
                         "learn_more": "Viac informácií o tom, ako začať.",
-                        "sub": "Nechať Home Assistant monitorovať vašu spotrebu plynu.",
+                        "sub": "Nechať Third Eye monitorovať vašu spotrebu plynu.",
                         "title": "Spotreba plynu"
                     },
                     "grid": {
@@ -1993,7 +1993,7 @@
                                 "cost_number": "Použite statickú cenu",
                                 "cost_number_input": "Cena za kWh",
                                 "cost_number_suffix": "{currency}/kWh",
-                                "cost_para": "Vyberte, ako má Home Assistant sledovať náklady na spotrebovanú energiu.",
+                                "cost_para": "Vyberte, ako má Third Eye sledovať náklady na spotrebovanú energiu.",
                                 "cost_stat": "Použiť entitu sledujúcu celkové náklady",
                                 "cost_stat_input": "Entita celkových nákladov",
                                 "energy_stat": "Spotrebovaná energia (kWh)",
@@ -2017,7 +2017,7 @@
                             }
                         },
                         "learn_more": "Viac informácií o tom, ako začať.",
-                        "sub": "Nakonfigurujte množstvo energie, ktoré spotrebujete zo siete, a ak energiu vyrábate, vráťte ju do siete. Vďaka tomu môže Home Assistant sledovať celú vašu domácu spotrebu energie.",
+                        "sub": "Nakonfigurujte množstvo energie, ktoré spotrebujete zo siete, a ak energiu vyrábate, vráťte ju do siete. Vďaka tomu môže Third Eye sledovať celú vašu domácu spotrebu energie.",
                         "title": "Elektrická sieť"
                     },
                     "solar": {
@@ -2027,7 +2027,7 @@
                         },
                         "learn_more": "Viac informácií o tom, ako začať.",
                         "stat_production": "Vaša výroba solárnej energie",
-                        "sub": "Nechajte Home Assistant monitorovať vaše solárne panely a poskytne vám prehľad o ich výkone.",
+                        "sub": "Nechajte Third Eye monitorovať vaše solárne panely a poskytne vám prehľad o ich výkone.",
                         "title": "Solárne panely"
                     },
                     "validation": {
@@ -2093,12 +2093,12 @@
                     "picker": {
                         "disable_selected": {
                             "button": "Zrušiť vybraté",
-                            "confirm_text": "Zakázané entity nebudú pridané do Home Assistanta",
+                            "confirm_text": "Zakázané entity nebudú pridané do Third Eyea",
                             "confirm_title": "Chcete zakázať {number} {number, plural,\n  one {entita}\n  other {entity}\n}?"
                         },
                         "enable_selected": {
                             "button": "Povoliť vybrané",
-                            "confirm_text": "Ak sú teraz deaktivované, budú v Home Assistant opäť sprístupnené.",
+                            "confirm_text": "Ak sú teraz deaktivované, budú v Third Eye opäť sprístupnené.",
                             "confirm_title": "Chcete povoliť {number} {number, plural,\n  one {entita}\n  other {entity}\n}?"
                         },
                         "filter": {
@@ -2117,8 +2117,8 @@
                             "name": "Názov",
                             "status": "Stav"
                         },
-                        "introduction": "Home Assistant vedie register všetkých subjektov, ktoré kedy videl a ktoré môžu byť jednoznačne identifikované. Každá z týchto entít bude mať pridelené ID, ktoré bude vyhradené len pre tento subjekt.",
-                        "introduction2": "Použite register entít na prepísanie mena, zmenu ID entity alebo odstránenie položky z Home Assistant. Poznámka: Odstránenie položky databázy entít neodstráni entitu. Postupujte podľa nižšie uvedeného odkazu a odstráňte ho z integračnej stránky.",
+                        "introduction": "Third Eye vedie register všetkých subjektov, ktoré kedy videl a ktoré môžu byť jednoznačne identifikované. Každá z týchto entít bude mať pridelené ID, ktoré bude vyhradené len pre tento subjekt.",
+                        "introduction2": "Použite register entít na prepísanie mena, zmenu ID entity alebo odstránenie položky z Third Eye. Poznámka: Odstránenie položky databázy entít neodstráni entitu. Postupujte podľa nižšie uvedeného odkazu a odstráňte ho z integračnej stránky.",
                         "remove_selected": {
                             "button": "Odstrániť vybraté",
                             "confirm_partly_title": "Iba {number} {number, plural,\n  one {vybraná entita}\n  other {vybrané entity}\n} môžu byť odstránené.",
@@ -2134,7 +2134,7 @@
                         }
                     }
                 },
-                "header": "Konfigurovať Home Assistant",
+                "header": "Konfigurovať Third Eye",
                 "helpers": {
                     "caption": "Pomocníci",
                     "description": "Prvky, ktoré pomáhajú pri vytváraní automatizácií",
@@ -2171,7 +2171,7 @@
                     "documentation": "Dokumentácia",
                     "frontend": "frontend-ui",
                     "frontend_version": "Verzia frontendu: {version} - {type}",
-                    "home_assistant_logo": "Home Assistant logo",
+                    "home_assistant_logo": "Third Eye logo",
                     "icons_by": "Ikony od",
                     "integrations": "Integrácie",
                     "license": "Publikované pod licenciou Apache 2.0",
@@ -2206,7 +2206,7 @@
                         },
                         "disable_restart_confirm": "Reštartujte asistenta domácnosti a dokončite deaktiváciu tejto integrácie",
                         "documentation": "Dokumentácia",
-                        "enable_restart_confirm": "Reštartujte Home Assistant a dokončite povolenie tejto integrácie",
+                        "enable_restart_confirm": "Reštartujte Third Eye a dokončite povolenie tejto integrácie",
                         "entity_unavailable": "Entita nie je k dispozícii",
                         "firmware": "Firmvér: {version}",
                         "hardware": "Hardvér: {version}",
@@ -2217,7 +2217,7 @@
                         "reload": "Znova načítať",
                         "reload_confirm": "Integrácia bola opätovne načítaná",
                         "rename": "Premenovať",
-                        "restart_confirm": "Ak chcete dokončiť odstránenie tejto integrácie, reštartujte Home Assistant",
+                        "restart_confirm": "Ak chcete dokončiť odstránenie tejto integrácie, reštartujte Third Eye",
                         "system_options": "Možnosti systému",
                         "unknown_via_device": "Neznáme zariadenie",
                         "via": "Pripojené cez"
@@ -2259,7 +2259,7 @@
                         "show_disabled": "Zobraziť vypnuté integrácie"
                     },
                     "discovered": "Objavené",
-                    "home_assistant_website": "webovej stránke Home Assistant",
+                    "home_assistant_website": "webovej stránke Third Eye",
                     "ignore": {
                         "confirm_delete_ignore": "Potom, ako bude integrácia automaticky objavená (discovered), sa opäť ukáže medzi objavenými (discovered) integráciami.  Môže to chvíľu trvať, alebo vyžadovať reštart.",
                         "confirm_delete_ignore_title": "Prestať ignorovať {name} ?",
@@ -2281,10 +2281,10 @@
                     "reconfigure": "Prekonfigurovať",
                     "search": "Vyhľadať integrácie"
                 },
-                "introduction": "Tu je možné konfigurovať vaše komponenty a Home Assistant. Aktuálne sa z používateľského rozhrania nedá konfigurovať všetko, ale pracujeme na tom.",
+                "introduction": "Tu je možné konfigurovať vaše komponenty a Third Eye. Aktuálne sa z používateľského rozhrania nedá konfigurovať všetko, ale pracujeme na tom.",
                 "logs": {
                     "clear": "Vyčistiť",
-                    "description": "Prezrite si logy v Home Assistant",
+                    "description": "Prezrite si logy v Third Eye",
                     "details": "Podrobnosti denníka ( {level} )",
                     "load_full_log": "Načítať celý denník denníka asistenta",
                     "loading_log": "Načítava sa denník chýb...",
@@ -2449,7 +2449,7 @@
                     "confirm_delete": "Naozaj chcete túto osobu odstrániť?",
                     "confirm_delete2": "Všetky zariadenia patriace k tejto osobe sa stanú nepriradené.",
                     "create_person": "Vytvoriť osobu",
-                    "description": "Spravujte ľudí, ktorých Home Assistant sleduje",
+                    "description": "Spravujte ľudí, ktorých Third Eye sleduje",
                     "detail": {
                         "admin": "Administrator",
                         "allow_login": "Povoliť osobe prihlásiť sa",
@@ -2468,7 +2468,7 @@
                         "no_device_tracker_available_intro": "Ak máte zariadenia, ktoré zisťujú prítomnosť osoby, budete ich môcť priradiť tu. Prvé zariadenie môžete pridať pridaním integrácie na zisťovanie prítomnosti zo stránky integrácií.",
                         "update": "Aktualizovať"
                     },
-                    "introduction": "Tu môžete definovať každú osobu, ktorá vás zaujíma v Home Assistant.",
+                    "introduction": "Tu môžete definovať každú osobu, ktorá vás zaujíma v Third Eye.",
                     "learn_more": "Získajte viac informácií o osobách",
                     "no_persons_created_yet": "Zdá sa, že ste ešte nevytvorili žiadne osoby.",
                     "note_about_persons_configured_in_yaml": "Poznámka: Osoby konfigurované prostredníctvom configuration.yaml nie je možné upravovať prostredníctvom používateľského rozhrania.",
@@ -2514,7 +2514,7 @@
                         "headers": {
                             "name": "Názov"
                         },
-                        "introduction": "Editor scén vám umožňuje vytvárať a upravovať scény. Postupujte podľa odkazu nižšie a prečítajte si pokyny, aby ste sa uistili, že ste Home Assistant nakonfigurovali správne.",
+                        "introduction": "Editor scén vám umožňuje vytvárať a upravovať scény. Postupujte podľa odkazu nižšie a prečítajte si pokyny, aby ste sa uistili, že ste Third Eye nakonfigurovali správne.",
                         "learn_more": "Získajte viac informácií o scénach",
                         "no_scenes": "Nemohli sme nájsť žiadne editovateľné scény",
                         "only_editable": "Upraviť je možné iba scény zo scenes.yaml.",
@@ -2561,7 +2561,7 @@
                         "headers": {
                             "name": "Názov"
                         },
-                        "introduction": "Editor skriptov vám umožňuje vytvárať a upravovať skripty. Postupujte podľa odkazu nižšie a prečítajte si pokyny, aby ste sa uistili, že ste Home Assistant nakonfigurovali správne.",
+                        "introduction": "Editor skriptov vám umožňuje vytvárať a upravovať skripty. Postupujte podľa odkazu nižšie a prečítajte si pokyny, aby ste sa uistili, že ste Third Eye nakonfigurovali správne.",
                         "learn_more": "Viac informácií o skriptoch",
                         "no_scripts": "Nenašli sa žiadne editovateľné skripty",
                         "run_script": "Spustiť skript",
@@ -2570,7 +2570,7 @@
                 },
                 "server_control": {
                     "caption": "Správa servera",
-                    "description": "Reštartujte a zastavte server Home Assistant",
+                    "description": "Reštartujte a zastavte server Third Eye",
                     "section": {
                         "reloading": {
                             "automation": "Znova načítať automatizácie",
@@ -2589,7 +2589,7 @@
                             "input_number": "Znova načítať pomocníkov - čísla",
                             "input_select": "Znova načítať pomocníkov - výbery",
                             "input_text": "Znova načítať pomocníkov - texty",
-                            "introduction": "Niektoré časti aplikácie Home Assistant sa môžu načítať bez nutnosti reštartovania. Opätovným načítaním sa zahodí aktuálna konfigurácia a načíta sa nová.",
+                            "introduction": "Niektoré časti aplikácie Third Eye sa môžu načítať bez nutnosti reštartovania. Opätovným načítaním sa zahodí aktuálna konfigurácia a načíta sa nová.",
                             "min_max": "Znova načítať min/max entity",
                             "mqtt": "Znova načítať ručne nakonfigurované MQTT entity",
                             "person": "Znova načítať osoby",
@@ -2610,10 +2610,10 @@
                             "zone": "Znova načítať zóny"
                         },
                         "server_management": {
-                            "confirm_restart": "Naozaj chcete reštartovať Home Assistanta?",
-                            "confirm_stop": "Naozaj chcete zastaviť Home Assistanta?",
+                            "confirm_restart": "Naozaj chcete reštartovať Third Eyea?",
+                            "confirm_stop": "Naozaj chcete zastaviť Third Eyea?",
                             "heading": "Správa servera",
-                            "introduction": "Ovládajte Váš Home Assistant server... z aplikácie Home Assistant.",
+                            "introduction": "Ovládajte Váš Third Eye server... z aplikácie Third Eye.",
                             "restart": "Reštartovať",
                             "stop": "Zastaviť"
                         },
@@ -2660,7 +2660,7 @@
                         "password_not_match": "Heslá sa nezhodujú"
                     },
                     "caption": "Používatelia",
-                    "description": "Spravujte používateľské účty Home Assistant",
+                    "description": "Spravujte používateľské účty Third Eye",
                     "editor": {
                         "activate_user": "Aktivovať používateľa",
                         "active": "Aktívny",
@@ -2983,7 +2983,7 @@
                         "controller_in_exclusion_mode": "Váš Z-Wave kontrolér je teraz v režime vylúčenia.",
                         "exclusion_failed": "Uzol sa nepodarilo odstrániť. Ďalšie informácie nájdete v denníkoch.",
                         "exclusion_finished": "Uzol {id} bol odstránený z vašej siete Z-Wave.",
-                        "introduction": "Odstráňte uzol zo Z-Wave siete, priradené zariadenie a entity z Home Assistanta.",
+                        "introduction": "Odstráňte uzol zo Z-Wave siete, priradené zariadenie a entity z Third Eyea.",
                         "start_exclusion": "Spustiť vylúčenie",
                         "title": "Odstráňte uzol Z-Wave"
                     }
@@ -3017,7 +3017,7 @@
                         "column_description": "Popis",
                         "column_example": "Príklad",
                         "column_parameter": "Parameter",
-                        "description": "Vývojársky nástroj vám umožňuje zavolať akúkoľvek dostupnú službu v Home Assistant.",
+                        "description": "Vývojársky nástroj vám umožňuje zavolať akúkoľvek dostupnú službu v Third Eye.",
                         "fill_example_data": "Vyplniť vzorové údaje",
                         "title": "Služby",
                         "ui_mode": "Prejdite do režimu používateľského rozhrania",
@@ -3028,7 +3028,7 @@
                         "attributes": "Atribúty",
                         "copy_id": "Kopírovať ID do schránky",
                         "current_entities": "Aktuálne entity",
-                        "description1": "Nastavte zobrazenie zariadenia v Home Assistant",
+                        "description1": "Nastavte zobrazenie zariadenia v Third Eye",
                         "description2": "Toto nebude komunikovať so skutočným zariadením.",
                         "entity": "Entita",
                         "filter_attributes": "Filtrovať atribúty",
@@ -3067,14 +3067,14 @@
                     },
                     "templates": {
                         "all_listeners": "Táto šablóna počúva všetky udalosti zmenené stavom.",
-                        "description": "Šablóny sa vykresľujú pomocou nástroja šablóny Jinja2 s niektorými špecifickými rozšíreniami  pre Home Assistant.",
+                        "description": "Šablóny sa vykresľujú pomocou nástroja šablóny Jinja2 s niektorými špecifickými rozšíreniami  pre Third Eye.",
                         "domain": "Doména",
                         "editor": "Editor šablóna",
                         "entity": "Entita",
                         "listeners": "Táto šablóna počúva nasledujúce udalosti zmenené stavom:",
                         "no_listeners": "Táto šablóna nepočúva žiadne udalosti a nebude sa automaticky aktualizovať.",
                         "result_type": "Typ výsledku",
-                        "template_extensions": "Rozšírenia šablóny Home Assistant",
+                        "template_extensions": "Rozšírenia šablóny Third Eye",
                         "time": "Táto šablóna sa aktualizuje na začiatku každej minúty.",
                         "title": "Šablóny"
                     }
@@ -3155,7 +3155,7 @@
                         "url": "Otvoriť okno na {url_path}"
                     },
                     "safe-mode": {
-                        "description": "Pri načítaní vašej konfigurácie sa Home Assistant dostal do problémov a teraz beží v núdzovom režime. Prezrite si denník chýb a zistite, čo sa stalo.",
+                        "description": "Pri načítaní vašej konfigurácie sa Third Eye dostal do problémov a teraz beží v núdzovom režime. Prezrite si denník chýb a zistite, čo sa stalo.",
                         "header": "Núdzový režim je aktivovaný"
                     },
                     "shopping-list": {
@@ -3167,7 +3167,7 @@
                     },
                     "show_more_info": "Zobraziť viac informácií",
                     "starting": {
-                        "description": "Home Assistant sa spúšťa, čakajte prosím…"
+                        "description": "Third Eye sa spúšťa, čakajte prosím…"
                     }
                 },
                 "changed_toast": {
@@ -3509,7 +3509,7 @@
                     "migrate": {
                         "header": "Nekompatibilná konfigurácia",
                         "migrate": "Migrovať konfiguráciu",
-                        "para_migrate": "Home Assistant môže automaticky pridávať ID na všetky vaše karty a zobrazenia stlačením tlačidla 'Migrovať konfiguráciu'.",
+                        "para_migrate": "Third Eye môže automaticky pridávať ID na všetky vaše karty a zobrazenia stlačením tlačidla 'Migrovať konfiguráciu'.",
                         "para_no_id": "Tento prvok nemá žiadne ID. Doplňte, prosím, ID pre tento prvok v súbore 'ui-lovelace.yaml'."
                     },
                     "move_card": {
@@ -3535,7 +3535,7 @@
                         "close": "Zavrieť",
                         "empty_config": "Začnite s prázdnou tabuľou",
                         "header": "Prevziať kontrolu rozhrania Lovelace",
-                        "para": "Štandardne bude Home Assistant udržiavať vaše používateľské rozhranie a aktualizovať ho, keď budú k dispozícii nové entity alebo komponenty rozhrania Lovelace. Ak prevezmete kontrolu, už za vás nebudeme automaticky robiť zmeny.",
+                        "para": "Štandardne bude Third Eye udržiavať vaše používateľské rozhranie a aktualizovať ho, keď budú k dispozícii nové entity alebo komponenty rozhrania Lovelace. Ak prevezmete kontrolu, už za vás nebudeme automaticky robiť zmeny.",
                         "para_sure": "Skutočne chcete prevziať kontrolu vášho používateľského rozhrania?",
                         "save": "Prevziať kontrolu",
                         "yaml_config": "Na začiatok vám pomôžeme so súčasnou konfiguráciou tohto dashboardu:",
@@ -3599,7 +3599,7 @@
                     "entity_non_numeric": "Entita je nečíselná: {entity}",
                     "entity_not_found": "Entita nie je k dispozícií {entity}",
                     "entity_unavailable": "Entita je momentálne nedostupná: {entity}",
-                    "starting": "Home Assistant sa spúšťa, zatiaľ nemusí byť všetko k dispozícii"
+                    "starting": "Third Eye sa spúšťa, zatiaľ nemusí byť všetko k dispozícii"
                 }
             },
             "mailbox": {
@@ -3612,16 +3612,16 @@
                 "edit_zones": "Upraviť zóny"
             },
             "my": {
-                "component_not_loaded": "Inštancia Home Assistant toto presmerovanie nepodporuje. Na použitie tohto presmerovania potrebujete integráciu {integration}.",
+                "component_not_loaded": "Inštancia Third Eye toto presmerovanie nepodporuje. Na použitie tohto presmerovania potrebujete integráciu {integration}.",
                 "documentation": "dokumentácia",
                 "error": "Vyskytla sa neznáma chyba",
-                "faq_link": "Home Assistant otázky a odpovede",
-                "no_supervisor": "Vaša inštalácia Home Assistant nepodporuje toto presmerovanie. Potrebujete buď Home Assistant OS alebo Home Assistant Supervised. Ďalšie informácie nájdete v téme {docs_link}.",
+                "faq_link": "Third Eye otázky a odpovede",
+                "no_supervisor": "Vaša inštalácia Third Eye nepodporuje toto presmerovanie. Potrebujete buď Third Eye OS alebo Third Eye Supervised. Ďalšie informácie nájdete v téme {docs_link}.",
                 "not_supported": "Toto presmerovanie nie je podporované inštanciou vášho Home Asistenta. Skontrolujte {link} pre podporované presmerovania a verziu."
             },
             "page-authorize": {
                 "abort_intro": "Prihlásenie bolo zrušené",
-                "authorizing_client": "Chystáte sa poskytnúť {clientId} prístup k vašej inštancii Home Assistantu.",
+                "authorizing_client": "Chystáte sa poskytnúť {clientId} prístup k vašej inštancii Third Eyeu.",
                 "form": {
                     "next": "Ďalej",
                     "providers": {
@@ -3718,8 +3718,8 @@
                 "cards": {
                     "demo": {
                         "demo_by": "od {name}",
-                        "introduction": "Vitaj ! Dostali ste sa na demo Home Assistant, kde prezentujeme najlepšie používateľské rozhrania vytvorené našou komunitou.",
-                        "learn_more": "Získajte viac informácií o Home Assistant",
+                        "introduction": "Vitaj ! Dostali ste sa na demo Third Eye, kde prezentujeme najlepšie používateľské rozhrania vytvorené našou komunitou.",
+                        "learn_more": "Získajte viac informácií o Third Eye",
                         "next_demo": "Ďalšie demo"
                     }
                 },
@@ -3762,15 +3762,15 @@
                 "core-config": {
                     "button_detect": "Zistiť",
                     "finish": "Ďalej",
-                    "intro": "Dobrý deň, {name}, vitajte v Home Assistant. Ako by ste chceli pomenovať svoj domov?",
+                    "intro": "Dobrý deň, {name}, vitajte v Third Eye. Ako by ste chceli pomenovať svoj domov?",
                     "intro_location": "Radi by sme vedeli, kde žijete. Tieto informácie vám pomôžu pri zobrazovaní informácií a nastavovaní automatizácie na základe slnka. Tieto údaje sa nikdy nezdieľajú mimo vašej siete.",
                     "intro_location_detect": "Môžeme vám pomôcť vyplniť tieto informácie jednorazovou žiadosťou o externú službu.",
-                    "location_name": "Názov vašej inštalácie Home Assistant",
+                    "location_name": "Názov vašej inštalácie Third Eye",
                     "location_name_default": "Domov"
                 },
                 "integration": {
                     "finish": "Dokončiť",
-                    "intro": "Zariadenia a služby sú v systéme Home Assistant zobrazené ako integrácie. Môžete ich nastaviť teraz alebo to urobiť neskôr z konfiguračnej obrazovky.",
+                    "intro": "Zariadenia a služby sú v systéme Third Eye zobrazené ako integrácie. Môžete ich nastaviť teraz alebo to urobiť neskôr z konfiguračnej obrazovky.",
                     "more_integrations": "Viac"
                 },
                 "intro": "Ste pripravení prebudiť váš domov, získať vaše súkromie  a pripojiť sa k celosvetovej komunite bastličov?",
@@ -3853,7 +3853,7 @@
                     "create_failed": "Nepodarilo sa vytvoriť prístupový token.",
                     "created": "Vytvorené {date}",
                     "delete_failed": "Nepodarilo sa odstrániť prístupový token.",
-                    "description": "Vytvorte prístupové tokeny s dlhou životnosťou, ktoré umožnia vašim skriptom komunikovať s vašou inštanciou Home Assistant. Každý token bude platný 10 rokov od vytvorenia. Nasledujúce prístupové tokeny s dlhou životnosťou sú v súčasnosti aktívne.",
+                    "description": "Vytvorte prístupové tokeny s dlhou životnosťou, ktoré umožnia vašim skriptom komunikovať s vašou inštanciou Third Eye. Každý token bude platný 10 rokov od vytvorenia. Nasledujúce prístupové tokeny s dlhou životnosťou sú v súčasnosti aktívne.",
                     "empty_state": "Nemáte žiadne prístupové tokeny s dlhou životnosťou.",
                     "header": "Prístupové tokeny s dlhou životnosťou",
                     "learn_auth_requests": "Zistite, ako vytvárať overené požiadavky.",

@@ -72,7 +72,7 @@ class HaGallery extends LitElement {
         .open=${!this._narrow}
         .type=${this._narrow ? "modal" : "dismissible"}
       >
-        <span slot="title">Home Assistant Design</span>
+        <span slot="title">Third Eye Design</span>
         <!-- <span slot="subtitle">subtitle</span> -->
         <div class="sidebar">${sidebar}</div>
         <div slot="appContent">

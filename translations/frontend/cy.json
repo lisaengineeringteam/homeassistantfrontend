@@ -191,7 +191,7 @@
                     "initial": "Gwerth cychwynnol",
                     "maximum": "Gwerth mwyaf",
                     "minimum": "Gwerth lleiaf",
-                    "restore": "Adfer y gwerth hysbys diwethaf pan fydd Home Assistant yn cychwyn",
+                    "restore": "Adfer y gwerth hysbys diwethaf pan fydd Third Eye yn cychwyn",
                     "step": "Maint cam"
                 },
                 "input_datetime": {
@@ -297,7 +297,7 @@
                         "create_area": "Creu Ardal",
                         "header": "Gofrestrfa ardal",
                         "integrations_page": "Tudalen rhyngwynebu",
-                        "introduction": "Defnyddir ardaloedd i drefnu lle mae dyfeisiau. Defnyddir y wybodaeth hon drwy gydol Home Assistant i helpu chi i drefnu eich rhyngwyneb, caniatadau ac integreiddio â systemau eraill.",
+                        "introduction": "Defnyddir ardaloedd i drefnu lle mae dyfeisiau. Defnyddir y wybodaeth hon drwy gydol Third Eye i helpu chi i drefnu eich rhyngwyneb, caniatadau ac integreiddio â systemau eraill.",
                         "introduction2": "I osod dyfeisiau mewn ardal, defnyddiwch y ddolen isod i fynd i'r dudalen integreiddio ac yna cliciwch ar integreiddiau wedi'i ffurfweddu i gyrraedd y cardiau dyfais."
                     }
                 },
@@ -311,7 +311,7 @@
                             "delete_confirm": "Ydych yn siŵr bod chi eisiau dileu?",
                             "duplicate": "Dyblygu",
                             "header": "Camau gweithredu",
-                            "introduction": "Y camau gweithredu yw'r hyn mae Home Assistant yn gwneud pan mae'r awtomeiddio yn cael ei sbarduno\n\n[Dysgwch mwy am weithred.](https://home-assistant.io/docs/automation/action/)",
+                            "introduction": "Y camau gweithredu yw'r hyn mae Third Eye yn gwneud pan mae'r awtomeiddio yn cael ei sbarduno\n\n[Dysgwch mwy am weithred.](https://home-assistant.io/docs/automation/action/)",
                             "learn_more": "Dysgu mwy am gamau gweithredu",
                             "name": "Gweithredu",
                             "type": {
@@ -404,7 +404,7 @@
                             "delete_confirm": "Ydych chi'n siŵr bod chi eisiau dileu hwn?",
                             "duplicate": "Dyblyg",
                             "header": "Sbardunau",
-                            "introduction": "Sbarduno yw'r hyn sy'n dechrau proses rheol awtomeiddio.  Mae'n bosib dewis nifer o sbardunau i'run rheol. Unwaith mae sbardun yn cychwyn, bydd Home Assistant yn dilysu'r amodau, os o gwbl, a galw'r gweithred. \n\n[dysgwch mwy am sbardunau.] (https://home-assistant.io/docs/automation/trigger/)",
+                            "introduction": "Sbarduno yw'r hyn sy'n dechrau proses rheol awtomeiddio.  Mae'n bosib dewis nifer o sbardunau i'run rheol. Unwaith mae sbardun yn cychwyn, bydd Third Eye yn dilysu'r amodau, os o gwbl, a galw'r gweithred. \n\n[dysgwch mwy am sbardunau.] (https://home-assistant.io/docs/automation/trigger/)",
                             "learn_more": "Dysgu mwy am sbardunau",
                             "name": "Sbardun",
                             "type": {
@@ -426,7 +426,7 @@
                                 },
                                 "homeassistant": {
                                     "event": "Digwyddiad:",
-                                    "label": "Home Assistant",
+                                    "label": "Third Eye",
                                     "shutdown": "Darfod",
                                     "start": "Dechrau"
                                 },
@@ -491,7 +491,7 @@
                         "headers": {
                             "name": "Enw"
                         },
-                        "introduction": "Mae'r olygydd awtomeiddio yn caniatáu ichi greu a golygu awtomeiddiau. Darllenwch [y cyfarwyddiadau] (https://home-assistant.io/docs/automation/editor/) i sicrhau bod chi wedi ffurfweddu'r Home Assistant yn gywir.",
+                        "introduction": "Mae'r olygydd awtomeiddio yn caniatáu ichi greu a golygu awtomeiddiau. Darllenwch [y cyfarwyddiadau] (https://home-assistant.io/docs/automation/editor/) i sicrhau bod chi wedi ffurfweddu'r Third Eye yn gywir.",
                         "learn_more": "Dysgu mwy am awtomeiddio",
                         "no_automations": "Doeddem ddim yn gallu darganfod unrhyw awtomeiddiau",
                         "pick_automation": "Dewiswch awtomeiddiad i olygu"
@@ -513,7 +513,7 @@
                                 "elevation_meters": "metrau",
                                 "imperial_example": "Fahrenheit, pwys",
                                 "latitude": "Lledred",
-                                "location_name": "Enw eich gosodiad Home Assistant",
+                                "location_name": "Enw eich gosodiad Third Eye",
                                 "longitude": "Hydred",
                                 "metric_example": "Celsius, cilogramau",
                                 "save_button": "Arbed",
@@ -579,11 +579,11 @@
                             "show_all": "Dangos popeth"
                         },
                         "header": "Gofrestrfa Endid",
-                        "introduction": "Mae Home Assistant yn cadw gofrestrfa pob endid a welodd erioed ble gellir eu nodi yn unigryw. Bydd pob un endid wedi neilltuo efo endid adnabod sy'n cael eu cadw ar gyfer yr endid hwnnw.",
-                        "introduction2": "Defnyddiwch y gofrestrfa endid i ddiystyru yr enw, newid ID endid neu gael gwared y cofnod Home Assistant. Noder, ni fydd dileu'r cofnod cofrestrfa endid yn dileu yr endid. I wneud hynny, dilynwch y ddolen isod a thynnu oddi ar y dudalen integreiddio."
+                        "introduction": "Mae Third Eye yn cadw gofrestrfa pob endid a welodd erioed ble gellir eu nodi yn unigryw. Bydd pob un endid wedi neilltuo efo endid adnabod sy'n cael eu cadw ar gyfer yr endid hwnnw.",
+                        "introduction2": "Defnyddiwch y gofrestrfa endid i ddiystyru yr enw, newid ID endid neu gael gwared y cofnod Third Eye. Noder, ni fydd dileu'r cofnod cofrestrfa endid yn dileu yr endid. I wneud hynny, dilynwch y ddolen isod a thynnu oddi ar y dudalen integreiddio."
                     }
                 },
-                "header": "Ffurfweddu Home Assistant",
+                "header": "Ffurfweddu Third Eye",
                 "helpers": {
                     "types": {
                         "counter": "Cownter",
@@ -602,8 +602,8 @@
                         "no_area": "Dim Ardal",
                         "reload": "Ail-lwytho",
                         "reload_confirm": "Cafodd yr integreiddiad ei ail-lwytho",
-                        "reload_restart_confirm": "Ailgychwyn Home Assistant i ddarfod yr integreiddiadau",
-                        "restart_confirm": "Ailgychwyn Home Assistant i ddarfod dileu'r integreiddiad hwn"
+                        "reload_restart_confirm": "Ailgychwyn Third Eye i ddarfod yr integreiddiadau",
+                        "restart_confirm": "Ailgychwyn Third Eye i ddarfod dileu'r integreiddiad hwn"
                     },
                     "config_flow": {
                         "aborted": "Erthylwyd",
@@ -630,7 +630,7 @@
                     "new": "Sefydlu integreiddiad newydd",
                     "none": "Dim byd wedi'i ffurfweddu eto."
                 },
-                "introduction": "Yma mae'n bosib ffurfweddu'ch cydrannau ac Home Assistant. Nid yw popeth yn bosib i'w ffurfweddu o'r UI eto, ond rydym yn gweithio arno.",
+                "introduction": "Yma mae'n bosib ffurfweddu'ch cydrannau ac Third Eye. Nid yw popeth yn bosib i'w ffurfweddu o'r UI eto, ond rydym yn gweithio arno.",
                 "lovelace": {
                     "dashboards": {
                         "cant_edit_default": "Ni ellir golygu dangosfwrdd safonol Lovelace o'r UI. Gallwch ei guddio trwy osod dangosfwrdd arall yn ddiofyn.",
@@ -706,7 +706,7 @@
                     "select_instance": {
                         "header": "Dewiswch Enghraifft OpenZWave",
                         "introduction": "Mae gennych fwy nag un enghraifft OpenZWave yn rhedeg. Pa enghraifft hoffech chi ei rheoli?",
-                        "none_found": "Ni allem ddod o hyd i enghraifft OpenZWave. Os ydych chi'n credu bod hyn yn anghywir, gwiriwch eich setiau OpenZWave a MQTT a sicrhau y gall Home Assistant gyfathrebu â'ch brocer MQTT."
+                        "none_found": "Ni allem ddod o hyd i enghraifft OpenZWave. Os ydych chi'n credu bod hyn yn anghywir, gwiriwch eich setiau OpenZWave a MQTT a sicrhau y gall Third Eye gyfathrebu â'ch brocer MQTT."
                     },
                     "services": {
                         "add_node": "Ychwanegu Nod",
@@ -716,7 +716,7 @@
                 },
                 "person": {
                     "caption": "Pobl",
-                    "description": "Rheoli'r pobl mae Home Assistant yn tracio.",
+                    "description": "Rheoli'r pobl mae Third Eye yn tracio.",
                     "detail": {
                         "allow_login": "Caniatáu'r person i fewngofnodi",
                         "device_tracker_intro": "Dewiswch y dyfeisiau sy'n perthyn i'r person hwn.",
@@ -783,7 +783,7 @@
                             "filter": "Ail-lwytho endidau hidlo",
                             "group": "Ail-lwytho grwpiau",
                             "heading": "Ffurfweddiad yn ail-lwytho",
-                            "introduction": "Gall rhai rhannau o Home Assistant ail-lwytho heb orfod ailgychwyn. Bydd taro ail-lwytho yn dadlwytho eu cyfluniad cyfredol a llwytho'r un newydd.",
+                            "introduction": "Gall rhai rhannau o Third Eye ail-lwytho heb orfod ailgychwyn. Bydd taro ail-lwytho yn dadlwytho eu cyfluniad cyfredol a llwytho'r un newydd.",
                             "mqtt": "Ail-lwytho endidau mqtt wedi'u ffurfweddu",
                             "rest": "Ail-lwytho endidau gorffwys",
                             "script": "Ail-lwytho sgriptiau",
@@ -792,7 +792,7 @@
                         },
                         "server_management": {
                             "heading": "Rheoli gweinydd",
-                            "introduction": "Rheoli eich gweinydd Home Assistant.. o Home Assistant.",
+                            "introduction": "Rheoli eich gweinydd Third Eye.. o Third Eye.",
                             "restart": "Ailgychwyn",
                             "stop": "Stopio"
                         },
@@ -871,7 +871,7 @@
             },
             "custom": {
                 "external_panel": {
-                    "complete_access": "Byddaf efo mynediad i holl ddata yn Home Assistant",
+                    "complete_access": "Byddaf efo mynediad i holl ddata yn Third Eye",
                     "hide_message": "Gwirio'r dogfennau ar gyfer y gydran panel_custom er mwyn cuddio'r neges hon",
                     "question_trust": "Ydych chi'n ymddiried yn y panel allanol {name} yn {link} ?"
                 }
@@ -995,7 +995,7 @@
                             "name": "Stac Fertigol"
                         },
                         "iframe": {
-                            "description": "Mae'r cerdyn Tudalen we yn eich galluogi i blannu eich hoff dudalen we i Home Assistant.",
+                            "description": "Mae'r cerdyn Tudalen we yn eich galluogi i blannu eich hoff dudalen we i Third Eye.",
                             "name": "iFrame"
                         },
                         "light": {
@@ -1098,7 +1098,7 @@
                     "migrate": {
                         "header": "Ffurfweddiad anghydnaws",
                         "migrate": "Mudo ffurfweddiad",
-                        "para_migrate": "Gall Home Assistant ychwanegu IDs i bob un o'ch cardiau ac edrychiadau yn awtomatig i chi wrth bwyso'r botwm 'Mudo ffurfweddiad'.",
+                        "para_migrate": "Gall Third Eye ychwanegu IDs i bob un o'ch cardiau ac edrychiadau yn awtomatig i chi wrth bwyso'r botwm 'Mudo ffurfweddiad'.",
                         "para_no_id": "Tydi'r elfen yma ddim efo ID. Plís ychwanegwch ID i'r elfen yma yn 'ui-lovelace.yaml'."
                     },
                     "raw_editor": {
@@ -1115,7 +1115,7 @@
                     "save_config": {
                         "empty_config": "Dechreuwch gyda dangosfwrdd gwag",
                         "header": "Cymerwch reolaeth ar eich rhyngwyneb defnyddiwr Lovelace",
-                        "para": "Gwneith Home Assistant gynnal eich rhyngwyneb defnyddiwr yn ddiofyn, a'i diweddaru pan fydd endidau neu gydrannau Lovelace newydd yn dod ar gael. Os ydych yn cymryd rheolaeth nawn ddim gwneud newidiadau awtomatig pellach i chi.",
+                        "para": "Gwneith Third Eye gynnal eich rhyngwyneb defnyddiwr yn ddiofyn, a'i diweddaru pan fydd endidau neu gydrannau Lovelace newydd yn dod ar gael. Os ydych yn cymryd rheolaeth nawn ddim gwneud newidiadau awtomatig pellach i chi.",
                         "para_sure": "A ydych yn siŵr bod chi eisiau rheoli eich rhyngwyneb defnyddiwr?",
                         "save": "Cymerwch reolaeth",
                         "yaml_mode": "Ydych yn defnyddio YAML modd, sy'n golygu nad ydych yn gallu newid eich Lovelace config o'r UI. Os ydych am newid Lovelace o UI, dileu 'modd: yaml' o eich cyfluniad Lovelace yn 'configuration.yaml.'"
@@ -1192,8 +1192,8 @@
                 "cards": {
                     "demo": {
                         "demo_by": "gan {name}",
-                        "introduction": "Croeso adre! Rydych wedi cyrraedd demo Home Assistant lle rydym yn arddangos y UIs gorau a grewyd gan ein cymuned.",
-                        "learn_more": "Dysgwch fwy am Home Assistant",
+                        "introduction": "Croeso adre! Rydych wedi cyrraedd demo Third Eye lle rydym yn arddangos y UIs gorau a grewyd gan ein cymuned.",
+                        "learn_more": "Dysgwch fwy am Third Eye",
                         "next_demo": "Demo nesaf"
                     }
                 },
@@ -1235,15 +1235,15 @@
                 "core-config": {
                     "button_detect": "Canfod",
                     "finish": "Nesaf",
-                    "intro": "Helo {name}, croeso i Home Assistant. Sut hoffech enwi eich tŷ?",
+                    "intro": "Helo {name}, croeso i Third Eye. Sut hoffech enwi eich tŷ?",
                     "intro_location": "Hoffem wybod ble rydych chi'n byw. Bydd y wybodaeth yn helpu i arddangos gwybodaeth a sefydlu awtomeiddiadau haul. Tydi'r data byth yn cael ei rannu thu allan i'ch rhwydwaith.",
                     "intro_location_detect": "Gallwn eich helpu i lenwi'r wybodaeth hon drwy wneud cais un-tro i wasanaeth allanol.",
-                    "location_name": "Enw eich gosodiad Home Assistant",
+                    "location_name": "Enw eich gosodiad Third Eye",
                     "location_name_default": "Hafan"
                 },
                 "integration": {
                     "finish": "Gorffen",
-                    "intro": "Cynrychiolir dyfeisiau a gwasanaethau yn Home Assistant fel integreiddiadau. Gallwch eu gosod nawr, neu'n ddiweddarach o'r sgrin ffurfweddu.",
+                    "intro": "Cynrychiolir dyfeisiau a gwasanaethau yn Third Eye fel integreiddiadau. Gallwch eu gosod nawr, neu'n ddiweddarach o'r sgrin ffurfweddu.",
                     "more_integrations": "Mwy"
                 },
                 "user": {
@@ -1257,7 +1257,7 @@
             },
             "profile": {
                 "advanced_mode": {
-                    "description": "Mae Home Assistant yn cuddio nodweddion uwch ac opsiynau yn ddiofyn. Gallwch wneud y nodweddion hyn yn hygyrch trwy ticio'r toggle hwn. Mae hwn yn leoliad penodol i ddefnyddwyr ac nid yw'n effeithio ar ddefnyddwyr eraill sy'n defnyddio Home Assistant.",
+                    "description": "Mae Third Eye yn cuddio nodweddion uwch ac opsiynau yn ddiofyn. Gallwch wneud y nodweddion hyn yn hygyrch trwy ticio'r toggle hwn. Mae hwn yn leoliad penodol i ddefnyddwyr ac nid yw'n effeithio ar ddefnyddwyr eraill sy'n defnyddio Third Eye.",
                     "title": "Modd Uwch"
                 },
                 "dashboard": {

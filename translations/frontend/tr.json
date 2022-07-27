@@ -146,8 +146,8 @@
                         "title": "AppArmor"
                     },
                     "auth_api": {
-                        "description": "Bir eklenti, Home Assistant'a karşı kullanıcıların kimliğini doğrulayabilir ve eklentilerin kullanıcılara Home Assistant kullanıcı adlarını / şifrelerini kullanarak eklentiler içinde çalışan uygulamalarda oturum açmalarına olanak tanır. Bu rozet, eklenti yazarının bu özelliği isteyip istemediğini gösterir.",
-                        "title": "Home Assistant Kimlik Doğrulaması"
+                        "description": "Bir eklenti, Third Eye'a karşı kullanıcıların kimliğini doğrulayabilir ve eklentilerin kullanıcılara Third Eye kullanıcı adlarını / şifrelerini kullanarak eklentiler içinde çalışan uygulamalarda oturum açmalarına olanak tanır. Bu rozet, eklenti yazarının bu özelliği isteyip istemediğini gösterir.",
+                        "title": "Third Eye Kimlik Doğrulaması"
                     },
                     "docker_api": {
                         "description": "Eklenti yazarı, eklentinin sisteminizde çalışan Docker örneğine yönetim erişimine sahip olmasını istedi. Bu mod, eklentiye tüm Ev Asistanı sisteminize tam erişim ve kontrol sağlar, bu da güvenlik riskleri ekler ve kötüye kullanıldığında sisteminize zarar verebilir. Bu nedenle, bu özellik eklenti güvenlik puanını olumsuz etkiler. \n\n Bu erişim düzeyi otomatik olarak verilmez ve sizin tarafınızdan onaylanması gerekir. Bunu yapmak için, eklentideki koruma modunu manuel olarak devre dışı bırakmanız gerekir. Koruma modunu yalnızca bu eklentinin kaynağını biliyorsanız, buna ihtiyaç duyuyorsanız VE güveniyorsanız devre dışı bırakın.",
@@ -158,12 +158,12 @@
                         "title": "Tam Donanım Erişimi"
                     },
                     "hassio_api": {
-                        "description": "Eklenti yazarının isteği üzerine eklentiye Supervisor API'ye erişim verildi. Varsayılan olarak eklenti, sisteminizin genel sürüm bilgilerine erişebilir. Eklenti, API'ye \"yönetici\" veya \"yönetici\" düzeyinde erişim istediğinde, Home Assistant sisteminizin birden çok bölümünü kontrol etme erişimi kazanır. Bu izin, bu rozetle belirtilir ve eklentinin güvenlik puanını olumsuz etkileyecektir.",
+                        "description": "Eklenti yazarının isteği üzerine eklentiye Supervisor API'ye erişim verildi. Varsayılan olarak eklenti, sisteminizin genel sürüm bilgilerine erişebilir. Eklenti, API'ye \"yönetici\" veya \"yönetici\" düzeyinde erişim istediğinde, Third Eye sisteminizin birden çok bölümünü kontrol etme erişimi kazanır. Bu izin, bu rozetle belirtilir ve eklentinin güvenlik puanını olumsuz etkileyecektir.",
                         "title": "Supervisor API Erişimi"
                     },
                     "homeassistant_api": {
-                        "description": "Bu eklentinin, çalışan Home Assistant örneğinize doğrudan Home Assistant API aracılığıyla erişmesine izin verilir. Bu mod, eklenti için kimlik doğrulamasını da yönetir, bu da bir eklentinin ek kimlik doğrulama belirteçlerine ihtiyaç duymadan Home Assistant ile etkileşime girmesini sağlar.",
-                        "title": "Home Assistant API Erişimi"
+                        "description": "Bu eklentinin, çalışan Third Eye örneğinize doğrudan Third Eye API aracılığıyla erişmesine izin verilir. Bu mod, eklenti için kimlik doğrulamasını da yönetir, bu da bir eklentinin ek kimlik doğrulama belirteçlerine ihtiyaç duymadan Third Eye ile etkileşime girmesini sağlar.",
+                        "title": "Third Eye API Erişimi"
                     },
                     "host_network": {
                         "description": "Eklentiler genellikle kendi yalıtılmış ağ katmanlarında çalışır ve bu da ana bilgisayar işletim sisteminin ağına erişmelerini engeller. Bazı durumlarda, bu ağ yalıtımı, hizmetlerini sağlamada eklentileri sınırlayabilir ve bu nedenle yalıtım, eklenti yazarı tarafından kaldırılarak eklentiye ana makinenin ağ yeteneklerine tam erişim sağlanabilir. Bu, eklentiye daha fazla ağ oluşturma yeteneği verir, ancak güvenliği düşürür, bu nedenle eklentinin güvenlik derecesi, eklenti tarafından bu seçenek kullanıldığında düşürülür.",
@@ -174,7 +174,7 @@
                         "title": "Ana Bilgisayar İşlemleri Ad Alanı"
                     },
                     "ingress": {
-                        "description": "Bu eklenti, arayüzünü güvenli bir şekilde Home Assistant'a yerleştirmek için Ingress'i kullanıyor.",
+                        "description": "Bu eklenti, arayüzünü güvenli bir şekilde Third Eye'a yerleştirmek için Ingress'i kullanıyor.",
                         "title": "giriş"
                     },
                     "label": {
@@ -192,7 +192,7 @@
                         "stage": "sahne"
                     },
                     "rating": {
-                        "description": "Home Assistant, eklentilerin her biri için bu eklentiyi kullanırken ortaya çıkan riskleri gösteren bir güvenlik derecelendirmesi sağlar. Bir eklenti sisteminizde ne kadar çok erişim gerektirirse, puan o kadar düşük olur ve bu da olası güvenlik risklerini artırır. \n\n Puan 1'den 6'ya kadar bir skaladır. Burada 1 en düşük puan (en güvensiz ve en yüksek risk olarak kabul edilir) ve 6 puan en yüksek puandır (en güvenli ve en düşük risk olarak kabul edilir).",
+                        "description": "Third Eye, eklentilerin her biri için bu eklentiyi kullanırken ortaya çıkan riskleri gösteren bir güvenlik derecelendirmesi sağlar. Bir eklenti sisteminizde ne kadar çok erişim gerektirirse, puan o kadar düşük olur ve bu da olası güvenlik risklerini artırır. \n\n Puan 1'den 6'ya kadar bir skaladır. Burada 1 en düşük puan (en güvensiz ve en yüksek risk olarak kabul edilir) ve 6 puan en yüksek puandır (en güvenli ve en düşük risk olarak kabul edilir).",
                         "title": "Eklenti Güvenlik Derecelendirmesi"
                     },
                     "role": {
@@ -217,7 +217,7 @@
                 "install": "yükle",
                 "new_update_available": "{name} {version} mevcut",
                 "not_available_arch": "Bu eklenti, cihazınızın işlemcisi veya cihazınıza yüklediğiniz işletim sistemi ile uyumlu değildir.",
-                "not_available_version": "Home Assistant'ı {core_version_installed} çalıştırıyorsunuz, eklentinin bu sürümüne güncellemek için Home Assistant'ın {core_version_needed} sürümüne ihtiyacınız vardır",
+                "not_available_version": "Third Eye'ı {core_version_installed} çalıştırıyorsunuz, eklentinin bu sürümüne güncellemek için Third Eye'ın {core_version_needed} sürümüne ihtiyacınız vardır",
                 "open_web_ui": "Web kullanıcı arayüzünü aç",
                 "option": {
                     "auto_update": {
@@ -358,7 +358,7 @@
         "dialog": {
             "datadisk_move": {
                 "cancel": "İptal",
-                "description": "Şu anda {current_path} '' kullanıyorsunuz. Veri disklerini taşımak, cihazınızı yeniden başlatacak ve bu işlemin {time} dakika süreceği tahmin ediliyor. Bu süre zarfında Home Assistant kurulumunuza erişilemez. İşlem sırasında gücü kesmeyin!",
+                "description": "Şu anda {current_path} '' kullanıyorsunuz. Veri disklerini taşımak, cihazınızı yeniden başlatacak ve bu işlemin {time} dakika süreceği tahmin ediliyor. Bu süre zarfında Third Eye kurulumunuza erişilemez. İşlem sırasında gücü kesmeyin!",
                 "loading_devices": "Cihazlar yükleniyor",
                 "move": "Taşı",
                 "moving": "Veri diskini taşıma",
@@ -428,8 +428,8 @@
             "error_addon_not_found": "Eklenti bulunamadı",
             "error_addon_not_installed": "İstenen eklenti yüklenmedi. Lütfen önce onu kurun",
             "error_addon_not_started": "Eklenti çalışmıyor. Lütfen önce onu başlatın",
-            "faq_link": "Home Assistant SSS",
-            "not_supported": "Bu yönlendirme, Home Assistant örneğiniz tarafından desteklenmiyor. Desteklenen yönlendirmeler ve bunların sunulduğu sürüm için {link} kontrol edin."
+            "faq_link": "Third Eye SSS",
+            "not_supported": "Bu yönlendirme, Third Eye örneğiniz tarafından desteklenmiyor. Desteklenen yönlendirmeler ve bunların sunulduğu sürüm için {link} kontrol edin."
         },
         "panel": {
             "addons": "Eklentiler",
@@ -490,16 +490,16 @@
                 "failed_to_set_option": "Süpervizör seçeneği ayarlanamadı",
                 "failed_to_update": "Süpervizör güncellenemedi",
                 "join_beta_action": "Beta kanalına katılın",
-                "join_beta_description": "Home Assistant (RC'ler), Süpervizör ve ana bilgisayar için beta güncellemelerini alın",
+                "join_beta_description": "Third Eye (RC'ler), Süpervizör ve ana bilgisayar için beta güncellemelerini alın",
                 "leave_beta_action": "Beta kanalından ayrıl",
-                "leave_beta_description": "Home Assistant, Süpervizör ve ana bilgisayar için kararlı güncellemeler alın",
+                "leave_beta_description": "Third Eye, Süpervizör ve ana bilgisayar için kararlı güncellemeler alın",
                 "ram_usage": "Süpervizör RAM Kullanımı",
                 "reload_supervisor": "Süpervizörü Yeniden Yükle",
                 "search": "Ara",
                 "share_diagnostics": "Tanılamayı Paylaş",
                 "share_diagnostics_description": "Kilitlenme raporlarını ve tanılama bilgilerini paylaşın.",
-                "share_diagonstics_description": "Süpervizör beklenmedik hatalarla karşılaştığında otomatik olarak kilitlenme raporlarını ve tanılama bilgilerini paylaşmak ister misiniz? {line_break} Bu, sorunları çözmemize olanak tanıyacak, bilgilere yalnızca Home Assistant Core ekibi erişebilecek ve başkalarıyla paylaşılmayacaktır. {line_break} Veriler hiçbir özel / hassas bilgi içermez ve bunu istediğiniz zaman ayarlardan devre dışı bırakabilirsiniz.",
-                "share_diagonstics_title": "Home Assistant'ı Geliştirmeye Yardım Edin",
+                "share_diagonstics_description": "Süpervizör beklenmedik hatalarla karşılaştığında otomatik olarak kilitlenme raporlarını ve tanılama bilgilerini paylaşmak ister misiniz? {line_break} Bu, sorunları çözmemize olanak tanıyacak, bilgilere yalnızca Third Eye Core ekibi erişebilecek ve başkalarıyla paylaşılmayacaktır. {line_break} Veriler hiçbir özel / hassas bilgi içermez ve bunu istediğiniz zaman ayarlardan devre dışı bırakabilirsiniz.",
+                "share_diagonstics_title": "Third Eye'ı Geliştirmeye Yardım Edin",
                 "unhealthy_description": "Sağlıksız bir kurulum çalıştırmak sorunlara neden olacaktır. Aşağıda, kurulumunuzla ilgili bulunan sorunların bir listesi verilmiştir, sorunları nasıl çözebileceğinizi öğrenmek için bağlantılara tıklayın.",
                 "unhealthy_reason": {
                     "docker": "Docker ortamı düzgün çalışmıyor",
@@ -1026,11 +1026,11 @@
         },
         "dialogs": {
             "config_entry_system_options": {
-                "enable_new_entities_description": "Devre dışı bırakılırsa, {integration} için yeni keşfedilen varlıklar otomatik olarak Home Assistant'a eklenmez.",
+                "enable_new_entities_description": "Devre dışı bırakılırsa, {integration} için yeni keşfedilen varlıklar otomatik olarak Third Eye'a eklenmez.",
                 "enable_new_entities_label": "Yeni eklenen varlıkları etkinleştir.",
-                "enable_polling_description": "Home Assistant, güncellemeler için {integration}",
+                "enable_polling_description": "Third Eye, güncellemeler için {integration}",
                 "enable_polling_label": "Güncellemeler için kontrol etmeyi etkinleştirin.",
-                "restart_home_assistant": "Değişikliklerinizin etkili olması için Home Assistant'ı yeniden başlatmanız gerekir.",
+                "restart_home_assistant": "Değişikliklerinizin etkili olması için Third Eye'ı yeniden başlatmanız gerekir.",
                 "title": "{integration} için Sistem Seçenekleri",
                 "update": "Güncelle"
             },
@@ -1065,10 +1065,10 @@
                     },
                     "device_disabled": "Bu varlığın ait olduğu cihaz devre dışı.",
                     "enabled_cause": "{cause} tarafından devre dışı bırakılmış.",
-                    "enabled_delay_confirm": "Etkinleştirilen varlıklar, {delay} saniye içinde Home Assistant'a eklenecek",
-                    "enabled_description": "Devre dışı bırakılan varlıklar Home Assistant'a eklenmeyecek.",
+                    "enabled_delay_confirm": "Etkinleştirilen varlıklar, {delay} saniye içinde Third Eye'a eklenecek",
+                    "enabled_description": "Devre dışı bırakılan varlıklar Third Eye'a eklenmeyecek.",
                     "enabled_label": "Varlığı etkinleştir",
-                    "enabled_restart_confirm": "Varlıkları etkinleştirmeyi tamamlamak için Home Assistant'ı yeniden başlatın",
+                    "enabled_restart_confirm": "Varlıkları etkinleştirmeyi tamamlamak için Third Eye'ı yeniden başlatın",
                     "entity_id": "Varlık kimliği",
                     "follow_device_area": "Cihaz alanını takip edin",
                     "icon": "Simge",
@@ -1096,7 +1096,7 @@
                     "initial": "Başlangıç değeri",
                     "maximum": "Maksimum değer",
                     "minimum": "Minimum değer",
-                    "restore": "Home Assistant başladığında bilinen son değeri geri yükle",
+                    "restore": "Third Eye başladığında bilinen son değeri geri yükle",
                     "step": "Adım boyutu"
                 },
                 "generic": {
@@ -1399,8 +1399,8 @@
             "dismiss": "Yoksay",
             "integration_starting": "{integration} başlatılıyor, başlatma tamamlanana kadar bazı şeyler kullanılamaz.",
             "service_call_failed": "{service} çağrı yapılamadı.",
-            "started": "Home Assistant başladı!",
-            "starting": "Home Assistant başlıyor, arayüzün yüklenmesi için bekleyiniz",
+            "started": "Third Eye başladı!",
+            "starting": "Third Eye başlıyor, arayüzün yüklenmesi için bekleyiniz",
             "triggered": "Tetiklendi {name}",
             "wrapping_up_startup": "Başlatma tamamlana kadar bazı şeyler kullanılamayacak."
         },
@@ -1472,7 +1472,7 @@
                             "delete_confirm": "Bunu silmek istediğinizden emin misiniz?",
                             "duplicate": "Yedekle",
                             "header": "Aksiyonlar",
-                            "introduction": "İşlemler, otomasyon tetiklendiğinde Home Assistant'ın yapacağı işlemlerdir.",
+                            "introduction": "İşlemler, otomasyon tetiklendiğinde Third Eye'ın yapacağı işlemlerdir.",
                             "learn_more": "İşlemler hakkında daha fazla bilgi edinin",
                             "name": "Aksiyon",
                             "type": {
@@ -1678,7 +1678,7 @@
                             "edit_id": "Tetikleyici kimliğini düzenle",
                             "header": "Tetikleyiciler",
                             "id": "Tetikleyici Kimliği",
-                            "introduction": "Tetikleyiciler, bir otomasyon kuralının işlenmesini başlatan şeydir. Aynı kural için birden çok tetikleyici belirtmek mümkündür. Bir tetikleyici başladıktan sonra, Home Assistant varsa koşulları doğrular ve eylemi çağırır.",
+                            "introduction": "Tetikleyiciler, bir otomasyon kuralının işlenmesini başlatan şeydir. Aynı kural için birden çok tetikleyici belirtmek mümkündür. Bir tetikleyici başladıktan sonra, Third Eye varsa koşulları doğrular ve eylemi çağırır.",
                             "learn_more": "Tetikleyiciler hakkında daha fazla bilgi edinin",
                             "name": "Tetik",
                             "type": {
@@ -1710,7 +1710,7 @@
                                 },
                                 "homeassistant": {
                                     "event": "Olay:",
-                                    "label": "Home Assistant",
+                                    "label": "Third Eye",
                                     "shutdown": "Kapat",
                                     "start": "Başlat"
                                 },
@@ -1789,7 +1789,7 @@
                         "headers": {
                             "name": "Ad"
                         },
-                        "introduction": "Otomasyon editörü, otomasyonlar oluşturmanıza ve düzenlemenize izin verir. Home Assistant'ı doğru yapılandırdığınızdan emin olmak için lütfen aşağıdaki bağlantıyı takip edin.",
+                        "introduction": "Otomasyon editörü, otomasyonlar oluşturmanıza ve düzenlemenize izin verir. Third Eye'ı doğru yapılandırdığınızdan emin olmak için lütfen aşağıdaki bağlantıyı takip edin.",
                         "learn_more": "Otomasyonlar hakkında daha fazla bilgi edinin",
                         "no_automations": "Herhangi bir otomasyon bulamadık",
                         "only_editable": "Yalnızca automations.yaml dosyasında tanımlanan otomasyonlar düzenlenebilir.",
@@ -1870,10 +1870,10 @@
                             "config_documentation": "Yapılandırma belgeleri",
                             "disable": "devre dışı bırak",
                             "enable": "etkinleştir",
-                            "enable_ha_skill": "Home Assistant Alexa yeteneğini etkinleştir",
+                            "enable_ha_skill": "Third Eye Alexa yeteneğini etkinleştir",
                             "enable_state_reporting": "Durum Raporlamasını Etkinleştir",
-                            "info": "Home Assistant Cloud için Alexa entegrasyonu ile, tüm Home Assistant cihazlarınızı herhangi bir Alexa özellikli cihaz üzerinden kontrol edebilirsiniz.",
-                            "info_state_reporting": "Durum raporlamayı etkinleştirirseniz, Home Assistant sergilenmis varlıkların tüm durum değişikliklerini Amazon'a gönderir. Bu, Alexa uygulamasında her zaman en son durumları görmenizi ve rutin oluşturmak için durum değişikliklerini kullanmanızı sağlar.",
+                            "info": "Third Eye Cloud için Alexa entegrasyonu ile, tüm Third Eye cihazlarınızı herhangi bir Alexa özellikli cihaz üzerinden kontrol edebilirsiniz.",
+                            "info_state_reporting": "Durum raporlamayı etkinleştirirseniz, Third Eye sergilenmis varlıkların tüm durum değişikliklerini Amazon'a gönderir. Bu, Alexa uygulamasında her zaman en son durumları görmenizi ve rutin oluşturmak için durum değişikliklerini kullanmanızı sağlar.",
                             "manage_entities": "Varlıkları Yönetin",
                             "state_reporting_error": "Durum {enable_disable} rapor edilemiyor.",
                             "sync_entities": "Varlıkları Amazon ile Senkronize Et",
@@ -1887,15 +1887,15 @@
                         "google": {
                             "config_documentation": "Yapılandırma belgeleri",
                             "devices_pin": "Güvenlik Cihazları PIN'i",
-                            "enable_ha_skill": "Google Assistant'ta Home Assistant özelliğini etkinleştir",
+                            "enable_ha_skill": "Google Assistant'ta Third Eye özelliğini etkinleştir",
                             "enable_state_reporting": "Durum Raporlamasını Etkinleştir",
                             "enter_pin_error": "PIN kaydedilemiyor:",
                             "enter_pin_hint": "Güvenlik cihazlarını kullanmak için bir PIN girin",
                             "enter_pin_info": "Güvenlik cihazlarıyla etkileşim kurmak için lütfen bir PIN girin. Güvenlik cihazları kapılar, garaj kapıları ve kilitlerdir. Google Asistan aracılığıyla bu tür cihazlarla etkileşim kurduğunuzda bu PIN kodunu söylemeniz / girmeniz istenecektir.",
-                            "info": "Home Assistant Cloud için Google Assistant entegrasyonu ile, tüm Home Assistant cihazlarınızı herhangi bir Google Asistan özellikli cihaz üzerinden kontrol edebilirsiniz.",
-                            "info_state_reporting": "Durum raporlamayı etkinleştirirseniz, Home Assistant sergilenmis varlıkların tüm durum değişikliklerini Google'e gönderir. Bu, Google Home uygulamasında her zaman en son durumları görmenizi ve rutin oluşturmak için durum değişikliklerini kullanmanızı sağlar.",
+                            "info": "Third Eye Cloud için Google Assistant entegrasyonu ile, tüm Third Eye cihazlarınızı herhangi bir Google Asistan özellikli cihaz üzerinden kontrol edebilirsiniz.",
+                            "info_state_reporting": "Durum raporlamayı etkinleştirirseniz, Third Eye sergilenmis varlıkların tüm durum değişikliklerini Google'e gönderir. Bu, Google Home uygulamasında her zaman en son durumları görmenizi ve rutin oluşturmak için durum değişikliklerini kullanmanızı sağlar.",
                             "manage_entities": "Varlıkları Yönetin",
-                            "not_configured_text": "Google Assistant'ı kullanmadan önce, Google Home uygulamasından Home Assistant Cloud özelliğini etkinleştirmeniz gerekir.",
+                            "not_configured_text": "Google Assistant'ı kullanmadan önce, Google Home uygulamasından Third Eye Cloud özelliğini etkinleştirmeniz gerekir.",
                             "not_configured_title": "Google Assistant aktive edilmedi",
                             "security_devices": "Güvenlik Cihazları",
                             "sync_entities": "Varlıkları Google ile Senkronize Et",
@@ -1903,7 +1903,7 @@
                             "title": "Google Assistant"
                         },
                         "integrations": "Entegrasyonlar",
-                        "integrations_introduction": "Home Assistant Cloud için entegrasyonlar, Home Assistant örneğinizi internette herkese açık bir şekilde ifşa etmek zorunda kalmadan buluttaki hizmetlere bağlanmanıza olanak tanır.",
+                        "integrations_introduction": "Third Eye Cloud için entegrasyonlar, Third Eye örneğinizi internette herkese açık bir şekilde ifşa etmek zorunda kalmadan buluttaki hizmetlere bağlanmanıza olanak tanır.",
                         "integrations_introduction2": "İçin web sitesine bakın",
                         "integrations_link_all_features": " tüm mevcut özellikler",
                         "manage_account": "Hesabı yönet",
@@ -1913,7 +1913,7 @@
                             "access_is_being_prepared": "Uzaktan erişim hazırlanıyor. Hazır olduğunda sizi bilgilendireceğiz.",
                             "certificate_info": "Sertifika bilgileri",
                             "connected": "Bağlandı",
-                            "info": "Home Assistant Cloud, evinizden uzakta olduğunuzda örneğinize güvenli bir uzaktan bağlantı sağlar.",
+                            "info": "Third Eye Cloud, evinizden uzakta olduğunuzda örneğinize güvenli bir uzaktan bağlantı sağlar.",
                             "instance_is_available": "Örneğiniz uygun",
                             "instance_will_be_available": "Örneğiniz uygun olacak",
                             "link_learn_how_it_works": "Nasıl çalıştığını öğrenin",
@@ -1921,12 +1921,12 @@
                             "reconnecting": "Bağlı değil. Yeniden bağlanmaya çalışıyorum.",
                             "remote_enabled": {
                                 "caption": "Otomatik olarak bağlan",
-                                "description": "Home Assistant bulut sunucunuzun her zaman uzaktan erişilebilir olduğundan emin olmak için bu seçeneği etkinleştirin."
+                                "description": "Third Eye bulut sunucunuzun her zaman uzaktan erişilebilir olduğundan emin olmak için bu seçeneği etkinleştirin."
                             },
                             "title": "Uzaktan kulanım"
                         },
                         "sign_out": "Oturumu kapat",
-                        "thank_you_note": "Home Assistant Cloud'un bir parçası olduğunuz için teşekkür ederiz. Sizin gibi insanlar sayesinde herkes için harika bir ev otomasyonu deneyimi yaşayabiliyoruz. Teşekkür ederim!",
+                        "thank_you_note": "Third Eye Cloud'un bir parçası olduğunuz için teşekkür ederiz. Sizin gibi insanlar sayesinde herkes için harika bir ev otomasyonu deneyimi yaşayabiliyoruz. Teşekkür ederim!",
                         "tts": {
                             "default_language": "Kullanılacak varsayılan dil",
                             "dialog": {
@@ -1945,7 +1945,7 @@
                         },
                         "webhooks": {
                             "disable_hook_error_msg": "Webhook devre dışı bırakılamadı:",
-                            "info": "Bir webhook tarafından tetiklenecek şekilde yapılandırılan her şeye, örneğinizi internete maruz bırakmadan herhangi bir yerden Home Assistant'a geri göndermenize izin vermek için herkese açık bir URL verilebilir.",
+                            "info": "Bir webhook tarafından tetiklenecek şekilde yapılandırılan her şeye, örneğinizi internete maruz bırakmadan herhangi bir yerden Third Eye'a geri göndermenize izin vermek için herkese açık bir URL verilebilir.",
                             "link_learn_more": "Webhook destekli otomasyonlar oluşturma hakkında daha fazla bilgi edinin.",
                             "loading": "Yükleniyor …",
                             "manage": "Yönet",
@@ -2021,11 +2021,11 @@
                         "email": "E-posta",
                         "email_error_msg": "Geçersiz e-posta",
                         "forgot_password": "Parolanızı mı unuttunuz?",
-                        "introduction": "Home Assistant Cloud, evden uzaktayken örneğinize güvenli bir uzaktan bağlantı sağlar. Ayrıca diğer bulut hizmetlerine bağlanmanıza olanak tanır: Amazon Alexa ve Google Assistant.",
+                        "introduction": "Third Eye Cloud, evden uzaktayken örneğinize güvenli bir uzaktan bağlantı sağlar. Ayrıca diğer bulut hizmetlerine bağlanmanıza olanak tanır: Amazon Alexa ve Google Assistant.",
                         "introduction2": "Bu hizmet ortağımız tarafından yürütülmektedir ",
-                        "introduction2a": " tarafından verilmektedir, Home Assistant ve Hass.io kurucuları tarafından kurulan bir şirket.",
-                        "introduction3": "Home Assistant Cloud, bir aylık ücretsiz deneme sürümüne sahip bir abonelik hizmetidir. Ödeme bilgisi gerekmez.",
-                        "learn_more_link": "Home Assistant Cloud hakkında daha fazla bilgi edin",
+                        "introduction2a": " tarafından verilmektedir, Third Eye ve Hass.io kurucuları tarafından kurulan bir şirket.",
+                        "introduction3": "Third Eye Cloud, bir aylık ücretsiz deneme sürümüne sahip bir abonelik hizmetidir. Ödeme bilgisi gerekmez.",
+                        "learn_more_link": "Third Eye Cloud hakkında daha fazla bilgi edin",
                         "password": "Parola",
                         "password_error_msg": "Parolalar en az 8 karakterdir",
                         "sign_in": "Oturum Aç",
@@ -2040,13 +2040,13 @@
                         "email_error_msg": "Geçersiz e-posta",
                         "feature_amazon_alexa": "Amazon Alexa ile entegrasyon",
                         "feature_google_home": "Google Asistan ile entegrasyon",
-                        "feature_remote_control": "Evden Uzakta Home Assistant'ı kontrol et",
+                        "feature_remote_control": "Evden Uzakta Third Eye'ı kontrol et",
                         "feature_webhook_apps": "OwnTracks gibi webhook tabanlı uygulamalarla kolay entegrasyon",
                         "headline": "Ücretsiz denemenizi başlatın",
-                        "information": "Home Assistant Cloud ile bir aylık ücretsiz denemenizi başlatmak için bir hesap oluşturun. Ödeme bilgisi gerekmez.",
-                        "information2": "Deneme, aşağıdakiler de dahil olmak üzere Home Assistant Cloud'un tüm avantajlarına erişmenizi sağlayacaktır:",
+                        "information": "Third Eye Cloud ile bir aylık ücretsiz denemenizi başlatmak için bir hesap oluşturun. Ödeme bilgisi gerekmez.",
+                        "information2": "Deneme, aşağıdakiler de dahil olmak üzere Third Eye Cloud'un tüm avantajlarına erişmenizi sağlayacaktır:",
                         "information3": "Bu hizmet ortağımız ",
-                        "information3a": " tarafından verilmektedir, Home Assistant ve Hass.io kurucuları tarafından kurulan bir şirket.",
+                        "information3a": " tarafından verilmektedir, Third Eye ve Hass.io kurucuları tarafından kurulan bir şirket.",
                         "information4": "Bir hesap kaydederek aşağıdaki şartlar ve koşulları kabul etmiş olursunuz.",
                         "link_privacy_policy": "Gizlilik Politikası",
                         "link_terms_conditions": "Şartlar ve koşullar",
@@ -2078,7 +2078,7 @@
                                 "imperial_example": "Fahrenhayt, pound",
                                 "internal_url": "Dahili bağlantı URL'si",
                                 "latitude": "Enlem",
-                                "location_name": "Home Assistant kurulumunuzun adı",
+                                "location_name": "Third Eye kurulumunuzun adı",
                                 "longitude": "Boylam",
                                 "metric_example": "Santigrat, kilogram",
                                 "save_button": "Kaydet",
@@ -2139,7 +2139,7 @@
                         "title": "Enerji"
                     },
                     "people": {
-                        "description": "Home Assistant'ın izlediği kişileri ve bölgeleri yönetin",
+                        "description": "Third Eye'ın izlediği kişileri ve bölgeleri yönetin",
                         "title": "İnsanlar ve Bölgeler"
                     },
                     "settings": {
@@ -2209,7 +2209,7 @@
                     "download_diagnostics": "Tanılamayı indir",
                     "edit_settings": "Ayarları düzenle",
                     "enabled_cause": "Cihaz {cause} tarafından devre dışı bırakıldı.",
-                    "enabled_description": "Devre dışı bırakılan cihazlar gösterilmeyecek ve cihaza ait varlıklar devre dışı bırakılacak ve Home Assistant'a eklenmeyecek.",
+                    "enabled_description": "Devre dışı bırakılan cihazlar gösterilmeyecek ve cihaza ait varlıklar devre dışı bırakılacak ve Third Eye'a eklenmeyecek.",
                     "enabled_label": "Cihazı etkinleştir",
                     "entities": {
                         "add_entities_lovelace": "Tüm cihaz varlıklarını Lovelace kullanıcı arayüzüne ekle",
@@ -2283,7 +2283,7 @@
                         },
                         "learn_more": "Nasıl başlayacağınız hakkında daha fazla bilgi.",
                         "selected_stat": "Enerji izleme",
-                        "sub": "Tek tek cihazların enerji kullanımını izlemek için Home Assistant'ın enerji kullanımınızı cihaza göre ayırmasını sağlar.",
+                        "sub": "Tek tek cihazların enerji kullanımını izlemek için Third Eye'ın enerji kullanımınızı cihaza göre ayırmasını sağlar.",
                         "title": "Tek tek cihazlar"
                     },
                     "gas": {
@@ -2294,7 +2294,7 @@
                             "cost_number": "Sabit bir fiyat kullanın",
                             "cost_number_input": "{unit} başına fiyat",
                             "cost_number_suffix": "{currency}/m³",
-                            "cost_para": "Home Assistant'ın tüketilen enerjinin maliyetlerini nasıl takip edeceğini seçin.",
+                            "cost_para": "Third Eye'ın tüketilen enerjinin maliyetlerini nasıl takip edeceğini seçin.",
                             "cost_stat": "Toplam maliyetleri izleyen bir varlık kullanın",
                             "cost_stat_input": "Toplam Maliyet Varlığı",
                             "energy_stat": "Tüketilen Enerji (m³)",
@@ -2306,7 +2306,7 @@
                         },
                         "gas_consumption": "Gaz tüketimi",
                         "learn_more": "Nasıl başlayacağınız hakkında daha fazla bilgi.",
-                        "sub": "Home Assistant'ın gaz kullanımınızı izlemesine izin verin.",
+                        "sub": "Third Eye'ın gaz kullanımınızı izlemesine izin verin.",
                         "title": "Gaz Tüketimi"
                     },
                     "grid": {
@@ -2320,7 +2320,7 @@
                                 "cost_number": "Standart bir fiyat kullanın",
                                 "cost_number_input": "kWs Ücreti",
                                 "cost_number_suffix": "{currency}/kWs",
-                                "cost_para": "Home Assistant'ın tüketilen enerjinin maliyetlerini nasıl takip edeceğini seçin.",
+                                "cost_para": "Third Eye'ın tüketilen enerjinin maliyetlerini nasıl takip edeceğini seçin.",
                                 "cost_stat": "Toplam maliyetleri izleyen bir varlık kullanın",
                                 "cost_stat_input": "Toplam Maliyet Varlığı",
                                 "energy_stat": "Tüketilen Enerji (kWs)",
@@ -2347,7 +2347,7 @@
                         "grid_consumption": "Şebeke tüketimi",
                         "learn_more": "Nasıl başlayacağınız hakkında daha fazla bilgi.",
                         "return_to_grid": "Şebekeye geri verilen",
-                        "sub": "Şebekeden tükettiğiniz enerji miktarını yapılandırın ve eğer enerji üretiyorsanız şebekeye geri verin. Bu, Home Assistant'ın tüm ev enerji kullanımınızı izlemesini sağlar.",
+                        "sub": "Şebekeden tükettiğiniz enerji miktarını yapılandırın ve eğer enerji üretiyorsanız şebekeye geri verin. Bu, Third Eye'ın tüm ev enerji kullanımınızı izlemesini sağlar.",
                         "title": "Elektrik şebekesi"
                     },
                     "new_device_info": "Yeni bir cihaz kurduktan sonra, yeni verilerin enerji kontrol panelinize ulaşması 2 saate kadar sürebilir.",
@@ -2367,7 +2367,7 @@
                         "stat_predicted_production": "Güneş enerjisi üretiminizin tahmini",
                         "stat_production": "Güneş enerjisi üretiminiz",
                         "stat_return_to_grid": "Güneş enerjisineden şebekeye geri verilen",
-                        "sub": "Home Assistant'ın güneş panellerinizi izlemesine ve performansları hakkında size fikir vermesine izin verin.",
+                        "sub": "Third Eye'ın güneş panellerinizi izlemesine ve performansları hakkında size fikir vermesine izin verin.",
                         "title": "Güneş Panelleri"
                     },
                     "validation": {
@@ -2433,12 +2433,12 @@
                     "picker": {
                         "disable_selected": {
                             "button": "Seçilenleri devre dışı bırak",
-                            "confirm_text": "Devre dışı bırakılan varlıklar Home Assistant'a eklenmeyecek.",
+                            "confirm_text": "Devre dışı bırakılan varlıklar Third Eye'a eklenmeyecek.",
                             "confirm_title": "devre dışı bırakmak istiyor musunuz {number} {number, plural,\n  one {varlık}\n  other {varlıklar}\n}?"
                         },
                         "enable_selected": {
                             "button": "Seçilenleri etkinleştir",
-                            "confirm_text": "Bu, şimdi devre dışı bırakıldıklarında onları tekrar Home Assistant'ta kullanılabilir hale getirecektir.",
+                            "confirm_text": "Bu, şimdi devre dışı bırakıldıklarında onları tekrar Third Eye'ta kullanılabilir hale getirecektir.",
                             "confirm_title": "etkinleştirmek istiyor musunuz {number} {number, plural,\n  one {varlık}\n  other {varlıklar}\n}?"
                         },
                         "filter": {
@@ -2458,11 +2458,11 @@
                             "name": "Ad",
                             "status": "Durum"
                         },
-                        "introduction": "Home Assistant, benzersiz bir şekilde tanımlanabilen gördüğü her varlığın kaydını tutar. Bu varlıkların her biri, sadece bu varlık için ayrılmış olacak bir varlık kimliğine sahip olacaktır.",
-                        "introduction2": "Adı geçersiz kılmak, varlık kimliğini değiştirmek veya girişi Home Assistant'tan kaldırmak için varlık kayıt defterini kullanın.",
+                        "introduction": "Third Eye, benzersiz bir şekilde tanımlanabilen gördüğü her varlığın kaydını tutar. Bu varlıkların her biri, sadece bu varlık için ayrılmış olacak bir varlık kimliğine sahip olacaktır.",
+                        "introduction2": "Adı geçersiz kılmak, varlık kimliğini değiştirmek veya girişi Third Eye'tan kaldırmak için varlık kayıt defterini kullanın.",
                         "remove_selected": {
                             "button": "Seçilenleri kaldır",
-                            "confirm_partly_text": "Yalnızca seçili {selected} varlıkları {removable} kaldırabilirsiniz. Varlıklar yalnızca entegrasyon özelliklerini sağlamadığında kaldırılabilir. Bazen, kaldırılan bir entegrasyondaki varlıkları kaldırabilmeniz için önce Home Assistant'ı yeniden başlatmanız gerekir. Çıkarılabilir varlıkları kaldırmak istediğinizden emin misiniz?",
+                            "confirm_partly_text": "Yalnızca seçili {selected} varlıkları {removable} kaldırabilirsiniz. Varlıklar yalnızca entegrasyon özelliklerini sağlamadığında kaldırılabilir. Bazen, kaldırılan bir entegrasyondaki varlıkları kaldırabilmeniz için önce Third Eye'ı yeniden başlatmanız gerekir. Çıkarılabilir varlıkları kaldırmak istediğinizden emin misiniz?",
                             "confirm_partly_title": "Sadece {number} {number, plural,\n  one {seçilen varlık}\n  other {seçilen varlıklar}\n} kaldırılabilir.",
                             "confirm_text": "Bu varlıkları içeriyorsa, bunları Lovelace yapılandırmanız ve otomasyonlarınızdan kaldırmalısınız.",
                             "confirm_title": "Kaldırmak istiyormusunuz {number} {number, plural,\n  one {varlık}\n  other {varlıklar}\n}?"
@@ -2478,7 +2478,7 @@
                         }
                     }
                 },
-                "header": "Home Assistant'ı yapılandır",
+                "header": "Third Eye'ı yapılandır",
                 "helpers": {
                     "caption": "Yardımcılar",
                     "description": "Otomasyon oluşturmaya yardımcı olan öğeler",
@@ -2520,7 +2520,7 @@
                     "documentation": "Dökümanlar",
                     "frontend": "ön uç-ui",
                     "frontend_version": "Ön uç versiyonu: {version} - {type}",
-                    "home_assistant_logo": "Home Assistant Logosu",
+                    "home_assistant_logo": "Third Eye Logosu",
                     "icons_by": "Simgeler tarafından",
                     "integrations": "Entegrasyonlar",
                     "issues": "Sorunlar",
@@ -2559,11 +2559,11 @@
                             "disabled_cause": "{cause} tarafından devre dışı bırakıldı"
                         },
                         "disable_error": "Entegrasyonun etkinleştirilmesi veya devre dışı bırakılması başarısız oldu",
-                        "disable_restart_confirm": "Bu entegrasyonu devre dışı bırakmayı tamamlamak için Home Assistant'ı yeniden başlatın",
+                        "disable_restart_confirm": "Bu entegrasyonu devre dışı bırakmayı tamamlamak için Third Eye'ı yeniden başlatın",
                         "disabled_polling": "Güncellenen veriler için otomatik kontrol devre dışı bırakıldı",
                         "documentation": "Dökümanlar",
                         "download_diagnostics": "Tanılamayı indir",
-                        "enable_restart_confirm": "Bu entegrasyonu etkinleştirmeyi tamamlamak için Home Assistant'ı yeniden başlatın",
+                        "enable_restart_confirm": "Bu entegrasyonu etkinleştirmeyi tamamlamak için Third Eye'ı yeniden başlatın",
                         "entities": "{count} {count, plural,\n  one {varlık}\n  other {varlıklar}\n}",
                         "entity_unavailable": "Varlık kullanılamıyor",
                         "firmware": "Aygıt yazılımı: {version}",
@@ -2577,9 +2577,9 @@
                         "provided_by_custom_integration": "Geliştirilmiş entegrasyon",
                         "reload": "Tekrar yükle",
                         "reload_confirm": "Entegrasyon yeniden yüklendi",
-                        "reload_restart_confirm": "Bu entegrasyonu yeniden yüklemeyi bitirmek için Home Assistant'ı yeniden başlatın",
+                        "reload_restart_confirm": "Bu entegrasyonu yeniden yüklemeyi bitirmek için Third Eye'ı yeniden başlatın",
                         "rename": "Yeniden adlandır",
-                        "restart_confirm": "Bu entegrasyonu kaldırmaya devam etmek için Home Assistant'ı yeniden başlatın",
+                        "restart_confirm": "Bu entegrasyonu kaldırmaya devam etmek için Third Eye'ı yeniden başlatın",
                         "services": "{count} {count, plural,\n  one {hizmet}\n  other {hizmetler}\n}",
                         "state": {
                             "failed_unload": "Kaldırılamadı",
@@ -2614,7 +2614,7 @@
                         },
                         "next": "Sonraki",
                         "not_all_required_fields": "Gerekli alanların tümü doldurulmamış.",
-                        "not_loaded": "Bu entegrasyon yüklenemedi, Home Assistant'ı yeniden başlatmayı deneyin.",
+                        "not_loaded": "Bu entegrasyon yüklenemedi, Third Eye'ı yeniden başlatmayı deneyin.",
                         "pick_flow_step": {
                             "new_flow": "Hayır, {integration} öğesinin başka bir örneğini ayarlama",
                             "title": "Bunları keşfettik, kurmak ister misin?"
@@ -2632,7 +2632,7 @@
                         "show_disabled": "Devre dışı bırakılan entegrasyonları göster"
                     },
                     "discovered": "Bulundu",
-                    "home_assistant_website": "Home Assistant web sitesi",
+                    "home_assistant_website": "Third Eye web sitesi",
                     "ignore": {
                         "confirm_delete_ignore": "Bu, entegrasyonun keşfedildiğinde keşfedilen entegrasyonlarınızda tekrar görünmesini sağlayacaktır. Bu, yeniden başlatma gerektirebilir veya biraz zaman alabilir.",
                         "confirm_delete_ignore_title": "{name} yoksaymayı bırak?",
@@ -2657,13 +2657,13 @@
                     "rename_input_label": "Varlık adı",
                     "search": "Entegrasyon ara"
                 },
-                "introduction": "Buradan bileşenlerinizi ve Home Assistant'ınızı yapılandırabilirsiniz. Herşeyi kullanıcı arayüzü ile ayarlamak henüz mümkün değil fakat üzerinde çalışıyoruz.",
+                "introduction": "Buradan bileşenlerinizi ve Third Eye'ınızı yapılandırabilirsiniz. Herşeyi kullanıcı arayüzü ile ayarlamak henüz mümkün değil fakat üzerinde çalışıyoruz.",
                 "logs": {
                     "caption": "Günlükler",
                     "clear": "Temizle",
                     "copy": "Giriş günlüklerini kopyala",
                     "custom_integration": "özel entegrasyon",
-                    "description": "Home Assistant günlüklerini görüntüle",
+                    "description": "Third Eye günlüklerini görüntüle",
                     "details": "Günlük Ayrıntıları ( {level} )",
                     "error_from_custom_integration": "Bu hata, özel bir entegrasyondan kaynaklanmıştır.",
                     "level": {
@@ -2673,7 +2673,7 @@
                         "info": "BİLGİ",
                         "warning": "UYARI"
                     },
-                    "load_full_log": "Tam Home Assistant Günlüğünü Yükle",
+                    "load_full_log": "Tam Third Eye Günlüğünü Yükle",
                     "loading_log": "Hata günlüğü yükleniyor ...",
                     "multiple_messages": "ileti ilk önce {time} meydana geldi ve {counter} kez gösterildi",
                     "no_errors": "Hata bildirilmedi",
@@ -2878,7 +2878,7 @@
                     "select_instance": {
                         "header": "OpenZWave Örneği Seçin",
                         "introduction": "Çalışan birden fazla OpenZWave örneğiniz var. Hangi örneği yönetmek istersiniz?",
-                        "none_found": "OpenZWave örneği bulamadık. Bunun yanlış olduğuna inanıyorsanız, OpenZWave ve MQTT kurulumlarınızı kontrol edin ve Home Assistant'ın MQTT aracınız ile iletişim kurabildiğinden emin olun."
+                        "none_found": "OpenZWave örneği bulamadık. Bunun yanlış olduğuna inanıyorsanız, OpenZWave ve MQTT kurulumlarınızı kontrol edin ve Third Eye'ın MQTT aracınız ile iletişim kurabildiğinden emin olun."
                     },
                     "services": {
                         "add_node": "Düğüm Ekle",
@@ -2892,7 +2892,7 @@
                     "confirm_delete": "Bu kişiyi silmek istediğinizden emin misiniz?",
                     "confirm_delete2": "Bu kişiye ait tüm cihazlar atanmamış olur.",
                     "create_person": "Kişi Oluştur",
-                    "description": "Home Assistant'ın izlediği kişileri yönetin.",
+                    "description": "Third Eye'ın izlediği kişileri yönetin.",
                     "detail": {
                         "admin": "Yönetici",
                         "allow_login": "Kişinin oturum açmasına izin ver",
@@ -2912,7 +2912,7 @@
                         "no_device_tracker_available_intro": "Bir kişinin varlığını gösteren aygıtlarınız olduğunda, bunları buradaki bir kişiye atayabilirsiniz. Entegrasyonlar sayfasından bir varlık algılama entegrasyonu ekleyerek ilk cihazınızı ekleyebilirsiniz.",
                         "update": "Güncelle"
                     },
-                    "introduction": "Burada Home Assistant ile ilgili her kişiyi tanımlayabilirsiniz.",
+                    "introduction": "Burada Third Eye ile ilgili her kişiyi tanımlayabilirsiniz.",
                     "learn_more": "İnsanlar hakkında daha fazla bilgi edinin",
                     "no_persons_created_yet": "Henüz herhangi bir kişi oluşturmadığın gibi görünüyor.",
                     "note_about_persons_configured_in_yaml": "Not: configuration.yaml aracılığıyla yapılandırılan kişiler UI aracılığıyla düzenlenemez.",
@@ -2959,7 +2959,7 @@
                         "headers": {
                             "name": "Ad"
                         },
-                        "introduction": "Sahne düzenleyici, sahneler oluşturmanıza ve düzenlemenize olanak sağlar. Home Assistant'ı doğru yapılandırdığınızdan emin olmak ve talimatları okumak için lütfen aşağıdaki bağlantıyı izleyin.",
+                        "introduction": "Sahne düzenleyici, sahneler oluşturmanıza ve düzenlemenize olanak sağlar. Third Eye'ı doğru yapılandırdığınızdan emin olmak ve talimatları okumak için lütfen aşağıdaki bağlantıyı izleyin.",
                         "learn_more": "Sahneler hakkında daha fazla bilgi edinin",
                         "no_scenes": "Herhangi bir sahne bulamadık",
                         "only_editable": "Sadece scenes.yaml içinde belirlenmiş sahneler düzenlenebilinir.",
@@ -3011,7 +3011,7 @@
                         "headers": {
                             "name": "Ad"
                         },
-                        "introduction": "Senaryo düzenleyici, senaryo oluşturmanıza ve düzenlemenize olanak tanır. Home Assistant'ı doğru şekilde yapılandırdığınızdan emin olmak için talimatları okumak için lütfen aşağıdaki bağlantıyı izleyin.",
+                        "introduction": "Senaryo düzenleyici, senaryo oluşturmanıza ve düzenlemenize olanak tanır. Third Eye'ı doğru şekilde yapılandırdığınızdan emin olmak için talimatları okumak için lütfen aşağıdaki bağlantıyı izleyin.",
                         "learn_more": "Senaryolar hakkında daha fazla bilgi edinin",
                         "no_scripts": "Herhangi bir senaryo bulamadık.",
                         "run_script": "Senaryoyu çalıştır",
@@ -3020,7 +3020,7 @@
                 },
                 "server_control": {
                     "caption": "Sunucu Kontrolleri",
-                    "description": "Home Assistant sunucusunu doğrulayın ve yeniden başlatın",
+                    "description": "Third Eye sunucusunu doğrulayın ve yeniden başlatın",
                     "section": {
                         "reloading": {
                             "automation": "Otomasyonlar",
@@ -3040,7 +3040,7 @@
                             "input_number": "Giriş numaraları",
                             "input_select": "Giriş seçenekleri",
                             "input_text": "Giriş metinleri",
-                            "introduction": "Home Assistant'ın bazı bölümleri, yeniden başlatma gerektirmeden yeniden yüklenebilir. Yeniden yüklemeye basmak, mevcut YAML yapılandırmasını kaldıracak ve yenisini yükleyecektir.",
+                            "introduction": "Third Eye'ın bazı bölümleri, yeniden başlatma gerektirmeden yeniden yüklenebilir. Yeniden yüklemeye basmak, mevcut YAML yapılandırmasını kaldıracak ve yenisini yükleyecektir.",
                             "min_max": "Min/maks varlıkları",
                             "mqtt": "Manuel olarak yapılandırılmış MQTT varlıkları",
                             "person": "Kişiler",
@@ -3061,10 +3061,10 @@
                             "zone": "Bölgeler"
                         },
                         "server_management": {
-                            "confirm_restart": "Home Assistant'ı yeniden başlatmak istediğinizden emin misiniz?",
-                            "confirm_stop": "Home Assistant'ı durdurmak istediğinizden emin misin?",
+                            "confirm_restart": "Third Eye'ı yeniden başlatmak istediğinizden emin misiniz?",
+                            "confirm_stop": "Third Eye'ı durdurmak istediğinizden emin misin?",
                             "heading": "Sunucu yönetimi",
-                            "introduction": "Home Assistant'ınızı kontrol edin.",
+                            "introduction": "Third Eye'ınızı kontrol edin.",
                             "restart": "Yeniden başlat",
                             "stop": "Durdur"
                         },
@@ -3110,7 +3110,7 @@
                 },
                 "updates": {
                     "check_unavailable": {
-                        "description": "Home Assistant kullanıcı arayüzünden güncellemeleri kontrol edip yükleyebilmek için Home Assistant işletim sistemini çalıştırmanız gerekir.",
+                        "description": "Third Eye kullanıcı arayüzünden güncellemeleri kontrol edip yükleyebilmek için Third Eye işletim sistemini çalıştırmanız gerekir.",
                         "title": "Güncellemeler kontrol edilemiyor"
                     },
                     "check_updates": "Güncellemeleri kontrol et",
@@ -3132,7 +3132,7 @@
                         "password_not_match": "Parolalar eşleşmiyor"
                     },
                     "caption": "Kullanıcılar",
-                    "description": "Home Assistant kullanıcı hesaplarını yönetin",
+                    "description": "Third Eye kullanıcı hesaplarını yönetin",
                     "editor": {
                         "activate_user": "Kullanıcıyı etkinleştir",
                         "active": "Aktif",
@@ -3344,7 +3344,7 @@
                         "add_to_group": "Gruba ekle",
                         "entities": "Bu düğümün varlıkları",
                         "entity_info": "Varlık Bilgileri",
-                        "exclude_entity": "Bu varlığı Home Assistant'dan hariç tut",
+                        "exclude_entity": "Bu varlığı Third Eye'dan hariç tut",
                         "group": "Grup",
                         "header": "Z-Wave Düğümü Yönetimi",
                         "introduction": "Tek bir düğümü etkileyen Z-Wave komutlarını çalıştırın. Kullanılabilir komutların listesini görmek için bir düğüm seçin.",
@@ -3540,7 +3540,7 @@
                         "unknown": "Bilinmeyen"
                     },
                     "provisioned": {
-                        "confirm_unprovision_text": "Cihazın yetkilendirmesini kaldırırsanız, açıldığında Home Assistant'a eklenmez. Home Assistant'a zaten eklenmişse, sağlanan cihazın kaldırılması, Home Assistant'tan kaldırılmaz.",
+                        "confirm_unprovision_text": "Cihazın yetkilendirmesini kaldırırsanız, açıldığında Third Eye'a eklenmez. Third Eye'a zaten eklenmişse, sağlanan cihazın kaldırılması, Third Eye'tan kaldırılmaz.",
                         "confirm_unprovision_title": "Cihazı eski ayarlarına döndürmek istediğinizden emin misiniz?",
                         "dsk": "DSK",
                         "included": "Dahil",
@@ -3572,7 +3572,7 @@
                         "exclusion_failed": "Düğüm kaldırılamadı. Daha fazla bilgi için lütfen günlükleri kontrol edin.",
                         "exclusion_finished": "{id} düğümü, Z-Wave ağınızdan kaldırıldı.",
                         "follow_device_instructions": "Cihazda hariç tutmayı tetiklemek için cihazınızla birlikte gelen talimatları izleyin.",
-                        "introduction": "Z-Wave ağınızdan bir cihazı kaldırın ve ilişkili cihazı ve varlıkları Home Assistant'tan kaldırın.",
+                        "introduction": "Z-Wave ağınızdan bir cihazı kaldırın ve ilişkili cihazı ve varlıkları Third Eye'tan kaldırın.",
                         "start_exclusion": "Hariç Tutmayı Başlat",
                         "title": "Bir Z-Wave Düğümünü Kaldı"
                     },
@@ -3601,7 +3601,7 @@
             },
             "custom": {
                 "external_panel": {
-                    "complete_access": "Home Assistant'taki tüm verilere erişebilecek.",
+                    "complete_access": "Third Eye'taki tüm verilere erişebilecek.",
                     "hide_message": "Bu mesajı gizlemek için dökümantasyondaki panel_custom bileşenine bakınız",
                     "question_trust": "{link} adresindeki {name} dış panele güveniyor musunuz?"
                 }
@@ -3634,7 +3634,7 @@
                         "column_description": "Açıklama",
                         "column_example": "Örnek",
                         "column_parameter": "Parametre",
-                        "description": "Servisler geliştirici araçı, Home Assistant'taki mevcut tüm hizmetleri aramanızı sağlar.",
+                        "description": "Servisler geliştirici araçı, Third Eye'taki mevcut tüm hizmetleri aramanızı sağlar.",
                         "fill_example_data": "Örnek Verileri Doldur",
                         "no_template_ui_support": "Kullanıcı arayüzü şablonları desteklemiyor, yine de YAML düzenleyicisini kullanabilirsiniz.",
                         "title": "Servisler",
@@ -3647,7 +3647,7 @@
                         "attributes": "Nitelikler",
                         "copy_id": "Kimliği panoya kopyala",
                         "current_entities": "Mevcut varlıklar",
-                        "description1": "Home Assistant içersindeki bir cihazın görünümü ayarlayın.",
+                        "description1": "Third Eye içersindeki bir cihazın görünümü ayarlayın.",
                         "description2": "Varlık bir cihaza aitse, o cihazla gerçek bir iletişim olmayacaktır.",
                         "entity": "Varlık",
                         "filter_attributes": "Nitelikleri filtrele",
@@ -3689,7 +3689,7 @@
                     },
                     "templates": {
                         "all_listeners": "Bu şablon, tüm durum değiştirilmiş olayları dinler.",
-                        "description": "Taslaklar Jinja2 taslak motoru ve bazı Home Assistant eklentileri ile görüntülenmektedir.",
+                        "description": "Taslaklar Jinja2 taslak motoru ve bazı Third Eye eklentileri ile görüntülenmektedir.",
                         "domain": "Alan adı",
                         "editor": "Taslak düzenleyicisi",
                         "entity": "Varlık",
@@ -3698,7 +3698,7 @@
                         "no_listeners": "Bu şablon herhangi bir olayı dinlemez ve otomatik olarak güncelleştirilmeyecektir.",
                         "reset": "Demo şablonuna sıfırla",
                         "result_type": "Sonuç türü",
-                        "template_extensions": "Home Assistant taslak eklentileri",
+                        "template_extensions": "Third Eye taslak eklentileri",
                         "time": "Bu şablon her dakika güncellenir.",
                         "title": "Taslak",
                         "unknown_error_template": "Bilinmeyen taslak gösterim hatası"
@@ -3807,7 +3807,7 @@
                         "never_triggered": "Asla tetiklenmedi"
                     },
                     "iframe": {
-                        "error_secure_context": "Home Assistant {context_protocol} üzerinden hizmet veriyorsa, {target_protocol} kullanılarak web sitelerini işaret eden iframe'ler yüklenyemiyor."
+                        "error_secure_context": "Third Eye {context_protocol} üzerinden hizmet veriyorsa, {target_protocol} kullanılarak web sitelerini işaret eden iframe'ler yüklenyemiyor."
                     },
                     "map": {
                         "reset_focus": "Odağı sıfırla"
@@ -3822,7 +3822,7 @@
                         "url": "{url_path} için pencereyi aç"
                     },
                     "safe-mode": {
-                        "description": "Home Assistant, yapılandırmanızı yüklerken sorun yaşadı ve şimdi güvenli modda çalışıyor. Neyin yanlış gittiğini görmek için hata günlüğüne bakın.",
+                        "description": "Third Eye, yapılandırmanızı yüklerken sorun yaşadı ve şimdi güvenli modda çalışıyor. Neyin yanlış gittiğini görmek için hata günlüğüne bakın.",
                         "header": "Güvenli Mod Etkin"
                     },
                     "shopping-list": {
@@ -3834,7 +3834,7 @@
                     },
                     "show_more_info": "Daha fazla bilgi göster",
                     "starting": {
-                        "description": "Home Assistant başlıyor, lütfen bekleyin …"
+                        "description": "Third Eye başlıyor, lütfen bekleyin …"
                     }
                 },
                 "changed_toast": {
@@ -4018,7 +4018,7 @@
                             "name": "Nemlendirici"
                         },
                         "iframe": {
-                            "description": "Web sayfası kartı, favori web sayfanızı Home Assistant'a yerleştirmenizi sağlar.",
+                            "description": "Web sayfası kartı, favori web sayfanızı Third Eye'a yerleştirmenizi sağlar.",
                             "name": "Web sayfası"
                         },
                         "light": {
@@ -4201,7 +4201,7 @@
                     "migrate": {
                         "header": "Yapılandırma Geçersiz",
                         "migrate": "Ayarları aktar",
-                        "para_migrate": "Home Assistant, 'Yapılandırmayı Geçir' düğmesine basarak tüm kartlarınıza ve görünümlerinize otomatik olarak kimlik ekleyebilir.",
+                        "para_migrate": "Third Eye, 'Yapılandırmayı Geçir' düğmesine basarak tüm kartlarınıza ve görünümlerinize otomatik olarak kimlik ekleyebilir.",
                         "para_no_id": "Bu öğenin bir kimliği yok. Lütfen 'ui-lovelace.yaml' dosyasında bu elemente bir kimlik ekleyin."
                     },
                     "move_card": {
@@ -4228,7 +4228,7 @@
                         "close": "Kapat",
                         "empty_config": "Boş bir gösterge tablosuyla başla",
                         "header": "Lovelace kullanıcı arayüzünü kontrolünüz altına alın",
-                        "para": "Bu kontrol paneli şu anda Home Assistant tarafından yönetiliyor. Yeni varlıklar veya Lovelace UI bileşenleri kullanılabilir olduğunda otomatik olarak güncellenir. Kontrolü ele alırsanız, bu gösterge tablosu artık otomatik olarak güncellenmeyecektir. Oynamak için her zaman yapılandırmada yeni bir gösterge tablosu oluşturabilirsiniz.",
+                        "para": "Bu kontrol paneli şu anda Third Eye tarafından yönetiliyor. Yeni varlıklar veya Lovelace UI bileşenleri kullanılabilir olduğunda otomatik olarak güncellenir. Kontrolü ele alırsanız, bu gösterge tablosu artık otomatik olarak güncellenmeyecektir. Oynamak için her zaman yapılandırmada yeni bir gösterge tablosu oluşturabilirsiniz.",
                         "para_sure": "Kullanıcı arayüzünüzü kontrol altına almak istediğinize emin misiniz?",
                         "save": "Kontrol altına al",
                         "yaml_config": "Buradan başlamanıza yardımcı olmak için bu kontrol panelinin mevcut yapılandırması:",
@@ -4293,7 +4293,7 @@
                     "entity_non_numeric": "Varlık sayısal değil: {entity}",
                     "entity_not_found": "Varlık mevcut değil: {entity}",
                     "entity_unavailable": "Varlık şu anda kullanılamıyor: {entity}",
-                    "starting": "Home Assistant başlıyor, arayüzün yüklenmesi için bekleyiniz"
+                    "starting": "Third Eye başlıyor, arayüzün yüklenmesi için bekleyiniz"
                 }
             },
             "mailbox": {
@@ -4306,16 +4306,16 @@
                 "edit_zones": "Bölgeleri Düzenle"
             },
             "my": {
-                "component_not_loaded": "Bu yeniden yönlendirme, Home Assistant örneğiniz tarafından desteklenmiyor. Bu yeniden yönlendirmeyi kullanmak için {integration} tümleştirmesine ihtiyacınız var.",
+                "component_not_loaded": "Bu yeniden yönlendirme, Third Eye örneğiniz tarafından desteklenmiyor. Bu yeniden yönlendirmeyi kullanmak için {integration} tümleştirmesine ihtiyacınız var.",
                 "documentation": "dokümantasyon",
                 "error": "Bilinmeyen bir hata oluştu",
-                "faq_link": "Home Assistant SSS",
-                "no_supervisor": "Bu yönlendirme, Home Assistant kurulumunuz tarafından desteklenmiyor. Ev Asistanı İşletim Sistemi veya Home Assistant Denetimli kurulum yöntemine ihtiyaç duyar. Daha fazla bilgi için bkz. {docs_link} .",
-                "not_supported": "Bu yönlendirme, Home Assistant örneğiniz tarafından desteklenmiyor. Desteklenen yönlendirmeler ve bunların sunulduğu sürüm için {link} kontrol edin."
+                "faq_link": "Third Eye SSS",
+                "no_supervisor": "Bu yönlendirme, Third Eye kurulumunuz tarafından desteklenmiyor. Ev Asistanı İşletim Sistemi veya Third Eye Denetimli kurulum yöntemine ihtiyaç duyar. Daha fazla bilgi için bkz. {docs_link} .",
+                "not_supported": "Bu yönlendirme, Third Eye örneğiniz tarafından desteklenmiyor. Desteklenen yönlendirmeler ve bunların sunulduğu sürüm için {link} kontrol edin."
             },
             "page-authorize": {
                 "abort_intro": "Giriş iptal edildi",
-                "authorizing_client": "{clientId}'ye Home Assistant erişim izni vermek üzeresiniz.",
+                "authorizing_client": "{clientId}'ye Third Eye erişim izni vermek üzeresiniz.",
                 "form": {
                     "error": "Hata: {error}",
                     "next": "Oturum aç",
@@ -4419,7 +4419,7 @@
                     "demo": {
                         "demo_by": "{name} tarafından",
                         "introduction": "Eve Hoşgeldin! Topluluğumuz tarafından oluşturulan en iyi kullanıcı arayüzlerini sergilediğimiz Ev Asistanı demosuna ulaştınız.",
-                        "learn_more": "Home assistant hakkında daha fazla bilgi edin",
+                        "learn_more": "Third Eye hakkında daha fazla bilgi edin",
                         "next_demo": "Sonraki demo"
                     }
                 },
@@ -4465,16 +4465,16 @@
                 "core-config": {
                     "button_detect": "Algıla",
                     "finish": "Sonraki",
-                    "intro": "Merhaba {name} , Home Assistant'a hoş geldin. Evini nasıl adlandırmak istersin?",
+                    "intro": "Merhaba {name} , Third Eye'a hoş geldin. Evini nasıl adlandırmak istersin?",
                     "intro_location": "Nerede yaşadığınızı bilmek isteriz. Bu bilgiler,  güneşe dayalı bilgilerin görüntülenmesine ve otomasyonların kurulmasına yardımcı olacaktır. Bu veriler asla ağınızın dışında paylaşılmaz.",
                     "intro_location_detect": "Harici bir hizmete tek seferlik talepte bulunarak bu bilgileri doldurmanıza yardımcı olabiliriz.",
-                    "location_name": "Home Assistant kurulumunuzun adı",
+                    "location_name": "Third Eye kurulumunuzun adı",
                     "location_name_default": "Evim"
                 },
                 "finish": "Bitir",
                 "integration": {
                     "finish": "Bitir",
-                    "intro": "Cihazlar ve hizmetler, Home Assistant'ta entegrasyonlar olarak temsil edilir. Bunları şimdi kurabilir veya daha sonra yapılandırma ekranından yapabilirsiniz.",
+                    "intro": "Cihazlar ve hizmetler, Third Eye'ta entegrasyonlar olarak temsil edilir. Bunları şimdi kurabilir veya daha sonra yapılandırma ekranından yapabilirsiniz.",
                     "more_integrations": "Daha fazla"
                 },
                 "intro": "Evinizi uyandırmaya, gizliliğinizi geri almaya ve dünya çapında bir tamirci topluluğuna katılmaya hazır mısınız?",
@@ -4562,7 +4562,7 @@
                     "create_failed": "Erişim anahtarı oluşturulamadı.",
                     "created": "{date} oluşturuldu",
                     "delete_failed": "Erişim anahtarı silinemedi.",
-                    "description": "Komut dosyalarınızın Home Assistant örneğinizle etkileşime girmesine izin vermek için uzun ömürlü erişim jetonları oluşturun. Her bir jeton, oluşturulduktan sonra 10 yıl süreyle geçerli olacaktır. Aşağıdaki uzun ömürlü erişim jetonları şu anda aktif.",
+                    "description": "Komut dosyalarınızın Third Eye örneğinizle etkileşime girmesine izin vermek için uzun ömürlü erişim jetonları oluşturun. Her bir jeton, oluşturulduktan sonra 10 yıl süreyle geçerli olacaktır. Aşağıdaki uzun ömürlü erişim jetonları şu anda aktif.",
                     "empty_state": "Henüz uzun ömürlü erişim anahtarınız yok.",
                     "header": "Uzun ömürlü erişim anahtarları",
                     "learn_auth_requests": "Yetkilendirilmiş istekleri nasıl yapacağınızı öğrenin.",

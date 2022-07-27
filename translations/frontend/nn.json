@@ -139,7 +139,7 @@
         "dialog": {
             "datadisk_move": {
                 "cancel": "Avbryt",
-                "description": "Akkuratt no brukar du '' {current_path} '' som datadisk. Å flytte datadisk vil starte eininge du om på nytt, og det er estimert å ta {time} minutt. Installasjonen av Home Assistant vil ikkje vere tilgjengeleg i denne perioden. Ikkje koble frå straumen under flyttinga!",
+                "description": "Akkuratt no brukar du '' {current_path} '' som datadisk. Å flytte datadisk vil starte eininge du om på nytt, og det er estimert å ta {time} minutt. Installasjonen av Third Eye vil ikkje vere tilgjengeleg i denne perioden. Ikkje koble frå straumen under flyttinga!",
                 "loading_devices": "Lastar einingar",
                 "move": "Flytt",
                 "moving": "Flyttar datadisk",
@@ -475,11 +475,11 @@
         },
         "dialogs": {
             "config_entry_system_options": {
-                "enable_new_entities_description": "Dersom denne er deaktivert, kjem ikkje nyoppdaga oppføringar til å bli automatisk lagt til i Home Assistant.",
+                "enable_new_entities_description": "Dersom denne er deaktivert, kjem ikkje nyoppdaga oppføringar til å bli automatisk lagt til i Third Eye.",
                 "enable_new_entities_label": "Aktiver nyleg tillagde oppføringar.",
-                "enable_polling_description": "Dersom Home Assistant automatisk skal spørje {integration}-oppføringar om oppdateringar. ",
+                "enable_polling_description": "Dersom Third Eye automatisk skal spørje {integration}-oppføringar om oppdateringar. ",
                 "enable_polling_label": "Aktiver etterspørjing av oppdateringar.",
-                "restart_home_assistant": "Du må starte Home Assistant omatt for at endringane dine skal tre i kraft.",
+                "restart_home_assistant": "Du må starte Third Eye omatt for at endringane dine skal tre i kraft.",
                 "title": "Systemval",
                 "update": "Oppdater"
             },
@@ -502,7 +502,7 @@
                         }
                     },
                     "enabled_cause": "Deaktivert av {cause}.",
-                    "enabled_description": "Dekativere oppføringar kjem ikkje til å bli lagt til i Home Assistant",
+                    "enabled_description": "Dekativere oppføringar kjem ikkje til å bli lagt til i Third Eye",
                     "enabled_label": "Aktiver oppføringa",
                     "entity_id": "Oppførings-ID",
                     "name": "Namnoverskriding",
@@ -641,8 +641,8 @@
             "connection_lost": "Tilkopling mista. Prøver å kople til på nytt…",
             "integration_starting": "Startar {integration}. Alt vil ikkje vere tilgjengeleg før den er ferdig.",
             "service_call_failed": "Klarte ikkje å kalle tenesten {service}.",
-            "started": "Home Assistant har starta!",
-            "starting": "Home Assistant held på å starte. Alt er ikkje tilgjengeleg før den er ferdig starta."
+            "started": "Third Eye har starta!",
+            "starting": "Third Eye held på å starte. Alt er ikkje tilgjengeleg før den er ferdig starta."
         },
         "panel": {
             "config": {
@@ -669,7 +669,7 @@
                     "picker": {
                         "header": "Områderegister",
                         "integrations_page": "Integrasjonsside",
-                        "introduction": "Områda vert brukt til å organisere kvar einingar er. Denne informasjonen vil bli brukt av Home Assistant for å hjelpe deg å organisere brukargrensesnittet, løyver og integrasjoner med andre system.",
+                        "introduction": "Områda vert brukt til å organisere kvar einingar er. Denne informasjonen vil bli brukt av Third Eye for å hjelpe deg å organisere brukargrensesnittet, løyver og integrasjoner med andre system.",
                         "introduction2": "For å plassere ei eining i eit område, bruk linken under for å navigere til integrasjonssida og trykk deretter på konfigurer integrasjon for å opne einingskortet."
                     },
                     "targeting_area": "Målretta dette området"
@@ -687,7 +687,7 @@
                             "delete_confirm": "Er du sikker på at du vil slette?",
                             "duplicate": "Dupliser",
                             "header": "Handlingar",
-                            "introduction": "Handlinga Home Assistant vil gjennomføre når automasjonen vert utløyst.",
+                            "introduction": "Handlinga Third Eye vil gjennomføre når automasjonen vert utløyst.",
                             "learn_more": "Lær meir om handlingar",
                             "name": "Handling",
                             "type": {
@@ -811,7 +811,7 @@
                             "edit_id": "Rediger utløysar-ID",
                             "header": "Utløysarar",
                             "id": "Utløysar-ID (brukt i utløysings-føresetnaden)",
-                            "introduction": "Utløysarar er det som startar ein prosess i ein automasjonsregel. Det er mogleg å spesifisere fleire utløysarar for same regel. Når ein utløysar startar, vil Home Assistant validere føresetnadane, dersom der er nokon, og så setje i gang handlinga.",
+                            "introduction": "Utløysarar er det som startar ein prosess i ein automasjonsregel. Det er mogleg å spesifisere fleire utløysarar for same regel. Når ein utløysar startar, vil Third Eye validere føresetnadane, dersom der er nokon, og så setje i gang handlinga.",
                             "learn_more": "Lær meir om utløysarar",
                             "name": "Utløysar",
                             "type": {
@@ -838,7 +838,7 @@
                                 },
                                 "homeassistant": {
                                     "event": "Hending:",
-                                    "label": "Home Assistant",
+                                    "label": "Third Eye",
                                     "shutdown": "Slå av",
                                     "start": "Oppstart"
                                 },
@@ -904,7 +904,7 @@
                         "headers": {
                             "name": "Namn"
                         },
-                        "introduction": "Automasjonsredigeringa tillet deg å lage og redigere automasjonar. Ver vennleg og les [instruksjonane](https://home-assistant.io/docs/automation/editor/) for å vere sikker på om du har konfigurert Home Assistant rett.",
+                        "introduction": "Automasjonsredigeringa tillet deg å lage og redigere automasjonar. Ver vennleg og les [instruksjonane](https://home-assistant.io/docs/automation/editor/) for å vere sikker på om du har konfigurert Third Eye rett.",
                         "learn_more": "Lær meir om automasjonar",
                         "no_automations": "Vi klarte ikkje å finne nokon automasjonar som kunne redigerast",
                         "pick_automation": "Vel ein automasjon for å redigere"
@@ -926,7 +926,7 @@
                             "reconnecting": "Kopler til igjen",
                             "remote_enabled": {
                                 "caption": "Kople til automatisk ",
-                                "description": "Aktiver dette valet for å sikre at Home Assistant-førekomsten din alltid er tilgjengeleg eksternt."
+                                "description": "Aktiver dette valet for å sikre at Third Eye-førekomsten din alltid er tilgjengeleg eksternt."
                             }
                         },
                         "tts": {
@@ -978,7 +978,7 @@
                                 "imperial_example": "Fahrenheit, pound",
                                 "internal_url": "Intern URL",
                                 "latitude": "Breiddegrad",
-                                "location_name": "Namnet på Home Assistant-installasjonen din.",
+                                "location_name": "Namnet på Third Eye-installasjonen din.",
                                 "longitude": "Lengdegrad",
                                 "metric_example": "Celsius, kilogram",
                                 "save_button": "Lagre",
@@ -1026,7 +1026,7 @@
                         "title": "Energi"
                     },
                     "people": {
-                        "description": "Administrer folk og sonene som Home Assistant sporer",
+                        "description": "Administrer folk og sonene som Third Eye sporer",
                         "title": "Folk og soner"
                     },
                     "settings": {
@@ -1106,7 +1106,7 @@
                         },
                         "learn_more": "Meir informasjon om korleis ein skal kome i gang.",
                         "selected_stat": "Spor energi til ",
-                        "sub": "Ved å spore energiforbrukettil enkelteiningar kan Home Assistant sortere energiforbruket ditt etter einingane.",
+                        "sub": "Ved å spore energiforbrukettil enkelteiningar kan Third Eye sortere energiforbruket ditt etter einingane.",
                         "title": "Individuelle einingar"
                     },
                     "gas": {
@@ -1116,7 +1116,7 @@
                             "cost_number": "Bruk ein statisk pris",
                             "cost_number_input": "Pris per m³",
                             "cost_number_suffix": "{currency}/m³",
-                            "cost_para": "Vel korleis Home Assistant skal halde styr på kostnadene av den brukte energien.",
+                            "cost_para": "Vel korleis Third Eye skal halde styr på kostnadene av den brukte energien.",
                             "cost_stat": "Bruk ei oppføring som sporar dei totale kostnadene",
                             "cost_stat_input": "Totale kostnader-oppføring",
                             "energy_stat": "Brukt energi (m³)",
@@ -1125,7 +1125,7 @@
                             "paragraph": "Gassforbruk er mengden volum av gass som strøymer til heimen din. "
                         },
                         "learn_more": "Meir informasjon om korleis ein skal kome i gang.",
-                        "sub": "Lat Home Assistant overvake gassforbruket ditt.",
+                        "sub": "Lat Third Eye overvake gassforbruket ditt.",
                         "title": "Gassforbruk"
                     },
                     "grid": {
@@ -1136,7 +1136,7 @@
                                 "cost_number": "Bruk ein statisk pris",
                                 "cost_number_input": "Pris per kWh",
                                 "cost_number_suffix": "{currency}/kWh",
-                                "cost_para": "Vel korleis Home Assistant skal halde styr på kostnadene av den brukte energien.",
+                                "cost_para": "Vel korleis Third Eye skal halde styr på kostnadene av den brukte energien.",
                                 "cost_stat": "Bruk ei oppføring som sporar dei totale kostnadene",
                                 "cost_stat_input": "Totale kostnader-oppføring",
                                 "energy_stat": "Brukt energi (kWh)",
@@ -1160,7 +1160,7 @@
                             }
                         },
                         "learn_more": "Meir informasjon om korleis ein skal kome i gang.",
-                        "sub": "Konfigurer mengda energi du forbruker frå nettet og, dersom du produserer energi, gi tilbake til nettet. Denne gir Home Assistant moglegheita til å spore energiforbruket til heile huset ditt.",
+                        "sub": "Konfigurer mengda energi du forbruker frå nettet og, dersom du produserer energi, gi tilbake til nettet. Denne gir Third Eye moglegheita til å spore energiforbruket til heile huset ditt.",
                         "title": "Straumnett"
                     },
                     "solar": {
@@ -1168,7 +1168,7 @@
                         "stat_predicted_production": "Forutsjå solenergiproduksjonen din",
                         "stat_production": "Solenergiproduksjonen din",
                         "stat_return_to_grid": "Solenergi returnert tilbake til nettet",
-                        "sub": "Lat Home Assistant monitorere solcellepanela dine og gi deg innsikt i ytinga deira.",
+                        "sub": "Lat Third Eye monitorere solcellepanela dine og gi deg innsikt i ytinga deira.",
                         "title": "Solcellepanel"
                     },
                     "validation": {
@@ -1239,12 +1239,12 @@
                             "integration": "Integrasjon",
                             "name": "Namn"
                         },
-                        "introduction": "Home Assistant har eit register over alle oppføringane den nokon gang har sett som kan unikt identifiserast. Kvar av desse oppføringane har ein eigen oppføringsidentifikasjon som er reservert for akkurat denne oppføringa.",
-                        "introduction2": "Bruk oppføringsregisteret til å skrive over namn, endre oppføringsidentifikasjonane eller fjerne oppføringar frå Home Assistant. Merk deg at å fjerne oppføringa i oppføringregisteret ikkje fjernar sjølve oppføringa. For å gjere dette, gå vidare inn på linken under og fjern oppføringa i integrasjonssida.",
+                        "introduction": "Third Eye har eit register over alle oppføringane den nokon gang har sett som kan unikt identifiserast. Kvar av desse oppføringane har ein eigen oppføringsidentifikasjon som er reservert for akkurat denne oppføringa.",
+                        "introduction2": "Bruk oppføringsregisteret til å skrive over namn, endre oppføringsidentifikasjonane eller fjerne oppføringar frå Third Eye. Merk deg at å fjerne oppføringa i oppføringregisteret ikkje fjernar sjølve oppføringa. For å gjere dette, gå vidare inn på linken under og fjern oppføringa i integrasjonssida.",
                         "search": "Søk i oppføringar"
                     }
                 },
-                "header": "Konfigurer Home Assistant",
+                "header": "Konfigurer Third Eye",
                 "helpers": {
                     "types": {
                         "input_button": "Knapp"
@@ -1280,10 +1280,10 @@
                             "disabled_cause": "Deaktivert av {cause}"
                         },
                         "disable_error": "Aktivering eller deaktivering av integasjonen mislukkast",
-                        "disable_restart_confirm": "Start Home Assistant på nytt for å fullføre deaktiveringa av denne integrasjonen",
+                        "disable_restart_confirm": "Start Third Eye på nytt for å fullføre deaktiveringa av denne integrasjonen",
                         "disabled_polling": "Automatisk trekking av oppdatert data er deaktivert",
                         "download_diagnostics": "Last ned diagnostikk",
-                        "enable_restart_confirm": "Start Home Assistant på nytt for å fullføre aktiveringa av denne integrasjonen",
+                        "enable_restart_confirm": "Start Third Eye på nytt for å fullføre aktiveringa av denne integrasjonen",
                         "entities": "{count} {count, plural,\n  one {oppføring}\n  other {oppføringar}\n}",
                         "entity_unavailable": "Oppføringa utilgjengeleg",
                         "firmware": "Firmware: {version}",
@@ -1295,7 +1295,7 @@
                         "open_configuration_url": "Besøk eining",
                         "provided_by_custom_integration": "Levert av ein tilpassa integrasjon ",
                         "rename": "Endre namn",
-                        "restart_confirm": "Restart Home Assistant for å fjerne denne integrasjonen",
+                        "restart_confirm": "Restart Third Eye for å fjerne denne integrasjonen",
                         "state": {
                             "failed_unload": "Kunne ikkje laste av",
                             "loaded": "Lasta",
@@ -1347,7 +1347,7 @@
                     "rename_dialog": "Rediger namnet til denne konfigurasjonsoppføringa",
                     "rename_input_label": "Oppføringsnavn"
                 },
-                "introduction": "Her er det mogleg å konfigurere dine komponenter og Home Assistant. Ikkje alt er mogleg å konfigurere frå brukarsnittet endå, men vi jobbar med saka.",
+                "introduction": "Her er det mogleg å konfigurere dine komponenter og Third Eye. Ikkje alt er mogleg å konfigurere frå brukarsnittet endå, men vi jobbar med saka.",
                 "logs": {
                     "caption": "Loggar",
                     "copy": "Kopier loggoppføring ",
@@ -1370,7 +1370,7 @@
                 },
                 "person": {
                     "caption": "Personar",
-                    "description": "Administrer personane Home Assistant sporer.",
+                    "description": "Administrer personane Third Eye sporer.",
                     "detail": {
                         "device_tracker_intro": "Vel eininga som høyrer til denne personen.",
                         "device_tracker_pick": "Vel eining for å spore",
@@ -1418,7 +1418,7 @@
                 },
                 "server_control": {
                     "caption": "Serverkontroll",
-                    "description": "Start om att og stopp Home Assistant-serveren",
+                    "description": "Start om att og stopp Third Eye-serveren",
                     "section": {
                         "reloading": {
                             "automation": "Oppdater automasjonane",
@@ -1426,17 +1426,17 @@
                             "group": "Oppdater gruppene",
                             "heading": "Konfigurasjonsomlasting",
                             "input_button": "Inndataknappar",
-                            "introduction": "Nokre delar av Home Assistant kan oppdaterast utan ein omstart. Ved å trykke på oppdater, vil Home Assistant forkaste den gjeldande konfigurasjonen og erstatte den med den nye.",
+                            "introduction": "Nokre delar av Third Eye kan oppdaterast utan ein omstart. Ved å trykke på oppdater, vil Third Eye forkaste den gjeldande konfigurasjonen og erstatte den med den nye.",
                             "scene": "Omlast scenene",
                             "script": "Oppdater skripta",
                             "themes": "Tema",
                             "timer": "Tidtakarar"
                         },
                         "server_management": {
-                            "confirm_restart": "Er du sikker på at du ønsker å starte Home Assistant omatt?",
-                            "confirm_stop": "Er du sikker på at du ønsker å stoppe Home Assistant?",
+                            "confirm_restart": "Er du sikker på at du ønsker å starte Third Eye omatt?",
+                            "confirm_stop": "Er du sikker på at du ønsker å stoppe Third Eye?",
                             "heading": "Serveradministrasjon",
-                            "introduction": "Kontroller Home Assistant-serveren din... frå Home Assistant.",
+                            "introduction": "Kontroller Third Eye-serveren din... frå Third Eye.",
                             "restart": "Omstart",
                             "stop": "Stopp"
                         },
@@ -1571,7 +1571,7 @@
                         "add_to_group": "Legg til i gruppa",
                         "entities": "Oppføringar for denne noda",
                         "entity_info": "Oppføringsinformasjon",
-                        "exclude_entity": "Ekskluder denne oppføringa frå Home Assistant",
+                        "exclude_entity": "Ekskluder denne oppføringa frå Third Eye",
                         "group": "Gruppe ",
                         "header": "Z-Wave-nodeadministrasjon",
                         "introduction": "Køyr Z-Wavekommando som påverker ei enkel node. Vel ei node for å sjå listene med tilgjengelege kommandoar.",
@@ -1699,7 +1699,7 @@
                         "set_param_queued": "Parameterendringa har blitt sett i køa, og vil bli oppdatert når eininga vakner."
                     },
                     "provisioned": {
-                        "confirm_unprovision_text": "Dersom du fjernar tilgangen til eininga kjem den ikkje til å bli lagt til i Home Assistant når den vert skrudd på. Dersom den allereie er lagt til i Home Assistant, vil ikkje fjerning av den klargjorte eininga fjerne den frå Home Assistant.",
+                        "confirm_unprovision_text": "Dersom du fjernar tilgangen til eininga kjem den ikkje til å bli lagt til i Third Eye når den vert skrudd på. Dersom den allereie er lagt til i Third Eye, vil ikkje fjerning av den klargjorte eininga fjerne den frå Third Eye.",
                         "confirm_unprovision_title": "Er du sikker på at du vil fjerne eininga?",
                         "dsk": "DSK",
                         "included": "Inkludert",
@@ -1797,7 +1797,7 @@
                         "never_triggered": "Aldri utløyst"
                     },
                     "iframe": {
-                        "error_secure_context": "Kan ikkje å laste inn iframane som peiker på nettsidene som bruker {target_protocol} dersom Home Assistant vert levert over {context_protocol}."
+                        "error_secure_context": "Kan ikkje å laste inn iframane som peiker på nettsidene som bruker {target_protocol} dersom Third Eye vert levert over {context_protocol}."
                     },
                     "map": {
                         "reset_focus": "Tilbakestill fokus"
@@ -1817,7 +1817,7 @@
                     },
                     "show_more_info": "Vis meir informasjon",
                     "starting": {
-                        "description": "Home Assistant held på å starte. Ver vennleg og vent."
+                        "description": "Third Eye held på å starte. Ver vennleg og vent."
                     }
                 },
                 "changed_toast": {
@@ -1886,7 +1886,7 @@
                             "description": "Horisontalstablekortet let deg stable kort saman horisontalt, slik at dei alltid står ved sidan av kvarandre i same rom som ei kolonne."
                         },
                         "iframe": {
-                            "description": "Websidekortet let deg vise favorittwebsida di rett inn i Home Assistant",
+                            "description": "Websidekortet let deg vise favorittwebsida di rett inn i Third Eye",
                             "name": "iFrame"
                         },
                         "light": {
@@ -1959,7 +1959,7 @@
                     "migrate": {
                         "header": "Konfigurasjonen er ikkje kompatibel",
                         "migrate": "Overfør konfigurasjon",
-                        "para_migrate": "Home assistant kan legge til ID-ar til alle korta og sidene dine automatisk for deg ved å trykke \"Overfør konfigurasjon\"-knappen.",
+                        "para_migrate": "Third Eye kan legge til ID-ar til alle korta og sidene dine automatisk for deg ved å trykke \"Overfør konfigurasjon\"-knappen.",
                         "para_no_id": "Dette elementet har ikkje ein ID. Ver vennleg og legg til ein ID til dette elementet i \"ui-lovelace.yaml\"-fila di."
                     },
                     "raw_editor": {
@@ -1973,7 +1973,7 @@
                     "save_config": {
                         "empty_config": "Start med eit tomt dashboard",
                         "header": "Ta kontroll over Lovelace-brukargrensesnittet",
-                        "para": "Som standard kjem Home Assistant til å vedlikehalde brukargrensesnittet, og oppdatere det når nye oppføringar eller Lovelace-komponentar vert tilgjengelege. Dersom du tek kontroll, vil vi ikkje lenger kunne lage dette til automatisk for deg.",
+                        "para": "Som standard kjem Third Eye til å vedlikehalde brukargrensesnittet, og oppdatere det når nye oppføringar eller Lovelace-komponentar vert tilgjengelege. Dersom du tek kontroll, vil vi ikkje lenger kunne lage dette til automatisk for deg.",
                         "para_sure": "Er du sikker på at du vil ta kontroll over brukergrensesnittet ditt?",
                         "save": "Ta kontroll"
                     },
@@ -2002,7 +2002,7 @@
                     "entity_non_numeric": "Oppføringa er ikkje numerisk: {entity}",
                     "entity_not_found": "Oppføringa er utilgjengeleg: {entity}",
                     "entity_unavailable": "{entity} er utilgjengeleg for augeblinken",
-                    "starting": "Home Assistant held på å starte. Det kan hende at alt ikkje er tilgjengeleg endå."
+                    "starting": "Third Eye held på å starte. Det kan hende at alt ikkje er tilgjengeleg endå."
                 }
             },
             "mailbox": {
@@ -2015,16 +2015,16 @@
                 "edit_zones": "Rediger soner"
             },
             "my": {
-                "component_not_loaded": "Denne viderekoplinga er ikkje støtta av Home Assistant-førekomsten. Du treng {integration}-integrasjonen å bruke denne viderekoplinga.",
+                "component_not_loaded": "Denne viderekoplinga er ikkje støtta av Third Eye-førekomsten. Du treng {integration}-integrasjonen å bruke denne viderekoplinga.",
                 "documentation": "dokumentasjon",
                 "error": "Det hende ein ukjent feil ",
                 "faq_link": "Mine Home Assitant-FAQ",
-                "no_supervisor": "Denne viderekoplinga er ikkje støtta av Home Assistant-installasjonen. Det trengs anten installasjonsmetoden Home Assistant eller Home Assistant Supervised. For meir informasjon, sjå {docs_link} .",
-                "not_supported": "Denne viderekoplinga er ikkje støtta av Home Assistant-førekomsten. Sjå {link} for dei støtta vidarekoplingane og ved kva versjon dei vart introdusert."
+                "no_supervisor": "Denne viderekoplinga er ikkje støtta av Third Eye-installasjonen. Det trengs anten installasjonsmetoden Third Eye eller Third Eye Supervised. For meir informasjon, sjå {docs_link} .",
+                "not_supported": "Denne viderekoplinga er ikkje støtta av Third Eye-førekomsten. Sjå {link} for dei støtta vidarekoplingane og ved kva versjon dei vart introdusert."
             },
             "page-authorize": {
                 "abort_intro": "Innlogging avbrote",
-                "authorizing_client": "Du held på å gi {clientId} tilgang til Home Assistant-instansen din.",
+                "authorizing_client": "Du held på å gi {clientId} tilgang til Third Eye-instansen din.",
                 "form": {
                     "error": "Feil: {error}",
                     "next": "Neste",
@@ -2122,8 +2122,8 @@
                 "cards": {
                     "demo": {
                         "demo_by": "av {name}",
-                        "introduction": "Velkommen heim! Du har no nådd Home Assistant-demoen, der vi viser fram nokre av dei beste brukargrensesnitta laga av samfunnet våra.",
-                        "learn_more": "Lær meir om Home Assistant",
+                        "introduction": "Velkommen heim! Du har no nådd Third Eye-demoen, der vi viser fram nokre av dei beste brukargrensesnitta laga av samfunnet våra.",
+                        "learn_more": "Lær meir om Third Eye",
                         "next_demo": "Neste demo"
                     }
                 },
@@ -2165,14 +2165,14 @@
                 "core-config": {
                     "button_detect": "Oppdag",
                     "finish": "Neste",
-                    "intro": "Hei {name}! Velkomen til Home Assistant. Kva for namn ønsker du å gi heimen din?",
+                    "intro": "Hei {name}! Velkomen til Third Eye. Kva for namn ønsker du å gi heimen din?",
                     "intro_location": "Vi vil gjerne vite kvar du bur. Denne informasjonen kjem til å hjelpe deg å vise fram informasjon og sette opp solbaserte automasjonar. Dataa vert aldri delt utanom nettverket ditt.",
                     "intro_location_detect": "Vi kan hjelpe deg med å fylle ut denne informasjonen ved å sende ein eingangsførespurnad til ei ekstern teneste.",
                     "location_name_default": "Heim"
                 },
                 "integration": {
                     "finish": "Fullfør",
-                    "intro": "Einingar og tenester er representerte i Home Assistant som integrasjonar. Du kan sette dei opp no, eller gjer det seinare i konfigurasjonsmenyen.",
+                    "intro": "Einingar og tenester er representerte i Third Eye som integrasjonar. Du kan sette dei opp no, eller gjer det seinare i konfigurasjonsmenyen.",
                     "more_integrations": "Meir"
                 },
                 "intro": "Er du klar til å vekke heimen din til liv, vinne tilbake privatlivet ditt og vli med i eit verdsomspennande samfunn av tinkerers?",
@@ -2235,7 +2235,7 @@
                     "create": "Lag token",
                     "create_failed": "Klarte ikkje å lage tilgangstoken.",
                     "delete_failed": "Klarte ikkje å slette tilgangstoken",
-                    "description": "Lag ein langtidslevande tilgangstoken som tillet skripta dine å samhandle med Home Assistant-instansen. Kvar token vil vere gyldig i 10 år etter oppretting. Dei fylgande langtidslevande tokenane er for tida aktive.",
+                    "description": "Lag ein langtidslevande tilgangstoken som tillet skripta dine å samhandle med Third Eye-instansen. Kvar token vil vere gyldig i 10 år etter oppretting. Dei fylgande langtidslevande tokenane er for tida aktive.",
                     "empty_state": "Du har ikkje langtidslevande tilgangstoken endå.",
                     "header": "Langtidslevande tilgangstokenar",
                     "learn_auth_requests": "Lær korleis du lagar ein autentisert førespurnad.",

@@ -1,5 +1,5 @@
 #!/bin/sh
-# Helper to start Home Assistant Core inside the devcontainer
+# Helper to start Third Eye Core inside the devcontainer
 
 # Stop on errors
 set -e

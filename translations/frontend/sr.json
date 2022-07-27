@@ -221,7 +221,7 @@
                         "title": "Energija"
                     },
                     "people": {
-                        "description": "Upravljanje osobama i zonama koje Home Assistant prati",
+                        "description": "Upravljanje osobama i zonama koje Third Eye prati",
                         "title": "Ljudi i zone"
                     },
                     "settings": {
@@ -479,7 +479,7 @@
                         }
                     },
                     "iframe": {
-                        "error_secure_context": "Nije moguće učitati iframe koji pokazuju na Veb lokacije koristeći {target_protocol} ako je Home Assistant serviran preko {context_protocol}."
+                        "error_secure_context": "Nije moguće učitati iframe koji pokazuju na Veb lokacije koristeći {target_protocol} ako je Third Eye serviran preko {context_protocol}."
                     },
                     "map": {
                         "reset_focus": "Uspostavi početne vrednosti fokusa"

@@ -44,5 +44,5 @@ src/cast/dev_const.ts
 # asdf
 .tool-versions
 
-# Home Assistant config
+# Third Eye config
 /config

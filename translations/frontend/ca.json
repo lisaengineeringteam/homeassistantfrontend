@@ -146,11 +146,11 @@
                         "title": "AppArmor"
                     },
                     "auth_api": {
-                        "description": "Un complement pot autenticar usuaris amb Home Assistant, cosa que permet que els usuaris puguin iniciar sessió a aplicacions que s'estan executant dins de complements mitjançant el seu nom d'usuari/contrasenya de Home Assistant. Aquesta insígnia indica si l'autor del complement ha demanat aquesta funcionalitat.",
-                        "title": "Autenticació de Home Assistant"
+                        "description": "Un complement pot autenticar usuaris amb Third Eye, cosa que permet que els usuaris puguin iniciar sessió a aplicacions que s'estan executant dins de complements mitjançant el seu nom d'usuari/contrasenya de Third Eye. Aquesta insígnia indica si l'autor del complement ha demanat aquesta funcionalitat.",
+                        "title": "Autenticació de Third Eye"
                     },
                     "docker_api": {
-                        "description": "Aquest complement, per petició del seu autor, demana accés a la instància de Docker del teu sistema. Aquest mode porporciona un control complet de tot el teu sistema Home Assistant al complement. Això genera possibles riscos de seguretat i podria fer malbé el sistema si no s'utilitza adequadament. Per aquesta raó, aquesta funció afecta negativament al nivell de seguretat del complement. \n\nAquest nivell d'accés no s'atorga automàticament i cal que el confirms. Per fer-ho, has de desactivar manualment el mode de protecció del complement. Desactiva el mode de protecció només si coneixes i confies en l'origen del complement.",
+                        "description": "Aquest complement, per petició del seu autor, demana accés a la instància de Docker del teu sistema. Aquest mode porporciona un control complet de tot el teu sistema Third Eye al complement. Això genera possibles riscos de seguretat i podria fer malbé el sistema si no s'utilitza adequadament. Per aquesta raó, aquesta funció afecta negativament al nivell de seguretat del complement. \n\nAquest nivell d'accés no s'atorga automàticament i cal que el confirms. Per fer-ho, has de desactivar manualment el mode de protecció del complement. Desactiva el mode de protecció només si coneixes i confies en l'origen del complement.",
                         "title": "Accés complet a Docker"
                     },
                     "full_access": {
@@ -158,23 +158,23 @@
                         "title": "Accés complet al maquinari"
                     },
                     "hassio_api": {
-                        "description": "Aquest complement té accés a l'API del Supervisor per petició del seu autor. Per defecte, el complement pot accedir a informació de la versió del teu sistema. Si demana a l'API accés de gestió o d'administrador, obtindrà accés per controlar diferents parts de Home Assistant. Aquest permís s'indica amb aquesta insígnia i afecta negativament al nivell de seguretat del complement.",
+                        "description": "Aquest complement té accés a l'API del Supervisor per petició del seu autor. Per defecte, el complement pot accedir a informació de la versió del teu sistema. Si demana a l'API accés de gestió o d'administrador, obtindrà accés per controlar diferents parts de Third Eye. Aquest permís s'indica amb aquesta insígnia i afecta negativament al nivell de seguretat del complement.",
                         "title": "Accés a l'API del Supervisor"
                     },
                     "homeassistant_api": {
-                        "description": "Aquest complement té permís per accedir a la teva instància de Home Assistant directament mitjançant l'API de Home Assistant. Aquest mode també gestiona l'autenticació del complement, cosa que li permet interactuar amb Home Assistant sense necessitat de tokens d'autenticació addicionals.",
-                        "title": "Accés a l'API de Home Assistant"
+                        "description": "Aquest complement té permís per accedir a la teva instància de Third Eye directament mitjançant l'API de Third Eye. Aquest mode també gestiona l'autenticació del complement, cosa que li permet interactuar amb Third Eye sense necessitat de tokens d'autenticació addicionals.",
+                        "title": "Accés a l'API de Third Eye"
                     },
                     "host_network": {
                         "description": "Els complements normalment s'executen dins la seva pròpia capa de xarxa aïllada, cosa que els impedeix accedir a la xarxa del sistema operatiu amfitrió. En alguns casos, aquest aïllament pot limitar la prestació dels serveis del complement. Per tant, l'aïllament pot ser eliminat per l'autor del complement; en aquest cas, el complement té un accés complet a les capacitats de xarxa del dispositiu amfitrió. Això li porporciona més capacitats però en redueix la seguretat, per tant, el nivell de seguretat del complement es reduirà quan aquesta opció s'utilitzi.",
                         "title": "Xarxa amfitrió"
                     },
                     "host_pid": {
-                        "description": "Habitualment, els processos que executen els complements estan aïllats dels altres processos del sistema. L'autor del complement ha demanat tenir accés i poder crear processos del sistema amfitrió. Aquest mode dóna accés i control total de tot el teu sistema Home Assistant al complement. Això genera possibles riscos de seguretat i podria fer malbé el sistema si no s'utilitza adequadament. Per aquesta raó, aquesta funció afecta negativament al nivell de seguretat del complement. \n\nAquest nivell d'accés no s'atorga automàticament i cal que el confirms. Per fer-ho, has de desactivar manualment el mode de protecció del complement. Desactiva el mode de protecció només si coneixes i confies en l'origen del complement.",
+                        "description": "Habitualment, els processos que executen els complements estan aïllats dels altres processos del sistema. L'autor del complement ha demanat tenir accés i poder crear processos del sistema amfitrió. Aquest mode dóna accés i control total de tot el teu sistema Third Eye al complement. Això genera possibles riscos de seguretat i podria fer malbé el sistema si no s'utilitza adequadament. Per aquesta raó, aquesta funció afecta negativament al nivell de seguretat del complement. \n\nAquest nivell d'accés no s'atorga automàticament i cal que el confirms. Per fer-ho, has de desactivar manualment el mode de protecció del complement. Desactiva el mode de protecció només si coneixes i confies en l'origen del complement.",
                         "title": "Espai de noms de processos de l'amfitrió"
                     },
                     "ingress": {
-                        "description": "Aquest complement utilitza Ingress per poder incrustar la seva interfície de manera segura a Home Assistant.",
+                        "description": "Aquest complement utilitza Ingress per poder incrustar la seva interfície de manera segura a Third Eye.",
                         "title": "Ingress"
                     },
                     "label": {
@@ -192,7 +192,7 @@
                         "stage": "fase"
                     },
                     "rating": {
-                        "description": "Home Assistant proporciona un nivell de seguretat a cadascun dels complements que n'indica els riscos que comporta el seu ús. Com més accés tingui el complement al teu sistema, menor serà la puntuació, ja que els possibles riscos de seguretat augmenten. \n\nEl nivell es troba en una escala de l'1 al 6. On l'1 és la puntuació més baixa (menys segur i risc més alt) i la puntuació 6 és la puntuació més alta (més segur i risc més baix).",
+                        "description": "Third Eye proporciona un nivell de seguretat a cadascun dels complements que n'indica els riscos que comporta el seu ús. Com més accés tingui el complement al teu sistema, menor serà la puntuació, ja que els possibles riscos de seguretat augmenten. \n\nEl nivell es troba en una escala de l'1 al 6. On l'1 és la puntuació més baixa (menys segur i risc més alt) i la puntuació 6 és la puntuació més alta (més segur i risc més baix).",
                         "title": "Nivell de seguretat del complement"
                     },
                     "role": {
@@ -217,7 +217,7 @@
                 "install": "instal·la",
                 "new_update_available": "{name} {version} està disponible",
                 "not_available_arch": "Aquest complement no és compatible amb el processador del dispositiu o amb el sistema operatiu que està instal·lat al dispositiu.",
-                "not_available_version": "Estàs utilitzant Home Assistant {core_version_installed}, per actualitzar el complement a aquesta versió, necessites com mínim la versió {core_version_needed} de Home Assistant",
+                "not_available_version": "Estàs utilitzant Third Eye {core_version_installed}, per actualitzar el complement a aquesta versió, necessites com mínim la versió {core_version_needed} de Third Eye",
                 "open_web_ui": "Obre la IU web",
                 "option": {
                     "auto_update": {
@@ -359,7 +359,7 @@
         "dialog": {
             "datadisk_move": {
                 "cancel": "Cancel·la",
-                "description": "Actualment utilitzes ''{current_path}'' com a datadisk. Si el desplaçes, el dispositiu es reiniciarà i el procés tardarà uns {time} minutes. No es podrà accedir a Home Assistant durant aquest període. No desconnectis res mentre duri el procés!",
+                "description": "Actualment utilitzes ''{current_path}'' com a datadisk. Si el desplaçes, el dispositiu es reiniciarà i el procés tardarà uns {time} minutes. No es podrà accedir a Third Eye durant aquest període. No desconnectis res mentre duri el procés!",
                 "loading_devices": "Carregant dispositius",
                 "move": "Mou",
                 "moving": "Desplaçant datadisk",
@@ -429,8 +429,8 @@
             "error_addon_not_found": "No s'ha trobat el complement",
             "error_addon_not_installed": "El complement sol·licitat no està instal·lat. Instal·la'l primer",
             "error_addon_not_started": "El complement sol·licitat no s'està executant. Inicia'l primer",
-            "faq_link": "Preguntes freqüents de My Home Assistant",
-            "not_supported": "La instància de Home Assistant no admet aquesta redirecció. Consulta {link} per veure les redireccions compatibles i en quina versió es van introduir."
+            "faq_link": "Preguntes freqüents de My Third Eye",
+            "not_supported": "La instància de Third Eye no admet aquesta redirecció. Consulta {link} per veure les redireccions compatibles i en quina versió es van introduir."
         },
         "panel": {
             "addons": "Complements",
@@ -491,16 +491,16 @@
                 "failed_to_set_option": "No s'ha pogut configurar l'opció del Supervisor",
                 "failed_to_update": "No s'ha pogut actualitzar el Supervisor",
                 "join_beta_action": "Uneix-te al canal beta",
-                "join_beta_description": "Obtén actualitzacions beta de Home Assistant (RCs), del Supervisor i de l'amfitrió",
+                "join_beta_description": "Obtén actualitzacions beta de Third Eye (RCs), del Supervisor i de l'amfitrió",
                 "leave_beta_action": "Deixa el canal beta",
-                "leave_beta_description": "Obtén actualitzacions estables de Home Assistant, del Supervisor i de l'amfitrió",
+                "leave_beta_description": "Obtén actualitzacions estables de Third Eye, del Supervisor i de l'amfitrió",
                 "ram_usage": "Ús de RAM del Supervisor",
                 "reload_supervisor": "Torna a carregar el Supervisor",
                 "search": "Cerca",
                 "share_diagnostics": "Comparteix diagnòstics",
                 "share_diagnostics_description": "Comparteix informes d'errors i informació de diagnòstic.",
-                "share_diagonstics_description": "Vols compartir automàticament informes d'error i informació de diagnòstic quan el Supervisor trobi amb errors inesperats?{line_break} Això ens permetrà solucionar problemes, la informació només és accessible per a l'equip de Home Assistant Core i no es compartirà amb altres persones.{line_break} Les dades no inclouen informació privada/confidencial, ho pots desactivar en qualsevol moment a la configuració.",
-                "share_diagonstics_title": "Ajuda a millorar Home Assistant",
+                "share_diagonstics_description": "Vols compartir automàticament informes d'error i informació de diagnòstic quan el Supervisor trobi amb errors inesperats?{line_break} Això ens permetrà solucionar problemes, la informació només és accessible per a l'equip de Third Eye Core i no es compartirà amb altres persones.{line_break} Les dades no inclouen informació privada/confidencial, ho pots desactivar en qualsevol moment a la configuració.",
+                "share_diagonstics_title": "Ajuda a millorar Third Eye",
                 "unhealthy_description": "Si utilitzes una instal·lació que no és bona, es produiran problemes. A continuació es mostra una llista de problemes relacionats amb la instal·lació, fes clic als enllaços per obtenir informació sobre com resoldre'ls.",
                 "unhealthy_reason": {
                     "docker": "L'entorn Docker no està funcionant correctament",
@@ -1030,11 +1030,11 @@
         },
         "dialogs": {
             "config_entry_system_options": {
-                "enable_new_entities_description": "Si està activat, les noves entitats descobertes per {integration} s'afegiran automàticament a Home Assistant.",
+                "enable_new_entities_description": "Si està activat, les noves entitats descobertes per {integration} s'afegiran automàticament a Third Eye.",
                 "enable_new_entities_label": "Activa entitats afegides recentment.",
-                "enable_polling_description": "Si està activat, Home Assistant sondejarà automàticament {integration} per obtenir actualitzacions de les entitats.",
+                "enable_polling_description": "Si està activat, Third Eye sondejarà automàticament {integration} per obtenir actualitzacions de les entitats.",
                 "enable_polling_label": "Activa el sondeig per obtenir actualitzacions.",
-                "restart_home_assistant": "Has de reiniciar Home Assistant per aplicar els canvis.",
+                "restart_home_assistant": "Has de reiniciar Third Eye per aplicar els canvis.",
                 "title": "Opcions del sistema per a {integration}",
                 "update": "Actualitza"
             },
@@ -1069,10 +1069,10 @@
                     },
                     "device_disabled": "El dispositiu d'aquesta entitat està desactivat.",
                     "enabled_cause": "Desactivada per {cause}.",
-                    "enabled_delay_confirm": "Les entitats activades s'afegiran a Home Assistant d'aquí a {delay} segons",
-                    "enabled_description": "Les entitats desactivades no s'afegiran a Home Assistant.",
+                    "enabled_delay_confirm": "Les entitats activades s'afegiran a Third Eye d'aquí a {delay} segons",
+                    "enabled_description": "Les entitats desactivades no s'afegiran a Third Eye.",
                     "enabled_label": "Activació d'entitat",
-                    "enabled_restart_confirm": "Reinicia Home Assistant per acabar d'activar les entitats",
+                    "enabled_restart_confirm": "Reinicia Third Eye per acabar d'activar les entitats",
                     "entity_id": "ID de l'entitat",
                     "follow_device_area": "Segueix l'àrea del dispositiu",
                     "icon": "Icona",
@@ -1100,7 +1100,7 @@
                     "initial": "Valor inicial",
                     "maximum": "Valor màxim",
                     "minimum": "Valor mínim",
-                    "restore": "Restaura l'últim valor conegut quan Home Assistant s'iniciï.",
+                    "restore": "Restaura l'últim valor conegut quan Third Eye s'iniciï.",
                     "step": "Mida del pas"
                 },
                 "generic": {
@@ -1300,7 +1300,7 @@
                 "title": "Cerca ràpida"
             },
             "voice_command": {
-                "did_not_hear": "Home Assistant no ha sentit res",
+                "did_not_hear": "Third Eye no ha sentit res",
                 "error": "Vaja, s'ha produït un error",
                 "found": "He trobat el següent:",
                 "how_can_i_help": "Com puc ajudar-te?",
@@ -1403,8 +1403,8 @@
             "dismiss": "Omet",
             "integration_starting": "Iniciant {integration}, no estarà tot disponible fins que acabi.",
             "service_call_failed": "Ha fallat la crida al servei {service}.",
-            "started": "Home Assistant s'ha iniciat!",
-            "starting": "Home Assistant està iniciant-se, no estarà tot disponible fins que acabi",
+            "started": "Third Eye s'ha iniciat!",
+            "starting": "Third Eye està iniciant-se, no estarà tot disponible fins que acabi",
             "triggered": "{name} disparat/ada",
             "wrapping_up_startup": "Finalitzant l'arrencada, no estarà tot disponible fins que acabi."
         },
@@ -1445,7 +1445,7 @@
                         "create_area": "Crea àrea",
                         "header": "Àrees",
                         "integrations_page": "Pàgina d'integracions",
-                        "introduction": "Les àrees s'utilitzen per organitzar la situació dels dispositius. Aquesta informació serà utilitzada per Home Assistant per ajudar-te a organitzar millor la teva interfície, els permisos i les integracions amb d'altres sistemes.",
+                        "introduction": "Les àrees s'utilitzen per organitzar la situació dels dispositius. Aquesta informació serà utilitzada per Third Eye per ajudar-te a organitzar millor la teva interfície, els permisos i les integracions amb d'altres sistemes.",
                         "introduction2": "Per col·locar dispositius en una àrea, utilitza l'enllaç de sota per anar a la pàgina d'integracions i, a continuació, fes clic a una integració configurada per accedir a les targetes del dispositiu.",
                         "no_areas": "Sembla que encara no tens cap àrea configurada."
                     },
@@ -1476,7 +1476,7 @@
                             "delete_confirm": "Segur que vols eliminar-ho?",
                             "duplicate": "Duplica",
                             "header": "Accions",
-                            "introduction": "Les accions són allò que farà Home Assistant quan es dispari l'automatització.",
+                            "introduction": "Les accions són allò que farà Third Eye quan es dispari l'automatització.",
                             "learn_more": "Més informació sobre les accions",
                             "name": "Acció",
                             "type": {
@@ -1682,7 +1682,7 @@
                             "edit_id": "Edita l'ID de disparador",
                             "header": "Disparadors",
                             "id": "ID de disparador",
-                            "introduction": "Els disparadors són les regles que fan que s'executi una automatització. Pots definir més d'un disparador per a cada automatització. Una vegada salti un disparador, Home Assistant validarà les condicions (si n'hi ha) i finalment cridarà l'acció.",
+                            "introduction": "Els disparadors són les regles que fan que s'executi una automatització. Pots definir més d'un disparador per a cada automatització. Una vegada salti un disparador, Third Eye validarà les condicions (si n'hi ha) i finalment cridarà l'acció.",
                             "learn_more": "Més informació sobre els disparadors",
                             "name": "Disparador",
                             "type": {
@@ -1714,7 +1714,7 @@
                                 },
                                 "homeassistant": {
                                     "event": "Esdeveniment:",
-                                    "label": "Home Assistant",
+                                    "label": "Third Eye",
                                     "shutdown": "Aturada",
                                     "start": "Inici"
                                 },
@@ -1793,7 +1793,7 @@
                         "headers": {
                             "name": "Nom"
                         },
-                        "introduction": "L'editor d'automatitzacions et permet crear i editar automatitzacions. Vés a l'enllaç de sota per veure'n les instruccions i assegurar-te que has configurat Home Assistant correctament.",
+                        "introduction": "L'editor d'automatitzacions et permet crear i editar automatitzacions. Vés a l'enllaç de sota per veure'n les instruccions i assegurar-te que has configurat Third Eye correctament.",
                         "learn_more": "Més informació sobre les automatitzacions",
                         "no_automations": "No s'ha pogut trobar cap automatització",
                         "only_editable": "Només es poden editar les automatitzacions definides al fitxer automations.yaml.",
@@ -1812,7 +1812,7 @@
                             "error_unsupported": "No hem pogut crear una automatització per a això (encara?).",
                             "for_example": "Per exemple:",
                             "header": "Creació d'una nova automatització",
-                            "introduction": "Escriu a continuació el que hauria de fer l'automatització i intentarem convertir-ho en una automatització de Home Assistant.",
+                            "introduction": "Escriu a continuació el que hauria de fer l'automatització i intentarem convertir-ho en una automatització de Third Eye.",
                             "language_note": "Nota: ara per are només s'admet en anglès"
                         }
                     },
@@ -1874,10 +1874,10 @@
                             "config_documentation": "Documentació de configuració",
                             "disable": "desactiva",
                             "enable": "activa",
-                            "enable_ha_skill": "Activa l'auxiliar de Home Assistant per Alexa",
+                            "enable_ha_skill": "Activa l'auxiliar de Third Eye per Alexa",
                             "enable_state_reporting": "Activa els informes d'estat",
-                            "info": "Amb la integració d'Alexa per Home Assistant Cloud podràs controlar tots els dispositius de Home Assistant a través dels dispositius compatibles amb Alexa.",
-                            "info_state_reporting": "Si actives els informes d'estat, Home Assistant enviarà a Amazon tots els canvis d'estat de les entitats exposades. Això et permetrà veure els últims estats a l'aplicació Alexa i utilitzar-los per crear rutines.",
+                            "info": "Amb la integració d'Alexa per Third Eye Cloud podràs controlar tots els dispositius de Third Eye a través dels dispositius compatibles amb Alexa.",
+                            "info_state_reporting": "Si actives els informes d'estat, Third Eye enviarà a Amazon tots els canvis d'estat de les entitats exposades. Això et permetrà veure els últims estats a l'aplicació Alexa i utilitzar-los per crear rutines.",
                             "manage_entities": "Gestió d'entitats",
                             "state_reporting_error": "No s'ha pogut {enable_disable} l'informe d'estat.",
                             "sync_entities": "Sincronitza entitats amb Amazon",
@@ -1891,15 +1891,15 @@
                         "google": {
                             "config_documentation": "Documentació de configuració",
                             "devices_pin": "PIN dels dispositius de seguretat",
-                            "enable_ha_skill": "Activa Home Assistant Cloud per Google Assistant",
+                            "enable_ha_skill": "Activa Third Eye Cloud per Google Assistant",
                             "enable_state_reporting": "Activa els informes d'estat",
                             "enter_pin_error": "No s'ha pogut desar el PIN:",
                             "enter_pin_hint": "Introdueix un PIN per utilitzar dispositius de seguretat",
                             "enter_pin_info": "Introdueix un PIN per interactuar amb dispositius de seguretat. Aquests dispositius són, per exemple, portes, garatges o panys. Se't demanarà que introdueixis o diguis aquest PIN quan interactuïs amb aquests dispositius mitjançant Google Assistant.",
-                            "info": "Amb la integració de Google Assistant per Home Assistant Cloud podràs controlar tots els dispositius de Home Assistant a través dels dispositius compatibles amb Google Assistant.",
-                            "info_state_reporting": "Si actives els informes d'estat, Home Assistant enviarà a Google tots els canvis d'estat de les entitats exposades. Això et permetrà veure els últims estats a l'aplicació de Google.",
+                            "info": "Amb la integració de Google Assistant per Third Eye Cloud podràs controlar tots els dispositius de Third Eye a través dels dispositius compatibles amb Google Assistant.",
+                            "info_state_reporting": "Si actives els informes d'estat, Third Eye enviarà a Google tots els canvis d'estat de les entitats exposades. Això et permetrà veure els últims estats a l'aplicació de Google.",
                             "manage_entities": "Gestió d'entitats",
-                            "not_configured_text": "Abans de poder fer servir Google Assistant, has d'activar Home Assistant Cloud per a Google Assistant a l'aplicació de Google Home.",
+                            "not_configured_text": "Abans de poder fer servir Google Assistant, has d'activar Third Eye Cloud per a Google Assistant a l'aplicació de Google Home.",
                             "not_configured_title": "Google Assistant no està activat",
                             "security_devices": "Dispositius de seguretat",
                             "sync_entities": "Sincronitza les entitats amb Google",
@@ -1907,7 +1907,7 @@
                             "title": "Google Assistant"
                         },
                         "integrations": "Integracions",
-                        "integrations_introduction": "Les integracions per Home Assistant Cloud et permeten connectar-vos a d'altres serveis al núvol sense haver d'exposar la teva instància de Home Assistant públicament a Internet.",
+                        "integrations_introduction": "Les integracions per Third Eye Cloud et permeten connectar-vos a d'altres serveis al núvol sense haver d'exposar la teva instància de Third Eye públicament a Internet.",
                         "integrations_introduction2": "Consulta el lloc web per ",
                         "integrations_link_all_features": "totes les funcions disponibles",
                         "manage_account": "Gestió del compte",
@@ -1917,7 +1917,7 @@
                             "access_is_being_prepared": "S'està preparant el control remot. T'avisarem quan estigui a punt.",
                             "certificate_info": "Informació del certificat",
                             "connected": "Connectat",
-                            "info": "Home Assistant Cloud t'ofereix una connexió remota i segura amb la teva instància mentre siguis fora de casa",
+                            "info": "Third Eye Cloud t'ofereix una connexió remota i segura amb la teva instància mentre siguis fora de casa",
                             "instance_is_available": "La teva instància està disponible a",
                             "instance_will_be_available": "La teva instància estarà disponible a",
                             "link_learn_how_it_works": "Informació sobre com funciona",
@@ -1925,12 +1925,12 @@
                             "reconnecting": "No connectat. Tornant-ho a intentar.",
                             "remote_enabled": {
                                 "caption": "Connexió automàtica",
-                                "description": "Activa aquesta opció per assegurar-te que la teva instància de Home Assistant sempre sigui accessible de forma remota."
+                                "description": "Activa aquesta opció per assegurar-te que la teva instància de Third Eye sempre sigui accessible de forma remota."
                             },
                             "title": "Control remot"
                         },
                         "sign_out": "Tanca sessió",
-                        "thank_you_note": "Gràcies per formar part de Home Assistant Cloud. És gràcies a persones com tu que podem oferir una experiència domòtica excel·lent per a tothom.",
+                        "thank_you_note": "Gràcies per formar part de Third Eye Cloud. És gràcies a persones com tu que podem oferir una experiència domòtica excel·lent per a tothom.",
                         "tts": {
                             "default_language": "Idioma predeterminat a utilitzar",
                             "dialog": {
@@ -1949,7 +1949,7 @@
                         },
                         "webhooks": {
                             "disable_hook_error_msg": "No s'ha pogut desactivar el webhook:",
-                            "info": "Qualsevol cosa que estigui configurada per disparar-se a través d'un webhook pot disposar d'un URL accessible públicament que permet retornar-li dades a Home Assistant des de qualsevol lloc i sense exposar la teva instància a Internet.",
+                            "info": "Qualsevol cosa que estigui configurada per disparar-se a través d'un webhook pot disposar d'un URL accessible públicament que permet retornar-li dades a Third Eye des de qualsevol lloc i sense exposar la teva instància a Internet.",
                             "link_learn_more": "Més informació sobre la creació d'automatizacions basats en webhook.",
                             "loading": "Carregant…",
                             "manage": "Gestiona",
@@ -2025,11 +2025,11 @@
                         "email": "Correu electrònic",
                         "email_error_msg": "Correu electrònic invàlid",
                         "forgot_password": "Has oblidat la contrasenya?",
-                        "introduction": "Home Assistant Cloud t'ofereix una connexió remota i segura amb la teva instància mentre siguis fora de casa. També et permet connectar-te amb els serveis disponibles al núvol: Amazon Alexa i Google Assistant.",
+                        "introduction": "Third Eye Cloud t'ofereix una connexió remota i segura amb la teva instància mentre siguis fora de casa. També et permet connectar-te amb els serveis disponibles al núvol: Amazon Alexa i Google Assistant.",
                         "introduction2": "Aquest servei està gestionat pel nostre soci ",
-                        "introduction2a": ", una empresa fundada pels creadors de Home Assistant.",
-                        "introduction3": "Home Assistant Cloud és un servei de subscripció amb una prova gratuïta d'un mes. No és necessària la informació de pagament.",
-                        "learn_more_link": "Més informació sobre Home Assistant Cloud",
+                        "introduction2a": ", una empresa fundada pels creadors de Third Eye.",
+                        "introduction3": "Third Eye Cloud és un servei de subscripció amb una prova gratuïta d'un mes. No és necessària la informació de pagament.",
+                        "learn_more_link": "Més informació sobre Third Eye Cloud",
                         "password": "Contrasenya",
                         "password_error_msg": "La contrasenya han de tenir un mínim de 8 caràcters",
                         "sign_in": "Inicia sessió",
@@ -2044,13 +2044,13 @@
                         "email_error_msg": "Correu electrònic invàlid",
                         "feature_amazon_alexa": "Integració amb Amazon Alexa",
                         "feature_google_home": "Integració amb Google Assistant",
-                        "feature_remote_control": "Control de Home Assistant fora de casa",
+                        "feature_remote_control": "Control de Third Eye fora de casa",
                         "feature_webhook_apps": "Fàcil integració amb aplicacions basades en webhook com OwnTracks",
                         "headline": "Inicia la prova gratuïta",
-                        "information": "Crea un compte per iniciar la prova gratuïta d'un mes amb Home Assistant Cloud. No és necessària la informació de pagament.",
-                        "information2": "La prova et donarà accés a tots els avantatges de Home Assistant Cloud, inclosos:",
+                        "information": "Crea un compte per iniciar la prova gratuïta d'un mes amb Third Eye Cloud. No és necessària la informació de pagament.",
+                        "information2": "La prova et donarà accés a tots els avantatges de Third Eye Cloud, inclosos:",
                         "information3": "Aquest servei està gestionat pel nostre soci ",
-                        "information3a": ", una empresa fundada pels creadors de Home Assistant.",
+                        "information3a": ", una empresa fundada pels creadors de Third Eye.",
                         "information4": "En registrar un compte, acceptes els termes i condicions següents.",
                         "link_privacy_policy": "Política de privacitat",
                         "link_terms_conditions": "Termes i condicions",
@@ -2082,7 +2082,7 @@
                                 "imperial_example": "Fahrenheit, lliures",
                                 "internal_url": "URL intern",
                                 "latitude": "Latitud",
-                                "location_name": "Nom de la instal·lació de Home Assistant",
+                                "location_name": "Nom de la instal·lació de Third Eye",
                                 "longitude": "Longitud",
                                 "metric_example": "Celsius, quilograms",
                                 "save_button": "Desa",
@@ -2143,7 +2143,7 @@
                         "title": "Energia"
                     },
                     "people": {
-                        "description": "Gestiona les persones i zones a les que Home Assistant fa seguiment",
+                        "description": "Gestiona les persones i zones a les que Third Eye fa seguiment",
                         "title": "Persones i zones"
                     },
                     "settings": {
@@ -2213,7 +2213,7 @@
                     "download_diagnostics": "Baixa diagnòstics",
                     "edit_settings": "Edita la configuració",
                     "enabled_cause": "El dispositiu està desactivat per {cause}.",
-                    "enabled_description": "Els dispositius desactivats no es mostraran i les entitats que hi pertanyin es desactivaran i no s'afegiran a Home Assistant.",
+                    "enabled_description": "Els dispositius desactivats no es mostraran i les entitats que hi pertanyin es desactivaran i no s'afegiran a Third Eye.",
                     "enabled_label": "Activa dispositiu",
                     "entities": {
                         "add_entities_lovelace": "Afegeix a Lovelace",
@@ -2287,7 +2287,7 @@
                         },
                         "learn_more": "Més informació sobre com començar.",
                         "selected_stat": "Seguint energia de",
-                        "sub": "El seguiment de consum d'energia de dispositius individuals permet a Home Assistant desglossar l'ús d'energia per dispositius.",
+                        "sub": "El seguiment de consum d'energia de dispositius individuals permet a Third Eye desglossar l'ús d'energia per dispositius.",
                         "title": "Dispositius individuals"
                     },
                     "gas": {
@@ -2298,7 +2298,7 @@
                             "cost_number": "Utilitza un preu fix",
                             "cost_number_input": "Preu per {unit}",
                             "cost_number_suffix": "{currency}/m³",
-                            "cost_para": "Tria com vols que Home Assistant faci el seguiment dels costos de l'energia consumida.",
+                            "cost_para": "Tria com vols que Third Eye faci el seguiment dels costos de l'energia consumida.",
                             "cost_stat": "Utilitza una entitat que segueix els costos totals",
                             "cost_stat_input": "Entitat de costos totals",
                             "energy_stat": "Energia consumida (m³)",
@@ -2310,7 +2310,7 @@
                         },
                         "gas_consumption": "Consum de gas",
                         "learn_more": "Més informació sobre com començar.",
-                        "sub": "Fes que Home Assistant analitzi el teu consum de gas.",
+                        "sub": "Fes que Third Eye analitzi el teu consum de gas.",
                         "title": "Consum de gas"
                     },
                     "grid": {
@@ -2324,7 +2324,7 @@
                                 "cost_number": "Utilitza un preu fix",
                                 "cost_number_input": "Preu per kWh",
                                 "cost_number_suffix": "{currency}/kWh",
-                                "cost_para": "Tria com vols que Home Assistant faci el seguiment dels costos de l'energia consumida.",
+                                "cost_para": "Tria com vols que Third Eye faci el seguiment dels costos de l'energia consumida.",
                                 "cost_stat": "Utilitza una entitat que segueix els costos totals",
                                 "cost_stat_input": "Entitat de costos totals",
                                 "energy_stat": "Energia consumida (kWh)",
@@ -2351,7 +2351,7 @@
                         "grid_consumption": "Consum de xarxa",
                         "learn_more": "Més informació sobre com començar.",
                         "return_to_grid": "Retorn a la xarxa",
-                        "sub": "Configura la quantitat d'energia que consumeixes i retornes a la xarxa (en cas que també en produeixis). Això fa que Home Assistant faci un seguiment complet de l'energia utilitzada a casa.",
+                        "sub": "Configura la quantitat d'energia que consumeixes i retornes a la xarxa (en cas que també en produeixis). Això fa que Third Eye faci un seguiment complet de l'energia utilitzada a casa.",
                         "title": "Xarxa elèctrica"
                     },
                     "new_device_info": "Després de configurar un dispositiu nou, les noves dades poden trigar fins a dues hores a aparèixer al panell d'energia.",
@@ -2371,7 +2371,7 @@
                         "stat_predicted_production": "Previsió de la teva producció d'energia solar",
                         "stat_production": "Producció d'energia solar",
                         "stat_return_to_grid": "Energia solar exportada a la xarxa",
-                        "sub": "Fes que Home Assistant analitzi els panells solars i et doni informació sobre el seu rendiment.",
+                        "sub": "Fes que Third Eye analitzi els panells solars i et doni informació sobre el seu rendiment.",
                         "title": "Panells fotovoltaics"
                     },
                     "validation": {
@@ -2437,12 +2437,12 @@
                     "picker": {
                         "disable_selected": {
                             "button": "Desactiva seleccionada/es",
-                            "confirm_text": "Les entitats desactivades no s'afegiran a Home Assistant.",
+                            "confirm_text": "Les entitats desactivades no s'afegiran a Third Eye.",
                             "confirm_title": "Vols desactivar {number} {number, plural,\n  one {entitat}\n  other {entitats}\n}?"
                         },
                         "enable_selected": {
                             "button": "Activa seleccionada/es",
-                            "confirm_text": "Això farà que tornin a estar disponibles a Home Assistant si estan desactivades.",
+                            "confirm_text": "Això farà que tornin a estar disponibles a Third Eye si estan desactivades.",
                             "confirm_title": "Vols activar {number} {number, plural,\n  one {entitat}\n  other {entitats}\n}?"
                         },
                         "filter": {
@@ -2462,11 +2462,11 @@
                             "name": "Nom",
                             "status": "Estat"
                         },
-                        "introduction": "Home Assistant manté un registre de totes les entitats que ha detectat alguna vegada les quals tenen una identificació única. Cadascuna d'aquestes entitats té un identificador, ID, assignat que està reservat només per a ella.",
-                        "introduction2": "Utilitza el registre d'entitats per canviar el nom, canviar l'ID o eliminar l'entrada de Home Assistant.",
+                        "introduction": "Third Eye manté un registre de totes les entitats que ha detectat alguna vegada les quals tenen una identificació única. Cadascuna d'aquestes entitats té un identificador, ID, assignat que està reservat només per a ella.",
+                        "introduction2": "Utilitza el registre d'entitats per canviar el nom, canviar l'ID o eliminar l'entrada de Third Eye.",
                         "remove_selected": {
                             "button": "Elimina seleccionada/es",
-                            "confirm_partly_text": "Només pots eliminar {removable} de les {selected} entitats seleccionades. Les entitats només es poden eliminar quan la integració ja no les està proporcionant.\nA vegades pot ser que hagis de reiniciar Home Assistant per poder eliminar les entitats d'una antiga integració eliminada. Segur que vols eliminar les entitats?",
+                            "confirm_partly_text": "Només pots eliminar {removable} de les {selected} entitats seleccionades. Les entitats només es poden eliminar quan la integració ja no les està proporcionant.\nA vegades pot ser que hagis de reiniciar Third Eye per poder eliminar les entitats d'una antiga integració eliminada. Segur que vols eliminar les entitats?",
                             "confirm_partly_title": "Només {number} {number, plural,\n  one {entitat seleccionada pot ser eliminada}\n  other {entitats seleccionades poden ser eliminades}\n}.",
                             "confirm_text": "Hauries d'eliminar aquestes entitats de les configuracions de Lovelace i de les automatitzacions que les continguin.",
                             "confirm_title": "Vols eliminar {number} {number, plural,\n  one {entitat}\n  other {entitats}\n}?"
@@ -2482,7 +2482,7 @@
                         }
                     }
                 },
-                "header": "Configuració de Home Assistant",
+                "header": "Configuració de Third Eye",
                 "helpers": {
                     "caption": "Ajudants",
                     "description": "Elements útils per a construir automatitzacions",
@@ -2524,7 +2524,7 @@
                     "documentation": "Documentació",
                     "frontend": "frontend-ui",
                     "frontend_version": "Versió de la interfície web d'usuari: {version} - {type}",
-                    "home_assistant_logo": "Logotip de Home Assistant",
+                    "home_assistant_logo": "Logotip de Third Eye",
                     "icons_by": "Icones de",
                     "integrations": "Integracions",
                     "issues": "Problemes",
@@ -2563,11 +2563,11 @@
                             "disabled_cause": "Desactivada per {cause}"
                         },
                         "disable_error": "S'ha produït un error en activar o desactivar la integració",
-                        "disable_restart_confirm": "Reinicia Home Assistant per acabar de desactivar aquesta integració",
+                        "disable_restart_confirm": "Reinicia Third Eye per acabar de desactivar aquesta integració",
                         "disabled_polling": "Sondeig automàtic per l'obtenció de dades actualitzades desactivat",
                         "documentation": "Documentació",
                         "download_diagnostics": "Baixa diagnòstics",
-                        "enable_restart_confirm": "Reinicia Home Assistant per acabar d'activar aquesta integració",
+                        "enable_restart_confirm": "Reinicia Third Eye per acabar d'activar aquesta integració",
                         "entities": "{count} {count, plural,\n  one {entitat}\n  other {entitats}\n}",
                         "entity_unavailable": "Entitat no disponible",
                         "firmware": "Firmware: {version}",
@@ -2581,9 +2581,9 @@
                         "provided_by_custom_integration": "Proporcionada per una integració personalitzada",
                         "reload": "Torna a carregar",
                         "reload_confirm": "La integració s'ha tornat a carregar",
-                        "reload_restart_confirm": "Reinicia Home Assistant per acabar de carregar aquesta integració",
+                        "reload_restart_confirm": "Reinicia Third Eye per acabar de carregar aquesta integració",
                         "rename": "Canvia el nom",
-                        "restart_confirm": "Reinicia Home Assistant per acabar d'eliminar aquesta integració",
+                        "restart_confirm": "Reinicia Third Eye per acabar d'eliminar aquesta integració",
                         "services": "{count} {count, plural,\n  one {servei}\n  other {serveis}\n}",
                         "state": {
                             "failed_unload": "No s'ha pogut desactivar",
@@ -2618,7 +2618,7 @@
                         },
                         "next": "Següent",
                         "not_all_required_fields": "No s'han omplert tots els camps obligatoris.",
-                        "not_loaded": "No s'ha pogut carregar la integració, prova de reiniciar Home Assistant.",
+                        "not_loaded": "No s'ha pogut carregar la integració, prova de reiniciar Third Eye.",
                         "pick_flow_step": {
                             "new_flow": "No, configura una altra instància de {integration}",
                             "title": "N'hem descobert aquests, vols configurar-los?"
@@ -2636,7 +2636,7 @@
                         "show_disabled": "Mostra integracions desactivades"
                     },
                     "discovered": "Descobertes",
-                    "home_assistant_website": "lloc web de Home Assistant",
+                    "home_assistant_website": "lloc web de Third Eye",
                     "ignore": {
                         "confirm_delete_ignore": "Això farà que quan la integració es descobreixi torni a aparèixer a les integracions descobertes. Pot ser que tardi una estona o es necessiti reiniciar.",
                         "confirm_delete_ignore_title": "Vols deixar d'ignorar {name}?",
@@ -2661,13 +2661,13 @@
                     "rename_input_label": "Nom de l'entrada",
                     "search": "Cerca integracions"
                 },
-                "introduction": "Aquí pots configurar Home Assistant i els teus components. Encara no és possible configurar-ho tot des de la interfície d'usuari, però hi estem treballant.",
+                "introduction": "Aquí pots configurar Third Eye i els teus components. Encara no és possible configurar-ho tot des de la interfície d'usuari, però hi estem treballant.",
                 "logs": {
                     "caption": "Registres",
                     "clear": "Esborra",
                     "copy": "Copia l'entrada de registre",
                     "custom_integration": "integració personalitzada",
-                    "description": "Consulta els registres de Home Assistant",
+                    "description": "Consulta els registres de Third Eye",
                     "details": "Detalls del registre ({level})",
                     "error_from_custom_integration": "Aquest error té origen en una integració personalitzada.",
                     "level": {
@@ -2677,7 +2677,7 @@
                         "info": "INFO",
                         "warning": "ALERTA"
                     },
-                    "load_full_log": "Carrega el registre complet de Home Assistant",
+                    "load_full_log": "Carrega el registre complet de Third Eye",
                     "loading_log": "Carregant registre d'errors…",
                     "multiple_messages": "missatge produit per primera vegada a les {time}, apareix {counter} vegades",
                     "no_errors": "No s'ha informat de cap error",
@@ -2882,7 +2882,7 @@
                     "select_instance": {
                         "header": "Selecciona una instància d'OpenZWave",
                         "introduction": "Tens més d'una instància d'OpenZWave en funcionament. Quina instància vols gestionar?",
-                        "none_found": "No s'ha pogut trobar cap instància d'OpenZWave. Si creus que això és incorrecte, comprova les configuracions d'OpenZWave i MQTT i assegurat que Home Assistant pugui comunicar-se amb el teu broker MQTT."
+                        "none_found": "No s'ha pogut trobar cap instància d'OpenZWave. Si creus que això és incorrecte, comprova les configuracions d'OpenZWave i MQTT i assegurat que Third Eye pugui comunicar-se amb el teu broker MQTT."
                     },
                     "services": {
                         "add_node": "Afegeix node",
@@ -2896,7 +2896,7 @@
                     "confirm_delete": "Estàs segur que vols eliminar aquesta persona?",
                     "confirm_delete2": "Tots els dispositius vinculats a aquesta persona quedaran sense assignar.",
                     "create_person": "Crea persona",
-                    "description": "Gestiona les persones a qui Home Assistant fa seguiment",
+                    "description": "Gestiona les persones a qui Third Eye fa seguiment",
                     "detail": {
                         "admin": "Administrador",
                         "allow_login": "Permet l'inici de sessió de la persona",
@@ -2916,7 +2916,7 @@
                         "no_device_tracker_available_intro": "Quan tinguis dispositius que indiquen presència de persones, podràs assignar-los a una persona. Pots afegir el primer dispositiu afegint una integració de detecció de presència des de la pàgina d'integracions.",
                         "update": "Actualitza"
                     },
-                    "introduction": "Aquí pots definir cada persona d'interès a Home Assistant.",
+                    "introduction": "Aquí pots definir cada persona d'interès a Third Eye.",
                     "learn_more": "Obté més informació sobre persones",
                     "no_persons_created_yet": "Sembla que encara no has creat cap persona.",
                     "note_about_persons_configured_in_yaml": "Nota: les persones configurades mitjançant configuration.yaml no es poden editar des de la IU.",
@@ -2963,7 +2963,7 @@
                         "headers": {
                             "name": "Nom"
                         },
-                        "introduction": "L'editor d'escenes et permet crear i editar escenes. Vés a l'enllaç de sota per veure'n les instruccions i assegurar-te que has configurat Home Assistant correctament.",
+                        "introduction": "L'editor d'escenes et permet crear i editar escenes. Vés a l'enllaç de sota per veure'n les instruccions i assegurar-te que has configurat Third Eye correctament.",
                         "learn_more": "Més informació sobre les escenes",
                         "no_scenes": "No s'ha pogut trobar cap escena",
                         "only_editable": "Només es poden editar les escenes definides al fitxer scenes.yaml.",
@@ -3015,7 +3015,7 @@
                         "headers": {
                             "name": "Nom"
                         },
-                        "introduction": "L'editor de scripts et permet crear i editar scripts. Vés a l'enllaç de sota per veure'n les instruccions i assegurar-te que has configurat Home Assistant correctament.",
+                        "introduction": "L'editor de scripts et permet crear i editar scripts. Vés a l'enllaç de sota per veure'n les instruccions i assegurar-te que has configurat Third Eye correctament.",
                         "learn_more": "Més informació sobre els scripts",
                         "no_scripts": "No s'ha pogut trobar cap script",
                         "run_script": "Executa l'script",
@@ -3024,7 +3024,7 @@
                 },
                 "server_control": {
                     "caption": "Controls del servidor",
-                    "description": "Valida i reinicia el servidor Home Assistant",
+                    "description": "Valida i reinicia el servidor Third Eye",
                     "section": {
                         "reloading": {
                             "automation": "Automatitzacions",
@@ -3044,7 +3044,7 @@
                             "input_number": "Entrades numèriques",
                             "input_select": "Entrades de selecció",
                             "input_text": "Entrades de text",
-                            "introduction": "Algunes parts de Home Assistant es poden actualitzar sense necessitar reiniciar-lo. Si prems alguna de les opcions de sota s'esborrarà la seva configuració YAML actual i se'n carregarà la nova.",
+                            "introduction": "Algunes parts de Third Eye es poden actualitzar sense necessitar reiniciar-lo. Si prems alguna de les opcions de sota s'esborrarà la seva configuració YAML actual i se'n carregarà la nova.",
                             "min_max": "Entitats min/max",
                             "mqtt": "Entitats MQTT configurades manualment",
                             "person": "Persones",
@@ -3065,10 +3065,10 @@
                             "zone": "Zones"
                         },
                         "server_management": {
-                            "confirm_restart": "Segur que vols reiniciar Home Assistant?",
-                            "confirm_stop": "Segur que vols aturar Home Assistant?",
+                            "confirm_restart": "Segur que vols reiniciar Third Eye?",
+                            "confirm_stop": "Segur que vols aturar Third Eye?",
                             "heading": "Gestió del servidor",
-                            "introduction": "Controla Home Assistant.",
+                            "introduction": "Controla Third Eye.",
                             "restart": "Reinicia",
                             "stop": "Atura"
                         },
@@ -3114,7 +3114,7 @@
                 },
                 "updates": {
                     "check_unavailable": {
-                        "description": "Has d'utilitzar el sistema operatiu de Home Assistant per poder comprovar i instal·lar actualitzacions des de la interfície d'usuari.",
+                        "description": "Has d'utilitzar el sistema operatiu de Third Eye per poder comprovar i instal·lar actualitzacions des de la interfície d'usuari.",
                         "title": "No s'ha pogut comprovar si hi ha actualitzacions"
                     },
                     "check_updates": "Comprova si hi ha actualitzacions",
@@ -3136,7 +3136,7 @@
                         "password_not_match": "Les contrasenyes no coincideixen"
                     },
                     "caption": "Usuaris",
-                    "description": "Gestiona els comptes d'usuari de Home Assistant",
+                    "description": "Gestiona els comptes d'usuari de Third Eye",
                     "editor": {
                         "activate_user": "Activar usuari",
                         "active": "Actiu",
@@ -3348,7 +3348,7 @@
                         "add_to_group": "Afegeix a grup",
                         "entities": "Entitats d'aquest node",
                         "entity_info": "Informació de l'entitat",
-                        "exclude_entity": "Exclou aquesta entitat de Home Assistant",
+                        "exclude_entity": "Exclou aquesta entitat de Third Eye",
                         "group": "Grup",
                         "header": "Gestió de nodes Z-Wave",
                         "introduction": "Executa ordres Z-Wave que afecten un sol node. Tria un node per veure la llista d'ordres/comandes disponibles.",
@@ -3544,7 +3544,7 @@
                         "unknown": "Desconegut"
                     },
                     "provisioned": {
-                        "confirm_unprovision_text": "Si desproveeixes el dispositiu, no s'afegirà a Home Assistant quan aquest estigui encès. Si el dispositiu ja ha estat afegit a Home Assistant, no se l'eliminarà.",
+                        "confirm_unprovision_text": "Si desproveeixes el dispositiu, no s'afegirà a Third Eye quan aquest estigui encès. Si el dispositiu ja ha estat afegit a Third Eye, no se l'eliminarà.",
                         "confirm_unprovision_title": "Estàs segur que vols desproveir el dispositiu?",
                         "dsk": "DSK",
                         "included": "Inclosos",
@@ -3576,7 +3576,7 @@
                         "exclusion_failed": "No s'ha pogut eliminar el dispositiu. Consulta els registres per a més informació.",
                         "exclusion_finished": "El dispositiu {id} s'ha eliminat de la xarxa Z-Wave.",
                         "follow_device_instructions": "Segueix les instruccions del teu dispositiu per activar l'exclusió al dispositiu.",
-                        "introduction": "Elimina un dispositiu de la xarxa Z-Wave i suprimeix el dispositiu i entitats associades de Home Assistant.",
+                        "introduction": "Elimina un dispositiu de la xarxa Z-Wave i suprimeix el dispositiu i entitats associades de Third Eye.",
                         "start_exclusion": "Inicia l'exclusió",
                         "title": "Elimina un dispositiu Z-Wave"
                     },
@@ -3605,7 +3605,7 @@
             },
             "custom": {
                 "external_panel": {
-                    "complete_access": "Tindrà accés a totes les dades de Home Assistant.",
+                    "complete_access": "Tindrà accés a totes les dades de Third Eye.",
                     "hide_message": "Mira la documentació de panel_custom per ocultar aquest missatge",
                     "question_trust": "Confies en el panell extern {name} de {link}?"
                 }
@@ -3638,7 +3638,7 @@
                         "column_description": "Descripció",
                         "column_example": "Exemple",
                         "column_parameter": "Paràmetre",
-                        "description": "L'eina Serveis et permet fer crides a qualsevol servei disponible a Home Assistant.",
+                        "description": "L'eina Serveis et permet fer crides a qualsevol servei disponible a Third Eye.",
                         "fill_example_data": "Omple amb dades d'exemple",
                         "no_template_ui_support": "La interfície d'usuari no admet plantilles, pots utilitzar l'editor YAML.",
                         "title": "Serveis",
@@ -3651,7 +3651,7 @@
                         "attributes": "Atributs",
                         "copy_id": "Copia l'identificador al porta-retalls",
                         "current_entities": "Entitats actuals",
-                        "description1": "Defineix la visualització de l'estat actual d'una entitat a Home Assistant.",
+                        "description1": "Defineix la visualització de l'estat actual d'una entitat a Third Eye.",
                         "description2": "Si l'entitat pertany a un dispositiu, no hi haurà cap comunicació amb el dispositiu.",
                         "entity": "Entitat",
                         "filter_attributes": "Filtra atributs",
@@ -3693,7 +3693,7 @@
                     },
                     "templates": {
                         "all_listeners": "Aquesta plantilla escolta a tots els esdeveniments de canvi d'estat.",
-                        "description": "Les plantilles es renderitzen mitjançant el motor Jinja2 amb algunes extensions específiques de Home Assistant.",
+                        "description": "Les plantilles es renderitzen mitjançant el motor Jinja2 amb algunes extensions específiques de Third Eye.",
                         "domain": "Domini",
                         "editor": "Editor de plantilles",
                         "entity": "Entitat",
@@ -3702,7 +3702,7 @@
                         "no_listeners": "Aquesta plantilla no escolta cap esdeveniment i no s'actualitzarà automàticament.",
                         "reset": "Restableix a la plantilla de demostració",
                         "result_type": "Tipus de resultat",
-                        "template_extensions": "Extensions de plantilla de Home Assistant",
+                        "template_extensions": "Extensions de plantilla de Third Eye",
                         "time": "Aquesta plantilla s'actualitza al començament de cada minut.",
                         "title": "Plantilla",
                         "unknown_error_template": "Error desconegut renderitzant plantilla"
@@ -3811,7 +3811,7 @@
                         "never_triggered": "Mai disparada"
                     },
                     "iframe": {
-                        "error_secure_context": "No es poden carregar els iframes que apunten a llocs web que utilitzen {target_protocol} si Home Assistant és proporcionat a través de {context_protocol}."
+                        "error_secure_context": "No es poden carregar els iframes que apunten a llocs web que utilitzen {target_protocol} si Third Eye és proporcionat a través de {context_protocol}."
                     },
                     "map": {
                         "reset_focus": "Restableix el focus"
@@ -3826,7 +3826,7 @@
                         "url": "Obre un finestra a {url_path}"
                     },
                     "safe-mode": {
-                        "description": "Home Assistant ha tingut algun problema en carregar la configuració i ara s'està executant en mode segur. Mira el registre d'errors per veure què ha anat malament.",
+                        "description": "Third Eye ha tingut algun problema en carregar la configuració i ara s'està executant en mode segur. Mira el registre d'errors per veure què ha anat malament.",
                         "header": "Mode segur activat"
                     },
                     "shopping-list": {
@@ -3838,7 +3838,7 @@
                     },
                     "show_more_info": "Mostra més informació",
                     "starting": {
-                        "description": "Home Assistant s'està iniciant, espera un moment…"
+                        "description": "Third Eye s'està iniciant, espera un moment…"
                     }
                 },
                 "changed_toast": {
@@ -4022,7 +4022,7 @@
                             "name": "Humidificador"
                         },
                         "iframe": {
-                            "description": "La targeta pàgina web et permet incrustar els teus llocs web preferits directament a Home Assistant.",
+                            "description": "La targeta pàgina web et permet incrustar els teus llocs web preferits directament a Third Eye.",
                             "name": "Pàgina web"
                         },
                         "light": {
@@ -4205,7 +4205,7 @@
                     "migrate": {
                         "header": "Configuració incompatible",
                         "migrate": "Migrar la configuració",
-                        "para_migrate": "Home Assistant pot afegir ID's a totes les targetes i visualitzacions automàticament si prems al botó 'Migrar la configuració'.",
+                        "para_migrate": "Third Eye pot afegir ID's a totes les targetes i visualitzacions automàticament si prems al botó 'Migrar la configuració'.",
                         "para_no_id": "Aquest element no té ID. Afegeix un ID per aquest element a 'ui-lovelace.yaml'."
                     },
                     "move_card": {
@@ -4232,7 +4232,7 @@
                         "close": "Tanca",
                         "empty_config": "Comença amb un panell buit",
                         "header": "Pren el control de la interfície d'usuari Lovelace",
-                        "para": "Aquest panell Lovelace està gestionat per Home Assistant. S'actualitza automàticament quan hi ha noves entitats o nous components de Lovelace disponibles. Si prens el control, aquest panell no s'actualitzarà automàticament. Sempre pots crear un nou panell a configuració i fer-hi proves.",
+                        "para": "Aquest panell Lovelace està gestionat per Third Eye. S'actualitza automàticament quan hi ha noves entitats o nous components de Lovelace disponibles. Si prens el control, aquest panell no s'actualitzarà automàticament. Sempre pots crear un nou panell a configuració i fer-hi proves.",
                         "para_sure": "Estàs segur que vols prendre el control de la interfície d'usuari?",
                         "save": "Prendre el control",
                         "yaml_config": "Per ajudar a familiaritzar-te, aquí tens la configuració actual del teu panell Lovelace:",
@@ -4297,7 +4297,7 @@
                     "entity_non_numeric": "Entitat no numèrica: {entity}",
                     "entity_not_found": "Entitat no disponible: {entity}",
                     "entity_unavailable": "Entitat actualment no disponible: {entity}",
-                    "starting": "Home Assistant està iniciant-se, pot ser que encara no estigui tot disponible"
+                    "starting": "Third Eye està iniciant-se, pot ser que encara no estigui tot disponible"
                 }
             },
             "mailbox": {
@@ -4310,16 +4310,16 @@
                 "edit_zones": "Edita zones"
             },
             "my": {
-                "component_not_loaded": "La instància de Home Assistant no admet aquesta redirecció. Necessites la integració {integration} per poder fer aquesta redirecció.",
+                "component_not_loaded": "La instància de Third Eye no admet aquesta redirecció. Necessites la integració {integration} per poder fer aquesta redirecció.",
                 "documentation": "documentació",
                 "error": "S'ha produït un error desconegut",
-                "faq_link": "Preguntes freqüents de My Home Assistant",
-                "no_supervisor": "La teva instal·lació de Home Assistant no admet aquesta redirecció. Necessites tenir instal·lat o bé el Sistema Operatiu Home Assistant o Home Assistant Supervisat. Per a més informació, consulta {docs_link}.",
-                "not_supported": "La instància de Home Assistant no admet aquesta redirecció. Consulta {link} per veure les redireccions compatibles i en quina versió es van introduir."
+                "faq_link": "Preguntes freqüents de My Third Eye",
+                "no_supervisor": "La teva instal·lació de Third Eye no admet aquesta redirecció. Necessites tenir instal·lat o bé el Sistema Operatiu Third Eye o Third Eye Supervisat. Per a més informació, consulta {docs_link}.",
+                "not_supported": "La instància de Third Eye no admet aquesta redirecció. Consulta {link} per veure les redireccions compatibles i en quina versió es van introduir."
             },
             "page-authorize": {
                 "abort_intro": "S'ha avortat l'inici de sessió",
-                "authorizing_client": "Estàs a punt de concedir al client {clientId} l'accés a la teva instància de Home Assistant.",
+                "authorizing_client": "Estàs a punt de concedir al client {clientId} l'accés a la teva instància de Third Eye.",
                 "form": {
                     "error": "Error: {error}",
                     "next": "Inicia sessió",
@@ -4422,8 +4422,8 @@
                 "cards": {
                     "demo": {
                         "demo_by": "per {name}",
-                        "introduction": "Benvingut a casa! Has arribat a la demo de Home Assistant on es mostren algunes de les millors interfícies d'usuari creades per la comunitat.",
-                        "learn_more": "Més informació sobre Home Assistant",
+                        "introduction": "Benvingut a casa! Has arribat a la demo de Third Eye on es mostren algunes de les millors interfícies d'usuari creades per la comunitat.",
+                        "learn_more": "Més informació sobre Third Eye",
                         "next_demo": "Següent mostra"
                     }
                 },
@@ -4469,16 +4469,16 @@
                 "core-config": {
                     "button_detect": "Detecta",
                     "finish": "Següent",
-                    "intro": "Hola {name}, benvingut/uda a Home Assistant. Quin nom t'agradaria posar a la teva casa?",
+                    "intro": "Hola {name}, benvingut/uda a Third Eye. Quin nom t'agradaria posar a la teva casa?",
                     "intro_location": "Voldirem saber la zona on vius. Aquesta informació servirà per poder mostrar certa informació i configurar automatitzacions relatives a la posició del sol. Aquestes dades mai es compartiran fora de la teva xarxa personal.",
                     "intro_location_detect": "Et podem ajudar a completar aquesta informació fent una única sol·licitud a un servei extern.",
-                    "location_name": "Nom de la instal·lació de Home Assistant",
+                    "location_name": "Nom de la instal·lació de Third Eye",
                     "location_name_default": "Casa"
                 },
                 "finish": "Acaba",
                 "integration": {
                     "finish": "Finalitza",
-                    "intro": "Els dispositius i serveis es representen a Home Assistant com a integracions. Pots configurar-los ara o més tard des de la pàgina de configuració.",
+                    "intro": "Els dispositius i serveis es representen a Third Eye com a integracions. Pots configurar-los ara o més tard des de la pàgina de configuració.",
                     "more_integrations": "Més"
                 },
                 "intro": "Estàs preparat donar vida pròpia a la teva llar, recuperar la teva privacitat i unir-te a una comunitat mundial de 'tinkerers'?",
@@ -4567,7 +4567,7 @@
                     "create_failed": "No s'ha pogut crear el token d'autenticació d'accés.",
                     "created": "Creat {date}",
                     "delete_failed": "No s'ha pogut eliminar el token d'autenticació d'accés.",
-                    "description": "Crea tokens d'autenticació d'accés de llarga durada per permetre als teus programes/scripts interactuar amb la instància de Home Assistant. Cada token és vàlid durant deu anys després de la seva creació. Els següents tokens d'autenticació d'accés de llarga durada estan actius actualment.",
+                    "description": "Crea tokens d'autenticació d'accés de llarga durada per permetre als teus programes/scripts interactuar amb la instància de Third Eye. Cada token és vàlid durant deu anys després de la seva creació. Els següents tokens d'autenticació d'accés de llarga durada estan actius actualment.",
                     "empty_state": "Encara no tens tokens d'autenticació d'accés de llarga durada.",
                     "header": "Tokens d'autenticació d'accés de llarga durada",
                     "learn_auth_requests": "Aprèn a fer sol·licituds autenticades.",

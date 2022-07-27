@@ -44,7 +44,7 @@ const SCHEMAS: { name: string; triggers: Trigger[] }[] = [
   },
 
   {
-    name: "Home Assistant",
+    name: "Third Eye",
     triggers: [{ platform: "homeassistant", ...HaHassTrigger.defaultConfig }],
   },
 

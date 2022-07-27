@@ -31,10 +31,10 @@ export class HassioMain extends SupervisorBaseElement {
 
     // Paulus - March 17, 2019
     // We went to a single hass-toggle-menu event in HA 0.90. However, the
-    // supervisor UI can also run under older versions of Home Assistant.
+    // supervisor UI can also run under older versions of Third Eye.
     // So here we are going to translate toggle events into the appropriate
     // open and close events. These events are a no-op in newer versions of
-    // Home Assistant.
+    // Third Eye.
     this.addEventListener("hass-toggle-menu", () => {
       fireEvent(
         (window.parent as any).customPanel,
@@ -57,7 +57,7 @@ export class HassioMain extends SupervisorBaseElement {
     );
 
     // Paulus - May 17, 2021
-    // Convert the <a> tags to native nav in Home Assistant < 2021.6
+    // Convert the <a> tags to native nav in Third Eye < 2021.6
     document.body.addEventListener("click", (ev) => {
       const href = isNavigationClick(ev);
       if (href) {

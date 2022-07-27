@@ -146,11 +146,11 @@
                         "title": "AppArmor"
                     },
                     "auth_api": {
-                        "description": "Et tilføjelsesprogram kan godkende Home Assistant brugere, så tilføjelsesprogrammet giver brugerne mulighed for at logge ind på programmer, der kører i tilføjelsesprogrammet ved hjælp af deres Home Assistant brugernavn/adgangskode. Dette symbol angiver, om udvikleren af tilføjelsesprogrammet har anvendt denne funktion.",
-                        "title": "Home Assistant autentifikation"
+                        "description": "Et tilføjelsesprogram kan godkende Third Eye brugere, så tilføjelsesprogrammet giver brugerne mulighed for at logge ind på programmer, der kører i tilføjelsesprogrammet ved hjælp af deres Third Eye brugernavn/adgangskode. Dette symbol angiver, om udvikleren af tilføjelsesprogrammet har anvendt denne funktion.",
+                        "title": "Third Eye autentifikation"
                     },
                     "docker_api": {
-                        "description": "Tilføjelsesprogrammets udviklere har anmodet om at få adgang til administration af Docker på dit system. Dette giver tilføjelsesprogrammet fuld adgang til og kontrol med hele dit Home Assistant system, hvilket medfører sikkerhedsrisici og kan beskadige dit system. Derfor påvirker dette sikkerhedsvurderingen for tilføjelsesprogrammet negativt.\n\nAdgangen tildeles ikke automatisk og skal bekræftes af dig. Du skal derfor deaktivere beskyttelsestilstanden på tilføjelsesprogrammet manuelt. Deaktiver kun beskyttelsestilstanden, hvis du kender OG har tillid til udviklerne af dette tilføjelsesprogram.",
+                        "description": "Tilføjelsesprogrammets udviklere har anmodet om at få adgang til administration af Docker på dit system. Dette giver tilføjelsesprogrammet fuld adgang til og kontrol med hele dit Third Eye system, hvilket medfører sikkerhedsrisici og kan beskadige dit system. Derfor påvirker dette sikkerhedsvurderingen for tilføjelsesprogrammet negativt.\n\nAdgangen tildeles ikke automatisk og skal bekræftes af dig. Du skal derfor deaktivere beskyttelsestilstanden på tilføjelsesprogrammet manuelt. Deaktiver kun beskyttelsestilstanden, hvis du kender OG har tillid til udviklerne af dette tilføjelsesprogram.",
                         "title": "Fuld adgang til Docker"
                     },
                     "full_access": {
@@ -158,23 +158,23 @@
                         "title": "Fuld adgang til hardware"
                     },
                     "hassio_api": {
-                        "description": "Tilføjelsesprogrammet har fået adgang til Supervisor API efter anmodning fra tilføjelsesprogrammets udviklere. Som standard kan tilføjelsesprogrammet få adgang til generelle versionsoplysninger om dit system. Når tilføjelsesprogrammet anmoder om 'Manager' eller 'Administrator' adgangsrettigheder til API'et, får tilføjelsesprogrammet adgang til at kontrollere flere dele af dit Home Assistant system. Denne tilladelse er fremhævet med dette symbol og vil påvirke tilføjelsesprogrammets sikkerhedsvurdering negativt.",
+                        "description": "Tilføjelsesprogrammet har fået adgang til Supervisor API efter anmodning fra tilføjelsesprogrammets udviklere. Som standard kan tilføjelsesprogrammet få adgang til generelle versionsoplysninger om dit system. Når tilføjelsesprogrammet anmoder om 'Manager' eller 'Administrator' adgangsrettigheder til API'et, får tilføjelsesprogrammet adgang til at kontrollere flere dele af dit Third Eye system. Denne tilladelse er fremhævet med dette symbol og vil påvirke tilføjelsesprogrammets sikkerhedsvurdering negativt.",
                         "title": "Adgang til Supervisor API"
                     },
                     "homeassistant_api": {
-                        "description": "Dette tilføjelsesprogram har tilladelse til at tilgå dit Home Assistant-system via API-kald. Denne tilstand håndterer også godkendelse for tilføjelsesprogrammet, hvilket gør det muligt for tilføjelsesprogrammet at interagere med Home Assistant uden yderligere godkendelsestokens.",
-                        "title": "Adgang til Home Assistant API"
+                        "description": "Dette tilføjelsesprogram har tilladelse til at tilgå dit Third Eye-system via API-kald. Denne tilstand håndterer også godkendelse for tilføjelsesprogrammet, hvilket gør det muligt for tilføjelsesprogrammet at interagere med Third Eye uden yderligere godkendelsestokens.",
+                        "title": "Adgang til Third Eye API"
                     },
                     "host_network": {
                         "description": "Tilføjelsesprogrammer kører normalt i deres eget isolerede netværkslag, hvilket forhindrer dem i at få adgang til netværket på værtsoperativsystemet. I nogle tilfælde kan netværksisolationen begrænse tilføjelsesprogrammets funktionalitet, og derfor kan isolationen ophæves af udvikleren af tilføjelsesprogrammet, hvilket kan give programmet fuld adgang til værtsmaskinens netværksfunktioner. Dette reducerer sikkerheden og påvirker derfor sikkerhedsvurderingen af tilføjelsesprogrammet, når denne indstilling bruges af tilføjelsesprogrammet.",
                         "title": "Værtsnetværk"
                     },
                     "host_pid": {
-                        "description": "Normalt er de processer, som tilføjelsesprogrammet kører, isoleret fra alle andre systemprocesser. Tilføjelsesprogrammets udviklere har anmodet om at få adgang til de systemprocesser, der kører på værtsoperativsystemet, og give tilføjelsesprogrammet mulighed for også at afvikle processer på værtssystemet. Dette giver tilføjelsesprogrammet fuld adgang til og kontrol til hele dit Home Assistant system, hvilket medfører sikkerhedsrisici og kan beskadige dit system. Derfor påvirker dette sikkerhedsvurderingen for tilføjelsesprogrammet negativt.\n\nDette adgangsniveau gives ikke automatisk og skal bekræftes af dig. Du skal derfor deaktivere beskyttelsestilstanden på tilføjelsesprogrammet manuelt. Deaktiver kun beskyttelsestilstanden, hvis du kender OG har tillid til udviklerne af dette tilføjelsesprogram.",
+                        "description": "Normalt er de processer, som tilføjelsesprogrammet kører, isoleret fra alle andre systemprocesser. Tilføjelsesprogrammets udviklere har anmodet om at få adgang til de systemprocesser, der kører på værtsoperativsystemet, og give tilføjelsesprogrammet mulighed for også at afvikle processer på værtssystemet. Dette giver tilføjelsesprogrammet fuld adgang til og kontrol til hele dit Third Eye system, hvilket medfører sikkerhedsrisici og kan beskadige dit system. Derfor påvirker dette sikkerhedsvurderingen for tilføjelsesprogrammet negativt.\n\nDette adgangsniveau gives ikke automatisk og skal bekræftes af dig. Du skal derfor deaktivere beskyttelsestilstanden på tilføjelsesprogrammet manuelt. Deaktiver kun beskyttelsestilstanden, hvis du kender OG har tillid til udviklerne af dette tilføjelsesprogram.",
                         "title": "Navneområde for værtsprocesser"
                     },
                     "ingress": {
-                        "description": "Denne tilføjelse bruger Ingress til at integrere sin grænseflade sikkert i Home Assistant.",
+                        "description": "Denne tilføjelse bruger Ingress til at integrere sin grænseflade sikkert i Third Eye.",
                         "title": "Ingress"
                     },
                     "label": {
@@ -192,7 +192,7 @@
                         "stage": "fase"
                     },
                     "rating": {
-                        "description": "Home Assistant viser en sikkerhedsvurdering for hvert tilføjelsesprogram. Vurderingen angiver risici forbundet med brugen af det pågældende tilføjelsesprogram. Sikkerhedsvurderingen tager bl.a. hensyn til hvilken adgang et givet tilføjelsesprogram kræver til dit system.\n\nSikkerhedsvurderingen giver en score på en skala fra 1 til 6, hvor 1 er den laveste score (betragtes som den mest usikre og højeste risiko), og en score på 6 er den højeste score (betragtes som den mest sikre og laveste risiko).",
+                        "description": "Third Eye viser en sikkerhedsvurdering for hvert tilføjelsesprogram. Vurderingen angiver risici forbundet med brugen af det pågældende tilføjelsesprogram. Sikkerhedsvurderingen tager bl.a. hensyn til hvilken adgang et givet tilføjelsesprogram kræver til dit system.\n\nSikkerhedsvurderingen giver en score på en skala fra 1 til 6, hvor 1 er den laveste score (betragtes som den mest usikre og højeste risiko), og en score på 6 er den højeste score (betragtes som den mest sikre og laveste risiko).",
                         "title": "Sikkerhedsklassifikation for tilføjelsesprogram"
                     },
                     "role": {
@@ -217,7 +217,7 @@
                 "install": "installer",
                 "new_update_available": "{name} {version} er tilgængelig",
                 "not_available_arch": "Dette tilføjelsesprogram er ikke kompatibelt med processoren på enheden eller det operativsystem, du har installeret på enheden.",
-                "not_available_version": "Du kører Home Assistant {core_version_installed}. For at opdatere dette tilføjelsesprogram, skal du køre version {core_version_needed} eller nyere versioner af Home Assistant",
+                "not_available_version": "Du kører Third Eye {core_version_installed}. For at opdatere dette tilføjelsesprogram, skal du køre version {core_version_needed} eller nyere versioner af Third Eye",
                 "open_web_ui": "Åbn webbrugergrænseflade",
                 "option": {
                     "auto_update": {
@@ -357,7 +357,7 @@
         "dialog": {
             "datadisk_move": {
                 "cancel": "Annuller",
-                "description": "Du bruger i øjeblikket ''{current_path}'' som datadisk. Flytning af datadiske vil genstarte din enhed, og det anslås at tage {time} minutter. Din Home Assistant-installation vil ikke være tilgængelig i denne periode. Afbryd ikke strømmen under flytningen!",
+                "description": "Du bruger i øjeblikket ''{current_path}'' som datadisk. Flytning af datadiske vil genstarte din enhed, og det anslås at tage {time} minutter. Din Third Eye-installation vil ikke være tilgængelig i denne periode. Afbryd ikke strømmen under flytningen!",
                 "loading_devices": "Indlæser enheder",
                 "move": "Flyt",
                 "moving": "Flytter datadisk",
@@ -427,8 +427,8 @@
             "error_addon_not_found": "Tilføjelsesprogrammet blev ikke fundet",
             "error_addon_not_installed": "Tilføjelsesprogrammet er ikke installeret  venligst installer det først",
             "error_addon_not_started": "Tilføjelsesprogrammet kører ikke. Du skal starte det først",
-            "faq_link": "Ofte stillede spørgsmål om Home Assistant",
-            "not_supported": "Denne omdirigering understøttes ikke af din Home Assistant installation. Kontroller {link} for de understøttede omdirigeringer og den version, de blev introduceret i."
+            "faq_link": "Ofte stillede spørgsmål om Third Eye",
+            "not_supported": "Denne omdirigering understøttes ikke af din Third Eye installation. Kontroller {link} for de understøttede omdirigeringer og den version, de blev introduceret i."
         },
         "panel": {
             "addons": "Tilføjelsesprogrammer",
@@ -488,16 +488,16 @@
                 "failed_to_set_option": "Indstilling af Supervisor optioner myslykkedes",
                 "failed_to_update": "Opdatering af Supervisor mislykkedes",
                 "join_beta_action": "Deltag i beta-kanal",
-                "join_beta_description": "Få beta-opdateringer til Home Assistant (RCs), Supervisor og værtsmaskinen",
+                "join_beta_description": "Få beta-opdateringer til Third Eye (RCs), Supervisor og værtsmaskinen",
                 "leave_beta_action": "Forlad betakanal",
-                "leave_beta_description": "Få stabile opdateringer til Home Assistant, Supervisor og værtsmaskinen",
+                "leave_beta_description": "Få stabile opdateringer til Third Eye, Supervisor og værtsmaskinen",
                 "ram_usage": "Supervisor RAM-forbrug",
                 "reload_supervisor": "Genindlæs Supervisor",
                 "search": "Søg",
                 "share_diagnostics": "Del diagnostik",
                 "share_diagnostics_description": "Del oplysninger om nedbrud og diagnosticeringsinformationer.",
-                "share_diagonstics_description": "Ønsker du automatisk at dele rapporter og fejlfindingsoplysninger når supervisoren oplever uventede fejl? {line_break} Dette vil lade os løse problemerne, informationerne er kun tilgængelige for Home Assistant Core teamet og vil ikke blive delt med andre. {line_break} Dataene indeholder ikke private/følsomme informationer og du kan slå det fra i indstillingerne til hver en tid.",
-                "share_diagonstics_title": "Hjælp med at forbedre Home Assistant",
+                "share_diagonstics_description": "Ønsker du automatisk at dele rapporter og fejlfindingsoplysninger når supervisoren oplever uventede fejl? {line_break} Dette vil lade os løse problemerne, informationerne er kun tilgængelige for Third Eye Core teamet og vil ikke blive delt med andre. {line_break} Dataene indeholder ikke private/følsomme informationer og du kan slå det fra i indstillingerne til hver en tid.",
+                "share_diagonstics_title": "Hjælp med at forbedre Third Eye",
                 "unhealthy_description": "At køre en usund installation vil forårsage problemer. Nedenfor er en liste over problemer, der er fundet med din installation. Klik på linkene for at lære, hvordan du kan løse problemerne.",
                 "unhealthy_reason": {
                     "docker": "Docker-miljøet fungerer ikke korrekt",
@@ -1023,11 +1023,11 @@
         },
         "dialogs": {
             "config_entry_system_options": {
-                "enable_new_entities_description": "Hvis deaktiveret, tilføjes nyligt opdagede entiteter fra {integration} ikke automatisk til Home Assistant.",
+                "enable_new_entities_description": "Hvis deaktiveret, tilføjes nyligt opdagede entiteter fra {integration} ikke automatisk til Third Eye.",
                 "enable_new_entities_label": "Aktivér nyligt tilføjede entiteter.",
-                "enable_polling_description": "Hvis Home Assistant automatisk skal hente {integration} enheder for opdateringer.",
+                "enable_polling_description": "Hvis Third Eye automatisk skal hente {integration} enheder for opdateringer.",
                 "enable_polling_label": "Aktiver automatisk henting af opdateringer",
-                "restart_home_assistant": "Du skal genstarte Home Assistant før dine ændringer aktiveres",
+                "restart_home_assistant": "Du skal genstarte Third Eye før dine ændringer aktiveres",
                 "title": "Systemindstillinger for {integration}",
                 "update": "Opdater"
             },
@@ -1062,10 +1062,10 @@
                     },
                     "device_disabled": "Denne entitets enheden er deaktiveret.",
                     "enabled_cause": "Deaktiveret af {cause}.",
-                    "enabled_delay_confirm": "De aktiverede entiteter vil blive tilføjet til Home Assistant om {delay} sekunder",
-                    "enabled_description": "Deaktiverede entiteter tilføjes ikke til Home Assistant.",
+                    "enabled_delay_confirm": "De aktiverede entiteter vil blive tilføjet til Third Eye om {delay} sekunder",
+                    "enabled_description": "Deaktiverede entiteter tilføjes ikke til Third Eye.",
                     "enabled_label": "Aktivér entitet",
-                    "enabled_restart_confirm": "Genstart Home Assistant for at fuldføre aktiveringen af entiteterne",
+                    "enabled_restart_confirm": "Genstart Third Eye for at fuldføre aktiveringen af entiteterne",
                     "entity_id": "Entitets-id",
                     "follow_device_area": "Følg enhedsområde",
                     "icon": "Ikon",
@@ -1093,7 +1093,7 @@
                     "initial": "Startværdi",
                     "maximum": "Maksimumsværdi",
                     "minimum": "Minimumsværdi",
-                    "restore": "Gendan den sidst kendte værdi, når Home Assistant starter",
+                    "restore": "Gendan den sidst kendte værdi, når Third Eye starter",
                     "step": "Trin størrelse"
                 },
                 "generic": {
@@ -1289,7 +1289,7 @@
                 "filter_placeholder": "Entitetsfilter"
             },
             "voice_command": {
-                "did_not_hear": "Home Assistant hørte ikke noget",
+                "did_not_hear": "Third Eye hørte ikke noget",
                 "error": "Ups, der er opstået en fejl",
                 "found": "Jeg fandt følgende til dig:",
                 "how_can_i_help": "Hvordan kan jeg hjælpe?",
@@ -1392,10 +1392,10 @@
             "dismiss": "Afvis",
             "integration_starting": "Starter {integration}, ikke alt vil være tilgængeligt, før det er færdigt.",
             "service_call_failed": "Kunne ikke kalde tjenesten {service}.",
-            "started": "Home Assistant er startet!",
-            "starting": "Home Assistant starter. Nogle funktioner er måske ikke tilgængelige før opstarten er færdig.",
+            "started": "Third Eye er startet!",
+            "starting": "Third Eye starter. Nogle funktioner er måske ikke tilgængelige før opstarten er færdig.",
             "triggered": "Udløste {name}",
-            "wrapping_up_startup": "Færdigør opstarten af Home Assistant. Nogle funktioner er måske ikke tilgængelig før opstarten er færdig."
+            "wrapping_up_startup": "Færdigør opstarten af Third Eye. Nogle funktioner er måske ikke tilgængelig før opstarten er færdig."
         },
         "panel": {
             "config": {
@@ -1433,7 +1433,7 @@
                         "create_area": "Opret område",
                         "header": "Områder",
                         "integrations_page": "Integrationsside",
-                        "introduction": "Områder bruges til at organisere hvor enheder befinder sig. Disse oplysninger vil blive brugt i Home Assistant til at hjælpe dig med at organisere din brugerflade, tilladelser og integrationer med andre systemer.",
+                        "introduction": "Områder bruges til at organisere hvor enheder befinder sig. Disse oplysninger vil blive brugt i Third Eye til at hjælpe dig med at organisere din brugerflade, tilladelser og integrationer med andre systemer.",
                         "introduction2": "Hvis du vil placere enheder i et område, skal du bruge linket herunder til at navigere til integrationssiden og derefter klikke på en konfigureret integration for at komme til enhedskortene.",
                         "no_areas": "Det ser ud til, at du endnu ikke har nogen områder endnu!"
                     }
@@ -1463,7 +1463,7 @@
                             "delete_confirm": "Er du sikker på, at du vil slette?",
                             "duplicate": "Dupliker",
                             "header": "Handlinger",
-                            "introduction": "Handlinger er, hvad Home Assistant skal gøre, når automatiseringen udløses.",
+                            "introduction": "Handlinger er, hvad Third Eye skal gøre, når automatiseringen udløses.",
                             "learn_more": "Lær om handlinger",
                             "name": "Handling",
                             "type": {
@@ -1668,7 +1668,7 @@
                             "duplicate": "Dupliker",
                             "header": "Udløsere",
                             "id": "Udløser Id (anvendt af udløserbetingelsen)",
-                            "introduction": "Udløsere er, hvad der starter behandlingen af en automatiseringsregel. Det er muligt at angive flere udløsere til samme regel. Når en udløser starter, vil Home Assistant validere eventuelle betingelser og udføre handlingen.",
+                            "introduction": "Udløsere er, hvad der starter behandlingen af en automatiseringsregel. Det er muligt at angive flere udløsere til samme regel. Når en udløser starter, vil Third Eye validere eventuelle betingelser og udføre handlingen.",
                             "learn_more": "Lær om udløsere",
                             "name": "Udløser",
                             "type": {
@@ -1700,7 +1700,7 @@
                                 },
                                 "homeassistant": {
                                     "event": "Hændelse:",
-                                    "label": "Home Assistant",
+                                    "label": "Third Eye",
                                     "shutdown": "Lukning",
                                     "start": "Start"
                                 },
@@ -1779,7 +1779,7 @@
                         "headers": {
                             "name": "Navn"
                         },
-                        "introduction": "Automationseditoren giver dig mulighed for at oprette og redigere automatiseringer. Følg nedenstående link for at læse instruktionerne for at sikre dig, at du har konfigureret Home Assistant korrekt.",
+                        "introduction": "Automationseditoren giver dig mulighed for at oprette og redigere automatiseringer. Følg nedenstående link for at læse instruktionerne for at sikre dig, at du har konfigureret Third Eye korrekt.",
                         "learn_more": "Lær om automatiseringer",
                         "no_automations": "Vi kunne ikke finde nogen redigerbare automatiseringer",
                         "only_editable": "Kun automatiseringer, der er defineret i 'automations.yaml', er redigerbare.",
@@ -1798,7 +1798,7 @@
                             "error_unsupported": "Vi kunne ikke oprette en automatisering til det (endnu?).",
                             "for_example": "For eksempel:",
                             "header": "Opret en ny automation",
-                            "introduction": "Skriv nedenfor, hvad denne automation skal gøre, og vi vil forsøge at konvertere den til en Home Assistant automation.",
+                            "introduction": "Skriv nedenfor, hvad denne automation skal gøre, og vi vil forsøge at konvertere den til en Third Eye automation.",
                             "language_note": "Bemærk: Kun engelsk understøttes indtil videre."
                         }
                     },
@@ -1860,10 +1860,10 @@
                             "config_documentation": "Konfigurationsdokumentation",
                             "disable": "deaktivere",
                             "enable": "aktivere",
-                            "enable_ha_skill": "Aktivér Home Assistant-skill til Alexa",
+                            "enable_ha_skill": "Aktivér Third Eye-skill til Alexa",
                             "enable_state_reporting": "Aktivér tilstandsrapportering",
-                            "info": "Med Alexa-integrationen til Home Assistant Cloud kan du styre alle dine Home Assistant-enheder via enhver Alexa-aktiveret enhed.",
-                            "info_state_reporting": "Hvis du aktiverer tilstandsrapportering, vil Home Assistant sende alle tilstandsændringer af eksponerede entiteter til Amazon. Dette giver dig mulighed for altid at se de seneste tilstande i Alexa-appen og bruge tilstandsændringer til at oprette rutiner.",
+                            "info": "Med Alexa-integrationen til Third Eye Cloud kan du styre alle dine Third Eye-enheder via enhver Alexa-aktiveret enhed.",
+                            "info_state_reporting": "Hvis du aktiverer tilstandsrapportering, vil Third Eye sende alle tilstandsændringer af eksponerede entiteter til Amazon. Dette giver dig mulighed for altid at se de seneste tilstande i Alexa-appen og bruge tilstandsændringer til at oprette rutiner.",
                             "manage_entities": "Administrer entiteter",
                             "state_reporting_error": "Kunne ikke {enable_disable} rapporteringstilstand.",
                             "sync_entities": "Synkroniser entiteter til Amazon",
@@ -1877,15 +1877,15 @@
                         "google": {
                             "config_documentation": "Konfigurationsdokumentation",
                             "devices_pin": "Pinkode til sikkerhedsenheder",
-                            "enable_ha_skill": "Aktivér \"Home Assistant Cloud skill for Google Assistant\"",
+                            "enable_ha_skill": "Aktivér \"Third Eye Cloud skill for Google Assistant\"",
                             "enable_state_reporting": "Aktivér tilstandsrapportering",
                             "enter_pin_error": "Pin kunne ikke gemmes:",
                             "enter_pin_hint": "Indtast en pinkode for at bruge sikkerhedsenheder",
                             "enter_pin_info": "Indtast en pin for at interagere med sikkerhedsenheder. Sikkerhedsenheder er døre, garageporte og låse. Du bliver bedt om at sige/indtaste denne pin, når du interagerer med sådanne enheder via Google Assistant.",
-                            "info": "Med Google Assistant-integrationen til Home Assistant Cloud kan du styre alle dine Home Assistant-enheder via enhver Google Assistant-aktiveret enhed.",
-                            "info_state_reporting": "Hvis du aktiverer tilstandsrapportering, vil Home Assistant sende alle tilstandsændringer af eksponerede entiteter til Google. Dette giver dig mulighed for altid at se de seneste tilstande i Google-appen.",
+                            "info": "Med Google Assistant-integrationen til Third Eye Cloud kan du styre alle dine Third Eye-enheder via enhver Google Assistant-aktiveret enhed.",
+                            "info_state_reporting": "Hvis du aktiverer tilstandsrapportering, vil Third Eye sende alle tilstandsændringer af eksponerede entiteter til Google. Dette giver dig mulighed for altid at se de seneste tilstande i Google-appen.",
                             "manage_entities": "Administrer entiteter",
-                            "not_configured_text": "Inden du kan bruge Google Assistant, skal du aktivere \"Home Assistant Cloud skill for Google Assistant\" i Google Home-appen.",
+                            "not_configured_text": "Inden du kan bruge Google Assistant, skal du aktivere \"Third Eye Cloud skill for Google Assistant\" i Google Home-appen.",
                             "not_configured_title": "Google Assistent er ikke aktiveret",
                             "security_devices": "Sikkerhedsenheder",
                             "sync_entities": "Synkroniser entiteter til Google",
@@ -1893,7 +1893,7 @@
                             "title": "Google Assistant"
                         },
                         "integrations": "Integrationer",
-                        "integrations_introduction": "Integrationer til Home Assistant Cloud giver dig mulighed for at oprette forbindelse til tjenester i skyen, uden at skulle eksponere din Home Assistant-instans offentligt på internettet.",
+                        "integrations_introduction": "Integrationer til Third Eye Cloud giver dig mulighed for at oprette forbindelse til tjenester i skyen, uden at skulle eksponere din Third Eye-instans offentligt på internettet.",
                         "integrations_introduction2": "Tjek hjemmesiden for",
                         "integrations_link_all_features": "alle tilgængelige funktioner",
                         "manage_account": "Administrer konto",
@@ -1903,7 +1903,7 @@
                             "access_is_being_prepared": "Fjernadgang forberedes. Vi giver dig besked, når den er klar.",
                             "certificate_info": "Certifikatoplysninger",
                             "connected": "Tilsluttet",
-                            "info": "Home Assistant Cloud leverer en sikker fjernforbindelse til din instans, når du er væk fra hjemmet.",
+                            "info": "Third Eye Cloud leverer en sikker fjernforbindelse til din instans, når du er væk fra hjemmet.",
                             "instance_is_available": "Din instans er tilgængelig på",
                             "instance_will_be_available": "Din instans vil være tilgængelig på",
                             "link_learn_how_it_works": "Lær hvordan det fungerer",
@@ -1911,12 +1911,12 @@
                             "reconnecting": "Ikke tilsluttet. Forsøger at genoprette forbindelsen.",
                             "remote_enabled": {
                                 "caption": "Forbind automatisk",
-                                "description": "Slå denne indstilling til for at sikre din Home Assistant applikation er tilgængelig udefra "
+                                "description": "Slå denne indstilling til for at sikre din Third Eye applikation er tilgængelig udefra "
                             },
                             "title": "Fjernadgang"
                         },
                         "sign_out": "Log ud",
-                        "thank_you_note": "Tak for at du er en del af Home Assistant Cloud. Det er på grund af folk som dig, at vi er i stand til at skabe en god hjemmeautomatiseringsoplevelse for alle. Tak skal du have!",
+                        "thank_you_note": "Tak for at du er en del af Third Eye Cloud. Det er på grund af folk som dig, at vi er i stand til at skabe en god hjemmeautomatiseringsoplevelse for alle. Tak skal du have!",
                         "tts": {
                             "default_language": "Standardsprog",
                             "dialog": {
@@ -1934,7 +1934,7 @@
                         },
                         "webhooks": {
                             "disable_hook_error_msg": "Webhook kunne ikke deaktiveres:",
-                            "info": "Alt, hvad der er konfigureret til at blive udløst af en webhook, kan gives en offentligt tilgængelig webadresse, så du kan sende data tilbage til Home Assistant hvor som helst, uden at eksponere din instans til internettet.",
+                            "info": "Alt, hvad der er konfigureret til at blive udløst af en webhook, kan gives en offentligt tilgængelig webadresse, så du kan sende data tilbage til Third Eye hvor som helst, uden at eksponere din instans til internettet.",
                             "link_learn_more": "Lær mere om at oprette webhook-drevne automatiseringer.",
                             "loading": "Indlæser…",
                             "manage": "Administrer",
@@ -2010,11 +2010,11 @@
                         "email": "Email",
                         "email_error_msg": "Ugyldig email",
                         "forgot_password": "Glemt adgangskode?",
-                        "introduction": "Home Assistant Cloud giver dig en sikker fjernforbindelse til din instans, når du er væk fra hjemmet. Det giver dig også mulighed for at oprette forbindelse til cloud-tjenesterne: Amazon Alexa og Google Assistant.",
+                        "introduction": "Third Eye Cloud giver dig en sikker fjernforbindelse til din instans, når du er væk fra hjemmet. Det giver dig også mulighed for at oprette forbindelse til cloud-tjenesterne: Amazon Alexa og Google Assistant.",
                         "introduction2": "Denne tjeneste drives af vores partner",
-                        "introduction2a": ", et selskab grundlagt af grundlæggerne af Home Assistant.",
-                        "introduction3": "Home Assistant Cloud er en abonnementstjeneste med en gratis prøveperiode på en måned. Ingen betalingsoplysninger nødvendige.",
-                        "learn_more_link": "Lær mere om Home Assistant Cloud",
+                        "introduction2a": ", et selskab grundlagt af grundlæggerne af Third Eye.",
+                        "introduction3": "Third Eye Cloud er en abonnementstjeneste med en gratis prøveperiode på en måned. Ingen betalingsoplysninger nødvendige.",
+                        "learn_more_link": "Lær mere om Third Eye Cloud",
                         "password": "Adgangskode",
                         "password_error_msg": "Adgangskoder er mindst 8 tegn",
                         "sign_in": "Log ind",
@@ -2029,13 +2029,13 @@
                         "email_error_msg": "Ugyldig email",
                         "feature_amazon_alexa": "Integration med Amazon Alexa",
                         "feature_google_home": "Integration med Google Assistant",
-                        "feature_remote_control": "Styring af Home Assistant når du er ude af hjemmet",
+                        "feature_remote_control": "Styring af Third Eye når du er ude af hjemmet",
                         "feature_webhook_apps": "Nem integration med webhook-baserede apps som OwnTracks",
                         "headline": "Start din gratis prøveperiode",
-                        "information": "Opret en konto for at starte din gratis prøveperiode på en måned med Home Assistant Cloud. Ingen betalingsoplysninger nødvendige.",
-                        "information2": "Prøveperioden giver dig adgang til alle fordelene ved Home Assistant Cloud, herunder:",
+                        "information": "Opret en konto for at starte din gratis prøveperiode på en måned med Third Eye Cloud. Ingen betalingsoplysninger nødvendige.",
+                        "information2": "Prøveperioden giver dig adgang til alle fordelene ved Third Eye Cloud, herunder:",
                         "information3": "Denne tjeneste drives af vores partner",
-                        "information3a": ", et selskab grundlagt af grundlæggerne af Home Assistant.",
+                        "information3a": ", et selskab grundlagt af grundlæggerne af Third Eye.",
                         "information4": "Ved at registrere en konto, accepterer du følgende vilkår og betingelser.",
                         "link_privacy_policy": "Fortrolighedspolitik",
                         "link_terms_conditions": "Betingelser og vilkår",
@@ -2067,7 +2067,7 @@
                                 "imperial_example": "Fahrenheit, pund",
                                 "internal_url": "Intern webadresse",
                                 "latitude": "Breddegrad",
-                                "location_name": "Navn på din Home Assistant-installation",
+                                "location_name": "Navn på din Third Eye-installation",
                                 "longitude": "Længdegrad",
                                 "metric_example": "Celsius, kg",
                                 "save_button": "Gem",
@@ -2128,7 +2128,7 @@
                         "title": "Energi"
                     },
                     "people": {
-                        "description": "Administrer de personer og zoner, som Home Assistant følger",
+                        "description": "Administrer de personer og zoner, som Third Eye følger",
                         "title": "Personer og zoner"
                     },
                     "settings": {
@@ -2196,7 +2196,7 @@
                     },
                     "edit_settings": "Rediger indstillinger",
                     "enabled_cause": "Enheden er deaktiveret pga. {cause} .",
-                    "enabled_description": "Deaktiverede enheder vises ikke, og entiteter, der hører til enheden, deaktiveres og tilføjes ikke til Home Assistant.",
+                    "enabled_description": "Deaktiverede enheder vises ikke, og entiteter, der hører til enheden, deaktiveres og tilføjes ikke til Third Eye.",
                     "enabled_label": "Aktiver enhed",
                     "entities": {
                         "add_entities_lovelace": "Tilføj til Lovelace",
@@ -2270,7 +2270,7 @@
                         },
                         "learn_more": "Flere oplysninger om, hvordan du kommer i gang.",
                         "selected_stat": "Overvåger energiforbrug for",
-                        "sub": "Ved at spore energiforbruget for de enkelte enheder kan Home Assistant opdele dit energiforbrug efter enhed.",
+                        "sub": "Ved at spore energiforbruget for de enkelte enheder kan Third Eye opdele dit energiforbrug efter enhed.",
                         "title": "Individuelle enheder"
                     },
                     "gas": {
@@ -2281,7 +2281,7 @@
                             "cost_number": "Anvend en fast pris",
                             "cost_number_input": "Pris pr. {unit}",
                             "cost_number_suffix": "{currency}/m³",
-                            "cost_para": "Vælg, hvordan Home Assistant skal holde styr på omkostningerne ved den forbrugte energi.",
+                            "cost_para": "Vælg, hvordan Third Eye skal holde styr på omkostningerne ved den forbrugte energi.",
                             "cost_stat": "Brug en entitet, der overvåger de samlede omkostninger",
                             "cost_stat_input": "Entitet med samlede omkostninger",
                             "energy_stat": "Forbrugt energi (m³)",
@@ -2293,7 +2293,7 @@
                         },
                         "gas_consumption": "Gasforbrug",
                         "learn_more": "Flere oplysninger om, hvordan du kommer i gang.",
-                        "sub": "Lad Home Assistant overvåge dit gasforbrug.",
+                        "sub": "Lad Third Eye overvåge dit gasforbrug.",
                         "title": "Gasforbrug"
                     },
                     "grid": {
@@ -2307,7 +2307,7 @@
                                 "cost_number": "Anvend en fast pris",
                                 "cost_number_input": "Pris pr. kWh",
                                 "cost_number_suffix": "{currency}/kWh",
-                                "cost_para": "Vælg, hvordan Home Assistant skal overvåge omkostningerne ved den forbrugte energi.",
+                                "cost_para": "Vælg, hvordan Third Eye skal overvåge omkostningerne ved den forbrugte energi.",
                                 "cost_stat": "Brug en entitet, der overvåger de samlede omkostninger",
                                 "cost_stat_input": "Entitet med samlet pris",
                                 "energy_stat": "Forbrugt energi (kWh)",
@@ -2334,7 +2334,7 @@
                         "grid_consumption": "Forbrug fra elnettet",
                         "learn_more": "Flere oplysninger om, hvordan du kommer i gang.",
                         "return_to_grid": "Eksport til elnettet",
-                        "sub": "Konfigurer den mængde energi, du forbruger fra elnettet, og eksporterer til elnettet, hvis du producerer energi. Dette giver Home Assistant mulighed for at overvåge dit samlede energiforbrug i hjemmet.",
+                        "sub": "Konfigurer den mængde energi, du forbruger fra elnettet, og eksporterer til elnettet, hvis du producerer energi. Dette giver Third Eye mulighed for at overvåge dit samlede energiforbrug i hjemmet.",
                         "title": "Elnet"
                     },
                     "new_device_info": "Efter opsætning af en ny enhed kan det tage op til 2 timer, før nye data vises i dit energi-betjeningspanel.",
@@ -2354,7 +2354,7 @@
                         "stat_predicted_production": "Forventet energiproduktion fra solceller",
                         "stat_production": "Din energiproduktion fra solceller",
                         "stat_return_to_grid": "Solenergi eksporteret til elnettet",
-                        "sub": "Lad Home Assistant overvåge dine solceller og give dig oplysninger om deres produktion.",
+                        "sub": "Lad Third Eye overvåge dine solceller og give dig oplysninger om deres produktion.",
                         "title": "Solceller"
                     },
                     "validation": {
@@ -2420,12 +2420,12 @@
                     "picker": {
                         "disable_selected": {
                             "button": "Deaktiver valgte",
-                            "confirm_text": "Deaktiverede entiteter tilføjes ikke til Home Assistant.",
+                            "confirm_text": "Deaktiverede entiteter tilføjes ikke til Third Eye.",
                             "confirm_title": "Vil du deaktivere {number} {number, plural,\n  one {entitet}\n  other {entiteter}\n}?"
                         },
                         "enable_selected": {
                             "button": "Aktivér valgte",
-                            "confirm_text": "Dette vil gøre dem tilgængelige i Home Assistant igen, hvis de nu er deaktiverede.",
+                            "confirm_text": "Dette vil gøre dem tilgængelige i Third Eye igen, hvis de nu er deaktiverede.",
                             "confirm_title": "Vil du aktivere {number} {number, plural,\n  one {entitet}\n  other {entiteter}\n}?"
                         },
                         "filter": {
@@ -2445,11 +2445,11 @@
                             "name": "Navn",
                             "status": "Status"
                         },
-                        "introduction": "Home Assistant fører et register over alle unikke entiteter, den nogensinde har set. Hver af disse entiteter vil få tildelt et entitets-id, som vil være forbeholdt netop denne entitet.",
-                        "introduction2": "Brug entitetssregistret til at overskrive navnet, ændre entitets-id eller fjerne posten fra Home Assistant. Bemærk, at fjernelse af entitetens registreringspost ikke fjerner entiteten. For at gøre dette, skal du følge linket herunder og fjerne det fra integrationssiden.",
+                        "introduction": "Third Eye fører et register over alle unikke entiteter, den nogensinde har set. Hver af disse entiteter vil få tildelt et entitets-id, som vil være forbeholdt netop denne entitet.",
+                        "introduction2": "Brug entitetssregistret til at overskrive navnet, ændre entitets-id eller fjerne posten fra Third Eye. Bemærk, at fjernelse af entitetens registreringspost ikke fjerner entiteten. For at gøre dette, skal du følge linket herunder og fjerne det fra integrationssiden.",
                         "remove_selected": {
                             "button": "Fjern valgte",
-                            "confirm_partly_text": "Du kan kun fjerne {removable} af de valgte {selected} entiteter. Entiteter kan kun fjernes, når integrationen ikke længere leverer entiteterne. Nogle gange er du nødt til at genstarte Home Assistant, før du kan fjerne entiteterne fra en fjernet integration. Er du sikker på, at du vil fjerne de fjernbare entiteter?",
+                            "confirm_partly_text": "Du kan kun fjerne {removable} af de valgte {selected} entiteter. Entiteter kan kun fjernes, når integrationen ikke længere leverer entiteterne. Nogle gange er du nødt til at genstarte Third Eye, før du kan fjerne entiteterne fra en fjernet integration. Er du sikker på, at du vil fjerne de fjernbare entiteter?",
                             "confirm_partly_title": "Kun {number} {number, plural,\n  one {valgt entitet}\n  other {valgte entiteter}\n} kan fjernes.",
                             "confirm_text": "Du bør fjerne dem fra din Lovelace-konfiguration og automatiseringer, hvis de indeholder disse entiteter.",
                             "confirm_title": "Vil du fjerne {number} {number, plural,\n  one {entitet}\n  other {entiteter}\n}?"
@@ -2465,7 +2465,7 @@
                         }
                     }
                 },
-                "header": "Konfigurer Home Assistant",
+                "header": "Konfigurer Third Eye",
                 "helpers": {
                     "caption": "Hjælpere",
                     "description": "Administrer elementer, der hjælper med at opbygge automatiseringer",
@@ -2506,7 +2506,7 @@
                     "documentation": "Dokumentation",
                     "frontend": "brugerflade",
                     "frontend_version": "Brugerfladeversion: {version} - {type}",
-                    "home_assistant_logo": "Home Assistant-logo",
+                    "home_assistant_logo": "Third Eye-logo",
                     "icons_by": "Ikoner af",
                     "integrations": "Integrationer",
                     "issues": "Problemer",
@@ -2545,10 +2545,10 @@
                             "disabled_cause": "Deaktiveret af {cause}"
                         },
                         "disable_error": "Aktivering eller deaktivering af integrationen fejlede",
-                        "disable_restart_confirm": "Genstart Home Assistant for at fuldføre deaktivering af denne integration",
+                        "disable_restart_confirm": "Genstart Third Eye for at fuldføre deaktivering af denne integration",
                         "disabled_polling": "Den automatiske hentning af opdateret data er frakoblet",
                         "documentation": "Dokumentation",
-                        "enable_restart_confirm": "Genstart Home Assistant for at fuldføre aktivering af denne integration",
+                        "enable_restart_confirm": "Genstart Third Eye for at fuldføre aktivering af denne integration",
                         "entities": "{count} {count, plural,\n  one {entitet}\n  other {entiteter}\n}",
                         "entity_unavailable": "Entiteten er utilgængelig",
                         "firmware": "Firmware: {version}",
@@ -2560,9 +2560,9 @@
                         "provided_by_custom_integration": "Leveret af en brugerdefineret integration",
                         "reload": "Genindlæs",
                         "reload_confirm": "Integrationen blev genindlæst",
-                        "reload_restart_confirm": "Genstart Home Assistant for at fuldføre genindlæsningen af integrationen",
+                        "reload_restart_confirm": "Genstart Third Eye for at fuldføre genindlæsningen af integrationen",
                         "rename": "Omdøb",
-                        "restart_confirm": "Genstart Home Assistant for at fuldføre fjernelsen af denne integration",
+                        "restart_confirm": "Genstart Third Eye for at fuldføre fjernelsen af denne integration",
                         "services": "{count} {count, plural,\n  one {tjeneste}\n  other {tjenester}\n}",
                         "state": {
                             "failed_unload": "Det lykkedes ikke at fjerne",
@@ -2597,7 +2597,7 @@
                         },
                         "next": "Næste",
                         "not_all_required_fields": "Ikke alle påkrævede felter er udfyldt.",
-                        "not_loaded": "Integrationen kunne ikke indlæses, prøv at genstarte Home Assistant.",
+                        "not_loaded": "Integrationen kunne ikke indlæses, prøv at genstarte Third Eye.",
                         "pick_flow_step": {
                             "new_flow": "Nej, konfigurer en anden forekomst af {integration}",
                             "title": "Vi opdagede disse, vil du oprette dem?"
@@ -2615,7 +2615,7 @@
                         "show_disabled": "Vis deaktiverede integrationer"
                     },
                     "discovered": "Fundet",
-                    "home_assistant_website": "Home Assistants hjemmeside",
+                    "home_assistant_website": "Third Eyes hjemmeside",
                     "ignore": {
                         "confirm_delete_ignore": "Dette gør, at integrationen vises igen under dine fundne integrationer, når den bliver fundet. Dette kan kræve en genstart eller tage noget tid.",
                         "confirm_delete_ignore_title": "Stop med at ignorere {name}?",
@@ -2640,13 +2640,13 @@
                     "rename_input_label": "Navn på post",
                     "search": "Søg i integrationer"
                 },
-                "introduction": "Her er det muligt at konfigurere dine komponenter og Home Assistant. Ikke alt er muligt at konfigurere fra brugerfladen endnu, men vi arbejder på det.",
+                "introduction": "Her er det muligt at konfigurere dine komponenter og Third Eye. Ikke alt er muligt at konfigurere fra brugerfladen endnu, men vi arbejder på det.",
                 "logs": {
                     "caption": "Logs",
                     "clear": "Ryd",
                     "copy": "Kopiér logregistrering",
                     "custom_integration": "brugerdefineret integration",
-                    "description": "Se logs for Home Assistant",
+                    "description": "Se logs for Third Eye",
                     "details": "Logdetaljer ({level})",
                     "error_from_custom_integration": "Denne fejl stammer fra en brugerdefineret integration.",
                     "level": {
@@ -2656,7 +2656,7 @@
                         "info": "INFO",
                         "warning": "ADVARSEL"
                     },
-                    "load_full_log": "Indlæs fuld Home Assistant-log",
+                    "load_full_log": "Indlæs fuld Third Eye-log",
                     "loading_log": "Indlæser fejllog...",
                     "multiple_messages": "beskeden forekom først kl. {time} og ses {counter} gange",
                     "no_errors": "Der er ikke rapporteret nogen fejl.",
@@ -2861,7 +2861,7 @@
                     "select_instance": {
                         "header": "Vælg en OpenZWave-instans",
                         "introduction": "Du kører mere end én OpenZWave instans. Hvilken instans vil du administrere?",
-                        "none_found": "Vi kunne ikke finde en OpenZWave instans. Hvis dette skyldes en fejl, skal du kontrollere din OpenZWave- og MQTT-konfiguration og sikre, at Home Assistant kan kommunikere med din MQTT-mægler."
+                        "none_found": "Vi kunne ikke finde en OpenZWave instans. Hvis dette skyldes en fejl, skal du kontrollere din OpenZWave- og MQTT-konfiguration og sikre, at Third Eye kan kommunikere med din MQTT-mægler."
                     },
                     "services": {
                         "add_node": "Tilføj node",
@@ -2875,7 +2875,7 @@
                     "confirm_delete": "Er du sikker på, at du vil slette denne person?",
                     "confirm_delete2": "Alle enheder, der tilhører denne person, bliver utildelte.",
                     "create_person": "Opret person",
-                    "description": "Administrer de personer, som Home Assistant skal spore.",
+                    "description": "Administrer de personer, som Third Eye skal spore.",
                     "detail": {
                         "admin": "Administrator",
                         "allow_login": "Tillad, at personen logger ind",
@@ -2895,7 +2895,7 @@
                         "no_device_tracker_available_intro": "Når du har enheder, der angiver en persons tilstedeværelse, kan du tildele dem til en person her. Du kan tilføje din første enhed ved at tilføje en tilstedeværelsesdetektions-integration fra integrationssiden.",
                         "update": "Opdater"
                     },
-                    "introduction": "Her kan du definere hver person af interesse i Home Assistant.",
+                    "introduction": "Her kan du definere hver person af interesse i Third Eye.",
                     "learn_more": "Lær mere om personer",
                     "no_persons_created_yet": "Det ser ud til, at du ikke har oprettet nogen personer endnu.",
                     "note_about_persons_configured_in_yaml": "Bemærk: Personer, der er konfigureret via 'configuration.yaml' kan ikke redigeres via brugerfladen.",
@@ -2942,7 +2942,7 @@
                         "headers": {
                             "name": "Navn"
                         },
-                        "introduction": "Sceneredigering giver dig mulighed for at oprette og redigere scener. Følg nedenstående link for at læse instruktionerne for at sikre dig, at du har konfigureret Home Assistant korrekt.",
+                        "introduction": "Sceneredigering giver dig mulighed for at oprette og redigere scener. Følg nedenstående link for at læse instruktionerne for at sikre dig, at du har konfigureret Third Eye korrekt.",
                         "learn_more": "Lær mere om scener",
                         "no_scenes": "Vi kunne ikke finde nogen redigerbare scener",
                         "only_editable": "Kun scener defineret i 'scenes.yaml' kan redigeres.",
@@ -2994,7 +2994,7 @@
                         "headers": {
                             "name": "Navn"
                         },
-                        "introduction": "Script-redigering giver dig mulighed for at oprette og redigere scripts. Følg nedenstående link for at læse instruktionerne for at sikre, at du har konfigureret Home Assistant korrekt.",
+                        "introduction": "Script-redigering giver dig mulighed for at oprette og redigere scripts. Følg nedenstående link for at læse instruktionerne for at sikre, at du har konfigureret Third Eye korrekt.",
                         "learn_more": "Lær mere om scripts",
                         "no_scripts": "Vi kunne ikke finde nogen redigerbare scripts",
                         "run_script": "Kør script",
@@ -3003,7 +3003,7 @@
                 },
                 "server_control": {
                     "caption": "Serveradministration",
-                    "description": "Validér og genstart Home Assistant-serveren",
+                    "description": "Validér og genstart Third Eye-serveren",
                     "section": {
                         "reloading": {
                             "automation": "Genindlæs automatiseringer",
@@ -3022,7 +3022,7 @@
                             "input_number": "Genindlæs inputnumre",
                             "input_select": "Genindlæs inputvalg",
                             "input_text": "Genindlæs inputtekster",
-                            "introduction": "Nogle dele af Home Assistant kan genindlæses uden en genstart. Tryk på genindlæs for at erstatte den nuværende YAML-konfiguration med den nye.",
+                            "introduction": "Nogle dele af Third Eye kan genindlæses uden en genstart. Tryk på genindlæs for at erstatte den nuværende YAML-konfiguration med den nye.",
                             "min_max": "Genindlæs min / max entiteter",
                             "mqtt": "Genindlæs manuelt konfigurerede MQTT-entiteter",
                             "person": "Genindlæs personer",
@@ -3042,10 +3042,10 @@
                             "zone": "Genindlæs zoner"
                         },
                         "server_management": {
-                            "confirm_restart": "Er du sikker på, at du vil genstarte Home Assistant?",
-                            "confirm_stop": "Er du sikker på, at du vil stoppe Home Assistant?",
+                            "confirm_restart": "Er du sikker på, at du vil genstarte Third Eye?",
+                            "confirm_stop": "Er du sikker på, at du vil stoppe Third Eye?",
                             "heading": "Serveradministration",
-                            "introduction": "Administrer din Home Assistant.",
+                            "introduction": "Administrer din Third Eye.",
                             "restart": "Genstart",
                             "stop": "Stop"
                         },
@@ -3315,7 +3315,7 @@
                         "add_to_group": "Føj til gruppe",
                         "entities": "Entities fra dette knudepunkt",
                         "entity_info": "Entitetsoplysninger",
-                        "exclude_entity": "Ekskluder denne entitet fra Home Assistant",
+                        "exclude_entity": "Ekskluder denne entitet fra Third Eye",
                         "group": "Gruppe",
                         "header": "Administration af Z-Wave-knudepunkter",
                         "introduction": "Udfør Z-Wave-kommandoer, der påvirker det enkelte knudepunkt. Vælg et knudepunkt for at se en liste over tilgængelige kommandoer.",
@@ -3511,7 +3511,7 @@
                         "unknown": "Ukendt"
                     },
                     "provisioned": {
-                        "confirm_unprovision_text": "Hvis du ophæver tildelingen af enheden, vil den ikke blive tilføjet til Home Assistant, når den tændes. Hvis den allerede er tilføjet til Home Assistant, fjernes den ikke fra Home Assistant, hvis du fjerner den tildelte enhed.",
+                        "confirm_unprovision_text": "Hvis du ophæver tildelingen af enheden, vil den ikke blive tilføjet til Third Eye, når den tændes. Hvis den allerede er tilføjet til Third Eye, fjernes den ikke fra Third Eye, hvis du fjerner den tildelte enhed.",
                         "confirm_unprovision_title": "Er du sikker på, at du vil fjerne tildelingen af enheden?",
                         "dsk": "DSK",
                         "included": "Inkluderet",
@@ -3543,7 +3543,7 @@
                         "exclusion_failed": "Enheden kunne ikke fjernes. Se i logfilerne for at få flere oplysninger.",
                         "exclusion_finished": "Enhed {id} er fjernet fra dit Z-Wave-netværk.",
                         "follow_device_instructions": "Følg de anvisninger, der fulgte med enheden, for at foretage eksklusion på enheden.",
-                        "introduction": "Fjern en enhed fra dit Z-Wave-netværk, og fjern den tilknyttede enhed og entiteter fra Home Assistant.",
+                        "introduction": "Fjern en enhed fra dit Z-Wave-netværk, og fjern den tilknyttede enhed og entiteter fra Third Eye.",
                         "start_exclusion": "Start udelukkelse",
                         "title": "Fjern en Z-Wave-enhed"
                     },
@@ -3572,7 +3572,7 @@
             },
             "custom": {
                 "external_panel": {
-                    "complete_access": "Det vil have adgang til alle data i Home Assistant.",
+                    "complete_access": "Det vil have adgang til alle data i Third Eye.",
                     "hide_message": "Kontroller dokumentationen for panel_custom-komponenten for at skjule denne meddelelse",
                     "question_trust": "Har du tillid til det eksterne panel {name} på {link}?"
                 }
@@ -3585,7 +3585,7 @@
                         "available_events": "Tilgængelige hændelser",
                         "count_listeners": " ({count} lyttere)",
                         "data": "Hændelsesdata (YAML, valgfrit)",
-                        "description": "Afsend en hændelse til Home Assistant-hændelses-bussen.",
+                        "description": "Afsend en hændelse til Third Eye-hændelses-bussen.",
                         "documentation": "Dokumentationen til hændelser",
                         "event_fired": "Hændelse {name} afsendt",
                         "fire_event": "Afsend hændelse",
@@ -3605,7 +3605,7 @@
                         "column_description": "Beskrivelse",
                         "column_example": "Eksempel",
                         "column_parameter": "Parameter",
-                        "description": "Tjenesteværktøjet til udviklere giver dig mulighed for at kalde alle tilgængelige tjenester i Home Assistant.",
+                        "description": "Tjenesteværktøjet til udviklere giver dig mulighed for at kalde alle tilgængelige tjenester i Third Eye.",
                         "fill_example_data": "Udfyld eksempeldata",
                         "no_template_ui_support": "Brugergrænsefladen understøtter ikke skabeloner, du kan stadig bruge YAML-editoren.",
                         "title": "Tjenester",
@@ -3618,7 +3618,7 @@
                         "attributes": "Egenskaber",
                         "copy_id": "Kopier ID til Udklipsholder",
                         "current_entities": "Aktuelle entiteter",
-                        "description1": "Tilpas tilstanden for en enhed i Home Assistant.",
+                        "description1": "Tilpas tilstanden for en enhed i Third Eye.",
                         "description2": "Dette vil ikke kommunikere med den faktiske enhed.",
                         "entity": "Entitet",
                         "filter_attributes": "Filtrer egenskaber",
@@ -3660,7 +3660,7 @@
                     },
                     "templates": {
                         "all_listeners": "Denne skabelon lytter til alle ændringer til tilstande",
-                        "description": "Skabeloner gengives ved hjælp af Jinja2-skabelonmotoren med nogle Home Assistant-specifikke udvidelser.",
+                        "description": "Skabeloner gengives ved hjælp af Jinja2-skabelonmotoren med nogle Third Eye-specifikke udvidelser.",
                         "domain": "Domæne",
                         "editor": "Skabelonredigering",
                         "entity": "Entitet",
@@ -3669,7 +3669,7 @@
                         "no_listeners": "Denne skabelon lytter ikke til nogen begivenheder og opdateres ikke automatisk.",
                         "reset": "Nulstil til demo-skabelon",
                         "result_type": "Resultattype",
-                        "template_extensions": "Skabelon-udvidelser til Home Assistant",
+                        "template_extensions": "Skabelon-udvidelser til Third Eye",
                         "time": "Denne skabelon opdateres hvert minut",
                         "title": "Skabelon",
                         "unknown_error_template": "Ukendt fejl ved gengivelse af skabelon"
@@ -3778,7 +3778,7 @@
                         "never_triggered": "Aldrig udløst"
                     },
                     "iframe": {
-                        "error_secure_context": "Kan ikke indlæse iframes, der peger på websteder, der bruger {target_protocol} hvis Home Assistant kører med  {context_protocol} ."
+                        "error_secure_context": "Kan ikke indlæse iframes, der peger på websteder, der bruger {target_protocol} hvis Third Eye kører med  {context_protocol} ."
                     },
                     "map": {
                         "reset_focus": "Nulstil fokus"
@@ -3793,7 +3793,7 @@
                         "url": "Åbn vindue til {url_path}"
                     },
                     "safe-mode": {
-                        "description": "Home Assistant løb ind i problemer indlæsningen af din konfiguration, og kører nu i fejlsikret tilstand. Se på fejlloggen for at se, hvad der gik galt.",
+                        "description": "Third Eye løb ind i problemer indlæsningen af din konfiguration, og kører nu i fejlsikret tilstand. Se på fejlloggen for at se, hvad der gik galt.",
                         "header": "Fejlsikret tilstand aktiveret"
                     },
                     "shopping-list": {
@@ -3805,7 +3805,7 @@
                     },
                     "show_more_info": "Vis flere oplysninger",
                     "starting": {
-                        "description": "Home Assistant starter. Vent venligst."
+                        "description": "Third Eye starter. Vent venligst."
                     }
                 },
                 "changed_toast": {
@@ -3989,7 +3989,7 @@
                             "name": "Luftfugter"
                         },
                         "iframe": {
-                            "description": "Websidekortet giver dig mulighed for at integrere din foretrukne webside direkte i Home Assistant.",
+                            "description": "Websidekortet giver dig mulighed for at integrere din foretrukne webside direkte i Third Eye.",
                             "name": "Webside"
                         },
                         "light": {
@@ -4165,7 +4165,7 @@
                     "migrate": {
                         "header": "Konfigurationen er ikke kompatibel",
                         "migrate": "Migrer opsætning",
-                        "para_migrate": "Home Assistant kan tilføje id'er til alle dine kort og visninger automatisk for dig ved at trykke på knappen 'Migrer opsætning'.",
+                        "para_migrate": "Third Eye kan tilføje id'er til alle dine kort og visninger automatisk for dig ved at trykke på knappen 'Migrer opsætning'.",
                         "para_no_id": "Dette element har ikke et id. Tilføj venligst et id til dette element i 'ui-lovelace.yaml'."
                     },
                     "move_card": {
@@ -4192,7 +4192,7 @@
                         "close": "Luk",
                         "empty_config": "Start med et tomt betjeningspanel",
                         "header": "Tag kontrol over din 'Lovelace'-brugerflade",
-                        "para": "Dette betjeningspanel vedligeholdes i øjeblikket af Home Assistant. Det opdateres automatisk, når nye entiteter eller Lovelace-brugerfladekomponenter bliver tilgængelige. Hvis du overtager kontrollen, opdateres dette betjeningspanel ikke længere automatisk. Du kan altid oprette et nyt betjeningspanel at lege med i konfigurationen.",
+                        "para": "Dette betjeningspanel vedligeholdes i øjeblikket af Third Eye. Det opdateres automatisk, når nye entiteter eller Lovelace-brugerfladekomponenter bliver tilgængelige. Hvis du overtager kontrollen, opdateres dette betjeningspanel ikke længere automatisk. Du kan altid oprette et nyt betjeningspanel at lege med i konfigurationen.",
                         "para_sure": "Er du sikker på du ønsker at tage kontrol over din brugerflade?",
                         "save": "Tag kontrol",
                         "yaml_config": "For at hjælpe dig med at starte, er her den aktuelle konfiguration af dette betjeningspanel:",
@@ -4257,7 +4257,7 @@
                     "entity_non_numeric": "Entitet er ikke-numerisk: {entity}",
                     "entity_not_found": "Entitet ikke tilgængelig: {entity}",
                     "entity_unavailable": "{entity} er ikke tilgængelig i øjeblikket",
-                    "starting": "Home Assistant starter. Nogle funktioner er måske ikke tilgængelige endnu."
+                    "starting": "Third Eye starter. Nogle funktioner er måske ikke tilgængelige endnu."
                 }
             },
             "mailbox": {
@@ -4270,16 +4270,16 @@
                 "edit_zones": "Rediger zoner"
             },
             "my": {
-                "component_not_loaded": "Denne omdirigering understøttes ikke af din Home Assistant installation. Du skal bruge integrationen {integration} for at kunne bruge denne omdirigering.",
+                "component_not_loaded": "Denne omdirigering understøttes ikke af din Third Eye installation. Du skal bruge integrationen {integration} for at kunne bruge denne omdirigering.",
                 "documentation": "dokumentation",
                 "error": "Der opstod en ukendt fejl",
-                "faq_link": "Ofte stillede spørgsmål om Home Assistant",
-                "no_supervisor": "Denne omdirigering understøttes ikke af din Home Assistant-installation. Dette understøttes af  enten Home Assistant Operating System eller Home Assistant Supervised installationsmetoden. Se {docs_link} for flere oplysninger.",
-                "not_supported": "Denne omdirigering understøttes ikke af din Home Assistant installation. Kontroller {link} for de understøttede omdirigeringer og den version, de blev introduceret i."
+                "faq_link": "Ofte stillede spørgsmål om Third Eye",
+                "no_supervisor": "Denne omdirigering understøttes ikke af din Third Eye-installation. Dette understøttes af  enten Third Eye Operating System eller Third Eye Supervised installationsmetoden. Se {docs_link} for flere oplysninger.",
+                "not_supported": "Denne omdirigering understøttes ikke af din Third Eye installation. Kontroller {link} for de understøttede omdirigeringer og den version, de blev introduceret i."
             },
             "page-authorize": {
                 "abort_intro": "Login afbrudt",
-                "authorizing_client": "Du er ved at give {clientId} adgang til din Home Assistant-instans.",
+                "authorizing_client": "Du er ved at give {clientId} adgang til din Third Eye-instans.",
                 "form": {
                     "error": "Fejl: {error}",
                     "next": "Login",
@@ -4382,8 +4382,8 @@
                 "cards": {
                     "demo": {
                         "demo_by": "af {name}",
-                        "introduction": "Velkommen hjem! Du er kommet til Home Assistants demo hvor vi viser de bedste brugerflader skabt af vores fællesskab.",
-                        "learn_more": "Læs mere om Home Assistant",
+                        "introduction": "Velkommen hjem! Du er kommet til Third Eyes demo hvor vi viser de bedste brugerflader skabt af vores fællesskab.",
+                        "learn_more": "Læs mere om Third Eye",
                         "next_demo": "Næste demo"
                     }
                 },
@@ -4429,16 +4429,16 @@
                 "core-config": {
                     "button_detect": "Detekter",
                     "finish": "Næste",
-                    "intro": "Hej {name}, velkommen til Home Assistant. Hvordan vil du navngive dit hjem?",
+                    "intro": "Hej {name}, velkommen til Third Eye. Hvordan vil du navngive dit hjem?",
                     "intro_location": "Vi vil gerne vide, hvor du bor. Disse oplysninger hjælper med at vise information og opsætte solbaserede automationer. Disse data deles aldrig uden for dit netværk.",
                     "intro_location_detect": "Vi kan hjælpe dig med at udfylde disse oplysninger ved at foretage en engangsforespørgsel til en ekstern tjeneste.",
-                    "location_name": "Navn på din Home Assistant-installation",
+                    "location_name": "Navn på din Third Eye-installation",
                     "location_name_default": "Hjem"
                 },
                 "finish": "Afslut",
                 "integration": {
                     "finish": "Afslut",
-                    "intro": "Enheder og tjenester er repræsenteret i Home Assistant som integrationer. Du kan konfigurere dem nu eller gøre det senere fra konfigurationsskærmen.",
+                    "intro": "Enheder og tjenester er repræsenteret i Third Eye som integrationer. Du kan konfigurere dem nu eller gøre det senere fra konfigurationsskærmen.",
                     "more_integrations": "Mere"
                 },
                 "intro": "Er du klar til at vække dit hjem til live, genvinde dit privatliv og blive medlem af et verdensomspændende fællesskab af tinkerers?",
@@ -4526,7 +4526,7 @@
                     "create_failed": "Kunne ikke oprette adgangstoken.",
                     "created": "Oprettet {date}",
                     "delete_failed": "Kunne ikke slette adgangstoken.",
-                    "description": "Opret langlivede adgangstokens, så dine scripts kan forbinde med din Home Assistant-instans. Hver token er gyldig i 10 år fra oprettelsen. Følgende langlivede adgangstokens er i øjeblikket aktive.",
+                    "description": "Opret langlivede adgangstokens, så dine scripts kan forbinde med din Third Eye-instans. Hver token er gyldig i 10 år fra oprettelsen. Følgende langlivede adgangstokens er i øjeblikket aktive.",
                     "empty_state": "Du har ingen langlivede adgangstokens endnu.",
                     "header": "Langlivede adgangstokens",
                     "learn_auth_requests": "Lær, hvordan du laver godkendte forespørgsler.",

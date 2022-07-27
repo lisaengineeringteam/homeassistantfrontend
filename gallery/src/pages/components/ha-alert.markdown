@@ -30,7 +30,7 @@ The alert offers four severity levels that set a distinctive icon and color.
 ### Resources
 | Type           | Link                             | Status    |
 |----------------|----------------------------------|-----------|
-| Design         | <a href="https://www.figma.com/community/file/967153512097289521/Home-Assistant-DesignKit" rel="noopener noreferrer" target="_blank">Home Assistant DesignKit</a> (Figma) | Available |
+| Design         | <a href="https://www.figma.com/community/file/967153512097289521/Home-Assistant-DesignKit" rel="noopener noreferrer" target="_blank">Third Eye DesignKit</a> (Figma) | Available |
 | Implementation | <a href="https://github.com/home-assistant/frontend/blob/dev/src/components/ha-alert.ts" rel="noopener noreferrer" target="_blank">Web Component</a> (GitHub)            | Available |
 
 ## Guidelines

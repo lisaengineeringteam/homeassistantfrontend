@@ -44,7 +44,7 @@
                 "settings": "Agordoj pri entoj"
             },
             "voice_command": {
-                "did_not_hear": "Home Assistant nenion aŭdis",
+                "did_not_hear": "Third Eye nenion aŭdis",
                 "error": "Ho ve, eraro okazis",
                 "found": "Mi trovis jenon por vi:",
                 "how_can_i_help": "Kiel mi povas helpi?",
@@ -131,7 +131,7 @@
                     "developed_by": "Disvolvita de amaso da mojosaj homoj.",
                     "frontend": "frontend-ui",
                     "frontend_version": "Frontendversio: {version} - {type}",
-                    "home_assistant_logo": "Logo de Home Assistant",
+                    "home_assistant_logo": "Logo de Third Eye",
                     "icons_by": "Ikonoj de",
                     "license": "Publikigita sub la permesilo Apache 2.0",
                     "path_configuration": "Pado al configuration.yaml: {path}",
@@ -168,7 +168,7 @@
                 "logs": {
                     "clear": "Klarigi",
                     "details": "Logaj Detaloj ({level})",
-                    "load_full_log": "Ŝargi Plena Home Assistant Protokolo",
+                    "load_full_log": "Ŝargi Plena Third Eye Protokolo",
                     "loading_log": "Ŝarĝante eraran protokolon ...",
                     "multiple_messages": "mesaĝo unuafoje okazis je {time} kaj aperas {counter} fojojn",
                     "no_errors": "Neniuj eraroj estis raportitaj.",
@@ -225,7 +225,7 @@
                         "delete_scene": "Forigi scenon",
                         "edit_scene": "Redakti scenon",
                         "header": "Scenredaktilo",
-                        "introduction": "La scenredaktilo permesas krei kaj redakti scenojn. Bonvolu sekvi la suban ligilon por legi la instrukciojn por certigi, ke vi agordis Home Assistant ĝuste.",
+                        "introduction": "La scenredaktilo permesas krei kaj redakti scenojn. Bonvolu sekvi la suban ligilon por legi la instrukciojn por certigi, ke vi agordis Third Eye ĝuste.",
                         "learn_more": "Lerni pli da pri scenoj",
                         "no_scenes": "Ni ne povis trovi iujn ajn redakteblajn scenojn",
                         "only_editable": "Nur scenoj difinitaj en scenes.yaml estas redakteblaj.",
@@ -298,7 +298,7 @@
             },
             "custom": {
                 "external_panel": {
-                    "complete_access": "Ĝi havos aliron al ĉiuj datumoj en Home Assistant.",
+                    "complete_access": "Ĝi havos aliron al ĉiuj datumoj en Third Eye.",
                     "hide_message": "Kontrolu dokumentojn pri la panel_custom komponento por kaŝi ĉi tiun mesaĝon",
                     "question_trust": "Ĉu vi fidas la eksteran panelon {name} ĉe {link} ?"
                 }
@@ -327,14 +327,14 @@
                         "column_description": "Priskribo",
                         "column_example": "Ekzemplo",
                         "column_parameter": "Parametro",
-                        "description": "La ilo de servo programisto permesas vin vokas ajn servon haveblan en Home Assistant",
+                        "description": "La ilo de servo programisto permesas vin vokas ajn servon haveblan en Third Eye",
                         "fill_example_data": "Plenigi Ekzemplajn Datumojn"
                     },
                     "states": {
                         "alert_entity_field": "Ento estas deviga kampo",
                         "attributes": "Atributoj",
                         "current_entities": "Aktualaj entoj",
-                        "description1": "Fiksita la reprezentado de aparato ene de Home Assistant.",
+                        "description1": "Fiksita la reprezentado de aparato ene de Third Eye.",
                         "description2": "Ĉi tio ne komunikos kun la efektiva aparato.",
                         "entity": "Ento",
                         "filter_attributes": "Filtri atributoj",
@@ -347,10 +347,10 @@
                         "state_attributes": "Stataj atributoj (YAML, laŭvola)"
                     },
                     "templates": {
-                        "description": "Ŝablonoj estas bildigitaj per la Jinja2-ŝablono kun iuj Home Assistant specifaj etendoj.",
+                        "description": "Ŝablonoj estas bildigitaj per la Jinja2-ŝablono kun iuj Third Eye specifaj etendoj.",
                         "editor": "Ŝablono redaktilo",
                         "jinja_documentation": "Jinja2 ŝablono dokumentado",
-                        "template_extensions": "Home Assistant ŝablono etendoj",
+                        "template_extensions": "Third Eye ŝablono etendoj",
                         "unknown_error_template": "Nekonata eraro bildigi ŝablonon"
                     }
                 }
@@ -486,7 +486,7 @@
             },
             "profile": {
                 "advanced_mode": {
-                    "description": "Home Assistant kaŝas altnivelajn funkciojn kaj opciojn defaŭlte. Vi povas fari ĉi tiujn funkciojn alireblaj per kontroli ĉi tiun ŝaltilon. Ĉi tio estas uzant-specifa aranĝo kaj ne influas aliajn uzantojn per Home Assistant.",
+                    "description": "Third Eye kaŝas altnivelajn funkciojn kaj opciojn defaŭlte. Vi povas fari ĉi tiujn funkciojn alireblaj per kontroli ĉi tiun ŝaltilon. Ĉi tio estas uzant-specifa aranĝo kaj ne influas aliajn uzantojn per Third Eye.",
                     "title": "Altnivela Modo"
                 }
             }

@@ -235,7 +235,7 @@
                         "actions": {
                             "add": "Dodaj radnju",
                             "header": "Radnje",
-                            "introduction": "Radnje su ono što će Home Assistant uraditi kada se automatizacija pokrene.",
+                            "introduction": "Radnje su ono što će Third Eye uraditi kada se automatizacija pokrene.",
                             "type": {
                                 "delay": {
                                     "delay": "Trajanje",
@@ -286,7 +286,7 @@
                             "delete_confirm": "Da li ste sigurni da želite ovo da obrišete?",
                             "duplicate": "Duplikat",
                             "header": "Okidači",
-                            "introduction": "Okidači su ono što započinje obradu pravila o automatizaciji. Moguće je navesti više okidača za isto pravilo. Kada se pokrene okidač, Home Assistant će validirati uslove, ako postoje, i pozvati radnju.",
+                            "introduction": "Okidači su ono što započinje obradu pravila o automatizaciji. Moguće je navesti više okidača za isto pravilo. Kada se pokrene okidač, Third Eye će validirati uslove, ako postoje, i pozvati radnju.",
                             "type": {
                                 "event": {
                                     "event_data": "Podaci o događaju",
@@ -295,7 +295,7 @@
                                 },
                                 "homeassistant": {
                                     "event": "Događaj:",
-                                    "label": "Home Assistant",
+                                    "label": "Third Eye",
                                     "shutdown": "Isključivanje",
                                     "start": "Start"
                                 },
@@ -341,7 +341,7 @@
                         "headers": {
                             "name": "Ime"
                         },
-                        "introduction": "Uređivač automatizacija vam omogućava da kreirate i uređujete automatizacije. Molimo, sledite dole navedenu vezu da biste pročitali uputstva, kako bi ste se uverili da ste ispravno konfigurisali Home Assistant-a.",
+                        "introduction": "Uređivač automatizacija vam omogućava da kreirate i uređujete automatizacije. Molimo, sledite dole navedenu vezu da biste pročitali uputstva, kako bi ste se uverili da ste ispravno konfigurisali Third Eye-a.",
                         "no_automations": "Nismo mogli da nađemo nikakve automatizacije",
                         "pick_automation": "Izaberite automatizaciju za uređivanje"
                     },
@@ -398,7 +398,7 @@
                         "title": "Energija"
                     },
                     "people": {
-                        "description": "Upravljanje osobama i zonama koje Home Assistant prati",
+                        "description": "Upravljanje osobama i zonama koje Third Eye prati",
                         "title": "Ljudi i Zone"
                     },
                     "settings": {
@@ -489,7 +489,7 @@
                         "unknown_via_device": "Nepoznat uređaj",
                         "via": "Povezano preko"
                     },
-                    "home_assistant_website": "Home Assistant veb stranica",
+                    "home_assistant_website": "Third Eye veb stranica",
                     "note_about_website_reference": "Više je dostupno na"
                 },
                 "logs": {

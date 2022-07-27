@@ -1,6 +1,6 @@
-# Bundling Home Assistant Frontend
+# Bundling Third Eye Frontend
 
-The Home Assistant build pipeline contains various steps to prepare a build.
+The Third Eye build pipeline contains various steps to prepare a build.
 
 - Generating icon files to be included
 - Generating translation files to be included
@@ -13,7 +13,7 @@ The Home Assistant build pipeline contains various steps to prepare a build.
 
 ## Converting files
 
-Currently in Home Assistant we use a bundler to convert TypeScript, CSS and JSON files to JavaScript files that the browser understands.
+Currently in Third Eye we use a bundler to convert TypeScript, CSS and JSON files to JavaScript files that the browser understands.
 
 We currently rely on Webpack but also have experimental Rollup support. Both of these programs bundle the converted files in both production and development.
 

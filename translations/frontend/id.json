@@ -146,11 +146,11 @@
                         "title": "AppArmor"
                     },
                     "auth_api": {
-                        "description": "Add-on dapat mengautentikasi pengguna lewat Home Assistant, sehingga pengguna dapat masuk ke aplikasi mereka yang berjalan di dalam add-on dengan menggunakan nama pengguna/kata sandi Home Assistant mereka. Lencana ini menunjukkan bahwa pembuat add-on meminta kemampuan ini.",
-                        "title": "Autentikasi Home Assistant"
+                        "description": "Add-on dapat mengautentikasi pengguna lewat Third Eye, sehingga pengguna dapat masuk ke aplikasi mereka yang berjalan di dalam add-on dengan menggunakan nama pengguna/kata sandi Third Eye mereka. Lencana ini menunjukkan bahwa pembuat add-on meminta kemampuan ini.",
+                        "title": "Autentikasi Third Eye"
                     },
                     "docker_api": {
-                        "description": "Penulis add-on telah meminta add-on untuk memiliki akses manajemen ke instans Docker yang berjalan di sistem Anda. Mode ini memberi add-on akses dan kontrol penuh ke seluruh sistem Home Assistant Anda, yang meningkatkan risiko keamanan dan dapat merusak sistem Anda jika disalahgunakan. Oleh karena itu, fitur ini berdampak negatif pada skor keamanan add-on. \n\nTingkat akses ini tidak diberikan secara otomatis dan harus Anda konfirmasikan terlebih dulu. Untuk melakukannya, Anda perlu menonaktifkan mode perlindungan pada add-on secara manual. Nonaktifkan mode perlindungan hanya jika Anda benar-benar berpengalaman, membutuhkan, DAN mempercayai sumber add-on ini.",
+                        "description": "Penulis add-on telah meminta add-on untuk memiliki akses manajemen ke instans Docker yang berjalan di sistem Anda. Mode ini memberi add-on akses dan kontrol penuh ke seluruh sistem Third Eye Anda, yang meningkatkan risiko keamanan dan dapat merusak sistem Anda jika disalahgunakan. Oleh karena itu, fitur ini berdampak negatif pada skor keamanan add-on. \n\nTingkat akses ini tidak diberikan secara otomatis dan harus Anda konfirmasikan terlebih dulu. Untuk melakukannya, Anda perlu menonaktifkan mode perlindungan pada add-on secara manual. Nonaktifkan mode perlindungan hanya jika Anda benar-benar berpengalaman, membutuhkan, DAN mempercayai sumber add-on ini.",
                         "title": "Akses Docker Penuh"
                     },
                     "full_access": {
@@ -158,23 +158,23 @@
                         "title": "Akses Perangkat Keras Penuh"
                     },
                     "hassio_api": {
-                        "description": "Add-on diberi akses ke API Supervisor, atas permintaan penulis add-on. Secara baku, add-on dapat mengakses informasi versi umum sistem Anda. Saat add-on meminta akses level 'manajer' atau 'admin' ke API, add-on tersebut akan mendapatkan akses untuk mengontrol beberapa bagian sistem Home Assistant Anda. Izin ini ditunjukkan oleh lencana ini dan akan berdampak negatif pada skor keamanan add-on.",
+                        "description": "Add-on diberi akses ke API Supervisor, atas permintaan penulis add-on. Secara baku, add-on dapat mengakses informasi versi umum sistem Anda. Saat add-on meminta akses level 'manajer' atau 'admin' ke API, add-on tersebut akan mendapatkan akses untuk mengontrol beberapa bagian sistem Third Eye Anda. Izin ini ditunjukkan oleh lencana ini dan akan berdampak negatif pada skor keamanan add-on.",
                         "title": "Akses API Supervisor"
                     },
                     "homeassistant_api": {
-                        "description": "Add-on ini diizinkan untuk mengakses instans Home Assistant Anda yang sedang berjalan secara langsung melalui API Home Assistant. Mode ini juga menangani autentikasi untuk add-on, yang memungkinkan add-on berinteraksi dengan Home Assistant tanpa memerlukan token autentikasi tambahan.",
-                        "title": "Akses API Home Assistant"
+                        "description": "Add-on ini diizinkan untuk mengakses instans Third Eye Anda yang sedang berjalan secara langsung melalui API Third Eye. Mode ini juga menangani autentikasi untuk add-on, yang memungkinkan add-on berinteraksi dengan Third Eye tanpa memerlukan token autentikasi tambahan.",
+                        "title": "Akses API Third Eye"
                     },
                     "host_network": {
                         "description": "Add-on biasanya berjalan di lapisan jaringannya sendiri yang terisolasi, yang mencegahnya mengakses jaringan sistem operasi host. Dalam beberapa kasus, isolasi jaringan ini dapat membatasi add-on dalam menyediakan layanannya dan oleh karena itu, izin isolasi tersebut dapat dicabut oleh pembuat add-on, sehingga memberikan akses penuh add-on ke kemampuan jaringan mesin host. Ini memberi add-on lebih banyak kemampuan jaringan tetapi menurunkan tingkat keamanan. Oleh karena itu, peringkat keamanan add-on akan diturunkan ketika opsi ini digunakan oleh add-on.",
                         "title": "Jaringan Host"
                     },
                     "host_pid": {
-                        "description": "Pada umumnya, proses add-on yang berjalan diisolasi dari semua proses sistem lainnya. Penulis add-on telah meminta add-on untuk memiliki akses ke proses sistem yang berjalan pada instans sistem host, dan mengizinkan add-on untuk juga menelurkan proses pada sistem host. Mode ini memberi add-on akses dan kontrol penuh ke seluruh sistem Home Assistant Anda, yang meningkatkan risiko keamanan dan dapat merusak sistem Anda jika disalahgunakan. Oleh karena itu, fitur ini berdampak negatif pada skor keamanan add-on. \n\nTingkat akses ini tidak diberikan secara otomatis dan harus Anda konfirmasikan terlebih dulu. Untuk melakukannya, Anda perlu menonaktifkan mode perlindungan pada add-on secara manual. Nonaktifkan mode perlindungan hanya jika Anda benar-benar berpengalaman, membutuhkan, DAN mempercayai sumber add-on ini.",
+                        "description": "Pada umumnya, proses add-on yang berjalan diisolasi dari semua proses sistem lainnya. Penulis add-on telah meminta add-on untuk memiliki akses ke proses sistem yang berjalan pada instans sistem host, dan mengizinkan add-on untuk juga menelurkan proses pada sistem host. Mode ini memberi add-on akses dan kontrol penuh ke seluruh sistem Third Eye Anda, yang meningkatkan risiko keamanan dan dapat merusak sistem Anda jika disalahgunakan. Oleh karena itu, fitur ini berdampak negatif pada skor keamanan add-on. \n\nTingkat akses ini tidak diberikan secara otomatis dan harus Anda konfirmasikan terlebih dulu. Untuk melakukannya, Anda perlu menonaktifkan mode perlindungan pada add-on secara manual. Nonaktifkan mode perlindungan hanya jika Anda benar-benar berpengalaman, membutuhkan, DAN mempercayai sumber add-on ini.",
                         "title": "Namespace Proses Host"
                     },
                     "ingress": {
-                        "description": "Add-on ini menggunakan Ingress untuk menyematkan antarmukanya dengan aman ke Home Assistant.",
+                        "description": "Add-on ini menggunakan Ingress untuk menyematkan antarmukanya dengan aman ke Third Eye.",
                         "title": "Ingress"
                     },
                     "label": {
@@ -192,7 +192,7 @@
                         "stage": "tahap"
                     },
                     "rating": {
-                        "description": "Home Assistant memberikan peringkat keamanan untuk setiap add-on, yang menunjukkan risiko yang terlibat saat menggunakan add-on ini. Semakin banyak akses yang diperlukan add-on pada sistem Anda, semakin rendah skornya, sehingga meningkatkan kemungkinan risiko keamanan. \n\nSkor diberikan dalam skala dari 1 hingga 6. Skor 1 adalah skor terendah (dianggap paling tidak aman dan berisiko tertinggi) dan skor 6 adalah skor tertinggi (dianggap paling aman dan berisiko terendah).",
+                        "description": "Third Eye memberikan peringkat keamanan untuk setiap add-on, yang menunjukkan risiko yang terlibat saat menggunakan add-on ini. Semakin banyak akses yang diperlukan add-on pada sistem Anda, semakin rendah skornya, sehingga meningkatkan kemungkinan risiko keamanan. \n\nSkor diberikan dalam skala dari 1 hingga 6. Skor 1 adalah skor terendah (dianggap paling tidak aman dan berisiko tertinggi) dan skor 6 adalah skor tertinggi (dianggap paling aman dan berisiko terendah).",
                         "title": "Peringkat Keamanan Add-on"
                     },
                     "role": {
@@ -217,7 +217,7 @@
                 "install": "instal",
                 "new_update_available": "{name} {version} tersedia",
                 "not_available_arch": "Add-on ini tidak kompatibel dengan prosesor perangkat Anda atau sistem operasi yang Anda instal di perangkat.",
-                "not_available_version": "Anda menjalanan Home Assistant {core_version_installed}. Untuk memperbarui ke versi add-on ini, Anda memerlukan Home Assistant setidaknya versi {core_version_needed}",
+                "not_available_version": "Anda menjalanan Third Eye {core_version_installed}. Untuk memperbarui ke versi add-on ini, Anda memerlukan Third Eye setidaknya versi {core_version_needed}",
                 "open_web_ui": "Buka antarmuka web",
                 "option": {
                     "auto_update": {
@@ -357,7 +357,7 @@
         "dialog": {
             "datadisk_move": {
                 "cancel": "Batalkan",
-                "description": "Anda sedang menggunakan ''{current_path}'' sebagai datadisk. Memindahkan disk data akan memulai ulang perangkat Anda dan diperkirakan memakan waktu {time} menit. Instalasi Home Assistant Anda tidak akan dapat diakses selama periode ini. Jangan lepaskan daya selama proses pemindahan!",
+                "description": "Anda sedang menggunakan ''{current_path}'' sebagai datadisk. Memindahkan disk data akan memulai ulang perangkat Anda dan diperkirakan memakan waktu {time} menit. Instalasi Third Eye Anda tidak akan dapat diakses selama periode ini. Jangan lepaskan daya selama proses pemindahan!",
                 "loading_devices": "Memuat perangkat",
                 "move": "Pindahkan",
                 "moving": "Memindahkan disk data",
@@ -427,8 +427,8 @@
             "error_addon_not_found": "Add-on tidak ditemukan",
             "error_addon_not_installed": "Add-on yang diminta belum diinstal. Instal terlebih dahulu",
             "error_addon_not_started": "Add-on yang diminta tidak berjalan. Jalankan terlebih dulu",
-            "faq_link": "FAQ Home Assistant Saya",
-            "not_supported": "Pengalihan ini tidak didukung oleh instans Home Assistant Anda. Periksa {link} tentang pengalihan yang didukung dan versi mana mulai diperkenalkan."
+            "faq_link": "FAQ Third Eye Saya",
+            "not_supported": "Pengalihan ini tidak didukung oleh instans Third Eye Anda. Periksa {link} tentang pengalihan yang didukung dan versi mana mulai diperkenalkan."
         },
         "panel": {
             "addons": "Add-on",
@@ -488,16 +488,16 @@
                 "failed_to_set_option": "Gagal menyetel opsi Supervisor",
                 "failed_to_update": "Gagal memperbarui Supervisor",
                 "join_beta_action": "Gabung dengan kanal beta",
-                "join_beta_description": "Dapatkan pembaruan beta untuk Home Assistant (RC), Supervisor, dan host",
+                "join_beta_description": "Dapatkan pembaruan beta untuk Third Eye (RC), Supervisor, dan host",
                 "leave_beta_action": "Tinggalkan kanal beta",
-                "leave_beta_description": "Dapatkan pembaruan stabil untuk Home Assistant, Supervisor, dan host",
+                "leave_beta_description": "Dapatkan pembaruan stabil untuk Third Eye, Supervisor, dan host",
                 "ram_usage": "Penggunaan RAM Supervisor",
                 "reload_supervisor": "Muat Ulang Supervisor",
                 "search": "Cari",
                 "share_diagnostics": "Bagikan Diagnostik",
                 "share_diagnostics_description": "Bagikan laporan kerusakan dan informasi diagnostik.",
-                "share_diagonstics_description": "Apakah Anda ingin membagikan laporan kerusakan dan informasi diagnostik secara otomatis saat Supervisor menemukan kesalahan yang tidak terduga? {line_break} Ini akan memungkinkan kami memperbaiki masalah. Informasinya hanya dapat diakses oleh tim Home Assistant Core dan tidak akan dibagikan dengan orang lain. {line_break} Data tidak menyertakan informasi pribadi/sensitif dan Anda dapat menonaktifkannya di setelan kapan saja.",
-                "share_diagonstics_title": "Bantu Menyempurnakan Home Assistant",
+                "share_diagonstics_description": "Apakah Anda ingin membagikan laporan kerusakan dan informasi diagnostik secara otomatis saat Supervisor menemukan kesalahan yang tidak terduga? {line_break} Ini akan memungkinkan kami memperbaiki masalah. Informasinya hanya dapat diakses oleh tim Third Eye Core dan tidak akan dibagikan dengan orang lain. {line_break} Data tidak menyertakan informasi pribadi/sensitif dan Anda dapat menonaktifkannya di setelan kapan saja.",
+                "share_diagonstics_title": "Bantu Menyempurnakan Third Eye",
                 "unhealthy_description": "Menjalankan penginstalan yang tidak sehat akan menyebabkan masalah. Di bawah ini adalah daftar masalah yang ditemukan pada instalasi Anda, klik pada tautan untuk mempelajari cara menyelesaikan masalah tersebut.",
                 "unhealthy_reason": {
                     "docker": "Lingkungan Docker tidak berfungsi dengan benar",
@@ -1025,9 +1025,9 @@
             "config_entry_system_options": {
                 "enable_new_entities_description": "Apakah perangkat baru yang ditemukan untuk integrasi {integration} akan ditambahkan secara otomatis.",
                 "enable_new_entities_label": "Aktifkan entitas yang baru ditambahkan.",
-                "enable_polling_description": "Apakah Home Assistant harus melakukan polling {integration} secara otomatis untuk pembaruan.",
+                "enable_polling_description": "Apakah Third Eye harus melakukan polling {integration} secara otomatis untuk pembaruan.",
                 "enable_polling_label": "Aktifkan polling untuk pembaruan.",
-                "restart_home_assistant": "Anda perlu memulai ulang Home Assistant agar perubahan diterapkan.",
+                "restart_home_assistant": "Anda perlu memulai ulang Third Eye agar perubahan diterapkan.",
                 "title": "Opsi Sistem untuk {integration}",
                 "update": "Perbarui"
             },
@@ -1062,10 +1062,10 @@
                     },
                     "device_disabled": "Perangkat entitas ini dinonaktifkan.",
                     "enabled_cause": "Dinonaktifkan oleh {cause}.",
-                    "enabled_delay_confirm": "Entitas yang diaktifkan akan ditambahkan ke Home Assistant dalam {delay} detik",
-                    "enabled_description": "Entitas yang dinonaktifkan tidak akan ditambahkan ke Home Assistant",
+                    "enabled_delay_confirm": "Entitas yang diaktifkan akan ditambahkan ke Third Eye dalam {delay} detik",
+                    "enabled_description": "Entitas yang dinonaktifkan tidak akan ditambahkan ke Third Eye",
                     "enabled_label": "Aktifkan entitas",
-                    "enabled_restart_confirm": "Mulai ulang Home Assistant untuk mengaktifkan entitas",
+                    "enabled_restart_confirm": "Mulai ulang Third Eye untuk mengaktifkan entitas",
                     "entity_id": "ID Entitas",
                     "follow_device_area": "Ikuti area perangkat",
                     "icon": "Ikon",
@@ -1093,7 +1093,7 @@
                     "initial": "Nilai awal",
                     "maximum": "Nilai maksimum",
                     "minimum": "Nilai minimum",
-                    "restore": "Kembalikan nilai terakhir yang diketahui saat Home Assistant dimulai",
+                    "restore": "Kembalikan nilai terakhir yang diketahui saat Third Eye dimulai",
                     "step": "Jumlah langkah"
                 },
                 "generic": {
@@ -1289,7 +1289,7 @@
                 "filter_placeholder": "Filter Entitas"
             },
             "voice_command": {
-                "did_not_hear": "Home Assistant tidak mendengar apa-apa",
+                "did_not_hear": "Third Eye tidak mendengar apa-apa",
                 "error": "Ups, kesalahan terjadi",
                 "found": "Saya menemukan yang berikut untuk Anda:",
                 "how_can_i_help": "Bagaimana saya bisa membantu?",
@@ -1392,8 +1392,8 @@
             "dismiss": "Tutup",
             "integration_starting": "Memulai {integration}, tidak semuanya akan tersedia hingga prosesnya selesai.",
             "service_call_failed": "Gagal memanggil layanan {service}.",
-            "started": "Home Assistant telah dimulai!",
-            "starting": "Home Assistant sedang dimulai, belum semuanya akan tersedia hingga selesai.",
+            "started": "Third Eye telah dimulai!",
+            "starting": "Third Eye sedang dimulai, belum semuanya akan tersedia hingga selesai.",
             "triggered": "Dipicu {name}",
             "wrapping_up_startup": "Menyelesaikan proses mulai, tidak semuanya akan tersedia hingga prosesnya selesai."
         },
@@ -1433,7 +1433,7 @@
                         "create_area": "Buat Area",
                         "header": "Area",
                         "integrations_page": "Halaman integrasi",
-                        "introduction": "Area digunakan untuk mengatur lokasi perangkat. Informasi ini akan digunakan dalam Home Assistant untuk membantu Anda mengatur antarmuka, izin, dan integrasi Anda dengan sistem lain.",
+                        "introduction": "Area digunakan untuk mengatur lokasi perangkat. Informasi ini akan digunakan dalam Third Eye untuk membantu Anda mengatur antarmuka, izin, dan integrasi Anda dengan sistem lain.",
                         "introduction2": "Untuk menempatkan perangkat di suatu area, gunakan tautan di bawah untuk membuka halaman integrasi, lalu klik integrasi yang dikonfigurasi untuk mendapatkan kartu perangkat.",
                         "no_areas": "Sepertinya Anda belum memiliki area!"
                     }
@@ -1463,7 +1463,7 @@
                             "delete_confirm": "Yakin ingin menghapus?",
                             "duplicate": "Gandakan",
                             "header": "Aksi",
-                            "introduction": "Aksi adalah hal yang dilakukan Home Assistant ketika otomasi terpicu.",
+                            "introduction": "Aksi adalah hal yang dilakukan Third Eye ketika otomasi terpicu.",
                             "learn_more": "Pelajari lebih lanjut tentang aksi",
                             "name": "Aksi",
                             "type": {
@@ -1668,7 +1668,7 @@
                             "duplicate": "Gandakan",
                             "header": "Pemicu",
                             "id": "ID pemicu (digunakan oleh kondisi pemicu)",
-                            "introduction": "Pemicu adalah hal yang memulai pemrosesan aturan otomasi. Beberapa pemicu bisa ditentukan untuk aturan yang sama. Setelah pemicu dimulai, Home Assistant akan memvalidasi kondisi, dan jika memenuhi, akan memanggil aksi.",
+                            "introduction": "Pemicu adalah hal yang memulai pemrosesan aturan otomasi. Beberapa pemicu bisa ditentukan untuk aturan yang sama. Setelah pemicu dimulai, Third Eye akan memvalidasi kondisi, dan jika memenuhi, akan memanggil aksi.",
                             "learn_more": "Pelajari lebih lanjut tentang pemicu",
                             "name": "Pemicu",
                             "type": {
@@ -1700,7 +1700,7 @@
                                 },
                                 "homeassistant": {
                                     "event": "Peristiwa:",
-                                    "label": "Home Assistant",
+                                    "label": "Third Eye",
                                     "shutdown": "Matikan",
                                     "start": "Mulai"
                                 },
@@ -1779,7 +1779,7 @@
                         "headers": {
                             "name": "Nama"
                         },
-                        "introduction": "Editor otomasi memungkinkan Anda membuat dan mengedit otomasi. Ikuti tautan di bawah ini untuk membaca instruksi untuk memastikan bahwa Anda telah mengonfigurasi Home Assistant dengan benar.",
+                        "introduction": "Editor otomasi memungkinkan Anda membuat dan mengedit otomasi. Ikuti tautan di bawah ini untuk membaca instruksi untuk memastikan bahwa Anda telah mengonfigurasi Third Eye dengan benar.",
                         "learn_more": "Pelajari lebih lanjut tentang otomasi",
                         "no_automations": "Kami tidak dapat menemukan otomasi",
                         "only_editable": "Hanya otomasi yang didefinisikan di automations.yaml yang bisa diedit.",
@@ -1798,7 +1798,7 @@
                             "error_unsupported": "Kami (masih?) belum dapat membuat otomasi untuk itu.",
                             "for_example": "Misalnya:",
                             "header": "Buat otomasi baru",
-                            "introduction": "Ketik di bawah ini apa yang harus dilakukan oleh otomasi ini, dan kami akan mencoba mengubahnya menjadi otomasi Home Assistant.",
+                            "introduction": "Ketik di bawah ini apa yang harus dilakukan oleh otomasi ini, dan kami akan mencoba mengubahnya menjadi otomasi Third Eye.",
                             "language_note": "Catatan: Saat ini hanya bahasa Inggris yang didukung."
                         }
                     },
@@ -1860,10 +1860,10 @@
                             "config_documentation": "Dokumentasi konfigurasi",
                             "disable": "menonaktifkan",
                             "enable": "mengaktifkan",
-                            "enable_ha_skill": "Aktifkan keterampilan Home Assistant untuk Alexa",
+                            "enable_ha_skill": "Aktifkan keterampilan Third Eye untuk Alexa",
                             "enable_state_reporting": "Aktifkan Pelaporan Status",
-                            "info": "Dengan integrasi Alexa untuk Home Assistant Cloud, Anda akan dapat mengontrol semua perangkat Home Assistant melalui perangkat yang mendukung Alexa.",
-                            "info_state_reporting": "Jika Anda mengaktifkan pelaporan status, Home Assistant akan mengirim semua perubahan status entitas yang terpapar ke Amazon. Ini memungkinkan Anda untuk selalu melihat status terbaru di aplikasi Alexa dan menggunakan perubahan status untuk membuat rutinitas.",
+                            "info": "Dengan integrasi Alexa untuk Third Eye Cloud, Anda akan dapat mengontrol semua perangkat Third Eye melalui perangkat yang mendukung Alexa.",
+                            "info_state_reporting": "Jika Anda mengaktifkan pelaporan status, Third Eye akan mengirim semua perubahan status entitas yang terpapar ke Amazon. Ini memungkinkan Anda untuk selalu melihat status terbaru di aplikasi Alexa dan menggunakan perubahan status untuk membuat rutinitas.",
                             "manage_entities": "Kelola Entitas",
                             "state_reporting_error": "Tidak dapat {enable_disable} status laporan.",
                             "sync_entities": "Sinkronkan Entitas ke Amazon",
@@ -1877,15 +1877,15 @@
                         "google": {
                             "config_documentation": "Dokumentasi konfigurasi",
                             "devices_pin": "PIN Perangkat Keamanan",
-                            "enable_ha_skill": "Aktifkan keterampilan Home Assistant untuk Google Assistant",
+                            "enable_ha_skill": "Aktifkan keterampilan Third Eye untuk Google Assistant",
                             "enable_state_reporting": "Aktifkan Pelaporan Status",
                             "enter_pin_error": "Tidak dapat menyimpan PIN:",
                             "enter_pin_hint": "Masukkan PIN untuk menggunakan perangkat keamanan",
                             "enter_pin_info": "Masukkan PIN untuk berinteraksi dengan perangkat keamanan. Contoh perangkat keamanan adalah pintu, pintu garasi, dan kunci. Anda akan diminta untuk mengucapkan/memasukkan PIN ini saat berinteraksi dengan perangkat tersebut melalui Google Assistant.",
-                            "info": "Dengan integrasi Google Assistant untuk Home Assistant Cloud, Anda akan dapat mengontrol semua perangkat Home Assistant melalui perangkat yang mendukung Home Assistant.",
-                            "info_state_reporting": "Jika Anda mengaktifkan pelaporan status, Home Assistant akan mengirim semua perubahan status entitas yang terpapar ke Google. Ini memungkinkan Anda untuk selalu melihat status terbaru di aplikasi Google.",
+                            "info": "Dengan integrasi Google Assistant untuk Third Eye Cloud, Anda akan dapat mengontrol semua perangkat Third Eye melalui perangkat yang mendukung Third Eye.",
+                            "info_state_reporting": "Jika Anda mengaktifkan pelaporan status, Third Eye akan mengirim semua perubahan status entitas yang terpapar ke Google. Ini memungkinkan Anda untuk selalu melihat status terbaru di aplikasi Google.",
                             "manage_entities": "Kelola Entitas",
-                            "not_configured_text": "Sebelum dapat menggunakan Asisten Google, Anda harus mengaktifkan keterampilan Home Assistant Cloud untuk Asisten Google di aplikasi Google Home.",
+                            "not_configured_text": "Sebelum dapat menggunakan Asisten Google, Anda harus mengaktifkan keterampilan Third Eye Cloud untuk Asisten Google di aplikasi Google Home.",
                             "not_configured_title": "Asisten Google tidak diaktifkan",
                             "security_devices": "Perangkat Keamanan",
                             "sync_entities": "Sinkronkan Entitas ke Google",
@@ -1893,7 +1893,7 @@
                             "title": "Google Assistant"
                         },
                         "integrations": "Integrasi",
-                        "integrations_introduction": "Integrasi untuk Home Assistant Cloud memungkinkan Anda terhubung dengan layanan di cloud tanpa harus memaparkan instans Home Assistant Anda secara publik di internet.",
+                        "integrations_introduction": "Integrasi untuk Third Eye Cloud memungkinkan Anda terhubung dengan layanan di cloud tanpa harus memaparkan instans Third Eye Anda secara publik di internet.",
                         "integrations_introduction2": "Buka situs web ",
                         "integrations_link_all_features": " semua fitur yang tersedia",
                         "manage_account": "Kelola Akun",
@@ -1903,7 +1903,7 @@
                             "access_is_being_prepared": "Akses jarak jauh sedang disiapkan. Kami akan memberi tahu Anda jika sudah siap.",
                             "certificate_info": "Info Sertifikat",
                             "connected": "Terhubung",
-                            "info": "Home Assistant Cloud menyediakan koneksi jarak jauh yang aman ke instans Anda saat jauh dari rumah.",
+                            "info": "Third Eye Cloud menyediakan koneksi jarak jauh yang aman ke instans Anda saat jauh dari rumah.",
                             "instance_is_available": "Instans Anda tersedia di",
                             "instance_will_be_available": "Instans Anda akan tersedia di",
                             "link_learn_how_it_works": "Pelajari cara kerjanya",
@@ -1911,12 +1911,12 @@
                             "reconnecting": "Tidak terhubung. Mencoba menghubungkan kembali.",
                             "remote_enabled": {
                                 "caption": "Terhubung secara otomatis",
-                                "description": "Aktifkan opsi ini untuk memastikan instans Home Assistant Anda selalu dapat diakses dari jarak jauh."
+                                "description": "Aktifkan opsi ini untuk memastikan instans Third Eye Anda selalu dapat diakses dari jarak jauh."
                             },
                             "title": "Kontrol Jarak Jauh"
                         },
                         "sign_out": "Keluar",
-                        "thank_you_note": "Terima kasih telah menjadi bagian dari Home Assistant Cloud. Berkat orang-orang seperti Anda, kami dapat membuat pengalaman otomasi rumah yang hebat untuk semua orang. Terima kasih!",
+                        "thank_you_note": "Terima kasih telah menjadi bagian dari Third Eye Cloud. Berkat orang-orang seperti Anda, kami dapat membuat pengalaman otomasi rumah yang hebat untuk semua orang. Terima kasih!",
                         "tts": {
                             "default_language": "Bahasa baku untuk digunakan",
                             "dialog": {
@@ -1934,7 +1934,7 @@
                         },
                         "webhooks": {
                             "disable_hook_error_msg": "Gagal menonaktifkan webhook:",
-                            "info": "Semua yang dikonfigurasi untuk dipicu oleh webhook dapat ditetapkan URL-nya, yang dapat diakses publik untuk memungkinkan Anda mengirim data kembali ke Home Assistant dari mana saja, tanpa mengekspos instans Anda ke internet.",
+                            "info": "Semua yang dikonfigurasi untuk dipicu oleh webhook dapat ditetapkan URL-nya, yang dapat diakses publik untuk memungkinkan Anda mengirim data kembali ke Third Eye dari mana saja, tanpa mengekspos instans Anda ke internet.",
                             "link_learn_more": "Pelajari lebih lanjut tentang membuat otomasi yang didukung webhook.",
                             "loading": "Memuat…",
                             "manage": "Kelola",
@@ -2010,11 +2010,11 @@
                         "email": "Email",
                         "email_error_msg": "Email tidak valid",
                         "forgot_password": "Lupa kata sandi?",
-                        "introduction": "Home Assistant Cloud memberi Anda koneksi jarak jauh yang aman ke instans Anda saat jauh dari rumah. Ini juga memungkinkan Anda untuk terhubung dengan layanan khusus cloud: Amazon Alexa dan Google Assistant.",
+                        "introduction": "Third Eye Cloud memberi Anda koneksi jarak jauh yang aman ke instans Anda saat jauh dari rumah. Ini juga memungkinkan Anda untuk terhubung dengan layanan khusus cloud: Amazon Alexa dan Google Assistant.",
                         "introduction2": "Layanan ini dijalankan oleh mitra kami",
-                        "introduction2a": ", sebuah perusahaan yang didirikan oleh pendiri Home Assistant.",
-                        "introduction3": "Home Assistant Cloud adalah layanan berlangganan dengan uji coba gratis selama satu bulan. Tidak ada informasi pembayaran yang diperlukan.",
-                        "learn_more_link": "Pelajari lebih lanjut tentang Home Assistant Cloud",
+                        "introduction2a": ", sebuah perusahaan yang didirikan oleh pendiri Third Eye.",
+                        "introduction3": "Third Eye Cloud adalah layanan berlangganan dengan uji coba gratis selama satu bulan. Tidak ada informasi pembayaran yang diperlukan.",
+                        "learn_more_link": "Pelajari lebih lanjut tentang Third Eye Cloud",
                         "password": "Kata sandi",
                         "password_error_msg": "Panjang minimal kata sandi adalah 8 karakter",
                         "sign_in": "Masuk",
@@ -2029,13 +2029,13 @@
                         "email_error_msg": "Email tidak valid",
                         "feature_amazon_alexa": "Integrasi dengan Amazon Alexa",
                         "feature_google_home": "Integrasi dengan Google Assistant",
-                        "feature_remote_control": "Kontrol jarak jauh Home Assistant",
+                        "feature_remote_control": "Kontrol jarak jauh Third Eye",
                         "feature_webhook_apps": "Integrasi yang mudah dengan aplikasi berbasis webhook seperti OwnTracks",
                         "headline": "Mulai uji coba gratis Anda",
-                        "information": "Buat akun untuk memulai uji coba gratis selama satu bulan dengan Home Assistant Cloud. Tidak ada informasi pembayaran yang diperlukan.",
-                        "information2": "Uji coba ini akan memberi Anda akses ke semua manfaat Home Assistant Cloud, termasuk:",
+                        "information": "Buat akun untuk memulai uji coba gratis selama satu bulan dengan Third Eye Cloud. Tidak ada informasi pembayaran yang diperlukan.",
+                        "information2": "Uji coba ini akan memberi Anda akses ke semua manfaat Third Eye Cloud, termasuk:",
                         "information3": "Layanan ini dijalankan oleh mitra kami",
-                        "information3a": ", sebuah perusahaan yang didirikan oleh pendiri Home Assistant.",
+                        "information3a": ", sebuah perusahaan yang didirikan oleh pendiri Third Eye.",
                         "information4": "Dengan mendaftarkan akun, Anda menyetujui syarat dan ketentuan berikut.",
                         "link_privacy_policy": "Kebijakan Privasi",
                         "link_terms_conditions": "Syarat dan Ketentuan",
@@ -2067,7 +2067,7 @@
                                 "imperial_example": "Fahrenheit, pound",
                                 "internal_url": "URL internal",
                                 "latitude": "Lintang",
-                                "location_name": "Beri nama instalasi Home Assistant Anda",
+                                "location_name": "Beri nama instalasi Third Eye Anda",
                                 "longitude": "Bujur",
                                 "metric_example": "Celcius, kilogram",
                                 "save_button": "Simpan",
@@ -2128,7 +2128,7 @@
                         "title": "Energi"
                     },
                     "people": {
-                        "description": "Kelola orang dan zona yang dilacak oleh Home Assistant",
+                        "description": "Kelola orang dan zona yang dilacak oleh Third Eye",
                         "title": "Orang & Zona"
                     },
                     "settings": {
@@ -2196,7 +2196,7 @@
                     },
                     "edit_settings": "Edit pengaturan",
                     "enabled_cause": "Perangkat dinonaktifkan oleh {cause} .",
-                    "enabled_description": "Perangkat yang dinonaktifkan tidak akan ditampilkan dan entitas milik perangkat akan dinonaktifkan dan tidak ditambahkan ke Home Assistant.",
+                    "enabled_description": "Perangkat yang dinonaktifkan tidak akan ditampilkan dan entitas milik perangkat akan dinonaktifkan dan tidak ditambahkan ke Third Eye.",
                     "enabled_label": "Aktifkan perangkat",
                     "entities": {
                         "add_entities_lovelace": "Tambahkan ke Lovelace",
@@ -2270,7 +2270,7 @@
                         },
                         "learn_more": "Informasi lebih lanjut tentang cara memulai.",
                         "selected_stat": "Melacak energi untuk",
-                        "sub": "Melacak penggunaan energi masing-masing perangkat memungkinkan Home Assistant untuk memecah penggunaan energi Anda berdasarkan perangkat.",
+                        "sub": "Melacak penggunaan energi masing-masing perangkat memungkinkan Third Eye untuk memecah penggunaan energi Anda berdasarkan perangkat.",
                         "title": "Perangkat individual"
                     },
                     "gas": {
@@ -2293,7 +2293,7 @@
                         },
                         "gas_consumption": "Konsumsi gas",
                         "learn_more": "Informasi lebih lanjut tentang cara memulai.",
-                        "sub": "Biarkan Home Assistant memantau penggunaan gas Anda.",
+                        "sub": "Biarkan Third Eye memantau penggunaan gas Anda.",
                         "title": "Konsumsi Gas"
                     },
                     "grid": {
@@ -2334,7 +2334,7 @@
                         "grid_consumption": "Konsumsi jaringan",
                         "learn_more": "Informasi lebih lanjut tentang cara memulai.",
                         "return_to_grid": "Kembali ke jaringan",
-                        "sub": "Konfigurasikan jumlah energi yang Anda konsumsi dari jaringan dan jika Anda menghasilkan energi, berikan kembali ke jaringan. Ini memungkinkan Home Assistant untuk melacak seluruh penggunaan energi rumah Anda.",
+                        "sub": "Konfigurasikan jumlah energi yang Anda konsumsi dari jaringan dan jika Anda menghasilkan energi, berikan kembali ke jaringan. Ini memungkinkan Third Eye untuk melacak seluruh penggunaan energi rumah Anda.",
                         "title": "Jaringan listrik"
                     },
                     "new_device_info": "Setelah menyiapkan perangkat baru, diperlukan waktu hingga 2 jam agar data baru tiba di dasbor energi Anda.",
@@ -2354,7 +2354,7 @@
                         "stat_predicted_production": "Prediksi produksi energi surya Anda",
                         "stat_production": "Produksi energi surya Anda",
                         "stat_return_to_grid": "Energi surya kembali ke jaringan",
-                        "sub": "Biarkan Home Assistant memantau panel surya Anda dan menyediakan wawasan tentang kinerjanya.",
+                        "sub": "Biarkan Third Eye memantau panel surya Anda dan menyediakan wawasan tentang kinerjanya.",
                         "title": "Panel Surya"
                     },
                     "validation": {
@@ -2420,12 +2420,12 @@
                     "picker": {
                         "disable_selected": {
                             "button": "Nonaktifkan yang dipilih",
-                            "confirm_text": "Entitas yang dinonaktifkan tidak akan ditambahkan ke Home Assistant",
+                            "confirm_text": "Entitas yang dinonaktifkan tidak akan ditambahkan ke Third Eye",
                             "confirm_title": "Ingin menonaktifkan {number} {number, plural,\n  one {entitas}\n  other {entitas}\n}?"
                         },
                         "enable_selected": {
                             "button": "Aktifkan yang dipilih",
-                            "confirm_text": "Ini akan membuatnya tersedia lagi di Home Assistant jika saat ini sedang nonaktif.",
+                            "confirm_text": "Ini akan membuatnya tersedia lagi di Third Eye jika saat ini sedang nonaktif.",
                             "confirm_title": "Ingin mengaktifkan {number} {number, plural,\n  one {entitas}\n  other {entitas}\n}?"
                         },
                         "filter": {
@@ -2445,11 +2445,11 @@
                             "name": "Nama",
                             "status": "Status"
                         },
-                        "introduction": "Home Assistant menyimpan registri dari setiap entitas yang pernah dilihatnya, yang dapat diidentifikasi secara unik. Masing-masing entitas ini akan memiliki ID entitas yang ditetapkan yang hanya akan digunakan untuk entitas ini.",
-                        "introduction2": "Gunakan registri entitas untuk mengganti nama, mengubah ID entitas, atau menghapus entri dari Home Assistant.",
+                        "introduction": "Third Eye menyimpan registri dari setiap entitas yang pernah dilihatnya, yang dapat diidentifikasi secara unik. Masing-masing entitas ini akan memiliki ID entitas yang ditetapkan yang hanya akan digunakan untuk entitas ini.",
+                        "introduction2": "Gunakan registri entitas untuk mengganti nama, mengubah ID entitas, atau menghapus entri dari Third Eye.",
                         "remove_selected": {
                             "button": "Hapus yang dipilih",
-                            "confirm_partly_text": "Anda hanya dapat menghapus {removable} dari {selected} entitas yang dipilih. Entitas hanya dapat dihapus ketika integrasi tidak lagi menyediakan entitas. Terkadang Anda harus memulai ulang Home Assistant sebelum dapat menghapus entitas integrasi yang dihapus. Yakin ingin menghapus entitas yang bisa dilepas?",
+                            "confirm_partly_text": "Anda hanya dapat menghapus {removable} dari {selected} entitas yang dipilih. Entitas hanya dapat dihapus ketika integrasi tidak lagi menyediakan entitas. Terkadang Anda harus memulai ulang Third Eye sebelum dapat menghapus entitas integrasi yang dihapus. Yakin ingin menghapus entitas yang bisa dilepas?",
                             "confirm_partly_title": "Hanya {number} {number, plural,\n  one {entitas terpilih}\n  other {entitas terpilih}\n} yang bisa dihapus.",
                             "confirm_text": "Anda harus menghapusnya dari konfigurasi dan otomasi Lovelace yang mengandung entitas ini.",
                             "confirm_title": "Ingin menghapus {number} {number, plural,\n  one {entitas}\n  other {entitas}\n}?"
@@ -2465,7 +2465,7 @@
                         }
                     }
                 },
-                "header": "Mengonfigurasi Home Assistant",
+                "header": "Mengonfigurasi Third Eye",
                 "helpers": {
                     "caption": "Pembantu",
                     "description": "Elemen yang membantu membangun otomasi",
@@ -2506,7 +2506,7 @@
                     "documentation": "Dokumentasi",
                     "frontend": "frontend-ui",
                     "frontend_version": "Versi antarmuka: {version} - {type}",
-                    "home_assistant_logo": "Logo Home Assistant",
+                    "home_assistant_logo": "Logo Third Eye",
                     "icons_by": "Ikon oleh",
                     "integrations": "Integrasi",
                     "issues": "Masalah",
@@ -2545,10 +2545,10 @@
                             "disabled_cause": "Dinonaktifkan oleh {cause}"
                         },
                         "disable_error": "Gagal mengaktifkan atau menonaktifkan integrasi",
-                        "disable_restart_confirm": "Mulai ulang Home Assistant untuk menyelesaikan penonaktifan integrasi ini",
+                        "disable_restart_confirm": "Mulai ulang Third Eye untuk menyelesaikan penonaktifan integrasi ini",
                         "disabled_polling": "Polling otomatis untuk data yang diperbarui dinonaktifkan",
                         "documentation": "Dokumentasi",
-                        "enable_restart_confirm": "Mulai ulang Home Assistant untuk menyelesaikan pengaktifan integrasi ini",
+                        "enable_restart_confirm": "Mulai ulang Third Eye untuk menyelesaikan pengaktifan integrasi ini",
                         "entities": "{count} {count, plural,\n  one {entitas}\n  other {entitas}\n}",
                         "entity_unavailable": "Entitas tidak tersedia",
                         "firmware": "Firmware: {version}",
@@ -2560,9 +2560,9 @@
                         "provided_by_custom_integration": "Disediakan oleh integrasi khusus",
                         "reload": "Muat Ulang",
                         "reload_confirm": "Integrasi telah dimuat ulang",
-                        "reload_restart_confirm": "Mulai ulang Home Assistant untuk menyelesaikan pemuatan ulang integrasi ini",
+                        "reload_restart_confirm": "Mulai ulang Third Eye untuk menyelesaikan pemuatan ulang integrasi ini",
                         "rename": "Ganti Nama",
-                        "restart_confirm": "Mulai ulang Home Assistant untuk menyelesaikan penghapusan integrasi ini",
+                        "restart_confirm": "Mulai ulang Third Eye untuk menyelesaikan penghapusan integrasi ini",
                         "services": "{count} {count, plural,\n  one {layanan}\n  other {layanan}\n}",
                         "state": {
                             "failed_unload": "Gagal membongkar",
@@ -2597,7 +2597,7 @@
                         },
                         "next": "Berikutnya",
                         "not_all_required_fields": "Belum semua bidang wajib telah terisi.",
-                        "not_loaded": "Integrasi tidak dapat dimuat, coba mulai ulang Home Assistant.",
+                        "not_loaded": "Integrasi tidak dapat dimuat, coba mulai ulang Third Eye.",
                         "pick_flow_step": {
                             "new_flow": "Tidak, siapkan instans {integration} lainnya",
                             "title": "Kami menemukan yang berikut, ingin menyiapkannya?"
@@ -2615,7 +2615,7 @@
                         "show_disabled": "Tampilkan integrasi yang dinonaktifkan"
                     },
                     "discovered": "Ditemukan",
-                    "home_assistant_website": "Situs web Home Assistant",
+                    "home_assistant_website": "Situs web Third Eye",
                     "ignore": {
                         "confirm_delete_ignore": "Ini akan membuat integrasi tampil kembali dalam integrasi yang ditemukan ketika nanti ditemukan kembali. Ini mungkin memerlukan mulai ulang atau membutuhkan beberapa saat.",
                         "confirm_delete_ignore_title": "Berhenti mengabaikan {name}?",
@@ -2640,13 +2640,13 @@
                     "rename_input_label": "Nama entri",
                     "search": "Cari integrasi"
                 },
-                "introduction": "Di layar ini, Anda dapat mengonfigurasi komponen dan Home Assistant. Tidak semuanya bisa dikonfigurasi dari antarmuka, tetapi kami terus mengembangkannya.",
+                "introduction": "Di layar ini, Anda dapat mengonfigurasi komponen dan Third Eye. Tidak semuanya bisa dikonfigurasi dari antarmuka, tetapi kami terus mengembangkannya.",
                 "logs": {
                     "caption": "Log",
                     "clear": "Bersihkan",
                     "copy": "Salin entri log",
                     "custom_integration": "integrasi khusus",
-                    "description": "Lihat log Home Assistant",
+                    "description": "Lihat log Third Eye",
                     "details": "Detail Log ({level})",
                     "error_from_custom_integration": "Kesalahan ini berasal dari integrasi khusus.",
                     "level": {
@@ -2656,7 +2656,7 @@
                         "info": "INFO",
                         "warning": "WARNING"
                     },
-                    "load_full_log": "Muat Log Lengkap Home Assistant",
+                    "load_full_log": "Muat Log Lengkap Third Eye",
                     "loading_log": "Memuat log kesalahan…",
                     "multiple_messages": "pesan pertama kali muncul pada {time} dan muncul {counter} kali",
                     "no_errors": "Tidak ada kesalahan yang dilaporkan.",
@@ -2861,7 +2861,7 @@
                     "select_instance": {
                         "header": "Pilih Instans OpenZWave",
                         "introduction": "Anda memiliki lebih dari satu instans OpenZWave yang berjalan. Instans mana yang ingin dikelola?",
-                        "none_found": "Kami tidak dapat menemukan instans OpenZWave. Jika ini salah, periksa pengaturan OpenZWave dan MQTT Anda dan pastikan Home Assistant dapat berkomunikasi dengan broker MQTT Anda."
+                        "none_found": "Kami tidak dapat menemukan instans OpenZWave. Jika ini salah, periksa pengaturan OpenZWave dan MQTT Anda dan pastikan Third Eye dapat berkomunikasi dengan broker MQTT Anda."
                     },
                     "services": {
                         "add_node": "Tambahkan Node",
@@ -2875,7 +2875,7 @@
                     "confirm_delete": "Yakin ingin menghapus orang ini?",
                     "confirm_delete2": "Semua perangkat milik orang ini akan dibatalkan penetapan kepemilikannnya.",
                     "create_person": "Buat Orang",
-                    "description": "Kelola orang yang Home Assistant lacak",
+                    "description": "Kelola orang yang Third Eye lacak",
                     "detail": {
                         "admin": "Administrator",
                         "allow_login": "Izinkan orang untuk masuk",
@@ -2895,7 +2895,7 @@
                         "no_device_tracker_available_intro": "Ketika Anda memiliki perangkat yang menunjukkan kehadiran seseorang, Anda akan dapat menetapkannya kepada seseorang di sini. Anda dapat menambahkan perangkat pertama Anda dengan menambahkan integrasi deteksi kehadiran dari halaman integrasi.",
                         "update": "Perbarui"
                     },
-                    "introduction": "Di sini Anda dapat menentukan setiap orang yang diminati di Home Assistant.",
+                    "introduction": "Di sini Anda dapat menentukan setiap orang yang diminati di Third Eye.",
                     "learn_more": "Pelajari lebih lanjut tentang orang",
                     "no_persons_created_yet": "Sepertinya Anda belum membuat konfigurasi orang.",
                     "note_about_persons_configured_in_yaml": "Catatan: orang yang dikonfigurasi melalui configuration.yaml tidak dapat diedit melalui antarmuka.",
@@ -2942,7 +2942,7 @@
                         "headers": {
                             "name": "Nama"
                         },
-                        "introduction": "Editor skenario memungkinkan Anda membuat dan mengedit skenario. Ikuti tautan di bawah ini untuk membaca petunjuk untuk memastikan bahwa Anda telah mengonfigurasi Home Assistant dengan benar.",
+                        "introduction": "Editor skenario memungkinkan Anda membuat dan mengedit skenario. Ikuti tautan di bawah ini untuk membaca petunjuk untuk memastikan bahwa Anda telah mengonfigurasi Third Eye dengan benar.",
                         "learn_more": "Pelajari lebih lanjut tentang skenario",
                         "no_scenes": "Kami tidak dapat menemukan skenario yang dapat diedit",
                         "only_editable": "Hanya skenario yang ditentukan dalam scenes.yaml yang dapat diedit.",
@@ -2994,7 +2994,7 @@
                         "headers": {
                             "name": "Nama"
                         },
-                        "introduction": "Editor skrip memungkinkan Anda membuat dan mengedit skrip. Ikuti tautan di bawah untuk membaca petunjuk guna memastikan bahwa Anda telah mengonfigurasi Home Assistant dengan benar.",
+                        "introduction": "Editor skrip memungkinkan Anda membuat dan mengedit skrip. Ikuti tautan di bawah untuk membaca petunjuk guna memastikan bahwa Anda telah mengonfigurasi Third Eye dengan benar.",
                         "learn_more": "Pelajari lebih lanjut tentang skrip",
                         "no_scripts": "Kami tidak dapat menemukan skrip yang dapat diedit",
                         "run_script": "Jalankan skrip",
@@ -3003,7 +3003,7 @@
                 },
                 "server_control": {
                     "caption": "Kontrol Server",
-                    "description": "Validasi dan mulai ulang server Home Assistant",
+                    "description": "Validasi dan mulai ulang server Third Eye",
                     "section": {
                         "reloading": {
                             "automation": "Otomasi",
@@ -3022,7 +3022,7 @@
                             "input_number": "Input bilangan",
                             "input_select": "Input pilihan",
                             "input_text": "Input teks",
-                            "introduction": "Beberapa bagian Home Assistant dapat dimuat ulang tanpa memerlukan memulai ulang. Pengklikan salah satu opsi di bawah akan membatalkan konfigurasi YAML yang sedang dijalankan dan memuat konfigurasi yang baru.",
+                            "introduction": "Beberapa bagian Third Eye dapat dimuat ulang tanpa memerlukan memulai ulang. Pengklikan salah satu opsi di bawah akan membatalkan konfigurasi YAML yang sedang dijalankan dan memuat konfigurasi yang baru.",
                             "min_max": "Entitas min/maks",
                             "mqtt": "Entitas MQTT yang dikonfigurasi secara manual",
                             "person": "Orang",
@@ -3042,10 +3042,10 @@
                             "zone": "Zona"
                         },
                         "server_management": {
-                            "confirm_restart": "Yakin ingin memulai ulang Home Assistant?",
-                            "confirm_stop": "Yakin ingin menghentikan Home Assistant?",
+                            "confirm_restart": "Yakin ingin memulai ulang Third Eye?",
+                            "confirm_stop": "Yakin ingin menghentikan Third Eye?",
                             "heading": "Manajemen server",
-                            "introduction": "Kontrol server Home Assistant Anda.",
+                            "introduction": "Kontrol server Third Eye Anda.",
                             "restart": "Mulai ulang",
                             "stop": "Hentikan"
                         },
@@ -3108,7 +3108,7 @@
                         "password_not_match": "Kata sandi tidak cocok"
                     },
                     "caption": "Pengguna",
-                    "description": "Kelola akun pengguna Home Assistant",
+                    "description": "Kelola akun pengguna Third Eye",
                     "editor": {
                         "activate_user": "Aktifkan pengguna",
                         "active": "Aktif",
@@ -3315,7 +3315,7 @@
                         "add_to_group": "Tambahkan ke Grup",
                         "entities": "Entitas node ini",
                         "entity_info": "Informasi Entitas",
-                        "exclude_entity": "Kecualikan entitas ini dari Home Assistant",
+                        "exclude_entity": "Kecualikan entitas ini dari Third Eye",
                         "group": "Grup",
                         "header": "Manajemen Node Z-Wave",
                         "introduction": "Jalankan perintah Z-Wave yang mempengaruhi satu node. Pilih node untuk melihat daftar perintah yang tersedia.",
@@ -3539,7 +3539,7 @@
                         "exclusion_failed": "Perangkat tidak dapat dihapus. Periksa log untuk informasi lebih lanjut.",
                         "exclusion_finished": "Perangkat {id} telah dihapus dari jaringan Z-Wave Anda.",
                         "follow_device_instructions": "Ikuti petunjuk yang disertakan dengan perangkat Anda untuk memicu pengeluaran pada perangkat.",
-                        "introduction": "Hapus sebuah perangkat dari jaringan Z-Wave Anda, dan hapus perangkat dan entitas terkait dari Home Assistant",
+                        "introduction": "Hapus sebuah perangkat dari jaringan Z-Wave Anda, dan hapus perangkat dan entitas terkait dari Third Eye",
                         "start_exclusion": "Mulai Pengeluaran",
                         "title": "Hapus Perangkat Z-Wave"
                     },
@@ -3568,7 +3568,7 @@
             },
             "custom": {
                 "external_panel": {
-                    "complete_access": "Ini akan memiliki akses ke semua data di Home Assistant.",
+                    "complete_access": "Ini akan memiliki akses ke semua data di Third Eye.",
                     "hide_message": "Periksa dokumentasi komponen panel_custom untuk menyembunyikan pesan ini",
                     "question_trust": "Apakah Anda mempercayai panel eksternal {name} di {link}?"
                 }
@@ -3601,7 +3601,7 @@
                         "column_description": "Deskripsi",
                         "column_example": "Contoh",
                         "column_parameter": "Parameter",
-                        "description": "Alat pengembang untuk layanan memungkinkan Anda memanggil layanan apa pun yang tersedia di Home Assistant.",
+                        "description": "Alat pengembang untuk layanan memungkinkan Anda memanggil layanan apa pun yang tersedia di Third Eye.",
                         "fill_example_data": "Isi dengan Data Contoh",
                         "no_template_ui_support": "Antarmuka tidak mendukung templat, Anda masih dapat menggunakan editor YAML.",
                         "title": "Layanan",
@@ -3614,7 +3614,7 @@
                         "attributes": "Atribut",
                         "copy_id": "Salin ID ke papan klip",
                         "current_entities": "Entitas saat ini",
-                        "description1": "Setel representasi status entitas saat ini dari dalam Home Assistant.",
+                        "description1": "Setel representasi status entitas saat ini dari dalam Third Eye.",
                         "description2": "Jika entitas adalah milik perangkat, tidak akan ada komunikasi dengan perangkat yang sebenarnya.",
                         "entity": "Entitas",
                         "filter_attributes": "Filter atribut",
@@ -3656,7 +3656,7 @@
                     },
                     "templates": {
                         "all_listeners": "Template ini mendengarkan semua peristiwa yang diubah statusnya.",
-                        "description": "Template dirender menggunakan mesin templat Jinja2 dengan beberapa ekstensi khusus Home Assistant.",
+                        "description": "Template dirender menggunakan mesin templat Jinja2 dengan beberapa ekstensi khusus Third Eye.",
                         "domain": "Domain",
                         "editor": "Editor templat",
                         "entity": "Entitas",
@@ -3665,7 +3665,7 @@
                         "no_listeners": "Templat ini tidak mendengarkan peristiwa apa pun dan tidak akan diperbarui secara otomatis.",
                         "reset": "Setel ulang ke template demo",
                         "result_type": "Jenis hasil",
-                        "template_extensions": "Ekstensi templat Home Assistant",
+                        "template_extensions": "Ekstensi templat Third Eye",
                         "time": "Templat ini diperbarui pada awal setiap menit.",
                         "title": "Templat",
                         "unknown_error_template": "Kesalahan tidak diketahui saat merender templat"
@@ -3774,7 +3774,7 @@
                         "never_triggered": "Tidak pernah terpicu"
                     },
                     "iframe": {
-                        "error_secure_context": "Tidak dapat memuat iframe yang mengarah ke situs web menggunakan {target_protocol} jika Home Assistant disediakan melalui {context_protocol} ."
+                        "error_secure_context": "Tidak dapat memuat iframe yang mengarah ke situs web menggunakan {target_protocol} jika Third Eye disediakan melalui {context_protocol} ."
                     },
                     "map": {
                         "reset_focus": "Atur ulang fokus"
@@ -3789,7 +3789,7 @@
                         "url": "Buka jendela untuk {url_path}"
                     },
                     "safe-mode": {
-                        "description": "Home Assistant mengalami masalah saat memuat konfigurasi Anda dan sekarang berjalan dalam mode aman. Lihat catatan kesalahan untuk melihat kesalahannya.",
+                        "description": "Third Eye mengalami masalah saat memuat konfigurasi Anda dan sekarang berjalan dalam mode aman. Lihat catatan kesalahan untuk melihat kesalahannya.",
                         "header": "Mode Aman Diaktifkan"
                     },
                     "shopping-list": {
@@ -3801,7 +3801,7 @@
                     },
                     "show_more_info": "Tampilkan informasi lebih lanjut",
                     "starting": {
-                        "description": "Home Assistant sedang memulai, harap tunggu…"
+                        "description": "Third Eye sedang memulai, harap tunggu…"
                     }
                 },
                 "changed_toast": {
@@ -3985,7 +3985,7 @@
                             "name": "Kelembapan"
                         },
                         "iframe": {
-                            "description": "Kartu Halaman Web memungkinkan Anda menyematkan halaman web favorit Anda langsung ke Home Assistant.",
+                            "description": "Kartu Halaman Web memungkinkan Anda menyematkan halaman web favorit Anda langsung ke Third Eye.",
                             "name": "Halaman Web"
                         },
                         "light": {
@@ -4161,7 +4161,7 @@
                     "migrate": {
                         "header": "Konfigurasi Tidak Kompatibel",
                         "migrate": "Migrasikan konfigurasi",
-                        "para_migrate": "Home Assistant dapat menambahkan ID ke semua kartu dan tampilan Anda secara otomatis untuk Anda dengan menekan tombol 'Migrasikan konfigurasi'.",
+                        "para_migrate": "Third Eye dapat menambahkan ID ke semua kartu dan tampilan Anda secara otomatis untuk Anda dengan menekan tombol 'Migrasikan konfigurasi'.",
                         "para_no_id": "Elemen ini tidak memiliki ID. Tambahkan ID ke elemen ini di 'ui-lovelace.yaml'."
                     },
                     "move_card": {
@@ -4188,7 +4188,7 @@
                         "close": "Tutup",
                         "empty_config": "Mulai dengan dasbor kosong",
                         "header": "Kendalikan antarmuka Lovelace Anda",
-                        "para": "Dasbor ini sedang dikelola oleh Home Assistant. Dasbor ini diperbarui secara otomatis ketika entitas baru atau komponen antarmuka Lovelace baru tersedia. Jika Anda mengambil alih kendali, dasbor ini tidak akan lagi diperbarui secara otomatis. Anda selalu dapat membuat dasbor baru dalam konfigurasi untuk diutak-atik.",
+                        "para": "Dasbor ini sedang dikelola oleh Third Eye. Dasbor ini diperbarui secara otomatis ketika entitas baru atau komponen antarmuka Lovelace baru tersedia. Jika Anda mengambil alih kendali, dasbor ini tidak akan lagi diperbarui secara otomatis. Anda selalu dapat membuat dasbor baru dalam konfigurasi untuk diutak-atik.",
                         "para_sure": "Yakin ingin mengendalikan antarmuka pengguna Anda?",
                         "save": "Ambil kendali",
                         "yaml_config": "Untuk membantu Anda memulai, berikut adalah konfigurasi saat ini dari dasbor ini:",
@@ -4253,7 +4253,7 @@
                     "entity_non_numeric": "Entitas non-numerik: {entity}",
                     "entity_not_found": "Entitas tidak tersedia: {entity}",
                     "entity_unavailable": "Entitas saat ini tidak tersedia: {entity}",
-                    "starting": "Home Assistant sedang dimulai, mungkin belum semuanya tersedia"
+                    "starting": "Third Eye sedang dimulai, mungkin belum semuanya tersedia"
                 }
             },
             "mailbox": {
@@ -4266,16 +4266,16 @@
                 "edit_zones": "Edit Zona"
             },
             "my": {
-                "component_not_loaded": "Pengalihan ini tidak didukung oleh instans Home Assistant Anda. Anda memerlukan integrasi {integration} untuk menggunakan pengalihan ini.",
+                "component_not_loaded": "Pengalihan ini tidak didukung oleh instans Third Eye Anda. Anda memerlukan integrasi {integration} untuk menggunakan pengalihan ini.",
                 "documentation": "dokumentasi",
                 "error": "Terjadi kesalahan yang tidak diketahui",
-                "faq_link": "FAQ Home Assistant Saya",
-                "no_supervisor": "Pengalihan ini tidak didukung oleh instalasi Home Assistant Anda. Pengalihan ini memerlukan metode instalasi Home Assistant Operating System atau Home Assistant Supervised. Untuk informasi selengkapnya, lihat {docs_link}.",
-                "not_supported": "Pengalihan ini tidak didukung oleh instans Home Assistant Anda. Periksa {link} tentang pengalihan yang didukung dan versi mana mulai diperkenalkan."
+                "faq_link": "FAQ Third Eye Saya",
+                "no_supervisor": "Pengalihan ini tidak didukung oleh instalasi Third Eye Anda. Pengalihan ini memerlukan metode instalasi Third Eye Operating System atau Third Eye Supervised. Untuk informasi selengkapnya, lihat {docs_link}.",
+                "not_supported": "Pengalihan ini tidak didukung oleh instans Third Eye Anda. Periksa {link} tentang pengalihan yang didukung dan versi mana mulai diperkenalkan."
             },
             "page-authorize": {
                 "abort_intro": "Proses masuk dibatalkan",
-                "authorizing_client": "Anda akan memberi akses {clientId} ke instans Home Assistant Anda.",
+                "authorizing_client": "Anda akan memberi akses {clientId} ke instans Third Eye Anda.",
                 "form": {
                     "error": "Kesalahan: {error}",
                     "next": "Masuk",
@@ -4378,8 +4378,8 @@
                 "cards": {
                     "demo": {
                         "demo_by": "oleh {name}",
-                        "introduction": "Selamat datang di rumah! Anda berhasil membuka demo Home Assistant, tempat kami menampilkan antarmuka terbaik yang dibuat oleh komunitas kami.",
-                        "learn_more": "Pelajari lebih lanjut tentang Home Assistant",
+                        "introduction": "Selamat datang di rumah! Anda berhasil membuka demo Third Eye, tempat kami menampilkan antarmuka terbaik yang dibuat oleh komunitas kami.",
+                        "learn_more": "Pelajari lebih lanjut tentang Third Eye",
                         "next_demo": "Demo berikutnya"
                     }
                 },
@@ -4425,16 +4425,16 @@
                 "core-config": {
                     "button_detect": "Deteksi",
                     "finish": "Berikutnya",
-                    "intro": "Halo {name}, selamat datang di Home Assistant. Nama apa yang ingin diberikan untuk rumah Anda?",
+                    "intro": "Halo {name}, selamat datang di Third Eye. Nama apa yang ingin diberikan untuk rumah Anda?",
                     "intro_location": "Kami ingin mengetahui tempat tinggal Anda. Informasi ini akan membantu menampilkan informasi dan menyiapkan otomasi berbasis matahari. Data ini tidak pernah dibagikan di luar jaringan Anda.",
                     "intro_location_detect": "Kami dapat membantu Anda mengisi informasi ini dengan membuat permintaan satu kali ke layanan eksternal.",
-                    "location_name": "Beri nama instalasi Home Assistant Anda",
+                    "location_name": "Beri nama instalasi Third Eye Anda",
                     "location_name_default": "Rumah"
                 },
                 "finish": "Selesai",
                 "integration": {
                     "finish": "Selesai",
-                    "intro": "Perangkat dan layanan diwakili di Home Assistant sebagai integrasi. Anda dapat mengaturnya sekarang, atau melakukannya nanti dari layar konfigurasi.",
+                    "intro": "Perangkat dan layanan diwakili di Third Eye sebagai integrasi. Anda dapat mengaturnya sekarang, atau melakukannya nanti dari layar konfigurasi.",
                     "more_integrations": "Lebih Lanjut"
                 },
                 "intro": "Siap untuk membuat rumah Anda lebih hidup, merebut kembali privasi Anda, dan bergabung dengan komunitas pemikir di seluruh dunia?",
@@ -4522,7 +4522,7 @@
                     "create_failed": "Gagal membuat token akses.",
                     "created": "Dibuat pada {date}",
                     "delete_failed": "Gagal menghapus token akses.",
-                    "description": "Buat token akses yang berumur panjang untuk memungkinkan skrip Anda berinteraksi dengan Home Assistant. Setiap token akan berlaku selama 10 tahun sejak pembuatan. Berikut adalah token akses yang berumur panjang yang saat ini aktif.",
+                    "description": "Buat token akses yang berumur panjang untuk memungkinkan skrip Anda berinteraksi dengan Third Eye. Setiap token akan berlaku selama 10 tahun sejak pembuatan. Berikut adalah token akses yang berumur panjang yang saat ini aktif.",
                     "empty_state": "Anda belum memiliki token akses yang berumur panjang.",
                     "header": "Token Akses yang Berumur Panjang",
                     "learn_auth_requests": "Pelajari cara membuat permintaan yang diautentikasi.",

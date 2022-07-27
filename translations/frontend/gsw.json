@@ -233,7 +233,7 @@
                                     "label": "Event"
                                 },
                                 "homeassistant": {
-                                    "label": "Home Assistant",
+                                    "label": "Third Eye",
                                     "shutdown": "Abefahre",
                                     "start": "Starte"
                                 },
